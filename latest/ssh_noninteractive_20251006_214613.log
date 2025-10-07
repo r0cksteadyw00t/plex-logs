@@ -1,0 +1,53 @@
+**********************
+PowerShell transcript start
+Start time: 20251006214613
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 11148
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+== Windows Non-Interactive 'Passworded SSH' ==
+WriteError: 
+Line |
+  37 |  $Host = $DefaultHost
+     |  ~~~~~~~~~~~~~~~~~~~~
+     | Cannot overwrite variable Host because it is read-only or constant.
+WriteError: 
+Line |
+  37 |  $Host = $DefaultHost
+     |  ~~~~~~~~~~~~~~~~~~~~
+     | Cannot overwrite variable Host because it is read-only or constant.
+WARN: Failed to parse C:\Users\jason\OneDrive\Public\TOKENS\unifi_creds.json: Cannot overwrite variable Host because it is read-only or constant.
+Saved DPAPI-encrypted SSH password to C:\Users\jason\OneDrive\Public\TOKENS\unifi_ssh_pwd.dpapi
+Installing Posh-SSH (CurrentUser)...
+Opening SSH session to udm_Local_api@System.Management.Automation.Internal.Host.InternalHost via Posh-SSH...
+PS>TerminatingError(New-SSHSession): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: No such host is known."
+WARN: Posh-SSH failed: No such host is known.
+
+Attempting PuTTY plink fallback...
+Downloading plink: https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe
+Running plink demo command...
+Unable to open connection:
+Host does not exist
+
+===== ONE-CLICK SUMMARY =====
+Vault: C:\Users\jason\OneDrive\Public\TOKENS
+DPAPI Secret Exists: True
+Primary: Posh-SSH
+Fallback plink: True
+Log file: D:\PlexTools\logs\ssh_noninteractive_20251006_214613.log
+**********************
+PowerShell transcript end
+End time: 20251006214648
+**********************
