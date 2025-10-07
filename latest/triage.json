@@ -1,13 +1,20 @@
 {
-    "generated_utc":  "2025-10-07T09:48:52Z",
+    "generated_utc":  "2025-10-07T10:45:58Z",
     "status":  "ATTN",
     "summary":  {
-                    "warns":  49,
+                    "warns":  58,
                     "infos":  0,
-                    "errors":  11,
-                    "files":  132
+                    "errors":  12,
+                    "files":  141
                 },
     "findings":  [
+                     {
+                         "id":  "Generic_Failed",
+                         "severity":  "WARN",
+                         "file":  "cloudflared_20251007_085320.log",
+                         "count":  1,
+                         "suggestion":  "Retry/backoff; verify paths."
+                     },
                      {
                          "id":  "Generic_Failed",
                          "severity":  "WARN",
@@ -100,6 +107,13 @@
                          "suggestion":  "Retry/backoff; verify paths."
                      },
                      {
+                         "id":  "PS_Var_NotSet",
+                         "severity":  "ERROR",
+                         "file":  "s001_plex_remote_20251006_172729.log",
+                         "count":  4,
+                         "suggestion":  "Initialize or pass param."
+                     },
+                     {
                          "id":  "PS_PropMissing",
                          "severity":  "ERROR",
                          "file":  "s001_plex_remote_20251006_172729.log",
@@ -110,7 +124,7 @@
                          "id":  "Generic_Failed",
                          "severity":  "WARN",
                          "file":  "s001_plex_remote_20251006_172729.log",
-                         "count":  70,
+                         "count":  78,
                          "suggestion":  "Retry/backoff; verify paths."
                      },
                      {
@@ -314,6 +328,62 @@
                          "severity":  "WARN",
                          "file":  "s001_plex_remote_20251007_204753.log",
                          "count":  3,
+                         "suggestion":  "Retry/backoff; verify paths."
+                     },
+                     {
+                         "id":  "HTTP_SSL_Fail",
+                         "severity":  "WARN",
+                         "file":  "s001_plex_remote_20251007_212333.log",
+                         "count":  1,
+                         "suggestion":  "Correct port/cert handling."
+                     },
+                     {
+                         "id":  "Generic_Failed",
+                         "severity":  "WARN",
+                         "file":  "s001_plex_remote_20251007_212333.log",
+                         "count":  3,
+                         "suggestion":  "Retry/backoff; verify paths."
+                     },
+                     {
+                         "id":  "HTTP_SSL_Fail",
+                         "severity":  "WARN",
+                         "file":  "s001_plex_remote_20251007_212750.log",
+                         "count":  1,
+                         "suggestion":  "Correct port/cert handling."
+                     },
+                     {
+                         "id":  "Generic_Failed",
+                         "severity":  "WARN",
+                         "file":  "s001_plex_remote_20251007_212750.log",
+                         "count":  3,
+                         "suggestion":  "Retry/backoff; verify paths."
+                     },
+                     {
+                         "id":  "HTTP_SSL_Fail",
+                         "severity":  "WARN",
+                         "file":  "s001_plex_remote_20251007_213716.log",
+                         "count":  1,
+                         "suggestion":  "Correct port/cert handling."
+                     },
+                     {
+                         "id":  "Generic_Failed",
+                         "severity":  "WARN",
+                         "file":  "s001_plex_remote_20251007_213716.log",
+                         "count":  3,
+                         "suggestion":  "Retry/backoff; verify paths."
+                     },
+                     {
+                         "id":  "HTTP_SSL_Fail",
+                         "severity":  "WARN",
+                         "file":  "s001_plex_remote_20251007_214326.log",
+                         "count":  1,
+                         "suggestion":  "Correct port/cert handling."
+                     },
+                     {
+                         "id":  "Generic_Failed",
+                         "severity":  "WARN",
+                         "file":  "s001_plex_remote_20251007_214326.log",
+                         "count":  2,
                          "suggestion":  "Retry/backoff; verify paths."
                      },
                      {
