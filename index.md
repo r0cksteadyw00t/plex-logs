@@ -1,4 +1,4 @@
-# PlexTools Logs - 2025-10-07 20:48:53
+# PlexTools Logs - 2025-10-07 21:45:58
 
 * latest/chat_status.json
 * latest/cloudflared_20251007_085320.log
@@ -8,9 +8,15 @@
 * latest/Integrity_run_20251006_163556.log
 * latest/orchestrator.log
 * latest/plex_cf_tunnel.log
+* latest/plex_listen_fix_20251007_214324.log
+* latest/plex_manual_scan.log
 * latest/plex_repair_20251006_112507.log
 * latest/plex_repair_20251006_121924.log
 * latest/plex_scan_watcher.log
+* latest/Populate_RDQueue_run_20251005-094530.err.log
+* latest/Populate_RDQueue_run_20251005-094530.out.log
+* latest/Populate_RDQueue_run_20251005-094942.err.log
+* latest/Populate_RDQueue_run_20251005-094942.out.log
 * latest/Populate_run_20251005_202759.log
 * latest/Populate_run_20251005_205548.log
 * latest/Populate_run_20251005_211329.log
@@ -34,7 +40,9 @@
 * latest/Populate_run_20251007_083724.log
 * latest/Populate_run_20251007_085102.log
 * latest/Populate_run_20251007_150316.log
+* latest/Populate_run_20251007_213621.log
 * latest/result.json
+* latest/run.log
 * latest/s001_plex_remote_20251006_172729.log
 * latest/s001_plex_remote_20251006_173431.log
 * latest/s001_plex_remote_20251006_190156.log
@@ -55,6 +63,10 @@
 * latest/s001_plex_remote_20251007_085330.log
 * latest/s001_plex_remote_20251007_152544.log
 * latest/s001_plex_remote_20251007_204753.log
+* latest/s001_plex_remote_20251007_212333.log
+* latest/s001_plex_remote_20251007_212750.log
+* latest/s001_plex_remote_20251007_213716.log
+* latest/s001_plex_remote_20251007_214326.log
 * latest/s002_scheduler_20251006_172740.log
 * latest/s002_scheduler_20251006_173439.log
 * latest/s002_scheduler_20251006_190200.log
@@ -69,7 +81,12 @@
 * latest/scarflix_bulk_http_rewriter.log
 * latest/scarflix_daily.md
 * latest/scarflix_frontdoor.log
+* latest/scarflix_matrix_deepfix.log
+* latest/scarflix_matrix_fix.log
+* latest/scarflix_matrix_force_safe.log
 * latest/scarflix_mediaproxy.log
+* latest/scarflix_normalize_fix.log
+* latest/scarflix_proxy_fix.log
 * latest/scarflix_rewrite_hotfix.log
 * latest/scarflix_wishlist_resolver.log
 * latest/ssh_noninteractive_20251006_214613.log
@@ -80,6 +97,7 @@
 * latest/ssh_noninteractive_20251007_082903.log
 * latest/status.log
 * latest/stdout.log
+* latest/Streams_Result_20251005-015322.log
 * latest/triage.json
 * latest/unifi_body.json
 * latest/unifi_cookies.txt
