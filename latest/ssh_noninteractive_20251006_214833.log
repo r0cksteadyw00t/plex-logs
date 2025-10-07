@@ -1,0 +1,45 @@
+**********************
+PowerShell transcript start
+Start time: 20251006214833
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 11148
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+== Windows Non-Interactive 'Passworded SSH' ==
+Opening SSH session to udm_Local_api@192.168.1.1 via Posh-SSH...
+PS>TerminatingError(New-SSHSession): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Permission denied (keyboard-interactive)."
+WARN: Posh-SSH failed: Permission denied (keyboard-interactive).
+
+Attempting PuTTY plink fallback...
+Running plink demo command...
+The host key is not cached for this server:
+  192.168.1.1 (port 22)
+You have no guarantee that the server is the computer you
+think it is.
+The server's ssh-ed25519 key fingerprint is:
+  ssh-ed25519 255 SHA256:s7xKcN4xHXB9jLO8A00w8BuRNKO8wjcyPVGSE5MXCT0
+Connection abandoned.
+FATAL ERROR: Cannot confirm a host key in batch mode
+
+===== ONE-CLICK SUMMARY =====
+Vault: C:\Users\jason\OneDrive\Public\TOKENS
+DPAPI Secret Exists: True
+Primary module: Posh-SSH
+plink.exe: Present
+Log file: D:\PlexTools\logs\ssh_noninteractive_20251006_214833.log
+**********************
+PowerShell transcript end
+End time: 20251006214835
+**********************
