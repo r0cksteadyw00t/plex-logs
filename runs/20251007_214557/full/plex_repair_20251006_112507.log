@@ -1,0 +1,52 @@
+**********************
+PowerShell transcript start
+Start time: 20251006112508
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 35076
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+[ 11:25:08 ] Log file: D:\PlexTools\logs\plex_repair_20251006_112507.log
+  âœ” Admin detected
+  âœ” Found Plex EXE: C:\Program Files\Plex\Plex Media Server\Plex Media Server.exe
+  âœ” Loaded Plex token from vault
+[ 11:25:08 ] Stopping Plex...
+  âœ” Process stopped: Plex Media Server
+  âœ” Process stopped: Plex Tuner Service
+  âœ” Process stopped: PlexScriptHost
+  âœ” Backed up Preferences.xml -> C:\Users\jason\AppData\Local\Plex Media Server\Backups\Preferences_20251006_112507.xml
+  âœ” Injected PlexOnlineToken
+  âœ” Patched Preferences.xml
+  âœ” Firewall rule already present for TCP 32400
+  âœ” Started Plex: C:\Program Files\Plex\Plex Media Server\Plex Media Server.exe
+[ 11:25:10 ] Waiting for local API...
+PS>TerminatingError(Invoke-WebRequest): "
+<Response
+  code="503"
+  title="Maintenance"
+  status="Plex Media Server is currently running startup maintenance tasks." />"
+  âœ” Local API responding at /identity
+
+====================== RESULT SUMMARY ======================
+  âœ” Backup saved: C:\Users\jason\AppData\Local\Plex Media Server\Backups\Preferences_20251006_112507.xml
+  âœ” Token injected from vault
+  âœ” Plex API reachable locally
+  âœ” Server is CLAIMED to an account
+Remote access will usually recover after claim completes.
+Log file: D:\PlexTools\logs\plex_repair_20251006_112507.log
+============================================================
+**********************
+PowerShell transcript end
+End time: 20251006112514
+**********************
