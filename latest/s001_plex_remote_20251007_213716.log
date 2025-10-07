@@ -1,0 +1,59 @@
+**********************
+PowerShell transcript start
+Start time: 20251007213716
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 37484
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is D:\PlexTools\logs\s001_plex_remote_20251007_213716.log
+S001: Plex Remote Access & NAT diagnostic and safe repair
+Guardrails: TOKENS=C:\Users\jason\OneDrive\Public\TOKENS, HTTP-200-only, no destructive actions
+  OK  Library path OK: Streaming Movies -> D:\StremioCatalog\_Hybrid\Movies
+  OK  Library path OK: Streaming TV Shows -> D:\StremioCatalog\_Hybrid\Shows
+  OK  Library path OK: ScarFLIX - Movie Request -> D:\ScarFLIX\Wishlist\Movies
+  OK  Library path OK: ScarFLIX - Shows Request -> D:\ScarFLIX\Wishlist\TV
+  OK  Backup saved: C:\Users\jason\AppData\Local\Plex Media Server\Preferences_Backups\Preferences_20251007_213716.xml
+  OK  No preference changes required
+  OK  Firewall inbound rule for TCP 32400 present
+  WARN UPnP mapping skipped/failed: No IGD or UPnP disabled
+  WARN NAT-PMP not used: No response
+PS>TerminatingError(Invoke-WebRequest): "The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors"
+  WARN UniFi attempt: login failed: The SSL connection could not be established, see inner exception.
+PS>TerminatingError(Invoke-WebRequest): "No connection could be made because the target machine actively refused it."
+PS>TerminatingError(Invoke-WebRequest): "No connection could be made because the target machine actively refused it."
+  WARN Identity failed (status=-1, No connection could be made because the target machine actively refused it. (127.0.0.1:32400))
+  WARN Resources check not 200 (status=-1)
+Router port-forward hint â†’ Forward TCP 32400 (WAN) â†’ 192.168.1.184:32400 (LAN)
+INFO: Observed WAN IP: 1.43.167.161
+===== S001 SUMMARY =====
+Remote Access state: Unknown
+Preferences before:
+ManualPortMappingMode = 1
+RemoteAccessEnabled = 1
+InternetStreamPort = 32400
+PreferredNetworkInterface =
+CustomConnections = https://ntsc-safely-prisoner-conviction.trycloudflare.com
+Preferences after:
+ManualPortMappingMode = 1
+RemoteAccessEnabled = 1
+InternetStreamPort = 32400
+PreferredNetworkInterface =
+CustomConnections = https://ntsc-safely-prisoner-conviction.trycloudflare.com
+HTTP check: identity=-1 (2019ms), resources=-1 (2035ms)
+Warnings: 2
+**********************
+PowerShell transcript end
+End time: 20251007213728
+**********************
