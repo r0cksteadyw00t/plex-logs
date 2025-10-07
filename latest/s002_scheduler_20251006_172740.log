@@ -1,0 +1,37 @@
+**********************
+PowerShell transcript start
+Start time: 20251006172740
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 18652
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is D:\PlexTools\logs\s002_scheduler_20251006_172740.log
+S002: Scheduler audit and self-heal
+PS>TerminatingError(Get-ScheduledTask): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: No MSFT_ScheduledTask objects found with property 'TaskName' equal to 'PS Smart Bridge'.  Verify the value of the property and retry."
+PS>TerminatingError(Register-ScheduledTask): "Cannot process argument transformation on parameter 'RunLevel'. Cannot convert value "LeastPrivilege" to type "Microsoft.PowerShell.Cmdletization.GeneratedTypes.ScheduledTask.RunLevelEnum". Error: "Unable to match the identifier name LeastPrivilege to a valid enumerator name. Specify one of the following enumerator names and try again:
+Limited, Highest""
+  WARN Create failed for task PS Smart Bridge: Cannot process argument transformation on parameter 'RunLevel'. Cannot convert value "LeastPrivilege" to type "Microsoft.PowerShell.Cmdletization.GeneratedTypes.ScheduledTask.RunLevelEnum". Error: "Unable to match the identifier name LeastPrivilege to a valid enumerator name. Specify one of the following enumerator names and try again:
+Limited, Highest"
+PS>TerminatingError(New-ScheduledTaskTrigger): "A positional parameter cannot be found that accepts argument '6/10/2025 5:28:42 PM'."
+  WARN Could not build action/trigger for RD Queue Processor (per-user): A positional parameter cannot be found that accepts argument '6/10/2025 5:28:42 PM'.
+===== S002 SUMMARY =====
+OK tasks       :
+Healed tasks   :
+Quarantined    :
+Warnings       : 2
+**********************
+PowerShell transcript end
+End time: 20251006172742
+**********************
