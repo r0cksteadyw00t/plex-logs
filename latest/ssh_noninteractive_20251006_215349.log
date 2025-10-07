@@ -1,0 +1,60 @@
+**********************
+PowerShell transcript start
+Start time: 20251006215349
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 11148
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+== Windows Non-Interactive 'Passworded SSH' ==
+PS>TerminatingError(): "Cannot overwrite variable host because it is read-only or constant."
+WriteError: 
+Line |
+ 112 |  $HostKeySha = Get-OrLearn-HostKeySha256 -host $SshHost -plink $PlinkP â€¦
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot overwrite variable host because it is read-only or constant.
+WriteError: 
+Line |
+ 112 |  $HostKeySha = Get-OrLearn-HostKeySha256 -host $SshHost -plink $PlinkP â€¦
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot overwrite variable host because it is read-only or constant.
+Opening SSH session (Posh-SSH) to udm_Local_api@192.168.1.1...
+PS>TerminatingError(New-SSHSession): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Permission denied (keyboard-interactive)."
+Posh-SSH auth failed for udm_Local_api (will try next user)
+Opening SSH session (Posh-SSH) to root@192.168.1.1...
+
+===== ONE-CLICK SUMMARY =====
+Vault: C:\Users\jason\OneDrive\Public\TOKENS
+DPAPI Secret Exists: True
+Pinned hostkey:
+Primary path: Posh-SSH âœ”  (user=root)
+if: 
+Line |
+ 181 |  Say ("plink.exe: {0}" -f (if (Test-Path $PlinkPath){'Present'}else{'M â€¦
+     |                            ~~
+     | The term 'if' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+if: 
+Line |
+ 181 |  Say ("plink.exe: {0}" -f (if (Test-Path $PlinkPath){'Present'}else{'M â€¦
+     |                            ~~
+     | The term 'if' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Fallback path: plink âœ–
+Check the SSH username and password on your UniFi device. 'root' is most common on UDM/UniFi OS.
+Log file: D:\PlexTools\logs\ssh_noninteractive_20251006_215349.log
+**********************
+PowerShell transcript end
+End time: 20251006215352
+**********************
