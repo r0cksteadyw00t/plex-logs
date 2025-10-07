@@ -843,7 +843,7 @@ $Summary = Join-Path $Reports "$Prefix.summary.txt"
 
 # Load tokens
 $UDM_IP   = ReadIf (Join-Path $Vault 'udm_ip.txt')
-$API_KEY  = ReadIf (Join-Path $Vault 'udm_token.txt')
+$API_KEY  = ***REDACTED*** (Join-Path $Vault 'udm_token.txt')
 $USER     = ReadIf (Join-Path $Vault 'udm_user.txt')
 $PASS     = ReadIf (Join-Path $Vault 'udm_pass.txt')
 $GID      = ReadIf (Join-Path $Vault 'gist_id.txt')
@@ -1284,7 +1284,7 @@ $Summary = Join-Path $Reports "$Prefix.summary.txt"
 
 # Load tokens
 $UDM_IP    = ReadIf (Join-Path $Vault 'udm_ip.txt')
-$API_KEY   = ReadIf (Join-Path $Vault 'udm_token.txt')
+$API_KEY   = ***REDACTED*** (Join-Path $Vault 'udm_token.txt')
 $USER      = ReadIf (Join-Path $Vault 'udm_user.txt')
 $PASS      = ReadIf (Join-Path $Vault 'udm_pass.txt')
 $GID       = ReadIf (Join-Path $Vault 'gist_id.txt')
@@ -2015,7 +2015,7 @@ $Summary = Join-Path $Reports "$Prefix.summary.txt"
 
 # Load tokens
 $UDM_IP    = ReadIf (Join-Path $Vault 'udm_ip.txt')
-$API_KEY   = ReadIf (Join-Path $Vault 'udm_token.txt')
+$API_KEY   = ***REDACTED*** (Join-Path $Vault 'udm_token.txt')
 $USER      = ReadIf (Join-Path $Vault 'udm_user.txt')
 $PASS      = ReadIf (Join-Path $Vault 'udm_pass.txt')
 $GID       = ReadIf (Join-Path $Vault 'gist_id.txt')
@@ -2462,7 +2462,7 @@ $Stamp=Get-Date -Format 'yyyyMMdd_HHmmss'; $Prefix="udm_audit_$Stamp"; $Summary=
 "UDM All-in-One Auditor v2.4 - $(Get-Date)" | Set-Content -LiteralPath $Summary -Encoding UTF8
 
 # Secrets
-$UDM_IP=ReadIf (Join-Path $Vault 'udm_ip.txt'); $API_KEY=ReadIf (Join-Path $Vault 'udm_token.txt')
+$UDM_IP=ReadIf (Join-Path $Vault 'udm_ip.txt'); $API_KEY=***REDACTED*** (Join-Path $Vault 'udm_token.txt')
 $USER=ReadIf (Join-Path $Vault 'udm_user.txt'); $PASS=ReadIf (Join-Path $Vault 'udm_pass.txt')
 $UDM_HOSTF=ReadIf (Join-Path $Vault 'udm_hostname.txt')
 $GID=ReadIf (Join-Path $Vault 'gist_id.txt'); $GTOK=ReadIf (Join-Path $Vault 'gist_token.txt')
@@ -3500,7 +3500,7 @@ try{
 
 # ---------- load other tokens ----------
 $UDM_IP   = ReadIf (Join-Path $Vault 'udm_ip.txt')
-$API_KEY  = ReadIf (Join-Path $Vault 'udm_token.txt')          # Integration API key (X-API-KEY) if you saved earlier
+$API_KEY  = ***REDACTED*** (Join-Path $Vault 'udm_token.txt')          # Integration API key (X-API-KEY) if you saved earlier
 $HOSTNAME = ReadIf (Join-Path $Vault 'udm_hostname.txt')       # preferred SNI host (e.g., 'unifi'). If missing we still try defaults.
 
 $GID      = ReadIf (Join-Path $Vault 'gist_id.txt')
@@ -4227,7 +4227,7 @@ PS C:\Windows\System32> & {
   }
   ("UDM IP: {0}" -f ($(if($UDM_IP){$UDM_IP}else{'<missing>'}))) | Add-Content -LiteralPath $Summary -Encoding UTF8
   if(-not $UDM_IP){ Say "No UDM IP found; aborting." 'Red'; Get-Content $Summary; return }
-  $API_KEY = ReadIf (Join-Path $Vault 'udm_token.txt')
+  $API_KEY = ***REDACTED*** (Join-Path $Vault 'udm_token.txt')
 
   # --- Discover canonical host via redirect from https://<IP>/ ---
   $DiscoveredHost=$null
@@ -5789,4 +5789,768 @@ Line |
  143 |      'INTERVAL_SEC='" + '900' + "'",
      |                     ~~~~~~~~~~~~~
      | Unexpected token '" + '900' + "' in expression or statement.
+
+PS C:\Windows\System32> cls
+PS C:\Windows\System32> &{
+  $ErrorActionPreference='Stop'; Set-StrictMode -Version Latest
+
+  function Say($m,$c='Cyan'){ Write-Host ("[{0}] {1}" -f (Get-Date -Format 'HH:mm:ss'),$m) -ForegroundColor $c }
+  function Ensure-Dir($p){ if(-not(Test-Path -LiteralPath $p)){ try{ New-Item -ItemType Directory -Path $p -Force | Out-Null }catch{} } }
+  function ReadIf($p){ if(Test-Path $p){ try{ (Get-Content -LiteralPath $p -Raw).Trim() }catch{ $null } } else { $null } }
+
+  # ---------- QA logging ----------
+  $Root='D:\PlexTools'
+  $Reports=Join-Path $Root 'reports'
+  Ensure-Dir $Reports
+  $Stamp=Get-Date -Format 'yyyyMMdd_HHmmss'
+  $QA=Join-Path $Reports ("udm_collector_install_QA_{0}.txt" -f $Stamp)
+  function QA($msg){ Add-Content -LiteralPath $QA -Value ("[{0}] {1}" -f (Get-Date -Format 'HH:mm:ss'), $msg) }
+  function Run-Cmd($label,$cmd){
+    try{
+      $global:LASTEXITCODE = 0
+      $out = & cmd /c $cmd
+      $code = $LASTEXITCODE
+      if($code -ne 0){ QA "$label -> FAIL (exit $code)"; return @{ ok=$false; out=$out } }
+      QA "$label -> OK"
+      return @{ ok=$true; out=$out }
+    }catch{
+      QA "$label -> EXCEPTION: $($_.Exception.Message)"
+      return @{ ok=$false; out=$null }
+    }
+  }
+
+  Say "[START] UDM Collector + Mirror installer (PS5.1-safe, continue-on-error)"
+  QA  "CONTINUE MODE enabled: steps will log and proceed when safe"
+
+  # ---------- Paths & vault ----------
+  $Vault='C:\Users\jason\OneDrive\Public\TOKENS'
+  $Cache=Join-Path $Root 'cache'
+  $Bin=Join-Path $Root 'bin'
+  $Scripts=Join-Path $Root 'Scripts'
+  Ensure-Dir $Vault; Ensure-Dir $Cache; Ensure-Dir $Bin; Ensure-Dir $Scripts
+
+  # ---------- Creds (as agreed) ----------
+  try{
+    $LOCAL_USER='udm_Local_api'; $LOCAL_PASS='W1ll0w1703!!'
+    Set-Content (Join-Path $Vault 'udm_user.txt') $LOCAL_USER -Encoding ASCII
+    Set-Content (Join-Path $Vault 'udm_pass.txt') $LOCAL_PASS -Encoding ASCII
+    $bytes=[Text.Encoding]::UTF8.GetBytes($LOCAL_PASS)
+    $enc=[Security.Cryptography.ProtectedData]::Protect($bytes,$null,[Security.Cryptography.DataProtectionScope]::CurrentUser)
+    [IO.File]::WriteAllBytes((Join-Path $Vault 'udm_pass.bin'),$enc)
+    QA "Saved UniFi app creds -> udm_user.txt / udm_pass(.txt/.bin)"
+  }catch{ QA "Save creds -> EXCEPTION: $($_.Exception.Message)" }
+
+  # SSH creds (device OS)
+  try{
+    $SSH_USER = ReadIf (Join-Path $Vault 'udm_ssh_user.txt'); if([string]::IsNullOrWhiteSpace($SSH_USER)){ $SSH_USER='root'; Set-Content (Join-Path $Vault 'udm_ssh_user.txt') $SSH_USER -Encoding ASCII }
+    $SSH_PASS = 'W1ll0w1703!!'; Set-Content (Join-Path $Vault 'udm_ssh_pass.txt') $SSH_PASS -Encoding ASCII
+    QA "Saved SSH creds -> udm_ssh_user.txt / udm_ssh_pass.txt"
+  }catch{ QA "Save SSH creds -> EXCEPTION: $($_.Exception.Message)" }
+
+  # ---------- UDM IP ----------
+  try{
+    $UDM_IP = ReadIf (Join-Path $Vault 'udm_ip.txt')
+    if([string]::IsNullOrWhiteSpace($UDM_IP)){
+      $gw=(Get-NetIPConfiguration|Where-Object{ $_.IPv4DefaultGateway -and $_.IPv4Address }|Select-Object -First 1)
+      if($gw -and $gw.IPv4DefaultGateway){ $UDM_IP=$gw.IPv4DefaultGateway.NextHop; Set-Content (Join-Path $Vault 'udm_ip.txt') $UDM_IP -Encoding ASCII; QA "Auto-detected UDM IP -> $UDM_IP" }
+    } else { QA "UDM IP from vault -> $UDM_IP" }
+    if(-not $UDM_IP){ QA "UDM IP missing. Put 192.168.1.1 in $Vault\udm_ip.txt"; Say "UDM IP missing; continuing but remote steps will likely fail" 'Yellow' }
+  }catch{ QA "UDM IP detect -> EXCEPTION: $($_.Exception.Message)" }
+
+  # ---------- Ensure PuTTY tools ----------
+  $plink = Get-Command plink.exe -ErrorAction SilentlyContinue
+  $pscp  = Get-Command pscp.exe  -ErrorAction SilentlyContinue
+  if(-not $plink -or -not $pscp){
+    Say "Downloading PuTTY (plink/pscp)..." 'Yellow'; QA "PuTTY download starting"
+    $PlinkPath = Join-Path $Bin 'plink.exe'
+    $PscpPath  = Join-Path $Bin 'pscp.exe'
+    try{
+      Invoke-WebRequest -UseBasicParsing -Uri 'https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe' -OutFile $PlinkPath
+      Invoke-WebRequest -UseBasicParsing -Uri 'https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe'  -OutFile $PscpPath
+      $plink = Get-Command $PlinkPath -ErrorAction SilentlyContinue
+      $pscp  = Get-Command $PscpPath  -ErrorAction SilentlyContinue
+      QA "PuTTY download -> OK"
+    }catch{ QA "PuTTY download -> EXCEPTION: $($_.Exception.Message)" }
+  } else { QA ("PuTTY present -> plink={0} pscp={1}" -f $plink.Source,$pscp.Source) }
+  if($plink){ Say ("Using plink: {0}" -f $plink.Source) 'DarkGray' }
+  if($pscp){  Say ("Using pscp : {0}" -f $pscp.Source)  'DarkGray' }
+
+  # ---------- Quick SSH reachability probe (non-fatal) ----------
+  if($plink -and $UDM_IP){
+    $probe = Run-Cmd "SSH probe (banner)" ("echo y| `"{0}`" -ssh -batch -P 22 -l {1} -pw {2} {3} echo ok" -f $plink.Source,$SSH_USER,$SSH_PASS,$UDM_IP)
+    if(-not $probe.ok){ Say "SSH probe failed (will still continue)" 'Yellow' }
+  } else { QA "SSH probe skipped (plink or UDM_IP missing)" }
+
+  # ---------- Build UDM on-box collector files (LF endings) ----------
+  $COL_DIR='/data/plexcollector'
+  $BOOT_D='/data/on_boot.d'
+  $INTERVAL_SEC='900'   # 15 min
+  $RETENTION_D='30'     # keep 30 days on UDM
+
+  $CollectorLines=@(
+    '#!/bin/sh',
+    'TS=$(date +%Y%m%d_%H%M%S)',
+    'BASE="/data/plexcollector"',
+    'OUT="$BASE/out/$TS"',
+    'mkdir -p "$OUT"',
+    'echo "OUT=$OUT"',
+    'curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1/api/auth/csrf" -o "$OUT/csrf.json" -w "%{http_code}" > "$OUT/csrf.code"',
+    'TOKEN=$(sed -n ''s/.*"token":"\([^"]*\)".*/\1/p'' "$OUT/csrf.json")',
+    'if [ -z "$TOKEN" ]; then TOKEN=$(awk ''/csrf_token/ {print $NF}'' "$OUT/cookie" | tail -n1); fi',
+    ("UUSER='{0}'" -f $LOCAL_USER),
+    ("UPASS='{0}'" -f $LOCAL_PASS),
+    'LOGIN_CODE=$(curl -sk -L -o "$OUT/login.json" -w "%{http_code}" -c "$OUT/cookie" -b "$OUT/cookie" -H "Content-Type: application/json" -H "X-Csrf-Token: $TOKEN" --data "{\"username\":\"$UUSER\",\"password\":\"$UPASS\",\"rememberMe\":true}" "https://127.0.0.1/api/auth/login")',
+    'echo "$LOGIN_CODE" > "$OUT/login.code"',
+    'if [ "$LOGIN_CODE" != "200" ]; then echo "LOGIN_FAIL=$LOGIN_CODE" > "$OUT/status.txt"; echo "$OUT"; exit 0; fi',
+    'curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1/proxy/network/api/self/sites" -o "$OUT/self_sites.json"',
+    'SITE=$(sed -n ''s/.*"name":"\([^"]*\)".*/\1/p'' "$OUT/self_sites.json" | head -n1); [ -z "$SITE" ] && SITE="default"',
+    'echo "SITE=$SITE" > "$OUT/status.txt"',
+    'fetch(){ P="$1"; N="$2"; curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1${P}" -o "$OUT/${N}.json" -w "%{http_code}" > "$OUT/${N}.code"; }',
+    'fetch "/proxy/network/api/s/$SITE/list/setting"       "list_setting"',
+    'fetch "/proxy/network/api/s/$SITE/rest/networkconf"   "rest_networkconf"',
+    'fetch "/proxy/network/api/s/$SITE/list/wlanconf"      "list_wlanconf"',
+    'fetch "/proxy/network/api/s/$SITE/rest/portconf"      "rest_portconf"',
+    'fetch "/proxy/network/api/s/$SITE/rest/firewallrule"  "rest_firewallrule"',
+    'fetch "/proxy/network/api/s/$SITE/rest/firewallgroup" "rest_firewallgroup"',
+    'fetch "/proxy/network/api/s/$SITE/stat/device"        "stat_device"',
+    'fetch "/proxy/network/api/s/$SITE/stat/sta"           "stat_sta"',
+    'fetch "/proxy/network/api/s/$SITE/stat/health"        "stat_health"',
+    'fetch "/proxy/network/api/s/$SITE/stat/sysinfo"       "stat_sysinfo"',
+    'uname -a > "$OUT/host_uname.txt" 2>/dev/null',
+    'cat /proc/loadavg > "$OUT/host_loadavg.txt" 2>/dev/null',
+    'free -m > "$OUT/host_mem.txt" 2>/dev/null',
+    'df -h > "$OUT/host_df.txt" 2>/dev/null',
+    'ping -c 5 -W 2 1.1.1.1 > "$OUT/wan_ping_1.1.1.1.txt" 2>/dev/null || true',
+    'ping -c 5 -W 2 8.8.8.8 > "$OUT/wan_ping_8.8.8.8.txt" 2>/dev/null || true',
+    'echo "DONE" >> "$OUT/status.txt"',
+    ("find $BASE/out -maxdepth 1 -type d -mtime +{0} -exec rm -rf {{}} +" -f $RETENTION_D),
+    'echo "$OUT"'
+  )
+  $CollectorSh = Join-Path $Cache 'collector.sh'
+  [IO.File]::WriteAllText($CollectorSh, ($CollectorLines -join "`n"), [Text.Encoding]::ASCII)
+
+  $RunLines=@(
+    '#!/bin/sh',
+    'BASE="/data/plexcollector"',
+    'PIDFILE="$BASE/collector.pid"',
+    'INTERVAL_SEC=900',
+    'mkdir -p "$BASE/out"',
+    'if [ -f "$PIDFILE" ]; then',
+    '  OLD=$(cat "$PIDFILE" 2>/dev/null)',
+    '  if [ -n "$OLD" ] && kill -0 "$OLD" 2>/dev/null; then',
+    '    echo "collector already running (pid=$OLD)"; exit 0',
+    '  fi',
+    'fi',
+    'echo $$ > "$PIDFILE"',
+    'while true; do',
+    '  /bin/sh "$BASE/collector.sh" >/dev/null 2>&1 || true',
+    '  sleep "$INTERVAL_SEC"',
+    'done'
+  )
+  $RunSh = Join-Path $Cache 'run.sh'
+  [IO.File]::WriteAllText($RunSh, ($RunLines -join "`n"), [Text.Encoding]::ASCII)
+
+  $BootLines=@(
+    '#!/bin/sh',
+    'sleep 10',
+    '/bin/sh /data/plexcollector/run.sh >/dev/null 2>&1 &'
+  )
+  $BootSh = Join-Path $Cache '99-plexcollector.sh'
+  [IO.File]::WriteAllText($BootSh, ($BootLines -join "`n"), [Text.Encoding]::ASCII)
+
+  # ---------- Push files to UDM (non-fatal per step) ----------
+  if($plink -and $pscp -and $UDM_IP){
+    [void](Run-Cmd "mkdir /data paths" ("echo y| `"{0}`" -ssh -batch -P 22 -l {1} -pw {2} {3} mkdir -p /data/plexcollector /data/on_boot.d" -f $plink.Source,$SSH_USER,$SSH_PASS,$UDM_IP))
+    [void](Run-Cmd "push collector.sh" ("`"{0}`" -batch -P 22 -l {1} -pw {2} -q `"{3}`" `"{4}`"" -f $pscp.Source,$SSH_USER,$SSH_PASS,$CollectorSh,("{0}@{1}:{2}" -f $SSH_USER,$UDM_IP,"/data/plexcollector/collector.sh")))
+    [void](Run-Cmd "push run.sh"       ("`"{0}`" -batch -P 22 -l {1} -pw {2} -q `"{3}`" `"{4}`"" -f $pscp.Source,$SSH_USER,$SSH_PASS,$RunSh,      ("{0}@{1}:{2}" -f $SSH_USER,$UDM_IP,"/data/plexcollector/run.sh")))
+    [void](Run-Cmd "push boot hook"    ("`"{0}`" -batch -P 22 -l {1} -pw {2} -q `"{3}`" `"{4}`"" -f $pscp.Source,$SSH_USER,$SSH_PASS,$BootSh,     ("{0}@{1}:{2}" -f $SSH_USER,$UDM_IP,"/data/on_boot.d/99-plexcollector.sh")))
+    [void](Run-Cmd "chmod scripts"     ("echo y| `"{0}`" -ssh -batch -P 22 -l {1} -pw {2} {3} chmod +x /data/plexcollector/*.sh /data/on_boot.d/99-plexcollector.sh" -f $plink.Source,$SSH_USER,$SSH_PASS,$UDM_IP))
+    # start in background so plink returns
+    [void](Run-Cmd "start collector bg" ("echo y| `"{0}`" -ssh -batch -P 22 -l {1} -pw {2} {3} sh -c `"nohup /bin/sh /data/plexcollector/run.sh >/dev/null 2>&1 &`"" -f $plink.Source,$SSH_USER,$SSH_PASS,$UDM_IP))
+  } else {
+    QA "File push skipped (plink/pscp/UDM_IP missing)"
+    Say "Could not push files (plink/pscp/UDM_IP missing). Mirror will still be installed." 'Yellow'
+  }
+
+  # ---------- Build Windows mirror+analyze (robust) ----------
+  $MirrorScript = Join-Path $Scripts 'udm_mirror_analyze.ps1'
+  $MS=@()
+  $MS += '$ErrorActionPreference="Stop"; Set-StrictMode -Version Latest'
+  $MS += 'function ReadIf($p){ if(Test-Path $p){ try{ (Get-Content -LiteralPath $p -Raw).Trim() }catch{ $null } } else { $null } }'
+  $MS += '$Vault="C:\Users\jason\OneDrive\Public\TOKENS"; $Root="D:\PlexTools"; $Reports=Join-Path $Root "reports"; $Bin=Join-Path $Root "bin"'
+  $MS += 'if(-not (Test-Path $Reports)){ New-Item -ItemType Directory -Path $Reports -Force | Out-Null }'
+  $MS += '$Stamp=Get-Date -Format "yyyyMMdd_HHmmss"; $Log=Join-Path $Reports ("mirror_QA_"+$Stamp+".txt")'
+  $MS += 'function QA($m){ Add-Content -LiteralPath $Log -Value ("[{0}] {1}" -f (Get-Date -Format "HH:mm:ss"),$m) }'
+  $MS += 'QA "Mirror start"'
+  $MS += '$SSH_USER = ReadIf (Join-Path $Vault "udm_ssh_user.txt"); if([string]::IsNullOrWhiteSpace($SSH_USER)){ $SSH_USER="root" }'
+  $MS += '$SSH_PASS = ReadIf (Join-Path $Vault "udm_ssh_pass.txt"); if([string]::IsNullOrWhiteSpace($SSH_PASS)){ $SSH_PASS="W1ll0w1703!!" }'
+  $MS += '$UDM_IP   = ReadIf (Join-Path $Vault "udm_ip.txt")'
+  $MS += '$plink = Get-Command (Join-Path $Bin "plink.exe") -ErrorAction SilentlyContinue'
+  $MS += '$pscp  = Get-Command (Join-Path $Bin "pscp.exe")  -ErrorAction SilentlyContinue'
+  $MS += 'if(-not $plink -or -not $pscp){ QA "PuTTY missing"; Write-Host "[mirror] PuTTY missing"; exit 0 }'
+  $MS += 'if([string]::IsNullOrWhiteSpace($UDM_IP)){ QA "UDM_IP missing"; Write-Host "[mirror] UDM_IP missing"; exit 0 }'
+  $MS += '$RemoteSpec = ("{0}@{1}:{2}" -f $SSH_USER,$UDM_IP,"/data/plexcollector/out/*")'
+  $MS += '$global:LASTEXITCODE=0'
+  $MS += '$null = & cmd /c ("`"{0}`" -batch -P 22 -l {1} -pw {2} -q -r {3} `"{4}`"" -f $pscp.Source,$SSH_USER,$SSH_PASS,$RemoteSpec,$Reports)'
+  $MS += '$code = $LASTEXITCODE; if($code -ne 0){ QA ("pscp pull -> FAIL ("+$code+")"); Write-Host "[mirror] pscp pull failed"; exit 0 } else { QA "pscp pull -> OK" }'
+  $MS += '$dirs = Get-ChildItem -LiteralPath $Reports -Directory | Where-Object { $_.Name -match "^\d{8}_\d{6}$" } | Sort-Object Name'
+  $MS += 'if(-not $dirs){ QA "no bundles yet"; Write-Host "[mirror] no bundles yet"; exit 0 }'
+  $MS += '$latest = $dirs[-1].FullName'
+  $MS += '$SumPath = Join-Path $Reports ("posture_"+$dirs[-1].Name+".txt")'
+  $MS += 'function ReadFlex($p){ if(-not(Test-Path $p)){return @()} ; try{ $j=Get-Content -LiteralPath $p -Raw|ConvertFrom-Json; if($j -eq $null){@()} elseif($j.data){@($j.data)} elseif($j.items){@($j.items)} elseif($j -is [System.Collections.IEnumerable] -and -not ($j -is [string])){@($j)} else {@($j)} }catch{@()} }'
+  $MS += '$WLAN = Join-Path $latest "list_wlanconf.json"; $NET = Join-Path $latest "rest_networkconf.json"; $FR=Join-Path $latest "rest_firewallrule.json"; $STA=Join-Path $latest "stat_sta.json"; $DEV=Join-Path $latest "stat_device.json"'
+  $MS += '$w=ReadFlex $WLAN; $n=ReadFlex $NET; $fr=ReadFlex $FR; $st=ReadFlex $STA; $dv=ReadFlex $DEV'
+  $MS += '"UDM Posture â€” "+(Get-Date) | Set-Content -LiteralPath $SumPath -Encoding UTF8'
+  $MS += 'Add-Content $SumPath ("Latest bundle: "+(Split-Path $latest -Leaf))'
+  $MS += 'Add-Content $SumPath ("WLANs: "+$w.Count+" | Networks: "+$n.Count+" | Firewall rules: "+$fr.Count+" | Clients: "+$st.Count+" | Devices: "+$dv.Count)'
+  $MS += '$weak=0; foreach($c in $st){ if($c.PSObject.Properties["rssi"]){ try{ if([int]$c.rssi -lt -75){ $weak++ } }catch{} } }'
+  $MS += 'Add-Content $SumPath ("Weak-RSSI clients (<-75 dBm): "+$weak)'
+  $MS += '$aploads=@{}; foreach($c in $st){ $ap=$null; if($c.PSObject.Properties["ap_mac"]){ $ap=$c.ap_mac } elseif($c.PSObject.Properties["apMac"]){ $ap=$c.apMac } if($ap){ if(-not $aploads.ContainsKey($ap)){ $aploads[$ap]=0 }; $aploads[$ap]++ } }'
+  $MS += '$over = @($aploads.GetEnumerator() | Where-Object { $_.Value -gt 25 })'
+  $MS += 'Add-Content $SumPath ("Overloaded APs (>25 clients): "+$over.Count)'
+  $MS += '$TopCSV = Join-Path $Reports ("top_talkers_"+(Split-Path $latest -Leaf)+".csv")'
+  $MS += '$rows=@(); foreach($c in $st){'
+  $MS += '  $name=$null; foreach($k in @("hostname","host_name","name","displayName","display_name","device_name","fingerprint_name","mac")){ if($c.PSObject.Properties[$k] -and $c.$k){ $name=$c.$k; break } }'
+  $MS += '  if([string]::IsNullOrEmpty($name) -and $c.PSObject.Properties["mac"]){ $name=$c.mac }'
+  $MS += '  $mac=$null; if($c.PSObject.Properties["mac"]){ $mac=$c.mac }'
+  $MS += '  $ip=$null; foreach($k in @("ip","ip_address","ipv4","primaryIp","primary_ip")){ if($c.PSObject.Properties[$k] -and $c.$k){ $ip=$c.$k; break } }'
+  $MS += '  $ssid=$null; foreach($k in @("ssid","wlan","wifi_ssid","wlan_name")){ if($c.PSObject.Properties[$k] -and $c.$k){ $ssid=$c.$k; break } }'
+  $MS += '  $band=$null; foreach($k in @("radio","band","phy")){ if($c.PSObject.Properties[$k] -and $c.$k){ $band=$c.$k; break } }'
+  $MS += '  $tx=0; foreach($k in @("tx_bytes","txBytes","tx_total","tx_total_bytes")){ if($c.PSObject.Properties[$k] -and $c.$k -ne $null){ try{$tx=[double]$c.$k}catch{} } }'
+  $MS += '  $rx=0; foreach($k in @("rx_bytes","rxBytes","rx_total","rx_total_bytes")){ if($c.PSObject.Properties[$k] -and $c.$k -ne $null){ try{$rx=[double]$c.$k}catch{} } }'
+  $MS += '  $rows += [pscustomobject]@{ name=$name; mac=$mac; ip=$ip; ssid=$ssid; band=$band; tx_bytes=$tx; rx_bytes=$rx; total_bytes=($tx+$rx) }'
+  $MS += '}'
+  $MS += 'if($rows.Count -gt 0){ try{ $rows | Sort-Object total_bytes -Descending | Select-Object -First 50 | Export-Csv -LiteralPath $TopCSV -NoTypeInformation -Encoding UTF8; Add-Content $SumPath ("Top talkers -> "+$TopCSV) }catch{ QA ("Top talkers CSV -> EXCEPTION: "+$_.Exception.Message) } }'
+  $MS += '# Retention 90d'
+  $MS += 'try{ $cut=(Get-Date).AddDays(-90); Get-ChildItem -LiteralPath $Reports -Directory | Where-Object { $_.Name -match "^\d{8}_\d{6}$" -and $_.LastWriteTime -lt $cut } | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue }catch{ QA "Retention cleanup -> EXCEPTION: $($_.Exception.Message)" }'
+  $MS += 'Write-Host ("[mirror] Done: "+$SumPath)'
+  [IO.File]::WriteAllText($MirrorScript, ($MS -join "`n"), [Text.Encoding]::UTF8)
+  QA "Mirror+Analyze script written -> $MirrorScript"
+  Say ("Mirror+Analyze script -> {0}" -f $MirrorScript) 'DarkGray'
+
+  # ---------- Scheduled Task (non-fatal) ----------
+  $TaskName='UDM_Mirror_Analyze_15min'
+  $ps = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"$MirrorScript`""
+  try{
+    schtasks /Create /TN "$TaskName" /SC MINUTE /MO 15 /TR "$ps" /F /RL LIMITED /IT | Out-Null
+    QA "Scheduled Task created/updated -> $TaskName"
+    Say ("Scheduled Task -> {0} (every 15 min)" -f $TaskName) 'Green'
+  }catch{
+    QA ("Scheduled Task -> EXCEPTION: {0}" -f $_.Exception.Message)
+    Say "Could not create scheduled task (continuing). See QA log." 'Yellow'
+  }
+
+  # ---------- First mirror run (non-fatal) ----------
+  try{
+    & powershell -NoProfile -ExecutionPolicy Bypass -File $MirrorScript
+    QA "Manual mirror run -> attempted"
+  }catch{
+    QA ("Manual mirror run -> EXCEPTION: {0}" -f $_.Exception.Message)
+    Say "First mirror run failed (continuing). Task will retry." 'Yellow'
+  }
+
+  Say ("[DONE] Install flow finished. QA log -> {0}" -f $QA) 'Green'
+  Write-Host "Open the QA log for exact step statuses."
+}
+
+[20:51:35] [START] UDM Collector + Mirror installer (PS5.1-safe, continue-on-error)
+[20:51:35] Using plink: C:\Program Files\PuTTY\plink.exe
+[20:51:35] Using pscp : C:\Program Files\PuTTY\pscp.exe
+[20:51:35] SSH probe failed (will still continue)
+PS C:\Windows\System32> TerminatingError(): "The variable '$BASE' cannot be retrieved because it has not been set."
+>> TerminatingError(): "The variable '$BASE' cannot be retrieved because it has not been set."
+The variable '$BASE' cannot be retrieved because it has not been set.
+InvalidOperation: 
+Line |
+ 133 |      ("find $BASE/out -maxdepth 1 -type d -mtime +{0} -exec rm -rf {{} â€¦
+     |             ~~~~~
+     | The variable '$BASE' cannot be retrieved because it has not been set.
+PS C:\Windows\System32> cls
+PS C:\Windows\System32> &{
+  $ErrorActionPreference='Stop'; Set-StrictMode -Version Latest
+  function Say($m,$c='Cyan'){ Write-Host ("[{0}] {1}" -f (Get-Date -Format 'HH:mm:ss'),$m) -ForegroundColor $c }
+  function Ensure-Dir($p){ if(-not(Test-Path -LiteralPath $p)){ try{ New-Item -ItemType Directory -Path $p -Force | Out-Null }catch{} } }
+  function ReadIf($p){ if(Test-Path $p){ try{ (Get-Content -LiteralPath $p -Raw).Trim() }catch{ $null } } else { $null } }
+  function QA($msg){ Add-Content -LiteralPath $QA -Value ("[{0}] {1}" -f (Get-Date -Format 'HH:mm:ss'), $msg) }
+  function Run-Cmd($label,$cmd){
+    try{ $global:LASTEXITCODE=0; $out=& cmd /c $cmd; if($LASTEXITCODE -ne 0){ QA "$label -> FAIL ($LASTEXITCODE)"; return @{ok=$false;out=$out} }; QA "$label -> OK"; return @{ok=$true;out=$out} }
+    catch{ QA "$label -> EXCEPTION: $($_.Exception.Message)"; return @{ok=$false;out=$null} }
+  }
+
+  Say "[REPAIR] UDM collector: hostkey pin + find-line fix"
+  $Root='D:\PlexTools'; $Reports=Join-Path $Root 'reports'; $Cache=Join-Path $Root 'cache'; $Bin=Join-Path $Root 'bin'
+  Ensure-Dir $Reports; Ensure-Dir $Cache; Ensure-Dir $Bin
+  $Stamp=Get-Date -Format 'yyyyMMdd_HHmmss'
+  $QA=Join-Path $Reports ("udm_collector_repair_QA_{0}.txt" -f $Stamp)
+
+  # --- Known-good values you already use ---
+  $Vault='C:\Users\jason\OneDrive\Public\TOKENS'
+  $SSH_USER = (ReadIf (Join-Path $Vault 'udm_ssh_user.txt')); if([string]::IsNullOrWhiteSpace($SSH_USER)){ $SSH_USER='root' }
+  $SSH_PASS = (ReadIf (Join-Path $Vault 'udm_ssh_pass.txt')); if([string]::IsNullOrWhiteSpace($SSH_PASS)){ $SSH_PASS='W1ll0w1703!!' }
+  $UDM_IP   = ReadIf (Join-Path $Vault 'udm_ip.txt'); if([string]::IsNullOrWhiteSpace($UDM_IP)){ $UDM_IP='192.168.1.1' }
+
+  # --- Pin the server host key so PuTTY won't prompt (use the one you saw) ---
+  $HOSTKEY='ssh-ed25519 255 SHA256:s7xKcN4xHXB9jLO8A00w8BuRNKO8wjcyPVGSE5MXCT0'
+
+  # --- PuTTY tools ---
+  $plink = Get-Command plink.exe -ErrorAction SilentlyContinue
+  $pscp  = Get-Command pscp.exe  -ErrorAction SilentlyContinue
+  if(-not $plink -or -not $pscp){
+    QA "PuTTY missing, downloading"
+    $PlinkPath = Join-Path $Bin 'plink.exe'; $PscpPath  = Join-Path $Bin 'pscp.exe'
+    Invoke-WebRequest -UseBasicParsing -Uri 'https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe' -OutFile $PlinkPath
+    Invoke-WebRequest -UseBasicParsing -Uri 'https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe'  -OutFile $PscpPath
+    $plink = Get-Command $PlinkPath; $pscp = Get-Command $PscpPath
+  }
+  Say ("Using plink: {0}" -f $plink.Source) 'DarkGray'
+  Say ("Using pscp : {0}" -f $pscp.Source)  'DarkGray'
+
+  # --- Rebuild collector with PS-safe 'find' line (no $BASE expansion in PS) ---
+  $CollectorLines=@(
+    '#!/bin/sh',
+    'TS=$(date +%Y%m%d_%H%M%S)',
+    'BASE="/data/plexcollector"',
+    'OUT="$BASE/out/$TS"',
+    'mkdir -p "$OUT"',
+    'echo "OUT=$OUT"',
+    'curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1/api/auth/csrf" -o "$OUT/csrf.json" -w "%{http_code}" > "$OUT/csrf.code"',
+    'TOKEN=$(sed -n ''s/.*"token":"\([^"]*\)".*/\1/p'' "$OUT/csrf.json")',
+    'if [ -z "$TOKEN" ]; then TOKEN=$(awk ''/csrf_token/ {print $NF}'' "$OUT/cookie" | tail -n1); fi',
+    ("UUSER='udm_Local_api'"),
+    ("UPASS='W1ll0w1703!!'"),
+    'LOGIN_CODE=$(curl -sk -L -o "$OUT/login.json" -w "%{http_code}" -c "$OUT/cookie" -b "$OUT/cookie" -H "Content-Type: application/json" -H "X-Csrf-Token: $TOKEN" --data "{\"username\":\"$UUSER\",\"password\":\"$UPASS\",\"rememberMe\":true}" "https://127.0.0.1/api/auth/login")',
+    'echo "$LOGIN_CODE" > "$OUT/login.code"',
+    'if [ "$LOGIN_CODE" != "200" ]; then echo "LOGIN_FAIL=$LOGIN_CODE" > "$OUT/status.txt"; echo "$OUT"; exit 0; fi',
+    'curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1/proxy/network/api/self/sites" -o "$OUT/self_sites.json"',
+    'SITE=$(sed -n ''s/.*"name":"\([^"]*\)".*/\1/p'' "$OUT/self_sites.json" | head -n1); [ -z "$SITE" ] && SITE="default"',
+    'echo "SITE=$SITE" > "$OUT/status.txt"',
+    'fetch(){ P="$1"; N="$2"; curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1${P}" -o "$OUT/${N}.json" -w "%{http_code}" > "$OUT/${N}.code"; }',
+    'fetch "/proxy/network/api/s/$SITE/list/setting"       "list_setting"',
+    'fetch "/proxy/network/api/s/$SITE/rest/networkconf"   "rest_networkconf"',
+    'fetch "/proxy/network/api/s/$SITE/list/wlanconf"      "list_wlanconf"',
+    'fetch "/proxy/network/api/s/$SITE/rest/portconf"      "rest_portconf"',
+    'fetch "/proxy/network/api/s/$SITE/rest/firewallrule"  "rest_firewallrule"',
+    'fetch "/proxy/network/api/s/$SITE/rest/firewallgroup" "rest_firewallgroup"',
+    'fetch "/proxy/network/api/s/$SITE/stat/device"        "stat_device"',
+    'fetch "/proxy/network/api/s/$SITE/stat/sta"           "stat_sta"',
+    'fetch "/proxy/network/api/s/$SITE/stat/health"        "stat_health"',
+    'fetch "/proxy/network/api/s/$SITE/stat/sysinfo"       "stat_sysinfo"',
+    'uname -a > "$OUT/host_uname.txt" 2>/dev/null',
+    'cat /proc/loadavg > "$OUT/host_loadavg.txt" 2>/dev/null',
+    'free -m > "$OUT/host_mem.txt" 2>/dev/null',
+    'df -h > "$OUT/host_df.txt" 2>/dev/null',
+    'ping -c 5 -W 2 1.1.1.1 > "$OUT/wan_ping_1.1.1.1.txt" 2>/dev/null || true',
+    'ping -c 5 -W 2 8.8.8.8 > "$OUT/wan_ping_8.8.8.8.txt" 2>/dev/null || true',
+    'echo "DONE" >> "$OUT/status.txt"',
+    # NOTE: avoid PS expanding $BASE by concatenating strings in PS
+    ('find $BASE/out -maxdepth 1 -type d -mtime +' + '30' + ' -exec rm -rf {} +'),
+    'echo "$OUT"'
+  )
+  $RunLines=@(
+    '#!/bin/sh',
+    'BASE="/data/plexcollector"',
+    'PIDFILE="$BASE/collector.pid"',
+    'INTERVAL_SEC=900',
+    'mkdir -p "$BASE/out"',
+    'if [ -f "$PIDFILE" ]; then',
+    '  OLD=$(cat "$PIDFILE" 2>/dev/null)',
+    '  if [ -n "$OLD" ] && kill -0 "$OLD" 2>/dev/null; then',
+    '    echo "collector already running (pid=$OLD)"; exit 0',
+    '  fi',
+    'fi',
+    'echo $$ > "$PIDFILE"',
+    'while true; do',
+    '  /bin/sh "$BASE/collector.sh" >/dev/null 2>&1 || true',
+    '  sleep "$INTERVAL_SEC"',
+    'done'
+  )
+  $BootLines=@('#!/bin/sh','sleep 10','/bin/sh /data/plexcollector/run.sh >/dev/null 2>&1 &')
+
+  $CollectorSh = Join-Path $Cache 'collector.sh'
+  $RunSh       = Join-Path $Cache 'run.sh'
+  $BootSh      = Join-Path $Cache '99-plexcollector.sh'
+  [IO.File]::WriteAllText($CollectorSh, ($CollectorLines -join "`n"), [Text.Encoding]::ASCII)
+  [IO.File]::WriteAllText($RunSh,       ($RunLines       -join "`n"), [Text.Encoding]::ASCII)
+  [IO.File]::WriteAllText($BootSh,      ($BootLines      -join "`n"), [Text.Encoding]::ASCII)
+
+  # --- Push & start using pinned hostkey (no prompts) ---
+  $SshMk  = ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} mkdir -p /data/plexcollector /data/on_boot.d" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  $Scp1   = ("`"{0}`" -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} -q `"{4}`" `"{5}`"" -f $pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$CollectorSh,("$SSH_USER@$UDM_IP:/data/plexcollector/collector.sh"))
+  $Scp2   = ("`"{0}`" -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} -q `"{4}`" `"{5}`"" -f $pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$RunSh,      ("$SSH_USER@$UDM_IP:/data/plexcollector/run.sh"))
+  $Scp3   = ("`"{0}`" -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} -q `"{4}`" `"{5}`"" -f $pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$BootSh,     ("$SSH_USER@$UDM_IP:/data/on_boot.d/99-plexcollector.sh"))
+  $SshCh  = ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} chmod +x /data/plexcollector/*.sh /data/on_boot.d/99-plexcollector.sh" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  $SshRun = ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} sh -c `"/bin/sh /data/plexcollector/run.sh >/dev/null 2>&1 &`"" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  [void](Run-Cmd "mkdir paths" $SshMk)
+  [void](Run-Cmd "push collector.sh" $Scp1)
+  [void](Run-Cmd "push run.sh" $Scp2)
+  [void](Run-Cmd "push boot hook" $Scp3)
+  [void](Run-Cmd "chmod scripts" $SshCh)
+  [void](Run-Cmd "start collector (bg)" $SshRun)
+
+  # --- Optional: run once now to create first bundle, then pull to Reports ---
+  $SshOnce = ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} /bin/sh /data/plexcollector/collector.sh" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  [void](Run-Cmd "one-shot collector" $SshOnce)
+  $PullAll = ("`"{0}`" -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} -q -r {4} `"{5}`"" -f $pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,("$SSH_USER@$UDM_IP:/data/plexcollector/out/*"),$Reports)
+  [void](Run-Cmd "mirror bundles" $PullAll)
+
+  Say ("[REPAIR DONE] QA log -> {0}" -f $QA) 'Green'
+  Write-Host "If any step shows FAIL in the QA log, paste that line back here."
+}
+
+At line:110 char:158
++ â€¦ HOSTKEY,$SSH_USER,$SSH_PASS,$CollectorSh,("$SSH_USER@$UDM_IP:/data/pl â€¦
++                                                        ~~~~~~~~
+Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+
+At line:111 char:158
++ â€¦ HOSTKEY,$SSH_USER,$SSH_PASS,$RunSh,      ("$SSH_USER@$UDM_IP:/data/pl â€¦
++                                                        ~~~~~~~~
+Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+
+At line:112 char:158
++ â€¦ HOSTKEY,$SSH_USER,$SSH_PASS,$BootSh,     ("$SSH_USER@$UDM_IP:/data/on â€¦
++                                                        ~~~~~~~~
+Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+
+At line:125 char:145
++ â€¦ pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,("$SSH_USER@$UDM_IP:/data/pl â€¦
++                                                        ~~~~~~~~
+Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+ParserError: 
+Line |
+ 110 |  â€¦ HOSTKEY,$SSH_USER,$SSH_PASS,$CollectorSh,("$SSH_USER@$UDM_IP:/data/pl â€¦
+     |                                                         ~~~~~~~~
+     | Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+
+PS C:\Windows\System32> cls
+PS C:\Windows\System32> &{
+  $ErrorActionPreference='Stop'; Set-StrictMode -Version Latest
+  function Say($m,$c='Cyan'){ Write-Host ("[{0}] {1}" -f (Get-Date -Format 'HH:mm:ss'),$m) -ForegroundColor $c }
+  function Ensure-Dir($p){ if(-not(Test-Path -LiteralPath $p)){ try{ New-Item -ItemType Directory -Path $p -Force | Out-Null }catch{} } }
+  function ReadIf($p){ if(Test-Path $p){ try{ (Get-Content -LiteralPath $p -Raw).Trim() }catch{ $null } } else { $null } }
+  function Run-Cmd($label,$cmd){
+    try{ $global:LASTEXITCODE=0; $out=& cmd /c $cmd; $code=$LASTEXITCODE
+      [pscustomobject]@{ Label=$label; Ok=($code -eq 0); Code=$code; Out=$out }
+    }catch{ [pscustomobject]@{ Label=$label; Ok=$false; Code=-1; Out=$_.Exception.Message } }
+  }
+
+  Say "[VERIFY] UDM collector: logs + on-box bundle + mirror + posture"
+
+  # Paths
+  $Root='D:\PlexTools'
+  $Reports=Join-Path $Root 'reports'
+  $Bin=Join-Path $Root 'bin'
+  Ensure-Dir $Reports; Ensure-Dir $Bin
+
+  # Vault / creds
+  $Vault='C:\Users\jason\OneDrive\Public\TOKENS'
+  $SSH_USER = ReadIf (Join-Path $Vault 'udm_ssh_user.txt'); if([string]::IsNullOrWhiteSpace($SSH_USER)){ $SSH_USER='root' }
+  $SSH_PASS = ReadIf (Join-Path $Vault 'udm_ssh_pass.txt'); if([string]::IsNullOrWhiteSpace($SSH_PASS)){ $SSH_PASS='W1ll0w1703!!' }
+  $UDM_IP   = ReadIf (Join-Path $Vault 'udm_ip.txt'); if([string]::IsNullOrWhiteSpace($UDM_IP)){ $UDM_IP='192.168.1.1' }
+
+  # Host key you saw earlier (adjust if it ever changes)
+  $HOSTKEY='ssh-ed25519 255 SHA256:s7xKcN4xHXB9jLO8A00w8BuRNKO8wjcyPVGSE5MXCT0'
+
+  # PuTTY tools
+  $plink = Get-Command plink.exe -ErrorAction SilentlyContinue
+  $pscp  = Get-Command pscp.exe  -ErrorAction SilentlyContinue
+  if(-not $plink -or -not $pscp){
+    Say "PuTTY not found in PATH; looking under D:\PlexTools\bin..." 'Yellow'
+    $plink = Get-Command (Join-Path $Bin 'plink.exe') -ErrorAction SilentlyContinue
+    $pscp  = Get-Command (Join-Path $Bin 'pscp.exe')  -ErrorAction SilentlyContinue
+    if(-not $plink -or -not $pscp){ throw "plink/pscp not found. Install PuTTY or run the installer block again." }
+  }
+  Say ("Using plink: {0}" -f $plink.Source) 'DarkGray'
+  Say ("Using pscp : {0}" -f $pscp.Source)  'DarkGray'
+
+  # --- 1) QA LOG SCAN ---
+  $qaFiles = Get-ChildItem -LiteralPath $Reports -File |
+    Where-Object { $_.Name -match '^udm_collector_(install|repair)_QA_\d{8}_\d{6}\.txt$' } |
+    Sort-Object LastWriteTime -Descending
+  if($qaFiles){
+    $qaLatest = $qaFiles[0].FullName
+    Say ("QA log -> {0}" -f $qaLatest) 'DarkGray'
+    $lines = Get-Content -LiteralPath $qaLatest
+    $bad = $lines | Where-Object { $_ -match 'FAIL|EXCEPTION' }
+    if($bad){ Write-Host "â€” QA FAILURES â€”" -ForegroundColor Yellow; $bad | ForEach-Object { Write-Host $_ -ForegroundColor Yellow } }
+    else { Write-Host "QA log shows no FAIL/EXCEPTION lines." -ForegroundColor Green }
+  } else {
+    Write-Host "No installer/repair QA logs found (skipping scan)." -ForegroundColor Yellow
+  }
+
+  # --- 2) ON-BOX CHECKS (no prompts; pinned hostkey) ---
+  $cmdListOut = ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} sh -lc `"" +
+                 "ls -ld /data/plexcollector; echo '---'; ls -ld /data/on_boot.d; echo '---'; " +
+                 "ls -1 /data/plexcollector/out 2>/dev/null | tail -n 3" + "`"" ) -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP
+  $r1 = Run-Cmd "on-box ls" $cmdListOut
+  Write-Host ("on-box ls -> " + ($(if($r1.Ok){'OK'}else{'FAIL ' + $r1.Code})))
+  $r1.Out | ForEach-Object { Write-Host $_ }
+
+  # Grab latest bundle dir name from output tail
+  $lastDir=$null
+  if($r1.Ok -and $r1.Out){
+    $tail = @($r1.Out | Select-Object -Last 3)
+    foreach($t in $tail){ if($t -match '^\d{8}_\d{6}$'){ $lastDir=$t; break } }
+  }
+
+  # If we have a bundle dir, show login/status
+  if($lastDir){
+    $cmdShow = ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} sh -lc `"" +
+                "for f in login.code status.txt; do echo '---'$f; cat /data/plexcollector/out/{5}/$f 2>/dev/null || true; done" + "`"" ) -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP,$lastDir
+    $r2 = Run-Cmd "on-box show login/status" $cmdShow
+    Write-Host ("on-box show -> " + ($(if($r2.Ok){'OK'}else{'FAIL ' + $r2.Code})))
+    $r2.Out | ForEach-Object { Write-Host $_ }
+  } else {
+    Write-Host "No bundle dirs listed yet. The background collector may need a minute to create the first bundle." -ForegroundColor Yellow
+  }
+
+  # --- 3) MIRROR LATEST + QUICK POSTURE ---
+  $RemoteSpec = ("{0}@{1}:{2}" -f $SSH_USER,$UDM_IP,"/data/plexcollector/out/*")
+  $pull = ("`"{0}`" -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} -q -r {4} `"{5}`"" ) -f $pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$RemoteSpec,$Reports
+  $r3 = Run-Cmd "mirror pscp" $pull
+  Write-Host ("mirror -> " + ($(if($r3.Ok){'OK'}else{'FAIL ' + $r3.Code})))
+
+  # Find newest pulled bundle dir and summarize
+  $dirs = Get-ChildItem -LiteralPath $Reports -Directory | Where-Object { $_.Name -match '^\d{8}_\d{6}$' } | Sort-Object Name
+  if(-not $dirs){ Write-Host "No mirrored bundles found in $Reports yet." -ForegroundColor Yellow; return }
+  $latest = $dirs[-1].FullName
+  Write-Host ("latest bundle -> " + $latest) -ForegroundColor DarkGray
+
+  function ReadFlex($p){ if(-not(Test-Path $p)){return @()} ; try{ $j=Get-Content -LiteralPath $p -Raw|ConvertFrom-Json; if($j -eq $null){@()} elseif($j.data){@($j.data)} elseif($j.items){@($j.items)} elseif($j -is [System.Collections.IEnumerable] -and -not ($j -is [string])){@($j)} else {@($j)} }catch{@()} }
+  $STA = ReadFlex (Join-Path $latest 'stat_sta.json')
+  $DEV = ReadFlex (Join-Path $latest 'stat_device.json')
+  $WLAN= ReadFlex (Join-Path $latest 'list_wlanconf.json')
+  $NET = ReadFlex (Join-Path $latest 'rest_networkconf.json')
+  $FR  = ReadFlex (Join-Path $latest 'rest_firewallrule.json')
+
+  $weak=0; foreach($c in $STA){ if($c.PSObject.Properties['rssi']){ try{ if([int]$c.rssi -lt -75){ $weak++ } }catch{} } }
+  Write-Host ("Summary: clients={0} devices={1} wlans={2} networks={3} fw_rules={4} weak_rssi={5}" -f $STA.Count,$DEV.Count,$WLAN.Count,$NET.Count,$FR.Count,$weak) -ForegroundColor Green
+
+  # Top talkers CSV
+  $TopCSV = Join-Path $Reports ("top_talkers_"+(Split-Path $latest -Leaf)+".csv")
+  try{
+    $rows=@()
+    foreach($c in $STA){
+      $name=$null; foreach($k in @('hostname','host_name','name','displayName','display_name','device_name','fingerprint_name','mac')){ if($c.PSObject.Properties[$k] -and $c.$k){ $name=$c.$k; break } }
+      if([string]::IsNullOrEmpty($name) -and $c.PSObject.Properties['mac']){ $name=$c.mac }
+      $mac=$null; if($c.PSObject.Properties['mac']){ $mac=$c.mac }
+      $ip=$null; foreach($k in @('ip','ip_address','ipv4','primaryIp','primary_ip')){ if($c.PSObject.Properties[$k] -and $c.$k){ $ip=$c.$k; break } }
+      $ssid=$null; foreach($k in @('ssid','wlan','wifi_ssid','wlan_name')){ if($c.PSObject.Properties[$k] -and $c.$k){ $ssid=$c.$k; break } }
+      $band=$null; foreach($k in @('radio','band','phy')){ if($c.PSObject.Properties[$k] -and $c.$k){ $band=$c.$k; break } }
+      $tx=0; foreach($k in @('tx_bytes','txBytes','tx_total','tx_total_bytes')){ if($c.PSObject.Properties[$k] -and $c.$k -ne $null){ try{$tx=[double]$c.$k}catch{} } }
+      $rx=0; foreach($k in @('rx_bytes','rxBytes','rx_total','rx_total_bytes')){ if($c.PSObject.Properties[$k] -and $c.$k -ne $null){ try{$rx=[double]$c.$k}catch{} } }
+      $rows += [pscustomobject]@{ name=$name; mac=$mac; ip=$ip; ssid=$ssid; band=$band; tx_bytes=$tx; rx_bytes=$rx; total_bytes=($tx+$rx) }
+    }
+    if($rows.Count -gt 0){
+      $rows | Sort-Object total_bytes -Descending | Select-Object -First 50 | Export-Csv -LiteralPath $TopCSV -NoTypeInformation -Encoding UTF8
+      Write-Host ("Top talkers -> " + $TopCSV) -ForegroundColor DarkGray
+    }
+  }catch{ Write-Host ("Top talkers CSV error: "+$_.Exception.Message) -ForegroundColor Yellow }
+}
+
+[21:27:50] [VERIFY] UDM collector: logs + on-box bundle + mirror + posture
+[21:27:50] Using plink: C:\Program Files\PuTTY\plink.exe
+[21:27:50] Using pscp : C:\Program Files\PuTTY\pscp.exe
+[21:27:51] QA log -> D:\PlexTools\reports\udm_collector_install_QA_20251007_205135.txt
+â€” QA FAILURES â€”
+[20:51:35] SSH probe (banner) -> FAIL (exit 1)
+on-box ls -> OK
+---
+---
+No bundle dirs listed yet. The background collector may need a minute to create the first bundle.
+mirror -> FAIL 1
+No mirrored bundles found in D:\PlexTools\reports yet.
+PS C:\Windows\System32> cls
+PS C:\Windows\System32> &{
+  $ErrorActionPreference='Stop'; Set-StrictMode -Version Latest
+  function Say($m,$c='Cyan'){ Write-Host ("[{0}] {1}" -f (Get-Date -Format 'HH:mm:ss'),$m) -ForegroundColor $c }
+  function Ensure-Dir($p){ if(-not(Test-Path -LiteralPath $p)){ New-Item -ItemType Directory -Path $p -Force | Out-Null } }
+  function ReadIf($p){ if(Test-Path $p){ try{ (Get-Content -LiteralPath $p -Raw).Trim() }catch{ $null } } else { $null } }
+  function RunCmd($cmd){ $global:LASTEXITCODE=0; $out = & cmd /c $cmd; [pscustomobject]@{ Out=$out; Code=$LASTEXITCODE } }
+
+  Say "[INSTALL] UDM SSH collector + Windows scheduler (PS5.1-safe)"
+
+  # --- Paths ---
+  $Vault='C:\Users\jason\OneDrive\Public\TOKENS'
+  $Root='D:\PlexTools'
+  $Reports=Join-Path $Root 'reports'
+  $Cache=Join-Path $Root 'cache'
+  $Bin=Join-Path $Root 'bin'
+  $Scripts=Join-Path $Root 'Scripts'
+  Ensure-Dir $Vault; Ensure-Dir $Reports; Ensure-Dir $Cache; Ensure-Dir $Bin; Ensure-Dir $Scripts
+
+  # --- Creds you gave me ---
+  $LOCAL_USER='udm_Local_api'
+  $LOCAL_PASS='W1ll0w1703!!'
+  Set-Content (Join-Path $Vault 'udm_user.txt') $LOCAL_USER -Encoding ASCII
+  Set-Content (Join-Path $Vault 'udm_pass.txt') $LOCAL_PASS -Encoding ASCII
+  $bytes=[Text.Encoding]::UTF8.GetBytes($LOCAL_PASS)
+  $enc=[Security.Cryptography.ProtectedData]::Protect($bytes,$null,[Security.Cryptography.DataProtectionScope]::CurrentUser)
+  [IO.File]::WriteAllBytes((Join-Path $Vault 'udm_pass.bin'),$enc)
+
+  # --- SSH creds (device OS) ---
+  $SSH_USER = ReadIf (Join-Path $Vault 'udm_ssh_user.txt'); if([string]::IsNullOrWhiteSpace($SSH_USER)){ $SSH_USER='root'; Set-Content (Join-Path $Vault 'udm_ssh_user.txt') $SSH_USER -Encoding ASCII }
+  $SSH_PASS = ReadIf (Join-Path $Vault 'udm_ssh_pass.txt'); if([string]::IsNullOrWhiteSpace($SSH_PASS)){ $SSH_PASS='W1ll0w1703!!'; Set-Content (Join-Path $Vault 'udm_ssh_pass.txt') $SSH_PASS -Encoding ASCII }
+
+  # --- Host/IP + hostkey ---
+  $UDM_IP = ReadIf (Join-Path $Vault 'udm_ip.txt'); if([string]::IsNullOrWhiteSpace($UDM_IP)){ $UDM_IP='192.168.1.1'; Set-Content (Join-Path $Vault 'udm_ip.txt') $UDM_IP -Encoding ASCII }
+  $HOSTKEY='ssh-ed25519 255 SHA256:s7xKcN4xHXB9jLO8A00w8BuRNKO8wjcyPVGSE5MXCT0'  # update if PuTTY shows a different fingerprint
+
+  # --- Putty tools ---
+  $plink = Get-Command plink.exe -ErrorAction SilentlyContinue
+  $pscp  = Get-Command pscp.exe  -ErrorAction SilentlyContinue
+  if(-not $plink -or -not $pscp){
+    Say "PuTTY not found; downloading..." 'Yellow'
+    $PlinkPath = Join-Path $Bin 'plink.exe'
+    $PscpPath  = Join-Path $Bin 'pscp.exe'
+    Invoke-WebRequest -UseBasicParsing -Uri 'https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe' -OutFile $PlinkPath
+    Invoke-WebRequest -UseBasicParsing -Uri 'https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe'  -OutFile $PscpPath
+    $plink = Get-Command $PlinkPath; $pscp = Get-Command $PscpPath
+  }
+  Say ("Using plink: {0}" -f $plink.Source) 'DarkGray'
+  Say ("Using pscp : {0}" -f $pscp.Source)  'DarkGray'
+
+  # --- Probe SSH (tell you if auth/hostkey mismatches) ---
+  $Probe = RunCmd ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} echo ok" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  if($Probe.Code -ne 0){
+    Write-Host "[SSH] Could not log in non-interactively." -ForegroundColor Yellow
+    Write-Host " - Check: Settings > System > Advanced > Enable SSH (username is 'root', password is your device SSH password)." -ForegroundColor Yellow
+    Write-Host " - If PuTTY prints a NEW fingerprint, replace HOSTKEY in this block and re-run." -ForegroundColor Yellow
+    return
+  }
+
+  # --- Build collector.sh (no 'set -e', no PS-here-strings) ---
+  $CollectorLines=@(
+    '#!/bin/sh',
+    'TS=$(date +%Y%m%d_%H%M%S)',
+    'BASE="/data/plexcollector"',
+    'OUT="$BASE/out/$TS"',
+    'mkdir -p "$OUT"',
+    'echo "OUT=$OUT"',
+    'curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1/api/auth/csrf" -o "$OUT/csrf.json" -w "%{http_code}" > "$OUT/csrf.code"',
+    'TOKEN=$(sed -n ''s/.*"token":"\([^"]*\)".*/\1/p'' "$OUT/csrf.json")',
+    'if [ -z "$TOKEN" ]; then TOKEN=$(awk ''/csrf_token/ {print $NF}'' "$OUT/cookie" | tail -n1); fi',
+    ("UUSER='{0}'" -f $LOCAL_USER),
+    ("UPASS='{0}'" -f $LOCAL_PASS),
+    'LOGIN_CODE=$(curl -sk -L -o "$OUT/login.json" -w "%{http_code}" -c "$OUT/cookie" -b "$OUT/cookie" -H "Content-Type: application/json" -H "X-Csrf-Token: $TOKEN" --data "{\"username\":\"$UUSER\",\"password\":\"$UPASS\",\"rememberMe\":true}" "https://127.0.0.1/api/auth/login")',
+    'echo "$LOGIN_CODE" > "$OUT/login.code"',
+    'if [ "$LOGIN_CODE" != "200" ]; then echo "LOGIN_FAIL=$LOGIN_CODE" > "$OUT/status.txt"; echo "$OUT"; exit 0; fi',
+    'curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1/proxy/network/api/self/sites" -o "$OUT/self_sites.json"',
+    'SITE=$(sed -n ''s/.*"name":"\([^"]*\)".*/\1/p'' "$OUT/self_sites.json" | head -n1); [ -z "$SITE" ] && SITE="default"',
+    'echo "SITE=$SITE" > "$OUT/status.txt"',
+    'fetch(){ P="$1"; N="$2"; curl -sk -c "$OUT/cookie" -b "$OUT/cookie" "https://127.0.0.1${P}" -o "$OUT/${N}.json" -w "%{http_code}" > "$OUT/${N}.code"; }',
+    'fetch "/proxy/network/api/s/$SITE/list/setting"       "list_setting"',
+    'fetch "/proxy/network/api/s/$SITE/rest/networkconf"   "rest_networkconf"',
+    'fetch "/proxy/network/api/s/$SITE/list/wlanconf"      "list_wlanconf"',
+    'fetch "/proxy/network/api/s/$SITE/rest/portconf"      "rest_portconf"',
+    'fetch "/proxy/network/api/s/$SITE/rest/firewallrule"  "rest_firewallrule"',
+    'fetch "/proxy/network/api/s/$SITE/rest/firewallgroup" "rest_firewallgroup"',
+    'fetch "/proxy/network/api/s/$SITE/stat/device"        "stat_device"',
+    'fetch "/proxy/network/api/s/$SITE/stat/sta"           "stat_sta"',
+    'fetch "/proxy/network/api/s/$SITE/stat/health"        "stat_health"',
+    'fetch "/proxy/network/api/s/$SITE/stat/sysinfo"       "stat_sysinfo"',
+    'uname -a > "$OUT/host_uname.txt" 2>/dev/null',
+    'cat /proc/loadavg > "$OUT/host_loadavg.txt" 2>/dev/null',
+    'free -m > "$OUT/host_mem.txt" 2>/dev/null',
+    'df -h > "$OUT/host_df.txt" 2>/dev/null',
+    'ping -c 5 -W 2 1.1.1.1 > "$OUT/wan_ping_1.1.1.1.txt" 2>/dev/null || true',
+    'ping -c 5 -W 2 8.8.8.8 > "$OUT/wan_ping_8.8.8.8.txt" 2>/dev/null || true',
+    'echo "DONE" >> "$OUT/status.txt"',
+    ('find $BASE/out -maxdepth 1 -type d -mtime +' + '30' + ' -exec rm -rf {} +'),
+    'echo "$OUT"'
+  )
+  $CollectorSh = Join-Path $Cache 'collector.sh'
+  [IO.File]::WriteAllText($CollectorSh, ($CollectorLines -join "`n"), [Text.Encoding]::ASCII)
+
+  # --- Push to UDM ---
+  $mk = RunCmd ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} mkdir -p /data/plexcollector /data/plexcollector/out" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  $up = RunCmd ("`"{0}`" -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} -q `"{4}`" `"{5}`"" -f $pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$CollectorSh,("$SSH_USER@$UDM_IP:/data/plexcollector/collector.sh"))
+  $ch = RunCmd ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} chmod +x /data/plexcollector/collector.sh" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  if($mk.Code -ne 0 -or $up.Code -ne 0 -or $ch.Code -ne 0){ Say "Push/chmod failed; aborting." 'Red'; return }
+
+  # --- Run once now, then discover newest OUT dir ---
+  $run = RunCmd ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} /bin/sh /data/plexcollector/collector.sh" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  if($run.Code -ne 0){ Say "Collector run failed. (SSH ok but script error). We can print remote logs on request." 'Yellow' }
+
+  $last = RunCmd ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} sh -lc `"ls -1 /data/plexcollector/out 2>/dev/null | tail -n 1`"" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)
+  $LastDir = $null; if($last.Code -eq 0 -and $last.Out){ $LastDir = ($last.Out | Select-Object -Last 1).Trim() }
+  if([string]::IsNullOrWhiteSpace($LastDir)){ Say "No bundle dir yet (the login may have failed on-box). We'll still set up the Windows scheduler." 'Yellow' }
+
+  # --- Mirror all bundles to Reports ---
+  $Pull = RunCmd ("`"{0}`" -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} -q -r {4} `"{5}`"" -f $pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,("$SSH_USER@$UDM_IP:/data/plexcollector/out/*"),$Reports)
+  if($Pull.Code -ne 0){ Say "Mirror failed (nothing to copy yet is common on first run)." 'Yellow' }
+
+  # --- Summarize the newest local bundle (if present) ---
+  $dirs = Get-ChildItem -LiteralPath $Reports -Directory | Where-Object { $_.Name -match '^\d{8}_\d{6}$' } | Sort-Object Name
+  if($dirs){
+    $latest = $dirs[-1].FullName
+    function ReadFlex($p){ if(-not(Test-Path $p)){return @()} ; try{ $j=Get-Content -LiteralPath $p -Raw|ConvertFrom-Json; if($j -eq $null){@()} elseif($j.data){@($j.data)} elseif($j.items){@($j.items)} elseif($j -is [System.Collections.IEnumerable] -and -not ($j -is [string])){@($j)} else {@($j)} }catch{@()} }
+    $STA = ReadFlex (Join-Path $latest 'stat_sta.json')
+    $DEV = ReadFlex (Join-Path $latest 'stat_device.json')
+    $WLAN= ReadFlex (Join-Path $latest 'list_wlanconf.json')
+    $NET = ReadFlex (Join-Path $latest 'rest_networkconf.json')
+    $FR  = ReadFlex (Join-Path $latest 'rest_firewallrule.json')
+    $weak=0; foreach($c in $STA){ if($c.PSObject.Properties['rssi']){ try{ if([int]$c.rssi -lt -75){ $weak++ } }catch{} } }
+    Say ("Summary: clients={0} devices={1} wlans={2} networks={3} fw_rules={4} weak_rssi={5}" -f $STA.Count,$DEV.Count,$WLAN.Count,$NET.Count,$FR.Count,$weak) 'Green'
+
+    # Export top talkers CSV
+    $TopCSV = Join-Path $Reports ("top_talkers_"+(Split-Path $latest -Leaf)+".csv")
+    try{
+      $rows=@()
+      foreach($c in $STA){
+        $name=$null; foreach($k in @('hostname','host_name','name','displayName','display_name','device_name','fingerprint_name','mac')){ if($c.PSObject.Properties[$k] -and $c.$k){ $name=$c.$k; break } }
+        if([string]::IsNullOrEmpty($name) -and $c.PSObject.Properties['mac']){ $name=$c.mac }
+        $mac=$null; if($c.PSObject.Properties['mac']){ $mac=$c.mac }
+        $ip=$null; foreach($k in @('ip','ip_address','ipv4','primaryIp','primary_ip')){ if($c.PSObject.Properties[$k] -and $c.$k){ $ip=$c.$k; break } }
+        $ssid=$null; foreach($k in @('ssid','wlan','wifi_ssid','wlan_name')){ if($c.PSObject.Properties[$k] -and $c.$k){ $ssid=$c.$k; break } }
+        $band=$null; foreach($k in @('radio','band','phy')){ if($c.PSObject.Properties[$k] -and $c.$k){ $band=$c.$k; break } }
+        $tx=0; foreach($k in @('tx_bytes','txBytes','tx_total','tx_total_bytes')){ if($c.PSObject.Properties[$k] -and $c.$k -ne $null){ try{$tx=[double]$c.$k}catch{} } }
+        $rx=0; foreach($k in @('rx_bytes','rxBytes','rx_total','rx_total_bytes')){ if($c.PSObject.Properties[$k] -and $c.$k -ne $null){ try{$rx=[double]$c.$k}catch{} } }
+        $rows += [pscustomobject]@{ name=$name; mac=$mac; ip=$ip; ssid=$ssid; band=$band; tx_bytes=$tx; rx_bytes=$rx; total_bytes=($tx+$rx) }
+      }
+      if($rows.Count -gt 0){
+        $rows | Sort-Object total_bytes -Descending | Select-Object -First 50 | Export-Csv -LiteralPath $TopCSV -NoTypeInformation -Encoding UTF8
+        Say ("Top talkers -> {0}" -f $TopCSV) 'DarkGray'
+      }
+    }catch{ Say ("Top talkers CSV error: "+$_.Exception.Message) 'Yellow' }
+  } else {
+    Say "No local bundles yet (first run may have produced an auth 401 on-box). Scheduler will retry." 'Yellow'
+  }
+
+  # --- Create scheduler that repeats run+mirror every 15 minutes ---
+  $Runner = Join-Path $Scripts 'udm_collect_and_mirror.ps1'
+  $L=@()
+  $L += '$ErrorActionPreference="Stop"; Set-StrictMode -Version Latest'
+  $L += '$Vault="C:\Users\jason\OneDrive\Public\TOKENS"; $Root="D:\PlexTools"; $Reports=Join-Path $Root "reports"; $Bin=Join-Path $Root "bin"'
+  $L += 'function ReadIf($p){ if(Test-Path $p){ (Get-Content -LiteralPath $p -Raw).Trim() } else { $null } }'
+  $L += '$SSH_USER=ReadIf (Join-Path $Vault "udm_ssh_user.txt"); if([string]::IsNullOrWhiteSpace($SSH_USER)){ $SSH_USER="root" }'
+  $L += '$SSH_PASS=ReadIf (Join-Path $Vault "udm_ssh_pass.txt"); if([string]::IsNullOrWhiteSpace($SSH_PASS)){ $SSH_PASS="W1ll0w1703!!" }'
+  $L += '$UDM_IP  =ReadIf (Join-Path $Vault "udm_ip.txt"); if([string]::IsNullOrWhiteSpace($UDM_IP)){ $UDM_IP="192.168.1.1" }'
+  $L += '$HOSTKEY="ssh-ed25519 255 SHA256:s7xKcN4xHXB9jLO8A00w8BuRNKO8wjcyPVGSE5MXCT0"'
+  $L += '$plink = Get-Command (Join-Path $Bin "plink.exe"); $pscp = Get-Command (Join-Path $Bin "pscp.exe")'
+  $L += '$null = & cmd /c ("`"{0}`" -ssh -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} {4} /bin/sh /data/plexcollector/collector.sh" -f $plink.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,$UDM_IP)'
+  $L += '$null = & cmd /c ("`"{0}`" -batch -hostkey `"{1}`" -P 22 -l {2} -pw {3} -q -r {4} `"{5}`"" -f $pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,("$SSH_USER@$UDM_IP:/data/plexcollector/out/*"),$Reports)'
+  [IO.File]::WriteAllText($Runner, ($L -join "`n"), [Text.Encoding]::UTF8)
+  $TaskName='UDM_Collector_15min'
+  $ps = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"$Runner`""
+  schtasks /Create /TN "$TaskName" /SC MINUTE /MO 15 /TR "$ps" /F /RL LIMITED /IT | Out-Null
+  Say ("Scheduled Task -> {0} (every 15 min)" -f $TaskName) 'Green'
+
+  Say "[DONE] First run attempted; scheduler installed. If SSH auth worked, a bundle folder like 2025xxxxx_xxxxxx will appear under D:\PlexTools\reports." 'Green'
+}
+
+At line:104 char:161
++ â€¦ HOSTKEY,$SSH_USER,$SSH_PASS,$CollectorSh,("$SSH_USER@$UDM_IP:/data/pl â€¦
++                                                        ~~~~~~~~
+Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+
+At line:117 char:149
++ â€¦ pscp.Source,$HOSTKEY,$SSH_USER,$SSH_PASS,("$SSH_USER@$UDM_IP:/data/pl â€¦
++                                                        ~~~~~~~~
+Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+ParserError: 
+Line |
+ 104 |  â€¦ HOSTKEY,$SSH_USER,$SSH_PASS,$CollectorSh,("$SSH_USER@$UDM_IP:/data/pl â€¦
+     |                                                         ~~~~~~~~
+     | Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
 
