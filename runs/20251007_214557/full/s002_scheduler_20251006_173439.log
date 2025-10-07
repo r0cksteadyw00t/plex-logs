@@ -1,0 +1,49 @@
+**********************
+PowerShell transcript start
+Start time: 20251006173439
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 18652
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is D:\PlexTools\logs\s002_scheduler_20251006_173439.log
+S002: Scheduler audit and self-heal
+PS C:\Windows\System32> TerminatingError(Get-ScheduledTask): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: No MSFT_ScheduledTask objects found with property 'TaskName' equal to 'PS Smart Bridge'.  Verify the value of the property and retry."
+  OK  Created task: PS Smart Bridge
+  WARN Smoke run failed for PS Smart Bridge: The property 'State' cannot be found on this object. Verify that the property exists.
+Register-ScheduledTask: 
+Line |
+ 257 |            Register-ScheduledTask -TaskName $td.Name -Action $act -Tri â€¦
+     |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The task XML contains a value which is incorrectly formatted or out of range.
+
+(10,29):Duration:P36500D
+Register-ScheduledTask: 
+Line |
+ 257 |            Register-ScheduledTask -TaskName $td.Name -Action $act -Tri â€¦
+     |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The task XML contains a value which is incorrectly formatted or out of range.
+
+(10,29):Duration:P36500D
+  OK  Updated task: RD Queue Processor (per-user)
+  WARN Smoke run failed for RD Queue Processor (per-user): The property 'State' cannot be found on this object. Verify that the property exists.
+===== S002 SUMMARY =====
+OK tasks       :
+Healed tasks   : PS Smart Bridge, RD Queue Processor (per-user)
+Quarantined    :
+Warnings       : 2
+**********************
+PowerShell transcript end
+End time: 20251006173452
+**********************
