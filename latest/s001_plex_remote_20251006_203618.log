@@ -1,0 +1,56 @@
+**********************
+PowerShell transcript start
+Start time: 20251006203618
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 37484
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is D:\PlexTools\logs\s001_plex_remote_20251006_203618.log
+S001: Plex Remote Access & NAT diagnostic and safe repair
+Guardrails: TOKENS=C:\Users\jason\OneDrive\Public\TOKENS, HTTP-200-only, no destructive actions
+  OK  Library path OK: Streaming Movies -> D:\StremioCatalog\_Hybrid\Movies
+  OK  Library path OK: Streaming TV Shows -> D:\StremioCatalog\_Hybrid\Shows
+  OK  Library path OK: ScarFLIX - Movie Request -> D:\ScarFLIX\Wishlist\Movies
+  OK  Library path OK: ScarFLIX - Shows Request -> D:\ScarFLIX\Wishlist\TV
+  OK  Backup saved: C:\Users\jason\AppData\Local\Plex Media Server\Preferences_Backups\Preferences_20251006_203618.xml
+  OK  No preference changes required
+  OK  Firewall inbound rule for TCP 32400 present
+  WARN UPnP mapping skipped/failed: No IGD or UPnP disabled
+  WARN NAT-PMP not used: No response
+  WARN UniFi attempt: Cannot overwrite variable Host because it is read-only or constant.
+PS>TerminatingError(Invoke-WebRequest): "Unauthorized401 Unauthorized"
+  OK  Identity 200 in 1999 ms
+  WARN Resources check not 200 (status=-1) â€” likely token missing; ignoring for NAT.
+Router port-forward hint â†’ Forward TCP 32400 (WAN) â†’ 192.168.1.184:32400 (LAN)
+===== S001 SUMMARY =====
+Remote Access state: Relay
+Preferences before:
+ManualPortMappingMode = 1
+RemoteAccessEnabled = 1
+InternetStreamPort = 32400
+PreferredNetworkInterface =
+CustomConnections =
+Preferences after:
+ManualPortMappingMode = 1
+RemoteAccessEnabled = 1
+InternetStreamPort = 32400
+PreferredNetworkInterface =
+CustomConnections =
+HTTP check: identity=200 (1999ms), resources=-1 (3ms)
+Warnings: 2
+**********************
+PowerShell transcript end
+End time: 20251006203628
+**********************
