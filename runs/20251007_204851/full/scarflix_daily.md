@@ -1,0 +1,262 @@
+### 2025-10-04 23:15
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True, stremio=True, plex=True
+- rd last 24h: ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=NotFound, last=, next=, rc=
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Ready, last=4/10/2025 10:41:41 PM, next=4/10/2025 11:41:41 PM, rc=3221225786
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=4/10/2025 11:12:12 PM, next=4/10/2025 11:22:22 PM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=NotFound, last=, next=, rc=
+- warnings:
+  - Node.js not found - Populate skipped.
+- next_steps:
+  - Install Node.js 18+.
+
+### 2025-10-04 23:38
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True, stremio=True, plex=True
+- rd last 24h: ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 4:00:00 AM, rc=267011
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Ready, last=4/10/2025 10:41:41 PM, next=4/10/2025 11:41:41 PM, rc=3221225786
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=4/10/2025 11:32:32 PM, next=4/10/2025 11:42:42 PM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 10:00:00 AM, rc=267011
+- warnings:
+  - Node.js not found - Populate skipped.
+- next_steps:
+  - Install Node.js 18+.
+
+### 2025-10-04 23:41
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True, stremio=True, plex=True
+- rd last 24h: ok=0, err=3
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 4:00:00 AM, rc=267011
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Running, last=4/10/2025 11:41:41 PM, next=5/10/2025 12:41:41 AM, rc=267009
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=4/10/2025 11:32:32 PM, next=4/10/2025 11:42:42 PM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 10:00:00 AM, rc=267011
+- warnings:
+  - Node.js not found - Populate skipped.
+- next_steps:
+  - Install Node.js 18+.
+
+### 2025-10-04 23:55
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- kit_http200: 
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True, stremio=True, plex=True
+- rd last 24h: ok=0, err=6
+- rd delta since last: total=6, ok=0, err=6
+- rd recent errors:
+  - 2025-10-04T23:41:26 Big Buck Bunny (2008) - The remote server returned an error: (401) Unauthorized.
+  - 2025-10-04T23:41:27 Sintel (2010) - The remote server returned an error: (401) Unauthorized.
+  - 2025-10-04T23:41:28 Tears of Steel (2013) - The remote server returned an error: (401) Unauthorized.
+  - 2025-10-04T23:41:31 Big Buck Bunny (2008) - The remote server returned an error: (401) Unauthorized.
+  - 2025-10-04T23:41:32 Sintel (2010) - The remote server returned an error: (401) Unauthorized.
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 4:00:00 AM, rc=267011
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Ready, last=4/10/2025 11:41:41 PM, next=5/10/2025 12:41:41 AM, rc=0
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=4/10/2025 11:52:52 PM, next=5/10/2025 12:02:02 AM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 10:00:00 AM, rc=267011
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+  - Latest kit URL not HTTP 200.
+- next_steps:
+  - Install Node.js 18+.
+  - Republish SSOT or check token.
+
+### 2025-10-04 23:59
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- latest_release: https://github.com/r0cksteadyw00t/plex/releases/tag/v20251004-2247 (tag=v20251004-2247)
+- kit_asset_found: True, size: 346
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True (valid=False), stremio=True, plex=True (valid=True)
+- rd last 24h: ok=0, err=6
+- rd delta since last: total=0, ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 4:00:00 AM, rc=267011
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Ready, last=4/10/2025 11:41:41 PM, next=5/10/2025 12:41:41 AM, rc=0
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=4/10/2025 11:52:52 PM, next=5/10/2025 12:02:02 AM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 10:00:00 AM, rc=267011
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+  - Real-Debrid token appears invalid (401) - RD worker will error.
+- next_steps:
+  - Install Node.js 18+.
+  - Refresh rd_token.txt from RD account.
+
+### 2025-10-05 00:12
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- latest_release: https://github.com/r0cksteadyw00t/plex/releases/tag/v20251004-2247 (tag=v20251004-2247)
+- kit_asset_found: True, size: 346
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True (valid=False), stremio=True, plex=True (valid=True)
+- rd last 24h: ok=0, err=6
+- rd delta since last: total=0, ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 4:00:00 AM, rc=267011
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Disabled, last=4/10/2025 11:41:41 PM, next=5/10/2025 12:41:41 AM, rc=0
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Running, last=5/10/2025 12:12:12 AM, next=5/10/2025 12:22:22 AM, rc=267009
+  - ScarFlix_Daily_Changelog_0900: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 10:00:00 AM, rc=267011
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+  - Real-Debrid token appears invalid (401) - RD worker will error.
+- next_steps:
+  - Install Node.js 18+.
+  - Refresh rd_token.txt from RD account.
+
+### 2025-10-05 00:26
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- latest_release: https://github.com/r0cksteadyw00t/plex/releases/tag/v20251004-2247 (tag=v20251004-2247)
+- kit_asset_found: True, size: 346
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True (valid=False), stremio=True, plex=True (valid=True)
+- rd last 24h: ok=0, err=6
+- rd delta since last: total=0, ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 4:00:00 AM, rc=267011
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Disabled, last=4/10/2025 11:41:41 PM, next=5/10/2025 12:41:41 AM, rc=0
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=5/10/2025 12:22:22 AM, next=5/10/2025 12:32:32 AM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 10:00:00 AM, rc=267011
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+  - Real-Debrid token appears invalid (401) - RD worker will error.
+- next_steps:
+  - Install Node.js 18+.
+  - Refresh rd_token.txt from RD account.
+
+### 2025-10-05 00:36
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- latest_release: https://github.com/r0cksteadyw00t/plex/releases/tag/v20251004-2247 (tag=v20251004-2247)
+- kit_asset_found: True, size: 346
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True (valid=False), stremio=True, plex=True (valid=True)
+- rd last 24h: ok=0, err=6
+- rd delta since last: total=0, ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 4:00:00 AM, rc=267011
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Disabled, last=4/10/2025 11:41:41 PM, next=5/10/2025 12:41:41 AM, rc=0
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=5/10/2025 12:32:32 AM, next=5/10/2025 12:42:42 AM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 10:00:00 AM, rc=267011
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+  - Real-Debrid token appears invalid (401) - RD worker will error.
+- next_steps:
+  - Install Node.js 18+.
+  - Refresh rd_token.txt from RD account.
+
+### 2025-10-05 00:42
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- latest_release: https://github.com/r0cksteadyw00t/plex/releases/tag/v20251004-2247 (tag=v20251004-2247)
+- kit_asset_found: True, size: 346
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True (valid=False), stremio=True, plex=True (valid=True)
+- rd last 24h: ok=0, err=6
+- rd delta since last: total=0, ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 4:00:00 AM, rc=267011
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Disabled, last=4/10/2025 11:41:41 PM, next=5/10/2025 1:41:41 AM, rc=0
+  - ScarFlix_Populate_0600: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 7:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=5/10/2025 12:32:32 AM, next=5/10/2025 12:42:42 AM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Ready, last=30/11/1999 12:00:00 AM, next=5/10/2025 10:00:00 AM, rc=267011
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+  - Real-Debrid token appears invalid (401) - RD worker will error.
+- next_steps:
+  - Install Node.js 18+.
+  - Refresh rd_token.txt from RD account.
+
+### 2025-10-05 10:00
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- latest_release: https://github.com/r0cksteadyw00t/plex/releases/tag/v20251004-2247 (tag=v20251004-2247)
+- kit_asset_found: True, size: 346
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True (valid=True), stremio=True, plex=True (valid=True)
+- rd last 24h: ok=0, err=6
+- rd delta since last: total=0, ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=5/10/2025 4:00:00 AM, next=6/10/2025 4:00:00 AM, rc=0
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Ready, last=5/10/2025 9:41:41 AM, next=5/10/2025 10:41:41 AM, rc=3221225786
+  - ScarFlix_Populate_0600: state=Disabled, last=30/11/1999 12:00:00 AM, next=6/10/2025 6:00:00 AM, rc=267011
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=5/10/2025 9:52:52 AM, next=5/10/2025 10:02:02 AM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Running, last=5/10/2025 10:00:00 AM, next=6/10/2025 10:00:00 AM, rc=267009
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+- next_steps:
+  - Install Node.js 18+.
+
+### 2025-10-06 10:00
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- latest_release: https://github.com/r0cksteadyw00t/plex/releases/tag/v20251004-2247 (tag=v20251004-2247)
+- kit_asset_found: True, size: 346
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True (valid=True), stremio=True, plex=True (valid=True)
+- rd last 24h: ok=0, err=0
+- rd delta since last: total=0, ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=6/10/2025 4:00:00 AM, next=7/10/2025 4:00:00 AM, rc=0
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Ready, last=6/10/2025 9:41:41 AM, next=6/10/2025 10:41:41 AM, rc=0
+  - ScarFlix_Populate_0600: state=Ready, last=6/10/2025 6:00:00 AM, next=7/10/2025 6:00:00 AM, rc=1
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=6/10/2025 9:52:52 AM, next=6/10/2025 10:02:02 AM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Running, last=6/10/2025 10:00:00 AM, next=7/10/2025 10:00:00 AM, rc=267009
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+- next_steps:
+  - Install Node.js 18+.
+
+### 2025-10-07 10:00
+- host: MEDIASERVER
+- manifest_sha256: f66d107d081add523ede69a05771b5a0078cfa39884e265b526367df37d70cb9
+- latest_release: https://github.com/r0cksteadyw00t/plex/releases/tag/v20251004-2247 (tag=v20251004-2247)
+- kit_asset_found: True, size: 346
+- node: n/a
+- powershell: 5.1.22621.5983
+- tokens: gh=True, rd=True (valid=True), stremio=True, plex=True (valid=False)
+- rd last 24h: ok=0, err=0
+- rd delta since last: total=0, ok=0, err=0
+- tasks:
+  - ScarFlix_Sync_SSOT_0300: state=Ready, last=7/10/2025 4:00:00 AM, next=8/10/2025 4:00:00 AM, rc=0
+  - ScarFlix_RD_Queue_Worker_Hourly: state=Ready, last=7/10/2025 9:41:41 AM, next=7/10/2025 10:41:41 AM, rc=0
+  - ScarFlix_Populate_0600: state=Ready, last=7/10/2025 6:00:00 AM, next=8/10/2025 6:00:00 AM, rc=0
+  - ScarFlix_Status_Beacon_10m: state=Ready, last=7/10/2025 9:52:52 AM, next=7/10/2025 10:02:02 AM, rc=0
+  - ScarFlix_Daily_Changelog_0900: state=Running, last=7/10/2025 10:00:00 AM, next=8/10/2025 10:00:00 AM, rc=267009
+- warnings:
+  - Node.js not found - Populate.js will be skipped.
+  - Plex token check failed for /identity.
+- next_steps:
+  - Install Node.js 18+.
+  - Open Plex Web locally to refresh token, then rerun detect.
+
