@@ -1,0 +1,21 @@
+# STATUS — 2025-10-08 14:09:09
+
+*Owner:* r0cksteadyw00t  |  *Repo:* plex-logs  |  *Branch:* main  |  *Host:* MEDIASERVER
+*Public Logs:* https://closing-pill-stan-banner.trycloudflare.com/latest/index.md
+
+## Last Runs (ledger tail)
+
+``
+2025-10-06T09:59:28Z,S001,done,2,"D:\PlexTools\logs\s001_plex_remote_20251007_212750.log","NAT=Unknown; identity=-1; resources=-1; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,2,"D:\PlexTools\logs\s001_plex_remote_20251007_213716.log","NAT=Unknown; identity=-1; resources=-1; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,0,"D:\PlexTools\logs\s001_plex_remote_20251007_214326.log","NAT=Relay; identity=200; resources=200; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,0,"D:\PlexTools\logs\s001_plex_remote_20251007_214819.log","NAT=Relay; identity=200; resources=200; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,0,"D:\PlexTools\logs\s001_plex_remote_20251007_221235.log","NAT=Unknown; identity=200; resources=200; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,0,"D:\PlexTools\logs\s001_plex_remote_20251007_230000.log","NAT=Unknown; identity=200; resources=200; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,0,"D:\PlexTools\logs\s001_plex_remote_20251007_232029.log","NAT=Unknown; identity=200; resources=200; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,0,"D:\PlexTools\logs\s001_plex_remote_20251007_232823.log","NAT=Unknown; identity=200; resources=200; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,0,"D:\PlexTools\logs\s001_plex_remote_20251007_233620.log","NAT=Unknown; identity=200; resources=200; wan=1.43.167.161"
+2025-10-06T09:59:28Z,S001,done,0,"D:\PlexTools\logs\s001_plex_remote_20251008_073658.log","NAT=Unknown; identity=200; resources=200; wan=1.43.167.161"
+2025-10-08T07:53:45,A004_PUBLISH_STATUS,inline,"",0,OK,D:\PlexTools\logs\A004_publish_status_20251008_075316.log
+2025-10-08T08:09:42,A004_VERIFY,inline,"",2,FAIL,D:\PlexTools\logs\A004_verify_20251008_080941.log
+``
