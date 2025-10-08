@@ -1,22 +1,71 @@
 {
-  "threads": [
+  "project": "Plex-Stremio-RealDebrid",
+  "status": "PARTIAL",
+  "updated_utc": "2025-10-08T10:42:22.4392148Z",
+  "counts": {
+    "total": 6,
+    "done": 0,
+    "in_progress": 1,
+    "not_started": 2,
+    "unknown": 3,
+    "blocked": 0
+  },
+  "tasks": [
     {
-      "last_run": null,
-      "ok_runs": 0,
-      "fail_runs": 0,
-      "runs": 0,
-      "ok": true,
-      "name": "default",
-      "ok_pct": 100.0
+      "id": "A001",
+      "name": "Bridge heartbeat & token check",
+      "status": "unknown",
+      "last_update_utc": "2025-10-08T10:42:22.2379895Z",
+      "attempts": 0,
+      "duration_ms": null,
+      "notes": "No A001 log parsed in one-off."
+    },
+    {
+      "id": "A002",
+      "name": "Orchestrator bootstrap",
+      "status": "unknown",
+      "last_update_utc": "2025-10-08T10:42:22.2442650Z",
+      "attempts": 0,
+      "duration_ms": null,
+      "notes": "No A002 log parsed in one-off."
+    },
+    {
+      "id": "A003",
+      "name": "Runner + catalog",
+      "status": "unknown",
+      "last_update_utc": "2025-10-08T10:42:22.2446053Z",
+      "attempts": 0,
+      "duration_ms": null,
+      "notes": "Not confirmed here; use execution logs."
+    },
+    {
+      "id": "A004",
+      "name": "Beacon sync & publish",
+      "status": "in_progress",
+      "last_update_utc": "2025-10-08T10:42:22.2448046Z",
+      "attempts": 0,
+      "duration_ms": null,
+      "notes": "This one-off is publishing beacon/status now."
+    },
+    {
+      "id": "A005",
+      "name": "Autopilot handshake",
+      "status": "not_started",
+      "last_update_utc": "2025-10-08T10:42:22.2449954Z",
+      "attempts": 0,
+      "duration_ms": null,
+      "notes": "Pending after A004."
+    },
+    {
+      "id": "A006",
+      "name": "Fixers & write-fences",
+      "status": "not_started",
+      "last_update_utc": "2025-10-08T10:42:22.2451690Z",
+      "attempts": 0,
+      "duration_ms": null,
+      "notes": "Pending after A005."
     }
   ],
-  "threads_summary": {
-    "fail": 0,
-    "total": 1,
-    "ok_pct": 100.0,
-    "ok": 1
-  },
-  "updated_utc": "2025-10-08T10:53:25Z",
-  "updated_local": "2025-10-08T21:53:25",
-  "host": "MEDIASERVER"
+  "errors": []
 }
+
