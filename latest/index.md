@@ -1,6 +1,9 @@
-# Mirror Index
+# Latest
 
-- Beacon: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/beacon.json
-- Status: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/STATUS.md
-- Index : https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/index.md
-- Public Logs: https://closing-pill-stan-banner.trycloudflare.com/latest/index.md
+* beacon.json
+* STATUS.md
+* automation_status.json
+* ProjectHQ_STATUS.md
+* ProjectHQ_STATUS.json
+
+_Last updated: 2025-10-08 21:15:09 +11:00

@@ -1,9 +1,9 @@
-# Project HQ - Live Status
+# Project HQ ? Live Status
 
-*Updated (local):* 2025-10-08 20:12:54 +11:00
-*Updated (UTC from source):* 8/10/2025 5:58:59 AM
+*Updated (local):* 2025-10-08 21:12:02 +11:00
+*Updated (UTC from source):* 2025-10-08T10:04:56Z
 
-Summary: **1/1 OK** (**100%**) | **0** failing
+Summary: **0/1 OK** (**0%**) | **1** failing
 
 Source: [https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/automation_status.json](https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/automation_status.json)
 
@@ -11,4 +11,4 @@ Source: [https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/
 
 | Thread | Runs | OK | Fail | OK % | Last run |
 |---|---:|---:|---:|---:|---|
-| default | 0 | 0 | 0 | 100% |  |
+| unknown | 0 | 0 | 0 | 100.0% |  |
