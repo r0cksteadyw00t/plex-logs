@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "ts_utc": "2025-10-09T10:58:38.9649571Z",
+    "host": "MEDIASERVER",
+    "user": "jason",
+    "base": "D:\\PlexTools",
+    "latest": "D:\\PlexTools\\public\\latest",
+    "diag": "D:\\PlexTools\\public\\latest\\diagnostics"
+  },
+  "A001": {
+    "name": "Bridge heartbeat & token check",
+    "status": "unknown",
+    "details": {
+      "pat_length": 40,
+      "pat_file": "C:\\Users\\jason\\OneDrive\\Public\\TOKENS\\github_pat.txt",
+      "auth_ok": true,
+      "login": "r0cksteadyw00t",
+      "repo_exists": true,
+      "repo_full_name": "r0cksteadyw00t/plex-logs",
+      "pat_present": true,
+      "scopes": "admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, copilot, delete:packages, delete_repo, gist, notifications, project, repo, user, workflow, write:discussion, write:network_configurations, write:packages",
+      "scheme": "Bearer",
+      "paths": {
+        "latest/jobs": false,
+        "latest/jobs/inbox": false,
+        "latest/jobs/active": false,
+        "latest/jobs/done": false,
+        "latest/jobs/failed": false
+      }
+    }
+  },
+  "A002": {
+    "name": "Orchestrator bootstrap",
+    "status": "unknown",
+    "details": {
+      "dirs": {
+        "base": true,
+        "bin": true,
+        "logs": true,
+        "public": true,
+        "latest": true
+      },
+      "artifacts": [
+        {
+          "name": "orchestrator.ps1",
+          "exists": false,
+          "path": "D:\\PlexTools\\bin\\orchestrator.ps1"
+        },
+        {
+          "name": "catalog.json",
+          "exists": false,
+          "path": "D:\\PlexTools\\bin\\catalog.json"
+        },
+        {
+          "name": "runner.ps1",
+          "exists": false,
+          "path": "D:\\PlexTools\\bin\\runner.ps1"
+        },
+        {
+          "name": "runner.yml",
+          "exists": false,
+          "path": "D:\\PlexTools\\bin\\runner.yml"
+        },
+        {
+          "name": "queue.schema.json",
+          "exists": false,
+          "path": "D:\\PlexTools\\bin\\queue.schema.json"
+        }
+      ]
+    }
+  },
+  "A003": {
+    "name": "Runner + catalog",
+    "status": "unknown",
+    "details": {
+      "scheduled_tasks": [
+        {
+          "name": "\\Plex Bolt Bridge Publisher",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:50:50+11:00",
+          "lastResult": 1,
+          "nextRun": "2025-10-09T22:00:00+11:00"
+        },
+        {
+          "name": "\\Plex Control Runner",
+          "state": "Running",
+          "lastRun": "2025-10-09T21:57:57+11:00",
+          "lastResult": 2147946720,
+          "nextRun": "2025-10-09T21:59:59+11:00"
+        },
+        {
+          "name": "\\Plex HQ Rollup",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:51:51+11:00",
+          "lastResult": 1,
+          "nextRun": "2025-10-09T22:01:01+11:00"
+        },
+        {
+          "name": "\\Plex Log Uploader",
+          "state": "Running",
+          "lastRun": "2025-10-09T21:57:57+11:00",
+          "lastResult": 2147946720,
+          "nextRun": "2025-10-09T22:07:07+11:00"
+        },
+        {
+          "name": "\\Plex Logs QuickShare - Refresh",
+          "state": "Running",
+          "lastRun": "2025-10-09T21:50:50+11:00",
+          "lastResult": 2147946720,
+          "nextRun": "2025-10-09T22:00:00+11:00"
+        },
+        {
+          "name": "\\Plex Nightly Snapshot",
+          "state": "Running",
+          "lastRun": "2025-10-09T03:30:30+11:00",
+          "lastResult": 267009,
+          "nextRun": "2025-10-10T03:30:30+11:00"
+        },
+        {
+          "name": "\\Plex Project Docs Updater",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:50:50+11:00",
+          "lastResult": 1,
+          "nextRun": "2025-10-09T22:00:00+11:00"
+        },
+        {
+          "name": "\\Plex Quick Tunnel",
+          "state": "Ready",
+          "lastRun": "2025-10-08T14:10:10+11:00",
+          "lastResult": 0,
+          "nextRun": null
+        },
+        {
+          "name": "\\PlexLawfulBridge",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:11:11+11:00",
+          "lastResult": 267014,
+          "nextRun": null
+        },
+        {
+          "name": "\\PlexPSProxy@Startup",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:11:11+11:00",
+          "lastResult": 3221225786,
+          "nextRun": null
+        },
+        {
+          "name": "\\PlexStremio Live Resolver (On Logon)",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:11:11+11:00",
+          "lastResult": 1,
+          "nextRun": null
+        },
+        {
+          "name": "\\PlexStremio Populate",
+          "state": "Ready",
+          "lastRun": "2025-10-09T16:39:39+11:00",
+          "lastResult": 0,
+          "nextRun": "2025-10-09T22:39:39+11:00"
+        },
+        {
+          "name": "\\PlexStremio Populate (Every 6 Hours)",
+          "state": "Ready",
+          "lastRun": "2025-10-09T16:47:47+11:00",
+          "lastResult": 1,
+          "nextRun": "2025-10-09T22:47:47+11:00"
+        },
+        {
+          "name": "\\PlexStremioAutoUpdater",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:19:19+11:00",
+          "lastResult": 2147946720,
+          "nextRun": "2025-10-12T04:00:00+11:00"
+        },
+        {
+          "name": "\\PlexStremioBridge",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:11:11+11:00",
+          "lastResult": 1,
+          "nextRun": null
+        },
+        {
+          "name": "\\PlexTools_CloudBridge_3min",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:58:58+11:00",
+          "lastResult": 0,
+          "nextRun": "2025-10-09T22:01:01+11:00"
+        },
+        {
+          "name": "\\PlexTools_GistRollup_Hourly",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:26:26+11:00",
+          "lastResult": 0,
+          "nextRun": "2025-10-09T22:26:26+11:00"
+        },
+        {
+          "name": "\\PlexTools_Orchestrator",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:11:11+11:00",
+          "lastResult": 3221225786,
+          "nextRun": null
+        },
+        {
+          "name": "\\PlexTools_PSProxy_SYSTEM",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:58:58+11:00",
+          "lastResult": 1,
+          "nextRun": "2025-10-09T22:03:03+11:00"
+        },
+        {
+          "name": "\\PlexTools_StatusBeacon_SYSTEM_3min",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:56:56+11:00",
+          "lastResult": 0,
+          "nextRun": "2025-10-09T21:59:59+11:00"
+        },
+        {
+          "name": "\\PlexTools_STRM_Resolver",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:11:11+11:00",
+          "lastResult": 0,
+          "nextRun": null
+        },
+        {
+          "name": "\\Plex_ProjectHQ_GuardedPublish",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:50:50+11:00",
+          "lastResult": 4294770688,
+          "nextRun": "2025-10-09T22:05:05+11:00"
+        },
+        {
+          "name": "\\Plex_ProjectHQ_Refresh",
+          "state": "Ready",
+          "lastRun": "2025-10-09T21:57:57+11:00",
+          "lastResult": 0,
+          "nextRun": "2025-10-09T22:02:02+11:00"
+        },
+        {
+          "name": "\\Plex_ScanWatcher_OnLogon",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:11:11+11:00",
+          "lastResult": 1,
+          "nextRun": null
+        },
+        {
+          "name": "\\Plex_TokenKeeper_6h",
+          "state": "Ready",
+          "lastRun": "2025-10-09T18:45:45+11:00",
+          "lastResult": 0,
+          "nextRun": "2025-10-10T00:45:45+11:00"
+        },
+        {
+          "name": "\\Start Plex Media Server (Auto)",
+          "state": "Ready",
+          "lastRun": "2025-10-05T20:11:11+11:00",
+          "lastResult": 4294967295,
+          "nextRun": null
+        },
+        {
+          "name": "\\Microsoft\\Windows\\UpdateOrchestrator\\UIEOrchestrator",
+          "state": "Ready",
+          "lastRun": "2025-10-09T13:08:08+11:00",
+          "lastResult": 0,
+          "nextRun": "2025-10-10T19:59:59+11:00"
+        },
+        {
+          "name": "\\Microsoft\\Windows\\UpdateOrchestrator\\Universal Orchestrator Start",
+          "state": "Ready",
+          "lastRun": "2021-02-05T21:55:55+11:00",
+          "lastResult": 0,
+          "nextRun": null
+        }
+      ],
+      "runs_dir_exists": false,
+      "recent_logs": [
+        {
+          "name": "Run_Populate_run_20251008_073945.log",
+          "path": "D:\\PlexTools\\Logs\\Run_Populate_run_20251008_073945.log",
+          "when": "2025-10-08T07:41:01.2173569+11:00"
+        },
+        {
+          "name": "Run_Populate_run_20251007_232917.log",
+          "path": "D:\\PlexTools\\Logs\\Run_Populate_run_20251007_232917.log",
+          "when": "2025-10-07T23:30:34.5555827+11:00"
+        },
+        {
+          "name": "Run_Populate_run_20251007_231012.log",
+          "path": "D:\\PlexTools\\Logs\\Run_Populate_run_20251007_231012.log",
+          "when": "2025-10-07T23:11:28.5601444+11:00"
+        },
+        {
+          "name": "Run_Populate_run_20251007_225618.log",
+          "path": "D:\\PlexTools\\Logs\\Run_Populate_run_20251007_225618.log",
+          "when": "2025-10-07T22:57:34.4207753+11:00"
+        },
+        {
+          "name": "run_20251004_000404.log",
+          "path": "D:\\PlexTools\\Logs\\run_20251004_000404.log",
+          "when": "2025-10-04T21:42:56.4580687+10:00"
+        }
+      ]
+    }
+  }
+}
