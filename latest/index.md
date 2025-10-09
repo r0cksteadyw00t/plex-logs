@@ -1,28 +1,6 @@
-# PlexTools public logs
-* s001: ./s001.log
-* s002: ./s002.log
-* ledger tail: ./ledger_tail.csv
+# Mirror Index
 
-* beacon: ./beacon.json
-* beacon (txt): ./beacon.txt
-* STATUS: ./STATUS.md
-* STATUS (txt): ./STATUS.txt
-* Project HQ: ../hq/PROJECT_HQ.md
-* AS-BUILT: ../hq/AS_BUILT.md
-
-
-
-
-
-
-
-
-
-
-
-
-* Project HQ: ../hq/STATUS.hq.md
-* Bolt bridge: ./bolt_bridge.json
-
-
-
+- Beacon: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/beacon.json
+- Status: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/STATUS.md
+- Index : https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/index.md
+- Public Logs: https://closing-pill-stan-banner.trycloudflare.com/latest/index.md
