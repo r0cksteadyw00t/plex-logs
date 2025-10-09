@@ -1,17 +1,17 @@
 # Project HQ — Plex
 
-**Last update (UTC):** 2025-10-09T02:56:42.8151727Z
+**Last update (UTC):** 2025-10-09T23:41:20.7792749Z
 
 ## Current Status
 - **NAT State:** Relay
 - **WAN IP:** 1.43.167.161
 - **LAN IP:** 192.168.1.184
-- **Identity:** 200 (4 ms)
-- **Resources:** 200 (1 ms)
+- **Identity:** -1 (0 ms)
+- **Resources:** -1 (0 ms)
 - **CustomConnections:** https://ntsc-safely-prisoner-conviction.trycloudflare.com
 
 ## Immediate Next Step
-⬜ Router rule in place; Plex will mark **Mapped** after external validation.
+⬜ Router rule confirmed; Plex will mark **Mapped** after its external validation.
 
 ## Ledger (tail)
 ```
