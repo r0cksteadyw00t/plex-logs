@@ -1,10 +1,10 @@
-# Plex STATUS
+# STATUS — 2025-10-09 22:00:11
 
-**UTC:** 2025-10-09T02:56:42.8151727Z
-**NAT State:** Relay
-**WAN IP:** 1.43.167.161
-**LAN IP:** 192.168.1.184
-**Identity:** 200 (4 ms)
-**Resources:** 200 (1 ms)
-**CustomConnections:** https://ntsc-safely-prisoner-conviction.trycloudflare.com
-**Last S001 log:** s001_plex_remote_20251006_172729.log
+*Owner:* r0cksteadyw00t  |  *Repo:* plex-logs  |  *Branch:* main  |  *Host:* MEDIASERVER
+*Public Logs:* https://closing-pill-stan-banner.trycloudflare.com/latest/index.md
+
+## Mirror
+
+- Beacon: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/beacon.json
+- Status: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/STATUS.md
+- Index : https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/index.md
