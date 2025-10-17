@@ -1,7 +1,7 @@
 ﻿### Streaming Debrid Bridge - Status
 
 **Component:** `streaming`  
-**Last publish (UTC):** 2025-10-17T13:04:15Z  
+**Last publish (UTC):** 2025-10-17T13:29:44Z  
 **Last refresh (UTC):** _pending_
 
 #### Admissions
