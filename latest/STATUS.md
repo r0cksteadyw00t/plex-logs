@@ -1,4 +1,4 @@
-# STATUS ? 2025-10-17 22:41:04
+# STATUS ? 2025-10-17 22:51:03
 
 *Owner:* r0cksteadyw00t  |  *Repo:* plex-logs  |  *Branch:* main  |  *Host:* MEDIASERVER
 *Public Logs:* https://closing-pill-stan-banner.trycloudflare.com/latest/index.md
@@ -6,8 +6,6 @@
 ## Last Runs (ledger tail)
 
 ``
-2025-10-17T11:21:30Z,streaming,Publish,OK,2,0,D:\PlexTools\logs\streaming_20251017_222131.log
-2025-10-17T11:21:46Z,streaming,Resolve,OK,0,5,D:\PlexTools\logs\streaming_20251017_222146.log
 2025-10-17T11:21:46Z,streaming,Publish,OK,2,0,D:\PlexTools\logs\streaming_20251017_222146.log
 2025-10-17T22:24:03.3970070+11:00,popup_cleaner_safe_v2,CLEAN,False,1,0,0,0,0,0,0,D:\PlexTools\logs\popup_cleaner_20251017_222400.log,D:\PlexTools\backups\popup_cleaner\20251017_222400
 2025-10-17T11:29:51Z,scarflix,smoketest,Prep folders,OK,""
@@ -18,4 +16,6 @@
 2025-10-17T11:29:53Z,scarflix,smoketest,Run Publisher (STATUS.md + beacon.json + optional mirror),OK,""
 2025-10-17T22:35:54.5101922+11:00,popup_cleaner_safe_v3,CLEAN,False,108,6,0,0,0,0,0,D:\PlexTools\logs\popup_cleaner_20251017_223553.log,D:\PlexTools\logs\popup_cleaner_20251017_223553.transcript.txt,D:\PlexTools\backups\popup_cleaner\20251017_223553
 2025-10-17T22:39:09.6106669+11:00,popup_cleaner_safe_v4,CLEAN,False,108,6,0,0,0,0,0,D:\PlexTools\logs\popup_cleaner_20251017_223908.log,D:\PlexTools\logs\popup_cleaner_20251017_223908.transcript.txt,D:\PlexTools\backups\popup_cleaner\20251017_223908
+2025-10-17T11:50:48Z,streaming,Resolve,NOOP,0,0,D:\PlexTools\logs\streaming_20251017_225048.log
+2025-10-17T11:50:48Z,streaming,Publish,OK,2,0,D:\PlexTools\logs\streaming_20251017_225048.log
 ``
