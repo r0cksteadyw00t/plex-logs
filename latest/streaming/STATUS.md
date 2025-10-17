@@ -1,7 +1,7 @@
 ﻿### Streaming Debrid Bridge - Status
 
 **Component:** `streaming`  
-**Last publish (UTC):** 2025-10-17T12:34:10Z  
+**Last publish (UTC):** 2025-10-17T12:59:02Z  
 **Last refresh (UTC):** _pending_
 
 #### Admissions
@@ -16,9 +16,7 @@
   - other: 0
 
 #### Latest five admissions
--  |  | range: | ttl: | age_h:0
--  |  | range: | ttl: | age_h:0
--  |  | range: | ttl: | age_h:0
+_(none yet)_
 
 #### S1001 Test Pack
 - 4K/HDR MKV (large): pending  
