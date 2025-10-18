@@ -1,11 +1,11 @@
 ﻿### Streaming Debrid Bridge - Status
 
 **Component:** `streaming`  
-**Last publish (UTC):** 2025-10-18T02:46:41Z  
+**Last publish (UTC):** 2025-10-18T03:02:40Z  
 **Last refresh (UTC):** _pending_
 
 #### Admissions
-- Accepted: **3**
+- Accepted: **4**
 - Rejected: **0**
   - headers_missing: 0
   - range_fail: 0
@@ -16,14 +16,15 @@
   - other: 0
 
 #### Latest five admissions
-- @{Name=ConsoleHost; Version=; InstanceId=ae2eb668-b060-4836-9d2e-f3083fcb2d6d; UI=; CurrentCulture=; CurrentUICulture=; PrivateData=; DebuggerEnabled=True; IsRunspacePushed=False; Runspace=} | (unknown) | range:✗ | ttl:(n/a) | age_h:0
-- @{Name=ConsoleHost; Version=; InstanceId=ae2eb668-b060-4836-9d2e-f3083fcb2d6d; UI=; CurrentCulture=; CurrentUICulture=; PrivateData=; DebuggerEnabled=True; IsRunspacePushed=False; Runspace=} | (unknown) | range:✗ | ttl:(n/a) | age_h:0
-- (unknown) | (unknown) | range:? | ttl:(n/a) | age_h:0
+- commondatastorage.googleapis.com | video/mp4 | range:✓ | ttl:(n/a) | age_h:-11
+- (unknown) | (unknown) | range:✗ | ttl:(n/a) | age_h:-11
+- (unknown) | (unknown) | range:✗ | ttl:(n/a) | age_h:0
+- (unknown) | (unknown) | range:✗ | ttl:(n/a) | age_h:0
 
 #### S1001 Test Pack
 - 4K/HDR MKV (large): pending  
 - 1080p MKV: pending  
-- Short MP4 clip: pending  
+- Short MP4 clip: ok  
 - TV SxxEyy: pending  
 - Long movie >20GB: pending  
 - Edge host variant: pending
