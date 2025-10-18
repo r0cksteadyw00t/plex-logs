@@ -1,7 +1,7 @@
 ﻿### Streaming Debrid Bridge - Status
 
 **Component:** `streaming`  
-**Last publish (UTC):** 2025-10-18T03:02:40Z  
+**Last publish (UTC):** 2025-10-18T03:17:17Z  
 **Last refresh (UTC):** _pending_
 
 #### Admissions
@@ -16,8 +16,8 @@
   - other: 0
 
 #### Latest five admissions
-- commondatastorage.googleapis.com | video/mp4 | range:✓ | ttl:(n/a) | age_h:-11
-- (unknown) | (unknown) | range:✗ | ttl:(n/a) | age_h:-11
+- commondatastorage.googleapis.com | video/mp4 | range:✓ | ttl:(n/a) | age_h:0
+- (unknown) | (unknown) | range:✗ | ttl:(n/a) | age_h:0
 - (unknown) | (unknown) | range:✗ | ttl:(n/a) | age_h:0
 - (unknown) | (unknown) | range:✗ | ttl:(n/a) | age_h:0
 
