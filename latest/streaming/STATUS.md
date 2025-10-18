@@ -1,7 +1,7 @@
 ﻿### Streaming Debrid Bridge - Status
 
 **Component:** `streaming`  
-**Last publish (UTC):** 2025-10-18T02:25:52Z  
+**Last publish (UTC):** 2025-10-18T02:43:09Z  
 **Last refresh (UTC):** _pending_
 
 #### Admissions
@@ -16,9 +16,9 @@
   - other: 0
 
 #### Latest five admissions
-- System.Management.Automation.Internal.Host.InternalHost | (unknown) | range:✗ | ttl:(n/a) | age_h:-11
-- System.Management.Automation.Internal.Host.InternalHost | (unknown) | range:✗ | ttl:(n/a) | age_h:-11
-- System.Management.Automation.Internal.Host.InternalHost | (unknown) | range:? | ttl:(n/a) | age_h:0
+- @{Name=ConsoleHost; Version=; InstanceId=ae2eb668-b060-4836-9d2e-f3083fcb2d6d; UI=; CurrentCulture=; CurrentUICulture=; PrivateData=; DebuggerEnabled=True; IsRunspacePushed=False; Runspace=} | (unknown) | range:✗ | ttl:(n/a) | age_h:0
+- @{Name=ConsoleHost; Version=; InstanceId=ae2eb668-b060-4836-9d2e-f3083fcb2d6d; UI=; CurrentCulture=; CurrentUICulture=; PrivateData=; DebuggerEnabled=True; IsRunspacePushed=False; Runspace=} | (unknown) | range:✗ | ttl:(n/a) | age_h:0
+- (unknown) | (unknown) | range:? | ttl:(n/a) | age_h:0
 
 #### S1001 Test Pack
 - 4K/HDR MKV (large): pending  
