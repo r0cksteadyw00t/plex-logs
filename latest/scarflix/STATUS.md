@@ -1,15 +1,9 @@
-# ScarFLIX — STATUS
+﻿# ScarFLIX Status
 
-**Component:** scarflix  
-**Last refresh (UTC):** 2025-10-17T11:20:52Z  
-**Local publish base:** D:\PlexTools\public\latest\scarflix\  
-**Logs:** D:\PlexTools\logs  
-**Ledger:** D:\PlexTools\logs\job_ledger.csv  
+* Refreshed (UTC): 2025-10-18T02:46:04Z
 
-## Counters (this period)
-- requested: 1
-- queued: 0
-- caching: 0
-- validating: 0
-- ready: 0
-- failed: 0
+| requested | queued | caching | validating | ready | failed |
+|-----------|--------|---------|------------|-------|--------|
+| 0 | 0 | 0 | 0 | 0 | 1 |
+
+Ready (demo/rd): 0/1
