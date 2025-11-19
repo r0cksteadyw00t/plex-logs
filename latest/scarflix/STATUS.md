@@ -1,6 +1,6 @@
 ﻿# ScarFLIX Status
 
-* Refreshed (UTC): 2025-11-19T20:21:32Z
+* Refreshed (UTC): 2025-11-19T20:23:37Z
 
 | requested | queued | caching | validating | ready | failed |
 |-----------|--------|---------|------------|-------|--------|
