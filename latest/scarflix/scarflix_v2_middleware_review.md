@@ -1,6 +1,6 @@
 # ScarFLIX v2 Middleware Review
 
-Last refresh UTC: 2026-05-30T09:47:45Z
+Last refresh UTC: 2026-05-30T11:39:30Z
 
 ## Goal
 Replicate the Stremio experience in Plex as closely as possible:
@@ -24,9 +24,10 @@ Use the local ScarFLIX live proxy as the primary UX:
 Current live proof:
 - `12 Angry Men (1957)` live endpoint: PASS, 734077147 bytes, Range 206
 - `Night of the Living Dead (1968)` live endpoint: PASS, 59472710133 bytes, Range 206
-- live self-test: PASS, 5 checked / 5 passed
-- Plex indexed live `.strm` count: 80
+- live self-test: PASS, 35 checked / 35 passed
+- Plex indexed live `.strm` count: 35
 - old `_ScarFLIXv2` / `_ScarFLIXv2_Direct` Plex parts: 0
+- failed/no-live-source catalog entries are quarantined automatically after validation
 
 ## Reusable Middleware Options
 
