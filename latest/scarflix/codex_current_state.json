@@ -1,0 +1,89 @@
+{
+  "component": "scarflix_v2_codex_current_state",
+  "status": "PASS",
+  "last_refresh_utc": "2026-05-30T09:47:45Z",
+  "user_goal": "Replicate Stremio-like Plex browsing with live Torrentio/Real-Debrid streaming first, and request/materialized playback as fallback.",
+  "architecture": {
+    "request_libraries_use_strm": false,
+    "request_libraries_use_local_files": true,
+    "catalog_items_are_local_placeholders": true,
+    "catalog_placeholders_are_unique": true,
+    "catalog_click_detection": "Plex play queue watcher promotes catalog placeholders to REQUESTED",
+    "resolution": "Live proxy resolves cached Debrid streams first; request/materialize and Arr/qBittorrent/Decypharr lanes are fallback.",
+    "playback_contract": "Live playback must be cached Debrid, not RD download placeholder, HEAD 200, Range 206, media-sized Content-Length, and Plex-facing application/octet-stream.",
+    "catalog_growth": "Rolling TMDb seeding with Plex folder lanes under _Catalog",
+    "self_verification": "Scheduled live self-test validates HEAD, Range, and minimum real-media size. Plex DB checks confirm indexed live entries and retired stale entries.",
+    "live_lane": "Primary Streaming-library catalog lane: .strm entries point to the ScarFLIX live proxy, which resolves cached Torrentio/Real-Debrid streams at play time.",
+    "source_selection": "Prefer 720p/1080p H.264-style cached streams; demote 4K, HEVC/x265, remux, DV/HDR, and cam-style sources."
+  },
+  "health": {
+    "overall": "PASS",
+    "request_strm_files": 0,
+    "plex_strm_parts": 0,
+    "plex_local_media_parts": 7,
+    "plex_video_streams": 7,
+    "plex_audio_streams": 7,
+    "request_library_catalog_placeholders": 0,
+    "plex_selftest": "PASS",
+    "live_selftest": "PASS",
+    "plex_indexed_live_strm": 80,
+    "health_json": "D:\\PlexTools\\public\\latest\\scarflix\\scarflix_v2_health.json",
+    "health_md": "D:\\PlexTools\\public\\latest\\scarflix\\scarflix_v2_health.md",
+    "old_live_direct_parts": 0,
+    "latest_live_selftest_checked": 5,
+    "latest_live_selftest_passed": 5,
+    "verified_titles": [
+      {
+        "content_length": 734077147,
+        "range": "206",
+        "title": "12 Angry Men (1957)",
+        "status": "PASS"
+      },
+      {
+        "content_length": 59472710133,
+        "range": "206",
+        "title": "Night of the Living Dead (1968)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "completed": {
+    "legacy_strm_migrated": 43,
+    "unique_placeholders_rewritten": 44,
+    "catalog_seed_initial_created_movies": 40,
+    "catalog_seed_initial_created_tv": 52,
+    "category_aware_seed_catalog_index_count": 165,
+    "catalog_enrichment_status": "PASS",
+    "retry_policy_status": "PASS",
+    "plex_selftest_status": "PASS",
+    "live_catalog_status": "PASS",
+    "live_selftest_status": "PASS",
+    "retire_placeholder_catalog_status": "PASS",
+    "e2e_success_item": "D:\\ScarFLIX\\Wishlist\\Movies\\Night of the Living Dead E2E (1968)",
+    "e2e_success_status": "PASS",
+    "rd_placeholder_rejection": "PASS",
+    "cached_source_ranking": "PASS"
+  },
+  "scheduled_tasks": [
+    "ScarFLIX_v2_RequestServer",
+    "ScarFLIX_v2_StreamProxy",
+    "ScarFLIX_v2_StremioDirectResolver",
+    "ScarFLIX_v2_MaterializeReady",
+    "ScarFLIX_v2_CatalogPlayWatcher",
+    "ScarFLIX_v2_HealthStatus",
+    "ScarFLIX_v2_CatalogSeeder",
+    "ScarFLIX_v2_CatalogEnricher",
+    "ScarFLIX_v2_LiveCatalogSeeder",
+    "ScarFLIX_v2_LiveSelfTest",
+    "ScarFLIX_v2_RetirePlaceholderCatalog",
+    "ScarFLIX_v2_RetryPolicy",
+    "ScarFLIX_v2_PlexSelfTest"
+  ],
+  "next_work": [
+    "Continue rolling live catalog coverage through scheduled TMDb seeding.",
+    "Improve source ranking and compatibility scoring using cached stream metadata and admission results.",
+    "Route no-live-source titles to Decypharr/Zurg/Radarr/Sonarr materialization fallback.",
+    "Monitor Plex DB size and scan duration as catalog count grows."
+  ],
+  "need_jason": []
+}
