@@ -1,6 +1,6 @@
 # ScarFLIX v2 Project Plan
 
-Last refresh UTC: 2026-05-30T09:47:45Z
+Last refresh UTC: 2026-05-30T11:39:30Z
 
 ## Target Experience
 Plex clients should feel as close to Stremio as Plex permits:
@@ -31,10 +31,11 @@ Plex clients should feel as close to Stremio as Plex permits:
 - Stage 10 Live proxy catalog lane: COMPLETE for initial movie catalog proof.
 - Stage 11 Placeholder catalog retirement: COMPLETE.
 - Stage 12 RD placeholder rejection and cached-source ranking: COMPLETE.
+- Stage 13 Live catalog validation/quarantine: COMPLETE.
 
 ## Active Automation
 - `ScarFLIX_v2_LiveCatalogSeeder`: writes live `.strm` catalog entries into Streaming libraries.
-- `ScarFLIX_v2_LiveSelfTest`: validates live `.strm` URLs with HEAD, Range, and minimum real-media size checks.
+- `ScarFLIX_v2_LiveSelfTest`: validates live `.strm` URLs with HEAD, Range, and minimum real-media size checks; quarantines failed live entries.
 - `ScarFLIX_v2_RetirePlaceholderCatalog`: archives placeholder-only request-library catalog folders after live catalog generation.
 - `ScarFLIX_v2_CatalogSeeder`: daily rolling TMDb catalog expansion.
 - `ScarFLIX_v2_CatalogEnricher`: daily TMDb metadata enrichment for legacy placeholders.
@@ -63,3 +64,4 @@ Plex clients should feel as close to Stremio as Plex permits:
 - Stale `_ScarFLIXv2` / `_ScarFLIXv2_Direct` Streaming-library entries have been retired.
 - RD "download in progress" static clips are rejected before Plex playback.
 - `12 Angry Men (1957)` and `Night of the Living Dead (1968)` pass real media-sized live stream checks.
+- Current exposed live catalog has been fully validated: 35 checked, 35 passed, 0 failed.
