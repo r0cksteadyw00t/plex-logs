@@ -1,6 +1,6 @@
 # ScarFLIX v2 Current State
 
-Last refresh UTC: 2026-05-30T09:47:45Z
+Last refresh UTC: 2026-05-30T11:39:30Z
 
 ## User Goal
 - Replicate the Stremio experience inside Plex as closely as Plex allows.
@@ -48,11 +48,12 @@ Last refresh UTC: 2026-05-30T09:47:45Z
 - Request-library catalog placeholders: 0.
 - Plex self-test: PASS.
 - Live self-test: PASS.
-- Live `.strm` entries indexed by Plex: 80.
+- Live `.strm` entries indexed by Plex: 35.
 - Old `_ScarFLIXv2` / `_ScarFLIXv2_Direct` Plex parts: 0.
-- Latest live self-test sample: 5 checked, 5 passed.
+- Latest live self-test full exposed catalog: 35 checked, 35 passed, 0 failed.
 - `12 Angry Men (1957)`: PASS, 734077147 bytes, Range 206.
 - `Night of the Living Dead (1968)`: PASS, 59472710133 bytes, Range 206.
+- Failed/no-live-source entries from the 120-entry expansion were archived under `D:\PlexTools\archive\scarflix_v2\live_catalog_failed`.
 
 ## Active Scheduled Tasks
 - `ScarFLIX_v2_RequestServer`
@@ -64,7 +65,7 @@ Last refresh UTC: 2026-05-30T09:47:45Z
 - `ScarFLIX_v2_CatalogSeeder`
 - `ScarFLIX_v2_CatalogEnricher`
 - `ScarFLIX_v2_LiveCatalogSeeder`
-- `ScarFLIX_v2_LiveSelfTest`
+- `ScarFLIX_v2_LiveSelfTest` with failed-entry quarantine enabled
 - `ScarFLIX_v2_RetirePlaceholderCatalog`
 - `ScarFLIX_v2_RetryPolicy`
 - `ScarFLIX_v2_PlexSelfTest`
