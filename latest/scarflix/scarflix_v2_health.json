@@ -1,0 +1,214 @@
+{
+    "component":  "scarflix_v2_health_status",
+    "status":  "PASS",
+    "started_utc":  "2026-05-30T11:39:18Z",
+    "ended_utc":  "2026-05-30T11:39:30Z",
+    "duration_seconds":  12,
+    "state_counts":  {
+                         "CATALOG":  0,
+                         "REQUESTED":  0,
+                         "QUEUED":  0,
+                         "CACHING":  0,
+                         "VALIDATING":  1,
+                         "READY":  5,
+                         "FAILED":  1,
+                         "OTHER":  0
+                     },
+    "failed_items":  [
+                         {
+                             "state_file":  "D:\\ScarFLIX\\Wishlist\\Movies\\Sample Movie (2024)\\state.json",
+                             "note":  "",
+                             "reject_reason":  ""
+                         }
+                     ],
+    "filesystem":  {
+                       "request_strm_files":  0,
+                       "request_mp4_files":  8
+                   },
+    "plex":  {
+                 "request_library_strm_parts":  0,
+                 "request_library_local_media_parts":  7,
+                 "video_streams":  7,
+                 "audio_streams":  7
+             },
+    "endpoints":  [
+                      {
+                          "name":  "request_server",
+                          "uri":  "http://127.0.0.1:18787/health",
+                          "ok":  true,
+                          "status":  200
+                      },
+                      {
+                          "name":  "stream_proxy",
+                          "uri":  "http://127.0.0.1:18788/health",
+                          "ok":  true,
+                          "status":  200
+                      }
+                  ],
+    "scheduled_tasks":  [
+                            {
+                                "name":  "ScarFLIX_v2_RequestServer",
+                                "state":  "Running",
+                                "last_run":  "05/30/2026 17:49:49",
+                                "last_result":  "267009",
+                                "next_run":  ""
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_StreamProxy",
+                                "state":  "Ready",
+                                "last_run":  "11/30/1999 00:00:00",
+                                "last_result":  "267011",
+                                "next_run":  ""
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_StremioDirectResolver",
+                                "state":  "Ready",
+                                "last_run":  "05/30/2026 21:36:36",
+                                "last_result":  "0",
+                                "next_run":  "05/30/2026 21:41:41"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_MaterializeReady",
+                                "state":  "Ready",
+                                "last_run":  "05/30/2026 21:37:37",
+                                "last_result":  "0",
+                                "next_run":  "05/30/2026 21:42:42"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_CatalogPlayWatcher",
+                                "state":  "Ready",
+                                "last_run":  "05/30/2026 21:38:38",
+                                "last_result":  "0",
+                                "next_run":  "05/30/2026 21:39:39"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_HealthStatus",
+                                "state":  "Ready",
+                                "last_run":  "05/30/2026 21:37:37",
+                                "last_result":  "0",
+                                "next_run":  "05/30/2026 21:42:42"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_CatalogSeeder",
+                                "state":  "Disabled",
+                                "last_run":  "11/30/1999 00:00:00",
+                                "last_result":  "267011",
+                                "next_run":  "05/31/2026 04:10:10"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_CatalogEnricher",
+                                "state":  "Ready",
+                                "last_run":  "11/30/1999 00:00:00",
+                                "last_result":  "267011",
+                                "next_run":  "05/31/2026 04:45:45"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_LiveCatalogSeeder",
+                                "state":  "Ready",
+                                "last_run":  "11/30/1999 00:00:00",
+                                "last_result":  "267011",
+                                "next_run":  "05/31/2026 05:05:05"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_LiveSelfTest",
+                                "state":  "Ready",
+                                "last_run":  "11/30/1999 00:00:00",
+                                "last_result":  "267011",
+                                "next_run":  "05/31/2026 05:20:20"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_RetirePlaceholderCatalog",
+                                "state":  "Ready",
+                                "last_run":  "11/30/1999 00:00:00",
+                                "last_result":  "267011",
+                                "next_run":  "05/31/2026 05:35:35"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_RetryPolicy",
+                                "state":  "Ready",
+                                "last_run":  "05/30/2026 21:33:33",
+                                "last_result":  "0",
+                                "next_run":  "05/30/2026 22:03:03"
+                            },
+                            {
+                                "name":  "ScarFLIX_v2_PlexSelfTest",
+                                "state":  "Ready",
+                                "last_run":  "05/30/2026 21:28:28",
+                                "last_result":  "0",
+                                "next_run":  "05/30/2026 21:43:43"
+                            }
+                        ],
+    "component_statuses":  [
+                               {
+                                   "file":  "catalog_placeholder_migration_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T08:03:36Z"
+                               },
+                               {
+                                   "file":  "uniquify_placeholders_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T08:19:10Z"
+                               },
+                               {
+                                   "file":  "catalog_play_watcher_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T11:38:39Z"
+                               },
+                               {
+                                   "file":  "stremio_direct_resolver_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T11:36:02Z"
+                               },
+                               {
+                                   "file":  "materialize_ready_status.json",
+                                   "status":  "REVIEW",
+                                   "ended_utc":  "2026-05-30T11:37:14Z"
+                               },
+                               {
+                                   "file":  "debrid_first_restore_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T06:59:08Z"
+                               },
+                               {
+                                   "file":  "qbit_fallback_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T05:57:59Z"
+                               },
+                               {
+                                   "file":  "catalog_seed_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T08:38:04Z"
+                               },
+                               {
+                                   "file":  "catalog_enrich_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T08:46:29Z"
+                               },
+                               {
+                                   "file":  "live_catalog_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T09:57:49Z"
+                               },
+                               {
+                                   "file":  "live_selftest_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T11:36:36Z"
+                               },
+                               {
+                                   "file":  "retire_placeholder_catalog_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T09:13:27Z"
+                               },
+                               {
+                                   "file":  "retry_policy_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T11:33:46Z"
+                               },
+                               {
+                                   "file":  "plex_selftest_status.json",
+                                   "status":  "PASS",
+                                   "ended_utc":  "2026-05-30T11:28:29Z"
+                               }
+                           ],
+    "log":  "D:\\PlexTools\\logs\\scarflix_v2_health_status_20260530.log"
+}
