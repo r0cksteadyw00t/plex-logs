@@ -1,7 +1,7 @@
 {
   "component": "scarflix_v2_codex_current_state",
   "status": "PASS",
-  "last_refresh_utc": "2026-05-30T09:47:45Z",
+  "last_refresh_utc": "2026-05-30T11:40:24Z",
   "user_goal": "Replicate Stremio-like Plex browsing with live Torrentio/Real-Debrid streaming first, and request/materialized playback as fallback.",
   "architecture": {
     "request_libraries_use_strm": false,
@@ -26,12 +26,12 @@
     "request_library_catalog_placeholders": 0,
     "plex_selftest": "PASS",
     "live_selftest": "PASS",
-    "plex_indexed_live_strm": 80,
+    "plex_indexed_live_strm": 35,
     "health_json": "D:\\PlexTools\\public\\latest\\scarflix\\scarflix_v2_health.json",
     "health_md": "D:\\PlexTools\\public\\latest\\scarflix\\scarflix_v2_health.md",
     "old_live_direct_parts": 0,
-    "latest_live_selftest_checked": 5,
-    "latest_live_selftest_passed": 5,
+    "latest_live_selftest_checked": 35,
+    "latest_live_selftest_passed": 35,
     "verified_titles": [
       {
         "content_length": 734077147,
@@ -45,7 +45,9 @@
         "title": "Night of the Living Dead (1968)",
         "status": "PASS"
       }
-    ]
+    ],
+    "latest_live_selftest_failed": 0,
+    "live_quarantine_enabled": true
   },
   "completed": {
     "legacy_strm_migrated": 43,
@@ -80,7 +82,7 @@
     "ScarFLIX_v2_PlexSelfTest"
   ],
   "next_work": [
-    "Continue rolling live catalog coverage through scheduled TMDb seeding.",
+    "Continue rolling live catalog coverage through scheduled TMDb seeding, followed by validation quarantine.",
     "Improve source ranking and compatibility scoring using cached stream metadata and admission results.",
     "Route no-live-source titles to Decypharr/Zurg/Radarr/Sonarr materialization fallback.",
     "Monitor Plex DB size and scan duration as catalog count grows."
