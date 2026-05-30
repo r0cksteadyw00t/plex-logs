@@ -1,35 +1,38 @@
 {
   "component": "scarflix_v2",
   "status": "PASS",
-  "last_refresh_utc": "2026-05-30T09:52:01Z",
+  "last_refresh_utc": "2026-05-30T11:40:24Z",
   "primary_ux": "Plex live catalog via ScarFLIX live proxy to Torrentio/Real-Debrid",
   "fallback_ux": "Request/materialize through Decypharr/Zurg/Radarr/Sonarr/qBittorrent where live streaming is not viable",
   "live_selftest": {
-    "passed": 5,
+    "failed": 0,
+    "checked": 35,
+    "quarantine_enabled": true,
+    "passed": 35,
     "status": "PASS",
-    "plex_indexed_live_strm": 80,
-    "checked": 5
+    "plex_indexed_live_strm": 35
   },
   "verified_titles": [
     {
-      "content_length": 734077147,
       "range_status": 206,
       "status": "PASS",
-      "title": "12 Angry Men (1957)"
+      "title": "12 Angry Men (1957)",
+      "content_length": 734077147
     },
     {
-      "content_length": 59472710133,
       "range_status": 206,
       "status": "PASS",
-      "title": "Night of the Living Dead (1968)"
+      "title": "Night of the Living Dead (1968)",
+      "content_length": 59472710133
     }
   ],
   "guardrails": {
-    "cached_debrid_only": true,
+    "prefer_compatible_sources": true,
     "reject_rd_download_placeholders": true,
-    "normalize_force_download": true,
     "minimum_live_content_length": 52428800,
-    "prefer_compatible_sources": true
+    "cached_debrid_only": true,
+    "quarantine_failed_entries": true,
+    "normalize_force_download": true
   },
   "need_jason": []
 }
