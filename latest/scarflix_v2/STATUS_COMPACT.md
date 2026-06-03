@@ -1,6 +1,6 @@
 ﻿# ScarFLIX v2 Status
 
-Generated: 2026-06-04 09:53:09
+Generated: 2026-06-04 09:55:06
 
 Signal: ATTN
 Reason: Controller status needs triage: BLOCKED_LOOP
@@ -28,6 +28,6 @@ Next action: Use local triage/recovery. Do not run Codex while credits are unava
 - Expansion running: False
 
 ## Ages
-- Controller age minutes: 54
-- PlatformGate age minutes: 52
+- Controller age minutes: 56
+- PlatformGate age minutes: 53
 - Candidate age minutes: 999999
