@@ -3,7 +3,7 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-03T07:27:05Z
+Updated UTC: 2026-06-03T07:42:07Z
 Current step: PLATFORM_GATE_RUNNING
 Jason action required: False
 
@@ -12,7 +12,7 @@ Jason action required: False
 - status: RUNNING
 - stage: running_platform_gate_attempt_2
 - visible: 78
-- transient_failures: 0
+- transient_failures: 6
 - prunable_failures: 0
 
 ## Candidate Source Model
@@ -21,7 +21,7 @@ Jason action required: False
 
 ## Action
 - action_taken: PlatformGate runner already running; no inline wait
-- next_check_utc: 2026-06-03T07:42:05Z
+- next_check_utc: 2026-06-03T07:57:07Z
 
 ## Blockers
 - none
