@@ -1,9 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
 Status: RUNNING
+Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-03T07:12:02Z
-Current step: monitoring_detached_platform_gate
+Updated UTC: 2026-06-03T07:27:05Z
+Current step: PLATFORM_GATE_RUNNING
 Jason action required: False
 
 ## PlatformGate
@@ -11,12 +12,16 @@ Jason action required: False
 - status: RUNNING
 - stage: running_platform_gate_attempt_2
 - visible: 78
-- transient_failures: 2
+- transient_failures: 0
 - prunable_failures: 0
+
+## Candidate Source Model
+- status: PENDING_PLATFORM_GATE
+- status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Action
 - action_taken: PlatformGate runner already running; no inline wait
-- next_check_utc: 2026-06-03T07:27:02Z
+- next_check_utc: 2026-06-03T07:42:05Z
 
 ## Blockers
 - none
