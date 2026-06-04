@@ -1,6 +1,6 @@
 # ScarFLIX Foundry Status
 
-Generated: 2026-06-04 19:22:02
+Generated: 2026-06-04 19:37:02
 
 | Item | Value |
 |---|---|
@@ -20,11 +20,11 @@ Generated: 2026-06-04 19:22:02
 | Ollama | Missing |
 
 ## Recent logs
-- github_runner_watchdog.log | 4/06/2026 7:22:02 PM
-- sf2_closed_loop_20260604.log | 4/06/2026 7:21:07 PM
-- sf2_autopilot_20260604.log | 4/06/2026 7:20:07 PM
+- github_runner_watchdog.log | 4/06/2026 7:37:02 PM
+- sf2_closed_loop_20260604.log | 4/06/2026 7:36:05 PM
+- sf2_autopilot_20260604.log | 4/06/2026 7:35:06 PM
+- github_runner_stdout.log | 4/06/2026 7:15:01 PM
 - github_runner_stderr.log | 4/06/2026 7:13:42 PM
-- github_runner_stdout.log | 4/06/2026 7:13:42 PM
 - foundry_runner_online_fix_20260604_184227.log | 4/06/2026 6:42:39 PM
 - foundry_runner_repair_20260604_183701.log | 4/06/2026 6:37:31 PM
 - foundry_bootstrap_20260604_182018.log | 4/06/2026 6:22:04 PM
