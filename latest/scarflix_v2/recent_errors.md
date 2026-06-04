@@ -1,11 +1,8 @@
 ﻿# Recent ScarFLIX errors
 
-Generated: 2026-06-04 10:24:01
+Generated: 2026-06-04 10:27:38
 
 ``text
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:45:05Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:46:03Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:47:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:48:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:49:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:50:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
@@ -42,9 +39,9 @@ scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:21:02Z] [PASS] Admin 
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:22:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:23:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:24:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T23:04:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T23:05:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T23:06:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:25:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:26:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:27:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T23:07:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T23:08:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T23:09:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
@@ -122,6 +119,9 @@ scarflix_v2_master_authority_20260604.log: [2026-06-04T00:21:01Z] [PASS] Master 
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:22:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:23:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:24:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:25:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:26:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:27:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:31 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
 scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:45 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
 scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:59 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
