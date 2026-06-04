@@ -1,25 +1,8 @@
 ﻿# Recent ScarFLIX errors
 
-Generated: 2026-06-04 10:09:40
+Generated: 2026-06-04 10:19:01
 
 ``text
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:23:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:24:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:25:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:26:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:27:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:28:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:29:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:30:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:31:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:32:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:33:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:34:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:35:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:36:03Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:37:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:38:03Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:39:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:40:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:41:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:42:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
@@ -50,15 +33,15 @@ scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:06:02Z] [PASS] Admin 
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:07:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:08:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:09:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:50:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:51:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:52:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:53:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:54:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:55:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:56:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:57:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:58:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:10:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:11:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:12:03Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:13:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:14:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:15:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:17:09Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:18:04Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:19:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T22:59:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T23:00:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T23:01:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
@@ -130,17 +113,34 @@ scarflix_v2_master_authority_20260604.log: [2026-06-04T00:06:01Z] [PASS] Master 
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:07:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:08:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:09:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:04:13Z] [INFO] Visible catalog QA starting MaxItems=0 HideFailed=False
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:14:54Z] [REVIEW] QA failed: part=111244 title=The Devil Wears Prada reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:21:54Z] [REVIEW] QA failed: part=111277 title=The Dark Knight reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:27:09Z] [REVIEW] QA failed: part=111282 title=Spirited Away reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:37:28Z] [REVIEW] QA failed: part=111460 title=Star Wars: Episode IV -- A New Hope reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:41:14Z] [REVIEW] QA failed: part=111468 title=Pulp Fiction reason=Plex Transcoder HLS probe did not produce valid output
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:44:18Z] [REVIEW] QA failed: part=111747 title=Harry Potter and the Prisoner of Azkaban reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:46:31Z] [REVIEW] QA failed: part=111899 title=Pirates of the Caribbean: Dead Man's Chest reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:50:55Z] [REVIEW] QA failed: part=111965 title=GOAT reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:54:54Z] [REVIEW] QA failed: part=111966 title=Forrest Gump reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-03T23:57:45Z] [REVIEW] QA failed: part=111981 title=Dune: Part One reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-04T00:02:12Z] [REVIEW] QA failed: part=111992 title=Coraline reason=Plex Transcoder HLS probe timed out
-scarflix_v2_visible_catalog_qa_20260604.log: [2026-06-04T00:08:15Z] [REVIEW] QA failed: part=112017 title=Coco reason=Plex Transcoder HLS probe timed out
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:10:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:11:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:12:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:13:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:14:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:15:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:17:09Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:18:04Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:19:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:31 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:45 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:59 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:27:14 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:27:28 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:27:42 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:27:56 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:28:10 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:28:24 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:28:38 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:28:52 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:29:06 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:29:20 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:29:33 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:29:47 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:30:01 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:30:15 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:30:29 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:30:42 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-03 21:30:56 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
+scarflix_v2_live_dashboard_server.log: 2026-06-04 10:17:10 FAILED to start listener: Exception calling "Start" with "0" argument(s): "Failed to listen on prefix 'http://127.0.0.1:8788/' because it conflicts with an existing registration on the machine."
 ``
