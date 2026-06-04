@@ -16,6 +16,6 @@ Candidate source:
 Controller transient/prunable: 3/0
 PlatformGate transient/prunable: 0/0
 Tasks running: controller=False; platform=False; manual=True; expansion=False
-File ages min: controller=65; platform=62; candidate=999999; health=999999; active=999999
+File ages min: controller=70; platform=68; candidate=999999; health=999999; active=999999
 
 Ask ChatGPT what local/offline script to run next. Do not use Codex.
