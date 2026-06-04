@@ -1,14 +1,19 @@
 # ScarFLIX Foundry Dashboard
 
-**Status:** Phase 2 starting  
+**Status:** WORKING  
 **Jason action:** NONE  
-**Mode:** WAIT / AUTO  
-**Last checked:** 2026-06-04 19:40 AEST
+**What you should do:** WAIT. Come back to ChatGPT only if this dashboard says `CHATGPT REQUIRED` or if you want a manual check.  
+**Last updated:** 2026-06-04 19:44 AEST
 
-## Current tracking
+## Simple answer
+
+The automation is still running. You do not need to do anything right now.
+
+## Current phase
 
 | Item | Status |
 |---|---|
+| Phase | Phase 2: task execution + status cleanup |
 | Runner process count | 4 |
 | GitHub runner path | Active |
 | Docker | Running |
@@ -17,12 +22,24 @@
 | Codex | Not used |
 | Ollama | Pending later |
 
-## Next action
+## When to return to ChatGPT
 
-Wait 3-5 minutes, then type `1` for a check.
+| Dashboard says | You do |
+|---|---|
+| WORKING | Wait |
+| WAIT / AUTO | Wait |
+| CHATGPT REQUIRED | Type `1` in ChatGPT |
+| JASON ACTION REQUIRED | Follow the action shown |
+| ERROR / STUCK | Type `1` in ChatGPT |
 
-## HTML dashboard
+## Next automatic step
 
-Raw GitHub shows HTML as text. Use this rendered preview link instead:
+Foundry runner should process the Phase 2 task and publish refreshed status.
 
+## Links
+
+Rendered HTML dashboard:  
 https://htmlpreview.github.io/?https://github.com/r0cksteadyw00t/plex-logs/blob/main/latest/scarflix_v2/dashboard/index.html
+
+Markdown dashboard:  
+https://github.com/r0cksteadyw00t/plex-logs/blob/main/latest/scarflix_v2/DASHBOARD.md
