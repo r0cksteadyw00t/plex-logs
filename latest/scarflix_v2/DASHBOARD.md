@@ -15,14 +15,14 @@ Automation is running. You can leave this alone.
 | Phase | Phase 2: task execution loop, persistent dashboard UX, status cleanup |
 | Progress | 82% [################....] |
 | Estimated remaining | about 12 minutes |
-| Last updated | 2026-06-05 07:07:02 AEST |
+| Last updated | 2026-06-05 07:18:32 AEST |
 
 ## System health
 
 | Item | Status |
 |---|---|
 | GitHub runner active | True |
-| Runner process count | 2 |
+| Runner process count | 3 |
 | Docker | Running |
 | Ollama | Missing, Phase 3 later |
 | Catalogue | 78 visible |
