@@ -1,6 +1,6 @@
 ﻿ScarFLIX v2 QA policy audit for ChatGPT.
 
-Generated: 2026-06-04 13:41:11
+Generated: 2026-06-04 13:41:19
 Signal: QA_AUDIT_READY
 No Codex used. No restart. No catalogue change. No expansion.
 
