@@ -1,13 +1,8 @@
 ﻿# Recent ScarFLIX errors
 
-Generated: 2026-06-04 10:19:01
+Generated: 2026-06-04 10:24:01
 
 ``text
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:40:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:41:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:42:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:43:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:44:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:45:05Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:46:03Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-03T23:47:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
@@ -42,11 +37,11 @@ scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:15:02Z] [PASS] Admin 
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:17:09Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:18:04Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:19:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T22:59:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T23:00:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T23:01:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T23:02:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
-scarflix_v2_master_authority_20260604.log: [2026-06-03T23:03:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:20:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:21:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:22:01Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:23:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
+scarflix_v2_admin_task_runner_20260604.log: [2026-06-04T00:24:02Z] [PASS] Admin task runner finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T23:04:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T23:05:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-03T23:06:02Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
@@ -122,6 +117,11 @@ scarflix_v2_master_authority_20260604.log: [2026-06-04T00:15:01Z] [PASS] Master 
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:17:09Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:18:04Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_master_authority_20260604.log: [2026-06-04T00:19:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:20:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:21:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:22:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:23:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
+scarflix_v2_master_authority_20260604.log: [2026-06-04T00:24:01Z] [PASS] Master authority run finished: processed=0; passed=0; failed=0
 scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:31 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
 scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:45 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
 scarflix_v2_live_dashboard_server.log: 2026-06-03 21:26:59 Request error: Cannot bind parameter 'Id'. Cannot convert value "Decypharr" to type "System.Int64". Error: "Input string was not in a correct format."
