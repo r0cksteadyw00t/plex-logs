@@ -14,7 +14,7 @@ Phase 2 is complete enough. Next automatic step is Phase 3 readiness for Ollama 
 | Phase | Phase 2 closing, Phase 3 readiness next |
 | Progress | 95% [###################.] |
 | Estimated remaining | about 0 minutes |
-| Last updated | 2026-06-05 09:37:02 AEST |
+| Last updated | 2026-06-05 09:52:02 AEST |
 | Runner process count | 2 |
 | Docker | Running |
 | Ollama | Missing, Phase 3 next |
