@@ -1,10 +1,10 @@
 ﻿# ScarFLIX v2 Status
 
-Generated: 2026-06-04 10:11:04
+Generated: 2026-06-04 10:17:10
 
 Signal: ATTN
-Reason: Controller status needs triage: BLOCKED_LOOP
-Next action: Use local triage/recovery. Do not run Codex while credits are unavailable.
+Reason: PlatformGate status says RUNNING, but no runner task is active. Status is stale or the runner exited without finalising.
+Next action: Run local triage/recovery, not Codex.
 
 ## Core
 - Controller: BLOCKED_LOOP
@@ -24,10 +24,10 @@ Next action: Use local triage/recovery. Do not run Codex while credits are unava
 ## Tasks
 - Controller running: False
 - Platform runner running: False
-- Manual runner running: True
+- Manual runner running: False
 - Expansion running: False
 
 ## Ages
-- Controller age minutes: 72
-- PlatformGate age minutes: 69
+- Controller age minutes: 78
+- PlatformGate age minutes: 76
 - Candidate age minutes: 999999
