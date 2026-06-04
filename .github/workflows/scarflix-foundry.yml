@@ -4,10 +4,24 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '*/15 * * * *'
+  push:
+    paths:
+      - 'foundry/tasks/**'
+      - 'foundry/mission/**'
+      - 'foundry/policy/**'
+      - '.github/workflows/scarflix-foundry.yml'
 
 permissions:
   contents: write
   issues: write
+
+defaults:
+  run:
+    shell: powershell
+
+concurrency:
+  group: scarflix-foundry-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   foundry-cycle:
@@ -15,7 +29,6 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Run local ScarFLIX Foundry cycle
-        shell: powershell
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
