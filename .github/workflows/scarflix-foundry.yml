@@ -1,0 +1,25 @@
+name: ScarFLIX Foundry
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  foundry-cycle:
+    runs-on: [self-hosted, Windows, X64, scarflix, foundry]
+    timeout-minutes: 30
+    steps:
+      - name: Run local ScarFLIX Foundry cycle
+        shell: powershell
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $ErrorActionPreference = 'Continue'
+          $script = 'D:\PlexTools\Foundry\Run-FoundryCycle.ps1'
+          if (!(Test-Path -LiteralPath $script)) { throw 'Foundry cycle script not found: ' + $script }
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File $script
