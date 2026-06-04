@@ -1,46 +1,37 @@
 # ScarFLIX Foundry Dashboard
 
-## What do I do right now?
+**Status:** WORKING  
+**Jason action:** NONE  
+**What you should do:** WAIT. Return to ChatGPT only if this dashboard says CHATGPT REQUIRED or JASON ACTION REQUIRED.  
+**Last updated:** 2026-06-04 21:22:02  
 
-**WAIT**
+## Simple answer
 
-Automation is running. You can leave this alone.
+The automation is still running. You do not need to do anything right now.
 
-## Current status
-
-| Item | Status |
-|---|---|
-| Signal | WORKING |
-| User action | WAIT |
-| Phase | Phase 2: Task execution loop, dashboard UX, status cleanup |
-| Progress | 80% [################....] |
-| Estimated remaining | about 15 minutes |
-| Last updated | 2026-06-04 21:19:48 AEST |
-| Status stale age | 13 minutes |
-
-## System health
+## Current tracking
 
 | Item | Status |
 |---|---|
-| GitHub runner active | True |
+| Phase | Phase 2: task execution + status cleanup |
 | Runner process count | 2 |
+| GitHub runner active | True |
 | Docker | Running |
-| Ollama | Missing, Phase 3 later |
 | Catalogue | 78 visible |
 | Expansion | Off |
 | Codex | Not used |
+| Ollama | Missing, pending Phase 3 |
 
-## Return rules
+## When to return to ChatGPT
 
 | Dashboard says | You do |
 |---|---|
-| WORKING | Wait. Do not type anything. |
-| WAIT / AUTO | Wait. Do not type anything. |
-| CHATGPT REQUIRED | Type 1 in ChatGPT. |
-| JASON ACTION REQUIRED | Follow the action shown. |
-| ERROR / STUCK | Type 1 in ChatGPT. |
-| Last updated is older than 15 minutes | Type 1 in ChatGPT. |
+| WORKING | Wait |
+| WAIT / AUTO | Wait |
+| CHATGPT REQUIRED | Type 1 in ChatGPT |
+| JASON ACTION REQUIRED | Follow the action shown |
+| ERROR / STUCK | Type 1 in ChatGPT |
 
 ## Next automatic step
 
-Foundry continues Phase 2 status/task cleanup. Phase 3 will add Ollama and Aider as a controlled implementation engine.
+Foundry runner continues Phase 2 task execution and status cleanup.
