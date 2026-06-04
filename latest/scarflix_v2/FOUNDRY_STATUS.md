@@ -1,6 +1,6 @@
 # ScarFLIX Foundry Status
 
-Generated: 2026-06-04 18:21:48
+Generated: 2026-06-04 18:36:02
 
 | Item | Value |
 |---|---|
@@ -15,14 +15,14 @@ Generated: 2026-06-04 18:21:48
 | GitHub runner task | Missing |
 | Local heartbeat task | Running |
 | SF2 Autopilot task | Ready |
-| SF2 Supervisor task | Ready |
+| SF2 Supervisor task | Running |
 | Docker | Unavailable |
 | Ollama | Missing |
 
 ## Recent logs
-- foundry_bootstrap_20260604_182018.log | 4/06/2026 6:21:48 PM
-- sf2_closed_loop_20260604.log | 4/06/2026 6:21:07 PM
-- sf2_autopilot_20260604.log | 4/06/2026 6:20:07 PM
+- sf2_closed_loop_20260604.log | 4/06/2026 6:36:05 PM
+- sf2_autopilot_20260604.log | 4/06/2026 6:35:06 PM
+- foundry_bootstrap_20260604_182018.log | 4/06/2026 6:22:04 PM
 - scarflix_v2_compact_status_publisher_last.log | 4/06/2026 11:13:07 AM
 - scarflix_v2_health_status_20260604.log | 4/06/2026 10:27:13 AM
 - scarflix_v2_live_dashboard_watchdog.log | 4/06/2026 10:27:02 AM
