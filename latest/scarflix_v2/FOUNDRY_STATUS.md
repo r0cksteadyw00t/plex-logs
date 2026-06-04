@@ -1,6 +1,6 @@
 # ScarFLIX Foundry Status
 
-Generated: 2026-06-04 18:36:02
+Generated: 2026-06-04 18:37:19
 
 | Item | Value |
 |---|---|
@@ -15,11 +15,12 @@ Generated: 2026-06-04 18:36:02
 | GitHub runner task | Missing |
 | Local heartbeat task | Running |
 | SF2 Autopilot task | Ready |
-| SF2 Supervisor task | Running |
-| Docker | Unavailable |
+| SF2 Supervisor task | Ready |
+| Docker | Running |
 | Ollama | Missing |
 
 ## Recent logs
+- foundry_runner_repair_20260604_183701.log | 4/06/2026 6:37:19 PM
 - sf2_closed_loop_20260604.log | 4/06/2026 6:36:05 PM
 - sf2_autopilot_20260604.log | 4/06/2026 6:35:06 PM
 - foundry_bootstrap_20260604_182018.log | 4/06/2026 6:22:04 PM
@@ -27,7 +28,6 @@ Generated: 2026-06-04 18:36:02
 - scarflix_v2_health_status_20260604.log | 4/06/2026 10:27:13 AM
 - scarflix_v2_live_dashboard_watchdog.log | 4/06/2026 10:27:02 AM
 - scarflix_v2_admin_task_runner_20260604.log | 4/06/2026 10:27:02 AM
-- scarflix_v2_master_authority_20260604.log | 4/06/2026 10:27:01 AM
 
 ## Next action
 Progress Mission 001 through GitHub Issues and self-hosted runner. Continue without Codex. Escalate only for true blockers.
