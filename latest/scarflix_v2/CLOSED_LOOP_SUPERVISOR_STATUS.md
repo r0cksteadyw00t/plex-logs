@@ -1,10 +1,10 @@
 ﻿ScarFLIX v2 closed-loop supervisor status.
 
-Generated: 2026-06-04 16:21:03
+Generated: 2026-06-04 16:26:02
 Signal: RUNNING
 Reason: Diagnostics missing or stale
 Next action: Closed loop supervisor will keep queuing safe allow-listed commands.
-Queued: diagnostic queued: OK
+Queued: cooldown active for diagnostic
 Runner process count: 0
 Autopilot task: Ready
 Supervisor task: Running
