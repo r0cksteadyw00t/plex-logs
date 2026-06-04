@@ -1,26 +1,35 @@
 ﻿ScarFLIX v2 telemetry summary for ChatGPT.
 
-Generated: 2026-06-04 11:02:13
+Generated: 2026-06-04 11:04:01
 
 Compact status:
-ScarFLIX v2 status for ChatGPT.
+ScarFLIX v2 offline status summary for ChatGPT.
 
-Generated: 2026-06-04 11:02:12
-Signal: QUIESCED
-Reason: Emergency local quiesce completed to stop popup storm and stale PlatformGate runners.
-Next action: ChatGPT should check GitHub telemetry again, then provide the next local/offline recovery step. Do not use Codex.
+Signal: ATTN
+Reason: PlatformGate status says RUNNING, but no runner task is active. Status is stale or the runner exited without finalising.
+Next action: Run local triage/recovery, not Codex.
 
+Controller: BLOCKED_LOOP
+Milestone: BLOCKED_LOOP
 Visible: 78
-Catalogue changed: False
-Expansion enabled: False
-Killed runner process count: 0
-Codex used: False
+Movies/TV: /
+PlatformGate: RUNNING
+Same snapshot: 
+Health: 
+WebDAV active gate: 
+Candidate source: 
+Controller transient/prunable: 3/0
+PlatformGate transient/prunable: 0/0
+Tasks running: controller=False; platform=False; manual=False; expansion=False
+File ages min: controller=124; platform=121; candidate=999999; health=999999; active=999999
+
+Ask ChatGPT what local/offline script to run next. Do not use Codex.
 
 
 Task summary:
 - System.Object[]: Missing
 
-Runner process count: 6
+Runner process count: 7
 
 Latest PlatformGate log: D:\PlexTools\logs\scarflix_v2_platform_gate_20260604.log
 Latest Controller log: D:\PlexTools\logs\scarflix_v2_autonomous_controller_run_20260604.log
