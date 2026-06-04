@@ -1,6 +1,6 @@
 ﻿ScarFLIX v2 closed-loop supervisor status.
 
-Generated: 2026-06-04 20:56:01
+Generated: 2026-06-04 21:01:02
 Signal: RUNNING
 Reason: Script snippets missing or stale
 Next action: Closed loop supervisor will keep queuing safe allow-listed commands.
