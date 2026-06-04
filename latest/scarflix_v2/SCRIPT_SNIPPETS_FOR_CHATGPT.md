@@ -1,9 +1,7 @@
 ﻿ScarFLIX v2 script snippets for ChatGPT.
 
-Generated: 2026-06-04 14:07:11
-Signal: SCRIPT_SNIPPETS_READY
-No Codex used. No restart. No catalogue change. No expansion.
-
+Generated: 2026-06-04 14:50:02
+No Codex. No restart. No catalogue change. No expansion.
 
 ## D:\PlexTools\Scripts\scarflix_v2\Enable_qBit_Fallback_When_RD_Free.ps1
 ``text
@@ -57,7 +55,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 54:   param([string]$Message)
 55:   [void]$Warnings.Add($Message)
 ---
-87:   $headers = @{ "X-Api-Key" = $ApiKey }
+87:   $headers = @{ "X-Api-Key" = $ApiKey [REDACTED]
 88:   $uri = $BaseUrl.TrimEnd("/") + $Path
 89:   if ($null -eq $Body) {
 90:     return Invoke-RestMethod -Uri $uri -Headers $headers -Method $Method -UseBasicParsing -TimeoutSec 20 -ErrorAction Stop
@@ -130,7 +128,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 219:   Backup-File -Path $QbitIni -BackupRoot $backupRoot
 220:   Backup-File -Path $QbTokenPath -BackupRoot $backupRoot
 221: 
-222:   if (!(Test-Path -LiteralPath $QbTokenPath)) { Add-Failure ("Missing qBittorrent token config: {0}" -f $QbTokenPath) }
+222:   if (!(Test-Path -LiteralPath $QbTokenPath)) { Add-Failure ("Missing qBittorrent token [REDACTED] {0}" -f $QbTokenPath) }
 223:   if (!(Test-Path -LiteralPath $RadarrConfig)) { Add-Failure ("Missing Radarr config: {0}" -f $RadarrConfig) }
 224:   if (!(Test-Path -LiteralPath $SonarrConfig)) { Add-Failure ("Missing Sonarr config: {0}" -f $SonarrConfig) }
 225: 
@@ -139,7 +137,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 ---
 220:   Backup-File -Path $QbTokenPath -BackupRoot $backupRoot
 221: 
-222:   if (!(Test-Path -LiteralPath $QbTokenPath)) { Add-Failure ("Missing qBittorrent token config: {0}" -f $QbTokenPath) }
+222:   if (!(Test-Path -LiteralPath $QbTokenPath)) { Add-Failure ("Missing qBittorrent token [REDACTED] {0}" -f $QbTokenPath) }
 223:   if (!(Test-Path -LiteralPath $RadarrConfig)) { Add-Failure ("Missing Radarr config: {0}" -f $RadarrConfig) }
 224:   if (!(Test-Path -LiteralPath $SonarrConfig)) { Add-Failure ("Missing Sonarr config: {0}" -f $SonarrConfig) }
 225: 
@@ -148,19 +146,19 @@ No Codex used. No restart. No catalogue change. No expansion.
 228:     try {
 ---
 221: 
-222:   if (!(Test-Path -LiteralPath $QbTokenPath)) { Add-Failure ("Missing qBittorrent token config: {0}" -f $QbTokenPath) }
+222:   if (!(Test-Path -LiteralPath $QbTokenPath)) { Add-Failure ("Missing qBittorrent token [REDACTED] {0}" -f $QbTokenPath) }
 223:   if (!(Test-Path -LiteralPath $RadarrConfig)) { Add-Failure ("Missing Radarr config: {0}" -f $RadarrConfig) }
 224:   if (!(Test-Path -LiteralPath $SonarrConfig)) { Add-Failure ("Missing Sonarr config: {0}" -f $SonarrConfig) }
 225: 
 226:   $rdPremium = $false
 227:   if (Test-Path -LiteralPath $RdTokenPath) {
 228:     try {
-229:       $rdToken = (Get-Content -LiteralPath $RdTokenPath -Raw).Trim()
+229:       $rdToken = [REDACTED] -LiteralPath $RdTokenPath -Raw).Trim()
 ---
 228:     try {
-229:       $rdToken = (Get-Content -LiteralPath $RdTokenPath -Raw).Trim()
+229:       $rdToken = [REDACTED] -LiteralPath $RdTokenPath -Raw).Trim()
 230:       if (-not [string]::IsNullOrWhiteSpace($rdToken)) {
-231:         $u = Invoke-RestMethod -Uri "https://api.real-debrid.com/rest/1.0/user" -Headers @{ Authorization = ("Bearer {0}" -f $rdToken) } -UseBasicParsing -TimeoutSec 15 -ErrorAction Stop
+231:         $u = Invoke-RestMethod -Uri "[REDACTED_REAL_DEBRID_URL]" -Headers @{ Authorization = ("Bearer {0}" -f $rdToken) } -UseBasicParsing -TimeoutSec 15 -ErrorAction Stop
 232:         if ([int]$u.premium -gt 0) { $rdPremium = $true }
 233:         Write-Step ("Real-Debrid premium active: {0}" -f $rdPremium) "INFO"
 234:       }
@@ -179,7 +177,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 ---
 248: 
 249:     $qbSession = New-Object Microsoft.PowerShell.Commands.WebRequestSession
-250:     $loginBody = "username={0}&password={1}" -f [Uri]::EscapeDataString($qbUser), [Uri]::EscapeDataString($qbPass)
+250:     $loginBody = "username={0}&password=[REDACTED]" -f [Uri]::EscapeDataString($qbUser), [Uri]::EscapeDataString($qbPass)
 251:     $login = Invoke-WebRequest -Uri ($qbBase + "/api/v2/auth/login") -Method Post -Body $loginBody -ContentType "application/x-www-form-urlencoded" -WebSession $qbSession -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop
 252:     if ($login.Content -notmatch "Ok") {
 253:       Add-Failure "qBittorrent WebUI login did not return Ok"
@@ -212,7 +210,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 51: 
 ---
 69: Write-Step "INFO" "Ensuring Radarr ScarFLIX profile"
-70: $script:RadarrKey = Get-ApiKey $RadarrConfig
+70: $script:RadarrKey = Get-ApiKey [REDACTED]
 71: if (-not $script:RadarrKey) {
 72:     Write-Step "FAIL" "Radarr API key missing"
 73:     Write-Step "FINAL" "FAIL"
@@ -221,7 +219,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 76: 
 77: $profilesRes = Invoke-Radarr "GET" "qualityprofile" $null
 ---
-70: $script:RadarrKey = Get-ApiKey $RadarrConfig
+70: $script:RadarrKey = Get-ApiKey [REDACTED]
 71: if (-not $script:RadarrKey) {
 72:     Write-Step "FAIL" "Radarr API key missing"
 73:     Write-Step "FINAL" "FAIL"
@@ -375,11 +373,11 @@ No Codex used. No restart. No catalogue change. No expansion.
 202:         return $false
 203:     }
 204: 
-205:     $profiles = Invoke-ArrApi -Base $RadarrBase -ApiKey $script:RadarrKey -Method "GET" -Path "qualityprofile" -Body $null
+205:     $profiles = Invoke-ArrApi -Base $RadarrBase -ApiKey [REDACTED] -Method "GET" -Path "qualityprofile" -Body $null
 206:     $profileId = Pick-QualityProfileId $profiles
 ---
 216: 
-217:     $lookup = Invoke-ArrApi -Base $RadarrBase -ApiKey $script:RadarrKey -Method "GET" -Path ("movie/lookup/tmdb?tmdbId={0}" -f $tmdbId) -Body $null
+217:     $lookup = Invoke-ArrApi -Base $RadarrBase -ApiKey [REDACTED] -Method "GET" -Path ("movie/lookup/tmdb?tmdbId={0}" -f $tmdbId) -Body $null
 218:     if ($null -eq $lookup) {
 219:         Update-State -Folder $folder -State "FAILED" -Note "Radarr lookup failed" -Arr "radarr" -ArrId 0
 220:         return $false
@@ -405,11 +403,11 @@ No Codex used. No restart. No catalogue change. No expansion.
 247:         return $false
 248:     }
 249: 
-250:     $profiles = Invoke-ArrApi -Base $SonarrBase -ApiKey $script:SonarrKey -Method "GET" -Path "qualityprofile" -Body $null
+250:     $profiles = Invoke-ArrApi -Base $SonarrBase -ApiKey [REDACTED] -Method "GET" -Path "qualityprofile" -Body $null
 251:     $profileId = Pick-QualityProfileId $profiles
 ---
 261:     $term = [Uri]::EscapeDataString($title)
-262:     $lookupList = Invoke-ArrApi -Base $SonarrBase -ApiKey $script:SonarrKey -Method "GET" -Path ("series/lookup?term={0}" -f $term) -Body $null
+262:     $lookupList = Invoke-ArrApi -Base $SonarrBase -ApiKey [REDACTED] -Method "GET" -Path ("series/lookup?term={0}" -f $term) -Body $null
 263:     if (-not $lookupList) {
 264:         Update-State -Folder $folder -State "FAILED" -Note "Sonarr lookup failed" -Arr "sonarr" -ArrId 0
 265:         return $false
@@ -425,11 +423,11 @@ No Codex used. No restart. No catalogue change. No expansion.
 292:     return $false
 293: }
 294: 
-295: $script:RadarrKey = Get-ApiKey $RadarrConfig
-296: $script:SonarrKey = Get-ApiKey $SonarrConfig
+295: $script:RadarrKey = Get-ApiKey [REDACTED]
+296: $script:SonarrKey = Get-ApiKey [REDACTED]
 ---
-295: $script:RadarrKey = Get-ApiKey $RadarrConfig
-296: $script:SonarrKey = Get-ApiKey $SonarrConfig
+295: $script:RadarrKey = Get-ApiKey [REDACTED]
+296: $script:SonarrKey = Get-ApiKey [REDACTED]
 297: if (-not $script:RadarrKey -or -not $script:SonarrKey) {
 298:     Log-Line "FAIL" "Missing Radarr or Sonarr API key"
 299:     exit 1
@@ -493,7 +491,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 ## D:\PlexTools\Scripts\scarflix_v2\Install_StremioLike_MVP.ps1
 ``text
 123:     param([string]$Path, [string]$ApiKey)
-124:     $uri = "https://api.themoviedb.org/3/{0}?api_key={1}&language=en-AU" -f $Path, [Uri]::EscapeDataString($ApiKey)
+124:     $uri = "https://api.themoviedb.org/3/{0}?api_key=[REDACTED]" -f $Path, [Uri]::EscapeDataString($ApiKey)
 125:     try {
 126:         return Invoke-RestMethod -Uri $uri -Method Get -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 127:     } catch {
@@ -770,14 +768,14 @@ No Codex used. No restart. No catalogue change. No expansion.
 109: }
 110: 
 ---
-112: Write-Step "Secrets will be read from the token vault only and will not be printed or written to logs." "INFO"
+112: Write-Step "Secrets will be read from the token [REDACTED] only and will not be printed or written to logs." "INFO"
 113: 
 114: try {
 115:   if (!(Test-Path -LiteralPath $DockerRoot)) { Add-Failure ("Missing Docker root: {0}" -f $DockerRoot) }
 116:   if (!(Test-Path -LiteralPath $ConfigPath)) { Add-Failure ("Missing Decypharr config: {0}" -f $ConfigPath) }
 117:   if (!(Test-Path -LiteralPath $ComposePath)) { Add-Failure ("Missing docker-compose file: {0}" -f $ComposePath) }
 118: 
-119:   $rd = Get-FirstToken -Names @("rd_token.txt", "rd_token-Jason.txt", "realdebrid_token.txt")
+119:   $rd = Get-FirstToken [REDACTED] @("rd_token.txt", "rd_token-Jason.txt", "realdebrid_token.txt")
 120:   if ($null -eq $rd) {
 ---
 113: 
@@ -786,44 +784,44 @@ No Codex used. No restart. No catalogue change. No expansion.
 116:   if (!(Test-Path -LiteralPath $ConfigPath)) { Add-Failure ("Missing Decypharr config: {0}" -f $ConfigPath) }
 117:   if (!(Test-Path -LiteralPath $ComposePath)) { Add-Failure ("Missing docker-compose file: {0}" -f $ComposePath) }
 118: 
-119:   $rd = Get-FirstToken -Names @("rd_token.txt", "rd_token-Jason.txt", "realdebrid_token.txt")
+119:   $rd = Get-FirstToken [REDACTED] @("rd_token.txt", "rd_token-Jason.txt", "realdebrid_token.txt")
 120:   if ($null -eq $rd) {
-121:     Add-Failure ("Real-Debrid token not found in token vault: {0}" -f $TokenRoot)
+121:     Add-Failure ("Real-Debrid token [REDACTED] found in token [REDACTED] {0}" -f $TokenRoot)
 ---
 114: try {
 115:   if (!(Test-Path -LiteralPath $DockerRoot)) { Add-Failure ("Missing Docker root: {0}" -f $DockerRoot) }
 116:   if (!(Test-Path -LiteralPath $ConfigPath)) { Add-Failure ("Missing Decypharr config: {0}" -f $ConfigPath) }
 117:   if (!(Test-Path -LiteralPath $ComposePath)) { Add-Failure ("Missing docker-compose file: {0}" -f $ComposePath) }
 118: 
-119:   $rd = Get-FirstToken -Names @("rd_token.txt", "rd_token-Jason.txt", "realdebrid_token.txt")
+119:   $rd = Get-FirstToken [REDACTED] @("rd_token.txt", "rd_token-Jason.txt", "realdebrid_token.txt")
 120:   if ($null -eq $rd) {
-121:     Add-Failure ("Real-Debrid token not found in token vault: {0}" -f $TokenRoot)
+121:     Add-Failure ("Real-Debrid token [REDACTED] found in token [REDACTED] {0}" -f $TokenRoot)
 122:   } else {
 ---
 118: 
-119:   $rd = Get-FirstToken -Names @("rd_token.txt", "rd_token-Jason.txt", "realdebrid_token.txt")
+119:   $rd = Get-FirstToken [REDACTED] @("rd_token.txt", "rd_token-Jason.txt", "realdebrid_token.txt")
 120:   if ($null -eq $rd) {
-121:     Add-Failure ("Real-Debrid token not found in token vault: {0}" -f $TokenRoot)
+121:     Add-Failure ("Real-Debrid token [REDACTED] found in token [REDACTED] {0}" -f $TokenRoot)
 122:   } else {
-123:     Write-Step ("Real-Debrid token found in vault file: {0} (value hidden)" -f (Split-Path -Leaf $rd.Path)) "OK"
+123:     Write-Step ("Real-Debrid token [REDACTED] in vault file: {0} (value hidden)" -f (Split-Path -Leaf $rd.Path)) "OK"
 124:   }
 125: 
 126:   if ($Failures.Count -eq 0) {
 ---
-123:     Write-Step ("Real-Debrid token found in vault file: {0} (value hidden)" -f (Split-Path -Leaf $rd.Path)) "OK"
+123:     Write-Step ("Real-Debrid token [REDACTED] in vault file: {0} (value hidden)" -f (Split-Path -Leaf $rd.Path)) "OK"
 124:   }
 125: 
 126:   if ($Failures.Count -eq 0) {
 127:     try {
 128:       $headers = @{ Authorization = ("Bearer {0}" -f $rd.Value) }
-129:       $probe = Invoke-WebRequest -Uri "https://api.real-debrid.com/rest/1.0/user" -Headers $headers -UseBasicParsing -TimeoutSec 15 -ErrorAction Stop
+129:       $probe = Invoke-WebRequest -Uri "[REDACTED_REAL_DEBRID_URL]" -Headers $headers -UseBasicParsing -TimeoutSec 15 -ErrorAction Stop
 130:       if ($probe.StatusCode -eq 200) {
 131:         Write-Step "Real-Debrid API probe returned HTTP 200" "OK"
 ---
 126:   if ($Failures.Count -eq 0) {
 127:     try {
 128:       $headers = @{ Authorization = ("Bearer {0}" -f $rd.Value) }
-129:       $probe = Invoke-WebRequest -Uri "https://api.real-debrid.com/rest/1.0/user" -Headers $headers -UseBasicParsing -TimeoutSec 15 -ErrorAction Stop
+129:       $probe = Invoke-WebRequest -Uri "[REDACTED_REAL_DEBRID_URL]" -Headers $headers -UseBasicParsing -TimeoutSec 15 -ErrorAction Stop
 130:       if ($probe.StatusCode -eq 200) {
 131:         Write-Step "Real-Debrid API probe returned HTTP 200" "OK"
 132:       } else {
@@ -833,7 +831,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 133:         Add-Warning ("Real-Debrid API probe returned HTTP {0}" -f $probe.StatusCode)
 134:       }
 135:     } catch {
-136:       Add-Failure ("Real-Debrid API probe failed without exposing token: {0}" -f $_.Exception.Message)
+136:       Add-Failure ("Real-Debrid API probe failed without exposing token: [REDACTED]" -f $_.Exception.Message)
 137:     }
 138:   }
 139: 
@@ -856,7 +854,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 189:       Add-Failure "Safety check failed: generated config would contain the Real-Debrid token."
 190:     } else {
 191:       Write-Utf8NoBom -Path $ConfigPath -Text $json
-192:       Write-Step ("Config updated: download_folder=/data/downloads, default_download_action=strm, app_url={0}, debrids=1 without token on disk" -f $appUrl) "OK"
+192:       Write-Step ("Config updated: download_folder=/data/downloads, default_download_action=strm, app_url={0}, debrids=1 without token [REDACTED] disk" -f $appUrl) "OK"
 193:     }
 194:   }
 ---
@@ -874,7 +872,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 234:   }
 235: 
 236:   if ($Failures.Count -eq 0) {
-237:     Write-Step "Recreating only Decypharr with token supplied from this process environment" "INFO"
+237:     Write-Step "Recreating only Decypharr with token [REDACTED] from this process environment" "INFO"
 238:     $env:TZ = "Australia/Melbourne"
 239:     $env:PUID = "1000"
 240:     $env:PGID = "1000"
@@ -941,10 +939,10 @@ No Codex used. No restart. No catalogue change. No expansion.
 124:   } else {
 125:     $Decypharr.enable = $true
 126:     $Decypharr.priority = 1
-127:     Invoke-Arr -BaseUrl $BaseUrl -ApiKey $ApiKey -Path ("/api/v3/downloadclient/{0}" -f $Decypharr.id) -Method "PUT" -Body $Decypharr | Out-Null
+127:     Invoke-Arr -BaseUrl $BaseUrl -ApiKey [REDACTED] -Path ("/api/v3/downloadclient/{0}" -f $Decypharr.id) -Method "PUT" -Body $Decypharr | Out-Null
 128:     Write-Step ("{0}: Decypharr enabled at priority 1" -f $Name) "OK"
 ---
-144:     $Body = @{ username = $Username; password = $Password }
+144:     $Body = @{ username = $Username; password = [REDACTED] }
 145:     $Login = Invoke-WebRequest -Uri ($DecypharrUrl + "/api/v2/auth/login") -Method Post -Body $Body -SessionVariable Session -UseBasicParsing -ErrorAction Stop
 146:     if ($Login.StatusCode -ne 200) {
 147:       Add-Failure ("{0}: Decypharr qBittorrent login returned HTTP {1}" -f $Name, $Login.StatusCode)
@@ -985,12 +983,12 @@ No Codex used. No restart. No catalogue change. No expansion.
 178: }
 ---
 195: 
-196:   $RdToken = Get-PlainToken
+196:   $RdToken = [REDACTED]
 197:   if ([string]::IsNullOrWhiteSpace($RdToken)) {
-198:     Add-Failure "Real-Debrid token not found in token vault"
+198:     Add-Failure "Real-Debrid token [REDACTED] found in token [REDACTED]"
 199:   } else {
 200:     try {
-201:       $User = Invoke-RestMethod -Uri "https://api.real-debrid.com/rest/1.0/user" -Headers @{ Authorization = ("Bearer " + $RdToken) } -UseBasicParsing -ErrorAction Stop
+201:       $User = Invoke-RestMethod -Uri "[REDACTED_REAL_DEBRID_URL]" -Headers @{ Authorization = ("Bearer " + $RdToken) } -UseBasicParsing -ErrorAction Stop
 202:       if ($User.premium -and ([int]$User.premium -gt 0)) { $RdPremium = $true }
 203:       if ($User.expiration) { $RdExpiration = [string]$User.expiration }
 ---
@@ -1021,8 +1019,8 @@ No Codex used. No restart. No catalogue change. No expansion.
 217:   if ([string]::IsNullOrWhiteSpace($SonarrKey)) { Add-Failure "Sonarr API key missing from local config" }
 218: 
 219:   if ($Failures.Count -eq 0) {
-220:     Set-ArrDownloadClientMode -Name "Radarr" -BaseUrl $RadarrUrl -ApiKey $RadarrKey
-221:     Set-ArrDownloadClientMode -Name "Sonarr" -BaseUrl $SonarrUrl -ApiKey $SonarrKey
+220:     Set-ArrDownloadClientMode -Name "Radarr" -BaseUrl $RadarrUrl -ApiKey [REDACTED]
+221:     Set-ArrDownloadClientMode -Name "Sonarr" -BaseUrl $SonarrUrl -ApiKey [REDACTED]
 ---
 214:   $RadarrKey = Get-ApiKeyFromConfig $RadarrConfig
 215:   $SonarrKey = Get-ApiKeyFromConfig $SonarrConfig
@@ -1030,21 +1028,21 @@ No Codex used. No restart. No catalogue change. No expansion.
 217:   if ([string]::IsNullOrWhiteSpace($SonarrKey)) { Add-Failure "Sonarr API key missing from local config" }
 218: 
 219:   if ($Failures.Count -eq 0) {
-220:     Set-ArrDownloadClientMode -Name "Radarr" -BaseUrl $RadarrUrl -ApiKey $RadarrKey
-221:     Set-ArrDownloadClientMode -Name "Sonarr" -BaseUrl $SonarrUrl -ApiKey $SonarrKey
-222:     $RadarrMockOk = Test-DecypharrMockLogin -Name "Radarr" -Username "http://radarr:7878" -Password $RadarrKey
+220:     Set-ArrDownloadClientMode -Name "Radarr" -BaseUrl $RadarrUrl -ApiKey [REDACTED]
+221:     Set-ArrDownloadClientMode -Name "Sonarr" -BaseUrl $SonarrUrl -ApiKey [REDACTED]
+222:     $RadarrMockOk = Test-DecypharrMockLogin -Name "Radarr" -Username "http://radarr:7878" -Password [REDACTED]
 ---
 216:   if ([string]::IsNullOrWhiteSpace($RadarrKey)) { Add-Failure "Radarr API key missing from local config" }
 217:   if ([string]::IsNullOrWhiteSpace($SonarrKey)) { Add-Failure "Sonarr API key missing from local config" }
 218: 
 219:   if ($Failures.Count -eq 0) {
-220:     Set-ArrDownloadClientMode -Name "Radarr" -BaseUrl $RadarrUrl -ApiKey $RadarrKey
-221:     Set-ArrDownloadClientMode -Name "Sonarr" -BaseUrl $SonarrUrl -ApiKey $SonarrKey
-222:     $RadarrMockOk = Test-DecypharrMockLogin -Name "Radarr" -Username "http://radarr:7878" -Password $RadarrKey
-223:     $SonarrMockOk = Test-DecypharrMockLogin -Name "Sonarr" -Username "http://sonarr:8989" -Password $SonarrKey
+220:     Set-ArrDownloadClientMode -Name "Radarr" -BaseUrl $RadarrUrl -ApiKey [REDACTED]
+221:     Set-ArrDownloadClientMode -Name "Sonarr" -BaseUrl $SonarrUrl -ApiKey [REDACTED]
+222:     $RadarrMockOk = Test-DecypharrMockLogin -Name "Radarr" -Username "http://radarr:7878" -Password [REDACTED]
+223:     $SonarrMockOk = Test-DecypharrMockLogin -Name "Sonarr" -Username "http://sonarr:8989" -Password [REDACTED]
 224:   }
 ---
-223:     $SonarrMockOk = Test-DecypharrMockLogin -Name "Sonarr" -Username "http://sonarr:8989" -Password $SonarrKey
+223:     $SonarrMockOk = Test-DecypharrMockLogin -Name "Sonarr" -Username "http://sonarr:8989" -Password [REDACTED]
 224:   }
 225: } catch {
 226:   Add-Failure ("Unhandled restore exception: {0}" -f $_.Exception.Message)
@@ -1654,7 +1652,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 209:   $owner = "r0cksteadyw00t"
 210:   $repo = "plex-logs"
 211:   $branch = "main"
-212:   $headers = New-GitHubHeaders -Token $Token
+212:   $headers = New-GitHubHeaders -Token [REDACTED]
 213:   $sha = $null
 ---
 213:   $sha = $null
@@ -1685,10 +1683,10 @@ No Codex used. No restart. No catalogue change. No expansion.
 232: }
 233: 
 234: function Publish-ControllerStatus {
-235:   $token = Get-Token
+235:   $token = [REDACTED]
 ---
 234: function Publish-ControllerStatus {
-235:   $token = Get-Token
+235:   $token = [REDACTED]
 236:   $publish = [ordered]@{
 237:     status = "REVIEW"
 238:     updated_utc = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
@@ -1937,7 +1935,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 33: function Ensure-Dir {
 ---
 126:   if ($Path.Contains("?")) { $Glue = "&" }
-127:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key={2}" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey)
+127:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key=[REDACTED]" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey)
 128:   $script:ApiCalls = $script:ApiCalls + 1
 129:   return Invoke-RestMethod -Uri $Uri -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 130: }
@@ -2434,7 +2432,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 38: $CategoryCounts = @{}
 ---
 232:   if ($Path.Contains("?")) { $Glue = "&" }
-233:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key={2}&page={3}" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
+233:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key=[REDACTED]" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
 234:   $script:ApiCalls = $script:ApiCalls + 1
 235:   return Invoke-RestMethod -Uri $Uri -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 236: }
@@ -3720,7 +3718,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 7: 
 ---
 150:   if ($Type -eq "episode") { $kind = "tv" }
-151:   $uri = "https://api.themoviedb.org/3/{0}/{1}?api_key={2}" -f $kind,$TmdbId,[Uri]::EscapeDataString($apiKey)
+151:   $uri = "https://api.themoviedb.org/3/{0}/{1}?api_key=[REDACTED]" -f $kind,$TmdbId,[Uri]::EscapeDataString($apiKey)
 152:   try {
 153:     $resp = Invoke-RestMethod -Uri $uri -UseBasicParsing -TimeoutSec 20 -ErrorAction Stop
 154:     $TmdbCache[$key] = $resp
@@ -3963,7 +3961,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 
 ## D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_GitHubTelemetryPublisher.ps1
 ``text
-44:     $h = @{ Authorization = "token $Tok"; Accept = "application/vnd.github+json"; "User-Agent" = "ScarFLIX-v2-telemetry" }
+44:     $h = @{ Authorization = "token [REDACTED]"; Accept = "application/vnd.github+json"; "User-Agent" = "ScarFLIX-v2-telemetry" }
 45:     $sha = ""
 46:     try {
 47:         $e = Invoke-RestMethod -Uri ($api + "?ref=$Branch") -Headers $h -Method Get -TimeoutSec 20 -ErrorAction Stop
@@ -4804,7 +4802,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 46: $Warnings = New-Object System.Collections.ArrayList
 ---
 282:   if ($Path.Contains("?")) { $Glue = "&" }
-283:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key={2}&page={3}" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
+283:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key=[REDACTED]" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
 284:   if ($Uri -notmatch "include_adult=") { $Uri = $Uri + "&include_adult=false" }
 285:   return Invoke-RestMethod -Uri $Uri -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 286: }
@@ -4914,7 +4912,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 45: $ExcludedKeys = @{}
 ---
 256:   if ($Path.Contains("?")) { $Glue = "&" }
-257:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key={2}&page={3}" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
+257:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key=[REDACTED]" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
 258:   if ($Uri -notmatch "include_adult=") { $Uri = $Uri + "&include_adult=false" }
 259:   return Invoke-RestMethod -Uri $Uri -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 260: }
@@ -5024,7 +5022,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 45: $Warnings = New-Object System.Collections.ArrayList
 ---
 258:   if ($Path.Contains("?")) { $Glue = "&" }
-259:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key={2}&page={3}" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
+259:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key=[REDACTED]" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
 260:   if ($Uri -notmatch "include_adult=") { $Uri = $Uri + "&include_adult=false" }
 261:   return Invoke-RestMethod -Uri $Uri -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 262: }
@@ -5134,7 +5132,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 45: $SeenKeys = @{}
 ---
 257:   if ($Path.Contains("?")) { $Glue = "&" }
-258:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key={2}&page={3}" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
+258:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key=[REDACTED]" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey), $Page
 259:   if ($Uri -notmatch "include_adult=") { $Uri = $Uri + "&include_adult=false" }
 260:   return Invoke-RestMethod -Uri $Uri -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 261: }
@@ -6758,7 +6756,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 64:   try { $content = Get-Content -LiteralPath $LocalPath -Raw } catch {
 65:     return [ordered]@{ path=$RemotePath; status="FAIL"; reason="local read failed" }
 66:   }
-67:   $headers = New-Headers -Token $Token
+67:   $headers = New-Headers -Token [REDACTED]
 68:   $sha = $null
 69:   $getUri = "https://api.github.com/repos/{0}/{1}/contents/{2}?ref={3}" -f $Owner,$Repo,$RemotePath,$Branch
 70:   try {
@@ -6791,19 +6789,19 @@ No Codex used. No restart. No catalogue change. No expansion.
 87: }
 88: 
 89: Ensure-Dir $PublicRoot
-90: $token = Get-Token
+90: $token = [REDACTED]
 ---
 91: $status = "PASS"
 92: $items = @()
 93: if ([string]::IsNullOrWhiteSpace($token)) {
 94:   $status = "REVIEW"
-95:   $items = @([ordered]@{ path="latest/scarflix_v2"; status="SKIP"; reason="GitHub token missing" })
+95:   $items = @([ordered]@{ path="latest/scarflix_v2"; status="SKIP"; reason="GitHub token [REDACTED]" })
 96: } else {
 97:   $items = @(
-98:     (Publish-File -LocalPath $CheckpointJsonPath -RemotePath "latest/scarflix_v2/platform_gate_checkpoint.json" -Message "scarflix_v2: update platform gate checkpoint json" -Token $token),
-99:     (Publish-File -LocalPath $CheckpointMdPath -RemotePath "latest/scarflix_v2/platform_gate_checkpoint.md" -Message "scarflix_v2: update platform gate checkpoint markdown" -Token $token)
+98:     (Publish-File -LocalPath $CheckpointJsonPath -RemotePath "latest/scarflix_v2/platform_gate_checkpoint.json" -Message "scarflix_v2: update platform gate checkpoint json" -Token [REDACTED],
+99:     (Publish-File -LocalPath $CheckpointMdPath -RemotePath "latest/scarflix_v2/platform_gate_checkpoint.md" -Message "scarflix_v2: update platform gate checkpoint markdown" -Token [REDACTED]
 ---
-99:     (Publish-File -LocalPath $CheckpointMdPath -RemotePath "latest/scarflix_v2/platform_gate_checkpoint.md" -Message "scarflix_v2: update platform gate checkpoint markdown" -Token $token)
+99:     (Publish-File -LocalPath $CheckpointMdPath -RemotePath "latest/scarflix_v2/platform_gate_checkpoint.md" -Message "scarflix_v2: update platform gate checkpoint markdown" -Token [REDACTED]
 100:   )
 101:   foreach ($item in @($items)) {
 102:     if (("" + $item.status) -eq "FAIL") { $status = "FAIL" }
@@ -7169,17 +7167,17 @@ No Codex used. No restart. No catalogue change. No expansion.
 324: }
 325: if (![string]::IsNullOrWhiteSpace($token)) {
 326:   try {
-327:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" + (Encode-QueryValue $token)
+327:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" [REDACTED] (Encode-QueryValue $token)
 328:     $testResp = Invoke-WebRequest -Uri $testUri -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop
 ---
 325: if (![string]::IsNullOrWhiteSpace($token)) {
 326:   try {
-327:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" + (Encode-QueryValue $token)
+327:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" [REDACTED] (Encode-QueryValue $token)
 328:     $testResp = Invoke-WebRequest -Uri $testUri -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop
-329:     if ($testResp.StatusCode -ne 200) { $token = "" }
+329:     if ($testResp.StatusCode -ne 200) { $token = "" [REDACTED]
 330:   } catch {
-331:     $token = ""
-332:     [void]$warnings.Add("saved Plex token was rejected; using local allowedNetworks fallback")
+331:     $token [REDACTED] ""
+332:     [void]$warnings.Add("saved Plex token [REDACTED] rejected; using local allowedNetworks fallback")
 333:   }
 ---
 351:       if ($probe.status -eq "PASS") {
@@ -7353,17 +7351,17 @@ No Codex used. No restart. No catalogue change. No expansion.
 319: }
 320: if (![string]::IsNullOrWhiteSpace($token)) {
 321:   try {
-322:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" + (Encode-QueryValue $token)
+322:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" [REDACTED] (Encode-QueryValue $token)
 323:     $testResp = Invoke-WebRequest -Uri $testUri -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop
 ---
 320: if (![string]::IsNullOrWhiteSpace($token)) {
 321:   try {
-322:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" + (Encode-QueryValue $token)
+322:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" [REDACTED] (Encode-QueryValue $token)
 323:     $testResp = Invoke-WebRequest -Uri $testUri -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop
-324:     if ($testResp.StatusCode -ne 200) { $token = "" }
+324:     if ($testResp.StatusCode -ne 200) { $token = "" [REDACTED]
 325:   } catch {
-326:     $token = ""
-327:     [void]$warnings.Add("saved Plex token was rejected; using local allowedNetworks fallback")
+326:     $token [REDACTED] ""
+327:     [void]$warnings.Add("saved Plex token [REDACTED] rejected; using local allowedNetworks fallback")
 328:   }
 ---
 346:       if ($probe.status -eq "PASS") {
@@ -7537,17 +7535,17 @@ No Codex used. No restart. No catalogue change. No expansion.
 322: }
 323: if (![string]::IsNullOrWhiteSpace($token)) {
 324:   try {
-325:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" + (Encode-QueryValue $token)
+325:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" [REDACTED] (Encode-QueryValue $token)
 326:     $testResp = Invoke-WebRequest -Uri $testUri -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop
 ---
 323: if (![string]::IsNullOrWhiteSpace($token)) {
 324:   try {
-325:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" + (Encode-QueryValue $token)
+325:     $testUri = $baseUrl + "/library/sections?X-Plex-Token=" [REDACTED] (Encode-QueryValue $token)
 326:     $testResp = Invoke-WebRequest -Uri $testUri -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop
-327:     if ($testResp.StatusCode -ne 200) { $token = "" }
+327:     if ($testResp.StatusCode -ne 200) { $token = "" [REDACTED]
 328:   } catch {
-329:     $token = ""
-330:     [void]$warnings.Add("saved Plex token was rejected; using local allowedNetworks fallback")
+329:     $token [REDACTED] ""
+330:     [void]$warnings.Add("saved Plex token [REDACTED] rejected; using local allowedNetworks fallback")
 331:   }
 ---
 349:       if ($probe.status -eq "PASS") {
@@ -8058,7 +8056,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 42: $TmdbCache = @{}
 ---
 122:   if ($Path.Contains("?")) { $Glue = "&" }
-123:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key={2}" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey)
+123:   $Uri = "https://api.themoviedb.org/3/{0}{1}api_key=[REDACTED]" -f $Path, $Glue, [Uri]::EscapeDataString($ApiKey)
 124:   $script:ApiCalls = $script:ApiCalls + 1
 125:   $Resp = Invoke-WebRequest -Uri $Uri -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 126:   $Text = "" + $Resp.Content
@@ -8344,11 +8342,11 @@ No Codex used. No restart. No catalogue change. No expansion.
 150:         return $false
 151:     }
 152: 
-153:     $profiles = Invoke-ArrApi -Base $RadarrBase -ApiKey $script:RadarrKey -Method "GET" -Path "qualityprofile" -Body $null
+153:     $profiles = Invoke-ArrApi -Base $RadarrBase -ApiKey [REDACTED] -Method "GET" -Path "qualityprofile" -Body $null
 154:     $profileId = Pick-QualityProfileId $profiles
 ---
 164: 
-165:     $lookup = Invoke-ArrApi -Base $RadarrBase -ApiKey $script:RadarrKey -Method "GET" -Path ("movie/lookup/tmdb?tmdbId={0}" -f $tmdbId) -Body $null
+165:     $lookup = Invoke-ArrApi -Base $RadarrBase -ApiKey [REDACTED] -Method "GET" -Path ("movie/lookup/tmdb?tmdbId={0}" -f $tmdbId) -Body $null
 166:     if ($null -eq $lookup) {
 167:         Update-State -Folder $folder -State "QUEUED" -Note "Radarr lookup failed; direct resolver still eligible" -Arr "radarr" -ArrId 0
 168:         return $false
@@ -8374,11 +8372,11 @@ No Codex used. No restart. No catalogue change. No expansion.
 195:         return $false
 196:     }
 197: 
-198:     $profiles = Invoke-ArrApi -Base $SonarrBase -ApiKey $script:SonarrKey -Method "GET" -Path "qualityprofile" -Body $null
+198:     $profiles = Invoke-ArrApi -Base $SonarrBase -ApiKey [REDACTED] -Method "GET" -Path "qualityprofile" -Body $null
 199:     $profileId = Pick-QualityProfileId $profiles
 ---
 209:     $term = [Uri]::EscapeDataString($title)
-210:     $lookupList = Invoke-ArrApi -Base $SonarrBase -ApiKey $script:SonarrKey -Method "GET" -Path ("series/lookup?term={0}" -f $term) -Body $null
+210:     $lookupList = Invoke-ArrApi -Base $SonarrBase -ApiKey [REDACTED] -Method "GET" -Path ("series/lookup?term={0}" -f $term) -Body $null
 211:     if (-not $lookupList) {
 212:         Update-State -Folder $folder -State "QUEUED" -Note "Sonarr lookup failed; direct resolver still eligible" -Arr "sonarr" -ArrId 0
 213:         return $false
@@ -8394,11 +8392,11 @@ No Codex used. No restart. No catalogue change. No expansion.
 240:     return $false
 241: }
 242: 
-243: $script:RadarrKey = Get-ApiKey $RadarrConfig
-244: $script:SonarrKey = Get-ApiKey $SonarrConfig
+243: $script:RadarrKey = Get-ApiKey [REDACTED]
+244: $script:SonarrKey = Get-ApiKey [REDACTED]
 ---
-243: $script:RadarrKey = Get-ApiKey $RadarrConfig
-244: $script:SonarrKey = Get-ApiKey $SonarrConfig
+243: $script:RadarrKey = Get-ApiKey [REDACTED]
+244: $script:SonarrKey = Get-ApiKey [REDACTED]
 245: if (-not $script:RadarrKey -or -not $script:SonarrKey) {
 246:     Log-Line "FAIL" "Missing Radarr or Sonarr API key"
 247:     exit 1
@@ -10393,14 +10391,14 @@ No Codex used. No restart. No catalogue change. No expansion.
 343:   $Headers = @{ Authorization = ("Bearer " + $Token) }
 344:   $Torrents = @()
 345:   try {
-346:     $Resp = Invoke-RestMethod -Uri "https://api.real-debrid.com/rest/1.0/torrents?limit=100" -Headers $Headers -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
+346:     $Resp = Invoke-RestMethod -Uri "[REDACTED_REAL_DEBRID_URL]" -Headers $Headers -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 347:     if ($Resp) { $Torrents = @($Resp) }
 348:   } catch {
 349:     $Result.reason = "RD torrent list failed"
 350:     return $Result
 351:   }
 ---
-346:     $Resp = Invoke-RestMethod -Uri "https://api.real-debrid.com/rest/1.0/torrents?limit=100" -Headers $Headers -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
+346:     $Resp = Invoke-RestMethod -Uri "[REDACTED_REAL_DEBRID_URL]" -Headers $Headers -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 347:     if ($Resp) { $Torrents = @($Resp) }
 348:   } catch {
 349:     $Result.reason = "RD torrent list failed"
@@ -10413,7 +10411,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 369:       if ([string]::IsNullOrWhiteSpace(("" + $Link))) { continue }
 370:       try {
 371:         $Body = @{ link = ("" + $Link) }
-372:         $Unrestricted = Invoke-RestMethod -Uri "https://api.real-debrid.com/rest/1.0/unrestrict/link" -Headers $Headers -Method Post -Body $Body -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
+372:         $Unrestricted = Invoke-RestMethod -Uri "[REDACTED_REAL_DEBRID_URL]" -Headers $Headers -Method Post -Body $Body -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop
 373:         $Download = "" + $Unrestricted.download
 374:         if ([string]::IsNullOrWhiteSpace($Download) -or -not $Download.StartsWith("https://")) { continue }
 375:         $Admission = Test-LiveAdmitUrl -Url $Download
@@ -10585,7 +10583,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 ## D:\PlexTools\Scripts\scarflix_v2\scarflix_v2_stream_proxy_node.js
 ``text
 1: // ScarFLIX v2 concurrent stream proxy for Plex clients.
-2: // No upstream URLs or token values are printed to logs.
+2: // No upstream URLs or token [REDACTED] are printed to logs.
 3: 
 4: "use strict";
 5: 
@@ -10614,7 +10612,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 140:     "User-Agent": "ScarFLIX-v2-NodeProxy"
 141:   };
 142:   if (options.body) headers["Content-Type"] = "application/x-www-form-urlencoded";
-143:   const response = await fetchWithTimeout(`https://api.real-debrid.com/rest/1.0${endpoint}`, {
+143:   const response = await fetchWithTimeout(`[REDACTED_REAL_DEBRID_URL] {
 144:     method: options.method || "GET",
 145:     headers,
 146:     body: options.body,
@@ -10711,7 +10709,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 435: async function getImdbId(type, tmdbId, existingImdb) {
 436:   if (existingImdb && /^tt\d+$/i.test(existingImdb)) return existingImdb;
 ---
-447:   else url += `?api_key=${encodeURIComponent(apiKey)}`;
+447:   else url += `?api_key=[REDACTED]
 448: 
 449:   try {
 450:     const json = await fetchJson(url, { headers, timeout: 20000 });
@@ -10769,7 +10767,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 ## D:\PlexTools\Scripts\scarflix_v2\scarflix_v2_stream_proxy_node.js.bak_source_quarantine_20260603_111705
 ``text
 1: // ScarFLIX v2 concurrent stream proxy for Plex clients.
-2: // No upstream URLs or token values are printed to logs.
+2: // No upstream URLs or token [REDACTED] are printed to logs.
 3: 
 4: "use strict";
 5: 
@@ -10798,7 +10796,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 106:     "User-Agent": "ScarFLIX-v2-NodeProxy"
 107:   };
 108:   if (options.body) headers["Content-Type"] = "application/x-www-form-urlencoded";
-109:   const response = await fetchWithTimeout(`https://api.real-debrid.com/rest/1.0${endpoint}`, {
+109:   const response = await fetchWithTimeout(`[REDACTED_REAL_DEBRID_URL] {
 110:     method: options.method || "GET",
 111:     headers,
 112:     body: options.body,
@@ -10865,7 +10863,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 291: async function getImdbId(type, tmdbId, existingImdb) {
 292:   if (existingImdb && /^tt\d+$/i.test(existingImdb)) return existingImdb;
 ---
-303:   else url += `?api_key=${encodeURIComponent(apiKey)}`;
+303:   else url += `?api_key=[REDACTED]
 304: 
 305:   try {
 306:     const json = await fetchJson(url, { headers, timeout: 20000 });
@@ -11016,13 +11014,13 @@ No Codex used. No restart. No catalogue change. No expansion.
 370:   $Base = Get-StremioBase
 371:   if ([string]::IsNullOrWhiteSpace($Base)) {
 372:     Set-Prop $State "state" "FAILED"
-373:     Set-Prop $State "reject_reason" "Missing Stremio/Torrentio endpoint in token vault"
+373:     Set-Prop $State "reject_reason" "Missing Stremio/Torrentio endpoint in token [REDACTED]"
 374:     Set-Prop $State "updated_utc" (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 375:     Save-State -Folder $Folder -State $State
 376:     $script:Failed = $script:Failed + 1
 377:     return
 ---
-373:     Set-Prop $State "reject_reason" "Missing Stremio/Torrentio endpoint in token vault"
+373:     Set-Prop $State "reject_reason" "Missing Stremio/Torrentio endpoint in token [REDACTED]"
 374:     Set-Prop $State "updated_utc" (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 375:     Save-State -Folder $Folder -State $State
 376:     $script:Failed = $script:Failed + 1
@@ -14150,9 +14148,87 @@ No Codex used. No restart. No catalogue change. No expansion.
 ---
 ``
 
+## D:\PlexTools\Scripts\scarflix_v2\SF2_Autopilot.ps1
+``text
+19: function LogLine($m){ Add-Content -LiteralPath (Join-Path $Logs ("sf2_autopilot_{0}.log" -f (Get-Date -Format "yyyyMMdd"))) -Value ("[{0}] {1}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"),$m) -Encoding UTF8 }
+20: function Redact($s){ $x=""+$s; $x=$x -replace "(?i)(Bearer\s+)[A-Za-z0-9\._\-]+","`${1}[REDACTED]"; $x=$x -replace "(?i)(token|apikey|api_key|password|pwd)([`"`'\s:=]+)[^,`"`'\s]+","`${1}`${2}[REDACTED]"; $x=$x -replace "https?://[^ \r\n`"]*real-debrid[^ \r\n`"]*","[REDACTED_REAL_DEBRID_URL]"; return $x }
+21: function GitToken [REDACTED] foreach($n in @("github_pat.txt","github_token.txt","gh_pat.txt","gist_token.txt")){ $p=Join-Path $Tokens $n; if(Test-Path -LiteralPath $p){ try { $t=(Get-Content -LiteralPath $p -Raw).Trim(); if($t.Length -gt 20){ return $t } } catch {} } }; return "" }
+22: function Upload($local,$remote){ $tok=GitToken; if(!$tok){ return "SKIP no GitHub token" [REDACTED] if(!(Test-Path -LiteralPath $local)){ return "SKIP missing file" }; $api="https://api.github.com/repos/$Owner/$Repo/contents/$RepoPath/$remote"; $h=@{Authorization="token [REDACTED]";Accept="application/vnd.github+json";"User-Agent"="SF2-Autopilot"}; $sha=""; try{ $e=Invoke-RestMethod -Uri ($api+"?ref=$Branch") -Headers $h -Method Get -TimeoutSec 20 -ErrorAction Stop; if($e.sha){$sha=$e.sha} }catch{}; try{ $body=[ordered]@{message="SF2 autopilot telemetry";content=[Convert]::ToBase64String([IO.File]::ReadAllBytes($local));branch=$Branch}; if($sha){$body.sha=$sha}; Invoke-RestMethod -Uri $api -Headers $h -Method Put -Body ($body|ConvertTo-Json -Depth 5) -ContentType "application/json" -TimeoutSec 30 -ErrorAction Stop | Out-Null; return "OK" }catch{ return "FAIL " + $_.Exception.Message } }
+23: function FetchJson($url){ try{ $u=$url; if($u -match "\?"){$u=$u+"&cb="+[guid]::NewGuid().ToString("N")}else{$u=$u+"?cb="+[guid]::NewGuid().ToString("N")}; $r=Invoke-WebRequest -UseBasicParsing -Uri $u -TimeoutSec 25 -ErrorAction Stop; if($r.Content){ return $r.Content | ConvertFrom-Json } }catch{}; return $null }
+24: function TaskState($name){ try{ $txt=schtasks.exe /Query /TN $name /FO LIST /V 2>&1 | Out-String; if($txt -match "(?im)^\s*(Status|State):\s*Running\s*$"){return "Running"}; if($txt -match "(?im)^\s*(Status|State):\s*Ready\s*$"){return "Ready"}; if($txt -match "ERROR:"){return "Missing"}; return "Present" }catch{ return "Missing" } }
+25: function Runners{ $a=@(); try{ $a=@(Get-CimInstance Win32_Process | Where-Object { (""+$_.CommandLine) -match "ScarFLIX_v2_PlatformGate|PlatformGate_LocalRunner|VisibleCatalogQA|PlexDecisionQA|ConcurrentQA|AutonomousController|SafeWebDavExpansion|CandidateSourceModel" }) }catch{}; return $a }
+26: function Quiesce{ $disabled=@(); try{ $tasks=schtasks.exe /Query /FO CSV /V 2>$null | ConvertFrom-Csv; foreach($t in $tasks){ $n=""+$t.TaskName; if(($n -match "ScarFLIX_v2" -or $n -match "SF2_") -and $n -notmatch "SF2_Autopilot"){ try{schtasks.exe /End /TN $n 2>$null|Out-Null}catch{}; try{schtasks.exe /Change /TN $n /DISABLE 2>$null|Out-Null}catch{}; $disabled+=$n } } }catch{}; $killed=@(); foreach($p in @(Runners)){ if($p.ProcessId -ne $PID){ try{ Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue; $killed+=("PID {0}: {1}" -f $p.ProcessId,$p.Name) }catch{} } }; return [ordered]@{disabled=$disabled;killed=$killed} }
+27: function LatestLog($patterns){ $files=@(); foreach($pat in $patterns){ try{ $files+=@(Get-ChildItem -LiteralPath $Logs -File -Filter $pat -ErrorAction SilentlyContinue) }catch{} }; $files=@($files|Sort-Object LastWriteTime -Descending|Select-Object -First 1); if($files.Count -gt 0){return $files[0].FullName}; return "" }
+---
+20: function Redact($s){ $x=""+$s; $x=$x -replace "(?i)(Bearer\s+)[A-Za-z0-9\._\-]+","`${1}[REDACTED]"; $x=$x -replace "(?i)(token|apikey|api_key|password|pwd)([`"`'\s:=]+)[^,`"`'\s]+","`${1}`${2}[REDACTED]"; $x=$x -replace "https?://[^ \r\n`"]*real-debrid[^ \r\n`"]*","[REDACTED_REAL_DEBRID_URL]"; return $x }
+21: function GitToken [REDACTED] foreach($n in @("github_pat.txt","github_token.txt","gh_pat.txt","gist_token.txt")){ $p=Join-Path $Tokens $n; if(Test-Path -LiteralPath $p){ try { $t=(Get-Content -LiteralPath $p -Raw).Trim(); if($t.Length -gt 20){ return $t } } catch {} } }; return "" }
+22: function Upload($local,$remote){ $tok=GitToken; if(!$tok){ return "SKIP no GitHub token" [REDACTED] if(!(Test-Path -LiteralPath $local)){ return "SKIP missing file" }; $api="https://api.github.com/repos/$Owner/$Repo/contents/$RepoPath/$remote"; $h=@{Authorization="token [REDACTED]";Accept="application/vnd.github+json";"User-Agent"="SF2-Autopilot"}; $sha=""; try{ $e=Invoke-RestMethod -Uri ($api+"?ref=$Branch") -Headers $h -Method Get -TimeoutSec 20 -ErrorAction Stop; if($e.sha){$sha=$e.sha} }catch{}; try{ $body=[ordered]@{message="SF2 autopilot telemetry";content=[Convert]::ToBase64String([IO.File]::ReadAllBytes($local));branch=$Branch}; if($sha){$body.sha=$sha}; Invoke-RestMethod -Uri $api -Headers $h -Method Put -Body ($body|ConvertTo-Json -Depth 5) -ContentType "application/json" -TimeoutSec 30 -ErrorAction Stop | Out-Null; return "OK" }catch{ return "FAIL " + $_.Exception.Message } }
+23: function FetchJson($url){ try{ $u=$url; if($u -match "\?"){$u=$u+"&cb="+[guid]::NewGuid().ToString("N")}else{$u=$u+"?cb="+[guid]::NewGuid().ToString("N")}; $r=Invoke-WebRequest -UseBasicParsing -Uri $u -TimeoutSec 25 -ErrorAction Stop; if($r.Content){ return $r.Content | ConvertFrom-Json } }catch{}; return $null }
+24: function TaskState($name){ try{ $txt=schtasks.exe /Query /TN $name /FO LIST /V 2>&1 | Out-String; if($txt -match "(?im)^\s*(Status|State):\s*Running\s*$"){return "Running"}; if($txt -match "(?im)^\s*(Status|State):\s*Ready\s*$"){return "Ready"}; if($txt -match "ERROR:"){return "Missing"}; return "Present" }catch{ return "Missing" } }
+25: function Runners{ $a=@(); try{ $a=@(Get-CimInstance Win32_Process | Where-Object { (""+$_.CommandLine) -match "ScarFLIX_v2_PlatformGate|PlatformGate_LocalRunner|VisibleCatalogQA|PlexDecisionQA|ConcurrentQA|AutonomousController|SafeWebDavExpansion|CandidateSourceModel" }) }catch{}; return $a }
+26: function Quiesce{ $disabled=@(); try{ $tasks=schtasks.exe /Query /FO CSV /V 2>$null | ConvertFrom-Csv; foreach($t in $tasks){ $n=""+$t.TaskName; if(($n -match "ScarFLIX_v2" -or $n -match "SF2_") -and $n -notmatch "SF2_Autopilot"){ try{schtasks.exe /End /TN $n 2>$null|Out-Null}catch{}; try{schtasks.exe /Change /TN $n /DISABLE 2>$null|Out-Null}catch{}; $disabled+=$n } } }catch{}; $killed=@(); foreach($p in @(Runners)){ if($p.ProcessId -ne $PID){ try{ Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue; $killed+=("PID {0}: {1}" -f $p.ProcessId,$p.Name) }catch{} } }; return [ordered]@{disabled=$disabled;killed=$killed} }
+27: function LatestLog($patterns){ $files=@(); foreach($pat in $patterns){ try{ $files+=@(Get-ChildItem -LiteralPath $Logs -File -Filter $pat -ErrorAction SilentlyContinue) }catch{} }; $files=@($files|Sort-Object LastWriteTime -Descending|Select-Object -First 1); if($files.Count -gt 0){return $files[0].FullName}; return "" }
+28: function Tail($path,$n){ if($path -and (Test-Path -LiteralPath $path)){ try{return Redact ((Get-Content -LiteralPath $path -Tail $n -ErrorAction SilentlyContinue)-join [Environment]::NewLine)}catch{} }; return "" }
+---
+22: function Upload($local,$remote){ $tok=GitToken; if(!$tok){ return "SKIP no GitHub token" [REDACTED] if(!(Test-Path -LiteralPath $local)){ return "SKIP missing file" }; $api="https://api.github.com/repos/$Owner/$Repo/contents/$RepoPath/$remote"; $h=@{Authorization="token [REDACTED]";Accept="application/vnd.github+json";"User-Agent"="SF2-Autopilot"}; $sha=""; try{ $e=Invoke-RestMethod -Uri ($api+"?ref=$Branch") -Headers $h -Method Get -TimeoutSec 20 -ErrorAction Stop; if($e.sha){$sha=$e.sha} }catch{}; try{ $body=[ordered]@{message="SF2 autopilot telemetry";content=[Convert]::ToBase64String([IO.File]::ReadAllBytes($local));branch=$Branch}; if($sha){$body.sha=$sha}; Invoke-RestMethod -Uri $api -Headers $h -Method Put -Body ($body|ConvertTo-Json -Depth 5) -ContentType "application/json" -TimeoutSec 30 -ErrorAction Stop | Out-Null; return "OK" }catch{ return "FAIL " + $_.Exception.Message } }
+23: function FetchJson($url){ try{ $u=$url; if($u -match "\?"){$u=$u+"&cb="+[guid]::NewGuid().ToString("N")}else{$u=$u+"?cb="+[guid]::NewGuid().ToString("N")}; $r=Invoke-WebRequest -UseBasicParsing -Uri $u -TimeoutSec 25 -ErrorAction Stop; if($r.Content){ return $r.Content | ConvertFrom-Json } }catch{}; return $null }
+24: function TaskState($name){ try{ $txt=schtasks.exe /Query /TN $name /FO LIST /V 2>&1 | Out-String; if($txt -match "(?im)^\s*(Status|State):\s*Running\s*$"){return "Running"}; if($txt -match "(?im)^\s*(Status|State):\s*Ready\s*$"){return "Ready"}; if($txt -match "ERROR:"){return "Missing"}; return "Present" }catch{ return "Missing" } }
+25: function Runners{ $a=@(); try{ $a=@(Get-CimInstance Win32_Process | Where-Object { (""+$_.CommandLine) -match "ScarFLIX_v2_PlatformGate|PlatformGate_LocalRunner|VisibleCatalogQA|PlexDecisionQA|ConcurrentQA|AutonomousController|SafeWebDavExpansion|CandidateSourceModel" }) }catch{}; return $a }
+26: function Quiesce{ $disabled=@(); try{ $tasks=schtasks.exe /Query /FO CSV /V 2>$null | ConvertFrom-Csv; foreach($t in $tasks){ $n=""+$t.TaskName; if(($n -match "ScarFLIX_v2" -or $n -match "SF2_") -and $n -notmatch "SF2_Autopilot"){ try{schtasks.exe /End /TN $n 2>$null|Out-Null}catch{}; try{schtasks.exe /Change /TN $n /DISABLE 2>$null|Out-Null}catch{}; $disabled+=$n } } }catch{}; $killed=@(); foreach($p in @(Runners)){ if($p.ProcessId -ne $PID){ try{ Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue; $killed+=("PID {0}: {1}" -f $p.ProcessId,$p.Name) }catch{} } }; return [ordered]@{disabled=$disabled;killed=$killed} }
+27: function LatestLog($patterns){ $files=@(); foreach($pat in $patterns){ try{ $files+=@(Get-ChildItem -LiteralPath $Logs -File -Filter $pat -ErrorAction SilentlyContinue) }catch{} }; $files=@($files|Sort-Object LastWriteTime -Descending|Select-Object -First 1); if($files.Count -gt 0){return $files[0].FullName}; return "" }
+28: function Tail($path,$n){ if($path -and (Test-Path -LiteralPath $path)){ try{return Redact ((Get-Content -LiteralPath $path -Tail $n -ErrorAction SilentlyContinue)-join [Environment]::NewLine)}catch{} }; return "" }
+29: function Telemetry($signal,$reason,$next){ $run=@(Runners); $g=Get-Date -Format "yyyy-MM-dd HH:mm:ss"; $obj=[ordered]@{generated_at=$g;agent_version=$Version;signal=$signal;reason=$reason;next_action=$next;visible_count=78;catalogue_changed=$false;expansion_enabled=$false;runner_process_count=$run.Count;autonomous_controller=TaskState "ScarFLIX_v2_AutonomousController";platformgate_detached=TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached";platformgate_manual=TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot";expansion_task=TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline";autopilot_task=TaskState "SF2_Autopilot";codex_used=$false}; SaveText (Join-Path $Public "status_compact.json") ($obj|ConvertTo-Json -Depth 8); $a=@("ScarFLIX v2 status for ChatGPT.","","Generated: $g","Agent version: $Version","Signal: $signal","Reason: $reason","Next action: $next","","Visible: 78","Catalogue changed: False","Expansion enabled: False",("Runner process count: {0}" -f $run.Count),("Autonomous controller task: {0}" -f (TaskState "ScarFLIX_v2_AutonomousController")),("PlatformGate detached task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached")),("PlatformGate manual task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot")),("Expansion task: {0}" -f (TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline")),("Autopilot task: {0}" -f (TaskState "SF2_Autopilot")),"Codex used: False"); SaveText (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") $a; SaveText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md") $a; $u=@(); foreach($f in @("status_compact.json","ASK_CHATGPT_SUMMARY.md","TELEMETRY_FOR_CHATGPT.md")){ $u+=($f+": "+(Upload (Join-Path $Public $f) $f)) }; SaveText (Join-Path $Public "telemetry_upload_results.md") $u }
+30: function Diagnostics{ $r=@("# ScarFLIX v2 Autopilot Diagnostics","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No catalogue change. No expansion."); foreach($pair in @(@("WebDAV ActiveGate",@("*webdav*active*gate*.log","*ActiveGate*.log")),@("PlatformGate",@("*platform*gate*.log","*PlatformGate*.log")),@("Visible Catalog QA",@("*visible*catalog*.log","*VisibleCatalog*.log")),@("Plex Decision QA",@("*plex*decision*.log","*PlexDecision*.log")),@("Concurrent QA",@("*concurrent*.log","*Concurrent*.log")))){ $r+=""; $r+="## "+$pair[0]; $p=LatestLog $pair[1]; $r+="Source: "+$p; $r+="````text"; $t=Tail $p 140; if(!$t){$t="No matching log found."}; $r+=$t; $r+="````" }; $out=Join-Path $Public "AUTOPILOT_DIAGNOSTICS.md"; SaveText $out $r; Upload $out "AUTOPILOT_DIAGNOSTICS.md" | Out-Null }
+---
+26: function Quiesce{ $disabled=@(); try{ $tasks=schtasks.exe /Query /FO CSV /V 2>$null | ConvertFrom-Csv; foreach($t in $tasks){ $n=""+$t.TaskName; if(($n -match "ScarFLIX_v2" -or $n -match "SF2_") -and $n -notmatch "SF2_Autopilot"){ try{schtasks.exe /End /TN $n 2>$null|Out-Null}catch{}; try{schtasks.exe /Change /TN $n /DISABLE 2>$null|Out-Null}catch{}; $disabled+=$n } } }catch{}; $killed=@(); foreach($p in @(Runners)){ if($p.ProcessId -ne $PID){ try{ Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue; $killed+=("PID {0}: {1}" -f $p.ProcessId,$p.Name) }catch{} } }; return [ordered]@{disabled=$disabled;killed=$killed} }
+27: function LatestLog($patterns){ $files=@(); foreach($pat in $patterns){ try{ $files+=@(Get-ChildItem -LiteralPath $Logs -File -Filter $pat -ErrorAction SilentlyContinue) }catch{} }; $files=@($files|Sort-Object LastWriteTime -Descending|Select-Object -First 1); if($files.Count -gt 0){return $files[0].FullName}; return "" }
+28: function Tail($path,$n){ if($path -and (Test-Path -LiteralPath $path)){ try{return Redact ((Get-Content -LiteralPath $path -Tail $n -ErrorAction SilentlyContinue)-join [Environment]::NewLine)}catch{} }; return "" }
+29: function Telemetry($signal,$reason,$next){ $run=@(Runners); $g=Get-Date -Format "yyyy-MM-dd HH:mm:ss"; $obj=[ordered]@{generated_at=$g;agent_version=$Version;signal=$signal;reason=$reason;next_action=$next;visible_count=78;catalogue_changed=$false;expansion_enabled=$false;runner_process_count=$run.Count;autonomous_controller=TaskState "ScarFLIX_v2_AutonomousController";platformgate_detached=TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached";platformgate_manual=TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot";expansion_task=TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline";autopilot_task=TaskState "SF2_Autopilot";codex_used=$false}; SaveText (Join-Path $Public "status_compact.json") ($obj|ConvertTo-Json -Depth 8); $a=@("ScarFLIX v2 status for ChatGPT.","","Generated: $g","Agent version: $Version","Signal: $signal","Reason: $reason","Next action: $next","","Visible: 78","Catalogue changed: False","Expansion enabled: False",("Runner process count: {0}" -f $run.Count),("Autonomous controller task: {0}" -f (TaskState "ScarFLIX_v2_AutonomousController")),("PlatformGate detached task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached")),("PlatformGate manual task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot")),("Expansion task: {0}" -f (TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline")),("Autopilot task: {0}" -f (TaskState "SF2_Autopilot")),"Codex used: False"); SaveText (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") $a; SaveText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md") $a; $u=@(); foreach($f in @("status_compact.json","ASK_CHATGPT_SUMMARY.md","TELEMETRY_FOR_CHATGPT.md")){ $u+=($f+": "+(Upload (Join-Path $Public $f) $f)) }; SaveText (Join-Path $Public "telemetry_upload_results.md") $u }
+30: function Diagnostics{ $r=@("# ScarFLIX v2 Autopilot Diagnostics","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No catalogue change. No expansion."); foreach($pair in @(@("WebDAV ActiveGate",@("*webdav*active*gate*.log","*ActiveGate*.log")),@("PlatformGate",@("*platform*gate*.log","*PlatformGate*.log")),@("Visible Catalog QA",@("*visible*catalog*.log","*VisibleCatalog*.log")),@("Plex Decision QA",@("*plex*decision*.log","*PlexDecision*.log")),@("Concurrent QA",@("*concurrent*.log","*Concurrent*.log")))){ $r+=""; $r+="## "+$pair[0]; $p=LatestLog $pair[1]; $r+="Source: "+$p; $r+="````text"; $t=Tail $p 140; if(!$t){$t="No matching log found."}; $r+=$t; $r+="````" }; $out=Join-Path $Public "AUTOPILOT_DIAGNOSTICS.md"; SaveText $out $r; Upload $out "AUTOPILOT_DIAGNOSTICS.md" | Out-Null }
+31: function Snippets{ $terms="HLS|Transcoder|VisibleCatalog|Visible catalog|PlexDecision|client decision|ActiveGate|WebDAV active|TimeoutSeconds|timeout|REVIEW|FAIL|PlatformGate|Concurrent"; $lines=@("ScarFLIX v2 script snippets for ChatGPT.","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No restart. No catalogue change. No expansion."); $files=@(); try{$files=@(Get-ChildItem -LiteralPath $Scripts -Recurse -File -Include *.ps1,*.psm1,*.js,*.cmd -ErrorAction SilentlyContinue)}catch{}; foreach($f in $files){ $hits=@(); try{ $c=@(Get-Content -LiteralPath $f.FullName -ErrorAction SilentlyContinue); for($i=0;$i -lt $c.Count;$i++){ if((""+$c[$i]) -match $terms){ $s=[Math]::Max(0,$i-3); $e=[Math]::Min($c.Count-1,$i+5); for($j=$s;$j -le $e;$j++){ $hits+=("{0}: {1}" -f ($j+1),(Redact $c[$j])) }; $hits+="---" } } }catch{}; if($hits.Count -gt 0){ $lines+=""; $lines+="## "+$f.FullName; $lines+="````text"; foreach($h in ($hits|Select-Object -First 180)){$lines+=$h}; $lines+="````" } }; $out=Join-Path $Public "SCRIPT_SNIPPETS_FOR_CHATGPT.md"; SaveText $out $lines; Copy-Item -LiteralPath $out -Destination (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") -Force -ErrorAction SilentlyContinue; Upload $out "SCRIPT_SNIPPETS_FOR_CHATGPT.md"|Out-Null; Upload (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") "ASK_CHATGPT_SUMMARY.md"|Out-Null }
+32: function Planner{ $flag=Join-Path $Tokens "sf2_enable_openai_planner.flag"; if(!(Test-Path -LiteralPath $flag)){return "Planner disabled"}; $key=""; $kf=Join-Path $Tokens "openai_api_key.txt"; if(Test-Path -LiteralPath $kf){try{$key=(Get-Content -LiteralPath $kf -Raw).Trim()}catch{}}; if(!$key -and $env:OPENAI_API_KEY){$key=$env:OPENAI_API_KEY}; if(!$key){return "No OpenAI API key"}; $model="gpt-5.1"; $mf=Join-Path $Tokens "openai_model.txt"; if(Test-Path -LiteralPath $mf){try{$m=(Get-Content -LiteralPath $mf -Raw).Trim(); if($m){$model=$m}}catch{}}; $summary=ReadText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md"); $prompt="Return one JSON object only with action=status|quiesce|diagnostic|script_snippets|stop, reason, risk, requires_user. Telemetry:`n"+$summary; try{ $h=@{Authorization="Bearer $key";"Content-Type"="application/json"}; $body=@{model=$model;input=$prompt}|ConvertTo-Json -Depth 5; $r=Invoke-RestMethod -Uri "https://api.openai.com/v1/responses" -Headers $h -Method Post -Body $body -TimeoutSec 60; $txt=($r|ConvertTo-Json -Depth 12); SaveText (Join-Path $Public "OPENAI_PLANNER_RESULT.json") $txt; Upload (Join-Path $Public "OPENAI_PLANNER_RESULT.json") "OPENAI_PLANNER_RESULT.json"|Out-Null; return "Planner result published" }catch{return "Planner failed: "+$_.Exception.Message} }
+33: function RunAction($a){ $x=(""+$a).ToLower(); if(!$x){$x="status"}; if($x -eq "status"){Telemetry "QUIESCED" "Autopilot status published." "No action unless status changes."; return}; if($x -eq "quiesce"){$q=Quiesce; Telemetry "QUIESCED" "Quiesce executed." "Autopilot remains active."; return}; if($x -eq "diagnostic"){Diagnostics; Telemetry "DIAGNOSTIC_READY" "Diagnostics published." "ChatGPT can inspect GitHub."; return}; if($x -eq "script_snippets"){Snippets; Telemetry "SCRIPT_SNIPPETS_READY" "Script snippets published." "ChatGPT can inspect GitHub."; return}; if($x -eq "openai_plan"){$r=Planner; Telemetry "PLANNER_RESULT" $r "Review planner result."; return}; Telemetry "ATTN_UNSUPPORTED_COMMAND" ("Unsupported action: "+$x) "Review command.json." }
+34: function CheckCommand{ $cmd=FetchJson $CommandUrl; if($null -eq $cmd){return "none"}; if($cmd.enabled -ne $true){return "disabled"}; $id=""+$cmd.id; if(!$id){return "missing id"}; $lastPath=Join-Path $State "last_command_id.txt"; $last=ReadText $lastPath; if($last.Trim() -eq $id){return "already"}; $exp=""+$cmd.expires_utc; if($exp){ try{if(([datetime]$exp) -lt (Get-Date).ToUniversalTime()){return "expired"}}catch{} }; RunAction $cmd.action; SaveText $lastPath $id; $res=[ordered]@{generated_at=(Get-Date -Format "yyyy-MM-dd HH:mm:ss");command_id=$id;action=(""+$cmd.action);result="processed"}; SaveText (Join-Path $Public "command_result.json") ($res|ConvertTo-Json -Depth 5); Upload (Join-Path $Public "command_result.json") "command_result.json"|Out-Null; return "processed" }
+---
+27: function LatestLog($patterns){ $files=@(); foreach($pat in $patterns){ try{ $files+=@(Get-ChildItem -LiteralPath $Logs -File -Filter $pat -ErrorAction SilentlyContinue) }catch{} }; $files=@($files|Sort-Object LastWriteTime -Descending|Select-Object -First 1); if($files.Count -gt 0){return $files[0].FullName}; return "" }
+28: function Tail($path,$n){ if($path -and (Test-Path -LiteralPath $path)){ try{return Redact ((Get-Content -LiteralPath $path -Tail $n -ErrorAction SilentlyContinue)-join [Environment]::NewLine)}catch{} }; return "" }
+29: function Telemetry($signal,$reason,$next){ $run=@(Runners); $g=Get-Date -Format "yyyy-MM-dd HH:mm:ss"; $obj=[ordered]@{generated_at=$g;agent_version=$Version;signal=$signal;reason=$reason;next_action=$next;visible_count=78;catalogue_changed=$false;expansion_enabled=$false;runner_process_count=$run.Count;autonomous_controller=TaskState "ScarFLIX_v2_AutonomousController";platformgate_detached=TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached";platformgate_manual=TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot";expansion_task=TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline";autopilot_task=TaskState "SF2_Autopilot";codex_used=$false}; SaveText (Join-Path $Public "status_compact.json") ($obj|ConvertTo-Json -Depth 8); $a=@("ScarFLIX v2 status for ChatGPT.","","Generated: $g","Agent version: $Version","Signal: $signal","Reason: $reason","Next action: $next","","Visible: 78","Catalogue changed: False","Expansion enabled: False",("Runner process count: {0}" -f $run.Count),("Autonomous controller task: {0}" -f (TaskState "ScarFLIX_v2_AutonomousController")),("PlatformGate detached task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached")),("PlatformGate manual task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot")),("Expansion task: {0}" -f (TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline")),("Autopilot task: {0}" -f (TaskState "SF2_Autopilot")),"Codex used: False"); SaveText (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") $a; SaveText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md") $a; $u=@(); foreach($f in @("status_compact.json","ASK_CHATGPT_SUMMARY.md","TELEMETRY_FOR_CHATGPT.md")){ $u+=($f+": "+(Upload (Join-Path $Public $f) $f)) }; SaveText (Join-Path $Public "telemetry_upload_results.md") $u }
+30: function Diagnostics{ $r=@("# ScarFLIX v2 Autopilot Diagnostics","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No catalogue change. No expansion."); foreach($pair in @(@("WebDAV ActiveGate",@("*webdav*active*gate*.log","*ActiveGate*.log")),@("PlatformGate",@("*platform*gate*.log","*PlatformGate*.log")),@("Visible Catalog QA",@("*visible*catalog*.log","*VisibleCatalog*.log")),@("Plex Decision QA",@("*plex*decision*.log","*PlexDecision*.log")),@("Concurrent QA",@("*concurrent*.log","*Concurrent*.log")))){ $r+=""; $r+="## "+$pair[0]; $p=LatestLog $pair[1]; $r+="Source: "+$p; $r+="````text"; $t=Tail $p 140; if(!$t){$t="No matching log found."}; $r+=$t; $r+="````" }; $out=Join-Path $Public "AUTOPILOT_DIAGNOSTICS.md"; SaveText $out $r; Upload $out "AUTOPILOT_DIAGNOSTICS.md" | Out-Null }
+31: function Snippets{ $terms="HLS|Transcoder|VisibleCatalog|Visible catalog|PlexDecision|client decision|ActiveGate|WebDAV active|TimeoutSeconds|timeout|REVIEW|FAIL|PlatformGate|Concurrent"; $lines=@("ScarFLIX v2 script snippets for ChatGPT.","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No restart. No catalogue change. No expansion."); $files=@(); try{$files=@(Get-ChildItem -LiteralPath $Scripts -Recurse -File -Include *.ps1,*.psm1,*.js,*.cmd -ErrorAction SilentlyContinue)}catch{}; foreach($f in $files){ $hits=@(); try{ $c=@(Get-Content -LiteralPath $f.FullName -ErrorAction SilentlyContinue); for($i=0;$i -lt $c.Count;$i++){ if((""+$c[$i]) -match $terms){ $s=[Math]::Max(0,$i-3); $e=[Math]::Min($c.Count-1,$i+5); for($j=$s;$j -le $e;$j++){ $hits+=("{0}: {1}" -f ($j+1),(Redact $c[$j])) }; $hits+="---" } } }catch{}; if($hits.Count -gt 0){ $lines+=""; $lines+="## "+$f.FullName; $lines+="````text"; foreach($h in ($hits|Select-Object -First 180)){$lines+=$h}; $lines+="````" } }; $out=Join-Path $Public "SCRIPT_SNIPPETS_FOR_CHATGPT.md"; SaveText $out $lines; Copy-Item -LiteralPath $out -Destination (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") -Force -ErrorAction SilentlyContinue; Upload $out "SCRIPT_SNIPPETS_FOR_CHATGPT.md"|Out-Null; Upload (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") "ASK_CHATGPT_SUMMARY.md"|Out-Null }
+32: function Planner{ $flag=Join-Path $Tokens "sf2_enable_openai_planner.flag"; if(!(Test-Path -LiteralPath $flag)){return "Planner disabled"}; $key=""; $kf=Join-Path $Tokens "openai_api_key.txt"; if(Test-Path -LiteralPath $kf){try{$key=(Get-Content -LiteralPath $kf -Raw).Trim()}catch{}}; if(!$key -and $env:OPENAI_API_KEY){$key=$env:OPENAI_API_KEY}; if(!$key){return "No OpenAI API key"}; $model="gpt-5.1"; $mf=Join-Path $Tokens "openai_model.txt"; if(Test-Path -LiteralPath $mf){try{$m=(Get-Content -LiteralPath $mf -Raw).Trim(); if($m){$model=$m}}catch{}}; $summary=ReadText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md"); $prompt="Return one JSON object only with action=status|quiesce|diagnostic|script_snippets|stop, reason, risk, requires_user. Telemetry:`n"+$summary; try{ $h=@{Authorization="Bearer $key";"Content-Type"="application/json"}; $body=@{model=$model;input=$prompt}|ConvertTo-Json -Depth 5; $r=Invoke-RestMethod -Uri "https://api.openai.com/v1/responses" -Headers $h -Method Post -Body $body -TimeoutSec 60; $txt=($r|ConvertTo-Json -Depth 12); SaveText (Join-Path $Public "OPENAI_PLANNER_RESULT.json") $txt; Upload (Join-Path $Public "OPENAI_PLANNER_RESULT.json") "OPENAI_PLANNER_RESULT.json"|Out-Null; return "Planner result published" }catch{return "Planner failed: "+$_.Exception.Message} }
+33: function RunAction($a){ $x=(""+$a).ToLower(); if(!$x){$x="status"}; if($x -eq "status"){Telemetry "QUIESCED" "Autopilot status published." "No action unless status changes."; return}; if($x -eq "quiesce"){$q=Quiesce; Telemetry "QUIESCED" "Quiesce executed." "Autopilot remains active."; return}; if($x -eq "diagnostic"){Diagnostics; Telemetry "DIAGNOSTIC_READY" "Diagnostics published." "ChatGPT can inspect GitHub."; return}; if($x -eq "script_snippets"){Snippets; Telemetry "SCRIPT_SNIPPETS_READY" "Script snippets published." "ChatGPT can inspect GitHub."; return}; if($x -eq "openai_plan"){$r=Planner; Telemetry "PLANNER_RESULT" $r "Review planner result."; return}; Telemetry "ATTN_UNSUPPORTED_COMMAND" ("Unsupported action: "+$x) "Review command.json." }
+34: function CheckCommand{ $cmd=FetchJson $CommandUrl; if($null -eq $cmd){return "none"}; if($cmd.enabled -ne $true){return "disabled"}; $id=""+$cmd.id; if(!$id){return "missing id"}; $lastPath=Join-Path $State "last_command_id.txt"; $last=ReadText $lastPath; if($last.Trim() -eq $id){return "already"}; $exp=""+$cmd.expires_utc; if($exp){ try{if(([datetime]$exp) -lt (Get-Date).ToUniversalTime()){return "expired"}}catch{} }; RunAction $cmd.action; SaveText $lastPath $id; $res=[ordered]@{generated_at=(Get-Date -Format "yyyy-MM-dd HH:mm:ss");command_id=$id;action=(""+$cmd.action);result="processed"}; SaveText (Join-Path $Public "command_result.json") ($res|ConvertTo-Json -Depth 5); Upload (Join-Path $Public "command_result.json") "command_result.json"|Out-Null; return "processed" }
+35: try{ LogLine "tick start"; $r=CheckCommand; LogLine ("command="+$r); $rc=@(Runners).Count; if($rc -gt 4){ Quiesce|Out-Null; Telemetry "QUIESCED" ("Autopilot quiesced excessive runner count: "+$rc) "No Codex. Autopilot remains active." } elseif($r -match "none|disabled|already|expired|missing"){ Telemetry "QUIESCED" "Autopilot heartbeat. No active command. ScarFLIX remains paused safely." "ChatGPT can write command.json to GitHub, or user can type 1." }; LogLine "tick end" } catch { LogLine ("error="+$_.Exception.Message); Telemetry "ATTN_AUTOPILOT_ERROR" $_.Exception.Message "Type 1; autopilot kept telemetry alive." }
+---
+28: function Tail($path,$n){ if($path -and (Test-Path -LiteralPath $path)){ try{return Redact ((Get-Content -LiteralPath $path -Tail $n -ErrorAction SilentlyContinue)-join [Environment]::NewLine)}catch{} }; return "" }
+29: function Telemetry($signal,$reason,$next){ $run=@(Runners); $g=Get-Date -Format "yyyy-MM-dd HH:mm:ss"; $obj=[ordered]@{generated_at=$g;agent_version=$Version;signal=$signal;reason=$reason;next_action=$next;visible_count=78;catalogue_changed=$false;expansion_enabled=$false;runner_process_count=$run.Count;autonomous_controller=TaskState "ScarFLIX_v2_AutonomousController";platformgate_detached=TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached";platformgate_manual=TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot";expansion_task=TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline";autopilot_task=TaskState "SF2_Autopilot";codex_used=$false}; SaveText (Join-Path $Public "status_compact.json") ($obj|ConvertTo-Json -Depth 8); $a=@("ScarFLIX v2 status for ChatGPT.","","Generated: $g","Agent version: $Version","Signal: $signal","Reason: $reason","Next action: $next","","Visible: 78","Catalogue changed: False","Expansion enabled: False",("Runner process count: {0}" -f $run.Count),("Autonomous controller task: {0}" -f (TaskState "ScarFLIX_v2_AutonomousController")),("PlatformGate detached task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached")),("PlatformGate manual task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot")),("Expansion task: {0}" -f (TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline")),("Autopilot task: {0}" -f (TaskState "SF2_Autopilot")),"Codex used: False"); SaveText (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") $a; SaveText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md") $a; $u=@(); foreach($f in @("status_compact.json","ASK_CHATGPT_SUMMARY.md","TELEMETRY_FOR_CHATGPT.md")){ $u+=($f+": "+(Upload (Join-Path $Public $f) $f)) }; SaveText (Join-Path $Public "telemetry_upload_results.md") $u }
+30: function Diagnostics{ $r=@("# ScarFLIX v2 Autopilot Diagnostics","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No catalogue change. No expansion."); foreach($pair in @(@("WebDAV ActiveGate",@("*webdav*active*gate*.log","*ActiveGate*.log")),@("PlatformGate",@("*platform*gate*.log","*PlatformGate*.log")),@("Visible Catalog QA",@("*visible*catalog*.log","*VisibleCatalog*.log")),@("Plex Decision QA",@("*plex*decision*.log","*PlexDecision*.log")),@("Concurrent QA",@("*concurrent*.log","*Concurrent*.log")))){ $r+=""; $r+="## "+$pair[0]; $p=LatestLog $pair[1]; $r+="Source: "+$p; $r+="````text"; $t=Tail $p 140; if(!$t){$t="No matching log found."}; $r+=$t; $r+="````" }; $out=Join-Path $Public "AUTOPILOT_DIAGNOSTICS.md"; SaveText $out $r; Upload $out "AUTOPILOT_DIAGNOSTICS.md" | Out-Null }
+31: function Snippets{ $terms="HLS|Transcoder|VisibleCatalog|Visible catalog|PlexDecision|client decision|ActiveGate|WebDAV active|TimeoutSeconds|timeout|REVIEW|FAIL|PlatformGate|Concurrent"; $lines=@("ScarFLIX v2 script snippets for ChatGPT.","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No restart. No catalogue change. No expansion."); $files=@(); try{$files=@(Get-ChildItem -LiteralPath $Scripts -Recurse -File -Include *.ps1,*.psm1,*.js,*.cmd -ErrorAction SilentlyContinue)}catch{}; foreach($f in $files){ $hits=@(); try{ $c=@(Get-Content -LiteralPath $f.FullName -ErrorAction SilentlyContinue); for($i=0;$i -lt $c.Count;$i++){ if((""+$c[$i]) -match $terms){ $s=[Math]::Max(0,$i-3); $e=[Math]::Min($c.Count-1,$i+5); for($j=$s;$j -le $e;$j++){ $hits+=("{0}: {1}" -f ($j+1),(Redact $c[$j])) }; $hits+="---" } } }catch{}; if($hits.Count -gt 0){ $lines+=""; $lines+="## "+$f.FullName; $lines+="````text"; foreach($h in ($hits|Select-Object -First 180)){$lines+=$h}; $lines+="````" } }; $out=Join-Path $Public "SCRIPT_SNIPPETS_FOR_CHATGPT.md"; SaveText $out $lines; Copy-Item -LiteralPath $out -Destination (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") -Force -ErrorAction SilentlyContinue; Upload $out "SCRIPT_SNIPPETS_FOR_CHATGPT.md"|Out-Null; Upload (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") "ASK_CHATGPT_SUMMARY.md"|Out-Null }
+32: function Planner{ $flag=Join-Path $Tokens "sf2_enable_openai_planner.flag"; if(!(Test-Path -LiteralPath $flag)){return "Planner disabled"}; $key=""; $kf=Join-Path $Tokens "openai_api_key.txt"; if(Test-Path -LiteralPath $kf){try{$key=(Get-Content -LiteralPath $kf -Raw).Trim()}catch{}}; if(!$key -and $env:OPENAI_API_KEY){$key=$env:OPENAI_API_KEY}; if(!$key){return "No OpenAI API key"}; $model="gpt-5.1"; $mf=Join-Path $Tokens "openai_model.txt"; if(Test-Path -LiteralPath $mf){try{$m=(Get-Content -LiteralPath $mf -Raw).Trim(); if($m){$model=$m}}catch{}}; $summary=ReadText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md"); $prompt="Return one JSON object only with action=status|quiesce|diagnostic|script_snippets|stop, reason, risk, requires_user. Telemetry:`n"+$summary; try{ $h=@{Authorization="Bearer $key";"Content-Type"="application/json"}; $body=@{model=$model;input=$prompt}|ConvertTo-Json -Depth 5; $r=Invoke-RestMethod -Uri "https://api.openai.com/v1/responses" -Headers $h -Method Post -Body $body -TimeoutSec 60; $txt=($r|ConvertTo-Json -Depth 12); SaveText (Join-Path $Public "OPENAI_PLANNER_RESULT.json") $txt; Upload (Join-Path $Public "OPENAI_PLANNER_RESULT.json") "OPENAI_PLANNER_RESULT.json"|Out-Null; return "Planner result published" }catch{return "Planner failed: "+$_.Exception.Message} }
+33: function RunAction($a){ $x=(""+$a).ToLower(); if(!$x){$x="status"}; if($x -eq "status"){Telemetry "QUIESCED" "Autopilot status published." "No action unless status changes."; return}; if($x -eq "quiesce"){$q=Quiesce; Telemetry "QUIESCED" "Quiesce executed." "Autopilot remains active."; return}; if($x -eq "diagnostic"){Diagnostics; Telemetry "DIAGNOSTIC_READY" "Diagnostics published." "ChatGPT can inspect GitHub."; return}; if($x -eq "script_snippets"){Snippets; Telemetry "SCRIPT_SNIPPETS_READY" "Script snippets published." "ChatGPT can inspect GitHub."; return}; if($x -eq "openai_plan"){$r=Planner; Telemetry "PLANNER_RESULT" $r "Review planner result."; return}; Telemetry "ATTN_UNSUPPORTED_COMMAND" ("Unsupported action: "+$x) "Review command.json." }
+34: function CheckCommand{ $cmd=FetchJson $CommandUrl; if($null -eq $cmd){return "none"}; if($cmd.enabled -ne $true){return "disabled"}; $id=""+$cmd.id; if(!$id){return "missing id"}; $lastPath=Join-Path $State "last_command_id.txt"; $last=ReadText $lastPath; if($last.Trim() -eq $id){return "already"}; $exp=""+$cmd.expires_utc; if($exp){ try{if(([datetime]$exp) -lt (Get-Date).ToUniversalTime()){return "expired"}}catch{} }; RunAction $cmd.action; SaveText $lastPath $id; $res=[ordered]@{generated_at=(Get-Date -Format "yyyy-MM-dd HH:mm:ss");command_id=$id;action=(""+$cmd.action);result="processed"}; SaveText (Join-Path $Public "command_result.json") ($res|ConvertTo-Json -Depth 5); Upload (Join-Path $Public "command_result.json") "command_result.json"|Out-Null; return "processed" }
+35: try{ LogLine "tick start"; $r=CheckCommand; LogLine ("command="+$r); $rc=@(Runners).Count; if($rc -gt 4){ Quiesce|Out-Null; Telemetry "QUIESCED" ("Autopilot quiesced excessive runner count: "+$rc) "No Codex. Autopilot remains active." } elseif($r -match "none|disabled|already|expired|missing"){ Telemetry "QUIESCED" "Autopilot heartbeat. No active command. ScarFLIX remains paused safely." "ChatGPT can write command.json to GitHub, or user can type 1." }; LogLine "tick end" } catch { LogLine ("error="+$_.Exception.Message); Telemetry "ATTN_AUTOPILOT_ERROR" $_.Exception.Message "Type 1; autopilot kept telemetry alive." }
+---
+29: function Telemetry($signal,$reason,$next){ $run=@(Runners); $g=Get-Date -Format "yyyy-MM-dd HH:mm:ss"; $obj=[ordered]@{generated_at=$g;agent_version=$Version;signal=$signal;reason=$reason;next_action=$next;visible_count=78;catalogue_changed=$false;expansion_enabled=$false;runner_process_count=$run.Count;autonomous_controller=TaskState "ScarFLIX_v2_AutonomousController";platformgate_detached=TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached";platformgate_manual=TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot";expansion_task=TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline";autopilot_task=TaskState "SF2_Autopilot";codex_used=$false}; SaveText (Join-Path $Public "status_compact.json") ($obj|ConvertTo-Json -Depth 8); $a=@("ScarFLIX v2 status for ChatGPT.","","Generated: $g","Agent version: $Version","Signal: $signal","Reason: $reason","Next action: $next","","Visible: 78","Catalogue changed: False","Expansion enabled: False",("Runner process count: {0}" -f $run.Count),("Autonomous controller task: {0}" -f (TaskState "ScarFLIX_v2_AutonomousController")),("PlatformGate detached task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_LocalRunner_Detached")),("PlatformGate manual task: {0}" -f (TaskState "ScarFLIX_v2_PlatformGate_Manual_OneShot")),("Expansion task: {0}" -f (TaskState "ScarFLIX_v2_SafeWebDavExpansionPipeline")),("Autopilot task: {0}" -f (TaskState "SF2_Autopilot")),"Codex used: False"); SaveText (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") $a; SaveText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md") $a; $u=@(); foreach($f in @("status_compact.json","ASK_CHATGPT_SUMMARY.md","TELEMETRY_FOR_CHATGPT.md")){ $u+=($f+": "+(Upload (Join-Path $Public $f) $f)) }; SaveText (Join-Path $Public "telemetry_upload_results.md") $u }
+30: function Diagnostics{ $r=@("# ScarFLIX v2 Autopilot Diagnostics","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No catalogue change. No expansion."); foreach($pair in @(@("WebDAV ActiveGate",@("*webdav*active*gate*.log","*ActiveGate*.log")),@("PlatformGate",@("*platform*gate*.log","*PlatformGate*.log")),@("Visible Catalog QA",@("*visible*catalog*.log","*VisibleCatalog*.log")),@("Plex Decision QA",@("*plex*decision*.log","*PlexDecision*.log")),@("Concurrent QA",@("*concurrent*.log","*Concurrent*.log")))){ $r+=""; $r+="## "+$pair[0]; $p=LatestLog $pair[1]; $r+="Source: "+$p; $r+="````text"; $t=Tail $p 140; if(!$t){$t="No matching log found."}; $r+=$t; $r+="````" }; $out=Join-Path $Public "AUTOPILOT_DIAGNOSTICS.md"; SaveText $out $r; Upload $out "AUTOPILOT_DIAGNOSTICS.md" | Out-Null }
+31: function Snippets{ $terms="HLS|Transcoder|VisibleCatalog|Visible catalog|PlexDecision|client decision|ActiveGate|WebDAV active|TimeoutSeconds|timeout|REVIEW|FAIL|PlatformGate|Concurrent"; $lines=@("ScarFLIX v2 script snippets for ChatGPT.","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No restart. No catalogue change. No expansion."); $files=@(); try{$files=@(Get-ChildItem -LiteralPath $Scripts -Recurse -File -Include *.ps1,*.psm1,*.js,*.cmd -ErrorAction SilentlyContinue)}catch{}; foreach($f in $files){ $hits=@(); try{ $c=@(Get-Content -LiteralPath $f.FullName -ErrorAction SilentlyContinue); for($i=0;$i -lt $c.Count;$i++){ if((""+$c[$i]) -match $terms){ $s=[Math]::Max(0,$i-3); $e=[Math]::Min($c.Count-1,$i+5); for($j=$s;$j -le $e;$j++){ $hits+=("{0}: {1}" -f ($j+1),(Redact $c[$j])) }; $hits+="---" } } }catch{}; if($hits.Count -gt 0){ $lines+=""; $lines+="## "+$f.FullName; $lines+="````text"; foreach($h in ($hits|Select-Object -First 180)){$lines+=$h}; $lines+="````" } }; $out=Join-Path $Public "SCRIPT_SNIPPETS_FOR_CHATGPT.md"; SaveText $out $lines; Copy-Item -LiteralPath $out -Destination (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") -Force -ErrorAction SilentlyContinue; Upload $out "SCRIPT_SNIPPETS_FOR_CHATGPT.md"|Out-Null; Upload (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") "ASK_CHATGPT_SUMMARY.md"|Out-Null }
+32: function Planner{ $flag=Join-Path $Tokens "sf2_enable_openai_planner.flag"; if(!(Test-Path -LiteralPath $flag)){return "Planner disabled"}; $key=""; $kf=Join-Path $Tokens "openai_api_key.txt"; if(Test-Path -LiteralPath $kf){try{$key=(Get-Content -LiteralPath $kf -Raw).Trim()}catch{}}; if(!$key -and $env:OPENAI_API_KEY){$key=$env:OPENAI_API_KEY}; if(!$key){return "No OpenAI API key"}; $model="gpt-5.1"; $mf=Join-Path $Tokens "openai_model.txt"; if(Test-Path -LiteralPath $mf){try{$m=(Get-Content -LiteralPath $mf -Raw).Trim(); if($m){$model=$m}}catch{}}; $summary=ReadText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md"); $prompt="Return one JSON object only with action=status|quiesce|diagnostic|script_snippets|stop, reason, risk, requires_user. Telemetry:`n"+$summary; try{ $h=@{Authorization="Bearer $key";"Content-Type"="application/json"}; $body=@{model=$model;input=$prompt}|ConvertTo-Json -Depth 5; $r=Invoke-RestMethod -Uri "https://api.openai.com/v1/responses" -Headers $h -Method Post -Body $body -TimeoutSec 60; $txt=($r|ConvertTo-Json -Depth 12); SaveText (Join-Path $Public "OPENAI_PLANNER_RESULT.json") $txt; Upload (Join-Path $Public "OPENAI_PLANNER_RESULT.json") "OPENAI_PLANNER_RESULT.json"|Out-Null; return "Planner result published" }catch{return "Planner failed: "+$_.Exception.Message} }
+33: function RunAction($a){ $x=(""+$a).ToLower(); if(!$x){$x="status"}; if($x -eq "status"){Telemetry "QUIESCED" "Autopilot status published." "No action unless status changes."; return}; if($x -eq "quiesce"){$q=Quiesce; Telemetry "QUIESCED" "Quiesce executed." "Autopilot remains active."; return}; if($x -eq "diagnostic"){Diagnostics; Telemetry "DIAGNOSTIC_READY" "Diagnostics published." "ChatGPT can inspect GitHub."; return}; if($x -eq "script_snippets"){Snippets; Telemetry "SCRIPT_SNIPPETS_READY" "Script snippets published." "ChatGPT can inspect GitHub."; return}; if($x -eq "openai_plan"){$r=Planner; Telemetry "PLANNER_RESULT" $r "Review planner result."; return}; Telemetry "ATTN_UNSUPPORTED_COMMAND" ("Unsupported action: "+$x) "Review command.json." }
+34: function CheckCommand{ $cmd=FetchJson $CommandUrl; if($null -eq $cmd){return "none"}; if($cmd.enabled -ne $true){return "disabled"}; $id=""+$cmd.id; if(!$id){return "missing id"}; $lastPath=Join-Path $State "last_command_id.txt"; $last=ReadText $lastPath; if($last.Trim() -eq $id){return "already"}; $exp=""+$cmd.expires_utc; if($exp){ try{if(([datetime]$exp) -lt (Get-Date).ToUniversalTime()){return "expired"}}catch{} }; RunAction $cmd.action; SaveText $lastPath $id; $res=[ordered]@{generated_at=(Get-Date -Format "yyyy-MM-dd HH:mm:ss");command_id=$id;action=(""+$cmd.action);result="processed"}; SaveText (Join-Path $Public "command_result.json") ($res|ConvertTo-Json -Depth 5); Upload (Join-Path $Public "command_result.json") "command_result.json"|Out-Null; return "processed" }
+35: try{ LogLine "tick start"; $r=CheckCommand; LogLine ("command="+$r); $rc=@(Runners).Count; if($rc -gt 4){ Quiesce|Out-Null; Telemetry "QUIESCED" ("Autopilot quiesced excessive runner count: "+$rc) "No Codex. Autopilot remains active." } elseif($r -match "none|disabled|already|expired|missing"){ Telemetry "QUIESCED" "Autopilot heartbeat. No active command. ScarFLIX remains paused safely." "ChatGPT can write command.json to GitHub, or user can type 1." }; LogLine "tick end" } catch { LogLine ("error="+$_.Exception.Message); Telemetry "ATTN_AUTOPILOT_ERROR" $_.Exception.Message "Type 1; autopilot kept telemetry alive." }
+---
+30: function Diagnostics{ $r=@("# ScarFLIX v2 Autopilot Diagnostics","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No catalogue change. No expansion."); foreach($pair in @(@("WebDAV ActiveGate",@("*webdav*active*gate*.log","*ActiveGate*.log")),@("PlatformGate",@("*platform*gate*.log","*PlatformGate*.log")),@("Visible Catalog QA",@("*visible*catalog*.log","*VisibleCatalog*.log")),@("Plex Decision QA",@("*plex*decision*.log","*PlexDecision*.log")),@("Concurrent QA",@("*concurrent*.log","*Concurrent*.log")))){ $r+=""; $r+="## "+$pair[0]; $p=LatestLog $pair[1]; $r+="Source: "+$p; $r+="````text"; $t=Tail $p 140; if(!$t){$t="No matching log found."}; $r+=$t; $r+="````" }; $out=Join-Path $Public "AUTOPILOT_DIAGNOSTICS.md"; SaveText $out $r; Upload $out "AUTOPILOT_DIAGNOSTICS.md" | Out-Null }
+31: function Snippets{ $terms="HLS|Transcoder|VisibleCatalog|Visible catalog|PlexDecision|client decision|ActiveGate|WebDAV active|TimeoutSeconds|timeout|REVIEW|FAIL|PlatformGate|Concurrent"; $lines=@("ScarFLIX v2 script snippets for ChatGPT.","",("Generated: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss")),"No Codex. No restart. No catalogue change. No expansion."); $files=@(); try{$files=@(Get-ChildItem -LiteralPath $Scripts -Recurse -File -Include *.ps1,*.psm1,*.js,*.cmd -ErrorAction SilentlyContinue)}catch{}; foreach($f in $files){ $hits=@(); try{ $c=@(Get-Content -LiteralPath $f.FullName -ErrorAction SilentlyContinue); for($i=0;$i -lt $c.Count;$i++){ if((""+$c[$i]) -match $terms){ $s=[Math]::Max(0,$i-3); $e=[Math]::Min($c.Count-1,$i+5); for($j=$s;$j -le $e;$j++){ $hits+=("{0}: {1}" -f ($j+1),(Redact $c[$j])) }; $hits+="---" } } }catch{}; if($hits.Count -gt 0){ $lines+=""; $lines+="## "+$f.FullName; $lines+="````text"; foreach($h in ($hits|Select-Object -First 180)){$lines+=$h}; $lines+="````" } }; $out=Join-Path $Public "SCRIPT_SNIPPETS_FOR_CHATGPT.md"; SaveText $out $lines; Copy-Item -LiteralPath $out -Destination (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") -Force -ErrorAction SilentlyContinue; Upload $out "SCRIPT_SNIPPETS_FOR_CHATGPT.md"|Out-Null; Upload (Join-Path $Public "ASK_CHATGPT_SUMMARY.md") "ASK_CHATGPT_SUMMARY.md"|Out-Null }
+32: function Planner{ $flag=Join-Path $Tokens "sf2_enable_openai_planner.flag"; if(!(Test-Path -LiteralPath $flag)){return "Planner disabled"}; $key=""; $kf=Join-Path $Tokens "openai_api_key.txt"; if(Test-Path -LiteralPath $kf){try{$key=(Get-Content -LiteralPath $kf -Raw).Trim()}catch{}}; if(!$key -and $env:OPENAI_API_KEY){$key=$env:OPENAI_API_KEY}; if(!$key){return "No OpenAI API key"}; $model="gpt-5.1"; $mf=Join-Path $Tokens "openai_model.txt"; if(Test-Path -LiteralPath $mf){try{$m=(Get-Content -LiteralPath $mf -Raw).Trim(); if($m){$model=$m}}catch{}}; $summary=ReadText (Join-Path $Public "TELEMETRY_FOR_CHATGPT.md"); $prompt="Return one JSON object only with action=status|quiesce|diagnostic|script_snippets|stop, reason, risk, requires_user. Telemetry:`n"+$summary; try{ $h=@{Authorization="Bearer $key";"Content-Type"="application/json"}; $body=@{model=$model;input=$prompt}|ConvertTo-Json -Depth 5; $r=Invoke-RestMethod -Uri "https://api.openai.com/v1/responses" -Headers $h -Method Post -Body $body -TimeoutSec 60; $txt=($r|ConvertTo-Json -Depth 12); SaveText (Join-Path $Public "OPENAI_PLANNER_RESULT.json") $txt; Upload (Join-Path $Public "OPENAI_PLANNER_RESULT.json") "OPENAI_PLANNER_RESULT.json"|Out-Null; return "Planner result published" }catch{return "Planner failed: "+$_.Exception.Message} }
+33: function RunAction($a){ $x=(""+$a).ToLower(); if(!$x){$x="status"}; if($x -eq "status"){Telemetry "QUIESCED" "Autopilot status published." "No action unless status changes."; return}; if($x -eq "quiesce"){$q=Quiesce; Telemetry "QUIESCED" "Quiesce executed." "Autopilot remains active."; return}; if($x -eq "diagnostic"){Diagnostics; Telemetry "DIAGNOSTIC_READY" "Diagnostics published." "ChatGPT can inspect GitHub."; return}; if($x -eq "script_snippets"){Snippets; Telemetry "SCRIPT_SNIPPETS_READY" "Script snippets published." "ChatGPT can inspect GitHub."; return}; if($x -eq "openai_plan"){$r=Planner; Telemetry "PLANNER_RESULT" $r "Review planner result."; return}; Telemetry "ATTN_UNSUPPORTED_COMMAND" ("Unsupported action: "+$x) "Review command.json." }
+34: function CheckCommand{ $cmd=FetchJson $CommandUrl; if($null -eq $cmd){return "none"}; if($cmd.enabled -ne $true){return "disabled"}; $id=""+$cmd.id; if(!$id){return "missing id"}; $lastPath=Join-Path $State "last_command_id.txt"; $last=ReadText $lastPath; if($last.Trim() -eq $id){return "already"}; $exp=""+$cmd.expires_utc; if($exp){ try{if(([datetime]$exp) -lt (Get-Date).ToUniversalTime()){return "expired"}}catch{} }; RunAction $cmd.action; SaveText $lastPath $id; $res=[ordered]@{generated_at=(Get-Date -Format "yyyy-MM-dd HH:mm:ss");command_id=$id;action=(""+$cmd.action);result="processed"}; SaveText (Join-Path $Public "command_result.json") ($res|ConvertTo-Json -Depth 5); Upload (Join-Path $Public "command_result.json") "command_result.json"|Out-Null; return "processed" }
+35: try{ LogLine "tick start"; $r=CheckCommand; LogLine ("command="+$r); $rc=@(Runners).Count; if($rc -gt 4){ Quiesce|Out-Null; Telemetry "QUIESCED" ("Autopilot quiesced excessive runner count: "+$rc) "No Codex. Autopilot remains active." } elseif($r -match "none|disabled|already|expired|missing"){ Telemetry "QUIESCED" "Autopilot heartbeat. No active command. ScarFLIX remains paused safely." "ChatGPT can write command.json to GitHub, or user can type 1." }; LogLine "tick end" } catch { LogLine ("error="+$_.Exception.Message); Telemetry "ATTN_AUTOPILOT_ERROR" $_.Exception.Message "Type 1; autopilot kept telemetry alive." }
+---
+``
+
 ## D:\PlexTools\Scripts\scarflix_v2\SF2_TelemetryOnly.ps1
 ``text
-32:     $h = @{ Authorization = "token $tok"; Accept = "application/vnd.github+json"; "User-Agent" = "SF2-TelemetryOnly" }
+32:     $h = @{ Authorization = "token [REDACTED]"; Accept = "application/vnd.github+json"; "User-Agent" = "SF2-TelemetryOnly" }
 33:     $sha = ""
 34:     try {
 35:         $e = Invoke-RestMethod -Uri ($api + "?ref=$Branch") -Headers $h -Method Get -TimeoutSec 20 -ErrorAction Stop
@@ -14256,8 +14332,8 @@ No Codex used. No restart. No catalogue change. No expansion.
 75:         $body = ""
 76:         try {
 ---
-138:     $indexersRes = Invoke-JsonApi $Base $ApiKey "GET" "/api/v3/indexer" $null
-139:     $schemaRes = Invoke-JsonApi $Base $ApiKey "GET" "/api/v3/indexer/schema" $null
+138:     $indexersRes = Invoke-JsonApi $Base $ApiKey "[REDACTED]" "/api/v3/indexer" $null
+139:     $schemaRes = Invoke-JsonApi $Base $ApiKey "[REDACTED]" "/api/v3/indexer/schema" $null
 140:     if (-not $indexersRes.ok) {
 141:         Write-Step "FAIL" ("{0} indexer list failed: {1}" -f $Name, $indexersRes.error)
 142:         return $false
@@ -14293,7 +14369,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 178:         return $false
 179:     }
 180: 
-181:     $res = Invoke-JsonApi $Base $ApiKey "POST" "/api/v3/indexer?forceSave=true" $payload
+181:     $res = Invoke-JsonApi $Base $ApiKey "[REDACTED]" "/api/v3/indexer?forceSave=true" $payload
 182:     if ($res.ok) {
 ---
 183:         Write-Step "OK" ("Created {0} Jackett All indexer" -f $Name)
@@ -14306,24 +14382,24 @@ No Codex used. No restart. No catalogue change. No expansion.
 190: Write-Step "INFO" "Wiring Jackett All into Radarr/Sonarr"
 191: $script:JackettKey = Read-SecretFile $JackettKeyFile
 ---
-192: $radarrKey = Get-ApiKey $RadarrConfig
-193: $sonarrKey = Get-ApiKey $SonarrConfig
+192: $radarrKey = Get-ApiKey [REDACTED]
+193: $sonarrKey = Get-ApiKey [REDACTED]
 194: 
 195: if (-not $script:JackettKey) { Write-Step "FAIL" "Jackett API key missing"; Write-Step "FINAL" "FAIL"; exit 1 }
 196: if (-not $radarrKey) { Write-Step "FAIL" "Radarr API key missing"; Write-Step "FINAL" "FAIL"; exit 1 }
 197: if (-not $sonarrKey) { Write-Step "FAIL" "Sonarr API key missing"; Write-Step "FINAL" "FAIL"; exit 1 }
 198: 
-199: $radOk = Ensure-ArrJackettIndexer -Name "Radarr" -Base $RadarrBase -ApiKey $radarrKey -Categories @(2000,2010,2020,2030,2040,2045,2050,2060,2070,2080)
-200: $sonOk = Ensure-ArrJackettIndexer -Name "Sonarr" -Base $SonarrBase -ApiKey $sonarrKey -Categories @(5000,5010,5020,5030,5040,5045,5050,5070,5080)
+199: $radOk = Ensure-ArrJackettIndexer -Name "Radarr" -Base $RadarrBase -ApiKey [REDACTED] -Categories @(2000,2010,2020,2030,2040,2045,2050,2060,2070,2080)
+200: $sonOk = Ensure-ArrJackettIndexer -Name "Sonarr" -Base $SonarrBase -ApiKey [REDACTED] -Categories @(5000,5010,5020,5030,5040,5045,5050,5070,5080)
 ---
-193: $sonarrKey = Get-ApiKey $SonarrConfig
+193: $sonarrKey = Get-ApiKey [REDACTED]
 194: 
 195: if (-not $script:JackettKey) { Write-Step "FAIL" "Jackett API key missing"; Write-Step "FINAL" "FAIL"; exit 1 }
 196: if (-not $radarrKey) { Write-Step "FAIL" "Radarr API key missing"; Write-Step "FINAL" "FAIL"; exit 1 }
 197: if (-not $sonarrKey) { Write-Step "FAIL" "Sonarr API key missing"; Write-Step "FINAL" "FAIL"; exit 1 }
 198: 
-199: $radOk = Ensure-ArrJackettIndexer -Name "Radarr" -Base $RadarrBase -ApiKey $radarrKey -Categories @(2000,2010,2020,2030,2040,2045,2050,2060,2070,2080)
-200: $sonOk = Ensure-ArrJackettIndexer -Name "Sonarr" -Base $SonarrBase -ApiKey $sonarrKey -Categories @(5000,5010,5020,5030,5040,5045,5050,5070,5080)
+199: $radOk = Ensure-ArrJackettIndexer -Name "Radarr" -Base $RadarrBase -ApiKey [REDACTED] -Categories @(2000,2010,2020,2030,2040,2045,2050,2060,2070,2080)
+200: $sonOk = Ensure-ArrJackettIndexer -Name "Sonarr" -Base $SonarrBase -ApiKey [REDACTED] -Categories @(5000,5010,5020,5030,5040,5045,5050,5070,5080)
 201: 
 ---
 194: 
@@ -14331,8 +14407,8 @@ No Codex used. No restart. No catalogue change. No expansion.
 196: if (-not $radarrKey) { Write-Step "FAIL" "Radarr API key missing"; Write-Step "FINAL" "FAIL"; exit 1 }
 197: if (-not $sonarrKey) { Write-Step "FAIL" "Sonarr API key missing"; Write-Step "FINAL" "FAIL"; exit 1 }
 198: 
-199: $radOk = Ensure-ArrJackettIndexer -Name "Radarr" -Base $RadarrBase -ApiKey $radarrKey -Categories @(2000,2010,2020,2030,2040,2045,2050,2060,2070,2080)
-200: $sonOk = Ensure-ArrJackettIndexer -Name "Sonarr" -Base $SonarrBase -ApiKey $sonarrKey -Categories @(5000,5010,5020,5030,5040,5045,5050,5070,5080)
+199: $radOk = Ensure-ArrJackettIndexer -Name "Radarr" -Base $RadarrBase -ApiKey [REDACTED] -Categories @(2000,2010,2020,2030,2040,2045,2050,2060,2070,2080)
+200: $sonOk = Ensure-ArrJackettIndexer -Name "Sonarr" -Base $SonarrBase -ApiKey [REDACTED] -Categories @(5000,5010,5020,5030,5040,5045,5050,5070,5080)
 201: 
 202: $duration = [int]((Get-Date) - $Started).TotalSeconds
 ---
@@ -14426,8 +14502,8 @@ No Codex used. No restart. No catalogue change. No expansion.
 254:     foreach ($item in $res.value) { $count = $count + 1 }
 255:     Write-Step "INFO" ("{0} indexers visible: {1}" -f $Name, $count)
 ---
-279: $script:RadarrKey = Get-ApiKey $RadarrConfig
-280: $script:SonarrKey = Get-ApiKey $SonarrConfig
+279: $script:RadarrKey = Get-ApiKey [REDACTED]
+280: $script:SonarrKey = Get-ApiKey [REDACTED]
 281: 
 282: if (-not $script:ProwlarrKey) { Write-Step "FAIL" "Missing Prowlarr API key."; Write-Step "FINAL" "FAIL"; exit 1 }
 283: if (-not $script:RadarrKey) { Write-Step "FAIL" "Missing Radarr API key."; Write-Step "FINAL" "FAIL"; exit 1 }
@@ -14436,7 +14512,7 @@ No Codex used. No restart. No catalogue change. No expansion.
 286: 
 287: $proStatus = Invoke-JsonApi $ProwlarrBase $script:ProwlarrKey "GET" "/api/v1/system/status" $null
 ---
-280: $script:SonarrKey = Get-ApiKey $SonarrConfig
+280: $script:SonarrKey = Get-ApiKey [REDACTED]
 281: 
 282: if (-not $script:ProwlarrKey) { Write-Step "FAIL" "Missing Prowlarr API key."; Write-Step "FINAL" "FAIL"; exit 1 }
 283: if (-not $script:RadarrKey) { Write-Step "FAIL" "Missing Radarr API key."; Write-Step "FINAL" "FAIL"; exit 1 }
