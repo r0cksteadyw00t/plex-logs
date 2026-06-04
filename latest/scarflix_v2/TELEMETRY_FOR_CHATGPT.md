@@ -1,6 +1,6 @@
 ﻿ScarFLIX v2 telemetry summary for ChatGPT.
 
-Generated: 2026-06-04 11:04:01
+Generated: 2026-06-04 11:14:01
 
 Compact status:
 ScarFLIX v2 offline status summary for ChatGPT.
@@ -21,7 +21,7 @@ Candidate source:
 Controller transient/prunable: 3/0
 PlatformGate transient/prunable: 0/0
 Tasks running: controller=False; platform=False; manual=False; expansion=False
-File ages min: controller=124; platform=121; candidate=999999; health=999999; active=999999
+File ages min: controller=134; platform=131; candidate=999999; health=999999; active=999999
 
 Ask ChatGPT what local/offline script to run next. Do not use Codex.
 
