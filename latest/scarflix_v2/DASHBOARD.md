@@ -4,32 +4,27 @@
 
 **WAIT**
 
-Phase 3 tooling is now mostly ready. Next step is controlled Aider/Ollama test task.
+Phase 2 is complete enough. Next automatic step is Phase 3 readiness for Ollama and Aider.
 
 ## Current status
 
 | Item | Status |
 |---|---|
-| Signal | PHASE 3 READY |
-| Phase | Phase 3 readiness |
-| Progress | 98% [###################.] |
-| Git | D:\PlexTools\tools\mingit\cmd\git.exe |
-| Repo branch | ReadyAndPushed |
-| Aider | Available |
-| Ollama | ZipExeMissing |
-| Model | SkippedOllamaNotRunning |
-| Last updated | 2026-06-05 09:31:57 AEST |
+| Signal | PHASE 2 READY |
+| Phase | Phase 2 closing, Phase 3 readiness next |
+| Progress | 95% [###################.] |
+| Estimated remaining | about 0 minutes |
+| Last updated | 2026-06-05 09:37:02 AEST |
+| Runner process count | 2 |
+| Docker | Running |
+| Ollama | Missing, Phase 3 next |
+| Catalogue | 78 visible, expansion off |
 
-## Safety locks
+## Return rules
 
-| Area | State |
+| Dashboard says | You do |
 |---|---|
-| Catalogue expansion | LOCKED OFF |
-| Plex library changes | LOCKED OFF |
-| Destructive pruning | LOCKED OFF |
-| Aider writes to main | LOCKED OFF |
-| Aider branch | aider/local-automation only |
-
-## Next
-
-Run first controlled Aider test task against dashboard/docs only, then review before any merge.
+| PHASE 2 READY | Wait or type 1 for a manual check. |
+| CHATGPT REQUIRED | Type 1 in ChatGPT. |
+| JASON ACTION REQUIRED | Follow the action shown. |
+| ERROR / STUCK | Type 1 in ChatGPT. |
