@@ -1,8 +1,8 @@
 ﻿{
-    "generated_at":  "2026-06-04 10:11:04",
+    "generated_at":  "2026-06-04 10:17:10",
     "signal":  "ATTN",
-    "reason":  "Controller status needs triage: BLOCKED_LOOP",
-    "next_action":  "Use local triage/recovery. Do not run Codex while credits are unavailable.",
+    "reason":  "PlatformGate status says RUNNING, but no runner task is active. Status is stale or the runner exited without finalising.",
+    "next_action":  "Run local triage/recovery, not Codex.",
     "controller_status":  "BLOCKED_LOOP",
     "milestone":  "BLOCKED_LOOP",
     "visible_count":  "78",
@@ -19,12 +19,12 @@
     "platform_prunable":  0,
     "controller_running":  false,
     "platform_runner_running":  false,
-    "manual_runner_running":  true,
+    "manual_runner_running":  false,
     "expansion_running":  false,
-    "controller_age_minutes":  72,
-    "platform_age_minutes":  69,
+    "controller_age_minutes":  78,
+    "platform_age_minutes":  76,
     "candidate_age_minutes":  999999,
     "health_age_minutes":  999999,
     "active_age_minutes":  999999,
-    "stale_running_status":  false
+    "stale_running_status":  true
 }
