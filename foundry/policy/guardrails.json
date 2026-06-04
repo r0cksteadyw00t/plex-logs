@@ -8,34 +8,11 @@
     "No Plex library removal by default",
     "No destructive pruning without explicit local approval flag",
     "Every patch must have backup, syntax check, smoke test and rollback path",
-    "Transient provider and probe failures must be retry/review, not permanent title rejection",
-    "Source-level quarantine is preferred over title-level rejection"
+    "Transient provider and probe failures must be retry or review, not permanent title rejection",
+    "Source-level quarantine is preferred over title-level rejection",
+    "Jason is required only for true blockers or high-risk decisions"
   ],
-  "allow_auto": [
-    "status",
-    "diagnostic",
-    "script_snippets",
-    "quiesce",
-    "dry_run",
-    "smoke_test",
-    "dashboard_publish",
-    "telemetry_publish",
-    "safe_patch_with_backup",
-    "rollback_last_patch"
-  ],
-  "require_local_flag": [
-    "delete_files",
-    "remove_plex_library",
-    "enable_destructive_prune",
-    "change_windows_security",
-    "publish_secret_material",
-    "wipe_directory"
-  ],
-  "stop_states": [
-    "ATTN_USER_REQUIRED",
-    "ATTN_SECRET_MISSING",
-    "ATTN_HIGH_RISK_ACTION",
-    "ATTN_REPEATED_FAILURE",
-    "ATTN_EXTERNAL_ACCOUNT_REQUIRED"
-  ]
+  "allow_auto": ["status", "diagnostic", "script_snippets", "quiesce", "dry_run", "smoke_test", "dashboard_publish", "telemetry_publish", "safe_patch_with_backup", "rollback_last_patch"],
+  "require_local_flag": ["delete_files", "remove_plex_library", "enable_destructive_prune", "change_windows_security", "publish_secret_material", "wipe_directory"],
+  "stop_states": ["ATTN_USER_REQUIRED", "ATTN_SECRET_MISSING", "ATTN_HIGH_RISK_ACTION", "ATTN_REPEATED_FAILURE", "ATTN_EXTERNAL_ACCOUNT_REQUIRED"]
 }
