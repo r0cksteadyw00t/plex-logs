@@ -1,33 +1,11 @@
-﻿# ScarFLIX v2 Status
+﻿# ScarFLIX v2 Quiesced
 
-Generated: 2026-06-04 10:49:02
+Generated: 2026-06-04 10:50:26
 
-Signal: ATTN
-Reason: PlatformGate status says RUNNING, but no runner task is active. Status is stale or the runner exited without finalising.
-Next action: Run local triage/recovery, not Codex.
-
-## Core
-- Controller: BLOCKED_LOOP
-- Milestone: BLOCKED_LOOP
+- Signal: QUIESCED
 - Visible: 78
-- Movies/TV: /
-- PlatformGate: RUNNING
-- Same snapshot: 
-- Health: 
-- WebDAV gate: 
-- Candidate-source: 
-
-## Failures
-- Controller transient/prunable: 3/0
-- PlatformGate transient/prunable: 0/0
-
-## Tasks
-- Controller running: False
-- Platform runner running: False
-- Manual runner running: False
-- Expansion running: False
-
-## Ages
-- Controller age minutes: 110
-- PlatformGate age minutes: 107
-- Candidate age minutes: 999999
+- Catalogue changed: False
+- Expansion enabled: False
+- Disabled task count: 39
+- Killed process count: 0
+- Remaining runner count: 0
