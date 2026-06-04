@@ -4,42 +4,27 @@
 
 **WAIT**
 
-Automation is running. You can leave this alone.
+Phase 2 is complete enough. Next automatic step is Phase 3 readiness for Ollama and Aider.
 
 ## Current status
 
 | Item | Status |
 |---|---|
-| Signal | WORKING |
-| User action | WAIT |
-| Phase | Phase 2: task execution loop, persistent dashboard UX, status cleanup |
-| Progress | 82% [################....] |
-| Estimated remaining | about 12 minutes |
-| Last updated | 2026-06-05 08:57:49 AEST |
-
-## System health
-
-| Item | Status |
-|---|---|
-| GitHub runner active | True |
+| Signal | PHASE 2 READY |
+| Phase | Phase 2 closing, Phase 3 readiness next |
+| Progress | 95% [###################.] |
+| Estimated remaining | about 0 minutes |
+| Last updated | 2026-06-05 08:59:45 AEST |
 | Runner process count | 2 |
 | Docker | Running |
-| Ollama | Missing, Phase 3 later |
-| Catalogue | 78 visible |
-| Expansion | Off |
-| Codex | Not used |
+| Ollama | Missing, Phase 3 next |
+| Catalogue | 78 visible, expansion off |
 
 ## Return rules
 
 | Dashboard says | You do |
 |---|---|
-| WORKING | Wait. Do not type anything. |
-| WAIT / AUTO | Wait. Do not type anything. |
+| PHASE 2 READY | Wait or type 1 for a manual check. |
 | CHATGPT REQUIRED | Type 1 in ChatGPT. |
 | JASON ACTION REQUIRED | Follow the action shown. |
 | ERROR / STUCK | Type 1 in ChatGPT. |
-| Last updated is older than 15 minutes | Type 1 in ChatGPT. |
-
-## Next automatic step
-
-Foundry continues Phase 2. Phase 3 will add Ollama and Aider as a controlled implementation engine.
