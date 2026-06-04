@@ -2,25 +2,25 @@
 
 **Status:** WORKING  
 **Jason action:** NONE  
-**What you should do:** WAIT. Come back to ChatGPT only if this dashboard says `CHATGPT REQUIRED` or if you want a manual check.  
-**Last updated:** 2026-06-04 19:44 AEST
+**What you should do:** WAIT. Return to ChatGPT only if this dashboard says CHATGPT REQUIRED or JASON ACTION REQUIRED.  
+**Last updated:** 2026-06-04 20:10:17  
 
 ## Simple answer
 
 The automation is still running. You do not need to do anything right now.
 
-## Current phase
+## Current tracking
 
 | Item | Status |
 |---|---|
 | Phase | Phase 2: task execution + status cleanup |
-| Runner process count | 4 |
-| GitHub runner path | Active |
+| Runner process count | 2 |
+| GitHub runner active | True |
 | Docker | Running |
 | Catalogue | 78 visible |
 | Expansion | Off |
 | Codex | Not used |
-| Ollama | Pending later |
+| Ollama | Missing, pending Phase 3 |
 
 ## When to return to ChatGPT
 
@@ -28,18 +28,10 @@ The automation is still running. You do not need to do anything right now.
 |---|---|
 | WORKING | Wait |
 | WAIT / AUTO | Wait |
-| CHATGPT REQUIRED | Type `1` in ChatGPT |
+| CHATGPT REQUIRED | Type 1 in ChatGPT |
 | JASON ACTION REQUIRED | Follow the action shown |
-| ERROR / STUCK | Type `1` in ChatGPT |
+| ERROR / STUCK | Type 1 in ChatGPT |
 
 ## Next automatic step
 
-Foundry runner should process the Phase 2 task and publish refreshed status.
-
-## Links
-
-Rendered HTML dashboard:  
-https://htmlpreview.github.io/?https://github.com/r0cksteadyw00t/plex-logs/blob/main/latest/scarflix_v2/dashboard/index.html
-
-Markdown dashboard:  
-https://github.com/r0cksteadyw00t/plex-logs/blob/main/latest/scarflix_v2/DASHBOARD.md
+Foundry runner continues Phase 2 task execution and status cleanup.
