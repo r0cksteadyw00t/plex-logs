@@ -1,6 +1,6 @@
 ﻿# ScarFLIX v2 Status
 
-Generated: 2026-06-04 10:59:02
+Generated: 2026-06-04 11:01:02
 
 Signal: ATTN
 Reason: PlatformGate status says RUNNING, but no runner task is active. Status is stale or the runner exited without finalising.
@@ -28,6 +28,6 @@ Next action: Run local triage/recovery, not Codex.
 - Expansion running: False
 
 ## Ages
-- Controller age minutes: 120
-- PlatformGate age minutes: 117
+- Controller age minutes: 122
+- PlatformGate age minutes: 119
 - Candidate age minutes: 999999
