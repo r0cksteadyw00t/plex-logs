@@ -1,6 +1,6 @@
 ﻿ScarFLIX v2 telemetry summary for ChatGPT.
 
-Generated: 2026-06-04 10:39:01
+Generated: 2026-06-04 10:39:34
 
 Compact status:
 ScarFLIX v2 offline status summary for ChatGPT.
@@ -29,7 +29,7 @@ Ask ChatGPT what local/offline script to run next. Do not use Codex.
 Task summary:
 - System.Object[]: Missing
 
-Runner process count: 8
+Runner process count: 6
 
 Latest PlatformGate log: D:\PlexTools\logs\scarflix_v2_platform_gate_20260604.log
 Latest Controller log: D:\PlexTools\logs\scarflix_v2_autonomous_controller_run_20260604.log
