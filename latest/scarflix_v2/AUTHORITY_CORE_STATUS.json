@@ -1,83 +1,109 @@
 {
-    "generated_at":  "2026-06-05 20:03:16",
-    "generated_at_utc":  "2026-06-05T10:03:16Z",
-    "overall_signal":  "GREEN_FULL_REMOTE_BOOTSTRAP_COMPLETE",
-    "detail":  "Full remote automation bootstrap completed. Reporter, executor, watchdog and Foundry stack are installed or queued.",
-    "host":  "MEDIASERVER",
-    "user":  "jason",
-    "run_stamp":  "20260605_200050",
-    "root":  "D:\\PlexTools",
-    "foundry_root":  "D:\\PlexTools\\Foundry",
-    "token_found":  true,
-    "token_file":  "C:\\Users\\jason\\OneDrive\\Public\\TOKENS\\github_pat.txt",
-    "token_length":  40,
-    "checked_token_paths":  [
-                                "C:\\Users\\jason\\OneDrive\\Public\\TOKENS\\github_pat.txt"
-                            ],
-    "docker_present":  true,
-    "git_present":  false,
-    "ollama_present":  false,
-    "tailscale_present":  false,
-    "aider_present":  true,
-    "authority_core_local":  {
-                                 "url":  "http://127.0.0.1:8790/api/status",
-                                 "ok":  true,
-                                 "status":  "200",
-                                 "error":  ""
-                             },
-    "open_webui_local":  {
-                             "url":  "http://127.0.0.1:8788",
-                             "ok":  false,
-                             "status":  "",
-                             "error":  "The operation has timed out."
-                         },
-    "ollama_local":  {
-                         "url":  "http://127.0.0.1:11434/api/tags",
-                         "ok":  true,
-                         "status":  "200",
-                         "error":  ""
-                     },
-    "main_log":  "D:\\PlexTools\\logs\\foundry_full_remote_bootstrap_20260605_200050.log",
-    "error_log":  "D:\\PlexTools\\logs\\foundry_full_remote_bootstrap_errors_20260605_200050.txt",
-    "transcript_path":  "D:\\PlexTools\\logs\\foundry_full_remote_bootstrap_transcript_20260605_200050.txt",
-    "chatgpt_pickup_files":  [
-                                 "FOUNDRY_STATUS_INDEX.json",
-                                 "FOUNDRY_LAST_SCRIPT_STATUS.json",
-                                 "FOUNDRY_LAST_SCRIPT_LOG.txt",
-                                 "FOUNDRY_LAST_SCRIPT_ERRORS.txt",
-                                 "FOUNDRY_LAST_SCRIPT_TRANSCRIPT.txt",
-                                 "FOUNDRY_LAST_SCRIPT_COMPLETE_MARKER.txt",
-                                 "REMOTE_EXECUTOR_INSTALL_STATUS.json",
-                                 "REMOTE_EXECUTOR_STATUS.json",
-                                 "REMOTE_EXECUTOR_LAST_LOG.txt",
-                                 "REMOTE_EXECUTOR_LAST_ERRORS.txt",
-                                 "FOUNDRY_STATUS_REPORTER_STATUS.json",
-                                 "FOUNDRY_STATUS_REPORTER_LAST_LOG.txt",
-                                 "FOUNDRY_STATUS_REPORTER_LAST_ERRORS.txt",
-                                 "COMMAND_CENTRE_STATUS.json",
-                                 "AUTHORITY_CORE_STATUS.json",
-                                 "COMMAND_CENTRE_REMOTE_ACCESS_STATUS.json",
-                                 "FOUNDRY_ACCESS_READY.md"
-                             ],
-    "reporter_registered":  true,
-    "executor_registered":  true,
-    "watchdog_registered":  true,
-    "openwebui_repair_registered":  true,
-    "docker_engine_ok":  true,
-    "tailscale_detected":  false,
-    "tailscale_ip":  "",
-    "local_command_centre":  "http://127.0.0.1:8788",
-    "lan_command_centre":  "http://mediaserver:8788",
-    "local_authority_core":  "http://127.0.0.1:8790",
-    "lan_authority_core":  "http://mediaserver:8790",
-    "remote_command_centre":  "http://:8788",
-    "remote_job_files":  [
-                             "latest/scarflix_v2/REMOTE_EXECUTION_JOB.json",
-                             "latest/scarflix_v2/REMOTE_EXECUTION_PAYLOAD.ps1"
-                         ],
-    "remote_result_files":  [
-                                "latest/scarflix_v2/REMOTE_EXECUTION_RESULT.json",
-                                "latest/scarflix_v2/REMOTE_EXECUTION_LAST_LOG.txt",
-                                "latest/scarflix_v2/REMOTE_EXECUTOR_STATUS.json"
-                            ]
+  "platform": "JasonOS Foundry",
+  "mission": "ScarFLIX Mission 001",
+  "mode": "CEILING_MODE_FULL_AUTONOMY",
+  "overall_signal": "GREEN_AUTHORITY_CORE_RUNNING",
+  "command_centre_url": "http://mediaserver:8788",
+  "authority_core_url": "http://mediaserver:8790",
+  "open_webui_url": "http://mediaserver:8788",
+  "db_path": "/data/sqlite/foundry_command_bus.db",
+  "agents": [
+    {
+      "name": "mission_governor",
+      "role": "Owns missions, priorities, state and next actions",
+      "status": "active"
+    },
+    {
+      "name": "command_centre_assistant",
+      "role": "Conversational interface and command translation",
+      "status": "active"
+    },
+    {
+      "name": "scarflix_mission_lead",
+      "role": "Owns ScarFLIX Mission 001 execution",
+      "status": "active"
+    },
+    {
+      "name": "catalogue_curator",
+      "role": "Generates and scores catalogue candidates",
+      "status": "active"
+    },
+    {
+      "name": "simulation_agent",
+      "role": "Runs expansion and promotion simulations",
+      "status": "active"
+    },
+    {
+      "name": "plex_readonly_analyst",
+      "role": "Reads Plex state and compatibility",
+      "status": "active"
+    },
+    {
+      "name": "aider_implementer",
+      "role": "Creates Git-aware local patches",
+      "status": "registered"
+    },
+    {
+      "name": "ollama_reasoner",
+      "role": "Local reasoning and summarisation",
+      "status": "registered"
+    },
+    {
+      "name": "qa_gatekeeper",
+      "role": "Tests and validates outputs",
+      "status": "active"
+    },
+    {
+      "name": "memory_graph_agent",
+      "role": "Persists decisions and prevents regression",
+      "status": "active"
+    },
+    {
+      "name": "self_healing_watchdog",
+      "role": "Detects failures and triggers repair",
+      "status": "active"
+    },
+    {
+      "name": "self_evolution_agent",
+      "role": "Improves Foundry code, prompts and UI",
+      "status": "active"
+    },
+    {
+      "name": "external_model_federation_agent",
+      "role": "Prepares ChatGPT and Grok prompt packs",
+      "status": "active"
+    },
+    {
+      "name": "remote_access_manager",
+      "role": "Publishes LAN and Tailscale access status",
+      "status": "active"
+    },
+    {
+      "name": "remote_executor_agent",
+      "role": "Consumes GitHub remote execution payloads and executes local jobs",
+      "status": "active"
+    }
+  ],
+  "active_lanes": [
+    "media_workflow_design",
+    "media_workflow_dry_run",
+    "branch_patches",
+    "catalogue_candidate_generation",
+    "catalogue_expansion_simulation",
+    "plex_read_only_analysis",
+    "agent_mesh",
+    "memory_graph",
+    "voice_interface",
+    "autonomous_backlog",
+    "self_improvement_loop",
+    "architecture_review",
+    "technical_debt_scan",
+    "local_ai_orchestration",
+    "service_extraction"
+  ],
+  "jason_intervention": "only_key_decisions_or_true_blockers",
+  "chatgpt_github_connector_required": false,
+  "local_token_vault_used": true,
+  "published_at": "2026-06-05 10:04:18",
+  "published_at_utc": "2026-06-05T10:04:18Z"
 }
