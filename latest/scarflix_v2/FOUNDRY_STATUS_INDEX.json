@@ -1,212 +1,35 @@
 {
-    "generated_at":  "2026-06-05 20:56:39",
-    "overall_signal":  "GREEN_JASONOS_CONCURRENT_AUTOPILOT_RUNNING",
+    "generated_at":  "2026-06-05 20:58:08",
+    "overall_signal":  "GREEN_ONE_HIT_REMOTE_AUTONOMY_INSTALLED",
+    "remote_access_task":  true,
+    "aggressive_autopilot_task":  true,
+    "health_pulse_task":  true,
+    "landing_task":  true,
+    "paste_warning_result":  {
+                                 "windows_terminal_settings_changed":  false,
+                                 "psreadline_warning_changed":  true,
+                                 "notes":  "Some paste warnings come from Chrome Remote Desktop or Windows Terminal and cannot be universally disabled from inside PowerShell."
+                             },
     "authority_core":  {
                            "url":  "http://127.0.0.1:8790/api/status",
                            "ok":  true,
                            "status":  "200",
                            "error":  ""
                        },
-    "command_centre_8788":  {
-                                "url":  "http://127.0.0.1:8788",
-                                "ok":  false,
-                                "status":  "",
-                                "error":  "The operation has timed out."
-                            },
-    "command_centre_8791":  {
-                                "url":  "http://127.0.0.1:8791",
-                                "ok":  true,
-                                "status":  "200",
-                                "error":  ""
-                            },
-    "ollama":  {
-                   "url":  "http://127.0.0.1:11434/api/tags",
-                   "ok":  true,
-                   "status":  "200",
-                   "error":  ""
-               },
-    "mission":  {
-                    "overall_signal":  "GREEN_MISSION001_ACTIVE_AUTONOMOUS_EXECUTION",
-                    "mission":  "ScarFLIX Mission 001",
-                    "visible_catalogue_count_last_known":  78,
-                    "mode":  "ceiling_mode_maximum",
-                    "active_command_centre":  "http://mediaserver:8791",
-                    "authority_core":  "http://mediaserver:8790",
-                    "promotion_gates":  "execution_gates_only_not_design_constraints",
-                    "jason_action_required":  false,
-                    "active_lanes":  [
-                                         "command_centre_integration",
-                                         "scarflix_mission_execution",
-                                         "catalogue_candidate_generation",
-                                         "catalogue_expansion_simulation",
-                                         "plex_read_only_analysis",
-                                         "agent_mesh_runtime",
-                                         "memory_graph",
-                                         "self_evolution",
-                                         "technical_debt_scan",
-                                         "local_ai_orchestration",
-                                         "external_model_federation",
-                                         "remote_phone_access",
-                                         "dashboard_polish",
-                                         "telemetry_first_execution"
-                                     ],
-                    "authority_commands":  [
-                                               {
-                                                   "action":  "command_centre_integration",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-command_centre_integration-20260605_105618\",\"enabled\":true,\"action\":\"command_centre_integration\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: command_centre_integration. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:18\",\"expires_utc\":\"2026-06-05T22:56:18Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:18\",\"published_at_utc\":\"2026-06-05T10:56:18Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "scarflix_mission_execution",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-scarflix_mission_execution-20260605_105619\",\"enabled\":true,\"action\":\"scarflix_mission_execution\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: scarflix_mission_execution. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:19\",\"expires_utc\":\"2026-06-05T22:56:19Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:19\",\"published_at_utc\":\"2026-06-05T10:56:19Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "catalogue_candidate_generation",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-catalogue_candidate_generation-20260605_105621\",\"enabled\":true,\"action\":\"catalogue_candidate_generation\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: catalogue_candidate_generation. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:21\",\"expires_utc\":\"2026-06-05T22:56:21Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:21\",\"published_at_utc\":\"2026-06-05T10:56:21Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "catalogue_expansion_simulation",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-catalogue_expansion_simulation-20260605_105622\",\"enabled\":true,\"action\":\"catalogue_expansion_simulation\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: catalogue_expansion_simulation. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:22\",\"expires_utc\":\"2026-06-05T22:56:22Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:22\",\"published_at_utc\":\"2026-06-05T10:56:22Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "plex_read_only_analysis",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-plex_read_only_analysis-20260605_105624\",\"enabled\":true,\"action\":\"plex_read_only_analysis\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: plex_read_only_analysis. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:24\",\"expires_utc\":\"2026-06-05T22:56:24Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:24\",\"published_at_utc\":\"2026-06-05T10:56:24Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "agent_mesh_runtime",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-agent_mesh_runtime-20260605_105625\",\"enabled\":true,\"action\":\"agent_mesh_runtime\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: agent_mesh_runtime. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:25\",\"expires_utc\":\"2026-06-05T22:56:25Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:25\",\"published_at_utc\":\"2026-06-05T10:56:25Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "memory_graph",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-memory_graph-20260605_105627\",\"enabled\":true,\"action\":\"memory_graph\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: memory_graph. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:27\",\"expires_utc\":\"2026-06-05T22:56:27Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:27\",\"published_at_utc\":\"2026-06-05T10:56:27Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "self_evolution",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-self_evolution-20260605_105628\",\"enabled\":true,\"action\":\"self_evolution\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: self_evolution. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:28\",\"expires_utc\":\"2026-06-05T22:56:28Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:28\",\"published_at_utc\":\"2026-06-05T10:56:28Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "technical_debt_scan",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-technical_debt_scan-20260605_105629\",\"enabled\":true,\"action\":\"technical_debt_scan\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: technical_debt_scan. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:29\",\"expires_utc\":\"2026-06-05T22:56:29Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:29\",\"published_at_utc\":\"2026-06-05T10:56:29Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "local_ai_orchestration",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-local_ai_orchestration-20260605_105631\",\"enabled\":true,\"action\":\"local_ai_orchestration\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: local_ai_orchestration. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:31\",\"expires_utc\":\"2026-06-05T22:56:31Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:31\",\"published_at_utc\":\"2026-06-05T10:56:31Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "external_model_federation",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-external_model_federation-20260605_105632\",\"enabled\":true,\"action\":\"external_model_federation\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: external_model_federation. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:32\",\"expires_utc\":\"2026-06-05T22:56:32Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:32\",\"published_at_utc\":\"2026-06-05T10:56:32Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "remote_phone_access",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-remote_phone_access-20260605_105635\",\"enabled\":true,\"action\":\"remote_phone_access\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: remote_phone_access. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:35\",\"expires_utc\":\"2026-06-05T22:56:35Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:35\",\"published_at_utc\":\"2026-06-05T10:56:35Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "dashboard_polish",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-dashboard_polish-20260605_105636\",\"enabled\":true,\"action\":\"dashboard_polish\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: dashboard_polish. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:36\",\"expires_utc\":\"2026-06-05T22:56:36Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:36\",\"published_at_utc\":\"2026-06-05T10:56:36Z\"}",
-                                                   "error":  ""
-                                               },
-                                               {
-                                                   "action":  "telemetry_first_execution",
-                                                   "ok":  true,
-                                                   "response":  "{\"id\":\"foundry-v2-telemetry_first_execution-20260605_105638\",\"enabled\":true,\"action\":\"telemetry_first_execution\",\"reason\":\"JasonOS Foundry ceiling-mode concurrent lane: telemetry_first_execution. Promotion gates are execution gates only.\",\"status\":\"queued\",\"created_at\":\"2026-06-05 10:56:38\",\"expires_utc\":\"2026-06-05T22:56:38Z\",\"jason_intervention\":\"only_key_decisions_or_true_blockers\",\"published_at\":\"2026-06-05 10:56:38\",\"published_at_utc\":\"2026-06-05T10:56:38Z\"}",
-                                                   "error":  ""
-                                               }
-                                           ]
+    "command_centre":  {
+                           "url":  "http://127.0.0.1:8791",
+                           "ok":  true,
+                           "status":  "200",
+                           "error":  ""
+                       },
+    "landing":  {
+                    "url":  "http://127.0.0.1:8792",
+                    "ok":  true,
+                    "status":  "200",
+                    "error":  ""
                 },
-    "remote_access":  {
-                          "overall_signal":  "REMOTE_ACCESS_DISCOVERY_ACTIVE",
-                          "lan_command_centre":  "http://mediaserver:8791",
-                          "lan_authority_core":  "http://mediaserver:8790",
-                          "tailscale_detected":  false,
-                          "tailscale_ip":  "",
-                          "phone_command_centre":  "",
-                          "phone_authority_core":  ""
-                      },
-    "agent_runtime":  {
-                          "overall_signal":  "GREEN_AGENT_MESH_CONCURRENT_EXECUTION",
-                          "agents":  [
-                                         {
-                                             "status":  "active",
-                                             "name":  "mission_governor",
-                                             "lane":  "all"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "command_centre_assistant",
-                                             "lane":  "command_centre_integration"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "scarflix_mission_lead",
-                                             "lane":  "scarflix_mission_execution"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "catalogue_curator",
-                                             "lane":  "catalogue_candidate_generation"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "simulation_agent",
-                                             "lane":  "catalogue_expansion_simulation"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "plex_readonly_analyst",
-                                             "lane":  "plex_read_only_analysis"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "memory_graph_agent",
-                                             "lane":  "memory_graph"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "self_evolution_agent",
-                                             "lane":  "self_evolution"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "external_model_federation_agent",
-                                             "lane":  "external_model_federation"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "remote_access_manager",
-                                             "lane":  "remote_phone_access"
-                                         },
-                                         {
-                                             "status":  "active",
-                                             "name":  "remote_executor_agent",
-                                             "lane":  "telemetry_first_execution"
-                                         }
-                                     ]
-                      },
-    "jason_action_required":  false,
-    "active_command_centre":  "http://mediaserver:8791",
-    "do_not_wait_for_8788":  true
+    "local_command_centre":  "http://mediaserver:8791",
+    "local_landing":  "http://mediaserver:8792",
+    "phone_access_file":  "latest/scarflix_v2/JASONOS_PHONE_ACCESS.json",
+    "jason_action_required":  false
 }
