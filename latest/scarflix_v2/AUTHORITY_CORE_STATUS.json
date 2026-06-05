@@ -1,0 +1,104 @@
+{
+  "platform": "JasonOS Foundry",
+  "mission": "ScarFLIX Mission 001",
+  "mode": "CEILING_MODE_FULL_AUTONOMY",
+  "overall_signal": "GREEN_AUTHORITY_CORE_RUNNING",
+  "command_centre_url": "http://mediaserver:8788",
+  "authority_core_url": "http://mediaserver:8790",
+  "open_webui_url": "http://mediaserver:8788",
+  "db_path": "/data/sqlite/foundry_command_bus.db",
+  "agents": [
+    {
+      "name": "mission_governor",
+      "role": "Owns missions, priorities, state and next actions",
+      "status": "active"
+    },
+    {
+      "name": "command_centre_assistant",
+      "role": "Conversational interface and command translation",
+      "status": "active"
+    },
+    {
+      "name": "scarflix_mission_lead",
+      "role": "Owns ScarFLIX Mission 001 execution",
+      "status": "active"
+    },
+    {
+      "name": "catalogue_curator",
+      "role": "Generates and scores catalogue candidates",
+      "status": "active"
+    },
+    {
+      "name": "simulation_agent",
+      "role": "Runs expansion and promotion simulations",
+      "status": "active"
+    },
+    {
+      "name": "plex_readonly_analyst",
+      "role": "Reads Plex state and compatibility",
+      "status": "active"
+    },
+    {
+      "name": "aider_implementer",
+      "role": "Creates Git-aware local patches",
+      "status": "registered"
+    },
+    {
+      "name": "ollama_reasoner",
+      "role": "Local reasoning and summarisation",
+      "status": "registered"
+    },
+    {
+      "name": "qa_gatekeeper",
+      "role": "Tests and validates outputs",
+      "status": "active"
+    },
+    {
+      "name": "memory_graph_agent",
+      "role": "Persists decisions and prevents regression",
+      "status": "active"
+    },
+    {
+      "name": "self_healing_watchdog",
+      "role": "Detects failures and triggers repair",
+      "status": "active"
+    },
+    {
+      "name": "self_evolution_agent",
+      "role": "Improves Foundry code, prompts and UI",
+      "status": "active"
+    },
+    {
+      "name": "external_model_federation_agent",
+      "role": "Prepares ChatGPT and Grok prompt packs",
+      "status": "active"
+    },
+    {
+      "name": "remote_access_manager",
+      "role": "Publishes LAN and Tailscale access status",
+      "status": "active"
+    }
+  ],
+  "active_lanes": [
+    "media_workflow_design",
+    "media_workflow_dry_run",
+    "branch_patches",
+    "catalogue_candidate_generation",
+    "catalogue_expansion_simulation",
+    "plex_read_only_analysis",
+    "agent_mesh",
+    "memory_graph",
+    "voice_interface",
+    "autonomous_backlog",
+    "self_improvement_loop",
+    "architecture_review",
+    "technical_debt_scan",
+    "local_ai_orchestration",
+    "service_extraction"
+  ],
+  "jason_intervention": "only_key_decisions_or_true_blockers",
+  "chatgpt_github_connector_required": false,
+  "local_token_vault_used": true,
+  "published_at": "2026-06-05 07:44:20",
+  "published_at_utc": "2026-06-05T07:44:20Z"
+}
