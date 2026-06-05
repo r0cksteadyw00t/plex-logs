@@ -1,9 +1,43 @@
 {
-    "overall_signal":  "REMOTE_ACCESS_DISCOVERY_ACTIVE",
+    "generated_at":  "2026-06-05 20:57:52",
+    "overall_signal":  "REMOTE_ACCESS_MANAGER_RUNNING",
+    "authority_core":  {
+                           "url":  "http://127.0.0.1:8790/api/status",
+                           "ok":  true,
+                           "status":  "200",
+                           "error":  ""
+                       },
+    "command_centre_8791":  {
+                                "url":  "http://127.0.0.1:8791",
+                                "ok":  true,
+                                "status":  "200",
+                                "error":  ""
+                            },
+    "landing_8792":  {
+                         "url":  "http://127.0.0.1:8792",
+                         "ok":  true,
+                         "status":  "200",
+                         "error":  ""
+                     },
+    "lan_ip":  "172.29.224.1",
     "lan_command_centre":  "http://mediaserver:8791",
-    "lan_authority_core":  "http://mediaserver:8790",
-    "tailscale_detected":  false,
-    "tailscale_ip":  "",
+    "lan_command_centre_ip":  "http://172.29.224.1:8791",
+    "lan_landing_page":  "http://mediaserver:8792",
+    "tailscale":  {
+                      "installed":  false,
+                      "detected":  false,
+                      "ip":  "",
+                      "login_required":  true,
+                      "authkey_used":  false
+                  },
+    "cloudflare_quick_tunnel":  {
+                                    "installed":  false,
+                                    "running":  false,
+                                    "url":  "",
+                                    "log":  "D:\\PlexTools\\logs\\foundry_cloudflared_8791.log"
+                                },
+    "phone_mode":  "not_ready",
     "phone_command_centre":  "",
-    "phone_authority_core":  ""
+    "jason_action_required":  true,
+    "notes":  "Tailscale preferred. Cloudflare quick tunnel fallback. LAN command centre remains http://mediaserver:8791."
 }
