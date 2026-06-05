@@ -1,8 +1,8 @@
 {
-    "generated_at":  "2026-06-05 20:00:58",
-    "generated_at_utc":  "2026-06-05T10:00:58Z",
-    "overall_signal":  "GREEN_FULL_BOOTSTRAP_STARTED",
-    "detail":  "Full bootstrap started. Status publishing is active.",
+    "generated_at":  "2026-06-05 20:03:16",
+    "generated_at_utc":  "2026-06-05T10:03:16Z",
+    "overall_signal":  "GREEN_FULL_REMOTE_BOOTSTRAP_COMPLETE",
+    "detail":  "Full remote automation bootstrap completed. Reporter, executor, watchdog and Foundry stack are installed or queued.",
     "host":  "MEDIASERVER",
     "user":  "jason",
     "run_stamp":  "20260605_200050",
@@ -58,5 +58,26 @@
                                  "AUTHORITY_CORE_STATUS.json",
                                  "COMMAND_CENTRE_REMOTE_ACCESS_STATUS.json",
                                  "FOUNDRY_ACCESS_READY.md"
-                             ]
+                             ],
+    "reporter_registered":  true,
+    "executor_registered":  true,
+    "watchdog_registered":  true,
+    "openwebui_repair_registered":  true,
+    "docker_engine_ok":  true,
+    "tailscale_detected":  false,
+    "tailscale_ip":  "",
+    "local_command_centre":  "http://127.0.0.1:8788",
+    "lan_command_centre":  "http://mediaserver:8788",
+    "local_authority_core":  "http://127.0.0.1:8790",
+    "lan_authority_core":  "http://mediaserver:8790",
+    "remote_command_centre":  "http://:8788",
+    "remote_job_files":  [
+                             "latest/scarflix_v2/REMOTE_EXECUTION_JOB.json",
+                             "latest/scarflix_v2/REMOTE_EXECUTION_PAYLOAD.ps1"
+                         ],
+    "remote_result_files":  [
+                                "latest/scarflix_v2/REMOTE_EXECUTION_RESULT.json",
+                                "latest/scarflix_v2/REMOTE_EXECUTION_LAST_LOG.txt",
+                                "latest/scarflix_v2/REMOTE_EXECUTOR_STATUS.json"
+                            ]
 }
