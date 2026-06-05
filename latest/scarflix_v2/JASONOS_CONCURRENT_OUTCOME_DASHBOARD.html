@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>JasonOS Prime Concurrent Status</title>
+<style>body{font-family:Segoe UI,Arial;background:#08111f;color:#eef4ff;margin:0;padding:20px}.card{background:#111d32;border:1px solid #2c3b5d;border-radius:14px;padding:15px;margin:12px 0}.ok{color:#75ff95}.bad{color:#ff7d7d}.warn{color:#ffd166}a{color:#8ab4ff}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #2c3b5d;padding:8px;text-align:left}</style></head><body>
+<h1>JasonOS Prime Concurrent Outcome Status</h1>
+<div class='card'>Generated: 2026-06-06 07:30:51<br>Overall: GREEN_CORE_AND_PIPELINE_SANITY_COMPLETE</div>
+<div class='card'><h2>Access</h2>
+<div>PC/LAN 8791: <a href='http://192.168.1.184:8791'>http://192.168.1.184:8791</a></div>
+<div>PC/LAN fallback 8794: <a href='http://192.168.1.184:8794'>http://192.168.1.184:8794</a></div>
+<div>Tailscale 8791: <a href='http://100.69.97.7:8791'>http://100.69.97.7:8791</a></div>
+<div>Tailscale fallback 8793: <a href='http://100.69.97.7:8793'>http://100.69.97.7:8793</a></div>
+</div>
+<div class='card'><h2>Lanes</h2><table><tr><th>Lane</th><th>Status</th><th>Next</th></tr>
+<tr><td>Core runtime</td><td>8790=True, 8791=True, 8792=True</td><td>Keep alive and monitor</td></tr>
+<tr><td>Docker / Foundry</td><td>docker_ready=True, compose_ok=1</td><td>Autostart and compose are active</td></tr>
+<tr><td>Phone / LAN access</td><td>LAN=http://192.168.1.184:8794, Tailscale=http://100.69.97.7:8793</td><td>Try LAN fallback from phone on WiFi first</td></tr>
+<tr><td>ScarFLIX output</td><td>movies=1, shows=0</td><td>If only sanity item exists, resolver/admission still needs content work</td></tr>
+<tr><td>Project tasks</td><td>22 tasks started OK</td><td>Scheduled workers should continue hidden</td></tr>
+<tr><td>Local AI</td><td>Ollama=True</td><td>Use for local-first reasoning and summaries</td></tr>
+<tr><td>Telemetry</td><td>Local dashboard and JSON generated</td><td>GitHub publish attempted</td></tr>
+<tr><td>Popup/noise</td><td>hidden_launcher=True</td><td>No visible windows expected except manual run</td></tr>
+</table></div>
+</body></html>
