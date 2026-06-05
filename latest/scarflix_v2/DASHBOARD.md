@@ -4,23 +4,23 @@
 
 **WAIT**
 
-Aider/Ollama branch test still needs review. No media, catalogue, or Plex changes were made.
+Phase 3 tooling is ready enough for the first controlled Aider branch-only test task.
 
 ## Current status
 
 | Item | Status |
 |---|---|
-| Signal | PHASE 3 TRUE AIDER TEST PARTIAL |
-| Phase | Phase 3 true Aider/Ollama implementation test |
-| Progress | 98% |
-| Git | Available |
-| Repo | Ready |
+| Signal | PHASE 3 READY |
+| Phase | Phase 3 readiness |
+| Progress | 98% [####################] |
+| Last updated | 2026-06-05 11:22:02 AEST |
+| Git | PortableAvailable |
+| Repo | Present |
 | Aider | Installed |
 | Ollama | Running |
-| Edit result | AiderExit |
-| Push result | NotRun |
+| Docker | Running |
+| Runner processes | 2 |
 | Catalogue | 78 visible, expansion off |
-| Last updated | 2026-06-05 11:19:23 AEST |
 
 ## Safety locks
 
