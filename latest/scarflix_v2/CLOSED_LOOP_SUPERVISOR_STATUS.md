@@ -1,10 +1,10 @@
 ﻿ScarFLIX v2 closed-loop supervisor status.
 
-Generated: 2026-06-05 14:41:08
+Generated: 2026-06-05 14:51:08
 Signal: RUNNING
-Reason: Script snippets missing or stale
+Reason: Autopilot attention state: ATTN_UNSUPPORTED_COMMAND
 Next action: Closed loop supervisor will keep queuing safe allow-listed commands.
-Queued: script_snippets queued: OK
+Queued: diagnostic queued: FAIL The remote server returned an error: (409) Conflict.
 Runner process count: 0
 Autopilot task: Ready
 Supervisor task: Running
