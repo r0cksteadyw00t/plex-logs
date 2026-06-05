@@ -1,24 +1,424 @@
 {
-  "generated_at": "2026-06-05T14:45:00+10:00",
-  "platform": "JasonOS Foundry",
-  "mission": "ScarFLIX Mission 001",
-  "mode": "CEILING_MODE_FULL_AUTONOMY",
-  "overall_signal": "BLOCKER_COMMAND_CONSUMER_UNSUPPORTED_ACTION",
-  "status": "DIRECTIVE_PUBLISHED_LOCAL_CONSUMER_NOT_READY",
-  "summary": "Ceiling Mode directive and command are published, but the current MEDIASERVER command runner has not consumed foundry_ceiling_mode_autonomy and previously reports unsupported actions outside status.",
-  "design_preserved": true,
-  "features_dropped": false,
-  "requires_jason_pasted_logs": false,
-  "true_blocker": true,
-  "blocker": {
-    "name": "Local command consumer cannot execute Foundry ceiling-mode commands",
-    "evidence": "command_result.json last reports unsupported_action for script_snippets from ScarFLIXV2_CommandRunner. Expected Mission Control files were not created by local workers.",
-    "impact": "GitHub/ChatGPT control path is active, but local execution is not yet running the full Mission Control Plane.",
-    "required_fix": "Upgrade local command consumer to support foundry_ceiling_mode_autonomy and bootstrap Mission Control Plane without reducing scope."
-  },
-  "expected_next_outputs": [
-    "FOUNDRY_AGENT_MESH_STATUS.json",
-    "SCARFLIX_MISSION001_STATUS.json",
-    "FOUNDRY_NEXT_ACTION_QUEUE.json"
-  ]
+    "generated_at":  "2026-06-05 14:53:40",
+    "generated_at_utc":  "2026-06-05T04:53:40Z",
+    "platform":  "JasonOS Foundry",
+    "mission":  "ScarFLIX Mission 001",
+    "mode":  "CEILING_MODE_FULL_AUTONOMY",
+    "overall_signal":  "GREEN_MISSION_CONTROL_BOOTSTRAPPED",
+    "command_id":  "foundry-ceiling-autonomy-20260605-001",
+    "command_action":  "foundry_ceiling_mode_autonomy",
+    "directive_id":  "foundry-control-directive-20260605-001",
+    "design_baseline":  "Grok-aligned full JasonOS Foundry autonomous platform; ScarFLIX is Mission 001",
+    "features_dropped":  false,
+    "design_reduced":  false,
+    "requires_jason":  false,
+    "requires_pasted_logs":  false,
+    "tools":  {
+                  "git_ok":  false,
+                  "docker_ok":  true,
+                  "ollama_ok":  true,
+                  "aider_ok":  true,
+                  "git":  "",
+                  "docker":  "Docker version 29.5.2, build 79eb04c",
+                  "ollama":  "http_200",
+                  "aider":  "aider 0.86.2"
+              },
+    "mission_registry":  {
+                             "mission_id":  "mission_001",
+                             "mission_name":  "ScarFLIX",
+                             "platform":  "JasonOS Foundry",
+                             "mode":  "CEILING_MODE_FULL_AUTONOMY",
+                             "status":  "active",
+                             "jason_intervention":  "only_key_decisions_or_true_blockers",
+                             "lanes":  [
+                                           {
+                                               "name":  "media_workflow_design",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\media_workflow_design",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "media_workflow_dry_run",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\media_workflow_dry_run",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "branch_patches",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\branch_patches",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "catalogue_candidate_generation",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\catalogue_candidate_generation",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "catalogue_expansion_simulation",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\catalogue_expansion_simulation",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "plex_read_only_analysis",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\plex_read_only_analysis",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "agent_mesh",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\agent_mesh",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "memory_graph",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\memory_graph",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "voice_interface",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\voice_interface",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "autonomous_backlog",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\autonomous_backlog",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "self_improvement_loop",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\self_improvement_loop",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "architecture_review",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\architecture_review",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "technical_debt_scan",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\technical_debt_scan",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "local_ai_orchestration",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\local_ai_orchestration",
+                                               "status":  "active_registered"
+                                           },
+                                           {
+                                               "name":  "service_extraction",
+                                               "enabled":  true,
+                                               "mode":  "ceiling_mode_autonomous_lane",
+                                               "path":  "D:\\PlexTools\\Foundry\\lanes\\service_extraction",
+                                               "status":  "active_registered"
+                                           }
+                                       ]
+                         },
+    "agent_mesh_summary":  {
+                               "generated_at":  "2026-06-05 14:53:40",
+                               "platform":  "JasonOS Foundry",
+                               "mission":  "ScarFLIX Mission 001",
+                               "overall_signal":  "GREEN_AGENT_MESH_REGISTERED",
+                               "agents":  [
+                                              {
+                                                  "name":  "foundry_planner",
+                                                  "role":  "Mission planner and decomposition agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "maintain ceiling-mode mission plan",
+                                                                           "decompose work into local tasks",
+                                                                           "preserve full design"
+                                                                       ]
+                                              },
+                                              {
+                                                  "name":  "scarflix_builder",
+                                                  "role":  "ScarFLIX implementation agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "implement Mission 001 local changes",
+                                                                           "prepare branch patches",
+                                                                           "avoid live mutation until gates pass"
+                                                                       ]
+                                              },
+                                              {
+                                                  "name":  "qa_gatekeeper",
+                                                  "role":  "QA and promotion gate agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "run non-destructive checks",
+                                                                           "validate Plex compatibility",
+                                                                           "enforce no-CAM and English-first catalogue rules"
+                                                                       ]
+                                              },
+                                              {
+                                                  "name":  "catalogue_curator",
+                                                  "role":  "Catalogue candidate and curation agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "generate candidates",
+                                                                           "simulate expansion",
+                                                                           "apply English-first policy"
+                                                                       ]
+                                              },
+                                              {
+                                                  "name":  "plex_readonly_analyst",
+                                                  "role":  "Plex read-only analysis agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "read Plex state",
+                                                                           "detect library compatibility",
+                                                                           "never mutate libraries without gate"
+                                                                       ]
+                                              },
+                                              {
+                                                  "name":  "memory_graph_agent",
+                                                  "role":  "Foundry memory graph agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "persist decisions",
+                                                                           "track design constraints",
+                                                                           "prevent regression"
+                                                                       ]
+                                              },
+                                              {
+                                                  "name":  "self_improvement_agent",
+                                                  "role":  "Self-improvement and technical debt agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "scan failures",
+                                                                           "propose improvements",
+                                                                           "reduce repeated regressions"
+                                                                       ]
+                                              },
+                                              {
+                                                  "name":  "local_ai_orchestrator",
+                                                  "role":  "Aider/Ollama orchestration agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "coordinate local model work",
+                                                                           "prepare prompts",
+                                                                           "summarise worker outputs"
+                                                                       ]
+                                              },
+                                              {
+                                                  "name":  "service_extractor",
+                                                  "role":  "Service extraction agent",
+                                                  "enabled":  true,
+                                                  "responsibilities":  [
+                                                                           "identify separable services",
+                                                                           "prepare modularisation plan",
+                                                                           "avoid breaking existing ScarFLIX lane"
+                                                                       ]
+                                              }
+                                          ],
+                               "features_dropped":  false,
+                               "design_reduced":  false
+                           },
+    "scarflix_summary":  {
+                             "generated_at":  "2026-06-05 14:53:40",
+                             "mission":  "ScarFLIX Mission 001",
+                             "overall_signal":  "GREEN_MISSION001_CONTROL_ACTIVE",
+                             "scope":  "Plex-compatible ScarFLIX autonomous media workflow under JasonOS Foundry",
+                             "catalogue_policy":  "English-first, no-CAM, Plex-compatible, QA before publish",
+                             "live_admission":  "green_gate_required",
+                             "visible_catalogue_count_last_known":  78,
+                             "active_lanes":  [
+                                                  {
+                                                      "name":  "media_workflow_design",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\media_workflow_design",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "media_workflow_dry_run",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\media_workflow_dry_run",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "branch_patches",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\branch_patches",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "catalogue_candidate_generation",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\catalogue_candidate_generation",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "catalogue_expansion_simulation",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\catalogue_expansion_simulation",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "plex_read_only_analysis",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\plex_read_only_analysis",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "agent_mesh",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\agent_mesh",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "memory_graph",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\memory_graph",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "voice_interface",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\voice_interface",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "autonomous_backlog",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\autonomous_backlog",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "self_improvement_loop",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\self_improvement_loop",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "architecture_review",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\architecture_review",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "technical_debt_scan",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\technical_debt_scan",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "local_ai_orchestration",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\local_ai_orchestration",
+                                                      "status":  "active_registered"
+                                                  },
+                                                  {
+                                                      "name":  "service_extraction",
+                                                      "enabled":  true,
+                                                      "mode":  "ceiling_mode_autonomous_lane",
+                                                      "path":  "D:\\PlexTools\\Foundry\\lanes\\service_extraction",
+                                                      "status":  "active_registered"
+                                                  }
+                                              ],
+                             "requires_jason":  false
+                         },
+    "next_action_queue":  [
+                              {
+                                  "priority":  "P1",
+                                  "lane":  "mission_control",
+                                  "action":  "Bootstrap full Mission Control Plane and keep all lanes active.",
+                                  "owner":  "local_foundry_worker",
+                                  "requires_jason":  false
+                              },
+                              {
+                                  "priority":  "P1",
+                                  "lane":  "agent_mesh",
+                                  "action":  "Activate agent mesh registry and map agents to ScarFLIX Mission 001 work.",
+                                  "owner":  "local_foundry_worker",
+                                  "requires_jason":  false
+                              },
+                              {
+                                  "priority":  "P1",
+                                  "lane":  "scarflix",
+                                  "action":  "Continue ScarFLIX Mission 001 delivery: catalogue candidates, simulation, Plex-compatible dry-run, no design reduction.",
+                                  "owner":  "local_foundry_worker",
+                                  "requires_jason":  false
+                              },
+                              {
+                                  "priority":  "P2",
+                                  "lane":  "aider_ollama",
+                                  "action":  "Prepare Aider/Ollama execution harness for branch patch generation.",
+                                  "owner":  "local_foundry_worker",
+                                  "requires_jason":  false
+                              },
+                              {
+                                  "priority":  "P2",
+                                  "lane":  "memory_graph",
+                                  "action":  "Persist project non-negotiables and regression guardrails.",
+                                  "owner":  "local_foundry_worker",
+                                  "requires_jason":  false
+                              },
+                              {
+                                  "priority":  "P2",
+                                  "lane":  "technical_debt",
+                                  "action":  "Scan current runner and bridge debt, then propose branch fixes.",
+                                  "owner":  "local_foundry_worker",
+                                  "requires_jason":  false
+                              },
+                              {
+                                  "priority":  "P3",
+                                  "lane":  "voice_interface",
+                                  "action":  "Prepare voice interface lane architecture without blocking ScarFLIX.",
+                                  "owner":  "local_foundry_worker",
+                                  "requires_jason":  false
+                              },
+                              {
+                                  "priority":  "P3",
+                                  "lane":  "service_extraction",
+                                  "action":  "Identify service boundaries for future Foundry modularisation.",
+                                  "owner":  "local_foundry_worker",
+                                  "requires_jason":  false
+                              }
+                          ],
+    "promotion_gates":  {
+                            "purpose":  "execution safety only, never design reduction",
+                            "live_media_write_through":  "green_gate_required",
+                            "plex_visible_catalogue_admission":  "green_gate_required",
+                            "live_plex_library_mutation":  "explicit_green_gate_required",
+                            "irreversible_delete":  "blocked_unless_explicit_jason_decision",
+                            "secret_value_exposure":  "blocked"
+                        }
 }
