@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         JasonOS Foundry ChatGPT Bridge
 // @namespace    https://github.com/r0cksteadyw00t/plex-logs
-// @version      2026.06.05.
-20260605_134945
-// @description  Polls the local JasonOS Foundry bridge and surfaces status/canary inside ChatGPT. Safe read-only UI bridge.
+// @version      2026.06.05.runtime.
+20260605_135825
+// @description  Runtime-proof ChatGPT bridge for JasonOS Foundry. Polls local bridge and sends browser heartbeat proof.
 // @author       JasonOS Foundry
 // @match        https://chatgpt.com/*
 // @match        https://chat.openai.com/*
@@ -20,211 +20,98 @@ https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_
 
 (function () {
     'use strict';
-
-    var BRIDGE_POLL_URL = 'http://127.0.0.1:8796/poll';
-    var BRIDGE_QUEUE_URL = 'http://127.0.0.1:8796/queue';
-    var BRIDGE_CANARY_URL = 'http://127.0.0.1:8796/canary';
-    var LOCAL_CANARY = '
-FOUNDRY_TAMPERMONKEY_CANARY tampermonkey-canary-20260605_134945
+    var POLL_URL = 'http://127.0.0.1:8796/poll';
+    var PROOF_URL = 'http://127.0.0.1:8796/tm-proof';
+    var RUNTIME_CANARY = '
+FOUNDRY_TAMPERMONKEY_RUNTIME_PROOF tm-runtime-proof-20260605_135825
 ';
     var POLL_MS = 5000;
-    var lastStatusText = '';
-    var lastInjectedMessage = '';
-    var enabledKey = 'jasonos_foundry_bridge_enabled';
+    var lastText = '';
+    var proofSentCount = 0;
 
-    function safeString(value) {
-        if (value === null || value === undefined) { return ''; }
-        try { return String(value); } catch (e) { return ''; }
-    }
-
-    function isEnabled() {
-        var v = window.localStorage.getItem(enabledKey);
-        if (v === null || v === undefined || v === '') { return true; }
-        return v === 'true';
-    }
-
-    function setEnabled(value) {
-        window.localStorage.setItem(enabledKey, value ? 'true' : 'false');
-    }
+    function s(v) { if (v === null || v === undefined) { return ''; } try { return String(v); } catch (e) { return ''; } }
+    function enc(v) { try { return encodeURIComponent(s(v)); } catch (e) { return ''; } }
 
     function requestJson(url, ok, fail) {
         try {
             GM_xmlhttpRequest({
                 method: 'GET',
-                url: url + '?cachebust=' + Date.now(),
+                url: url + (url.indexOf('?') >= 0 ? '&' : '?') + 'cachebust=' + Date.now(),
                 timeout: 8000,
                 onload: function (res) {
                     try {
-                        if (!res || res.status < 200 || res.status >= 300) {
-                            if (fail) { fail('HTTP ' + (res ? res.status : 'unknown')); }
-                            return;
-                        }
-                        var text = safeString(res.responseText).trim();
+                        if (!res || res.status < 200 || res.status >= 300) { if (fail) { fail('HTTP ' + (res ? res.status : 'unknown')); } return; }
+                        var text = s(res.responseText).trim();
                         var obj = {};
                         if (text.length > 0) { obj = JSON.parse(text); }
                         ok(obj, text);
-                    } catch (e) {
-                        if (fail) { fail('Parse error: ' + e.message); }
-                    }
+                    } catch (e) { if (fail) { fail('Parse error: ' + e.message); } }
                 },
                 onerror: function () { if (fail) { fail('Network error'); } },
                 ontimeout: function () { if (fail) { fail('Timeout'); } }
             });
-        } catch (e) {
-            if (fail) { fail('Request failed: ' + e.message); }
-        }
+        } catch (e) { if (fail) { fail('Request failed: ' + e.message); } }
     }
 
     function ensurePanel() {
         var panel = document.getElementById('jasonos-foundry-panel');
         if (panel) { return panel; }
-
         if (typeof GM_addStyle === 'function') {
-            GM_addStyle(
-                '#jasonos-foundry-panel { position: fixed; right: 14px; bottom: 14px; width: 360px; z-index: 2147483647; font-family: Arial, sans-serif; font-size: 12px; background: rgba(20,20,20,0.94); color: #f5f5f5; border: 1px solid rgba(255,255,255,0.24); border-radius: 10px; box-shadow: 0 6px 28px rgba(0,0,0,0.38); overflow: hidden; }' +
-                '#jasonos-foundry-panel-header { padding: 8px 10px; font-weight: bold; background: rgba(0,0,0,0.35); display: flex; justify-content: space-between; align-items: center; }' +
-                '#jasonos-foundry-panel-body { padding: 8px 10px; white-space: pre-wrap; line-height: 1.35; max-height: 220px; overflow: auto; }' +
-                '#jasonos-foundry-panel button { font-size: 11px; margin-left: 5px; cursor: pointer; }' +
-                '.jasonos-ok { color: #7cff8a; } .jasonos-warn { color: #ffd36e; } .jasonos-bad { color: #ff8d8d; }'
-            );
+            GM_addStyle('#jasonos-foundry-panel{position:fixed;right:14px;bottom:14px;width:380px;z-index:2147483647;font-family:Arial,sans-serif;font-size:12px;background:rgba(20,20,20,.95);color:#f5f5f5;border:1px solid rgba(255,255,255,.24);border-radius:10px;box-shadow:0 6px 28px rgba(0,0,0,.38);overflow:hidden}#jasonos-foundry-panel-header{padding:8px 10px;font-weight:bold;background:rgba(0,0,0,.35);display:flex;justify-content:space-between;align-items:center}#jasonos-foundry-panel-body{padding:8px 10px;white-space:pre-wrap;line-height:1.35;max-height:240px;overflow:auto}.jasonos-ok{color:#7cff8a}.jasonos-warn{color:#ffd36e}.jasonos-bad{color:#ff8d8d}');
         }
-
         panel = document.createElement('div');
         panel.id = 'jasonos-foundry-panel';
         var header = document.createElement('div');
         header.id = 'jasonos-foundry-panel-header';
-        var title = document.createElement('span');
-        title.textContent = 'JasonOS Foundry Bridge';
-        var buttons = document.createElement('span');
-        var toggle = document.createElement('button');
-        toggle.id = 'jasonos-toggle';
-        toggle.textContent = isEnabled() ? 'On' : 'Off';
-        toggle.onclick = function () {
-            setEnabled(!isEnabled());
-            toggle.textContent = isEnabled() ? 'On' : 'Off';
-            updatePanel('Bridge toggled: ' + (isEnabled() ? 'On' : 'Off'), isEnabled() ? 'ok' : 'warn');
-        };
-        var ping = document.createElement('button');
-        ping.textContent = 'Ping';
-        ping.onclick = function () { pollNow(true); };
-        buttons.appendChild(toggle);
-        buttons.appendChild(ping);
-        header.appendChild(title);
-        header.appendChild(buttons);
+        header.textContent = 'JasonOS Foundry Bridge';
         var body = document.createElement('div');
         body.id = 'jasonos-foundry-panel-body';
-        body.textContent = 'Starting bridge check...' + '\\n' + LOCAL_CANARY;
+        body.textContent = 'Runtime bridge loading...' + '\\n' + RUNTIME_CANARY;
         panel.appendChild(header);
         panel.appendChild(body);
         document.documentElement.appendChild(panel);
         return panel;
     }
 
-    function updatePanel(message, level) {
-        var panel = ensurePanel();
+    function updatePanel(text, level) {
+        ensurePanel();
         var body = document.getElementById('jasonos-foundry-panel-body');
         if (!body) { return; }
-        var cls = 'jasonos-warn';
-        if (level === 'ok') { cls = 'jasonos-ok'; }
-        if (level === 'bad') { cls = 'jasonos-bad'; }
-        body.className = cls;
-        body.textContent = message;
+        body.className = level === 'ok' ? 'jasonos-ok' : (level === 'bad' ? 'jasonos-bad' : 'jasonos-warn');
+        body.textContent = text;
     }
 
-    function findComposerTextArea() {
-        var selectors = [
-            'textarea[data-testid="prompt-textarea"]',
-            'div[contenteditable="true"][data-testid="prompt-textarea"]',
-            'textarea',
-            'div[contenteditable="true"]'
-        ];
-        for (var i = 0; i < selectors.length; i++) {
-            var el = document.querySelector(selectors[i]);
-            if (el) { return el; }
-        }
-        return null;
+    function sendProof(reason) {
+        var url = PROOF_URL + '?source=tampermonkey&reason=' + enc(reason) + '&url=' + enc(window.location.href) + '&canary=' + enc(RUNTIME_CANARY);
+        requestJson(url, function (obj) {
+            proofSentCount += 1;
+        }, function () {});
     }
 
-    function insertComposerText(text) {
-        var el = findComposerTextArea();
-        if (!el) { return false; }
-        try {
-            el.focus();
-            if (el.tagName && el.tagName.toLowerCase() === 'textarea') {
-                el.value = text;
-                el.dispatchEvent(new Event('input', { bubbles: true }));
-                el.dispatchEvent(new Event('change', { bubbles: true }));
-            } else {
-                el.textContent = text;
-                el.dispatchEvent(new InputEvent('input', { bubbles: true, inputType: 'insertText', data: text }));
-            }
-            return true;
-        } catch (e) {
-            return false;
-        }
-    }
-
-    function maybeSurfaceToComposer(obj) {
-        if (!obj) { return; }
-        var prompt = safeString(obj.chatgpt_prompt);
-        if (!prompt) { prompt = safeString(obj.expected_visible_text); }
-        if (!prompt) { prompt = safeString(obj.canary); }
-        if (!prompt) { return; }
-        if (prompt === lastInjectedMessage) { return; }
-        lastInjectedMessage = prompt;
-        var ok = insertComposerText(prompt);
-        if (ok) {
-            updatePanel('Bridge OK. Inserted canary into composer:' + '\\n' + prompt, 'ok');
-        } else {
-            updatePanel('Bridge OK, but ChatGPT composer was not found. Canary:' + '\\n' + prompt, 'warn');
-        }
-    }
-
-    function summarizeStatus(obj, raw) {
-        var lines = [];
-        lines.push('Status: CONNECTED');
-        lines.push('Local canary: ' + LOCAL_CANARY);
-        if (obj) {
-            if (obj.status) { lines.push('Bridge status: ' + safeString(obj.status)); }
-            if (obj.bridge) { lines.push('Bridge: ' + safeString(obj.bridge)); }
-            if (obj.generated_at) { lines.push('Generated: ' + safeString(obj.generated_at)); }
-            if (obj.expected_visible_text) { lines.push('Expected: ' + safeString(obj.expected_visible_text)); }
-            if (obj.chatgpt_prompt) { lines.push('Prompt: ' + safeString(obj.chatgpt_prompt)); }
-            if (obj.has_assistant_code !== undefined) { lines.push('Assistant code queued: ' + safeString(obj.has_assistant_code)); }
-        }
-        return lines.join('\\n');
-    }
-
-    function pollNow(forceSurface) {
-        ensurePanel();
-        if (!isEnabled()) {
-            updatePanel('Bridge paused.' + '\\n' + LOCAL_CANARY, 'warn');
-            return;
-        }
-        requestJson(BRIDGE_POLL_URL, function (obj, raw) {
-            var text = summarizeStatus(obj, raw);
-            if (text !== lastStatusText) {
-                lastStatusText = text;
-                updatePanel(text, 'ok');
-            }
-            if (forceSurface || safeString(obj.expected_visible_text).indexOf('FOUNDRY_BROWSER_CANARY') >= 0) {
-                maybeSurfaceToComposer(obj);
-            }
+    function poll() {
+        sendProof('poll');
+        requestJson(POLL_URL, function (obj) {
+            var lines = [];
+            lines.push('Status: BROWSER RUNTIME VERIFIED');
+            lines.push('Proof sent count: ' + proofSentCount);
+            lines.push('Runtime canary: ' + RUNTIME_CANARY);
+            if (obj && obj.status) { lines.push('Bridge status: ' + s(obj.status)); }
+            if (obj && obj.generated_at) { lines.push('Bridge generated: ' + s(obj.generated_at)); }
+            if (obj && obj.runtime_proof && obj.runtime_proof.runtime_seen) { lines.push('Bridge saw runtime proof: true'); }
+            var text = lines.join('\\n');
+            if (text !== lastText) { lastText = text; updatePanel(text, 'ok'); }
         }, function (err) {
-            updatePanel('Bridge not reachable at ' + BRIDGE_POLL_URL + '\\n' + err + '\\n' + LOCAL_CANARY, 'bad');
+            updatePanel('Tampermonkey loaded, but local bridge poll failed.' + '\\n' + err + '\\n' + RUNTIME_CANARY, 'bad');
         });
     }
 
     function boot() {
         ensurePanel();
-        updatePanel('JasonOS Foundry userscript loaded.' + '\\n' + LOCAL_CANARY, 'warn');
-        pollNow(false);
-        window.setInterval(function () { pollNow(false); }, POLL_MS);
+        updatePanel('Tampermonkey userscript loaded. Sending runtime proof...' + '\\n' + RUNTIME_CANARY, 'warn');
+        sendProof('boot');
+        setTimeout(poll, 1000);
+        window.setInterval(poll, POLL_MS);
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', boot);
-    } else {
-        boot();
-    }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', boot); } else { boot(); }
 })();
