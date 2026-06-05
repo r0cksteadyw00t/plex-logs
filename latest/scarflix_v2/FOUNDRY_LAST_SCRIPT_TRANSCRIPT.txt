@@ -1,0 +1,801 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20260605200056
+Username: MEDIASERVER\jason
+RunAs User: MEDIASERVER\jason
+Configuration Name: 
+Machine: MEDIASERVER (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 26452
+PSVersion: 5.1.22621.6133
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.6133
+BuildVersion: 10.0.22621.6133
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PS C:\Users\jason> function LOG {
+    param([string]$Message, [string]$Level)
+    if ([string]::IsNullOrWhiteSpace($Level)) { $Level = "INFO" }
+    $Line = "{0} [{1}] {2}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"), $Level, $Message
+    Write-Host $Line
+    try { $Line | Out-File -FilePath $MainLog -Append -Encoding UTF8 } catch {}
+}
+PS C:\Users\jason> function ERR {
+    param([string]$Where, [string]$Message)
+    $Line = "{0} [ERROR] {1}: {2}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"), $Where, $Message
+    Write-Host $Line
+    try { $Line | Out-File -FilePath $ErrorLog -Append -Encoding UTF8 } catch {}
+}
+PS C:\Users\jason> function Get-TokenInfo {
+    $Paths = @(
+        "C:\Users\jason\OneDrive\Public\TOKENS\github_pat.txt",
+        "C:\Users\jason\OneDrive\Public\TOKENS\github_token.txt",
+        "C:\Users\jason\OneDrive\Public\TOKENS\gist_token.txt",
+        "D:\PlexTools\github_pat.txt",
+        "D:\PlexTools\github_token.txt",
+        "D:\PlexTools\gist_token.txt",
+        "D:\PlexTools\tokens\github_pat.txt",
+        "D:\PlexTools\tokens\github_token.txt",
+        "D:\PlexTools\tokens\gist_token.txt"
+    )
+
+    $Checked = New-Object System.Collections.ArrayList
+    $Obj = New-Object PSObject
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "found" -Value $false
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "path" -Value ""
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "length" -Value 0
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "value" -Value ""
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "checked" -Value @()
+
+    foreach ($Path in $Paths) {
+        try {
+            [void]$Checked.Add($Path)
+            if (Test-Path -LiteralPath $Path) {
+                $Value = (Get-Content -LiteralPath $Path -Raw -ErrorAction SilentlyContinue).Trim()
+                if (-not [string]::IsNullOrWhiteSpace($Value)) {
+                    $Obj.found = $true
+                    $Obj.path = $Path
+                    $Obj.length = $Value.Length
+                    $Obj.value = $Value
+                    $Obj.checked = @($Checked)
+                    return $Obj
+                }
+            }
+        } catch {
+            ERR "Get-TokenInfo" $_.Exception.Message
+        }
+    }
+
+    $Obj.checked = @($Checked)
+    return $Obj
+}
+PS C:\Users\jason> function Test-CommandExists {
+    param([string]$CommandName)
+    try {
+        $Cmd = Get-Command $CommandName -ErrorAction SilentlyContinue
+        if ($null -ne $Cmd) { return $true }
+    } catch {}
+    return $false
+}
+PS C:\Users\jason> function Test-Url {
+    param([string]$Url, [int]$TimeoutSec)
+    if ($TimeoutSec -le 0) { $TimeoutSec = 10 }
+    $Obj = New-Object PSObject
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "url" -Value $Url
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "ok" -Value $false
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "status" -Value ""
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "error" -Value ""
+    try {
+        $Resp = Invoke-WebRequest -Uri $Url -UseBasicParsing -TimeoutSec $TimeoutSec
+        $Obj.status = [string]$Resp.StatusCode
+        if ($Resp.StatusCode -ge 200 -and $Resp.StatusCode -lt 500) { $Obj.ok = $true }
+    } catch {
+        $Obj.error = $_.Exception.Message
+    }
+    return $Obj
+}
+PS C:\Users\jason> function Publish-GitHubText {
+    param([string]$FileName, [string]$Text, [string]$Message)
+
+    try { $Text | Out-File -FilePath (Join-Path $PublicRoot $FileName) -Encoding UTF8 } catch { ERR ("Local write " + $FileName) $_.Exception.Message }
+
+    $TokenInfo = Get-TokenInfo
+    if ($TokenInfo.found -ne $true) {
+        LOG ("GitHub token not found, wrote local file only: " + $FileName) "WARN"
+        return $false
+    }
+
+    $RepoPath = "latest/scarflix_v2/" + $FileName
+    try {
+        $Headers = @{
+            "User-Agent" = "JasonOS-Foundry-Full-Remote-Bootstrap"
+            "Accept" = "application/vnd.github+json"
+            "X-GitHub-Api-Version" = "2022-11-28"
+            "Authorization" = "Bearer " + $TokenInfo.value
+        }
+
+        $Meta = $null
+        try {
+            $Meta = Invoke-RestMethod -Method Get -Uri ($RepoApiBase + "/" + $RepoPath + "?ref=" + $Branch) -Headers $Headers -TimeoutSec 20
+        } catch {}
+
+        $BodyObj = @{
+            message = $Message
+            content = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($Text))
+            branch = $Branch
+        }
+
+        if ($null -ne $Meta -and -not [string]::IsNullOrWhiteSpace($Meta.sha)) {
+            $BodyObj["sha"] = $Meta.sha
+        }
+
+        $Body = $BodyObj | ConvertTo-Json -Depth 30
+        Invoke-RestMethod -Method Put -Uri ($RepoApiBase + "/" + $RepoPath) -Headers $Headers -Body $Body -ContentType "application/json" -TimeoutSec 45 | Out-Null
+        LOG ("Published GitHub file: latest/scarflix_v2/" + $FileName) "OK"
+        return $true
+    } catch {
+        ERR ("GitHub publish " + $FileName) $_.Exception.Message
+        return $false
+    }
+}
+PS C:\Users\jason> function Publish-GitHubJson {
+    param([string]$FileName, [object]$Object, [string]$Message)
+    try {
+        $Json = $Object | ConvertTo-Json -Depth 100
+        return (Publish-GitHubText -FileName $FileName -Text $Json -Message $Message)
+    } catch {
+        ERR ("Publish-GitHubJson " + $FileName) $_.Exception.Message
+        return $false
+    }
+}
+PS C:\Users\jason> function New-StatusObject {
+    param([string]$Signal, [string]$Detail)
+    $TokenInfo = Get-TokenInfo
+    $Obj = New-Object PSObject
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "generated_at" -Value (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "generated_at_utc" -Value ((Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"))
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "overall_signal" -Value $Signal
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "detail" -Value $Detail
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "host" -Value $env:COMPUTERNAME
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "user" -Value $env:USERNAME
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "run_stamp" -Value $RunStamp
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "root" -Value $Root
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "foundry_root" -Value $FoundryRoot
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "token_found" -Value $TokenInfo.found
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "token_file" -Value $TokenInfo.path
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "token_length" -Value $TokenInfo.length
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "checked_token_paths" -Value $TokenInfo.checked
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "docker_present" -Value (Test-CommandExists "docker")
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "git_present" -Value (Test-CommandExists "git")
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "ollama_present" -Value (Test-CommandExists "ollama")
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "tailscale_present" -Value (Test-CommandExists "tailscale")
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "aider_present" -Value (Test-CommandExists "aider")
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "authority_core_local" -Value (Test-Url "http://127.0.0.1:8790/api/status" 8)
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "open_webui_local" -Value (Test-Url "http://127.0.0.1:8788" 8)
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "ollama_local" -Value (Test-Url "http://127.0.0.1:11434/api/tags" 8)
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "main_log" -Value $MainLog
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "error_log" -Value $ErrorLog
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "transcript_path" -Value $TranscriptPath
+    Add-Member -InputObject $Obj -MemberType NoteProperty -Name "chatgpt_pickup_files" -Value @(
+        "FOUNDRY_STATUS_INDEX.json",
+        "FOUNDRY_LAST_SCRIPT_STATUS.json",
+        "FOUNDRY_LAST_SCRIPT_LOG.txt",
+        "FOUNDRY_LAST_SCRIPT_ERRORS.txt",
+        "FOUNDRY_LAST_SCRIPT_TRANSCRIPT.txt",
+        "FOUNDRY_LAST_SCRIPT_COMPLETE_MARKER.txt",
+        "REMOTE_EXECUTOR_INSTALL_STATUS.json",
+        "REMOTE_EXECUTOR_STATUS.json",
+        "REMOTE_EXECUTOR_LAST_LOG.txt",
+        "REMOTE_EXECUTOR_LAST_ERRORS.txt",
+        "FOUNDRY_STATUS_REPORTER_STATUS.json",
+        "FOUNDRY_STATUS_REPORTER_LAST_LOG.txt",
+        "FOUNDRY_STATUS_REPORTER_LAST_ERRORS.txt",
+        "COMMAND_CENTRE_STATUS.json",
+        "AUTHORITY_CORE_STATUS.json",
+        "COMMAND_CENTRE_REMOTE_ACCESS_STATUS.json",
+        "FOUNDRY_ACCESS_READY.md"
+    )
+    return $Obj
+}
+PS C:\Users\jason> function Register-MinuteTask {
+    param([string]$Name, [string]$Path, [int]$Minutes)
+    if ($Minutes -le 0) { $Minutes = 1 }
+    $Ok = $false
+
+    try {
+        $Existing = Get-ScheduledTask -TaskName $Name -ErrorAction SilentlyContinue
+        if ($null -ne $Existing) {
+            Stop-ScheduledTask -TaskName $Name -ErrorAction SilentlyContinue
+            Unregister-ScheduledTask -TaskName $Name -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
+            LOG ("Removed old task " + $Name) "OK"
+        }
+    } catch {
+        ERR ("Remove task " + $Name) $_.Exception.Message
+    }
+
+    try {
+        $TaskStart = (Get-Date).AddMinutes(1).ToString("HH:mm")
+        $Cmd = 'schtasks /create /tn "{0}" /sc minute /mo {1} /st {2} /tr "powershell.exe -NoProfile -ExecutionPolicy Bypass -File ""{3}""" /f' -f $Name, $Minutes, $TaskStart, $Path
+        cmd.exe /c $Cmd | Out-Null
+        LOG ("Registered task {0} every {1} minute(s)" -f $Name, $Minutes) "OK"
+        $Ok = $true
+    } catch {
+        ERR ("Create task " + $Name) $_.Exception.Message
+    }
+
+    return $Ok
+}
+PS C:\Users\jason> function Try-Firewall {
+    param([string]$RuleName, [int]$Port)
+    try {
+        $Existing = Get-NetFirewallRule -DisplayName $RuleName -ErrorAction SilentlyContinue
+        if ($null -eq $Existing) {
+            New-NetFirewallRule -DisplayName $RuleName -Direction Inbound -Action Allow -Protocol TCP -LocalPort $Port -Profile Any | Out-Null
+            LOG ("Firewall rule added for TCP " + $Port) "OK"
+        } else {
+            LOG ("Firewall rule already exists for TCP " + $Port) "OK"
+        }
+    } catch {
+        ERR ("Firewall " + $Port) $_.Exception.Message
+    }
+}
+PS C:\Users\jason> function Invoke-DockerCompose {
+    param([string[]]$ArgsList)
+    try {
+        $ComposePlugin = $false
+        try { docker compose version | Out-Null; if ($LASTEXITCODE -eq 0) { $ComposePlugin = $true } } catch {}
+        if ($ComposePlugin) {
+            & docker compose @ArgsList
+            return $LASTEXITCODE
+        }
+        if (Test-CommandExists "docker-compose") {
+            & docker-compose @ArgsList
+            return $LASTEXITCODE
+        }
+    } catch {
+        ERR "Invoke-DockerCompose" $_.Exception.Message
+    }
+    return 999
+}
+PS C:\Users\jason> LOG "Starting full Foundry remote automation bootstrap." "START"
+2026-06-05 20:00:58 [START] Starting full Foundry remote automation bootstrap.
+PS C:\Users\jason> $StartStatus = New-StatusObject -Signal "GREEN_FULL_BOOTSTRAP_STARTED" -Detail "Full bootstrap started. Status publishing is active."
+PS C:\Users\jason> TerminatingError(Invoke-WebRequest): "The operation has timed out."
+PS C:\Users\jason> Publish-GitHubJson -FileName "FOUNDRY_LAST_SCRIPT_STATUS.json" -Object $StartStatus -Message ("Full bootstrap started " + $RunStamp) | Out-Null
+PS C:\Users\jason> TerminatingError(Invoke-RestMethod): "{"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}"
+2026-06-05 20:01:09 [OK] Published GitHub file: latest/scarflix_v2/FOUNDRY_LAST_SCRIPT_STATUS.json
+PS C:\Users\jason> Publish-GitHubJson -FileName "FOUNDRY_STATUS_INDEX.json" -Object $StartStatus -Message ("Foundry status index start " + $RunStamp) | Out-Null
+PS C:\Users\jason> TerminatingError(Invoke-RestMethod): "{"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}"
+2026-06-05 20:01:10 [OK] Published GitHub file: latest/scarflix_v2/FOUNDRY_STATUS_INDEX.json
+PS C:\Users\jason> Publish-GitHubJson -FileName ("FOUNDRY_CANARY_" + $RunStamp + ".json") -Object $StartStatus -Message ("Foundry canary start " + $RunStamp) | Out-Null
+PS C:\Users\jason> TerminatingError(Invoke-RestMethod): "{"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}"
+2026-06-05 20:01:12 [OK] Published GitHub file: latest/scarflix_v2/FOUNDRY_CANARY_20260605_200050.json
+PS C:\Users\jason> Try-Firewall -RuleName "JasonOS Foundry Command Centre 8788" -Port 8788
+2026-06-05 20:01:14 [OK] Firewall rule already exists for TCP 8788
+PS C:\Users\jason> Try-Firewall -RuleName "JasonOS Foundry Authority Core 8790" -Port 8790
+2026-06-05 20:01:15 [OK] Firewall rule added for TCP 8790
+PS C:\Users\jason> $AuthorityAppCode = @'
+import os
+import json
+import sqlite3
+import urllib.request
+import base64
+from datetime import datetime, timedelta, timezone
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse, JSONResponse
+
+PUBLIC_DIR = os.environ.get("FOUNDRY_PUBLIC_DIR", "/public")
+DATA_DIR = os.environ.get("FOUNDRY_DATA_DIR", "/data")
+TOKEN_DIR = os.environ.get("FOUNDRY_TOKEN_DIR", "/tokens")
+DB_PATH = os.path.join(DATA_DIR, "sqlite", "foundry_command_bus.db")
+REPO_API = "https://api.github.com/repos/r0cksteadyw00t/plex-logs/contents"
+BRANCH = "main"
+
+os.makedirs(PUBLIC_DIR, exist_ok=True)
+os.makedirs(os.path.join(DATA_DIR, "sqlite"), exist_ok=True)
+os.makedirs(os.path.join(DATA_DIR, "queues"), exist_ok=True)
+os.makedirs(os.path.join(DATA_DIR, "memory"), exist_ok=True)
+os.makedirs(os.path.join(DATA_DIR, "artifacts"), exist_ok=True)
+
+app = FastAPI(title="JasonOS Foundry Authority Core", version="2.0")
+
+def now():
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+def now_utc():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+def init_db():
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute("create table if not exists commands (id text primary key, action text, reason text, status text, created_at text, updated_at text)")
+    cur.execute("create table if not exists events (id integer primary key autoincrement, event_type text, detail text, created_at text)")
+    cur.execute("create table if not exists agents (name text primary key, role text, status text, heartbeat text)")
+    cur.execute("create table if not exists memory (id integer primary key autoincrement, node_type text, title text, content text, created_at text)")
+    con.commit()
+    con.close()
+
+def token():
+    for name in ["github_pat.txt", "github_token.txt", "gist_token.txt"]:
+        p = os.path.join(TOKEN_DIR, name)
+        try:
+            if os.path.exists(p):
+                v = open(p, "r", encoding="utf-8").read().strip()
+                if v:
+                    return v
+        except Exception:
+            pass
+    return ""
+
+def github_publish(filename, obj):
+    t = token()
+    if not t:
+        return False
+    path = "latest/scarflix_v2/" + filename
+    data = json.dumps(obj, indent=2)
+    headers = {
+        "User-Agent": "JasonOS-Foundry-Authority-Core",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "Authorization": "Bearer " + t
+    }
+    sha = None
+    try:
+        req = urllib.request.Request(REPO_API + "/" + path + "?ref=" + BRANCH, headers=headers, method="GET")
+        with urllib.request.urlopen(req, timeout=12) as resp:
+            meta = json.loads(resp.read().decode("utf-8"))
+            sha = meta.get("sha")
+    except Exception:
+        sha = None
+    body = {"message": "Foundry telemetry " + filename + " " + now(), "content": base64.b64encode(data.encode("utf-8")).decode("ascii"), "branch": BRANCH}
+    if sha:
+        body["sha"] = sha
+    try:
+        send_headers = dict(headers)
+        send_headers["Content-Type"] = "application/json"
+        req = urllib.request.Request(REPO_API + "/" + path, data=json.dumps(body).encode("utf-8"), headers=send_headers, method="PUT")
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            return resp.status in [200, 201]
+    except Exception:
+        return False
+
+def publish(filename, obj):
+    obj["published_at"] = now()
+    obj["published_at_utc"] = now_utc()
+    try:
+        with open(os.path.join(PUBLIC_DIR, filename), "w", encoding="utf-8") as f:
+            json.dump(obj, f, indent=2)
+    except Exception:
+        pass
+    return github_publish(filename, obj)
+
+def agents():
+    return [
+        {"name":"mission_governor","role":"Owns missions, priorities, state and next actions","status":"active"},
+        {"name":"command_centre_assistant","role":"Conversational interface and command translation","status":"active"},
+        {"name":"scarflix_mission_lead","role":"Owns ScarFLIX Mission 001 execution","status":"active"},
+        {"name":"catalogue_curator","role":"Generates and scores catalogue candidates","status":"active"},
+        {"name":"simulation_agent","role":"Runs expansion and promotion simulations","status":"active"},
+        {"name":"plex_readonly_analyst","role":"Reads Plex state and compatibility","status":"active"},
+        {"name":"aider_implementer","role":"Creates Git-aware local patches","status":"registered"},
+        {"name":"ollama_reasoner","role":"Local reasoning and summarisation","status":"registered"},
+        {"name":"qa_gatekeeper","role":"Tests and validates outputs","status":"active"},
+        {"name":"memory_graph_agent","role":"Persists decisions and prevents regression","status":"active"},
+        {"name":"self_healing_watchdog","role":"Detects failures and triggers repair","status":"active"},
+        {"name":"self_evolution_agent","role":"Improves Foundry code, prompts and UI","status":"active"},
+        {"name":"external_model_federation_agent","role":"Prepares ChatGPT and Grok prompt packs","status":"active"},
+        {"name":"remote_access_manager","role":"Publishes LAN and Tailscale access status","status":"active"},
+        {"name":"remote_executor_agent","role":"Consumes GitHub remote execution payloads and executes local jobs","status":"active"}
+    ]
+
+def status_bundle():
+    init_db()
+    return {
+        "platform":"JasonOS Foundry",
+        "mission":"ScarFLIX Mission 001",
+        "mode":"CEILING_MODE_FULL_AUTONOMY",
+        "overall_signal":"GREEN_AUTHORITY_CORE_RUNNING",
+        "command_centre_url":"http://mediaserver:8788",
+        "authority_core_url":"http://mediaserver:8790",
+        "open_webui_url":"http://mediaserver:8788",
+        "db_path":DB_PATH,
+        "agents":agents(),
+        "active_lanes":["media_workflow_design","media_workflow_dry_run","branch_patches","catalogue_candidate_generation","catalogue_expansion_simulation","plex_read_only_analysis","agent_mesh","memory_graph","voice_interface","autonomous_backlog","self_improvement_loop","architecture_review","technical_debt_scan","local_ai_orchestration","service_extraction"],
+        "jason_intervention":"only_key_decisions_or_true_blockers",
+        "chatgpt_github_connector_required":False,
+        "local_token_vault_used":True
+    }
+
+def queue_command(action, reason):
+    init_db()
+    cid = "foundry-v2-" + action + "-" + datetime.now().strftime("%Y%m%d_%H%M%S")
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute("insert or replace into commands (id, action, reason, status, created_at, updated_at) values (?, ?, ?, ?, ?, ?)", (cid, action, reason, "queued", now(), now()))
+    con.commit()
+    con.close()
+    cmd = {"id":cid,"enabled":True,"action":action,"reason":reason,"status":"queued","created_at":now(),"expires_utc":(datetime.now(timezone.utc)+timedelta(hours=12)).strftime("%Y-%m-%dT%H:%M:%SZ"),"jason_intervention":"only_key_decisions_or_true_blockers"}
+    publish("FOUNDRY_V2_LAST_COMMAND.json", cmd)
+    return cmd
+
+@app.on_event("startup")
+async def startup():
+    init_db()
+    publish("AUTHORITY_CORE_STATUS.json", status_bundle())
+    publish("FOUNDRY_AGENT_RUNTIME_STATUS.json", {"overall_signal":"GREEN_AGENT_RUNTIME_REGISTERED","agents":agents()})
+    publish("SCARFLIX_MISSION001_EXECUTION_STATUS.json", {"overall_signal":"GREEN_MISSION001_AUTHORITY_READY","mission":"ScarFLIX Mission 001","visible_catalogue_count_last_known":78})
+
+@app.get("/")
+async def root():
+    html = "<html><head><title>JasonOS Foundry Authority Core</title><style>body{font-family:Arial;background:#0b1020;color:#e5e7eb;padding:20px}a{color:#93c5fd}.card{background:#111827;border:1px solid #273449;border-radius:12px;padding:14px;margin:10px 0}code{color:#86efac}</style></head><body><h1>JasonOS Foundry Authority Core</h1><div class=card><p>Status: <code>GREEN_AUTHORITY_CORE_RUNNING</code></p><p>Command Centre: <a href=\"http://mediaserver:8788\">http://mediaserver:8788</a></p><p>API docs: <a href=\"/docs\">/docs</a></p></div></body></html>"
+    return HTMLResponse(html)
+
+@app.get("/api/status")
+async def api_status():
+    s = status_bundle()
+    publish("AUTHORITY_CORE_STATUS.json", s)
+    return JSONResponse(s)
+
+@app.post("/api/chat")
+async def api_chat(req: Request):
+    body = await req.json()
+    msg = str(body.get("message",""))
+    low = msg.lower()
+    if "expand" in low or "catalog" in low or "catalogue" in low or "scarflix" in low:
+        cmd = queue_command("scarflix_expand_catalogue", msg)
+        reply = "Queued ScarFLIX catalogue expansion through the local Authority Core: " + cmd["id"]
+    elif "continue" in low or "automation" in low or "proceed" in low:
+        cmd = queue_command("foundry_continue_autonomy", msg)
+        reply = "Queued continued Foundry autonomy through the local Authority Core: " + cmd["id"]
+    elif "grok" in low or "chatgpt" in low:
+        cmd = queue_command("external_model_prompt_pack", msg)
+        reply = "Queued external model prompt pack generation: " + cmd["id"]
+    elif "aider" in low or "implement" in low:
+        cmd = queue_command("aider_patch_request", msg)
+        reply = "Queued Aider implementation request: " + cmd["id"]
+    else:
+        s = status_bundle()
+        reply = "Foundry is running. Mission: ScarFLIX Mission 001. Signal: " + s["overall_signal"] + ". Ask for continue automation, expand ScarFLIX, ask Grok, ask ChatGPT, or implement with Aider."
+    resp = {"reply":reply,"message":msg,"status":status_bundle()}
+    publish("FOUNDRY_V2_LAST_CHAT.json", resp)
+    return JSONResponse(resp)
+
+@app.post("/api/command")
+async def api_command(req: Request):
+    body = await req.json()
+    action = str(body.get("action","foundry_continue_autonomy"))
+    reason = str(body.get("reason","Command submitted to Authority Core"))
+    cmd = queue_command(action, reason)
+    return JSONResponse(cmd)
+
+@app.get("/api/agents")
+async def api_agents():
+    return JSONResponse({"agents":agents()})
+
+@app.get("/api/ready")
+async def api_ready():
+    return JSONResponse({"ready":True,"signal":"GREEN_AUTHORITY_CORE_RUNNING","time":now()})
+'@
+PS C:\Users\jason> $RequirementsCode = @"
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+"@
+PS C:\Users\jason> $DockerfileCode = @"
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
+COPY app.py /app/app.py
+EXPOSE 8790
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8790"]
+"@
+PS C:\Users\jason> $ComposeCode = @"
+services:
+  foundry-authority-core:
+    build:
+      context: ./apps/authority-core
+    container_name: foundry-authority-core
+    restart: unless-stopped
+    ports:
+      - "8790:8790"
+    environment:
+      - FOUNDRY_PUBLIC_DIR=/public
+      - FOUNDRY_DATA_DIR=/data
+      - FOUNDRY_TOKEN_DIR=/tokens
+    volumes:
+      - D:/PlexTools/public/latest/scarflix_v2:/public
+      - D:/PlexTools/Foundry/data:/data
+      - C:/Users/jason/OneDrive/Public/TOKENS:/tokens:ro
+
+  foundry-command-centre:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: foundry-command-centre
+    restart: unless-stopped
+    ports:
+      - "8788:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - WEBUI_NAME=JasonOS Foundry Command Centre
+      - ENABLE_SIGNUP=true
+    volumes:
+      - D:/PlexTools/Foundry/data/open-webui:/app/backend/data
+    depends_on:
+      - foundry-authority-core
+"@
+PS C:\Users\jason> $EnvCode = @"
+FOUNDRY_ROOT=D:\PlexTools\Foundry
+FOUNDRY_PUBLIC=D:\PlexTools\public\latest\scarflix_v2
+TOKEN_ROOT=C:\Users\jason\OneDrive\Public\TOKENS
+COMMAND_CENTRE_PORT=8788
+AUTHORITY_CORE_PORT=8790
+"@
+PS C:\Users\jason> try {
+    $AuthorityAppCode | Out-File -FilePath $AuthorityAppPath -Encoding UTF8
+    $RequirementsCode | Out-File -FilePath $AuthorityReqPath -Encoding UTF8
+    $DockerfileCode | Out-File -FilePath $AuthorityDockerfilePath -Encoding UTF8
+    $ComposeCode | Out-File -FilePath $ComposePath -Encoding UTF8
+    $EnvCode | Out-File -FilePath $EnvPath -Encoding UTF8
+    LOG "Generated Docker/Open WebUI/FastAPI Authority Core files." "OK"
+} catch {
+    ERR "Generate stack files" $_.Exception.Message
+}
+2026-06-05 20:01:17 [OK] Generated Docker/Open WebUI/FastAPI Authority Core files.
+PS C:\Users\jason> $ReporterCode = @'
+$ErrorActionPreference = "Continue"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$Root = "D:\PlexTools"
+$PublicRoot = "D:\PlexTools\public\latest\scarflix_v2"
+$LogRoot = "D:\PlexTools\logs"
+$TokenRoot = "C:\Users\jason\OneDrive\Public\TOKENS"
+$RepoApiBase = "https://api.github.com/repos/r0cksteadyw00t/plex-logs/contents"
+$Stamp = Get-Date -Format "yyyyMMdd_HHmmss"
+foreach ($Dir in @($Root,$PublicRoot,$LogRoot,$TokenRoot)) { try { New-Item -ItemType Directory -Path $Dir -Force | Out-Null } catch {} }
+$ReporterLog = Join-Path $LogRoot ("foundry_status_reporter_" + (Get-Date -Format "yyyyMMdd") + ".log")
+$ReporterErr = Join-Path $LogRoot ("foundry_status_reporter_errors_" + (Get-Date -Format "yyyyMMdd") + ".txt")
+function L { param([string]$M) $Line="{0} {1}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"),$M; Write-Host $Line; try{$Line|Out-File -FilePath $ReporterLog -Append -Encoding UTF8}catch{} }
+function E { param([string]$M) $Line="{0} ERROR {1}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"),$M; Write-Host $Line; try{$Line|Out-File -FilePath $ReporterErr -Append -Encoding UTF8}catch{} }
+function GetToken { foreach($P in @("C:\Users\jason\OneDrive\Public\TOKENS\github_pat.txt","C:\Users\jason\OneDrive\Public\TOKENS\github_token.txt","C:\Users\jason\OneDrive\Public\TOKENS\gist_token.txt","D:\PlexTools\github_pat.txt","D:\PlexTools\github_token.txt","D:\PlexTools\gist_token.txt")){ try{ if(Test-Path -LiteralPath $P){$V=(Get-Content -LiteralPath $P -Raw).Trim(); if(-not [string]::IsNullOrWhiteSpace($V)){return $V}}}catch{} }; return $null }
+function PublishText { param([string]$Name,[string]$Text,[string]$Message) try{$Text|Out-File -FilePath (Join-Path $PublicRoot $Name)-Encoding UTF8}catch{}; $T=GetToken; if([string]::IsNullOrWhiteSpace($T)){return $false}; try{ $RepoPath="latest/scarflix_v2/"+$Name; $H=@{"User-Agent"="JasonOS-Status-Reporter";"Accept"="application/vnd.github+json";"X-GitHub-Api-Version"="2022-11-28";"Authorization"="Bearer "+$T}; $Meta=$null; try{$Meta=Invoke-RestMethod -Method Get -Uri ($RepoApiBase+"/"+$RepoPath+"?ref=main") -Headers $H -TimeoutSec 15}catch{}; $B=@{message=$Message;content=[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($Text));branch="main"}; if($null -ne $Meta -and -not [string]::IsNullOrWhiteSpace($Meta.sha)){$B["sha"]=$Meta.sha}; $Body=$B|ConvertTo-Json -Depth 20; Invoke-RestMethod -Method Put -Uri ($RepoApiBase+"/"+$RepoPath) -Headers $H -Body $Body -ContentType "application/json" -TimeoutSec 30|Out-Null; return $true }catch{E ("Publish " + $Name + " " + $_.Exception.Message); return $false} }
+function TestUrl { param([string]$U) $O=New-Object PSObject; Add-Member -InputObject $O -MemberType NoteProperty -Name "url" -Value $U; Add-Member -InputObject $O -MemberType NoteProperty -Name "ok" -Value $false; Add-Member -InputObject $O -MemberType NoteProperty -Name "status" -Value ""; Add-Member -InputObject $O -MemberType NoteProperty -Name "error" -Value ""; try{$R=Invoke-WebRequest -Uri $U -UseBasicParsing -TimeoutSec 8; $O.status=[string]$R.StatusCode; if($R.StatusCode -ge 200 -and $R.StatusCode -lt 500){$O.ok=$true}}catch{$O.error=$_.Exception.Message}; return $O }
+$Files=New-Object System.Collections.ArrayList
+try{ foreach($F in Get-ChildItem -LiteralPath $PublicRoot -File -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 30){$X=New-Object PSObject; Add-Member -InputObject $X -MemberType NoteProperty -Name "name" -Value $F.Name; Add-Member -InputObject $X -MemberType NoteProperty -Name "last_write" -Value $F.LastWriteTime.ToString("yyyy-MM-dd HH:mm:ss"); Add-Member -InputObject $X -MemberType NoteProperty -Name "length" -Value $F.Length; [void]$Files.Add($X)}}catch{}
+$Token=GetToken
+$Obj=New-Object PSObject
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "generated_at" -Value (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "overall_signal" -Value "GREEN_STATUS_REPORTER_RUNNING"
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "token_found" -Value (-not [string]::IsNullOrWhiteSpace($Token))
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "token_length" -Value $(if([string]::IsNullOrWhiteSpace($Token)){0}else{$Token.Length})
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "authority_core_local" -Value (TestUrl "http://127.0.0.1:8790/api/status")
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "open_webui_local" -Value (TestUrl "http://127.0.0.1:8788")
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "ollama_local" -Value (TestUrl "http://127.0.0.1:11434/api/tags")
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "recent_public_files" -Value @($Files)
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "reporter_log" -Value $ReporterLog
+Add-Member -InputObject $Obj -MemberType NoteProperty -Name "reporter_errors" -Value $ReporterErr
+$Json=$Obj|ConvertTo-Json -Depth 80
+PublishText -Name "FOUNDRY_STATUS_REPORTER_STATUS.json" -Text $Json -Message ("Status reporter " + $Stamp) | Out-Null
+try{ if(Test-Path -LiteralPath $ReporterLog){PublishText -Name "FOUNDRY_STATUS_REPORTER_LAST_LOG.txt" -Text (Get-Content -LiteralPath $ReporterLog -Raw) -Message ("Reporter log " + $Stamp)|Out-Null}}catch{}
+try{ if(Test-Path -LiteralPath $ReporterErr){PublishText -Name "FOUNDRY_STATUS_REPORTER_LAST_ERRORS.txt" -Text (Get-Content -LiteralPath $ReporterErr -Raw) -Message ("Reporter errors " + $Stamp)|Out-Null}}catch{}
+L "Status reporter completed."
+'@
+PS C:\Users\jason> $ExecutorCode = @'
+$ErrorActionPreference = "Continue"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$RemoteRoot = "D:\PlexTools\Foundry\remote_jobs"
+$PayloadRoot = "D:\PlexTools\Foundry\remote_jobs\payloads"
+$ResultRoot = "D:\PlexTools\Foundry\remote_jobs\results"
+$PublicRoot = "D:\PlexTools\public\latest\scarflix_v2"
+$LogRoot = "D:\PlexTools\logs"
+$RepoApiBase = "https://api.github.com/repos/r0cksteadyw00t/plex-logs/contents"
+$RawBase = "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2"
+$StatePath = Join-Path $RemoteRoot "remote_executor_state.json"
+$LogPath = Join-Path $LogRoot ("foundry_remote_executor_" + (Get-Date -Format "yyyyMMdd") + ".log")
+$ErrPath = Join-Path $LogRoot ("foundry_remote_executor_errors_" + (Get-Date -Format "yyyyMMdd") + ".txt")
+foreach($D in @($RemoteRoot,$PayloadRoot,$ResultRoot,$PublicRoot,$LogRoot)){try{New-Item -ItemType Directory -Path $D -Force|Out-Null}catch{}}
+function L{param([string]$M)$Line="{0} {1}"-f(Get-Date -Format "yyyy-MM-dd HH:mm:ss"),$M;Write-Host $Line;try{$Line|Out-File -FilePath $LogPath -Append -Encoding UTF8}catch{}}
+function E{param([string]$M)$Line="{0} ERROR {1}"-f(Get-Date -Format "yyyy-MM-dd HH:mm:ss"),$M;Write-Host $Line;try{$Line|Out-File -FilePath $ErrPath -Append -Encoding UTF8}catch{}}
+function GetToken{foreach($P in @("C:\Users\jason\OneDrive\Public\TOKENS\github_pat.txt","C:\Users\jason\OneDrive\Public\TOKENS\github_token.txt","C:\Users\jason\OneDrive\Public\TOKENS\gist_token.txt","D:\PlexTools\github_pat.txt","D:\PlexTools\github_token.txt","D:\PlexTools\gist_token.txt")){try{if(Test-Path -LiteralPath $P){$V=(Get-Content -LiteralPath $P -Raw).Trim();if(-not [string]::IsNullOrWhiteSpace($V)){return $V}}}catch{}};return $null}
+function PublishText{param([string]$Name,[string]$Text,[string]$Msg)try{$Text|Out-File -FilePath (Join-Path $PublicRoot $Name)-Encoding UTF8}catch{};$T=GetToken;if([string]::IsNullOrWhiteSpace($T)){return $false};try{$RepoPath="latest/scarflix_v2/"+$Name;$H=@{"User-Agent"="JasonOS-Remote-Executor";"Accept"="application/vnd.github+json";"X-GitHub-Api-Version"="2022-11-28";"Authorization"="Bearer "+$T};$Meta=$null;try{$Meta=Invoke-RestMethod -Method Get -Uri ($RepoApiBase+"/"+$RepoPath+"?ref=main") -Headers $H -TimeoutSec 15}catch{};$B=@{message=$Msg;content=[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($Text));branch="main"};if($null-ne$Meta -and -not [string]::IsNullOrWhiteSpace($Meta.sha)){$B["sha"]=$Meta.sha};$Body=$B|ConvertTo-Json -Depth 20;Invoke-RestMethod -Method Put -Uri ($RepoApiBase+"/"+$RepoPath) -Headers $H -Body $Body -ContentType "application/json" -TimeoutSec 45|Out-Null;return $true}catch{E ("Publish "+$Name+" "+$_.Exception.Message);return $false}}
+function PublishJson{param([string]$Name,[object]$Obj,[string]$Msg)$Json=$Obj|ConvertTo-Json -Depth 80;return(PublishText -Name $Name -Text $Json -Msg $Msg)}
+function ReadRawText{param([string]$Name)try{$U=$RawBase+"/"+$Name+"?cachebust="+([Guid]::NewGuid().ToString("N"));$R=Invoke-WebRequest -Uri $U -UseBasicParsing -TimeoutSec 30 -Headers @{"Cache-Control"="no-cache";"Pragma"="no-cache"};return [string]$R.Content}catch{E ("Read "+$Name+" "+$_.Exception.Message);return $null}}
+function CleanJson{param([string]$Text)if($null-eq$Text){return ""};$S=[string]$Text;$S=$S.Trim();if($S.Length -gt 0 -and [int][char]$S.Substring(0,1)-eq 65279){$S=$S.Substring(1)};$F=$S.IndexOf("{");$L=$S.LastIndexOf("}");if($F-ge 0 -and $L-gt$F){$S=$S.Substring($F,($L-$F+1))};return $S.Trim()}
+function ReadRawJson{param([string]$Name)$T=ReadRawText -Name $Name;if([string]::IsNullOrWhiteSpace($T)){return $null};try{return(CleanJson -Text $T|ConvertFrom-Json)}catch{E ("Parse "+$Name+" "+$_.Exception.Message);return $null}}
+function GetState{try{if(Test-Path -LiteralPath $StatePath){return(Get-Content -LiteralPath $StatePath -Raw|ConvertFrom-Json)}}catch{};$S=New-Object PSObject;Add-Member -InputObject $S -MemberType NoteProperty -Name "last_job_id" -Value "";return $S}
+function SaveState{param([object]$S)try{($S|ConvertTo-Json -Depth 20)|Out-File -FilePath $StatePath -Encoding UTF8}catch{}}
+function Status{param([string]$Sig,[string]$Det)$O=New-Object PSObject;Add-Member -InputObject $O -MemberType NoteProperty -Name "generated_at" -Value (Get-Date -Format "yyyy-MM-dd HH:mm:ss");Add-Member -InputObject $O -MemberType NoteProperty -Name "overall_signal" -Value $Sig;Add-Member -InputObject $O -MemberType NoteProperty -Name "detail" -Value $Det;Add-Member -InputObject $O -MemberType NoteProperty -Name "host" -Value $env:COMPUTERNAME;Add-Member -InputObject $O -MemberType NoteProperty -Name "token_found" -Value (-not [string]::IsNullOrWhiteSpace((GetToken)));Add-Member -InputObject $O -MemberType NoteProperty -Name "log_path" -Value $LogPath;Add-Member -InputObject $O -MemberType NoteProperty -Name "error_path" -Value $ErrPath;Add-Member -InputObject $O -MemberType NoteProperty -Name "polls" -Value @("REMOTE_EXECUTION_JOB.json","REMOTE_EXECUTION_PAYLOAD.ps1");PublishJson -Name "REMOTE_EXECUTOR_STATUS.json" -Obj $O -Msg ("Remote executor status "+(Get-Date -Format "yyyyMMdd_HHmmss"))|Out-Null;try{if(Test-Path -LiteralPath $LogPath){PublishText -Name "REMOTE_EXECUTOR_LAST_LOG.txt" -Text (Get-Content -LiteralPath $LogPath -Raw) -Msg "Remote executor log"|Out-Null}}catch{};try{if(Test-Path -LiteralPath $ErrPath){PublishText -Name "REMOTE_EXECUTOR_LAST_ERRORS.txt" -Text (Get-Content -LiteralPath $ErrPath -Raw) -Msg "Remote executor errors"|Out-Null}}catch{}}
+L "Remote executor tick started."
+Status -Sig "GREEN_REMOTE_EXECUTOR_RUNNING" -Det "Remote executor installed and polling GitHub."
+$Job=ReadRawJson -Name "REMOTE_EXECUTION_JOB.json"
+if($null-eq$Job){Status -Sig "GREEN_REMOTE_EXECUTOR_IDLE" -Det "No job queued.";exit 0}
+$Enabled=$false;try{if($Job.enabled -eq $true){$Enabled=$true}}catch{}
+if(-not$Enabled){Status -Sig "GREEN_REMOTE_EXECUTOR_JOB_DISABLED" -Det "Job disabled.";exit 0}
+$JobId="";try{$JobId=[string]$Job.id}catch{}
+if([string]::IsNullOrWhiteSpace($JobId)){Status -Sig "AMBER_REMOTE_EXECUTOR_JOB_HAS_NO_ID" -Det "Job has no id.";exit 0}
+$State=GetState
+if([string]$State.last_job_id -eq $JobId){Status -Sig "GREEN_REMOTE_EXECUTOR_ALREADY_PROCESSED" -Det ("Already processed "+$JobId);exit 0}
+$PayloadName="REMOTE_EXECUTION_PAYLOAD.ps1";try{if(-not [string]::IsNullOrWhiteSpace([string]$Job.payload_path)){$PayloadName=([string]$Job.payload_path).Replace("latest/scarflix_v2/","")}}catch{}
+$Payload=ReadRawText -Name $PayloadName
+if([string]::IsNullOrWhiteSpace($Payload)){Status -Sig "AMBER_REMOTE_EXECUTOR_PAYLOAD_MISSING" -Det ("Payload missing "+$PayloadName);exit 0}
+$PayloadPath=Join-Path $PayloadRoot ($JobId+".ps1");$StdOutPath=Join-Path $ResultRoot ($JobId+"_stdout.txt");$StdErrPath=Join-Path $ResultRoot ($JobId+"_stderr.txt")
+try{$Payload|Out-File -FilePath $PayloadPath -Encoding UTF8}catch{}
+$Result=New-Object PSObject;Add-Member -InputObject $Result -MemberType NoteProperty -Name "generated_at" -Value (Get-Date -Format "yyyy-MM-dd HH:mm:ss");Add-Member -InputObject $Result -MemberType NoteProperty -Name "job_id" -Value $JobId;Add-Member -InputObject $Result -MemberType NoteProperty -Name "status" -Value "RUNNING";Add-Member -InputObject $Result -MemberType NoteProperty -Name "payload_path" -Value $PayloadPath;PublishJson -Name "REMOTE_EXECUTION_RESULT.json" -Obj $Result -Msg ("Remote execution started "+$JobId)|Out-Null
+$ExitCode=999
+try{$P=Start-Process -FilePath "powershell.exe" -ArgumentList @("-NoProfile","-ExecutionPolicy","Bypass","-File",$PayloadPath) -Wait -PassThru -RedirectStandardOutput $StdOutPath -RedirectStandardError $StdErrPath -WindowStyle Hidden;$ExitCode=$P.ExitCode}catch{E ("Payload execution "+$_.Exception.Message)}
+$StdOut="";$StdErr=""
+try{if(Test-Path -LiteralPath $StdOutPath){$StdOut=Get-Content -LiteralPath $StdOutPath -Raw -ErrorAction SilentlyContinue}}catch{}
+try{if(Test-Path -LiteralPath $StdErrPath){$StdErr=Get-Content -LiteralPath $StdErrPath -Raw -ErrorAction SilentlyContinue}}catch{}
+$Result.status="COMPLETED";Add-Member -InputObject $Result -MemberType NoteProperty -Name "exit_code" -Value $ExitCode;Add-Member -InputObject $Result -MemberType NoteProperty -Name "stdout_preview" -Value ($StdOut.Substring(0,[Math]::Min(4000,$StdOut.Length)));Add-Member -InputObject $Result -MemberType NoteProperty -Name "stderr_preview" -Value ($StdErr.Substring(0,[Math]::Min(4000,$StdErr.Length)));PublishJson -Name "REMOTE_EXECUTION_RESULT.json" -Obj $Result -Msg ("Remote execution completed "+$JobId)|Out-Null;PublishText -Name "REMOTE_EXECUTION_LAST_LOG.txt" -Text ($StdOut+[Environment]::NewLine+$StdErr) -Msg ("Remote execution log "+$JobId)|Out-Null
+$State.last_job_id=$JobId;SaveState -S $State
+Status -Sig "GREEN_REMOTE_EXECUTOR_COMPLETED_JOB" -Det ("Completed "+$JobId+" exit_code="+[string]$ExitCode)
+'@
+PS C:\Users\jason> $WatchdogCode = @'
+$ErrorActionPreference = "Continue"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$FoundryRoot = "D:\PlexTools\Foundry"
+$PublicRoot = "D:\PlexTools\public\latest\scarflix_v2"
+$LogRoot = "D:\PlexTools\logs"
+$TokenRoot = "C:\Users\jason\OneDrive\Public\TOKENS"
+$RepoApiBase = "https://api.github.com/repos/r0cksteadyw00t/plex-logs/contents"
+$LogPath = Join-Path $LogRoot ("foundry_v2_watchdog_" + (Get-Date -Format "yyyyMMdd") + ".log")
+foreach($D in @($PublicRoot,$LogRoot)){try{New-Item -ItemType Directory -Path $D -Force|Out-Null}catch{}}
+function L{param([string]$M)$Line="{0} {1}"-f(Get-Date -Format "yyyy-MM-dd HH:mm:ss"),$M;Write-Host $Line;try{$Line|Out-File -FilePath $LogPath -Append -Encoding UTF8}catch{}}
+function GetToken{foreach($P in @("C:\Users\jason\OneDrive\Public\TOKENS\github_pat.txt","C:\Users\jason\OneDrive\Public\TOKENS\github_token.txt","C:\Users\jason\OneDrive\Public\TOKENS\gist_token.txt","D:\PlexTools\github_pat.txt","D:\PlexTools\github_token.txt","D:\PlexTools\gist_token.txt")){try{if(Test-Path -LiteralPath $P){$V=(Get-Content -LiteralPath $P -Raw).Trim();if(-not [string]::IsNullOrWhiteSpace($V)){return $V}}}catch{}};return $null}
+function TestUrl{param([string]$U)try{$R=Invoke-WebRequest -Uri $U -UseBasicParsing -TimeoutSec 10;if($R.StatusCode -ge 200 -and $R.StatusCode -lt 500){return $true}}catch{};return $false}
+function Pub{param([string]$N,[string]$T)try{$T|Out-File -FilePath (Join-Path $PublicRoot $N)-Encoding UTF8}catch{};$Tok=GetToken;if([string]::IsNullOrWhiteSpace($Tok)){return};try{$Path="latest/scarflix_v2/"+$N;$H=@{"User-Agent"="JasonOS-Watchdog";"Accept"="application/vnd.github+json";"X-GitHub-Api-Version"="2022-11-28";"Authorization"="Bearer "+$Tok};$Meta=$null;try{$Meta=Invoke-RestMethod -Method Get -Uri ($RepoApiBase+"/"+$Path+"?ref=main") -Headers $H -TimeoutSec 15}catch{};$B=@{message=("Watchdog "+$N);content=[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($T));branch="main"};if($null-ne$Meta -and -not [string]::IsNullOrWhiteSpace($Meta.sha)){$B["sha"]=$Meta.sha};$Body=$B|ConvertTo-Json -Depth 20;Invoke-RestMethod -Method Put -Uri ($RepoApiBase+"/"+$Path) -Headers $H -Body $Body -ContentType "application/json" -TimeoutSec 25|Out-Null}catch{}}
+L "Watchdog tick."
+$CcOk=TestUrl "http://127.0.0.1:8788";$ApiOk=TestUrl "http://127.0.0.1:8790/api/status"
+if((-not$CcOk)-or(-not$ApiOk)){Push-Location $FoundryRoot;try{docker compose up -d|Out-Null}catch{try{docker-compose up -d|Out-Null}catch{}};Pop-Location;Start-Sleep -Seconds 15;$CcOk=TestUrl "http://127.0.0.1:8788";$ApiOk=TestUrl "http://127.0.0.1:8790/api/status"}
+$O=New-Object PSObject;Add-Member -InputObject $O -MemberType NoteProperty -Name "generated_at" -Value (Get-Date -Format "yyyy-MM-dd HH:mm:ss");Add-Member -InputObject $O -MemberType NoteProperty -Name "command_centre_ok" -Value $CcOk;Add-Member -InputObject $O -MemberType NoteProperty -Name "authority_core_ok" -Value $ApiOk;Add-Member -InputObject $O -MemberType NoteProperty -Name "overall_signal" -Value "GREEN_WATCHDOG_OK";if((-not$CcOk)-or(-not$ApiOk)){$O.overall_signal="AMBER_WATCHDOG_REPAIR_ATTEMPTED"};$Json=$O|ConvertTo-Json -Depth 20;Pub -N "FOUNDRY_V2_WATCHDOG_STATUS.json" -T $Json
+'@
+PS C:\Users\jason> try {
+    $ReporterCode | Out-File -FilePath $ReporterPath -Encoding UTF8
+    $ExecutorCode | Out-File -FilePath $ExecutorPath -Encoding UTF8
+    $WatchdogCode | Out-File -FilePath $WatchdogPath -Encoding UTF8
+    Copy-Item -LiteralPath $WatchdogPath -Destination $OpenWebUiRepairPath -Force
+    LOG "Generated reporter, remote executor and watchdog worker scripts." "OK"
+} catch {
+    ERR "Write worker scripts" $_.Exception.Message
+}
+2026-06-05 20:01:19 [OK] Generated reporter, remote executor and watchdog worker scripts.
+PS C:\Users\jason> $ReporterRegistered = Register-MinuteTask -Name $ReporterTaskName -Path $ReporterPath -Minutes 1
+2026-06-05 20:01:21 [OK] Registered task JasonOS_Foundry_Status_Reporter_1min every 1 minute(s)
+PS C:\Users\jason> $ExecutorRegistered = Register-MinuteTask -Name $ExecutorTaskName -Path $ExecutorPath -Minutes 1
+2026-06-05 20:01:23 [OK] Registered task JasonOS_Foundry_Remote_Executor_1min every 1 minute(s)
+PS C:\Users\jason> $WatchdogRegistered = Register-MinuteTask -Name $WatchdogTaskName -Path $WatchdogPath -Minutes 5
+2026-06-05 20:01:25 [OK] Removed old task JasonOS_Foundry_V2_Watchdog_5min
+2026-06-05 20:01:25 [OK] Registered task JasonOS_Foundry_V2_Watchdog_5min every 5 minute(s)
+PS C:\Users\jason> $OpenWebUiRepairRegistered = Register-MinuteTask -Name $OpenWebUiRepairTaskName -Path $OpenWebUiRepairPath -Minutes 3
+2026-06-05 20:01:26 [OK] Registered task JasonOS_Foundry_OpenWebUI_Repair_3min every 3 minute(s)
+PS C:\Users\jason> $DockerPresent = Test-CommandExists "docker"
+PS C:\Users\jason> $DockerEngineOk = $false
+PS C:\Users\jason> if ($DockerPresent) {
+    try {
+        docker info | Out-Null
+        if ($LASTEXITCODE -eq 0) { $DockerEngineOk = $true }
+    } catch {
+        ERR "Docker info" $_.Exception.Message
+    }
+}
+PS C:\Users\jason> if (-not $DockerEngineOk) {
+    LOG "Docker engine not responding. Attempting to start Docker Desktop." "WARN"
+    $DockerDesktopCandidates = @(
+        "C:\Program Files\Docker\Docker\Docker Desktop.exe",
+        "$env:LOCALAPPDATA\Docker\Docker Desktop.exe"
+    )
+    foreach ($DockerPath in $DockerDesktopCandidates) {
+        try {
+            if (Test-Path -LiteralPath $DockerPath) {
+                Start-Process -FilePath $DockerPath -WindowStyle Minimized
+                LOG ("Started Docker Desktop candidate: " + $DockerPath) "OK"
+                Start-Sleep -Seconds 45
+                break
+            }
+        } catch {
+            ERR "Start Docker Desktop" $_.Exception.Message
+        }
+    }
+
+    try {
+        docker info | Out-Null
+        if ($LASTEXITCODE -eq 0) { $DockerEngineOk = $true }
+    } catch {}
+}
+PS C:\Users\jason> if ($DockerEngineOk) {
+    LOG "Docker engine OK. Starting Foundry Docker stack." "STEP"
+    Push-Location $FoundryRoot
+    $ComposeResult = Invoke-DockerCompose -ArgsList @("-f", $ComposePath, "up", "-d", "--build")
+    Pop-Location
+    LOG ("Docker compose result: " + [string]$ComposeResult) "INFO"
+} else {
+    LOG "Docker engine not available. Workers installed; stack will start when Docker is available." "WARN"
+}
+2026-06-05 20:01:28 [STEP] Docker engine OK. Starting Foundry Docker stack.
+2026-06-05 20:01:58 [INFO] Docker compose result: #1 [internal] load local bake definitions #1 reading from stdin 605B done #1 DONE 0.0s  #2 [internal] load build definition from Dockerfile #2 transferring dockerfile: 280B 0.0s done #2 DONE 0.1s  #3 [internal] load metadata for docker.io/library/python:3.11-slim #3 ...  #4 [auth] library/python:pull token for registry-1.docker.io #4 DONE 0.0s  #3 [internal] load metadata for docker.io/library/python:3.11-slim #3 DONE 2.5s  #5 [internal] load .dockerignore #5 transferring context: 2B done #5 DONE 0.0s  #6 [internal] load build context #6 transferring context: 10.29kB 0.1s done #6 DONE 0.1s  #7 [1/5] FROM docker.io/library/python:3.11-slim@sha256:a3ab0b966bc4e91546a033e22093cb840908979487a9fc0e6e38295747e49ac0 #7 resolve docker.io/library/python:3.11-slim@sha256:a3ab0b966bc4e91546a033e22093cb840908979487a9fc0e6e38295747e49ac0 0.1s done #7 DONE 0.1s  #8 [2/5] WORKDIR /app #8 CACHED  #9 [3/5] COPY requirements.txt /app/requirements.txt #9 DONE 0.1s  #10 [4/5] RUN pip install --no-cache-dir -r /app/requirements.txt #10 8.204 Collecting fastapi==0.115.6 (from -r /app/requirements.txt (line 1)) #10 8.283   Downloading fastapi-0.115.6-py3-none-any.whl.metadata (27 kB) #10 8.349 Collecting uvicorn==0.34.0 (from uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 8.366   Downloading uvicorn-0.34.0-py3-none-any.whl.metadata (6.5 kB) #10 8.706 Collecting pydantic==2.10.4 (from -r /app/requirements.txt (line 3)) #10 8.726   Downloading pydantic-2.10.4-py3-none-any.whl.metadata (29 kB) #10 8.808 Collecting starlette<0.42.0,>=0.40.0 (from fastapi==0.115.6->-r /app/requirements.txt (line 1)) #10 8.827   Downloading starlette-0.41.3-py3-none-any.whl.metadata (6.0 kB) #10 8.940 Collecting typing-extensions>=4.8.0 (from fastapi==0.115.6->-r /app/requirements.txt (line 1)) #10 8.956   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB) #10 9.018 Collecting click>=7.0 (from uvicorn==0.34.0->uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 9.040   Downloading click-8.4.1-py3-none-any.whl.metadata (2.6 kB) #10 9.074 Collecting h11>=0.8 (from uvicorn==0.34.0->uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 9.088   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB) #10 9.126 Collecting annotated-types>=0.6.0 (from pydantic==2.10.4->-r /app/requirements.txt (line 3)) #10 9.148   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB) #10 10.59 Collecting pydantic-core==2.27.2 (from pydantic==2.10.4->-r /app/requirements.txt (line 3)) #10 10.61   Downloading pydantic_core-2.27.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB) #10 10.70 Collecting httptools>=0.6.3 (from uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 10.72   Downloading httptools-0.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB) #10 10.78 Collecting python-dotenv>=0.13 (from uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 10.80   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB) #10 10.89 Collecting pyyaml>=5.1 (from uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 10.91   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB) #10 10.99 Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0 (from uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 11.01   Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB) #10 11.25 Collecting watchfiles>=0.13 (from uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 11.28   Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB) #10 11.43 Collecting websockets>=10.4 (from uvicorn[standard]==0.34.0->-r /app/requirements.txt (line 2)) #10 11.45   Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB) #10 11.58 Collecting anyio<5,>=3.4.0 (from starlette<0.42.0,>=0.40.0->fastapi==0.115.6->-r /app/requirements.txt (line 1)) #10 11.59   Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB) #10 11.66 Collecting idna>=2.8 (from anyio<5,>=3.4.0->starlette<0.42.0,>=0.40.0->fastapi==0.115.6->-r /app/requirements.txt (line 1)) #10 11.69   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB) #10 11.73 Downloading fastapi-0.115.6-py3-none-any.whl (94 kB) #10 11.75    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 94.8/94.8 kB 5.6 MB/s eta 0:00:00 #10 11.76 Downloading uvicorn-0.34.0-py3-none-any.whl (62 kB) #10 11.77    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 62.3/62.3 kB 9.7 MB/s eta 0:00:00 #10 11.78 Downloading pydantic-2.10.4-py3-none-any.whl (431 kB) #10 11.81    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 431.8/431.8 kB 22.2 MB/s eta 0:00:00 #10 11.82 Downloading pydantic_core-2.27.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB) #10 12.11    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 2.0/2.0 MB 7.0 MB/s eta 0:00:00 #10 12.13 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB) #10 12.15 Downloading click-8.4.1-py3-none-any.whl (116 kB) #10 12.17    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 116.6/116.6 kB 7.1 MB/s eta 0:00:00 #10 12.18 Downloading h11-0.16.0-py3-none-any.whl (37 kB) #10 12.20 Downloading httptools-0.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (464 kB) #10 12.27    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 464.7/464.7 kB 7.0 MB/s eta 0:00:00 #10 12.28 Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB) #10 12.31 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB) #10 12.44    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 806.6/806.6 kB 6.3 MB/s eta 0:00:00 #10 12.45 Downloading starlette-0.41.3-py3-none-any.whl (73 kB) #10 12.46    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 73.2/73.2 kB 16.5 MB/s eta 0:00:00 #10 12.48 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB) #10 12.49    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 44.6/44.6 kB 5.5 MB/s eta 0:00:00 #10 12.50 Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB) #10 12.98    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 3.8/3.8 MB 8.0 MB/s eta 0:00:00 #10 12.99 Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB) #10 13.04    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 456.9/456.9 kB 12.9 MB/s eta 0:00:00 #10 13.05 Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB) #10 13.07    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 184.6/184.6 kB 11.6 MB/s eta 0:00:00 #10 13.09 Downloading anyio-4.13.0-py3-none-any.whl (114 kB) #10 13.09    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 114.4/114.4 kB 56.9 MB/s eta 0:00:00 #10 13.11 Downloading idna-3.18-py3-none-any.whl (65 kB) #10 13.12    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 65.5/65.5 kB 16.3 MB/s eta 0:00:00 #10 13.39 Installing collected packages: websockets, uvloop, typing-extensions, pyyaml, python-dotenv, idna, httptools, h11, click, annotated-types, uvicorn, pydantic-core, anyio, watchfiles, starlette, pydantic, fastapi #10 16.37 Successfully installed annotated-types-0.7.0 anyio-4.13.0 click-8.4.1 fastapi-0.115.6 h11-0.16.0 httptools-0.8.0 idna-3.18 pydantic-2.10.4 pydantic-core-2.27.2 python-dotenv-1.2.2 pyyaml-6.0.3 starlette-0.41.3 typing-extensions-4.15.0 uvicorn-0.34.0 uvloop-0.22.1 watchfiles-1.2.0 websockets-16.0 #10 16.37 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv #10 16.54  #10 16.54 [notice] A new release of pip is available: 24.0 -> 26.1.2 #10 16.54 [notice] To update, run: pip install --upgrade pip #10 DONE 17.3s  #11 [5/5] COPY app.py /app/app.py #11 DONE 0.1s  #12 exporting to image #12 exporting layers #12 exporting layers 3.6s done #12 exporting manifest sha256:1125c879ffd1e1330590e2c09e25321c35365845f79c8aa881bd4a32e9c0bb47 0.0s done #12 exporting config sha256:dd284a6fbb9b4f6a2e6339d140fa001d92000e7af5325b311d669c40f7ede4a1 0.0s done #12 exporting attestation manifest sha256:14995ae527edbdce2ec837cfaa1350b4610e0630c1c752c8440ea4e0fa41147c 0.1s done #12 exporting manifest list sha256:7115dbd243848bebecc46afc8cfe6c3eb6e5911565dc441421066b48798ffbe2 #12 exporting manifest list sha256:7115dbd243848bebecc46afc8cfe6c3eb6e5911565dc441421066b48798ffbe2 0.0s done #12 naming to docker.io/library/foundry-foundry-authority-core:latest done #12 unpacking to docker.io/library/foundry-foundry-authority-core:latest #12 unpacking to docker.io/library/foundry-foundry-authority-core:latest 1.1s done #12 DONE 5.0s  #13 resolving provenance for metadata file #13 DONE 0.1s 1
+PS C:\Users\jason> LOG "Running immediate reporter, executor and watchdog ticks." "STEP"
+2026-06-05 20:01:58 [STEP] Running immediate reporter, executor and watchdog ticks.
+PS C:\Users\jason> try { & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $ReporterPath } catch { ERR "Run reporter" $_.Exception.Message }
+
+PS C:\Users\jason> try { & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $ExecutorPath } catch { ERR "Run executor" $_.Exception.Message }
+
+PS C:\Users\jason> try { & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $WatchdogPath } catch { ERR "Run watchdog" $_.Exception.Message }
+
+PS C:\Users\jason> Start-Sleep -Seconds 20
+PS C:\Users\jason> $TailscaleIp = ""
+PS C:\Users\jason> $TailscaleOk = $false
+PS C:\Users\jason> try {
+    if (Test-CommandExists "tailscale") {
+        $Ts = tailscale ip -4 2>$null
+        if (-not [string]::IsNullOrWhiteSpace($Ts)) {
+            $TailscaleIp = ([string]$Ts).Trim()
+            $TailscaleOk = $true
+        }
+    }
+} catch {}
+PS C:\Users\jason> $Final = New-StatusObject -Signal "GREEN_FULL_REMOTE_BOOTSTRAP_COMPLETE" -Detail "Full remote automation bootstrap completed. Reporter, executor, watchdog and Foundry stack are installed or queued."
+PS C:\Users\jason> TerminatingError(Invoke-WebRequest): "The operation has timed out."
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "reporter_registered" -Value $ReporterRegistered
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "executor_registered" -Value $ExecutorRegistered
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "watchdog_registered" -Value $WatchdogRegistered
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "openwebui_repair_registered" -Value $OpenWebUiRepairRegistered
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "docker_engine_ok" -Value $DockerEngineOk
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "tailscale_detected" -Value $TailscaleOk
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "tailscale_ip" -Value $TailscaleIp
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "local_command_centre" -Value "http://127.0.0.1:8788"
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "lan_command_centre" -Value "http://mediaserver:8788"
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "local_authority_core" -Value "http://127.0.0.1:8790"
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "lan_authority_core" -Value "http://mediaserver:8790"
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "remote_command_centre" -Value ("http://" + $TailscaleIp + ":8788")
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "remote_job_files" -Value @("latest/scarflix_v2/REMOTE_EXECUTION_JOB.json","latest/scarflix_v2/REMOTE_EXECUTION_PAYLOAD.ps1")
+PS C:\Users\jason> Add-Member -InputObject $Final -MemberType NoteProperty -Name "remote_result_files" -Value @("latest/scarflix_v2/REMOTE_EXECUTION_RESULT.json","latest/scarflix_v2/REMOTE_EXECUTION_LAST_LOG.txt","latest/scarflix_v2/REMOTE_EXECUTOR_STATUS.json")
+PS C:\Users\jason> Publish-GitHubJson -FileName "FOUNDRY_LAST_SCRIPT_STATUS.json" -Object $Final -Message ("Full bootstrap final " + $RunStamp) | Out-Null
+2026-06-05 20:03:28 [OK] Published GitHub file: latest/scarflix_v2/FOUNDRY_LAST_SCRIPT_STATUS.json
+PS C:\Users\jason> Publish-GitHubJson -FileName "FOUNDRY_STATUS_INDEX.json" -Object $Final -Message ("Status index final " + $RunStamp) | Out-Null
+2026-06-05 20:03:29 [OK] Published GitHub file: latest/scarflix_v2/FOUNDRY_STATUS_INDEX.json
+PS C:\Users\jason> Publish-GitHubJson -FileName "REMOTE_EXECUTOR_INSTALL_STATUS.json" -Object $Final -Message ("Remote executor install final " + $RunStamp) | Out-Null
+PS C:\Users\jason> TerminatingError(Invoke-RestMethod): "{"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}"
+2026-06-05 20:03:30 [OK] Published GitHub file: latest/scarflix_v2/REMOTE_EXECUTOR_INSTALL_STATUS.json
+PS C:\Users\jason> Publish-GitHubJson -FileName "COMMAND_CENTRE_STATUS.json" -Object $Final -Message ("Command centre final " + $RunStamp) | Out-Null
+2026-06-05 20:03:31 [OK] Published GitHub file: latest/scarflix_v2/COMMAND_CENTRE_STATUS.json
+PS C:\Users\jason> Publish-GitHubJson -FileName "COMMAND_CENTRE_REMOTE_ACCESS_STATUS.json" -Object $Final -Message ("Remote access final " + $RunStamp) | Out-Null
+2026-06-05 20:03:33 [OK] Published GitHub file: latest/scarflix_v2/COMMAND_CENTRE_REMOTE_ACCESS_STATUS.json
+PS C:\Users\jason> Publish-GitHubJson -FileName "AUTHORITY_CORE_STATUS.json" -Object $Final -Message ("Authority core final " + $RunStamp) | Out-Null
+2026-06-05 20:03:34 [OK] Published GitHub file: latest/scarflix_v2/AUTHORITY_CORE_STATUS.json
+PS C:\Users\jason> $Access = @()
+PS C:\Users\jason> $Access += "# JasonOS Foundry Access"
+PS C:\Users\jason> $Access += ""
+PS C:\Users\jason> $Access += ("Generated: " + (Get-Date -Format "yyyy-MM-dd HH:mm:ss"))
+PS C:\Users\jason> $Access += ""
+PS C:\Users\jason> $Access += "Local Command Centre: http://127.0.0.1:8788"
+PS C:\Users\jason> $Access += "LAN Command Centre: http://mediaserver:8788"
+PS C:\Users\jason> $Access += "Local Authority Core: http://127.0.0.1:8790"
+PS C:\Users\jason> $Access += "LAN Authority Core: http://mediaserver:8790"
+PS C:\Users\jason> if ($TailscaleOk) { $Access += ("Tailscale Command Centre: http://" + $TailscaleIp + ":8788") } else { $Access += "Tailscale Command Centre: not detected yet" }
+PS C:\Users\jason> $Access += ""
+PS C:\Users\jason> $Access += ("Overall: " + $Final.overall_signal)
+PS C:\Users\jason> $AccessText = $Access -join "`n"
+PS C:\Users\jason> Publish-GitHubText -FileName "FOUNDRY_ACCESS_READY.md" -Text $AccessText -Message ("Foundry access ready " + $RunStamp) | Out-Null
+2026-06-05 20:03:35 [OK] Published GitHub file: latest/scarflix_v2/FOUNDRY_ACCESS_READY.md
+PS C:\Users\jason> try {
+    if (Test-Path -LiteralPath $MainLog) {
+        Publish-GitHubText -FileName "FOUNDRY_LAST_SCRIPT_LOG.txt" -Text (Get-Content -LiteralPath $MainLog -Raw -ErrorAction SilentlyContinue) -Message ("Last script log " + $RunStamp) | Out-Null
+    }
+} catch {}
+PS C:\Users\jason> TerminatingError(Invoke-RestMethod): "{"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}"
+2026-06-05 20:03:36 [OK] Published GitHub file: latest/scarflix_v2/FOUNDRY_LAST_SCRIPT_LOG.txt
+PS C:\Users\jason> try {
+    if (Test-Path -LiteralPath $ErrorLog) {
+        Publish-GitHubText -FileName "FOUNDRY_LAST_SCRIPT_ERRORS.txt" -Text (Get-Content -LiteralPath $ErrorLog -Raw -ErrorAction SilentlyContinue) -Message ("Last script errors " + $RunStamp) | Out-Null
+    } else {
+        Publish-GitHubText -FileName "FOUNDRY_LAST_SCRIPT_ERRORS.txt" -Text "No captured script errors." -Message ("Last script errors empty " + $RunStamp) | Out-Null
+    }
+} catch {}
+PS C:\Users\jason> TerminatingError(Invoke-RestMethod): "{"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}"
+2026-06-05 20:03:38 [OK] Published GitHub file: latest/scarflix_v2/FOUNDRY_LAST_SCRIPT_ERRORS.txt
+PS C:\Users\jason> try { Stop-Transcript | Out-Null } catch {}
+**********************
+Windows PowerShell transcript end
+End time: 20260605200338
+**********************
