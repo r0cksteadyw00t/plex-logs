@@ -1,12 +1,37 @@
 {
-  "platform": "JasonOS Foundry",
-  "version": "0.1",
-  "missions": [
-    {
-      "id": "mission-001",
-      "name": "ScarFLIX",
-      "status": "active",
-      "purpose": "Plex-front-end Stremio-like automation proving ground"
-    }
-  ]
+    "platform":  "JasonOS Foundry",
+    "version":  "0.2",
+    "operating_mode":  "local-first autonomous mission platform",
+    "source_control":  "r0cksteadyw00t/plex-logs",
+    "missions":  [
+                     {
+                         "id":  "mission-001",
+                         "name":  "ScarFLIX",
+                         "status":  "active",
+                         "role":  "first proving-ground mission",
+                         "locked_risks":  [
+                                              "catalogue expansion",
+                                              "Plex library changes",
+                                              "destructive pruning",
+                                              "secrets"
+                                          ]
+                     }
+                 ],
+    "reusable_services":  [
+                              "RunnerWatchdog",
+                              "TaskQueue",
+                              "StatusPublisher",
+                              "Dashboard",
+                              "ETAEngine",
+                              "EventLedger",
+                              "GuardrailPolicy",
+                              "LowRiskLocalAIEngine",
+                              "SecretRedactor",
+                              "RunbookMaintainer",
+                              "TechnicalDebtScanner",
+                              "MissionRegistry",
+                              "MemoryStore",
+                              "ArchitectureReviewLoop",
+                              "BacklogManager"
+                          ]
 }
