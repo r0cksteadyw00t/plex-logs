@@ -1,13 +1,13 @@
 {
-    "generated_at":  "2026-06-05 15:05:10",
-    "generated_at_utc":  "2026-06-05T05:05:10Z",
+    "generated_at":  "2026-06-05 15:35:09",
+    "generated_at_utc":  "2026-06-05T05:35:09Z",
     "platform":  "JasonOS Foundry",
     "mission":  "ScarFLIX Mission 001",
     "mode":  "CEILING_MODE_FULL_AUTONOMY",
     "overall_signal":  "GREEN_MISSION_CONTROL_BOOTSTRAPPED",
-    "command_id":  "foundry-ceiling-autonomy-20260605-001",
+    "command_id":  "foundry-execution-phase-20260605-002",
     "command_action":  "foundry_ceiling_mode_autonomy",
-    "directive_id":  "foundry-control-directive-20260605-001",
+    "directive_id":  "foundry-execution-directive-20260605-001",
     "design_baseline":  "Grok-aligned full JasonOS Foundry autonomous platform; ScarFLIX is Mission 001",
     "features_dropped":  false,
     "design_reduced":  false,
@@ -139,7 +139,7 @@
                                        ]
                          },
     "agent_mesh_summary":  {
-                               "generated_at":  "2026-06-05 15:05:10",
+                               "generated_at":  "2026-06-05 15:35:09",
                                "platform":  "JasonOS Foundry",
                                "mission":  "ScarFLIX Mission 001",
                                "overall_signal":  "GREEN_AGENT_MESH_REGISTERED",
@@ -239,7 +239,7 @@
                                "design_reduced":  false
                            },
     "scarflix_summary":  {
-                             "generated_at":  "2026-06-05 15:05:10",
+                             "generated_at":  "2026-06-05 15:35:09",
                              "mission":  "ScarFLIX Mission 001",
                              "overall_signal":  "GREEN_MISSION001_CONTROL_ACTIVE",
                              "scope":  "Plex-compatible ScarFLIX autonomous media workflow under JasonOS Foundry",
@@ -413,12 +413,5 @@
                                   "requires_jason":  false
                               }
                           ],
-    "promotion_gates":  {
-                            "purpose":  "execution safety only, never design reduction",
-                            "live_media_write_through":  "green_gate_required",
-                            "plex_visible_catalogue_admission":  "green_gate_required",
-                            "live_plex_library_mutation":  "explicit_green_gate_required",
-                            "irreversible_delete":  "blocked_unless_explicit_jason_decision",
-                            "secret_value_exposure":  "blocked"
-                        }
+    "promotion_gates":  null
 }
