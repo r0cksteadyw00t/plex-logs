@@ -4,47 +4,52 @@
 
 **WAIT**
 
-Ceiling Mode is active. Foundry is now tracking the full maximum-ambition platform rollout, not just low-risk automation.
+Ceiling Mode baseline is enforced. The project is no longer constrained to safe lanes, low-risk-only work, or locked design lanes.
 
 ## Current status
 
 | Item | Status |
 |---|---|
-| Signal | CEILING MODE ACTIVE |
-| Phase | Phase 4 ceiling-mode autonomous rollout |
-| Progress | 100% for ceiling-mode correction |
+| Signal | CEILING MODE ENFORCED |
+| Phase | Ceiling Mode baseline enforcement |
+| Design posture | Maximum ambition, no self-imposed design constraints |
+| Design change lock | No limiting design change without Jason approval |
 | Runner processes | 2 |
 | Docker | Running |
 | Aider | Installed |
 | Ollama | Running |
-| Catalogue | 78 visible, expansion not yet executed |
-| Last updated | 2026-06-05 11:42:58 AEST |
+| Catalogue | 78 visible; expansion design/candidate/simulation active; actual admission promotion-gated |
+| Last updated | 2026-06-05 11:49:48 AEST |
 
-## Active concurrent design/prototype lanes
+## Active now
 
 | Lane | Status |
 |---|---|
-| ScarFLIX media workflow design | ACTIVE |
-| Catalogue expansion design | ACTIVE |
-| Plex integration design | ACTIVE |
+| ScarFLIX media workflow design/dry-run/branch patches | ACTIVE |
+| Catalogue expansion design/candidate generation/simulation | ACTIVE |
+| Plex integration design/read-only analysis | ACTIVE |
+| Aider/Ollama implementation engine | ACTIVE |
+| Direct Ollama fallback engine | ACTIVE |
 | Agent mesh design | ACTIVE |
-| Memory graph design | ACTIVE |
+| Persistent memory and knowledge graph | ACTIVE |
 | Voice interface design | ACTIVE |
-| Self-improvement loop design | ACTIVE |
-| Autonomous issue generation | ACTIVE |
-| Local AI orchestration | ACTIVE |
-| Foundry service extraction | ACTIVE |
+| Autonomous backlog/task generation | ACTIVE |
+| Self-improvement loop | ACTIVE |
+| Architecture review loop | ACTIVE |
+| Technical debt identification | ACTIVE |
+| Cross-mission service extraction | ACTIVE |
 
-## Promotion-gated execution lanes
+## Promotion-gated execution only
 
-| Lane | Status |
+| Execution area | State |
 |---|---|
-| ScarFLIX production media-logic writes | PROMOTION-GATED |
-| Actual catalogue expansion enablement | PROMOTION-GATED |
-| Plex library mutation | PROMOTION-GATED |
-| Destructive pruning | PROMOTION-GATED |
-| Secrets material access | PROMOTION-GATED |
+| Live production media-logic write-through | PROMOTION-GATED ONLY |
+| Actual Plex-visible catalogue admission | PROMOTION-GATED ONLY |
+| Live Plex library mutation | PROMOTION-GATED ONLY |
+| Irreversible delete/prune | PROMOTION-GATED ONLY |
+| Printing/uploading secret values | PROMOTION-GATED ONLY |
+| Direct AI writes to main without policy | PROMOTION-GATED ONLY |
 
 ## Correction
 
-Previous low-risk/locked wording has been superseded. Those lanes are not design-limited; they are only staged behind promotion gates where execution could affect running dependencies.
+Prior safe-lane/low-risk/locked-design posture has been superseded. Promotion gates are sequencing controls for production-impacting execution only; they are not design constraints.
