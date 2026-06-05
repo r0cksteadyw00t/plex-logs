@@ -1,0 +1,42 @@
+{
+    "generated_at":  "2026-06-05T11:56:32.9862150+10:00",
+    "posture":  "promotion_gates_are_not_design_constraints",
+    "gates":  [
+                  {
+                      "id":  "PROMO-001",
+                      "name":  "Live media workflow write-through",
+                      "design":  "active",
+                      "branch":  "active",
+                      "dry_run":  "active",
+                      "live_execution":  "requires_promotion"
+                  },
+                  {
+                      "id":  "PROMO-002",
+                      "name":  "Plex-visible catalogue admission",
+                      "design":  "active",
+                      "candidates":  "active",
+                      "simulation":  "active",
+                      "live_execution":  "requires_promotion"
+                  },
+                  {
+                      "id":  "PROMO-003",
+                      "name":  "Plex library mutation",
+                      "design":  "active",
+                      "read_only_analysis":  "active",
+                      "live_execution":  "requires_promotion"
+                  },
+                  {
+                      "id":  "PROMO-004",
+                      "name":  "Irreversible delete/prune",
+                      "design":  "active",
+                      "quarantine":  "active",
+                      "live_execution":  "requires_promotion"
+                  },
+                  {
+                      "id":  "PROMO-005",
+                      "name":  "Secret value exposure",
+                      "sealed_local_use":  "active",
+                      "print_or_upload":  "requires_promotion"
+                  }
+              ]
+}
