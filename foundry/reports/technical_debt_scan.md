@@ -1,11 +1,11 @@
-# Foundry Technical Debt Scan
+# Technical Debt Scan
 
-Generated: 2026-06-05 11:39:25
+Generated: 2026-06-05 11:56:32
 
-| Finding | Severity | Action |
+| Finding | Impact | Next action |
 |---|---|---|
-| Dashboard state has previously reverted due to hardcoded cycle scripts | High | centralise phase-state read/write |
-| Aider CLI invocation has been unstable | Medium | keep direct Ollama fallback wrapper |
-| Status files can be overwritten by multiple publishers | High | introduce single status publisher lock |
-| Telemetry lacks schema versioning | Medium | add status schema version field |
-| ScarFLIX media logic remains unpromoted to local AI workflow | Medium | create controlled promotion gate later |
+| Multiple scripts can overwrite dashboard state | Dashboard regression risk | Centralise state generation in Run-FoundryCycle |
+| Aider CLI is proven but previously fragile | Implementation instability | Keep direct Ollama fallback and branch-only test harness |
+| Catalogue expansion not yet simulated | Limits ScarFLIX proof value | Build candidate queue and scoring simulator |
+| Plex analyser not yet implemented | Lower confidence before promotion | Build read-only Plex analyser |
+| Agent mesh currently scaffolded not operational | Limits autonomy | Convert queue roles into scheduled tasks later |
