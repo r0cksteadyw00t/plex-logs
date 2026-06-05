@@ -4,44 +4,47 @@
 
 **WAIT**
 
-Ambitious concurrent rollout is active across safe lanes. No media, catalogue, Plex or destructive lanes are enabled.
+Ceiling Mode is active. Foundry is now tracking the full maximum-ambition platform rollout, not just low-risk automation.
 
 ## Current status
 
 | Item | Status |
 |---|---|
-| Signal | PHASE 4 SAFE LANES ACTIVE |
-| Phase | Phase 4 concurrent platform rollout |
-| Progress | 100% for safe-lane activation |
+| Signal | CEILING MODE ACTIVE |
+| Phase | Phase 4 ceiling-mode autonomous rollout |
+| Progress | 100% for ceiling-mode correction |
 | Runner processes | 2 |
 | Docker | Running |
-| Git | Available |
 | Aider | Installed |
 | Ollama | Running |
-| Catalogue | 78 visible, expansion off |
-| Last updated | 2026-06-05 11:39:25 AEST |
+| Catalogue | 78 visible, expansion not yet executed |
+| Last updated | 2026-06-05 11:42:58 AEST |
 
-## Enabled concurrent lanes
-
-| Lane | Status |
-|---|---|
-| Dashboard/status | ENABLED |
-| Docs/runbooks | ENABLED |
-| Backlog/memory | ENABLED |
-| Architecture review | ENABLED |
-| Technical debt scan | ENABLED |
-| Low-risk local AI | ENABLED |
-
-## Locked lanes
+## Active concurrent design/prototype lanes
 
 | Lane | Status |
 |---|---|
-| ScarFLIX media logic | LOCKED, single-writer promotion required |
-| Catalogue expansion | LOCKED OFF |
-| Plex library changes | LOCKED OFF |
-| Destructive pruning | LOCKED OFF |
-| Secrets/TOKENS access | LOCKED OFF |
+| ScarFLIX media workflow design | ACTIVE |
+| Catalogue expansion design | ACTIVE |
+| Plex integration design | ACTIVE |
+| Agent mesh design | ACTIVE |
+| Memory graph design | ACTIVE |
+| Voice interface design | ACTIVE |
+| Self-improvement loop design | ACTIVE |
+| Autonomous issue generation | ACTIVE |
+| Local AI orchestration | ACTIVE |
+| Foundry service extraction | ACTIVE |
 
-## Next
+## Promotion-gated execution lanes
 
-Continue platform buildout through safe lanes first, then create a separate promotion gate for ScarFLIX media workflow automation.
+| Lane | Status |
+|---|---|
+| ScarFLIX production media-logic writes | PROMOTION-GATED |
+| Actual catalogue expansion enablement | PROMOTION-GATED |
+| Plex library mutation | PROMOTION-GATED |
+| Destructive pruning | PROMOTION-GATED |
+| Secrets material access | PROMOTION-GATED |
+
+## Correction
+
+Previous low-risk/locked wording has been superseded. Those lanes are not design-limited; they are only staged behind promotion gates where execution could affect running dependencies.
