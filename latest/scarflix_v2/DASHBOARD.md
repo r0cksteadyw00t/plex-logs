@@ -4,27 +4,30 @@
 
 **WAIT**
 
-Phase 2 is complete enough. Next automatic step is Phase 3 readiness for Ollama and Aider.
+Phase 3 tooling is ready enough for the first controlled Aider branch-only test task.
 
 ## Current status
 
 | Item | Status |
 |---|---|
-| Signal | PHASE 2 READY |
-| Phase | Phase 2 closing, Phase 3 readiness next |
-| Progress | 95% [###################.] |
-| Estimated remaining | about 0 minutes |
-| Last updated | 2026-06-05 10:22:02 AEST |
-| Runner process count | 2 |
+| Signal | PHASE 3 READY |
+| Phase | Phase 3 readiness |
+| Progress | 98% [####################] |
+| Last updated | 2026-06-05 10:23:26 AEST |
+| Git | PortableAvailable |
+| Repo | Present |
+| Aider | Installed |
+| Ollama | Missing |
 | Docker | Running |
-| Ollama | Missing, Phase 3 next |
+| Runner processes | 2 |
 | Catalogue | 78 visible, expansion off |
 
-## Return rules
+## Safety locks
 
-| Dashboard says | You do |
+| Area | State |
 |---|---|
-| PHASE 2 READY | Wait or type 1 for a manual check. |
-| CHATGPT REQUIRED | Type 1 in ChatGPT. |
-| JASON ACTION REQUIRED | Follow the action shown. |
-| ERROR / STUCK | Type 1 in ChatGPT. |
+| Catalogue expansion | LOCKED OFF |
+| Plex library changes | LOCKED OFF |
+| Destructive pruning | LOCKED OFF |
+| Aider writes to main | LOCKED OFF |
+| Aider branch | aider/local-automation only |
