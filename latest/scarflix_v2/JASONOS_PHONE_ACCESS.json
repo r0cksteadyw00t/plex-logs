@@ -1,20 +1,43 @@
 {
-    "generated_at":  "2026-06-05 23:20:38",
-    "overall_signal":  "JASONOS_TAILSCALE_PHONE_ACCESS_FIX_COMPLETE",
-    "tailscale_ip":  "",
-    "local_8791":  {
-                       "url":  "http://127.0.0.1:8791",
-                       "ok":  false,
-                       "status":  "",
-                       "error":  "Unable to connect to the remote server"
-                   },
-    "proxy_8791":  null,
-    "proxy_8793":  null,
-    "phone_test_8791_from_server":  null,
-    "phone_test_8793_from_server":  null,
-    "phone_mode":  "not_ready",
-    "phone_command_centre":  "",
-    "try_from_phone_first":  "",
-    "try_from_phone_second":  "",
-    "jason_action_required":  false
+    "generated_at":  "2026-06-05 23:21:14",
+    "overall_signal":  "REMOTE_ACCESS_MANAGER_RUNNING",
+    "authority_core":  {
+                           "url":  "http://127.0.0.1:8790/api/status",
+                           "ok":  false,
+                           "status":  "",
+                           "error":  "Unable to connect to the remote server"
+                       },
+    "command_centre_8791":  {
+                                "url":  "http://127.0.0.1:8791",
+                                "ok":  false,
+                                "status":  "",
+                                "error":  "Unable to connect to the remote server"
+                            },
+    "landing_8792":  {
+                         "url":  "http://127.0.0.1:8792",
+                         "ok":  true,
+                         "status":  "200",
+                         "error":  ""
+                     },
+    "lan_ip":  "172.22.0.1",
+    "lan_command_centre":  "http://mediaserver:8791",
+    "lan_command_centre_ip":  "http://172.22.0.1:8791",
+    "lan_landing_page":  "http://mediaserver:8792",
+    "tailscale":  {
+                      "installed":  true,
+                      "detected":  true,
+                      "ip":  "100.69.97.7",
+                      "login_required":  false,
+                      "authkey_used":  false
+                  },
+    "cloudflare_quick_tunnel":  {
+                                    "installed":  false,
+                                    "running":  false,
+                                    "url":  "",
+                                    "log":  "D:\\PlexTools\\logs\\foundry_cloudflared_8791.log"
+                                },
+    "phone_mode":  "tailscale",
+    "phone_command_centre":  "http://100.69.97.7:8791",
+    "jason_action_required":  false,
+    "notes":  "Tailscale preferred. Cloudflare quick tunnel fallback. LAN command centre remains http://mediaserver:8791."
 }
