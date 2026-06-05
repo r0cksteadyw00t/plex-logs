@@ -1,0 +1,58 @@
+[
+    {
+        "priority":  "P1",
+        "lane":  "mission_control",
+        "action":  "Bootstrap full Mission Control Plane and keep all lanes active.",
+        "owner":  "local_foundry_worker",
+        "requires_jason":  false
+    },
+    {
+        "priority":  "P1",
+        "lane":  "agent_mesh",
+        "action":  "Activate agent mesh registry and map agents to ScarFLIX Mission 001 work.",
+        "owner":  "local_foundry_worker",
+        "requires_jason":  false
+    },
+    {
+        "priority":  "P1",
+        "lane":  "scarflix",
+        "action":  "Continue ScarFLIX Mission 001 delivery: catalogue candidates, simulation, Plex-compatible dry-run, no design reduction.",
+        "owner":  "local_foundry_worker",
+        "requires_jason":  false
+    },
+    {
+        "priority":  "P2",
+        "lane":  "aider_ollama",
+        "action":  "Prepare Aider/Ollama execution harness for branch patch generation.",
+        "owner":  "local_foundry_worker",
+        "requires_jason":  false
+    },
+    {
+        "priority":  "P2",
+        "lane":  "memory_graph",
+        "action":  "Persist project non-negotiables and regression guardrails.",
+        "owner":  "local_foundry_worker",
+        "requires_jason":  false
+    },
+    {
+        "priority":  "P2",
+        "lane":  "technical_debt",
+        "action":  "Scan current runner and bridge debt, then propose branch fixes.",
+        "owner":  "local_foundry_worker",
+        "requires_jason":  false
+    },
+    {
+        "priority":  "P3",
+        "lane":  "voice_interface",
+        "action":  "Prepare voice interface lane architecture without blocking ScarFLIX.",
+        "owner":  "local_foundry_worker",
+        "requires_jason":  false
+    },
+    {
+        "priority":  "P3",
+        "lane":  "service_extraction",
+        "action":  "Identify service boundaries for future Foundry modularisation.",
+        "owner":  "local_foundry_worker",
+        "requires_jason":  false
+    }
+]
