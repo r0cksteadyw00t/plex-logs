@@ -1,10 +1,10 @@
 ﻿ScarFLIX v2 status for ChatGPT.
 
-Generated: 2026-06-05 21:45:31
+Generated: 2026-06-05 21:50:37
 Agent version: 1.0.0
-Signal: QUIESCED
-Reason: Autopilot heartbeat. No active command. ScarFLIX remains paused safely.
-Next action: ChatGPT can write command.json to GitHub, or user can type 1.
+Signal: ATTN_UNSUPPORTED_COMMAND
+Reason: Unsupported action: non_destructive_silent_mode
+Next action: Review command.json.
 
 Visible: 78
 Catalogue changed: False
