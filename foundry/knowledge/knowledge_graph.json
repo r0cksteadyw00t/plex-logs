@@ -1,0 +1,62 @@
+{
+    "generated_at":  "2026-06-05T11:56:32.5632563+10:00",
+    "nodes":  [
+                  {
+                      "id":  "jasonos_foundry",
+                      "type":  "platform",
+                      "label":  "JasonOS Foundry"
+                  },
+                  {
+                      "id":  "scarflix",
+                      "type":  "mission",
+                      "label":  "ScarFLIX Mission 001"
+                  },
+                  {
+                      "id":  "aider",
+                      "type":  "engine",
+                      "label":  "Aider implementation engine"
+                  },
+                  {
+                      "id":  "ollama",
+                      "type":  "engine",
+                      "label":  "Ollama local intelligence layer"
+                  },
+                  {
+                      "id":  "plex",
+                      "type":  "target_system",
+                      "label":  "Plex"
+                  },
+                  {
+                      "id":  "github",
+                      "type":  "control_plane",
+                      "label":  "GitHub source and telemetry"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "from":  "jasonos_foundry",
+                      "to":  "scarflix",
+                      "relation":  "contains_mission"
+                  },
+                  {
+                      "from":  "jasonos_foundry",
+                      "to":  "aider",
+                      "relation":  "uses_for_implementation"
+                  },
+                  {
+                      "from":  "jasonos_foundry",
+                      "to":  "ollama",
+                      "relation":  "uses_for_local_intelligence"
+                  },
+                  {
+                      "from":  "scarflix",
+                      "to":  "plex",
+                      "relation":  "serves_media_via"
+                  },
+                  {
+                      "from":  "jasonos_foundry",
+                      "to":  "github",
+                      "relation":  "publishes_status_to"
+                  }
+              ]
+}
