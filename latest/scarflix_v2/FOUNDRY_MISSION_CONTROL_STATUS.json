@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-06-05T14:45:00+10:00",
+  "platform": "JasonOS Foundry",
+  "mission": "ScarFLIX Mission 001",
+  "mode": "CEILING_MODE_FULL_AUTONOMY",
+  "overall_signal": "BLOCKER_COMMAND_CONSUMER_UNSUPPORTED_ACTION",
+  "status": "DIRECTIVE_PUBLISHED_LOCAL_CONSUMER_NOT_READY",
+  "summary": "Ceiling Mode directive and command are published, but the current MEDIASERVER command runner has not consumed foundry_ceiling_mode_autonomy and previously reports unsupported actions outside status.",
+  "design_preserved": true,
+  "features_dropped": false,
+  "requires_jason_pasted_logs": false,
+  "true_blocker": true,
+  "blocker": {
+    "name": "Local command consumer cannot execute Foundry ceiling-mode commands",
+    "evidence": "command_result.json last reports unsupported_action for script_snippets from ScarFLIXV2_CommandRunner. Expected Mission Control files were not created by local workers.",
+    "impact": "GitHub/ChatGPT control path is active, but local execution is not yet running the full Mission Control Plane.",
+    "required_fix": "Upgrade local command consumer to support foundry_ceiling_mode_autonomy and bootstrap Mission Control Plane without reducing scope."
+  },
+  "expected_next_outputs": [
+    "FOUNDRY_AGENT_MESH_STATUS.json",
+    "SCARFLIX_MISSION001_STATUS.json",
+    "FOUNDRY_NEXT_ACTION_QUEUE.json"
+  ]
+}
