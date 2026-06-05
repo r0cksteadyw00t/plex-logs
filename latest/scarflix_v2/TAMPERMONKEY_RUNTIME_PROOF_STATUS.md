@@ -1,11 +1,13 @@
 # JasonOS Foundry Tampermonkey Runtime Proof Status
 
-Generated: 2026-06-05 14:23:06
-Overall: AMBER_BACKEND_READY_WAITING_FOR_TAMPERMONKEY_RUNTIME
-Browser runtime verified: False
-Proof source: 
+Generated: 2026-06-05 14:25:06
+Overall: GREEN_100_PERCENT_BROWSER_RUNTIME_VERIFIED
+Browser runtime verified: True
+Proof source: raw-websocket-devtools
 Proof canary: 
-Proof last seen: 
-Next action: Backend proof endpoints are ready, but the browser userscript has not hit /tm-proof yet.
+FOUNDRY_TAMPERMONKEY_RUNTIME_PROOF tm-runtime-proof-20260605_135825
+
+Proof last seen: 2026-06-05 14:25:05
+Next action: Browser/Tampermonkey runtime proof exists. Full bridge is verified end to end.
 
 This status is auto-published so ChatGPT can verify the browser/Tampermonkey layer without pasted logs.
