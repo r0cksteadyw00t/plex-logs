@@ -1,0 +1,100 @@
+{
+    "generated_at":  "2026-06-05 14:53:40",
+    "platform":  "JasonOS Foundry",
+    "mission":  "ScarFLIX Mission 001",
+    "overall_signal":  "GREEN_AGENT_MESH_REGISTERED",
+    "agents":  [
+                   {
+                       "name":  "foundry_planner",
+                       "role":  "Mission planner and decomposition agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "maintain ceiling-mode mission plan",
+                                                "decompose work into local tasks",
+                                                "preserve full design"
+                                            ]
+                   },
+                   {
+                       "name":  "scarflix_builder",
+                       "role":  "ScarFLIX implementation agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "implement Mission 001 local changes",
+                                                "prepare branch patches",
+                                                "avoid live mutation until gates pass"
+                                            ]
+                   },
+                   {
+                       "name":  "qa_gatekeeper",
+                       "role":  "QA and promotion gate agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "run non-destructive checks",
+                                                "validate Plex compatibility",
+                                                "enforce no-CAM and English-first catalogue rules"
+                                            ]
+                   },
+                   {
+                       "name":  "catalogue_curator",
+                       "role":  "Catalogue candidate and curation agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "generate candidates",
+                                                "simulate expansion",
+                                                "apply English-first policy"
+                                            ]
+                   },
+                   {
+                       "name":  "plex_readonly_analyst",
+                       "role":  "Plex read-only analysis agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "read Plex state",
+                                                "detect library compatibility",
+                                                "never mutate libraries without gate"
+                                            ]
+                   },
+                   {
+                       "name":  "memory_graph_agent",
+                       "role":  "Foundry memory graph agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "persist decisions",
+                                                "track design constraints",
+                                                "prevent regression"
+                                            ]
+                   },
+                   {
+                       "name":  "self_improvement_agent",
+                       "role":  "Self-improvement and technical debt agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "scan failures",
+                                                "propose improvements",
+                                                "reduce repeated regressions"
+                                            ]
+                   },
+                   {
+                       "name":  "local_ai_orchestrator",
+                       "role":  "Aider/Ollama orchestration agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "coordinate local model work",
+                                                "prepare prompts",
+                                                "summarise worker outputs"
+                                            ]
+                   },
+                   {
+                       "name":  "service_extractor",
+                       "role":  "Service extraction agent",
+                       "enabled":  true,
+                       "responsibilities":  [
+                                                "identify separable services",
+                                                "prepare modularisation plan",
+                                                "avoid breaking existing ScarFLIX lane"
+                                            ]
+                   }
+               ],
+    "features_dropped":  false,
+    "design_reduced":  false
+}
