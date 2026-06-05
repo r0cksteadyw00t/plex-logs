@@ -1,0 +1,29 @@
+{
+    "policy_version":  "0.2",
+    "default_mode":  "ambitious_concurrent_safe_lanes",
+    "allowed_parallel_lanes":  [
+                                   "dashboard_status",
+                                   "docs_runbooks",
+                                   "backlog_memory",
+                                   "architecture_review",
+                                   "technical_debt_scan",
+                                   "lowrisk_local_ai"
+                               ],
+    "single_writer_lanes":  [
+                                "foundry_cycle_status_publisher",
+                                "scarflix_media_logic",
+                                "platform_gate",
+                                "catalogue_admission"
+                            ],
+    "locked_lanes":  [
+                         "catalogue_expansion",
+                         "plex_library_mutation",
+                         "destructive_pruning",
+                         "secrets_access",
+                         "main_branch_aider_writes"
+                     ],
+    "secrets_vault":  "C:\\Users\\jason\\OneDrive\\Public\\TOKENS",
+    "logs_root":  "D:\\PlexTools\\logs",
+    "no_fake_green":  true,
+    "codex_used":  false
+}
