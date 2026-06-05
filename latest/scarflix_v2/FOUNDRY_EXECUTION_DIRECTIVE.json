@@ -1,0 +1,68 @@
+{
+  "id": "foundry-execution-directive-20260605-001",
+  "generated_at": "2026-06-05T15:00:00+10:00",
+  "platform": "JasonOS Foundry",
+  "mission": "ScarFLIX Mission 001",
+  "mode": "CEILING_MODE_FULL_AUTONOMY",
+  "status": "ACTIVE",
+  "design_baseline": "Grok-aligned full JasonOS Foundry autonomous platform with ScarFLIX as Mission 001",
+  "features_dropped": false,
+  "design_reduced": false,
+  "jason_intervention": "only_key_decisions_or_true_blockers",
+  "execution_phase": "P1_AUTONOMOUS_LANE_EXECUTION",
+  "required_behavior": {
+    "continue_without_jason": true,
+    "publish_all_results_to_github": true,
+    "do_not_request_pasted_logs": true,
+    "do_not_reduce_scope": true,
+    "do_not_drop_lanes": true,
+    "codex_required": false
+  },
+  "p1_lanes": [
+    {
+      "lane": "mission_control",
+      "objective": "Keep Mission Control alive, reconcile command queue, publish consolidated status and blockers."
+    },
+    {
+      "lane": "agent_mesh",
+      "objective": "Map registered Foundry agents to concrete ScarFLIX Mission 001 tasks, not placeholders."
+    },
+    {
+      "lane": "scarflix",
+      "objective": "Continue ScarFLIX delivery through catalogue candidates, simulation and Plex-compatible dry-run while preserving full Foundry design."
+    }
+  ],
+  "p2_lanes": [
+    {
+      "lane": "aider_ollama",
+      "objective": "Prepare local Aider/Ollama branch patch harness for implementation work."
+    },
+    {
+      "lane": "memory_graph",
+      "objective": "Persist non-negotiables and regression guardrails so future work does not shrink the design."
+    },
+    {
+      "lane": "technical_debt",
+      "objective": "Scan runner, bridge and telemetry debt and propose branch-safe repairs."
+    }
+  ],
+  "promotion_rules": {
+    "design_work": "auto_execute",
+    "dry_run": "auto_execute",
+    "read_only_plex_analysis": "auto_execute",
+    "branch_patch_preparation": "auto_execute",
+    "catalogue_simulation": "auto_execute",
+    "plex_visible_catalogue_admission": "green_gate_required",
+    "live_plex_library_mutation": "explicit_green_gate_required",
+    "irreversible_delete": "blocked_unless_explicit_jason_decision",
+    "secret_value_exposure": "blocked"
+  },
+  "expected_outputs": [
+    "latest/scarflix_v2/FOUNDRY_EXECUTION_STATUS.json",
+    "latest/scarflix_v2/SCARFLIX_CANDIDATE_GENERATION_STATUS.json",
+    "latest/scarflix_v2/SCARFLIX_EXPANSION_SIMULATION_STATUS.json",
+    "latest/scarflix_v2/FOUNDRY_MEMORY_GRAPH_STATUS.json",
+    "latest/scarflix_v2/FOUNDRY_TECH_DEBT_STATUS.json",
+    "latest/scarflix_v2/FOUNDRY_BRANCH_PATCH_STATUS.json"
+  ]
+}
