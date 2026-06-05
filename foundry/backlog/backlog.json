@@ -1,10 +1,49 @@
 {
-  "backlog_version": "0.1",
-  "active_phase": "Phase 3 readiness",
-  "items": [
-    { "id": "FND-001", "title": "Install and verify Ollama", "lane": "local-intelligence", "status": "in_progress" },
-    { "id": "FND-002", "title": "Install and verify Aider", "lane": "implementation-engine", "status": "in_progress" },
-    { "id": "FND-003", "title": "Maintain dashboard and ETA", "lane": "telemetry", "status": "active" },
-    { "id": "FND-004", "title": "Create reusable memory/runbook scaffolds", "lane": "platform-services", "status": "active" }
-  ]
+    "backlog_version":  "0.2",
+    "generated_at":  "2026-06-05T11:39:25.6019774+10:00",
+    "active_strategy":  "parallel safe lanes",
+    "items":  [
+                  {
+                      "id":  "FND-010",
+                      "lane":  "lowrisk_local_ai",
+                      "title":  "Create durable low-risk implementation loop",
+                      "status":  "active",
+                      "risk":  "low"
+                  },
+                  {
+                      "id":  "FND-011",
+                      "lane":  "dashboard_status",
+                      "title":  "Make dashboard phase/state persistent and non-reverting",
+                      "status":  "active",
+                      "risk":  "low"
+                  },
+                  {
+                      "id":  "FND-012",
+                      "lane":  "runbooks",
+                      "title":  "Auto-maintain Foundry runbook and known fixes",
+                      "status":  "active",
+                      "risk":  "low"
+                  },
+                  {
+                      "id":  "FND-013",
+                      "lane":  "architecture_review",
+                      "title":  "Create self-review and drift-detection reports",
+                      "status":  "active",
+                      "risk":  "low"
+                  },
+                  {
+                      "id":  "FND-014",
+                      "lane":  "scarflix_media_logic",
+                      "title":  "Prepare media workflow promotion gate",
+                      "status":  "locked",
+                      "risk":  "medium"
+                  },
+                  {
+                      "id":  "FND-015",
+                      "lane":  "catalogue_expansion",
+                      "title":  "Prepare expansion gate but keep disabled",
+                      "status":  "locked",
+                      "risk":  "high"
+                  }
+              ]
 }
