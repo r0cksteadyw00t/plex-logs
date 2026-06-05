@@ -1,43 +1,519 @@
 {
-    "generated_at":  "2026-06-05 23:31:08",
-    "overall_signal":  "REMOTE_ACCESS_MANAGER_RUNNING",
-    "authority_core":  {
-                           "url":  "http://127.0.0.1:8790/api/status",
-                           "ok":  true,
-                           "status":  "200",
-                           "error":  ""
-                       },
-    "command_centre_8791":  {
-                                "url":  "http://127.0.0.1:8791",
+    "generated_at":  "2026-06-05 23:32:38",
+    "overall_signal":  "JASONOS_DOCKER_AUTOSTART_NO_POPUP_CLEANUP_COMPLETE",
+    "outcome":  "docker_autostart_enabled_and_jasonos_task_windows_hidden",
+    "docker_autostart_task":  {
+                                  "task_name":  "JasonOS_Docker_Autostart_And_Foundry_Up",
+                                  "script_path":  "D:\\PlexTools\\Foundry\\workers\\JasonOS_Docker_Autostart_And_Foundry_Up.ps1",
+                                  "registered":  true,
+                                  "error":  ""
+                              },
+    "docker_now":  {
+                       "docker_cli_found":  true,
+                       "docker_desktop_path":  "C:\\Program Files\\Docker\\Docker\\Docker Desktop.exe",
+                       "docker_desktop_start_requested":  false,
+                       "docker_ready":  true,
+                       "wait_seconds":  0,
+                       "error":  ""
+                   },
+    "compose_files_found":  [
+                                "D:\\PlexTools\\Foundry\\docker-compose.yml"
+                            ],
+    "compose_results":  [
+                            {
+                                "compose_file":  "D:\\PlexTools\\Foundry\\docker-compose.yml",
+                                "attempted":  true,
                                 "ok":  true,
-                                "status":  "200",
-                                "error":  ""
-                            },
-    "landing_8792":  {
-                         "url":  "http://127.0.0.1:8792",
-                         "ok":  true,
-                         "status":  "200",
-                         "error":  ""
-                     },
-    "lan_ip":  "172.29.224.1",
-    "lan_command_centre":  "http://mediaserver:8791",
-    "lan_command_centre_ip":  "http://172.29.224.1:8791",
-    "lan_landing_page":  "http://mediaserver:8792",
-    "tailscale":  {
-                      "installed":  true,
-                      "detected":  true,
-                      "ip":  "100.69.97.7",
-                      "login_required":  false,
-                      "authkey_used":  false
-                  },
-    "cloudflare_quick_tunnel":  {
-                                    "installed":  false,
-                                    "running":  false,
-                                    "url":  "",
-                                    "log":  "D:\\PlexTools\\logs\\foundry_cloudflared_8791.log"
-                                },
-    "phone_mode":  "tailscale",
-    "phone_command_centre":  "http://100.69.97.7:8791",
-    "jason_action_required":  false,
-    "notes":  "Tailscale preferred. Cloudflare quick tunnel fallback. LAN command centre remains http://mediaserver:8791."
+                                "exit_code":  0,
+                                "reason":  ""
+                            }
+                        ],
+    "hidden_launcher_ok":  true,
+    "hidden_launcher":  "D:\\PlexTools\\Foundry\\tools\\RunCommandHidden.vbs",
+    "task_results":  [
+                         {
+                             "task":  "\\JasonOS_ChatGPT_Bridge_Executor_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_ChatGPT_Bridge_Server_Logon",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_ChatGPT_Wakeup_Watcher_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_Aggressive_Local_Autopilot_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_CommandCentre_8788",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_CommandCentre_Repair_5min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_CommandRunner_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_DevTools_RuntimeInjector_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_Health_Pulse_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_Landing_Server_8792",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_LocalDirectiveInbox_8798",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_LocalDirectivePublisher_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_OpenWebUI_Repair_3min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_RawWebSocket_RuntimeInjector_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_Remote_Access_Manager_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_Remote_Executor_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_RuntimeProofPublisher_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_Status_Reporter_1min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\JasonOS_Foundry_V2_Watchdog_5min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_Foundry_LocalHeartbeat",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_Foundry_RunnerWatchdog",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_AdminTaskRunner",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_AutoGate",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_AutonomousCatalogPipeline",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_AutonomousController",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_CatalogEnricher",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_CatalogPlayWatcher",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_CatalogPromoter",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_CatalogSeeder",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_CatalogVisibilityGate",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_ClientSafeUrlRewriter",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_CompactStatusPublisher",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_ConcurrentStreamQA",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_ControlledCatalogExpansion",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_Dashboard_Status",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_Dashboard_Watchdog_Logon",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_Dashboard_Watchdog_Minute",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_GitHubTelemetryPublisher",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_HealthStatus",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_LiveCatalogSeeder",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_LiveProfileHydrator",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_LiveSelfTest",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_MasterAuthority",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_MaterializeReady",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_OfflineStatusCollector",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_PlatformGate_Manual_OneShot",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_PlayReadyWatcher",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_PlexClientDecisionQA",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_PlexPlaybackProbe",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_PlexSelfTest",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_PrivilegedCleanup",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_RequestServer",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_RetirePlaceholderCatalog",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_RetryPolicy",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_SafeCatalogOrchestrator",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_SafeWebDavExpansionPipeline",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_StreamProxy",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_StremioDirectResolver",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_TargetedReadyBatch",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_VisibleCatalogQA",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_WebDavFileBridge",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\ScarFLIX_v2_WebDavVirtualCatalogPublisher",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         },
+                         {
+                             "task":  "\\SDB_StatusWatchdog_7min",
+                             "changed":  true,
+                             "skipped":  false,
+                             "reason":  "Converted to hidden launcher only.",
+                             "error":  ""
+                         }
+                     ],
+    "restore_csv":  "D:\\PlexTools\\logs\\jasonos_task_action_restore_20260605_233123.csv",
+    "local_8790":  {
+                       "url":  "http://127.0.0.1:8790/api/status",
+                       "ok":  true,
+                       "status":  "200",
+                       "error":  ""
+                   },
+    "local_8791":  {
+                       "url":  "http://127.0.0.1:8791",
+                       "ok":  true,
+                       "status":  "200",
+                       "error":  ""
+                   },
+    "local_8792":  {
+                       "url":  "http://127.0.0.1:8792",
+                       "ok":  true,
+                       "status":  "200",
+                       "error":  ""
+                   },
+    "tailscale_ip":  "100.69.97.7",
+    "tailscale_8793_proxy_applied":  true,
+    "phone_url_8791":  "http://100.69.97.7:8791",
+    "phone_url_8793":  "http://100.69.97.7:8793",
+    "killed_processes":  [
+
+                         ],
+    "disabled_tasks":  [
+
+                       ],
+    "deleted_tasks":  [
+
+                      ],
+    "stopped_services":  [
+
+                         ],
+    "jason_action_required":  false
 }
