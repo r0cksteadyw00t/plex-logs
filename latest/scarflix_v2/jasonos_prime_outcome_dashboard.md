@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T22:06:01.127Z
+Updated UTC: 2026-06-06T22:07:02.381Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -10,8 +10,8 @@ Will progress without Codex: true
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-06T09:36:10Z - dashboard/status refresh confirmed | 8805 Node brain online; 8791 reachable; local tools/status exposed. | 65% | 1-2 days | Low |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-06T22:05:30.046Z - WebDAV active gate | Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=WebDAV active gate; child_age=1 min; owner_pid=34540; child_pid=39188. | 46% | after PlatformGate and candidate model PASS | Low |
-| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-06T22:05:03Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1. | 75% | runs every 5 minutes | Low |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-06T22:05:30.046Z - WebDAV active gate | Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=WebDAV active gate; child_age=2 min; owner_pid=34540; child_pid=39188. | 46% | after PlatformGate and candidate model PASS | Low |
+| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-06T22:06:01Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1. | 75% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-06T14:17:07Z - scheduled task wrappers refreshed | Status PASS; tasks_updated=15; blockers=0. | 100% | active now | Low |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=11. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
@@ -29,8 +29,8 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 3 min ago
-- Platform child progress: 1 min ago
+- Controller updated: 4 min ago
+- Platform child progress: 2 min ago
 - Mirror updated: under 1 min ago
 - Platform runner running: false
 - Platform child active: true
