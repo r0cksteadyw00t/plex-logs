@@ -1,6 +1,6 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-06T16:20:03Z
+Updated UTC: 2026-06-06T16:22:03Z
 Status: ALERT
 Alert level: HIGH
 Jason action required: false
@@ -9,14 +9,14 @@ Codex action required: true
 ## Signals
 - controller_status: RUNNING
 - controller_milestone: PLATFORM_GATE_RUNNING
-- controller_age_minutes: 12
+- controller_age_minutes: 14
 - watchdog_status: PASS
 - watchdog_risk: Low
-- watchdog_age_minutes: 12
+- watchdog_age_minutes: 14
 - dashboard_status: PASS
 - dashboard_age_minutes: 0
 - mirror_status: PASS
-- mirror_age_minutes: 0
+- mirror_age_minutes: 1
 - checkpoint_status: RUNNING
 - checkpoint_step: running_platform_gate_attempt_1
 - checkpoint_age_minutes: 0
@@ -24,7 +24,7 @@ Codex action required: true
 - platform_progress_fresh: true
 
 ## Recovery Actions
-- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=44204; run pid=15664
+- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=39624; run pid=39716
 
 ## Notes
 - Controller status is stale, but durable PlatformGate progress is fresh.
