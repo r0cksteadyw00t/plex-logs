@@ -18,7 +18,7 @@ Full project rollout is active. Ceiling Mode is enforced. No design lane is supp
 | Aider | Installed |
 | Ollama | Running |
 | Catalogue | 78 visible; expansion design/candidate/simulation active; admission promotion-gated |
-| Last updated | 2026-06-06 21:52:06 AEST |
+| Last updated | 2026-06-06 22:07:42 AEST |
 
 ## Active concurrent build lanes
 
