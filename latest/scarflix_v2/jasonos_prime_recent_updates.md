@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T22:35:03.280Z
+Updated UTC: 2026-06-06T22:37:01.455Z
 Source: live status merge
 
+- 2026-06-06T22:36:41Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=40152; child_pid=
+- 2026-06-06T22:36:41Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-06T22:36:39.470Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:36:39Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=65 failed_detected=13 pruned=0
 - 2026-06-06T22:34:53Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=31320; child_pid=
 - 2026-06-06T22:34:53Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
-- 2026-06-06T22:34:45.001Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:34:45Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=66 failed_detected=12 pruned=0
-- 2026-06-06T22:33:39Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=31320; child_pid=45376
-- 2026-06-06T22:33:39Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
 - 2026-06-06T22:33:22.352Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:21: Phone-facing GitHub Pages dashboard delivery was repaired. Cause: GitHub Pages for `r0cksteadyw00t/plex-logs` is configured to publish from `main:/docs`. `JasonOS_Prime_PublicMirrorPublisher.js` was publishing live dashboard HTML/JSON to repository-root `latest/...`, which made raw/API status current but left the Pa...
 - 2026-06-06T22:33:09Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-06T22:28:06Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
