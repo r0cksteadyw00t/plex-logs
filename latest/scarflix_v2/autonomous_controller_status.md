@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: BLOCKED_LOOP
-Milestone state: BLOCKED_LOOP
+Status: RUNNING
+Milestone state: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-06T09:37:07Z
-Current step: transient_review_repeated
+Updated UTC: 2026-06-06T09:40:14Z
+Current step: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
 Jason action required: False
 
 ## PlatformGate
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: none
-- next_check_utc: 
+- action_taken: transient-only REVIEW; relaunched detached PlatformGate runner
+- next_check_utc: 2026-06-06T09:45:27Z
 
 ## Blockers
-- Same transient-only PlatformGate REVIEW repeated beyond retry policy
+- none
