@@ -13,12 +13,12 @@ Full project rollout is active. Ceiling Mode is enforced. No design lane is supp
 | Signal | FULL PROJECT CEILING MODE ACTIVE |
 | Phase | Full concurrent project rollout |
 | Design posture | Maximum ambition, no self-imposed design constraints |
-| Runner processes | 3 |
+| Runner processes | 2 |
 | Docker | Running |
 | Aider | Installed |
 | Ollama | Running |
 | Catalogue | 78 visible; expansion design/candidate/simulation active; admission promotion-gated |
-| Last updated | 2026-06-06 22:19:53 AEST |
+| Last updated | 2026-06-06 22:22:05 AEST |
 
 ## Active concurrent build lanes
 
