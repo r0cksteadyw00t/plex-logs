@@ -3,14 +3,14 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-06T01:37:31Z
+Updated UTC: 2026-06-06T01:38:06Z
 Current step: PLATFORM_GATE_RUNNING
 Jason action required: False
 
 ## PlatformGate
-- runner_running: False
-- status: REVIEW
-- stage: writing_summary
+- runner_running: True
+- status: RUNNING
+- stage: running_platform_gate_attempt_1
 - visible: 78
 - transient_failures: 6
 - prunable_failures: 0
@@ -23,11 +23,11 @@ Jason action required: False
 - rclone_mount_status: PASS
 - s_media_ready: True
 - s_catalog_ready: True
-- mount_selfheal_attempted: True
+- mount_selfheal_attempted: False
 
 ## Action
-- action_taken: rclone mount restored; relaunched detached PlatformGate
-- next_check_utc: 2026-06-06T01:52:35Z
+- action_taken: PlatformGate runner already running; no inline wait
+- next_check_utc: 2026-06-06T01:53:08Z
 
 ## Blockers
 - none
