@@ -1,10 +1,10 @@
 ﻿ScarFLIX v2 status for ChatGPT.
 
-Generated: 2026-06-06 13:11:33
+Generated: 2026-06-06 13:16:10
 Agent version: 1.0.0
 Signal: QUIESCED
-Reason: Autopilot quiesced excessive runner count: 6
-Next action: No Codex. Autopilot remains active.
+Reason: Autopilot heartbeat. No active command. ScarFLIX remains paused safely.
+Next action: ChatGPT can write command.json to GitHub, or user can type 1.
 
 Visible: 78
 Catalogue changed: False
