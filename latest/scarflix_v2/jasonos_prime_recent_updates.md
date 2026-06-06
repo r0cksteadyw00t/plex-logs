@@ -1,16 +1,16 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T22:13:05.360Z
+Updated UTC: 2026-06-06T22:14:04.441Z
 Source: live status merge
 
-- 2026-06-06T22:12:11.532Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:12: The dashboard `Recent achievements` panel was stale even though the main dashboard/status JSON was current. Cause: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_recent_updates.json` was frozen at `2026-06-06T10:55:00Z`. `JasonOS_Prime_OutcomeDashboard.js` returned that stored file unchanged whenever it existed.
+- 2026-06-06T22:13:43Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=36116; child_pid=36464
+- 2026-06-06T22:13:43Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-06T22:13:40.022Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:13:40Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries.
+- 2026-06-06T22:13:26.779Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:12: The dashboard `Recent achievements` panel was stale even though the main dashboard/status JSON was current. Cause: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_recent_updates.json` was frozen at `2026-06-06T10:55:00Z`. `JasonOS_Prime_OutcomeDashboard.js` returned that stored file unchanged whenever it existed.
+- 2026-06-06T22:13:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-06T22:12:08Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=24560; child_pid=
 - 2026-06-06T22:12:08Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
-- 2026-06-06T22:12:01Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=24560; child_pid=16460
-- 2026-06-06T22:12:01Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
-- 2026-06-06T22:11:59.789Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:11:59Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=66 failed_detected=12 pruned=0
 - 2026-06-06T22:08:23.808Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 07:58: Eight-hour apparent dashboard stall was diagnosed as a reporting and PlatformGate control-flow issue, not a total automation failure. Durable PlatformGate stayed at the parent milestone `PLATFORM_GATE_RUNNING`. Child QA did progress from VisibleCatalogQA into Plex client decision QA, but the dashboard did not expose...
-- 2026-06-06T22:08:09Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-06T10:55:00Z - Watchdog-of-watchdog sentinel added: Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell.
 - 2026-06-06T10:50:00Z - Redundant sentinel added: Added JasonOS_Prime_Sentinel as watchdog-of-watchdog to re-enable stalled tasks, retrigger recovery, and publish alert state when self-heal cannot resolve.
 - 2026-06-06T10:41:34Z - Dashboard stall recovered: Watchdog task was re-enabled, stale PlatformGate locks were backed up and removed, controller was retriggered, and InstantStatus was made non-recursive.
