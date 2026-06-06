@@ -1,16 +1,16 @@
 {
     "component":  "scarflix_v2_autonomous_controller",
-    "status":  "BLOCKED_LOOP",
-    "milestone_state":  "BLOCKED_LOOP",
-    "updated_utc":  "2026-06-03T22:58:55Z",
-    "current_step":  "transient_review_repeated",
+    "status":  "RUNNING",
+    "milestone_state":  "PLATFORM_GATE_RUNNING",
+    "updated_utc":  "2026-06-06T01:37:31Z",
+    "current_step":  "PLATFORM_GATE_RUNNING",
     "current_milestone":  "Complete same-snapshot PlatformGate checkpoint",
     "next_milestone":  "Blanket candidate-source retry/quarantine model",
-    "action_taken":  "none",
-    "next_check_utc":  "",
+    "action_taken":  "rclone mount restored; relaunched detached PlatformGate",
+    "next_check_utc":  "2026-06-06T01:52:35Z",
     "jason_action_required":  false,
     "blockers":  [
-                     "Same transient-only PlatformGate REVIEW repeated beyond retry policy"
+
                  ],
     "docs":  {
                  "next_actions_path":  "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\docs\\NEXT_ACTIONS.md",
@@ -22,11 +22,11 @@
                           "status":  "REVIEW",
                           "stage":  "writing_summary",
                           "visible_count":  78,
-                          "started_utc":  "2026-06-03T09:12:08Z",
-                          "last_progress_utc":  "2026-06-03T09:12:12Z",
-                          "transient_failures":  3,
+                          "started_utc":  "2026-06-06T01:13:39Z",
+                          "last_progress_utc":  "2026-06-06T01:13:47Z",
+                          "transient_failures":  6,
                           "prunable_failures":  0,
-                          "failure_signature":  "Dune (2021)|Local WebDAV HEAD status was not 200|503|0",
+                          "failure_signature":  "The Chosen|Local WebDAV HEAD status was not 200|503|0",
                           "checkpoint_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.json",
                           "checkpoint_markdown":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.md"
                       },
@@ -40,11 +40,19 @@
 
                                                 ]
                                },
+    "infrastructure":  {
+                           "rclone_mount_status":  "PASS",
+                           "rclone_mount_status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
+                           "s_media_ready":  true,
+                           "s_catalog_ready":  true,
+                           "mount_selfheal_attempted":  true,
+                           "mount_selfheal_exit_code":  "0"
+                       },
     "files":  {
                   "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\autonomous_controller_status.json",
                   "status_md":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\autonomous_controller_status.md",
                   "retry_state":  "D:\\PlexTools\\state\\scarflix_v2\\autonomous_controller_retry_state.json",
-                  "log":  "D:\\PlexTools\\logs\\scarflix_v2_autonomous_controller_20260604.log"
+                  "log":  "D:\\PlexTools\\logs\\scarflix_v2_autonomous_controller_20260606.log"
               },
     "public_urls":  {
                         "status_json":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/autonomous_controller_status.json",
@@ -52,6 +60,7 @@
                         "platform_checkpoint_json":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/platform_gate_checkpoint.json",
                         "platform_checkpoint_md":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/platform_gate_checkpoint.md",
                         "candidate_source_model_json":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/candidate_source_model_status.json",
-                        "candidate_source_model_md":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/candidate_source_model_status.md"
+                        "candidate_source_model_md":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/candidate_source_model_status.md",
+                        "rclone_mount_status_json":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/scarflix_v2_rclone_mount_keepalive_status.json"
                     }
 }
