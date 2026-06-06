@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T11:16:01.544Z
+Updated UTC: 2026-06-06T11:26:01.580Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -10,12 +10,12 @@ Will progress without Codex: true
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-06T09:36:10Z - dashboard/status refresh confirmed | 8805 Node brain online; 8791 reachable; local tools/status exposed. | 65% | 1-2 days | Low |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-06T09:36:00Z - watchdog installed; controller transient retry policy patched after BLOCKED_LOOP | Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING. | 46% | after PlatformGate and candidate model PASS | Medium |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-06T09:36:00Z - watchdog installed; controller transient retry policy patched after BLOCKED_LOOP | Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING. | 46% | after PlatformGate and candidate model PASS | High |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=10. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
 | Swarm Intelligence | Parallel local workers for simulations, status, planning and future missions. | 2026-06-06T08:25:00Z - watchdog swarm escalation marker added | Short scheduled workers active; broader worker swarm pending. | 32% | 2-4 days | Medium |
 | Phone/Multi-Device Federation | Stable remote status/control through public mirror plus tunnel/federation layer. | 2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated | Public mirror PASS; raw status base available. | 50% | 1-3 days | Low |
-| Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-06T09:36:00Z - watchdog scheduled task installed and controller retry loop patched | Core services online; current ScarFLIX bottleneck is same-snapshot PlatformGate. | 46% | first major milestone after PlatformGate + controlled expansion | Medium |
+| Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-06T09:36:00Z - watchdog scheduled task installed and controller retry loop patched | Core services online; current ScarFLIX bottleneck is same-snapshot PlatformGate. | 46% | first major milestone after PlatformGate + controlled expansion | High |
 
 Recent Achievements:
 - 2026-06-06T10:55:00Z - Watchdog-of-watchdog sentinel added: Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell.
@@ -27,9 +27,9 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 2 min ago
-- Platform child progress: 3 min ago
-- Mirror updated: 1 min ago
+- Controller updated: 3 min ago
+- Platform child progress: 5 min ago
+- Mirror updated: 5 min ago
 - Platform runner running: true
 - Platform child active: true
 
