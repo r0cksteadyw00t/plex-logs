@@ -1,62 +1,29 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "ALERT",
-  "alert_level": "HIGH",
-  "updated_utc": "2026-06-06T11:56:02Z",
+  "status": "PASS",
+  "alert_level": "LOW",
+  "updated_utc": "2026-06-06T12:00:04Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": true,
-  "repeat_count": 10,
+  "codex_action_required": false,
+  "repeat_count": 1,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 6,
+    "controller_age_minutes": 4,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 6,
+    "watchdog_age_minutes": 4,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 0,
+    "dashboard_age_minutes": 4,
     "mirror_status": "PASS",
-    "mirror_age_minutes": 5,
+    "mirror_age_minutes": 3,
     "checkpoint_status": "RUNNING",
     "checkpoint_step": "running_platform_gate_attempt_1",
-    "checkpoint_age_minutes": 20
+    "checkpoint_age_minutes": 4
   },
-  "recovery_actions": [
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "watchdog_stale_or_failed",
-      "result": "PASS",
-      "note": "enable pid=23444; run pid=27204"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "controller_stale_or_blocked",
-      "result": "PASS",
-      "note": "enable pid=39436; run pid=27280"
-    },
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=36252; run pid=44072"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=12512; run pid=43228"
-    },
-    {
-      "task": "ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=43216; run pid=26844"
-    }
-  ],
-  "notes": [
-    "Same unresolved sentinel signature repeated for three cycles."
-  ],
+  "recovery_actions": [],
+  "notes": [],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
