@@ -1,38 +1,38 @@
 ﻿{
     "component":  "scarflix_v2_watchdog_stall_detector",
-    "status":  "REVIEW",
-    "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-06T08:36:05Z",
-    "started_utc":  "2026-06-06T08:36:04Z",
+    "status":  "PASS",
+    "stall_risk":  "Low",
+    "updated_utc":  "2026-06-06T08:46:04Z",
+    "started_utc":  "2026-06-06T08:46:03Z",
     "duration_seconds":  1,
     "will_progress_without_codex":  true,
     "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
-                    "controller_age_minutes":  3,
-                    "platform_checkpoint_age_minutes":  17,
+                    "controller_age_minutes":  9,
+                    "platform_checkpoint_age_minutes":  10,
                     "dashboard_age_minutes":  5,
                     "mirror_age_minutes":  6,
                     "movie_strm_count":  1,
                     "tv_strm_count":  0,
                     "total_strm_count":  1,
-                    "previous_total_strm_count":  null,
-                    "catalogue_no_growth":  false,
-                    "platform_checkpoint_step":  "blocked_by_runner_lock"
+                    "previous_total_strm_count":  1,
+                    "catalogue_no_growth":  true,
+                    "platform_checkpoint_step":  "blocked_before_platform_gate"
                 },
     "tasks":  {
                   "controller":  {
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "6/06/2026 6:22:01 PM",
-                                     "next_run_time":  "6/06/2026 6:37:00 PM",
+                                     "last_run_time":  "6/06/2026 6:37:01 PM",
+                                     "next_run_time":  "6/06/2026 6:52:00 PM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
                                           "exists":  true,
                                           "status":  "Ready",
-                                          "last_run_time":  "6/06/2026 6:19:00 PM",
+                                          "last_run_time":  "6/06/2026 6:36:05 PM",
                                           "next_run_time":  "N/A",
                                           "last_result":  "2"
                                       },
@@ -40,35 +40,23 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Running",
-                                    "last_run_time":  "6/06/2026 6:36:01 PM",
-                                    "next_run_time":  "6/06/2026 6:41:00 PM",
+                                    "last_run_time":  "6/06/2026 6:46:01 PM",
+                                    "next_run_time":  "6/06/2026 6:51:00 PM",
                                     "last_result":  "267009"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
                                  "exists":  true,
                                  "status":  "Ready",
-                                 "last_run_time":  "6/06/2026 6:30:01 PM",
-                                 "next_run_time":  "6/06/2026 6:40:00 PM",
+                                 "last_run_time":  "6/06/2026 6:40:01 PM",
+                                 "next_run_time":  "6/06/2026 6:50:00 PM",
                                  "last_result":  "0"
                              }
               },
     "actions":  [
-                    {
-                        "task":  "ScarFLIX_v2_AutonomousController",
-                        "changed":  false,
-                        "ran":  true,
-                        "note":  "run_triggered"
-                    },
-                    {
-                        "task":  "ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
-                        "changed":  false,
-                        "ran":  true,
-                        "note":  "run_triggered"
-                    }
+
                 ],
     "notes":  [
-                  "PlatformGate checkpoint reports blocked_by_runner_lock; watchdog triggered safe recovery tasks.",
                   "Transient provider/WebDAV failures are being held for retry, not pruned: 6"
               ],
     "files":  {
