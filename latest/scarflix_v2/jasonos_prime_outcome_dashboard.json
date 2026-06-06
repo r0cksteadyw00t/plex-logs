@@ -1,31 +1,31 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-06T09:40:50.032Z",
+  "updated_utc": "2026-06-06T09:44:39.603Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
     "Keep long ScarFLIX validation detached under local controller ownership."
   ],
   "overall_timeline_estimate": "First major milestone: 1-3 days depending on PlatformGate/provider result.",
-  "current_milestone": "PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED",
+  "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "automation_health": {
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 65,
-    "mirror_updated_age_minutes": 0,
-    "next_check_utc": "2026-06-06T09:45:27Z",
+    "controller_updated_age_minutes": 0,
+    "platform_child_progress_age_minutes": 1,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-06T09:49:34Z",
     "next_check_age_minutes": 0,
-    "platform_runner_running": false,
-    "platform_child_active": false
+    "platform_runner_running": true,
+    "platform_child_active": true
   },
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-06T09:40:49Z",
+    "updated_utc": "2026-06-06T09:44:39Z",
     "will_progress_without_codex": true
   },
   "recent_updates": [
@@ -79,7 +79,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-06T09:36:00Z - watchdog installed; controller transient retry policy patched after BLOCKED_LOOP",
-      "current": "Visible 78 items; movies=53; tv=25; PlatformGate=REVIEW.",
+      "current": "Visible 78 items; movies=53; tv=25; PlatformGate=RUNNING.",
       "progress": 46,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
