@@ -1,11 +1,12 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T22:20:06.462Z
+Updated UTC: 2026-06-06T22:21:19.311Z
 Source: live status merge
 
-- 2026-06-06T22:19:47Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=32000; child_pid=41960
-- 2026-06-06T22:19:47Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
-- 2026-06-06T22:18:46.648Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:18:46Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=66 failed_detected=12 pruned=0
+- 2026-06-06T22:21:17Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=32000; child_pid=41960
+- 2026-06-06T22:21:17Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
+- 2026-06-06T22:20:30.012Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:21: Phone-facing GitHub Pages dashboard delivery was repaired. Cause: GitHub Pages for `r0cksteadyw00t/plex-logs` is configured to publish from `main:/docs`. `JasonOS_Prime_PublicMirrorPublisher.js` was publishing live dashboard HTML/JSON to repository-root `latest/...`, which made raw/API status current but left the Pa...
+- 2026-06-06T22:20:16.532Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:20:16Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries.
 - 2026-06-06T22:18:23.534Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:12: The dashboard `Recent achievements` panel was stale even though the main dashboard/status JSON was current. Cause: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_recent_updates.json` was frozen at `2026-06-06T10:55:00Z`. `JasonOS_Prime_OutcomeDashboard.js` returned that stored file unchanged whenever it existed.
 - 2026-06-06T22:18:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-06T22:17:00Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=36116; child_pid=
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-06T10:41:34Z - Dashboard stall recovered: Watchdog task was re-enabled, stale PlatformGate locks were backed up and removed, controller was retriggered, and InstantStatus was made non-recursive.
 - 2026-06-06T09:36:00Z - Five-minute watchdog and retry hardening applied: Installed the watchdog scheduled task, added five-minute stall detection, and changed repeated transient PlatformGate reviews to retry/backoff instead of BLOCKED_LOOP.
 - 2026-06-06T08:25:00Z - Watchdog and stall detector added: Created a persistent stall detector, dashboard-triggered fallback, watchdog status files, and Stall Risk dashboard column.
-- 2026-06-06T08:19:40Z - Controller schedule re-enabled: Autonomous controller task was enabled and relaunched so future progress does not depend on Codex.
