@@ -1,11 +1,11 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T08:46:04.422Z
+Updated UTC: 2026-06-06T08:57:04.538Z
 Status: PASS
-Current milestone: PLATFORM_GATE_RUNNING
+Current milestone: BLOCKED_LOOP
 Jason action required: false
-Automation state: PROGRESSING
-Will progress without Codex: true
+Automation state: ACTION_REQUIRED
+Will progress without Codex: false
 
 | Outcome | Target God-Mode State | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---:|---|---|
@@ -26,12 +26,12 @@ Recent Achievements:
 - 2026-06-06T07:04:47Z - PlatformGate cycle relaunched locally: Detached PlatformGate restarted with catalogue expansion still disabled.
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 9 min ago
-- Platform child progress: 10 min ago
-- Mirror updated: 6 min ago
+- Controller reports a blocker that needs Codex or Jason review.
+- Controller updated: 5 min ago
+- Platform child progress: 21 min ago
+- Mirror updated: 7 min ago
 - Platform runner running: false
-- Platform child active: true
+- Platform child active: false
 
 Token Optimization Status:
 - Use local status JSON and 8805 API instead of rereading historic handover.
