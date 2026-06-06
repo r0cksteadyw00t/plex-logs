@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-06T11:16:01.544Z",
+  "updated_utc": "2026-06-06T11:26:01.580Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,25 +14,25 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 3,
-    "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-06T11:19:16Z",
+    "controller_updated_age_minutes": 3,
+    "platform_child_progress_age_minutes": 5,
+    "mirror_updated_age_minutes": 5,
+    "next_check_utc": "2026-06-06T11:28:36Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": true,
     "platform_child_active": true
   },
   "watchdog_status": {
     "status": "REVIEW",
-    "stall_risk": "Medium",
-    "updated_utc": "2026-06-06T11:13:51Z",
+    "stall_risk": "High",
+    "updated_utc": "2026-06-06T11:22:55Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-06T11:13:46Z",
-    "codex_action_required": false,
+    "status": "ALERT",
+    "alert_level": "HIGH",
+    "updated_utc": "2026-06-06T11:21:01Z",
+    "codex_action_required": true,
     "jason_action_required": false
   },
   "recent_updates": [
@@ -99,7 +99,7 @@
       "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING.",
       "progress": 46,
       "eta": "after PlatformGate and candidate model PASS",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     },
     {
       "outcome": "Morphogenetic Plugin + Worker Mesh",
@@ -144,7 +144,7 @@
       "current": "Core services online; current ScarFLIX bottleneck is same-snapshot PlatformGate.",
       "progress": 46,
       "eta": "first major milestone after PlatformGate + controlled expansion",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     }
   ],
   "files": {
