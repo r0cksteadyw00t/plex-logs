@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T10:46:03.826Z
+Updated UTC: 2026-06-06T10:56:03.402Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: WATCHING_FOR_STALL
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -26,10 +26,10 @@ Recent Achievements:
 - 2026-06-06T07:33:14Z - Phone-readable dashboard published: Generated a rendered HTML dashboard and mirrored it to the public repository.
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 4 min ago
-- Platform child progress: 5 min ago
-- Mirror updated: 2 min ago
+- PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.
+- Controller updated: 10 min ago
+- Platform child progress: 10 min ago
+- Mirror updated: 6 min ago
 - Platform runner running: true
 - Platform child active: true
 
