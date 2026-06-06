@@ -1,7 +1,8 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T10:41:34Z
+Updated UTC: 2026-06-06T10:55:00Z
 
+- 2026-06-06T10:55:00Z - Watchdog-of-watchdog sentinel added: Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell.
 - 2026-06-06T10:41:34Z - Dashboard stall recovered: Watchdog task was re-enabled, stale PlatformGate locks were backed up and removed, controller was retriggered, and InstantStatus was made non-recursive.
 - 2026-06-06T09:36:00Z - Five-minute watchdog and retry hardening applied: Installed the watchdog scheduled task, added five-minute stall detection, and changed repeated transient PlatformGate reviews to retry/backoff instead of BLOCKED_LOOP.
 - 2026-06-06T08:25:00Z - Watchdog and stall detector added: Created a persistent stall detector, dashboard-triggered fallback, watchdog status files, and Stall Risk dashboard column.
