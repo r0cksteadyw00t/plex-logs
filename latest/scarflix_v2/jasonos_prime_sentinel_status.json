@@ -1,19 +1,19 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "REVIEW",
-  "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-06T16:17:00Z",
+  "status": "ALERT",
+  "alert_level": "HIGH",
+  "updated_utc": "2026-06-06T16:18:02Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": false,
-  "repeat_count": 2,
+  "codex_action_required": true,
+  "repeat_count": 3,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 9,
+    "controller_age_minutes": 10,
     "watchdog_status": "PASS",
     "watchdog_risk": "Low",
-    "watchdog_age_minutes": 9,
+    "watchdog_age_minutes": 10,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 0,
     "mirror_status": "PASS",
@@ -29,11 +29,12 @@
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "watchdog_stale_or_failed",
       "result": "PASS",
-      "note": "enable pid=37668; run pid=11448"
+      "note": "enable pid=30956; run pid=42848"
     }
   ],
   "notes": [
-    "Controller status is stale, but durable PlatformGate progress is fresh."
+    "Controller status is stale, but durable PlatformGate progress is fresh.",
+    "Same unresolved sentinel signature repeated for three cycles."
   ],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
