@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-06T08:06:02.294Z",
+  "updated_utc": "2026-06-06T08:17:08.151Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -10,6 +10,35 @@
   "overall_timeline_estimate": "First major milestone: 1-3 days depending on PlatformGate/provider result.",
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
+  "automation_health": {
+    "state": "WATCHING_FOR_STALL",
+    "summary": "PlatformGate is marked running, but child progress is older than 25 minutes. Controller stale recovery should handle this.",
+    "will_progress_without_codex": true,
+    "controller_updated_age_minutes": 25,
+    "platform_child_progress_age_minutes": 28,
+    "mirror_updated_age_minutes": 7,
+    "next_check_utc": "2026-06-06T08:07:26Z",
+    "next_check_age_minutes": 10,
+    "platform_runner_running": true,
+    "platform_child_active": true
+  },
+  "recent_updates": [
+    {
+      "utc": "2026-06-06T07:33:14Z",
+      "title": "Phone-readable dashboard published",
+      "detail": "Generated a rendered HTML dashboard and mirrored it to the public repository."
+    },
+    {
+      "utc": "2026-06-06T07:14:24Z",
+      "title": "Controller/PlatformGate reliability patched",
+      "detail": "Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added."
+    },
+    {
+      "utc": "2026-06-06T07:04:47Z",
+      "title": "PlatformGate cycle relaunched locally",
+      "detail": "Detached PlatformGate restarted with catalogue expansion still disabled."
+    }
+  ],
   "outcomes": [
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
