@@ -1,0 +1,56 @@
+{
+  "component": "jasonos_prime_predictive_simulator",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-06T22:17:04.300Z",
+  "no_catalogue_publication": true,
+  "expansion_eligible": false,
+  "visible": {
+    "count": 78,
+    "movies": 53,
+    "tv": 25
+  },
+  "pending_candidates": 7,
+  "rejected_sources": 673,
+  "gate": {
+    "checkpoint_status": "REVIEW",
+    "platform_status": "REVIEW",
+    "active_gate": "REVIEW",
+    "visible_catalog_qa": "UNKNOWN",
+    "controller": "RUNNING",
+    "candidate_model": "UNKNOWN",
+    "rclone": "UNKNOWN",
+    "health": "UNKNOWN"
+  },
+  "simulations": [
+    {
+      "id": "gate_first_hold",
+      "description": "Hold visible expansion until same-snapshot PlatformGate and candidate-source model pass.",
+      "expected_result": "prevents broken Plex visibility",
+      "recommendation": "continue_detached_gate_or_repair_systemic_failure"
+    },
+    {
+      "id": "controlled_small_batch",
+      "description": "If eligible, run SafeWebDavExpansionPipeline with a small batch and immediate QA.",
+      "expected_visible_delta": 0,
+      "recommendation": "blocked_until_gate_pass"
+    },
+    {
+      "id": "provider_retry_backoff",
+      "description": "Treat provider 429/503/timeouts as retry-held source failures, not title deletion.",
+      "transient_failures": 12,
+      "prunable_failures": 0,
+      "recommendation": "retry_transient_sources_later"
+    },
+    {
+      "id": "candidate_pool_growth",
+      "description": "Prepare more candidates without publishing visible Plex rows.",
+      "pending_candidates": 7,
+      "rejected_sources": 673,
+      "recommendation": "stage_candidates_without_publishing_after_gate_status_known"
+    }
+  ],
+  "next_autonomous_action": "continue_platform_gate_and_candidate_model_path",
+  "status_file": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_predictive_simulator_status.json",
+  "markdown_file": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_predictive_simulator_status.md",
+  "log": "D:/PlexTools/logs/jasonos_prime_predictive_simulator.log"
+}
