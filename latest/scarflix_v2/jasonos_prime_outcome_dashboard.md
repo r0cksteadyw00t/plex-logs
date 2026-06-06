@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T09:56:02.740Z
+Updated UTC: 2026-06-06T10:06:11.249Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: WATCHING_FOR_STALL
+Automation state: PROGRESSING
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -26,12 +26,12 @@ Recent Achievements:
 - 2026-06-06T07:14:24Z - Controller/PlatformGate reliability patched: Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added.
 
 Heartbeat / Stall Check:
-- PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.
-- Controller updated: 1 min ago
-- Platform child progress: 10 min ago
+- Background controller and worker tasks are expected to continue without Codex.
+- Controller updated: 5 min ago
+- Platform child progress: 5 min ago
 - Mirror updated: 6 min ago
 - Platform runner running: true
-- Platform child active: false
+- Platform child active: true
 
 Token Optimization Status:
 - Use local status JSON and 8805 API instead of rereading historic handover.
