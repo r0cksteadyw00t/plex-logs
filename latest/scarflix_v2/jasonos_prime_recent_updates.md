@@ -1,8 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T10:55:00Z
+Updated UTC: 2026-06-06T22:11:06.484Z
+Source: live status merge
 
+- 2026-06-06T22:10:53Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=24560; child_pid=16460
+- 2026-06-06T22:10:53Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
+- 2026-06-06T22:10:44.500Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:10:44Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries.
+- 2026-06-06T22:08:23.808Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 07:58: Eight-hour apparent dashboard stall was diagnosed as a reporting and PlatformGate control-flow issue, not a total automation failure. Durable PlatformGate stayed at the parent milestone `PLATFORM_GATE_RUNNING`. Child QA did progress from VisibleCatalogQA into Plex client decision QA, but the dashboard did not expose...
+- 2026-06-06T22:08:09Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-06T10:55:00Z - Watchdog-of-watchdog sentinel added: Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell.
+- 2026-06-06T10:50:00Z - Redundant sentinel added: Added JasonOS_Prime_Sentinel as watchdog-of-watchdog to re-enable stalled tasks, retrigger recovery, and publish alert state when self-heal cannot resolve.
 - 2026-06-06T10:41:34Z - Dashboard stall recovered: Watchdog task was re-enabled, stale PlatformGate locks were backed up and removed, controller was retriggered, and InstantStatus was made non-recursive.
 - 2026-06-06T09:36:00Z - Five-minute watchdog and retry hardening applied: Installed the watchdog scheduled task, added five-minute stall detection, and changed repeated transient PlatformGate reviews to retry/backoff instead of BLOCKED_LOOP.
 - 2026-06-06T08:25:00Z - Watchdog and stall detector added: Created a persistent stall detector, dashboard-triggered fallback, watchdog status files, and Stall Risk dashboard column.
@@ -10,4 +17,3 @@ Updated UTC: 2026-06-06T10:55:00Z
 - 2026-06-06T08:18:42Z - Autonomous progress visibility added: Dashboard now shows recent achievements, heartbeat freshness, stall-watch state, and whether Codex is needed.
 - 2026-06-06T07:33:14Z - Phone-readable dashboard published: Generated a rendered HTML dashboard and mirrored it to the public repository.
 - 2026-06-06T07:14:24Z - Controller/PlatformGate reliability patched: Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added.
-- 2026-06-06T07:04:47Z - PlatformGate cycle relaunched locally: Detached PlatformGate restarted with catalogue expansion still disabled.
