@@ -1,12 +1,12 @@
 ﻿ScarFLIX v2 closed-loop supervisor status.
 
-Generated: 2026-06-06 12:41:16
+Generated: 2026-06-06 12:46:48
 Signal: RUNNING
 Reason: Script snippets missing or stale
 Next action: Closed loop supervisor will keep queuing safe allow-listed commands.
-Queued: script_snippets queued: OK
+Queued: cooldown active for script_snippets
 Runner process count: 4
-Autopilot task: Ready
+Autopilot task: Running
 Supervisor task: Running
 OpenAI planner enabled: False
 Codex used: False
