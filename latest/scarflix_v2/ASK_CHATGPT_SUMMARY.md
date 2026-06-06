@@ -1,17 +1,18 @@
 ﻿ScarFLIX v2 status for ChatGPT.
 
-Generated: 2026-06-06 13:11:03
+Generated: 2026-06-06 13:11:33
+Agent version: 1.0.0
 Signal: QUIESCED
-Reason: ScarFLIX is paused cleanly. Telemetry-only monitor is active.
-Next action: ChatGPT should provide the next local/offline recovery step. Do not use Codex.
+Reason: Autopilot quiesced excessive runner count: 6
+Next action: No Codex. Autopilot remains active.
 
 Visible: 78
 Catalogue changed: False
 Expansion enabled: False
-Runner process count: 6
-Autonomous controller task: Running
-PlatformGate detached task: Running
+Runner process count: 0
+Autonomous controller task: Present
+PlatformGate detached task: Present
 PlatformGate manual task: Present
 Expansion task: Present
-Telemetry-only task: Running
+Autopilot task: Running
 Codex used: False
