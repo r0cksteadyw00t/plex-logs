@@ -2,28 +2,30 @@
     "component":  "scarflix_v2_autonomous_controller",
     "status":  "RUNNING",
     "milestone_state":  "PLATFORM_GATE_RUNNING",
-    "updated_utc":  "2026-06-06T06:55:06Z",
-    "current_step":  "PLATFORM_GATE_RUNNING",
+    "updated_utc":  "2026-06-06T07:08:25Z",
+    "current_step":  "controller_already_running",
     "current_milestone":  "Complete same-snapshot PlatformGate checkpoint",
     "next_milestone":  "Blanket candidate-source retry/quarantine model",
-    "action_taken":  "PlatformGate runner already running; no inline wait",
-    "next_check_utc":  "2026-06-06T07:10:14Z",
+    "action_taken":  "existing controller lock is active",
+    "next_check_utc":  "2026-06-06T07:23:26Z",
     "jason_action_required":  false,
     "blockers":  [
 
                  ],
     "docs":  {
                  "next_actions_path":  "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\docs\\NEXT_ACTIONS.md",
-                 "next_actions_read":  true
+                 "next_actions_read":  false
              },
     "platform_gate":  {
                           "runner_task":  "ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
-                          "runner_running":  true,
-                          "status":  "RUNNING",
-                          "stage":  "running_platform_gate_attempt_1",
-                          "visible_count":  78,
-                          "started_utc":  "2026-06-06T06:54:20Z",
-                          "last_progress_utc":  "2026-06-06T06:54:24Z",
+                          "runner_running":  false,
+                          "child_active":  false,
+                          "child_activity_log_utc":  "",
+                          "status":  "UNKNOWN",
+                          "stage":  "",
+                          "visible_count":  "unknown",
+                          "started_utc":  "",
+                          "last_progress_utc":  "",
                           "transient_failures":  0,
                           "prunable_failures":  0,
                           "failure_signature":  "",
@@ -41,10 +43,10 @@
                                                 ]
                                },
     "infrastructure":  {
-                           "rclone_mount_status":  "PASS",
+                           "rclone_mount_status":  "UNKNOWN",
                            "rclone_mount_status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
-                           "s_media_ready":  true,
-                           "s_catalog_ready":  true,
+                           "s_media_ready":  false,
+                           "s_catalog_ready":  false,
                            "mount_selfheal_attempted":  false,
                            "mount_selfheal_exit_code":  ""
                        },
