@@ -1,30 +1,37 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "PASS",
-  "alert_level": "LOW",
-  "updated_utc": "2026-06-06T22:05:03Z",
+  "status": "REVIEW",
+  "alert_level": "MEDIUM",
+  "updated_utc": "2026-06-06T22:07:02Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 4,
+  "repeat_count": 1,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 2,
+    "controller_age_minutes": 4,
     "watchdog_status": "PASS",
     "watchdog_risk": "Low",
-    "watchdog_age_minutes": 2,
+    "watchdog_age_minutes": 4,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 1,
+    "dashboard_age_minutes": 0,
     "mirror_status": "PASS",
-    "mirror_age_minutes": 1,
+    "mirror_age_minutes": 0,
     "checkpoint_status": "RUNNING",
     "checkpoint_step": "running_platform_gate_attempt_1",
-    "checkpoint_age_minutes": 3,
-    "durable_platform_gate_age_minutes": 3,
+    "checkpoint_age_minutes": 5,
+    "durable_platform_gate_age_minutes": 5,
     "platform_progress_fresh": true
   },
-  "recovery_actions": [],
+  "recovery_actions": [
+    {
+      "task": "platform_gate_durable.lock",
+      "reason": "stale_lock",
+      "result": "PASS",
+      "note": "removed age_min=5 backup=D:/PlexTools/state/scarflix_v2/platform_gate_durable.lock.stale_20260606220702.bak"
+    }
+  ],
   "notes": [],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
