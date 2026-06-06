@@ -1,65 +1,28 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "REVIEW",
-  "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-06T12:56:03Z",
+  "status": "PASS",
+  "alert_level": "LOW",
+  "updated_utc": "2026-06-06T13:00:04Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 2,
+  "repeat_count": 1,
   "signals": {
-    "controller_status": "RUNNING",
-    "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 13,
+    "controller_status": "WAITING_RETRY",
+    "controller_milestone": "PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED",
+    "controller_age_minutes": 4,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 6,
+    "watchdog_age_minutes": 4,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 0,
+    "dashboard_age_minutes": 4,
     "mirror_status": "PASS",
-    "mirror_age_minutes": 6,
+    "mirror_age_minutes": 3,
     "checkpoint_status": "RUNNING",
     "checkpoint_step": "running_platform_gate_attempt_1",
-    "checkpoint_age_minutes": 13
+    "checkpoint_age_minutes": 4
   },
-  "recovery_actions": [
-    {
-      "task": "autonomous_controller.lock",
-      "reason": "stale_lock",
-      "result": "PASS",
-      "note": "removed age_min=6 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260606125603.bak"
-    },
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "watchdog_stale_or_failed",
-      "result": "PASS",
-      "note": "enable pid=34896; run pid=45676"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "controller_stale_or_blocked",
-      "result": "PASS",
-      "note": "enable pid=43232; run pid=19304"
-    },
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=39392; run pid=18108"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=24920; run pid=36032"
-    },
-    {
-      "task": "ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=41764; run pid=42484"
-    }
-  ],
+  "recovery_actions": [],
   "notes": [],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
