@@ -1,8 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T22:12:01.254Z
+Updated UTC: 2026-06-06T22:13:05.360Z
 Source: live status merge
 
+- 2026-06-06T22:12:11.532Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:12: The dashboard `Recent achievements` panel was stale even though the main dashboard/status JSON was current. Cause: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_recent_updates.json` was frozen at `2026-06-06T10:55:00Z`. `JasonOS_Prime_OutcomeDashboard.js` returned that stored file unchanged whenever it existed.
+- 2026-06-06T22:12:08Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=24560; child_pid=
+- 2026-06-06T22:12:08Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
 - 2026-06-06T22:12:01Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=24560; child_pid=16460
 - 2026-06-06T22:12:01Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
 - 2026-06-06T22:11:59.789Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:11:59Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=66 failed_detected=12 pruned=0
@@ -14,6 +17,3 @@ Source: live status merge
 - 2026-06-06T09:36:00Z - Five-minute watchdog and retry hardening applied: Installed the watchdog scheduled task, added five-minute stall detection, and changed repeated transient PlatformGate reviews to retry/backoff instead of BLOCKED_LOOP.
 - 2026-06-06T08:25:00Z - Watchdog and stall detector added: Created a persistent stall detector, dashboard-triggered fallback, watchdog status files, and Stall Risk dashboard column.
 - 2026-06-06T08:19:40Z - Controller schedule re-enabled: Autonomous controller task was enabled and relaunched so future progress does not depend on Codex.
-- 2026-06-06T08:18:42Z - Autonomous progress visibility added: Dashboard now shows recent achievements, heartbeat freshness, stall-watch state, and whether Codex is needed.
-- 2026-06-06T07:33:14Z - Phone-readable dashboard published: Generated a rendered HTML dashboard and mirrored it to the public repository.
-- 2026-06-06T07:14:24Z - Controller/PlatformGate reliability patched: Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added.
