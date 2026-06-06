@@ -2,22 +2,22 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "PASS",
     "stall_risk":  "Low",
-    "updated_utc":  "2026-06-06T09:40:49Z",
-    "started_utc":  "2026-06-06T09:40:49Z",
+    "updated_utc":  "2026-06-06T09:44:39Z",
+    "started_utc":  "2026-06-06T09:44:38Z",
     "duration_seconds":  1,
     "will_progress_without_codex":  true,
-    "current_milestone":  "PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED",
+    "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
-                    "controller_age_minutes":  1,
-                    "platform_checkpoint_age_minutes":  0,
-                    "dashboard_age_minutes":  5,
-                    "mirror_age_minutes":  0,
+                    "controller_age_minutes":  0,
+                    "platform_checkpoint_age_minutes":  1,
+                    "dashboard_age_minutes":  4,
+                    "mirror_age_minutes":  3,
                     "movie_strm_count":  1,
                     "tv_strm_count":  0,
                     "total_strm_count":  1,
                     "previous_total_strm_count":  1,
                     "catalogue_no_growth":  true,
-                    "platform_checkpoint_step":  "blocked_before_platform_gate"
+                    "platform_checkpoint_step":  "running_platform_gate_attempt_1"
                 },
     "tasks":  {
                   "controller":  {
@@ -31,17 +31,17 @@
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
                                           "exists":  true,
-                                          "status":  "Ready",
-                                          "last_run_time":  "6/06/2026 7:40:27 PM",
-                                          "next_run_time":  "6/06/2026 7:41:00 PM",
-                                          "last_result":  "2"
+                                          "status":  "Running",
+                                          "last_run_time":  "6/06/2026 7:43:29 PM",
+                                          "next_run_time":  "N/A",
+                                          "last_result":  "267009"
                                       },
                   "dashboard":  {
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "6/06/2026 7:36:01 PM",
-                                    "next_run_time":  "6/06/2026 7:41:00 PM",
+                                    "last_run_time":  "6/06/2026 7:41:01 PM",
+                                    "next_run_time":  "6/06/2026 7:46:00 PM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
@@ -57,7 +57,7 @@
 
                 ],
     "notes":  [
-                  "Transient provider/WebDAV failures are being held for retry, not pruned: 6"
+
               ],
     "files":  {
                   "log":  "D:\\PlexTools\\logs\\scarflix_v2_watchdog_stall_20260606.log",
