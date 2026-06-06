@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-06T10:56:03.402Z",
+  "updated_utc": "2026-06-06T11:06:03.021Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,11 +14,11 @@
     "state": "WATCHING_FOR_STALL",
     "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 10,
-    "platform_child_progress_age_minutes": 10,
+    "controller_updated_age_minutes": 20,
+    "platform_child_progress_age_minutes": 20,
     "mirror_updated_age_minutes": 6,
     "next_check_utc": "2026-06-06T10:51:10Z",
-    "next_check_age_minutes": 5,
+    "next_check_age_minutes": 15,
     "platform_runner_running": true,
     "platform_child_active": true
   },
@@ -29,13 +29,18 @@
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "UNKNOWN",
-    "alert_level": "UNKNOWN",
-    "updated_utc": "",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-06T11:00:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
   "recent_updates": [
+    {
+      "utc": "2026-06-06T10:55:00Z",
+      "title": "Watchdog-of-watchdog sentinel added",
+      "detail": "Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell."
+    },
     {
       "utc": "2026-06-06T10:41:34Z",
       "title": "Dashboard stall recovered",
