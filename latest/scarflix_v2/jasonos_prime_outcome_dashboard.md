@@ -1,16 +1,16 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T08:17:08.151Z
+Updated UTC: 2026-06-06T08:19:40.981Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: WATCHING_FOR_STALL
+Automation state: PROGRESSING
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Current State | Progress | ETA |
 |---|---|---|---:|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 8805 Node brain online; 8791 reachable; local tools/status exposed. | 65% | 1-2 days |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | Visible 78 items; movies=53; tv=25; PlatformGate=RUNNING. | 46% | after PlatformGate and candidate model PASS |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | Visible 78 items; movies=53; tv=25; PlatformGate=REVIEW. | 46% | after PlatformGate and candidate model PASS |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | Worker mesh PASS; plugins=10. | 65% | 1 day |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | Self-evolution planner REVIEW. | 40% | 1-2 days |
 | Swarm Intelligence | Parallel local workers for simulations, status, planning and future missions. | Short scheduled workers active; broader worker swarm pending. | 32% | 2-4 days |
@@ -18,17 +18,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | Core services online; current ScarFLIX bottleneck is same-snapshot PlatformGate. | 46% | first major milestone after PlatformGate + controlled expansion |
 
 Recent Achievements:
+- 2026-06-06T08:18:42Z - Autonomous progress visibility added: Dashboard now shows recent achievements, heartbeat freshness, stall-watch state, and whether Codex is needed.
 - 2026-06-06T07:33:14Z - Phone-readable dashboard published: Generated a rendered HTML dashboard and mirrored it to the public repository.
 - 2026-06-06T07:14:24Z - Controller/PlatformGate reliability patched: Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added.
 - 2026-06-06T07:04:47Z - PlatformGate cycle relaunched locally: Detached PlatformGate restarted with catalogue expansion still disabled.
 
 Heartbeat / Stall Check:
-- PlatformGate is marked running, but child progress is older than 25 minutes. Controller stale recovery should handle this.
-- Controller updated: 25 min ago
-- Platform child progress: 28 min ago
-- Mirror updated: 7 min ago
-- Platform runner running: true
-- Platform child active: true
+- Background controller and worker tasks are expected to continue without Codex.
+- Controller updated: 1 min ago
+- Platform child progress: 21 min ago
+- Mirror updated: 2 min ago
+- Platform runner running: false
+- Platform child active: false
 
 Token Optimization Status:
 - Use local status JSON and 8805 API instead of rereading historic handover.
