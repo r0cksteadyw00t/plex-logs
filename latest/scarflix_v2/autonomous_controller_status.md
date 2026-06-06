@@ -3,15 +3,15 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-06T13:26:10Z
-Current step: PLATFORM_GATE_RUNNING
+Updated UTC: 2026-06-06T13:32:13Z
+Current step: PLATFORM_GATE_CHILD_ACTIVE
 Jason action required: False
 
 ## PlatformGate
-- runner_running: False
+- runner_running: True
 - status: RUNNING
-- stage: running_platform_gate_attempt_1
-- visible: 78
+- stage: PLATFORM_GATE_CHILD_ACTIVE
+- visible: 0
 - transient_failures: 9
 - prunable_failures: 0
 
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: relaunched stale PlatformGate detached runner once
-- next_check_utc: 2026-06-06T13:31:23Z
+- action_taken: PlatformGate child QA activity is fresh; no duplicate runner launch
+- next_check_utc: 2026-06-06T13:37:27Z
 
 ## Blockers
 - none
