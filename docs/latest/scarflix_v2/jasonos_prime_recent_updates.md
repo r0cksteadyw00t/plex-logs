@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T23:02:01.153Z
+Updated UTC: 2026-06-06T23:04:01.605Z
 Source: live status merge
 
-- 2026-06-06T23:01:33Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=24532; child_pid=39888
-- 2026-06-06T23:01:33Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
-- 2026-06-06T23:00:31.653Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T23:00:31Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=65 failed_detected=13 pruned=0
-- 2026-06-06T22:59:13.788Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:47: PlatformGate progress was checked after Jason reported no visible dashboard update since `Durable PlatformGate runner RUNNING 2026-06-06T22:32:39Z`. Finding: PlatformGate had not stalled. Durable runner/checkpoint progress was fresh at `2026-06-06T22:47:10Z`.
-- 2026-06-06T22:58:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
+- 2026-06-06T23:03:33Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=24532; child_pid=39888
+- 2026-06-06T23:03:33Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
+- 2026-06-06T23:03:26.245Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:47: PlatformGate progress was checked after Jason reported no visible dashboard update since `Durable PlatformGate runner RUNNING 2026-06-06T22:32:39Z`. Finding: PlatformGate had not stalled. Durable runner/checkpoint progress was fresh at `2026-06-06T22:47:10Z`.
+- 2026-06-06T23:03:04Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
+- 2026-06-06T23:02:59.440Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T23:02:59Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries.
 - 2026-06-06T22:57:02Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=9476; child_pid=
 - 2026-06-06T22:57:02Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
 - 2026-06-06T22:43:28.018Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:21: Phone-facing GitHub Pages dashboard delivery was repaired. Cause: GitHub Pages for `r0cksteadyw00t/plex-logs` is configured to publish from `main:/docs`. `JasonOS_Prime_PublicMirrorPublisher.js` was publishing live dashboard HTML/JSON to repository-root `latest/...`, which made raw/API status current but left the Pa...
