@@ -1,16 +1,16 @@
 {
     "component":  "scarflix_v2_autonomous_controller",
-    "status":  "RUNNING",
-    "milestone_state":  "PLATFORM_GATE_RUNNING",
-    "updated_utc":  "2026-06-06T08:37:05Z",
-    "current_step":  "PLATFORM_GATE_CHILD_ACTIVE",
+    "status":  "BLOCKED_LOOP",
+    "milestone_state":  "BLOCKED_LOOP",
+    "updated_utc":  "2026-06-06T08:52:03Z",
+    "current_step":  "transient_review_repeated",
     "current_milestone":  "Complete same-snapshot PlatformGate checkpoint",
     "next_milestone":  "Blanket candidate-source retry/quarantine model",
-    "action_taken":  "PlatformGate child QA activity is fresh; no duplicate runner launch",
-    "next_check_utc":  "2026-06-06T08:52:06Z",
+    "action_taken":  "none",
+    "next_check_utc":  "",
     "jason_action_required":  false,
     "blockers":  [
-
+                     "Same transient-only PlatformGate REVIEW repeated beyond retry policy"
                  ],
     "docs":  {
                  "next_actions_path":  "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\docs\\NEXT_ACTIONS.md",
@@ -19,10 +19,10 @@
     "platform_gate":  {
                           "runner_task":  "ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
                           "runner_running":  false,
-                          "child_active":  true,
+                          "child_active":  false,
                           "child_activity_log_utc":  "2026-06-06T08:36:15Z",
-                          "status":  "RUNNING",
-                          "stage":  "PLATFORM_GATE_CHILD_ACTIVE",
+                          "status":  "REVIEW",
+                          "stage":  "blocked_before_platform_gate",
                           "visible_count":  78,
                           "started_utc":  "2026-06-06T08:36:10Z",
                           "last_progress_utc":  "2026-06-06T08:36:15Z",
