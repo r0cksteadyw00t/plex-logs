@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T23:10:01.094Z
+Updated UTC: 2026-06-06T23:12:01.707Z
 Source: live status merge
 
-- 2026-06-06T23:09:37Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=41372; child_pid=45760
-- 2026-06-06T23:09:37Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
-- 2026-06-06T23:09:26.743Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T23:09:26Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries.
+- 2026-06-06T23:11:40Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=41372; child_pid=13004
+- 2026-06-06T23:11:40Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
+- 2026-06-06T23:11:28.721Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T23:11:28Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries.
 - 2026-06-06T23:09:02Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=42804; child_pid=
 - 2026-06-06T23:09:02Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
 - 2026-06-06T23:08:24.862Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:47: PlatformGate progress was checked after Jason reported no visible dashboard update since `Durable PlatformGate runner RUNNING 2026-06-06T22:32:39Z`. Finding: PlatformGate had not stalled. Durable runner/checkpoint progress was fresh at `2026-06-06T22:47:10Z`.
