@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-06T08:19:40.981Z",
+  "updated_utc": "2026-06-06T08:26:02.364Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,18 +11,23 @@
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "WATCHING_FOR_STALL",
+    "summary": "PlatformGate is blocked by a runner lock. Controller stale-lock recovery is expected to clear or relaunch it on the next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 21,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 7,
+    "platform_child_progress_age_minutes": 27,
+    "mirror_updated_age_minutes": 6,
     "next_check_utc": "2026-06-06T08:33:59Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": false
   },
   "recent_updates": [
+    {
+      "utc": "2026-06-06T08:19:40Z",
+      "title": "Controller schedule re-enabled",
+      "detail": "Autonomous controller task was enabled and relaunched so future progress does not depend on Codex."
+    },
     {
       "utc": "2026-06-06T08:18:42Z",
       "title": "Autonomous progress visibility added",
