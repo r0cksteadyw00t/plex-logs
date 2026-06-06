@@ -2,62 +2,62 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "REVIEW",
   "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-06T13:20:04Z",
-  "duration_seconds": 0,
+  "updated_utc": "2026-06-06T13:26:04Z",
+  "duration_seconds": 2,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 1,
+  "repeat_count": 2,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
     "controller_age_minutes": 6,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 4,
+    "watchdog_age_minutes": 6,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 4,
+    "dashboard_age_minutes": 0,
     "mirror_status": "PASS",
-    "mirror_age_minutes": 3,
+    "mirror_age_minutes": 5,
     "checkpoint_status": "RUNNING",
     "checkpoint_step": "running_platform_gate_attempt_1",
-    "checkpoint_age_minutes": 6
+    "checkpoint_age_minutes": 12
   },
   "recovery_actions": [
     {
-      "task": "platform_gate.lock",
+      "task": "autonomous_controller.lock",
       "reason": "stale_lock",
       "result": "PASS",
-      "note": "removed age_min=6 backup=D:/PlexTools/state/scarflix_v2/platform_gate.lock.stale_20260606132004.bak"
+      "note": "removed age_min=6 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260606132603.bak"
     },
     {
-      "task": "platform_gate_local_runner.lock",
-      "reason": "stale_lock",
+      "task": "ScarFLIX_v2_Watchdog_StallDetector",
+      "reason": "watchdog_stale_or_failed",
       "result": "PASS",
-      "note": "removed age_min=6 backup=D:/PlexTools/state/scarflix_v2/platform_gate_local_runner.lock.stale_20260606132004.bak"
+      "note": "enable pid=37240; run pid=43360"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "controller_stale_or_blocked",
       "result": "PASS",
-      "note": "enable pid=37008; run pid=37524"
+      "note": "enable pid=19420; run pid=46868"
     },
     {
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=14820; run pid=38048"
+      "note": "enable pid=41040; run pid=10064"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=4684; run pid=5596"
+      "note": "enable pid=46300; run pid=38656"
     },
     {
-      "task": "ScarFLIX_v2_PlatformGate_LocalRunner_Detached",
+      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=44192; run pid=22948"
+      "note": "enable pid=20656; run pid=38096"
     }
   ],
   "notes": [],
