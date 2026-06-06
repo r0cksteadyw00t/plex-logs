@@ -3,12 +3,12 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-06T06:48:42Z
-Current step: PLATFORM_GATE_CHILD_ACTIVE
+Updated UTC: 2026-06-06T06:52:08Z
+Current step: PLATFORM_GATE_RUNNING
 Jason action required: False
 
 ## PlatformGate
-- runner_running: True
+- runner_running: False
 - status: RUNNING
 - stage: running_platform_gate_attempt_1
 - visible: 78
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: PlatformGate checkpoint timestamp is stale, but child QA process/log activity is fresh; no relaunch
-- next_check_utc: 2026-06-06T07:03:45Z
+- action_taken: relaunched stale PlatformGate detached runner once
+- next_check_utc: 2026-06-06T07:07:13Z
 
 ## Blockers
 - none
