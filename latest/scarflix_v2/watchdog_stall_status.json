@@ -2,39 +2,39 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "PASS",
     "stall_risk":  "Low",
-    "updated_utc":  "2026-06-06T22:54:05Z",
-    "started_utc":  "2026-06-06T22:53:58Z",
-    "duration_seconds":  7,
+    "updated_utc":  "2026-06-06T22:58:11Z",
+    "started_utc":  "2026-06-06T22:58:09Z",
+    "duration_seconds":  2,
     "will_progress_without_codex":  true,
     "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
-                    "controller_age_minutes":  6,
+                    "controller_age_minutes":  4,
                     "platform_checkpoint_age_minutes":  0,
                     "durable_platform_gate_age_minutes":  0,
                     "platform_progress_fresh":  true,
-                    "dashboard_age_minutes":  1,
+                    "dashboard_age_minutes":  0,
                     "mirror_age_minutes":  1,
                     "movie_strm_count":  1,
                     "tv_strm_count":  0,
                     "total_strm_count":  1,
                     "previous_total_strm_count":  1,
                     "catalogue_no_growth":  true,
-                    "platform_checkpoint_step":  "running_platform_gate_attempt_2"
+                    "platform_checkpoint_step":  "running_platform_gate_attempt_1"
                 },
     "tasks":  {
                   "controller":  {
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "7/06/2026 8:53:01 AM",
-                                     "next_run_time":  "7/06/2026 8:58:00 AM",
+                                     "last_run_time":  "7/06/2026 8:58:01 AM",
+                                     "next_run_time":  "7/06/2026 9:03:00 AM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
                                           "exists":  true,
                                           "status":  "Ready",
-                                          "last_run_time":  "7/06/2026 8:51:01 AM",
+                                          "last_run_time":  "7/06/2026 8:58:03 AM",
                                           "next_run_time":  "N/A",
                                           "last_result":  "0"
                                       },
@@ -42,16 +42,16 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "7/06/2026 8:54:04 AM",
-                                    "next_run_time":  "7/06/2026 8:58:00 AM",
+                                    "last_run_time":  "7/06/2026 8:58:01 AM",
+                                    "next_run_time":  "7/06/2026 9:03:00 AM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
                                  "exists":  true,
                                  "status":  "Ready",
-                                 "last_run_time":  "7/06/2026 8:54:04 AM",
-                                 "next_run_time":  "7/06/2026 8:58:00 AM",
+                                 "last_run_time":  "7/06/2026 8:58:01 AM",
+                                 "next_run_time":  "7/06/2026 9:08:00 AM",
                                  "last_result":  "0"
                              }
               },
@@ -59,8 +59,7 @@
 
                 ],
     "notes":  [
-                  "Controller status is stale, but PlatformGate durable progress is fresh; no recovery action required.",
-                  "Transient provider/WebDAV failures are being held for retry, not pruned: 14"
+                  "Transient provider/WebDAV failures are being held for retry, not pruned: 13"
               ],
     "files":  {
                   "log":  "D:\\PlexTools\\logs\\scarflix_v2_watchdog_stall_20260607.log",
