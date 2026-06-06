@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-06T22:41:02.918Z
+Updated UTC: 2026-06-06T22:43:03.369Z
 Source: live status merge
 
-- 2026-06-06T22:40:50Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=42092; child_pid=
-- 2026-06-06T22:40:50Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
-- 2026-06-06T22:40:48.939Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:40:48Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=65 failed_detected=13 pruned=0
-- 2026-06-06T22:38:51Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=40152; child_pid=
-- 2026-06-06T22:38:51Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
+- 2026-06-06T22:42:58Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=42092; child_pid=
+- 2026-06-06T22:42:58Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
+- 2026-06-06T22:42:53.721Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-06T22:42:53Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=65 failed_detected=13 pruned=0
+- 2026-06-06T22:41:50Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=42092; child_pid=25336
+- 2026-06-06T22:41:50Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=78; blockers=0
 - 2026-06-06T22:38:19.162Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:21: Phone-facing GitHub Pages dashboard delivery was repaired. Cause: GitHub Pages for `r0cksteadyw00t/plex-logs` is configured to publish from `main:/docs`. `JasonOS_Prime_PublicMirrorPublisher.js` was publishing live dashboard HTML/JSON to repository-root `latest/...`, which made raw/API status current but left the Pa...
 - 2026-06-06T22:38:12Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-06T22:28:06Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
