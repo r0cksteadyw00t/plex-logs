@@ -1,17 +1,17 @@
 # ScarFLIX v2 Durable PlatformGate Runner
 
-Updated UTC: 2026-06-06T13:28:07Z
-Status: FAIL
-Current step: runner_exception
-Owner PID: 43732
-Child PID: 47100
+Updated UTC: 2026-06-06T14:04:33Z
+Status: RUNNING
+Current step: existing_durable_owner_active
+Owner PID: 27192
+Child PID: 0
 No catalogue expansion: True
 
 ## Attempts
 - none
 
 ## Actions
-- none
+- Existing durable owner is active pid=10800; duplicate runner exits
 
 ## Blockers
-- Unhandled durable runner error: Exception setting "child_pid": "The property 'child_pid' cannot be found on this object. Verify that the property exists and can be set."
+- none
