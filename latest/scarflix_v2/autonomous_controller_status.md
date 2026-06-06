@@ -3,7 +3,7 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-06T11:07:10Z
+Updated UTC: 2026-06-06T11:13:50Z
 Current step: PLATFORM_GATE_CHILD_ACTIVE
 Jason action required: False
 
@@ -12,7 +12,7 @@ Jason action required: False
 - status: RUNNING
 - stage: PLATFORM_GATE_CHILD_ACTIVE
 - visible: 78
-- transient_failures: 0
+- transient_failures: 8
 - prunable_failures: 0
 
 ## Candidate Source Model
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: PlatformGate child QA activity is fresh; no duplicate runner launch
-- next_check_utc: 2026-06-06T11:12:25Z
+- next_check_utc: 2026-06-06T11:19:16Z
 
 ## Blockers
 - none
