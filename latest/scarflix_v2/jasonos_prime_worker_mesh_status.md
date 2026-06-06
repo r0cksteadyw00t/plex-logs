@@ -1,10 +1,10 @@
 # JasonOS Prime Worker Mesh
 
 Status: PASS
-Updated UTC: 2026-06-06T13:45:09.001Z
+Updated UTC: 2026-06-06T13:47:06.980Z
 Mode: autonomous local worker mesh
 Processed commands this run: 0
-JasonOS short-worker tasks: JasonOS_Prime_PredictiveSimulator=Ready, JasonOS_Prime_SelfEvolutionCycle=Ready, JasonOS_Prime_PublicMirrorPublisher=Ready, JasonOS_Prime_OutcomeDashboard=Ready
+JasonOS short-worker tasks: JasonOS_Prime_PredictiveSimulator=Ready, JasonOS_Prime_SelfEvolutionCycle=Ready, JasonOS_Prime_PublicMirrorPublisher=Ready, JasonOS_Prime_OutcomeDashboard=Ready, JasonOS_Prime_FastTrackAccelerator=Ready
 
 ## Live Status
 - controller: RUNNING
@@ -18,6 +18,7 @@ JasonOS short-worker tasks: JasonOS_Prime_PredictiveSimulator=Ready, JasonOS_Pri
 - self_evolution: REVIEW
 - public_mirror: PASS
 - outcome_dashboard: PASS
+- fast_track: UNKNOWN
 
 ## Plugins
 - status_reporter: Summarise live JasonOS, ScarFLIX, rclone, PlatformGate and AI status.
@@ -30,3 +31,4 @@ JasonOS short-worker tasks: JasonOS_Prime_PredictiveSimulator=Ready, JasonOS_Pri
 - command_centre_bridge: Bridge 8805 natural language commands into worker mesh actions and status outputs.
 - public_mirror_publisher: Publish JasonOS and ScarFLIX status JSON/Markdown to the existing GitHub telemetry mirror without exposing secrets.
 - outcome_dashboard: Generate the JasonOS Prime outcome dashboard and progress tracking artifacts from local status files.
+- fast_track_accelerator: Push short local status, prediction, candidate, and safe expansion actions every five minutes without running long validation inline.
