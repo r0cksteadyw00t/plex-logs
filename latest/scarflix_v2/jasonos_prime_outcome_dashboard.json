@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-06T09:46:03.346Z",
+  "updated_utc": "2026-06-06T09:56:02.740Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,21 +11,21 @@
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "WATCHING_FOR_STALL",
+    "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 2,
-    "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-06T09:49:34Z",
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 10,
+    "mirror_updated_age_minutes": 6,
+    "next_check_utc": "2026-06-06T10:00:29Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": true,
-    "platform_child_active": true
+    "platform_child_active": false
   },
   "watchdog_status": {
-    "status": "PASS",
-    "stall_risk": "Low",
-    "updated_utc": "2026-06-06T09:44:39Z",
+    "status": "REVIEW",
+    "stall_risk": "Medium",
+    "updated_utc": "2026-06-06T09:55:26Z",
     "will_progress_without_codex": true
   },
   "recent_updates": [
@@ -79,10 +79,10 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-06T09:36:00Z - watchdog installed; controller transient retry policy patched after BLOCKED_LOOP",
-      "current": "Visible 78 items; movies=53; tv=25; PlatformGate=RUNNING.",
+      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING.",
       "progress": 46,
       "eta": "after PlatformGate and candidate model PASS",
-      "stall_risk": "Low"
+      "stall_risk": "Medium"
     },
     {
       "outcome": "Morphogenetic Plugin + Worker Mesh",
@@ -127,7 +127,7 @@
       "current": "Core services online; current ScarFLIX bottleneck is same-snapshot PlatformGate.",
       "progress": 46,
       "eta": "first major milestone after PlatformGate + controlled expansion",
-      "stall_risk": "Low"
+      "stall_risk": "Medium"
     }
   ],
   "files": {
