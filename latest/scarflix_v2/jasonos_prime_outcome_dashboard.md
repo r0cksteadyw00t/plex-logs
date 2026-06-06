@@ -1,8 +1,8 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T10:36:12.100Z
+Updated UTC: 2026-06-06T10:41:03.923Z
 Status: PASS
-Current milestone: PLATFORM_GATE_RUNNING
+Current milestone: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
 Jason action required: false
 Automation state: WATCHING_FOR_STALL
 Will progress without Codex: true
@@ -27,11 +27,11 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.
-- Controller updated: 10 min ago
-- Platform child progress: 13 min ago
-- Mirror updated: 6 min ago
+- Controller updated: 1 min ago
+- Platform child progress: 7 min ago
+- Mirror updated: 1 min ago
 - Platform runner running: true
-- Platform child active: true
+- Platform child active: false
 
 Token Optimization Status:
 - Use local status JSON and 8805 API instead of rereading historic handover.
