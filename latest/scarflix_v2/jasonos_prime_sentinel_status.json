@@ -1,19 +1,19 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "PASS",
-  "alert_level": "LOW",
-  "updated_utc": "2026-06-06T15:05:02Z",
+  "status": "REVIEW",
+  "alert_level": "MEDIUM",
+  "updated_utc": "2026-06-06T15:07:00Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 3,
+  "repeat_count": 1,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 5,
+    "controller_age_minutes": 7,
     "watchdog_status": "PASS",
     "watchdog_risk": "Low",
-    "watchdog_age_minutes": 5,
+    "watchdog_age_minutes": 7,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 0,
     "mirror_status": "PASS",
@@ -24,8 +24,23 @@
     "durable_platform_gate_age_minutes": 0,
     "platform_progress_fresh": true
   },
-  "recovery_actions": [],
-  "notes": [],
+  "recovery_actions": [
+    {
+      "task": "platform_gate.lock",
+      "reason": "stale_lock",
+      "result": "PASS",
+      "note": "removed age_min=6 backup=D:/PlexTools/state/scarflix_v2/platform_gate.lock.stale_20260606150700.bak"
+    },
+    {
+      "task": "ScarFLIX_v2_Watchdog_StallDetector",
+      "reason": "watchdog_stale_or_failed",
+      "result": "PASS",
+      "note": "enable pid=32480; run pid=31272"
+    }
+  ],
+  "notes": [
+    "Controller status is stale, but durable PlatformGate progress is fresh."
+  ],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
