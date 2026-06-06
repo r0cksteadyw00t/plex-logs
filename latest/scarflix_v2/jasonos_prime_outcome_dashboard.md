@@ -1,8 +1,8 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T09:40:50.032Z
+Updated UTC: 2026-06-06T09:44:39.603Z
 Status: PASS
-Current milestone: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
+Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
 Automation state: PROGRESSING
 Will progress without Codex: true
@@ -10,7 +10,7 @@ Will progress without Codex: true
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-06T09:36:10Z - dashboard/status refresh confirmed | 8805 Node brain online; 8791 reachable; local tools/status exposed. | 65% | 1-2 days | Low |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-06T09:36:00Z - watchdog installed; controller transient retry policy patched after BLOCKED_LOOP | Visible 78 items; movies=53; tv=25; PlatformGate=REVIEW. | 46% | after PlatformGate and candidate model PASS | Low |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-06T09:36:00Z - watchdog installed; controller transient retry policy patched after BLOCKED_LOOP | Visible 78 items; movies=53; tv=25; PlatformGate=RUNNING. | 46% | after PlatformGate and candidate model PASS | Low |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=10. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
 | Swarm Intelligence | Parallel local workers for simulations, status, planning and future missions. | 2026-06-06T08:25:00Z - watchdog swarm escalation marker added | Short scheduled workers active; broader worker swarm pending. | 32% | 2-4 days | Medium |
@@ -27,11 +27,11 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 1 min ago
-- Platform child progress: 65 min ago
-- Mirror updated: under 1 min ago
-- Platform runner running: false
-- Platform child active: false
+- Controller updated: under 1 min ago
+- Platform child progress: 1 min ago
+- Mirror updated: 3 min ago
+- Platform runner running: true
+- Platform child active: true
 
 Token Optimization Status:
 - Use local status JSON and 8805 API instead of rereading historic handover.
