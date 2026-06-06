@@ -1,11 +1,11 @@
 {
     "component":  "scarflix_v2_platform_gate_local_runner",
-    "status":  "RUNNING",
+    "status":  "REVIEW",
     "started_utc":  "2026-06-06T07:04:13Z",
-    "last_progress_utc":  "2026-06-06T07:04:13Z",
-    "ended_utc":  "",
-    "duration_seconds":  0,
-    "current_step":  "starting",
+    "last_progress_utc":  "2026-06-06T07:04:17Z",
+    "ended_utc":  "2026-06-06T07:04:18Z",
+    "duration_seconds":  5,
+    "current_step":  "blocked_before_platform_gate",
     "no_catalogue_expansion":  true,
     "concurrency":  5,
     "retries":  3,
@@ -15,16 +15,58 @@
 
                                ],
     "blockers":  [
-
+                     "Overlap process is running: pid=43164 script=ScarFLIX_v2_PlatformGate.ps1"
                  ],
     "overlap_tasks":  [
 
                       ],
     "overlap_processes":  [
-
+                              {
+                                  "process_id":  43164,
+                                  "script":  "ScarFLIX_v2_PlatformGate.ps1"
+                              }
                           ],
     "disabled_tasks":  [
-
+                           {
+                               "task":  "ScarFLIX_v2_SafeWebDavExpansionPipeline",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_WebDavVirtualCatalogPublisher",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_AutoGate",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_VisibleCatalogQA",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_PlexClientDecisionQA",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_ConcurrentStreamQA",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_LiveCatalogSeeder",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_SafeCatalogOrchestrator",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_CatalogPromoter",
+                               "previous_state":  "Disabled"
+                           },
+                           {
+                               "task":  "ScarFLIX_v2_CatalogVisibilityGate",
+                               "previous_state":  "Disabled"
+                           }
                        ],
     "stale_locks_removed":  [
 
