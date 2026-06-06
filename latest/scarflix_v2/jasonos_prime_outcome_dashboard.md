@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-06T08:19:40.981Z
+Updated UTC: 2026-06-06T08:26:02.364Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: WATCHING_FOR_STALL
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Current State | Progress | ETA |
@@ -18,16 +18,17 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | Core services online; current ScarFLIX bottleneck is same-snapshot PlatformGate. | 46% | first major milestone after PlatformGate + controlled expansion |
 
 Recent Achievements:
+- 2026-06-06T08:19:40Z - Controller schedule re-enabled: Autonomous controller task was enabled and relaunched so future progress does not depend on Codex.
 - 2026-06-06T08:18:42Z - Autonomous progress visibility added: Dashboard now shows recent achievements, heartbeat freshness, stall-watch state, and whether Codex is needed.
 - 2026-06-06T07:33:14Z - Phone-readable dashboard published: Generated a rendered HTML dashboard and mirrored it to the public repository.
 - 2026-06-06T07:14:24Z - Controller/PlatformGate reliability patched: Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added.
 - 2026-06-06T07:04:47Z - PlatformGate cycle relaunched locally: Detached PlatformGate restarted with catalogue expansion still disabled.
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 1 min ago
-- Platform child progress: 21 min ago
-- Mirror updated: 2 min ago
+- PlatformGate is blocked by a runner lock. Controller stale-lock recovery is expected to clear or relaunch it on the next cycle.
+- Controller updated: 7 min ago
+- Platform child progress: 27 min ago
+- Mirror updated: 6 min ago
 - Platform runner running: false
 - Platform child active: false
 
