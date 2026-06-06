@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-06T22:02:04.141Z",
+  "updated_utc": "2026-06-06T22:03:04.619Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,11 +11,11 @@
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "automation_health": {
-    "state": "WATCHING_FOR_STALL",
-    "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 7,
+    "controller_updated_age_minutes": 3,
+    "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 0,
     "next_check_utc": "2026-06-06T22:05:23Z",
     "next_check_age_minutes": 0,
@@ -23,14 +23,14 @@
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex client decision QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
-    "last_progress_utc": "2026-06-06T21:55:30.191Z",
-    "age_minutes": 7,
-    "last_line": "[2026-06-06T21:55:30Z] [REVIEW] Decision failed: metadata=40929 title=Dune: Part One reason=The operation has timed out.",
-    "pass_lines": 3,
-    "review_lines": 5,
-    "info_lines": 2
+    "stage": "WebDAV active gate",
+    "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260607.log",
+    "last_progress_utc": "2026-06-06T22:02:08.057Z",
+    "age_minutes": 1,
+    "last_line": "[2026-06-06T22:02:08Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries.",
+    "pass_lines": 0,
+    "review_lines": 6,
+    "info_lines": 20
   },
   "watchdog_status": {
     "status": "PASS",
@@ -41,7 +41,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-06T22:00:03Z",
+    "updated_utc": "2026-06-06T22:03:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -56,7 +56,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-06T22:01:02Z",
+    "updated_utc": "2026-06-06T22:02:04Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -141,8 +141,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-06T21:55:30.191Z - Plex client decision QA",
-      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex client decision QA; child_age=7 min; owner_pid=34540; child_pid=39188.",
+      "last_change": "2026-06-06T22:02:08.057Z - WebDAV active gate",
+      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=WebDAV active gate; child_age=1 min; owner_pid=34540; child_pid=39188.",
       "progress": 46,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -150,7 +150,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-06T22:01:02Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-06T22:02:04Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 75,
       "eta": "runs every 5 minutes",
