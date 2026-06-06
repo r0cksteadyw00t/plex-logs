@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-06T22:48:06.604Z",
+  "updated_utc": "2026-06-06T22:49:03.434Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,10 +14,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 1,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-06T22:48:24Z",
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 0,
+    "mirror_updated_age_minutes": 1,
+    "next_check_utc": "2026-06-06T22:53:22Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -25,9 +25,9 @@
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260607.log",
-    "last_progress_utc": "2026-06-06T22:47:28.348Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-06T22:47:28Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries.",
+    "last_progress_utc": "2026-06-06T22:48:41.850Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-06T22:48:41Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=65 failed_detected=13 pruned=0",
     "pass_lines": 0,
     "review_lines": 20,
     "info_lines": 60
@@ -35,7 +35,7 @@
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-06T22:43:08Z",
+    "updated_utc": "2026-06-06T22:48:10Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -49,14 +49,14 @@
     "status": "RUNNING",
     "current_step": "running_platform_gate_attempt_1",
     "owner_pid": 39324,
-    "child_pid": 39508,
-    "last_progress_utc": "2026-06-06T22:47:40Z",
-    "heartbeat_updated_utc": "2026-06-06T22:47:40Z",
+    "child_pid": "",
+    "last_progress_utc": "2026-06-06T22:48:43Z",
+    "heartbeat_updated_utc": "2026-06-06T22:48:43Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-06T22:47:04Z",
+    "updated_utc": "2026-06-06T22:48:06Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -83,24 +83,29 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-06T22:47:40Z",
+      "utc": "2026-06-06T22:48:43Z",
       "title": "Durable PlatformGate runner RUNNING",
-      "detail": "Step running_platform_gate_attempt_1; owner_pid=39324; child_pid=39508"
+      "detail": "Step running_platform_gate_attempt_1; owner_pid=39324; child_pid="
     },
     {
-      "utc": "2026-06-06T22:47:40Z",
+      "utc": "2026-06-06T22:48:43Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=78; blockers=0"
     },
     {
-      "utc": "2026-06-06T22:47:35.647Z",
+      "utc": "2026-06-06T22:48:41.850Z",
+      "title": "PlatformGate child QA active: WebDAV active gate",
+      "detail": "Latest child QA line: [2026-06-06T22:48:41Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=65 failed_detected=13 pruned=0"
+    },
+    {
+      "utc": "2026-06-06T22:48:25.252Z",
       "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 08:47",
       "detail": "PlatformGate progress was checked after Jason reported no visible dashboard update since `Durable PlatformGate runner RUNNING 2026-06-06T22:32:39Z`. Finding: PlatformGate had not stalled. Durable runner/checkpoint progress was fresh at `2026-06-06T22:47:10Z`."
     },
     {
-      "utc": "2026-06-06T22:47:28.348Z",
-      "title": "PlatformGate child QA active: WebDAV active gate",
-      "detail": "Latest child QA line: [2026-06-06T22:47:28Z] [INFO] Running concurrent WebDAV active gate worker for 78 entries."
+      "utc": "2026-06-06T22:48:07Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-06T22:46:43Z",
@@ -116,11 +121,6 @@
       "utc": "2026-06-06T22:43:28.018Z",
       "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 08:21",
       "detail": "Phone-facing GitHub Pages dashboard delivery was repaired. Cause: GitHub Pages for `r0cksteadyw00t/plex-logs` is configured to publish from `main:/docs`. `JasonOS_Prime_PublicMirrorPublisher.js` was publishing live dashboard HTML/JSON to repository-root `latest/...`, which made raw/API status current but left the Pa..."
-    },
-    {
-      "utc": "2026-06-06T22:43:07Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-06T22:28:06Z",
@@ -166,8 +166,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-06T22:47:28.348Z - WebDAV active gate",
-      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=WebDAV active gate; child_age=1 min; owner_pid=39324; child_pid=39508.",
+      "last_change": "2026-06-06T22:48:41.850Z - WebDAV active gate",
+      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=WebDAV active gate; child_age=under 1 min; owner_pid=39324; child_pid=.",
       "progress": 46,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -175,7 +175,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-06T22:47:04Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-06T22:48:06Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 75,
       "eta": "runs every 5 minutes",
@@ -229,7 +229,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-06T22:47:40Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-06T22:48:43Z - Durable PlatformGate ownership active",
       "current": "Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck.",
       "progress": 56,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
