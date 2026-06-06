@@ -1,0 +1,95 @@
+{
+  "component": "jasonos_prime_fast_track_accelerator",
+  "status": "PASS",
+  "updated_utc": "2026-06-06T22:17:06Z",
+  "duration_seconds": 3,
+  "mode": "fast_track_safe_acceleration",
+  "current_milestone": "PLATFORM_GATE_RUNNING",
+  "next_autonomous_action": "Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.",
+  "no_secret_access": true,
+  "expansion_eligible": false,
+  "expansion_started_this_cycle": false,
+  "actual_strm_counts": {
+    "movies": 1,
+    "tv": 0,
+    "total": 1
+  },
+  "status_inputs": {
+    "platform_gate": "REVIEW",
+    "checkpoint": "REVIEW",
+    "checkpoint_step": "platform_gate_review",
+    "durable_runner": "REVIEW",
+    "durable_step": "platform_gate_review",
+    "durable_owner_pid": 36116,
+    "durable_child_pid": "",
+    "candidate_source_model": "UNKNOWN",
+    "controller": "RUNNING",
+    "predictive_simulator": "REVIEW",
+    "self_evolution": "REVIEW",
+    "dashboard": "PASS",
+    "public_mirror": "PASS"
+  },
+  "next_4_hour_actions": [
+    "Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.",
+    "Refresh predictive simulation, self-evolution, worker mesh, dashboard, mirror, and 8805 keepalive every 5 minutes.",
+    "If PlatformGate completes PASS, run candidate-source retry/quarantine verification immediately.",
+    "If candidate-source model completes PASS, launch controlled safe WebDAV expansion immediately.",
+    "Publish updated dashboard and mirror artifacts after each cycle so phone status shows whether progress is real or stalled."
+  ],
+  "actions": [
+    {
+      "action": "task_run",
+      "task": "JasonOS_Prime_PredictiveSimulator",
+      "reason": "fast_track_parallel_simulation",
+      "status": "PASS",
+      "error": " "
+    },
+    {
+      "action": "task_run",
+      "task": "JasonOS_Prime_SelfEvolutionCycle",
+      "reason": "fast_track_reflective_planning",
+      "status": "PASS",
+      "error": " "
+    },
+    {
+      "action": "task_run",
+      "task": "JasonOS_Prime_OutcomeDashboard",
+      "reason": "fast_track_dashboard_refresh",
+      "status": "PASS",
+      "error": " "
+    },
+    {
+      "action": "task_run",
+      "task": "JasonOS_Prime_PublicMirrorPublisher",
+      "reason": "fast_track_public_status",
+      "status": "PASS",
+      "error": " "
+    },
+    {
+      "action": "task_run",
+      "task": "JasonOS_Prime_WorkerMesh",
+      "reason": "fast_track_worker_mesh",
+      "status": "PASS",
+      "error": " "
+    },
+    {
+      "action": "task_run",
+      "task": "JasonOS_Prime_Real_AI_8805_Keepalive",
+      "reason": "fast_track_daily_ai_keepalive",
+      "status": "PASS",
+      "error": " "
+    },
+    {
+      "action": "task_run",
+      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
+      "reason": "platform_gate_not_pass",
+      "status": "PASS",
+      "error": " "
+    }
+  ],
+  "files": {
+    "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_fast_track_accelerator_status.json",
+    "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_fast_track_accelerator_status.md",
+    "log": "D:/PlexTools/logs/jasonos_prime_fast_track_accelerator.log"
+  }
+}
