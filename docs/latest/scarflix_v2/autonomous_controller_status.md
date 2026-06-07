@@ -3,7 +3,7 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_FAIL_SOURCE_QUARANTINE_REQUIRED
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-07T00:06:11Z
+Updated UTC: 2026-06-07T00:08:07Z
 Current step: repeated_transient_source_quarantine_started
 Jason action required: False
 
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: Repeated transient-only PlatformGate REVIEW reached retry cap; started source/release quarantine with IncludeTransient so failed sources are removed from visibility while titles remain wanted
-- next_check_utc: 2026-06-07T00:11:42Z
+- next_check_utc: 2026-06-07T00:13:10Z
 
 ## Blockers
 - none
