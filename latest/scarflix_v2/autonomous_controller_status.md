@@ -1,15 +1,15 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: REVIEW_TRANSIENT
-Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
-Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-07T12:48:11Z
-Current step: candidate_source_model_review
+Status: FAIL_ENGINEERING
+Milestone state: BLOCKED_DECISION
+Milestone: Complete same-snapshot PlatformGate checkpoint
+Updated UTC: 2026-06-07T12:53:05Z
+Current step: unhandled_platform_gate_state
 Jason action required: False
 
 ## PlatformGate
 - runner_running: False
-- status: PASS
+- status: REVIEW
 - stage: platform_gate_pass
 - visible: 46
 - transient_failures: 0
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: Candidate-source model requires engineering review before catalogue expansion
-- next_check_utc: 2026-06-07T12:53:14Z
+- action_taken: none
+- next_check_utc: 2026-06-07T12:58:05Z
 
 ## Blockers
-- seeder_stage_only_not_plex_visible
+- Unhandled PlatformGate status: REVIEW
