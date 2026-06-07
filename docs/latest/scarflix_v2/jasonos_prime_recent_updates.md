@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T00:10:01.373Z
+Updated UTC: 2026-06-07T00:12:03.710Z
 Source: live status merge
 
-- 2026-06-07T00:08:13.782Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
-- 2026-06-07T00:08:07Z - Autonomous controller: repeated_transient_source_quarantine_started: Repeated transient-only PlatformGate REVIEW reached retry cap; started source/release quarantine with IncludeTransient so failed sources are removed from visibility while titles remain wanted
+- 2026-06-07T00:11:28.700Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
+- 2026-06-07T00:11:23Z - Autonomous controller: repeated_transient_source_quarantine_started: Repeated transient-only PlatformGate REVIEW reached retry cap; started source/release quarantine with IncludeTransient so failed sources are removed from visibility while titles remain wanted
 - 2026-06-07T00:05:41Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=28312; child_pid=
 - 2026-06-07T00:05:41Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
 - 2026-06-07T00:05:36.001Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T00:05:35Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=65 failed_detected=13 pruned=0
