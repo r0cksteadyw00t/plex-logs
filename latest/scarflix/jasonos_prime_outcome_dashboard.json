@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T10:36:05.232Z",
+  "updated_utc": "2026-06-07T10:38:04.195Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,8 +42,8 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
-    "platform_child_progress_age_minutes": 17,
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T10:38:13Z",
     "next_check_age_minutes": 0,
@@ -53,12 +53,12 @@
   "child_qa_progress": {
     "stage": "Health",
     "file": "D:/PlexTools/logs/scarflix_v2_health_status_20260607.log",
-    "last_progress_utc": "2026-06-07T10:18:41.981Z",
-    "age_minutes": 17,
-    "last_line": "[2026-06-07T10:18:41Z] [INFO] Health status publishing",
+    "last_progress_utc": "2026-06-07T10:37:20.608Z",
+    "age_minutes": 1,
+    "last_line": "[2026-06-07T10:37:20Z] [INFO] Health status publishing",
     "pass_lines": 0,
     "review_lines": 0,
-    "info_lines": 9
+    "info_lines": 10
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -69,7 +69,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T10:35:09Z",
+    "updated_utc": "2026-06-07T10:37:05Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -84,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T10:35:10Z",
+    "updated_utc": "2026-06-07T10:37:06Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -103,9 +103,9 @@
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_fast_track_accelerator_status.json"
   },
   "scarflix_canary": {
-    "status": "REVIEW",
-    "milestone": "CANARY_PIPELINE_EXITED_FAST",
-    "updated_utc": "2026-06-07T10:35:12.588Z",
+    "status": "RUNNING",
+    "milestone": "CANARY_PIPELINE_STARTED",
+    "updated_utc": "2026-06-07T10:37:16.420Z",
     "platform_gate_status": "PASS",
     "actual_strm_counts": {
       "movies": 1,
@@ -119,11 +119,11 @@
     },
     "new_strm_since_baseline": 0,
     "staged_candidate_count": 3,
-    "pipeline_running": false,
+    "pipeline_running": true,
     "pipeline_pid": 0,
     "staging_running": false,
     "staging_pid": 0,
-    "next_action": "Recent detached pipeline PID is not alive and no new .strm delta is visible; inspect launcher stdout/stderr logs and pipeline startup path before retrying.",
+    "next_action": "Detached safe expansion pipeline started.",
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/scarflix_canary_status.json"
   },
   "daily_ai_usability": {
@@ -159,6 +159,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-07T10:37:20.608Z",
+      "title": "PlatformGate child QA active: Health",
+      "detail": "Latest child QA line: [2026-06-07T10:37:20Z] [INFO] Health status publishing"
+    },
+    {
       "utc": "2026-06-07T10:33:19.163Z",
       "title": "PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23",
       "detail": "Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v..."
@@ -177,11 +182,6 @@
       "utc": "2026-06-07T10:19:18Z",
       "title": "PlatformGate checkpoint PASS",
       "detail": "Step platform_gate_pass; visible=46; blockers=0"
-    },
-    {
-      "utc": "2026-06-07T10:18:41.981Z",
-      "title": "PlatformGate child QA active: Health",
-      "detail": "Latest child QA line: [2026-06-07T10:18:41Z] [INFO] Health status publishing"
     },
     {
       "utc": "2026-06-07T10:18:09.884Z",
@@ -242,8 +242,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T10:18:41.981Z - Health",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=REVIEW/CANARY_PIPELINE_EXITED_FAST, staged=3, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=17 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T10:37:20.608Z - Health",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=3, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=1 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -251,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T10:35:10Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T10:37:06Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
