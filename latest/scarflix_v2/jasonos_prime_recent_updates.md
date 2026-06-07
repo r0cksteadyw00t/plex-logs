@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T00:20:01.349Z
+Updated UTC: 2026-06-07T00:22:02.266Z
 Source: live status merge
 
-- 2026-06-07T00:19:49Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
-- 2026-06-07T00:19:49Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
-- 2026-06-07T00:19:15.973Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T00:19:15Z] [PASS] QA passed: part=112086 title=Seven
+- 2026-06-07T00:21:50Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
+- 2026-06-07T00:21:50Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-07T00:20:48.268Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T00:20:48Z] [REVIEW] QA failed: part=112087 title=The Lord of the Rings: The Two Towers reason=Plex Transcoder HLS probe timed out
 - 2026-06-07T00:19:02.845Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
 - 2026-06-07T00:18:13Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T00:13:44.700Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T00:13:44Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
