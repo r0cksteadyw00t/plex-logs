@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T11:33:03.591Z
+Updated UTC: 2026-06-07T11:35:04.447Z
 Source: live status merge
 
+- 2026-06-07T11:33:31.408Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
+- 2026-06-07T11:33:22.650Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T11:33:22Z] [INFO] Health status publishing
+- 2026-06-07T11:33:09Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T11:30:45.627Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:30:45Z] [REVIEW] QA failed: part=111277 title=The Dark Knight reason=Plex Transcoder HLS probe timed out
-- 2026-06-07T11:28:27.002Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
-- 2026-06-07T11:28:13Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T11:12:16.648Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T11:12:16Z] [PASS] Decision passed: metadata=41196 title=Mulan
 - 2026-06-07T10:41:49.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:41:49Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
-- 2026-06-07T10:37:20.608Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T10:37:20Z] [INFO] Health status publishing
 - 2026-06-07T10:19:18Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=24768; child_pid=
 - 2026-06-07T10:19:18Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=46; blockers=0
 - 2026-06-07T10:18:09.884Z - Grok Peer Review Applied - 2026-06-07 19:36: Grok's forensic peer review was accepted as the implementation brief. Current outcome truth: Actual Streaming `.strm`: movies `1`, TV `0`, total `1`. Dashboard visible QA count: `56` (`38` movies, `18` TV), explicitly not delivery.
