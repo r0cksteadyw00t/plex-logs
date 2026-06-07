@@ -1,23 +1,21 @@
 ﻿# ScarFLIX v2 Watchdog + Stall Detector
 
-Updated UTC: 2026-06-07T03:42:08Z
-Status: REVIEW
-Stall risk: Medium
+Updated UTC: 2026-06-07T03:43:10Z
+Status: PASS
+Stall risk: Low
 Will progress without Codex: True
 Current milestone: PLATFORM_GATE_RUNNING
 
 ## Signals
-- Controller age minutes: 4
-- Platform checkpoint age minutes: 8
+- Controller age minutes: 1
+- Platform checkpoint age minutes: 0
 - Dashboard age minutes: 0
-- Mirror age minutes: 1
+- Mirror age minutes: 2
 - Movie STRM count: 1
 - TV STRM count: 0
 - Total STRM count: 1
 
 ## Actions
-- ScarFLIX_v2_AutonomousController: run_triggered
-- ScarFLIX_v2_DurablePlatformGateRunner: run_triggered
+- No recovery actions required.
 
 ## Notes
-- PlatformGate progress is stale during PlatformGate milestone; watchdog triggered controller/runner.
