@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T23:26:01.325Z",
+  "updated_utc": "2026-06-07T23:28:01.801Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -68,7 +68,7 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
+    "controller_updated_age_minutes": 3,
     "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-07T23:30:06Z",
@@ -79,9 +79,9 @@
   "child_qa_progress": {
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260608.log",
-    "last_progress_utc": "2026-06-07T23:25:35.095Z",
+    "last_progress_utc": "2026-06-07T23:27:31.947Z",
     "age_minutes": 0,
-    "last_line": "[2026-06-07T23:25:35Z] [REVIEW] Final: REVIEW",
+    "last_line": "[2026-06-07T23:27:31Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 20,
     "info_lines": 60
@@ -95,17 +95,17 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T23:25:01Z",
+    "updated_utc": "2026-06-07T23:27:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
     "status": "REVIEW",
     "current_step": "platform_gate_review",
-    "owner_pid": 35644,
+    "owner_pid": 11048,
     "child_pid": "",
-    "last_progress_utc": "2026-06-07T23:25:40Z",
-    "heartbeat_updated_utc": "2026-06-07T23:25:40Z",
+    "last_progress_utc": "2026-06-07T23:27:36Z",
+    "heartbeat_updated_utc": "2026-06-07T23:27:36Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
@@ -147,14 +147,14 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T23:25:02Z",
+    "updated_utc": "2026-06-07T23:27:01Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
     "actual_strm_counts": {
-      "movies": 28,
+      "movies": 31,
       "tv": 14,
-      "total": 42
+      "total": 45
     },
     "next_4_hour_actions": [
       "Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.",
@@ -222,19 +222,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T23:25:40Z",
+      "utc": "2026-06-07T23:27:36Z",
       "title": "Durable PlatformGate runner REVIEW",
-      "detail": "Step platform_gate_review; owner_pid=35644; child_pid="
+      "detail": "Step platform_gate_review; owner_pid=11048; child_pid="
     },
     {
-      "utc": "2026-06-07T23:25:40Z",
+      "utc": "2026-06-07T23:27:36Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=1; blockers=0"
     },
     {
-      "utc": "2026-06-07T23:25:35.095Z",
+      "utc": "2026-06-07T23:27:31.947Z",
       "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-07T23:25:35Z] [REVIEW] Final: REVIEW"
+      "detail": "Latest child QA line: [2026-06-07T23:27:31Z] [REVIEW] Final: REVIEW"
     },
     {
       "utc": "2026-06-07T23:25:11.469Z",
@@ -305,8 +305,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T23:25:35.095Z - 5-concurrent stream QA",
-      "current": "Actual Streaming library .strm output is movies=31, tv=14, total=45. Staged pending=47; staged publisher=PASS_PUBLISHED, processed=8, published=3. Direct admission=REVIEW_RETRY_HELD, checked=42, passed_visible=42, quarantined_this_run=0, retry_held=7. Direct mirror=PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PASS_PENDING_PLAYBACK_QA/CANARY_STRM_CREATED, staged=0, new_visible_strm=4. PlatformGate=REVIEW/REVIEW; durable=REVIEW; child_stage=5-concurrent stream QA; child_age=under 1 min; owner_pid=35644; child_pid=.",
+      "last_change": "2026-06-07T23:27:31.947Z - 5-concurrent stream QA",
+      "current": "Actual Streaming library .strm output is movies=31, tv=14, total=45. Staged pending=47; staged publisher=PASS_PUBLISHED, processed=8, published=3. Direct admission=REVIEW_RETRY_HELD, checked=42, passed_visible=42, quarantined_this_run=0, retry_held=7. Direct mirror=PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PASS_PENDING_PLAYBACK_QA/CANARY_STRM_CREATED, staged=0, new_visible_strm=4. PlatformGate=REVIEW/REVIEW; durable=REVIEW; child_stage=5-concurrent stream QA; child_age=under 1 min; owner_pid=11048; child_pid=.",
       "progress": 28,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -314,7 +314,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T23:25:02Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T23:27:01Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=45.",
       "progress": 25,
       "eta": "runs every 5 minutes",
@@ -368,7 +368,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T23:25:40Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T23:27:36Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=45; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
       "progress": 18,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
