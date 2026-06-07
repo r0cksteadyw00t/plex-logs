@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T10:35:09.767Z",
+  "updated_utc": "2026-06-07T10:37:05.532Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,8 +42,8 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 16,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 18,
     "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-07T10:38:13Z",
     "next_check_age_minutes": 0,
@@ -54,7 +54,7 @@
     "stage": "Health",
     "file": "D:/PlexTools/logs/scarflix_v2_health_status_20260607.log",
     "last_progress_utc": "2026-06-07T10:18:41.981Z",
-    "age_minutes": 16,
+    "age_minutes": 18,
     "last_line": "[2026-06-07T10:18:41Z] [INFO] Health status publishing",
     "pass_lines": 0,
     "review_lines": 0,
@@ -69,7 +69,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T10:33:04Z",
+    "updated_utc": "2026-06-07T10:35:09Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -84,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T10:34:04Z",
+    "updated_utc": "2026-06-07T10:36:06Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -103,9 +103,9 @@
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_fast_track_accelerator_status.json"
   },
   "scarflix_canary": {
-    "status": "RUNNING",
-    "milestone": "CANARY_PIPELINE_STARTED",
-    "updated_utc": "2026-06-07T10:34:02.828Z",
+    "status": "REVIEW",
+    "milestone": "CANARY_PIPELINE_EXITED_FAST",
+    "updated_utc": "2026-06-07T10:35:12.588Z",
     "platform_gate_status": "PASS",
     "actual_strm_counts": {
       "movies": 1,
@@ -119,11 +119,11 @@
     },
     "new_strm_since_baseline": 0,
     "staged_candidate_count": 3,
-    "pipeline_running": true,
-    "pipeline_pid": 13740,
+    "pipeline_running": false,
+    "pipeline_pid": 0,
     "staging_running": false,
     "staging_pid": 0,
-    "next_action": "Detached safe expansion pipeline started.",
+    "next_action": "Recent detached pipeline PID is not alive and no new .strm delta is visible; inspect launcher stdout/stderr logs and pipeline startup path before retrying.",
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/scarflix_canary_status.json"
   },
   "daily_ai_usability": {
@@ -243,7 +243,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T10:18:41.981Z - Health",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=3, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=16 min; owner_pid=24768; child_pid=.",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=REVIEW/CANARY_PIPELINE_EXITED_FAST, staged=3, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=18 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -251,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T10:34:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T10:36:06Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
