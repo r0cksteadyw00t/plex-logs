@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T02:54:02.377Z
+Updated UTC: 2026-06-07T02:56:01.068Z
 Source: live status merge
 
-- 2026-06-07T02:53:38Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=46788; child_pid=27944
-- 2026-06-07T02:53:38Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=65; blockers=0
+- 2026-06-07T02:55:50.796Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
+- 2026-06-07T02:55:34Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=44104; child_pid=17968
+- 2026-06-07T02:55:34Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T02:55:31.235Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T02:55:31Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
+- 2026-06-07T02:54:53Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T02:53:06.172Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T02:53:06Z] [PASS] QA passed: part=112086 title=Seven
-- 2026-06-07T02:49:10.455Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T02:49:10Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
-- 2026-06-07T02:48:50.924Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
-- 2026-06-07T02:48:47Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T02:44:06Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39172; child_pid=
 - 2026-06-07T02:44:06Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=65; blockers=0
 - 2026-06-07T02:43:07Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
