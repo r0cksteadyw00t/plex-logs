@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_predictive_simulator",
   "status": "REVIEW",
-  "updated_utc": "2026-06-07T08:58:01.142Z",
+  "updated_utc": "2026-06-07T09:00:02.661Z",
   "no_catalogue_publication": true,
   "expansion_eligible": false,
   "visible": {
@@ -12,7 +12,7 @@
   "pending_candidates": 7,
   "rejected_sources": 673,
   "gate": {
-    "checkpoint_status": "RUNNING",
+    "checkpoint_status": "REVIEW",
     "platform_status": "REVIEW",
     "active_gate": "REVIEW",
     "visible_catalog_qa": "UNKNOWN",
@@ -37,9 +37,9 @@
     {
       "id": "provider_retry_backoff",
       "description": "Treat provider 429/503/timeouts as retry-held source failures, not title deletion.",
-      "transient_failures": 5,
-      "prunable_failures": 0,
-      "recommendation": "retry_transient_sources_later"
+      "transient_failures": 4,
+      "prunable_failures": 1,
+      "recommendation": "source_level_quarantine_only"
     },
     {
       "id": "candidate_pool_growth",
