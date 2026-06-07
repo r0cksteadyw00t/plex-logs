@@ -1,0 +1,46 @@
+{
+  "component": "jasonos_prime_playback_qa_controller",
+  "status": "RUNNING",
+  "updated_utc": "2026-06-07T20:52:17Z",
+  "current_step": "concurrent_stream_qa_started",
+  "jason_action_required": false,
+  "counts": {
+    "movies": 28,
+    "tv": 10,
+    "total": 38
+  },
+  "canary_status": "RUNNING",
+  "canary_milestone": "CANARY_PIPELINE_STARTED",
+  "direct_strm_mirror_status": "WAITING_PLATFORM_GATE_PASS",
+  "decision_qa_status": "PASS",
+  "concurrent_stream_qa_status": "REVIEW",
+  "overlap_running": [],
+  "actions": [
+    {
+      "action": "trigger_plex_scans",
+      "result": [
+        {
+          "ok": true,
+          "section": "5",
+          "pid": 36356
+        },
+        {
+          "ok": true,
+          "section": "6",
+          "pid": 43424
+        }
+      ]
+    },
+    {
+      "action": "start_concurrent_stream_qa",
+      "result": {
+        "task": "ScarFLIX_v2_ConcurrentStreamQA",
+        "enable_ok": true,
+        "run_ok": true,
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
+      }
+    }
+  ],
+  "next_action": "Detached 5-concurrent stream QA is running or queued."
+}
