@@ -1,24 +1,29 @@
 {
     "component":  "scarflix_v2_durable_platform_gate_runner",
     "status":  "RUNNING",
-    "current_step":  "running_platform_gate_attempt_1",
+    "current_step":  "running_platform_gate_attempt_2",
     "started_utc":  "2026-06-07T04:53:10Z",
-    "last_progress_utc":  "2026-06-07T04:54:42Z",
+    "last_progress_utc":  "2026-06-07T04:56:52Z",
     "ended_utc":  "",
-    "duration_seconds":  92,
+    "duration_seconds":  222,
     "no_catalogue_expansion":  true,
     "single_owner":  true,
     "owner_pid":  35936,
-    "child_pid":  40712,
-    "child_start_utc":  "2026-06-07T04:53:12Z",
-    "child_exit_code":  null,
-    "child_qa_last_progress_utc":  "2026-06-07T04:53:41Z",
+    "child_pid":  15736,
+    "child_start_utc":  "2026-06-07T04:56:22Z",
+    "child_exit_code":  2,
+    "child_qa_last_progress_utc":  "2026-06-07T04:55:50Z",
     "child_qa_last_progress_path":  "D:\\PlexTools\\logs\\scarflix_v2_webdav_active_gate_20260607.log",
     "child_qa_stale_minutes":  1,
     "child_qa_stale_threshold_minutes":  15,
     "child_qa_stall_count":  0,
     "attempts":  [
-
+                     {
+                         "attempt":  1,
+                         "exit_code":  2,
+                         "platform_status":  "REVIEW",
+                         "ended_utc":  "2026-06-07T04:55:52Z"
+                     }
                  ],
     "stale_minutes":  5,
     "heartbeat_seconds":  30,
@@ -47,35 +52,28 @@
     "platform_gate":  {
                           "component":  "scarflix_v2_platform_gate",
                           "status":  "REVIEW",
-                          "started_utc":  "2026-06-07T03:42:10Z",
-                          "ended_utc":  "2026-06-07T04:52:03Z",
-                          "duration_seconds":  4193,
+                          "started_utc":  "2026-06-07T04:53:15Z",
+                          "ended_utc":  "2026-06-07T04:55:52Z",
+                          "duration_seconds":  157,
                           "visible":  {
                                           "count":  65,
                                           "movies":  45,
                                           "tv":  20
                                       },
                           "snapshot":  {
-                                           "id":  "20260607T034226Z",
+                                           "id":  "20260607T045330Z",
                                            "hash":  "c5319cf869ee95f79cb7760c67ef5e4974f0a6890801529f556d82e3da3990ca",
-                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260607T034226Z.txt",
-                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260607T034226Z.json"
+                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260607T045330Z.txt",
+                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260607T045330Z.json"
                                        },
                           "qa":  {
                                      "active_gate":  {
-                                                         "status":  "PASS",
-                                                         "exit_code":  0,
+                                                         "status":  "REVIEW",
+                                                         "exit_code":  1,
                                                          "fresh":  true,
                                                          "checked":  65,
                                                          "status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\webdav_active_gate_status.json"
-                                                     },
-                                     "visible_catalog_qa":  {
-                                                                "status":  "FAIL",
-                                                                "exit_code":  1,
-                                                                "fresh":  true,
-                                                                "checked":  65,
-                                                                "status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\visible_catalog_qa_status.json"
-                                                            }
+                                                     }
                                  },
                           "quarantine":  {
                                              "count":  697,
@@ -146,7 +144,7 @@
                                                   }
                                               ],
                           "blockers":  [
-                                           "visible_catalog_qa status=FAIL"
+                                           "active_gate status=REVIEW"
                                        ],
                           "files":  {
                                         "status":  "D:\\PlexTools\\public\\latest\\scarflix\\platform_gate_status.json",
