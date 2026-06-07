@@ -2,18 +2,18 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-07T10:38:13Z",
-    "started_utc":  "2026-06-07T10:38:05Z",
+    "updated_utc":  "2026-06-07T10:43:13Z",
+    "started_utc":  "2026-06-07T10:43:05Z",
     "duration_seconds":  8,
     "will_progress_without_codex":  true,
     "current_milestone":  "CANDIDATE_SOURCE_MODEL_PENDING",
     "signals":  {
                     "controller_age_minutes":  5,
-                    "platform_checkpoint_age_minutes":  19,
-                    "durable_platform_gate_age_minutes":  19,
+                    "platform_checkpoint_age_minutes":  24,
+                    "durable_platform_gate_age_minutes":  24,
                     "platform_progress_fresh":  false,
                     "dashboard_age_minutes":  0,
-                    "mirror_age_minutes":  2,
+                    "mirror_age_minutes":  1,
                     "movie_strm_count":  1,
                     "tv_strm_count":  0,
                     "total_strm_count":  1,
@@ -26,8 +26,8 @@
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "7/06/2026 8:38:01 PM",
-                                     "next_run_time":  "7/06/2026 8:43:00 PM",
+                                     "last_run_time":  "7/06/2026 8:43:01 PM",
+                                     "next_run_time":  "7/06/2026 8:48:00 PM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
@@ -42,15 +42,15 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "7/06/2026 8:38:04 PM",
-                                    "next_run_time":  "7/06/2026 8:43:00 PM",
+                                    "last_run_time":  "7/06/2026 8:43:07 PM",
+                                    "next_run_time":  "7/06/2026 8:48:00 PM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
                                  "exists":  true,
                                  "status":  "Ready",
-                                 "last_run_time":  "7/06/2026 8:38:05 PM",
+                                 "last_run_time":  "7/06/2026 8:43:07 PM",
                                  "next_run_time":  "7/06/2026 8:48:00 PM",
                                  "last_result":  "0"
                              }
@@ -64,7 +64,8 @@
                     }
                 ],
     "notes":  [
-                  "Catalogue count has not changed during expansion/candidate milestone; watchdog triggered controller."
+                  "Catalogue count has not changed during expansion/candidate milestone; watchdog triggered controller.",
+                  "Transient provider/WebDAV failures are being held for retry, not pruned: 7"
               ],
     "files":  {
                   "log":  "D:\\PlexTools\\logs\\scarflix_v2_watchdog_stall_20260607.log",
