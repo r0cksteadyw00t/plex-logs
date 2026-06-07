@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T00:43:36.704Z
+Updated UTC: 2026-06-07T00:45:11.185Z
 Source: live status merge
 
-- 2026-06-07T00:43:23Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
-- 2026-06-07T00:43:23Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
-- 2026-06-07T00:37:19.768Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T00:37:19Z] [PASS] QA passed: part=112136 title=The Maze Runner
+- 2026-06-07T00:44:53Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
+- 2026-06-07T00:44:53Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-07T00:44:32.839Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T00:44:32Z] [PASS] QA passed: part=112207 title=The Good, the Bad and the Ugly
 - 2026-06-07T00:33:16.208Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22: Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW.
 - 2026-06-07T00:33:05Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T00:19:02.845Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
