@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T01:16:01.062Z
+Updated UTC: 2026-06-07T01:18:03.560Z
 Source: live status merge
 
-- 2026-06-07T01:15:56Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
-- 2026-06-07T01:15:56Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-07T01:17:56Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
+- 2026-06-07T01:17:56Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
 - 2026-06-07T01:14:40.064Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T01:14:40Z] [REVIEW] QA failed: part=112151 title=Pilot reason=Plex Transcoder HLS probe timed out
 - 2026-06-07T01:13:09.739Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22: Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW.
 - 2026-06-07T01:13:05Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
