@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T11:20:04.807Z
+Updated UTC: 2026-06-07T11:21:05.054Z
 Source: live status merge
 
 - 2026-06-07T11:18:54.403Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:18:54Z] [REVIEW] QA failed: part=112118 title=The Super Mario Galaxy Movie reason=Plex Transcoder HLS probe timed out
