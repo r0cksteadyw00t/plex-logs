@@ -1,40 +1,38 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "ALERT",
-  "alert_level": "HIGH",
-  "updated_utc": "2026-06-07T18:53:08Z",
+  "status": "REVIEW",
+  "alert_level": "MEDIUM",
+  "updated_utc": "2026-06-07T18:56:05Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": true,
+  "codex_action_required": false,
   "repeat_count": 1,
   "signals": {
     "controller_status": "FAIL_ENGINEERING",
     "controller_milestone": "BLOCKED_DECISION",
-    "controller_age_minutes": 2,
+    "controller_age_minutes": 5,
     "watchdog_status": "PASS",
     "watchdog_risk": "Low",
-    "watchdog_age_minutes": 2,
+    "watchdog_age_minutes": 5,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 2,
+    "dashboard_age_minutes": 0,
     "mirror_status": "PASS",
-    "mirror_age_minutes": 1,
+    "mirror_age_minutes": 2,
     "checkpoint_status": "PASS",
     "checkpoint_step": "platform_gate_pass",
-    "checkpoint_age_minutes": 514,
-    "durable_platform_gate_age_minutes": 514,
+    "checkpoint_age_minutes": 517,
+    "durable_platform_gate_age_minutes": 517,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "controller_stale_or_blocked",
-      "result": "FAIL",
-      "note": "enable pid=10736; run spawn UNKNOWN"
+      "result": "PASS",
+      "note": "enable pid=44148; run pid=20396"
     }
   ],
-  "notes": [
-    "One or more detached recovery launches failed."
-  ],
+  "notes": [],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
