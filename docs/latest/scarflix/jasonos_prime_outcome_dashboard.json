@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T00:09:01.050Z",
+  "updated_utc": "2026-06-07T00:11:02.555Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,8 +14,8 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 3,
+    "controller_updated_age_minutes": 3,
+    "platform_child_progress_age_minutes": 5,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T00:13:10Z",
     "next_check_age_minutes": 0,
@@ -26,7 +26,7 @@
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260607.log",
     "last_progress_utc": "2026-06-07T00:05:36.001Z",
-    "age_minutes": 3,
+    "age_minutes": 5,
     "last_line": "[2026-06-07T00:05:35Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=78 passed=65 failed_detected=13 pruned=0",
     "pass_lines": 0,
     "review_lines": 20,
@@ -41,7 +41,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T00:08:04Z",
+    "updated_utc": "2026-06-07T00:10:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -56,7 +56,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T00:08:08Z",
+    "updated_utc": "2026-06-07T00:10:02Z",
     "current_milestone": "PLATFORM_GATE_FAIL_SOURCE_QUARANTINE_REQUIRED",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -167,7 +167,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T00:05:36.001Z - WebDAV active gate",
-      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=REVIEW; durable=REVIEW; child_stage=WebDAV active gate; child_age=3 min; owner_pid=28312; child_pid=.",
+      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=REVIEW; durable=REVIEW; child_stage=WebDAV active gate; child_age=5 min; owner_pid=28312; child_pid=.",
       "progress": 46,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -175,7 +175,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T00:08:08Z - PLATFORM_GATE_FAIL_SOURCE_QUARANTINE_REQUIRED",
+      "last_change": "2026-06-07T00:10:02Z - PLATFORM_GATE_FAIL_SOURCE_QUARANTINE_REQUIRED",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 70,
       "eta": "runs every 5 minutes",
