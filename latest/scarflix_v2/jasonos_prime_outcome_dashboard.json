@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T01:12:02.043Z",
+  "updated_utc": "2026-06-07T01:14:03.096Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,10 +14,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 3,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-07T01:13:29Z",
+    "next_check_utc": "2026-06-07T01:18:06Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -25,23 +25,23 @@
   "child_qa_progress": {
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T01:08:48.160Z",
-    "age_minutes": 3,
-    "last_line": "[2026-06-07T01:08:48Z] [REVIEW] QA failed: part=112241 title=Oldboy reason=Plex Transcoder HLS probe timed out",
-    "pass_lines": 41,
-    "review_lines": 36,
+    "last_progress_utc": "2026-06-07T01:13:07.643Z",
+    "age_minutes": 1,
+    "last_line": "[2026-06-07T01:13:07Z] [PASS] QA passed: part=112150 title=The Box",
+    "pass_lines": 46,
+    "review_lines": 31,
     "info_lines": 2
   },
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-07T01:08:10Z",
+    "updated_utc": "2026-06-07T01:13:06Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T01:10:00Z",
+    "updated_utc": "2026-06-07T01:13:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -50,13 +50,13 @@
     "current_step": "running_platform_gate_attempt_1",
     "owner_pid": 13964,
     "child_pid": 38248,
-    "last_progress_utc": "2026-06-07T01:11:55Z",
-    "heartbeat_updated_utc": "2026-06-07T01:11:55Z",
+    "last_progress_utc": "2026-06-07T01:13:56Z",
+    "heartbeat_updated_utc": "2026-06-07T01:13:56Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T01:11:01Z",
+    "updated_utc": "2026-06-07T01:13:05Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -83,34 +83,34 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T01:11:55Z",
+      "utc": "2026-06-07T01:13:56Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248"
     },
     {
-      "utc": "2026-06-07T01:11:55Z",
+      "utc": "2026-06-07T01:13:56Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=78; blockers=0"
     },
     {
-      "utc": "2026-06-07T01:08:48.160Z",
-      "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T01:08:48Z] [REVIEW] QA failed: part=112241 title=Oldboy reason=Plex Transcoder HLS probe timed out"
-    },
-    {
-      "utc": "2026-06-07T01:08:32.456Z",
+      "utc": "2026-06-07T01:13:09.739Z",
       "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22",
       "detail": "Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW."
+    },
+    {
+      "utc": "2026-06-07T01:13:07.643Z",
+      "title": "PlatformGate child QA active: Plex visible/HLS QA",
+      "detail": "Latest child QA line: [2026-06-07T01:13:07Z] [PASS] QA passed: part=112150 title=The Box"
+    },
+    {
+      "utc": "2026-06-07T01:13:05Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T01:08:09Z",
       "title": "Autonomous controller: PLATFORM_GATE_RUNNING",
       "detail": "PlatformGate runner already running; no inline wait"
-    },
-    {
-      "utc": "2026-06-07T01:03:18Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T00:19:02.845Z",
@@ -166,8 +166,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T01:08:48.160Z - Plex visible/HLS QA",
-      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=3 min; owner_pid=13964; child_pid=38248.",
+      "last_change": "2026-06-07T01:13:07.643Z - Plex visible/HLS QA",
+      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=13964; child_pid=38248.",
       "progress": 46,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -175,7 +175,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T01:11:01Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T01:13:05Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 75,
       "eta": "runs every 5 minutes",
@@ -229,7 +229,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T01:11:55Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T01:13:56Z - Durable PlatformGate ownership active",
       "current": "Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck.",
       "progress": 56,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
