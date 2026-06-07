@@ -1,22 +1,22 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: RUNNING
-Milestone state: PLATFORM_GATE_RUNNING
-Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-07T10:18:06Z
-Current step: PLATFORM_GATE_CHILD_ACTIVE
+Status: REVIEW_TRANSIENT
+Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
+Milestone: Same-snapshot PlatformGate checkpoint complete
+Updated UTC: 2026-06-07T10:23:08Z
+Current step: candidate_source_model_review
 Jason action required: False
 
 ## PlatformGate
 - runner_running: False
-- status: RUNNING
-- stage: PLATFORM_GATE_CHILD_ACTIVE
+- status: PASS
+- stage: platform_gate_pass
 - visible: 46
 - transient_failures: 0
 - prunable_failures: 0
 
 ## Candidate Source Model
-- status: PENDING_PLATFORM_GATE
+- status: REVIEW
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: PlatformGate child QA activity is fresh; no duplicate runner launch
-- next_check_utc: 2026-06-07T10:23:06Z
+- action_taken: Candidate-source model requires engineering review before catalogue expansion
+- next_check_utc: 2026-06-07T10:28:10Z
 
 ## Blockers
-- none
+- seeder_stage_only_not_plex_visible
