@@ -1,17 +1,17 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: RUNNING
-Milestone state: PLATFORM_GATE_FAIL_SOURCE_QUARANTINE_REQUIRED
+Status: FAIL_ENGINEERING
+Milestone state: BLOCKED_DECISION
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-07T09:58:04Z
-Current step: visible_catalog_source_quarantine_started
+Updated UTC: 2026-06-07T10:03:05Z
+Current step: unhandled_platform_gate_state
 Jason action required: False
 
 ## PlatformGate
 - runner_running: False
 - status: REVIEW
 - stage: platform_gate_review
-- visible: 47
+- visible: 46
 - transient_failures: 0
 - prunable_failures: 0
 
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: VisibleCatalogQA found Plex-incompatible sources; started source/release quarantine while titles remain wanted
-- next_check_utc: 2026-06-07T10:03:06Z
+- action_taken: none
+- next_check_utc: 2026-06-07T10:08:05Z
 
 ## Blockers
-- none
+- Unhandled PlatformGate status: REVIEW
