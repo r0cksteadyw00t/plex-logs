@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T04:36:00.884Z
+Updated UTC: 2026-06-07T04:38:03.893Z
 Source: live status merge
 
+- 2026-06-07T04:37:44Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088
+- 2026-06-07T04:37:44Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
 - 2026-06-07T04:35:57.195Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T04:35:57Z] [PASS] QA passed: part=112228 title=The Journey's End
-- 2026-06-07T04:35:44Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088
-- 2026-06-07T04:35:44Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
 - 2026-06-07T04:34:31.800Z - JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36: Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion.
 - 2026-06-07T04:34:24Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T04:28:09Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
