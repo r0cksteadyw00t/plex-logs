@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T10:48:05.311Z",
+  "updated_utc": "2026-06-07T10:50:01.953Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,10 +42,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 1,
+    "controller_updated_age_minutes": 2,
+    "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-07T10:48:18Z",
+    "next_check_utc": "2026-06-07T10:53:36Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -53,9 +53,9 @@
   "child_qa_progress": {
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T10:47:13.756Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-07T10:47:13Z] [PASS] QA passed: part=111481 title=Superman",
+    "last_progress_utc": "2026-06-07T10:49:44.086Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-07T10:49:44Z] [PASS] QA passed: part=111899 title=Pirates of the Caribbean: Dead Man's Chest",
     "pass_lines": 73,
     "review_lines": 2,
     "info_lines": 5
@@ -63,7 +63,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-07T10:43:13Z",
+    "updated_utc": "2026-06-07T10:48:12Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -84,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T10:47:04Z",
+    "updated_utc": "2026-06-07T10:49:04Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -159,17 +159,17 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T10:47:13.756Z",
+      "utc": "2026-06-07T10:49:44.086Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T10:47:13Z] [PASS] QA passed: part=111481 title=Superman"
+      "detail": "Latest child QA line: [2026-06-07T10:49:44Z] [PASS] QA passed: part=111899 title=Pirates of the Caribbean: Dead Man's Chest"
     },
     {
-      "utc": "2026-06-07T10:43:24.576Z",
+      "utc": "2026-06-07T10:48:43.340Z",
       "title": "PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23",
       "detail": "Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v..."
     },
     {
-      "utc": "2026-06-07T10:43:15Z",
+      "utc": "2026-06-07T10:48:14Z",
       "title": "Autonomous controller: candidate_source_model_review",
       "detail": "Candidate-source model requires engineering review before catalogue expansion"
     },
@@ -242,8 +242,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T10:47:13.756Z - Plex visible/HLS QA",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=21, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T10:49:44.086Z - Plex visible/HLS QA",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=21, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -251,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T10:47:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T10:49:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
