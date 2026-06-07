@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T03:50:01.202Z
+Updated UTC: 2026-06-07T03:52:03.054Z
 Source: live status merge
 
-- 2026-06-07T03:49:40Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088
-- 2026-06-07T03:49:40Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T03:51:40Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088
+- 2026-06-07T03:51:40Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T03:50:50.829Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T03:50:50Z] [REVIEW] QA failed: part=112087 title=The Lord of the Rings: The Two Towers reason=Plex Transcoder HLS probe timed out
 - 2026-06-07T03:48:35.016Z - JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36: Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion.
 - 2026-06-07T03:48:21Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
-- 2026-06-07T03:47:56.128Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T03:47:56Z] [PASS] QA passed: part=112086 title=Seven
 - 2026-06-07T03:42:34.283Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T03:42:34Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
 - 2026-06-07T03:38:38.362Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
 - 2026-06-07T03:38:11Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
