@@ -1,21 +1,21 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T09:58:03.026Z",
+  "updated_utc": "2026-06-07T10:00:03.814Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
     "Keep long ScarFLIX validation detached under local controller ownership."
   ],
   "overall_timeline_estimate": "First major milestone: 1-3 days depending on PlatformGate/provider result.",
-  "current_milestone": "PLATFORM_GATE_RUNNING",
+  "current_milestone": "PLATFORM_GATE_FAIL_SOURCE_QUARANTINE_REQUIRED",
   "jason_action_required": false,
   "truth_metrics": {
     "movie_strm_count": 1,
     "tv_strm_count": 0,
     "total_strm_count": 1,
-    "visible_qa_count": 47,
-    "visible_qa_movies": 37,
+    "visible_qa_count": 46,
+    "visible_qa_movies": 36,
     "visible_qa_tv": 10,
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
@@ -25,49 +25,49 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
+    "controller_updated_age_minutes": 2,
     "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-07T09:58:07Z",
+    "next_check_utc": "2026-06-07T10:03:06Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex visible/HLS QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T09:57:06.698Z",
+    "stage": "Health",
+    "file": "D:/PlexTools/logs/scarflix_v2_health_status_20260607.log",
+    "last_progress_utc": "2026-06-07T09:59:33.195Z",
     "age_minutes": 1,
-    "last_line": "[2026-06-07T09:57:06Z] [PASS] QA passed: part=112228 title=The Journey's End",
-    "pass_lines": 75,
-    "review_lines": 2,
-    "info_lines": 3
+    "last_line": "[2026-06-07T09:59:33Z] [INFO] Health status publishing",
+    "pass_lines": 0,
+    "review_lines": 0,
+    "info_lines": 2
   },
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-07T09:53:06Z",
+    "updated_utc": "2026-06-07T09:58:06Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T09:58:02Z",
+    "updated_utc": "2026-06-07T10:00:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
     "status": "REVIEW",
     "current_step": "platform_gate_review",
-    "owner_pid": 43348,
+    "owner_pid": 12304,
     "child_pid": "",
-    "last_progress_utc": "2026-06-07T09:57:11Z",
-    "heartbeat_updated_utc": "2026-06-07T09:57:11Z",
+    "last_progress_utc": "2026-06-07T10:00:00Z",
+    "heartbeat_updated_utc": "2026-06-07T10:00:00Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T09:57:01Z",
+    "updated_utc": "2026-06-07T10:00:01Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -88,7 +88,7 @@
   "scarflix_canary": {
     "status": "STAGING_CANDIDATES",
     "milestone": "CANARY_STAGING_STARTED",
-    "updated_utc": "2026-06-07T09:56:08.314Z",
+    "updated_utc": "2026-06-07T10:00:03.261Z",
     "platform_gate_status": "REVIEW",
     "actual_strm_counts": {
       "movies": 1,
@@ -105,7 +105,7 @@
     "pipeline_running": false,
     "pipeline_pid": 0,
     "staging_running": true,
-    "staging_pid": 15896,
+    "staging_pid": 27468,
     "next_action": "Stage-only candidate generation started; candidates remain outside Plex visibility.",
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/scarflix_canary_status.json"
   },
@@ -142,39 +142,49 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T09:57:11Z",
+      "utc": "2026-06-07T10:00:00Z",
       "title": "Durable PlatformGate runner REVIEW",
-      "detail": "Step platform_gate_review; owner_pid=43348; child_pid="
+      "detail": "Step platform_gate_review; owner_pid=12304; child_pid="
     },
     {
-      "utc": "2026-06-07T09:57:11Z",
+      "utc": "2026-06-07T10:00:00Z",
       "title": "PlatformGate checkpoint REVIEW",
-      "detail": "Step platform_gate_review; visible=47; blockers=0"
+      "detail": "Step platform_gate_review; visible=46; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T09:59:33.195Z",
+      "title": "PlatformGate child QA active: Health",
+      "detail": "Latest child QA line: [2026-06-07T09:59:33Z] [INFO] Health status publishing"
+    },
+    {
+      "utc": "2026-06-07T09:58:27.268Z",
+      "title": "PlatformGate child QA active: WebDAV active gate",
+      "detail": "Latest child QA line: [2026-06-07T09:58:27Z] [INFO] Running concurrent WebDAV active gate worker for 46 entries."
+    },
+    {
+      "utc": "2026-06-07T09:58:09.858Z",
+      "title": "Grok Peer Review Applied - 2026-06-07 19:36",
+      "detail": "Grok's forensic peer review was accepted as the implementation brief. Current outcome truth: Actual Streaming `.strm`: movies `1`, TV `0`, total `1`. Dashboard visible QA count: `56` (`38` movies, `18` TV), explicitly not delivery."
+    },
+    {
+      "utc": "2026-06-07T09:58:08Z",
+      "title": "Durable PlatformGate runner RUNNING",
+      "detail": "Step running_platform_gate_attempt_1; owner_pid=12304; child_pid=37172"
+    },
+    {
+      "utc": "2026-06-07T09:58:08Z",
+      "title": "PlatformGate checkpoint RUNNING",
+      "detail": "Step running_platform_gate_attempt_1; visible=47; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T09:58:04Z",
+      "title": "Autonomous controller: visible_catalog_source_quarantine_started",
+      "detail": "VisibleCatalogQA found Plex-incompatible sources; started source/release quarantine while titles remain wanted"
     },
     {
       "utc": "2026-06-07T09:57:06.698Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
       "detail": "Latest child QA line: [2026-06-07T09:57:06Z] [PASS] QA passed: part=112228 title=The Journey's End"
-    },
-    {
-      "utc": "2026-06-07T09:56:21.220Z",
-      "title": "PlatformGate child QA active: WebDAV active gate",
-      "detail": "Latest child QA line: [2026-06-07T09:56:21Z] [INFO] Running concurrent WebDAV active gate worker for 47 entries."
-    },
-    {
-      "utc": "2026-06-07T09:56:04Z",
-      "title": "Durable PlatformGate runner RUNNING",
-      "detail": "Step running_platform_gate_attempt_1; owner_pid=43348; child_pid=45676"
-    },
-    {
-      "utc": "2026-06-07T09:56:04Z",
-      "title": "PlatformGate checkpoint RUNNING",
-      "detail": "Step running_platform_gate_attempt_1; visible=47; blockers=0"
-    },
-    {
-      "utc": "2026-06-07T09:53:10.422Z",
-      "title": "Grok Peer Review Applied - 2026-06-07 19:36",
-      "detail": "Grok's forensic peer review was accepted as the implementation brief. Current outcome truth: Actual Streaming `.strm`: movies `1`, TV `0`, total `1`. Dashboard visible QA count: `56` (`38` movies, `18` TV), explicitly not delivery."
     },
     {
       "utc": "2026-06-07T09:53:06Z",
@@ -200,16 +210,6 @@
       "utc": "2026-06-07T06:30:54.134Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-07T06:30:54Z] [PASS] Decision passed: metadata=41103 title=Yankee White"
-    },
-    {
-      "utc": "2026-06-07T06:26:44.895Z",
-      "title": "PlatformGate child QA active: Health",
-      "detail": "Latest child QA line: [2026-06-07T06:26:44Z] [INFO] Health status publishing"
-    },
-    {
-      "utc": "2026-06-07T05:49:01.719Z",
-      "title": "JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36",
-      "detail": "Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion."
     }
   ],
   "outcomes": [
@@ -225,8 +225,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T09:57:06.698Z - Plex visible/HLS QA",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 47 and are not counted as delivered catalogue. Canary=STAGING_CANDIDATES/CANARY_STAGING_STARTED, staged=3, new_visible_strm=0. PlatformGate=REVIEW; durable=REVIEW; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=43348; child_pid=.",
+      "last_change": "2026-06-07T09:59:33.195Z - Health",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Canary=STAGING_CANDIDATES/CANARY_STAGING_STARTED, staged=3, new_visible_strm=0. PlatformGate=REVIEW; durable=REVIEW; child_stage=Health; child_age=1 min; owner_pid=12304; child_pid=.",
       "progress": 5,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -234,7 +234,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T09:57:01Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T10:00:01Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 25,
       "eta": "runs every 5 minutes",
@@ -288,7 +288,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T09:57:11Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T10:00:00Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=1; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
       "progress": 18,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
