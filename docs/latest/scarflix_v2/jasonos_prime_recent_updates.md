@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T06:18:03.328Z
+Updated UTC: 2026-06-07T06:20:03.275Z
 Source: live status merge
 
-- 2026-06-07T06:17:49.581Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T06:17:49Z] [REVIEW] Decision failed: metadata=40985 title=Whiplash reason=The operation has timed out.
-- 2026-06-07T06:17:37Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=38180; child_pid=46580
-- 2026-06-07T06:17:37Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
+- 2026-06-07T06:19:58.402Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T06:19:58Z] [REVIEW] Decision failed: metadata=41173 title=Lake House reason=The operation has timed out.
+- 2026-06-07T06:19:37Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=38180; child_pid=46580
+- 2026-06-07T06:19:37Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
+- 2026-06-07T06:18:22.073Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
+- 2026-06-07T06:18:18Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T06:13:23.567Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T06:13:23Z] [INFO] Running concurrent WebDAV active gate worker for 56 entries.
-- 2026-06-07T06:13:20.753Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
-- 2026-06-07T06:13:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T06:12:26Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=42428; child_pid=
 - 2026-06-07T06:12:26Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=56; blockers=0
 - 2026-06-07T06:07:23.485Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T06:07:23Z] [PASS] QA passed: part=112094 title=The Shawshank Redemption
