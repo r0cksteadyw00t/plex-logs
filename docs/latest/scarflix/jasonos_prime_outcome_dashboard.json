@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T12:40:01.799Z",
+  "updated_utc": "2026-06-07T12:43:04.120Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -46,26 +46,26 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 0,
-    "mirror_updated_age_minutes": 7,
+    "controller_updated_age_minutes": 7,
+    "platform_child_progress_age_minutes": 1,
+    "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T12:42:31Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 1,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T12:40:00.486Z",
-    "age_minutes": 0,
-    "last_line": "[2026-06-07T12:40:00Z] [REVIEW] Decision failed: metadata=41217 title=A Woman Scorned reason=The operation has timed out.",
+    "last_progress_utc": "2026-06-07T12:42:27.369Z",
+    "age_minutes": 1,
+    "last_line": "[2026-06-07T12:42:27Z] [REVIEW] Decision failed: metadata=41218 title=Pride & Prejudice reason=The operation has timed out.",
     "pass_lines": 64,
-    "review_lines": 8,
-    "info_lines": 8
+    "review_lines": 9,
+    "info_lines": 7
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -74,9 +74,9 @@
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-07T12:39:53Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-07T12:41:59Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -91,7 +91,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T12:39:03Z",
+    "updated_utc": "2026-06-07T12:43:02Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -166,9 +166,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T12:40:00.486Z",
+      "utc": "2026-06-07T12:42:27.369Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-07T12:40:00Z] [REVIEW] Decision failed: metadata=41217 title=A Woman Scorned reason=The operation has timed out."
+      "detail": "Latest child QA line: [2026-06-07T12:42:27Z] [REVIEW] Decision failed: metadata=41218 title=Pride & Prejudice reason=The operation has timed out."
     },
     {
       "utc": "2026-06-07T12:37:36.375Z",
@@ -249,8 +249,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T12:40:00.486Z - Plex client decision QA",
-      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=PASS_IDEMPOTENT, eligible=37, already_current=37. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=37. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T12:42:27.369Z - Plex client decision QA",
+      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=PASS_IDEMPOTENT, eligible=37, already_current=37. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=37. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=1 min; owner_pid=24768; child_pid=.",
       "progress": 25,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -258,7 +258,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T12:39:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T12:43:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=38.",
       "progress": 30,
       "eta": "runs every 5 minutes",
