@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T06:46:01.700Z
+Updated UTC: 2026-06-07T06:48:03.138Z
 Source: live status merge
 
-- 2026-06-07T06:45:59Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=13812; child_pid=16704
-- 2026-06-07T06:45:59Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=56; blockers=0
-- 2026-06-07T06:45:27.861Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T06:45:27Z] [INFO] Running concurrent WebDAV active gate worker for 56 entries.
+- 2026-06-07T06:47:43Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=20716; child_pid=41992
+- 2026-06-07T06:47:43Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
+- 2026-06-07T06:47:36.365Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T06:47:36Z] [INFO] Running concurrent WebDAV active gate worker for 56 entries.
+- 2026-06-07T06:46:30Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=13812; child_pid=
+- 2026-06-07T06:46:30Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=56; blockers=0
 - 2026-06-07T06:43:15.063Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
 - 2026-06-07T06:43:09Z - Autonomous controller: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED: transient-only REVIEW; relaunched detached PlatformGate runner
-- 2026-06-07T06:42:17Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=22772; child_pid=
-- 2026-06-07T06:42:17Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=56; blockers=0
 - 2026-06-07T06:38:09Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-07T06:33:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T06:30:54.134Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T06:30:54Z] [PASS] Decision passed: metadata=41103 title=Yankee White
