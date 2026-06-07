@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T00:18:04.554Z
+Updated UTC: 2026-06-07T00:20:01.349Z
 Source: live status merge
 
-- 2026-06-07T00:17:49Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
-- 2026-06-07T00:17:49Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
-- 2026-06-07T00:14:49.012Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T00:14:49Z] [PASS] QA passed: part=111481 title=Superman
-- 2026-06-07T00:13:47.601Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
+- 2026-06-07T00:19:49Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
+- 2026-06-07T00:19:49Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-07T00:19:15.973Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T00:19:15Z] [PASS] QA passed: part=112086 title=Seven
+- 2026-06-07T00:19:02.845Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
+- 2026-06-07T00:18:13Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T00:13:44.700Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T00:13:44Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
-- 2026-06-07T00:13:33Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T00:11:23Z - Autonomous controller: repeated_transient_source_quarantine_started: Repeated transient-only PlatformGate REVIEW reached retry cap; started source/release quarantine with IncludeTransient so failed sources are removed from visibility while titles remain wanted
 - 2026-06-07T00:05:41Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=28312; child_pid=
 - 2026-06-07T00:05:41Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=78; blockers=0
