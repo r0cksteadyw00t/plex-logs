@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T07:24:03.148Z
+Updated UTC: 2026-06-07T07:26:02.583Z
 Source: live status merge
 
-- 2026-06-07T07:23:42Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=37968; child_pid=45996
-- 2026-06-07T07:23:42Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
-- 2026-06-07T07:23:33.614Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T07:23:33Z] [INFO] Running concurrent WebDAV active gate worker for 56 entries.
+- 2026-06-07T07:25:56Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=37968; child_pid=27408
+- 2026-06-07T07:25:56Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=56; blockers=0
+- 2026-06-07T07:25:22.143Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T07:25:22Z] [INFO] Running concurrent WebDAV active gate worker for 56 entries.
 - 2026-06-07T07:23:26.915Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
 - 2026-06-07T07:23:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T07:22:28Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=17484; child_pid=
