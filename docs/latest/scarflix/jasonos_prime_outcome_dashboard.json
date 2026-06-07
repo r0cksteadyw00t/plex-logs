@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T01:47:03.651Z",
+  "updated_utc": "2026-06-07T01:49:02.304Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,10 +14,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 1,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 3,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-07T01:48:31Z",
+    "next_check_utc": "2026-06-07T01:53:51Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -26,7 +26,7 @@
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
     "last_progress_utc": "2026-06-07T01:46:21.611Z",
-    "age_minutes": 1,
+    "age_minutes": 3,
     "last_line": "[2026-06-07T01:46:21Z] [REVIEW] QA failed: part=112087 title=The Lord of the Rings: The Two Towers reason=Plex Transcoder HLS probe timed out",
     "pass_lines": 60,
     "review_lines": 15,
@@ -35,13 +35,13 @@
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-07T01:43:12Z",
+    "updated_utc": "2026-06-07T01:48:13Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T01:46:44Z",
+    "updated_utc": "2026-06-07T01:48:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -50,13 +50,13 @@
     "current_step": "running_platform_gate_attempt_1",
     "owner_pid": 39172,
     "child_pid": 28816,
-    "last_progress_utc": "2026-06-07T01:46:57Z",
-    "heartbeat_updated_utc": "2026-06-07T01:46:57Z",
+    "last_progress_utc": "2026-06-07T01:48:57Z",
+    "heartbeat_updated_utc": "2026-06-07T01:48:57Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T01:46:05Z",
+    "updated_utc": "2026-06-07T01:48:01Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -83,24 +83,29 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T01:46:57Z",
+      "utc": "2026-06-07T01:48:57Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816"
     },
     {
-      "utc": "2026-06-07T01:46:57Z",
+      "utc": "2026-06-07T01:48:57Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T01:48:54.955Z",
+      "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44",
+      "detail": "Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`..."
+    },
+    {
+      "utc": "2026-06-07T01:48:12Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T01:46:21.611Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
       "detail": "Latest child QA line: [2026-06-07T01:46:21Z] [REVIEW] QA failed: part=112087 title=The Lord of the Rings: The Two Towers reason=Plex Transcoder HLS probe timed out"
-    },
-    {
-      "utc": "2026-06-07T01:45:49.860Z",
-      "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44",
-      "detail": "Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`..."
     },
     {
       "utc": "2026-06-07T01:44:43.970Z",
@@ -111,11 +116,6 @@
       "utc": "2026-06-07T01:43:34.735Z",
       "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22",
       "detail": "Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW."
-    },
-    {
-      "utc": "2026-06-07T01:43:12Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T01:37:07Z",
@@ -167,7 +167,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T01:46:21.611Z - Plex visible/HLS QA",
-      "current": "Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=39172; child_pid=28816.",
+      "current": "Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=3 min; owner_pid=39172; child_pid=28816.",
       "progress": 42,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -175,7 +175,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T01:46:05Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T01:48:01Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 75,
       "eta": "runs every 5 minutes",
@@ -229,7 +229,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T01:46:57Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T01:48:57Z - Durable PlatformGate ownership active",
       "current": "Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck.",
       "progress": 56,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
