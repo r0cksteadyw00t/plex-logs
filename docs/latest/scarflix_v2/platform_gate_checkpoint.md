@@ -1,31 +1,31 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-07T06:05:11Z
+Generated UTC: 2026-06-07T06:12:23Z
 
 Status: REVIEW
-Started UTC: 2026-06-07T04:56:33Z
-Ended UTC: 2026-06-07T05:48:56Z
-Snapshot ID: 20260607T045648Z
-Snapshot hash: c5319cf869ee95f79cb7760c67ef5e4974f0a6890801529f556d82e3da3990ca
+Started UTC: 2026-06-07T06:06:09Z
+Ended UTC: 2026-06-07T06:12:23Z
+Snapshot ID: 20260607T060623Z
+Snapshot hash: 8c0fdf90608a65e79dd0b2e9181da5bd0706cca7ad9bc5823ff373b1b0e100c0
 Same-snapshot confirmed: False
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
 
 ## Visible Catalogue
-- visible: 65
-- movies: 45
-- tv: 20
+- visible: 56
+- movies: 38
+- tv: 18
 
 ## QA
-- WebDAV active gate: PASS, checked=65
-- Plex visible/HLS QA: FAIL, checked=65
-- Plex client decision QA: UNKNOWN, checked=-1
+- WebDAV active gate: PASS, checked=56
+- Plex visible/HLS QA: PASS, checked=56
+- Plex client decision QA: FAIL, checked=56
 - 5-concurrent stream QA: UNKNOWN, target=, map_tested=, visible_tested=
 - Health: UNKNOWN
 
 ## Source Handling
-- quarantined/rejected sources: 697
-- transient/retry-held count: 582
-- prunable/permanent count: 115
+- quarantined/rejected sources: 705
+- transient/retry-held count: 589
+- prunable/permanent count: 116
 - seeder rejected-stage skipped: 8
 - publisher rejected-stage skipped: 0
 - top reason codes:
@@ -33,10 +33,12 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
   - PROVIDER_TIMEOUT: 128
   - PLEX_INVISIBLE_AFTER_SCAN: 107
   - PROVIDER_503_RETRYABLE: 21
+  - PLEX_HLS_TIMEOUT: 7
   - PLEX_CODEC_BLOCKED: 3
   - POLICY_BLOCKED: 2
   - PLEX_PROFILE_FAILED: 2
   - RELEASE_WINDOW_BLOCKED: 1
+  - PLEX_HLS_PROBE_FAILED: 1
 
 ## Schedules
 - schedules safely re-enabled by PlatformGate: False
@@ -49,4 +51,4 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - ScarFLIX_v2_CatalogVisibilityGate: Disabled
 
 ## Blockers
-- visible_catalog_qa status=FAIL
+- plex_client_decision_qa status=FAIL
