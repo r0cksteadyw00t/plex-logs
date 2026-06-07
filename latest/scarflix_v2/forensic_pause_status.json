@@ -1,0 +1,133 @@
+{
+  "component": "scarflix_v2_forensic_pause",
+  "status": "PAUSED_FOR_FORENSIC_REVIEW",
+  "updated_utc": "2026-06-07T03:35:01.432Z",
+  "reason": "Jason requested no further project progress while forensic technical review is performed.",
+  "disabled_tasks": [
+    "ScarFLIX_v2_AutonomousController",
+    "ScarFLIX_v2_DurablePlatformGateRunner",
+    "JasonOS_Prime_OutcomeDashboard",
+    "JasonOS_Prime_PublicMirrorPublisher",
+    "JasonOS_Prime_Sentinel_Node",
+    "ScarFLIX_v2_WatchdogStallDetector"
+  ],
+  "stopped_pids": [
+    "17968",
+    "44104"
+  ],
+  "actions": [
+    {
+      "file": "schtasks.exe",
+      "args": [
+        "/Change",
+        "/TN",
+        "ScarFLIX_v2_AutonomousController",
+        "/Disable"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdout": "SUCCESS: The parameters of scheduled task \"ScarFLIX_v2_AutonomousController\" have been changed.",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "file": "schtasks.exe",
+      "args": [
+        "/Change",
+        "/TN",
+        "ScarFLIX_v2_DurablePlatformGateRunner",
+        "/Disable"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdout": "SUCCESS: The parameters of scheduled task \"ScarFLIX_v2_DurablePlatformGateRunner\" have been changed.",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "file": "schtasks.exe",
+      "args": [
+        "/Change",
+        "/TN",
+        "JasonOS_Prime_OutcomeDashboard",
+        "/Disable"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdout": "SUCCESS: The parameters of scheduled task \"JasonOS_Prime_OutcomeDashboard\" have been changed.",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "file": "schtasks.exe",
+      "args": [
+        "/Change",
+        "/TN",
+        "JasonOS_Prime_PublicMirrorPublisher",
+        "/Disable"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdout": "SUCCESS: The parameters of scheduled task \"JasonOS_Prime_PublicMirrorPublisher\" have been changed.",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "file": "schtasks.exe",
+      "args": [
+        "/Change",
+        "/TN",
+        "JasonOS_Prime_Sentinel_Node",
+        "/Disable"
+      ],
+      "status": 1,
+      "signal": null,
+      "stdout": "",
+      "stderr": "ERROR: The specified task name \"JasonOS_Prime_Sentinel_Node\" does not exist in the system.",
+      "error": ""
+    },
+    {
+      "file": "schtasks.exe",
+      "args": [
+        "/Change",
+        "/TN",
+        "ScarFLIX_v2_WatchdogStallDetector",
+        "/Disable"
+      ],
+      "status": 1,
+      "signal": null,
+      "stdout": "",
+      "stderr": "ERROR: The specified task name \"ScarFLIX_v2_WatchdogStallDetector\" does not exist in the system.",
+      "error": ""
+    },
+    {
+      "file": "taskkill.exe",
+      "args": [
+        "/PID",
+        "17968",
+        "/T",
+        "/F"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdout": "SUCCESS: The process with PID 7860 (child process of PID 17968) has been terminated.\r\nSUCCESS: The process with PID 45352 (child process of PID 17968) has been terminated.\r\nSUCCESS: The process with PID 17968 (child process of PID 44104) has been terminated.",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "file": "taskkill.exe",
+      "args": [
+        "/PID",
+        "44104",
+        "/T",
+        "/F"
+      ],
+      "status": 128,
+      "signal": null,
+      "stdout": "SUCCESS: The process with PID 35032 (child process of PID 44104) has been terminated.\r\nSUCCESS: The process with PID 44104 (child process of PID 40740) has been terminated.",
+      "stderr": "ERROR: The process with PID 7860 (child process of PID 17968) could not be terminated.\r\nReason: There is no running instance of the task.\r\r\nERROR: The process with PID 45352 (child process of PID 17968) could not be terminated.\r\nReason: There is no running instance of the task.\r\r\nERROR: The process with PID 17968 (child process of PID 44104) could not be terminated.\r\nReason: There is no running instance of the task.",
+      "error": ""
+    }
+  ],
+  "jason_action_required": false
+}
