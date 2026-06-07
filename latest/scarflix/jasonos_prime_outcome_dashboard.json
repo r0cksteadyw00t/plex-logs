@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T12:08:04.742Z",
+  "updated_utc": "2026-06-07T12:10:02.301Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
+    "controller_updated_age_minutes": 5,
     "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T12:10:47Z",
@@ -53,11 +53,11 @@
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T12:07:16.884Z",
+    "last_progress_utc": "2026-06-07T12:08:48.923Z",
     "age_minutes": 1,
-    "last_line": "[2026-06-07T12:07:16Z] [PASS] Decision passed: metadata=40387 title=The Devil Wears Prada",
-    "pass_lines": 70,
-    "review_lines": 4,
+    "last_line": "[2026-06-07T12:08:48Z] [REVIEW] Decision failed: metadata=41192 title=The Gangster, the Cop, the Devil reason=The operation has timed out.",
+    "pass_lines": 69,
+    "review_lines": 5,
     "info_lines": 6
   },
   "watchdog_status": {
@@ -84,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T12:07:03Z",
+    "updated_utc": "2026-06-07T12:09:02Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -159,9 +159,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T12:07:16.884Z",
+      "utc": "2026-06-07T12:08:48.923Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-07T12:07:16Z] [PASS] Decision passed: metadata=40387 title=The Devil Wears Prada"
+      "detail": "Latest child QA line: [2026-06-07T12:08:48Z] [REVIEW] Decision failed: metadata=41192 title=The Gangster, the Cop, the Devil reason=The operation has timed out."
     },
     {
       "utc": "2026-06-07T12:05:52.270Z",
@@ -242,7 +242,7 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T12:07:16.884Z - Plex client decision QA",
+      "last_change": "2026-06-07T12:08:48.923Z - Plex client decision QA",
       "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=12, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=1 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
@@ -251,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T12:07:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T12:09:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
