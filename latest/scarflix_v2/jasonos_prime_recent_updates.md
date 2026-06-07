@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T14:21:01.779Z
+Updated UTC: 2026-06-07T14:23:05.232Z
 Source: live status merge
 
-- 2026-06-07T14:20:10.378Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
-- 2026-06-07T14:20:04Z - Autonomous controller: unhandled_platform_gate_state: none
+- 2026-06-07T14:22:15.666Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
+- 2026-06-07T14:22:09Z - Autonomous controller: unhandled_platform_gate_state: none
 - 2026-06-07T12:50:09.408Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T12:50:09Z] [REVIEW] deferred because lock is active: D:\PlexTools\state\scarflix_v2\plex_client_decision_qa.lock
 - 2026-06-07T12:48:29.728Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T12:48:29Z] [INFO] Health status publishing
 - 2026-06-07T12:48:11Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
