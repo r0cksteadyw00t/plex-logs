@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T11:18:06.614Z
+Updated UTC: 2026-06-07T11:20:04.807Z
 Source: live status merge
 
-- 2026-06-07T11:16:08.642Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:16:08Z] [PASS] QA passed: part=112115 title=Your Name.
-- 2026-06-07T11:13:33.254Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
-- 2026-06-07T11:13:19Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-07T11:18:54.403Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:18:54Z] [REVIEW] QA failed: part=112118 title=The Super Mario Galaxy Movie reason=Plex Transcoder HLS probe timed out
+- 2026-06-07T11:18:40.571Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
+- 2026-06-07T11:18:19Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T11:12:16.648Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T11:12:16Z] [PASS] Decision passed: metadata=41196 title=Mulan
 - 2026-06-07T10:41:49.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:41:49Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
 - 2026-06-07T10:37:20.608Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T10:37:20Z] [INFO] Health status publishing
