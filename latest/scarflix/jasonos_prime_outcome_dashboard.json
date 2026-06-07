@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T21:51:06Z",
+  "updated_utc": "2026-06-07T21:53:06.562Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -44,8 +44,7 @@
     "platform_gate_blocked_by": "snapshot_scoped_qa",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
-    "plex_safe_webdav_visible_rows": 1
+    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON"
   },
   "platform_health_contract": {
     "platform_gate_requires": "snapshot_scoped_qa",
@@ -63,9 +62,9 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
-    "platform_child_progress_age_minutes": 1,
-    "mirror_updated_age_minutes": 1,
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 0,
+    "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T21:53:11Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": true,
@@ -74,9 +73,9 @@
   "child_qa_progress": {
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260608.log",
-    "last_progress_utc": "2026-06-07T21:50:36.360Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-07T21:50:36Z] [REVIEW] Final: REVIEW",
+    "last_progress_utc": "2026-06-07T21:52:41.193Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-07T21:52:41Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 20,
     "info_lines": 60
@@ -90,51 +89,27 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T21:50:04Z",
+    "updated_utc": "2026-06-07T21:53:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
     "status": "REVIEW",
     "current_step": "platform_gate_review",
-    "owner_pid": 15804,
+    "owner_pid": 41744,
     "child_pid": "",
-    "last_progress_utc": "2026-06-07T21:50:41Z",
-    "heartbeat_updated_utc": "2026-06-07T21:50:41Z",
+    "last_progress_utc": "2026-06-07T21:52:46Z",
+    "heartbeat_updated_utc": "2026-06-07T21:52:46Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
-    "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-07T21:49:01Z",
-    "updated_utc": "2026-06-07T21:49:29Z",
-    "ended_utc": "2026-06-07T21:49:29Z",
-    "dry_run": false,
-    "jason_action_required": false,
-    "title_not_rejected": true,
-    "source_only_quarantine": true,
-    "probe_timeout_ms": 12000,
-    "range_timeout_ms": 16000,
-    "concurrency": 3,
-    "counts_before": {
-      "movies": 19,
-      "tv": 10,
-      "total": 29
-    },
-    "counts_after": {
-      "movies": 19,
-      "tv": 10,
-      "total": 29
-    },
+    "updated_utc": "2026-06-07T21:51:37Z",
     "checked_visible": 29,
     "passed_visible": 29,
     "failed_visible": 0,
     "quarantined_this_run": 0,
-    "restored_this_run": 0,
     "retry_held_count": 8,
-    "permanent_quarantine_count": 1,
-    "raw_live_proxy_visible_count": 29,
-    "direct_https_visible_count": 0,
     "top_reason_codes": [
       {
         "code": "PROVIDER_503_RETRYABLE",
@@ -149,178 +124,11 @@
         "count": 1
       }
     ],
-    "recent_quarantined": [],
-    "retry_queue_items": [
-      {
-        "relative_path": "The Green Mile (1999).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-07T21:56:09Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Dark Knight (2008).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-07T21:56:10Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Schindler's List (1993).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-07T21:56:11Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "12 Angry Men (1957).strm",
-        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "retry_after_utc": "2026-06-07T21:51:27Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Project Hail Mary (2026).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-07T21:56:12Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Maze Runner (2014).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-07T21:51:08Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Your Name (2016).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-07T21:56:13Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Zootopia (2016).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-07T21:56:13Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      }
-    ],
-    "sample_passed": [
-      {
-        "relative_path": "Mulan (1998).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Pulp Fiction (1994).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Se7en (1995).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Spirited Away (2001).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Spider-Man Into the Spider-Verse (2018).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Star Wars (1977).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Superman (2025).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Devil Wears Prada (2006).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Gangster, the Cop, the Devil (2019).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Good, the Bad and the Ugly (1966).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Godfather (1972).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Matrix (1999).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Shawshank Redemption (1994).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Notebook (2004).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The SpongeBob SquarePants Movie (2004).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Super Mario Galaxy Movie (2026).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Toy Story 2 (1999).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Unfaithful (2002).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Attack on Titan/Season 01/Attack on Titan - S01E01.strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "Whiplash (2014).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      }
-    ],
-    "plex_scan_triggered": {
-      "ok": true,
-      "reason": "no visible changes"
-    },
-    "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260607.log",
-    "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
-    "retry_queue_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_retry_queue.json"
+    "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T21:51:02Z",
+    "updated_utc": "2026-06-07T21:53:04Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -395,19 +203,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T21:50:41Z",
+      "utc": "2026-06-07T21:52:46Z",
       "title": "Durable PlatformGate runner REVIEW",
-      "detail": "Step platform_gate_review; owner_pid=15804; child_pid="
+      "detail": "Step platform_gate_review; owner_pid=41744; child_pid="
     },
     {
-      "utc": "2026-06-07T21:50:41Z",
+      "utc": "2026-06-07T21:52:46Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=1; blockers=0"
     },
     {
-      "utc": "2026-06-07T21:50:36.360Z",
+      "utc": "2026-06-07T21:52:41.193Z",
       "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-07T21:50:36Z] [REVIEW] Final: REVIEW"
+      "detail": "Latest child QA line: [2026-06-07T21:52:41Z] [REVIEW] Final: REVIEW"
     },
     {
       "utc": "2026-06-07T21:49:01Z",
@@ -478,8 +286,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T21:50:36.360Z - 5-concurrent stream QA",
-      "current": "Actual Streaming library .strm output is movies=19, tv=10, total=29. Direct admission=REVIEW_RETRY_HELD, checked=29, passed_visible=29, quarantined_this_run=0, retry_held=8. Direct mirror=PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=STAGING_CANDIDATES/CANARY_STAGING_STARTED, staged=0, new_visible_strm=-9. PlatformGate=REVIEW/REVIEW; durable=REVIEW; child_stage=5-concurrent stream QA; child_age=1 min; owner_pid=15804; child_pid=.",
+      "last_change": "2026-06-07T21:52:41.193Z - 5-concurrent stream QA",
+      "current": "Actual Streaming library .strm output is movies=19, tv=10, total=29. Direct admission=REVIEW_RETRY_HELD, checked=29, passed_visible=29, quarantined_this_run=0, retry_held=8. Direct mirror=PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=STAGING_CANDIDATES/CANARY_STAGING_STARTED, staged=0, new_visible_strm=-9. PlatformGate=REVIEW/REVIEW; durable=REVIEW; child_stage=5-concurrent stream QA; child_age=under 1 min; owner_pid=41744; child_pid=.",
       "progress": 23,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -487,7 +295,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T21:51:02Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T21:53:04Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=29.",
       "progress": 25,
       "eta": "runs every 5 minutes",
@@ -541,7 +349,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T21:50:41Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T21:52:46Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=29; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
       "progress": 18,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
@@ -554,413 +362,5 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
-  },
-  "grokbuild_forensic_agent": {
-    "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-07T21:51:06Z",
-    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
-    "implementation": "node_native",
-    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
-    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
-  },
-  "node_watchdog_5min": {
-    "component": "jasonos_prime_node_watchdog_5min",
-    "status": "ACTIVE",
-    "updated_utc": "2026-06-07T21:51:06Z",
-    "jason_action_required": false,
-    "cadence": "every 5 minutes",
-    "counts": {
-      "legacy_movie_strm": 19,
-      "legacy_tv_strm": 10,
-      "legacy_total_strm": 29,
-      "plex_safe_webdav_visible_rows": 1
-    },
-    "grokbuild_status": "REVIEW_STALE_PROGRESS",
-    "grok_peer_bridge_status": "LOCAL_ONLY_NO_TOKEN",
-    "platform_gate_status": "REVIEW",
-    "direct_strm_mirror_status": {
-      "component": "scarflix_v2_direct_strm_mirror",
-      "status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
-      "updated_utc": "2026-06-07T21:47:01Z",
-      "reason": "Latest PlatformGate checkpoint is not PASS.",
-      "counts_before": {
-        "movies": 19,
-        "tv": 10
-      },
-      "counts_after": {
-        "movies": 19,
-        "tv": 10
-      },
-      "delivered_total": 29,
-      "written": 0,
-      "skipped": 0
-    },
-    "direct_strm_admission_gate_status": {
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-07T21:49:01Z",
-      "updated_utc": "2026-06-07T21:49:29Z",
-      "ended_utc": "2026-06-07T21:49:29Z",
-      "dry_run": false,
-      "jason_action_required": false,
-      "title_not_rejected": true,
-      "source_only_quarantine": true,
-      "probe_timeout_ms": 12000,
-      "range_timeout_ms": 16000,
-      "concurrency": 3,
-      "counts_before": {
-        "movies": 19,
-        "tv": 10,
-        "total": 29
-      },
-      "counts_after": {
-        "movies": 19,
-        "tv": 10,
-        "total": 29
-      },
-      "checked_visible": 29,
-      "passed_visible": 29,
-      "failed_visible": 0,
-      "quarantined_this_run": 0,
-      "restored_this_run": 0,
-      "retry_held_count": 8,
-      "permanent_quarantine_count": 1,
-      "raw_live_proxy_visible_count": 29,
-      "direct_https_visible_count": 0,
-      "top_reason_codes": [
-        {
-          "code": "PROVIDER_503_RETRYABLE",
-          "count": 7
-        },
-        {
-          "code": "PROVIDER_TIMEOUT_RETRYABLE",
-          "count": 1
-        },
-        {
-          "code": "SOURCE_EXPIRED_OR_GONE",
-          "count": 1
-        }
-      ],
-      "recent_quarantined": [],
-      "retry_queue_items": [
-        {
-          "relative_path": "The Green Mile (1999).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-07T21:56:09Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Dark Knight (2008).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-07T21:56:10Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Schindler's List (1993).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-07T21:56:11Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "12 Angry Men (1957).strm",
-          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-          "retry_after_utc": "2026-06-07T21:51:27Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Project Hail Mary (2026).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-07T21:56:12Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Maze Runner (2014).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-07T21:51:08Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Your Name (2016).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-07T21:56:13Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Zootopia (2016).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-07T21:56:13Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        }
-      ],
-      "sample_passed": [
-        {
-          "relative_path": "Mulan (1998).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Pulp Fiction (1994).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Se7en (1995).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Spirited Away (2001).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Spider-Man Into the Spider-Verse (2018).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Star Wars (1977).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Superman (2025).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Devil Wears Prada (2006).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Gangster, the Cop, the Devil (2019).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Good, the Bad and the Ugly (1966).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Godfather (1972).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Matrix (1999).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Shawshank Redemption (1994).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Notebook (2004).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The SpongeBob SquarePants Movie (2004).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Super Mario Galaxy Movie (2026).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Toy Story 2 (1999).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Unfaithful (2002).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Attack on Titan/Season 01/Attack on Titan - S01E01.strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "Whiplash (2014).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        }
-      ],
-      "plex_scan_triggered": {
-        "ok": true,
-        "reason": "no visible changes"
-      },
-      "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260607.log",
-      "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
-      "retry_queue_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_retry_queue.json"
-    },
-    "playback_qa_controller_status": {
-      "component": "jasonos_prime_playback_qa_controller",
-      "status": "WAITING_OVERLAP",
-      "updated_utc": "2026-06-07T21:51:08Z",
-      "current_step": "validation_overlap_running",
-      "jason_action_required": false,
-      "counts": {
-        "movies": 19,
-        "tv": 10,
-        "total": 29
-      },
-      "canary_status": "STAGING_CANDIDATES",
-      "canary_milestone": "CANARY_STAGING_STARTED",
-      "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
-      "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-      "direct_strm_admission_checked_visible": 29,
-      "direct_strm_admission_passed_visible": 29,
-      "direct_strm_admission_quarantined_this_run": 0,
-      "direct_strm_retry_held_count": 8,
-      "decision_qa_status": "PASS",
-      "concurrent_stream_qa_status": "REVIEW",
-      "overlap_running": [
-        {
-          "name": "ScarFLIX_v2_DurablePlatformGateRunner",
-          "ok": true,
-          "status": "Running",
-          "scheduled_state": "Enabled",
-          "last_run": "8/06/2026 7:51:02 AM",
-          "last_result": "267009",
-          "next_run": "N/A"
-        }
-      ],
-      "actions": [
-        {
-          "action": "trigger_plex_scans",
-          "result": [
-            {
-              "ok": true,
-              "section": "5",
-              "pid": 23816
-            },
-            {
-              "ok": true,
-              "section": "6",
-              "pid": 37508
-            }
-          ]
-        }
-      ],
-      "next_action": "Wait for current ScarFLIX validation task to finish."
-    },
-    "canary_status": "STAGING_CANDIDATES",
-    "canary_status_age_seconds": 418,
-    "safe_pipeline_log_age_seconds": 32454,
-    "safe_pipeline_lock_age_seconds": null,
-    "stale_running_canary": false,
-    "actions": [
-      {
-        "action": "refresh_grokbuild",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "run_direct_strm_admission_gate",
-        "ok": true,
-        "detail": "pid=33576"
-      },
-      {
-        "action": "run_playback_qa_controller",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "trigger_public_mirror",
-        "ok": true,
-        "detail": "pid=42600"
-      }
-    ],
-    "blockers": []
-  },
-  "direct_strm_mirror": {
-    "component": "scarflix_v2_direct_strm_mirror",
-    "status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
-    "updated_utc": "2026-06-07T21:47:01Z",
-    "reason": "Latest PlatformGate checkpoint is not PASS.",
-    "counts_before": {
-      "movies": 19,
-      "tv": 10
-    },
-    "counts_after": {
-      "movies": 19,
-      "tv": 10
-    },
-    "delivered_total": 29,
-    "written": 0,
-    "skipped": 0
-  },
-  "playback_qa_controller": {
-    "component": "jasonos_prime_playback_qa_controller",
-    "status": "WAITING_OVERLAP",
-    "updated_utc": "2026-06-07T21:51:08Z",
-    "current_step": "validation_overlap_running",
-    "jason_action_required": false,
-    "counts": {
-      "movies": 19,
-      "tv": 10,
-      "total": 29
-    },
-    "canary_status": "STAGING_CANDIDATES",
-    "canary_milestone": "CANARY_STAGING_STARTED",
-    "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
-    "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-    "direct_strm_admission_checked_visible": 29,
-    "direct_strm_admission_passed_visible": 29,
-    "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_retry_held_count": 8,
-    "decision_qa_status": "PASS",
-    "concurrent_stream_qa_status": "REVIEW",
-    "overlap_running": [
-      {
-        "name": "ScarFLIX_v2_DurablePlatformGateRunner",
-        "ok": true,
-        "status": "Running",
-        "scheduled_state": "Enabled",
-        "last_run": "8/06/2026 7:51:02 AM",
-        "last_result": "267009",
-        "next_run": "N/A"
-      }
-    ],
-    "actions": [
-      {
-        "action": "trigger_plex_scans",
-        "result": [
-          {
-            "ok": true,
-            "section": "5",
-            "pid": 23816
-          },
-          {
-            "ok": true,
-            "section": "6",
-            "pid": 37508
-          }
-        ]
-      }
-    ],
-    "next_action": "Wait for current ScarFLIX validation task to finish."
   }
 }
