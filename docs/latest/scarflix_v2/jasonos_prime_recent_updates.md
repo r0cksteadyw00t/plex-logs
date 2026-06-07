@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T06:22:01.512Z
+Updated UTC: 2026-06-07T06:24:02.829Z
 Source: live status merge
 
-- 2026-06-07T06:21:58.470Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T06:21:58Z] [REVIEW] Decision failed: metadata=41109 title=The Heirs of the Dragon reason=The operation has timed out.
-- 2026-06-07T06:21:38Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=38180; child_pid=46580
-- 2026-06-07T06:21:38Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
-- 2026-06-07T06:18:22.073Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
-- 2026-06-07T06:18:18Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
+- 2026-06-07T06:23:54.993Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T06:23:54Z] [PASS] Decision passed: metadata=41124 title=Winter Is Coming
+- 2026-06-07T06:23:50.268Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
+- 2026-06-07T06:23:44Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
+- 2026-06-07T06:23:38Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=38180; child_pid=46580
+- 2026-06-07T06:23:38Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
 - 2026-06-07T06:13:23.567Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T06:13:23Z] [INFO] Running concurrent WebDAV active gate worker for 56 entries.
 - 2026-06-07T06:12:26Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=42428; child_pid=
 - 2026-06-07T06:12:26Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=56; blockers=0
