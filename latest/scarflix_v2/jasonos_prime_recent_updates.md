@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T10:33:03.839Z
+Updated UTC: 2026-06-07T10:35:09.462Z
 Source: live status merge
 
-- 2026-06-07T10:28:50.061Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
-- 2026-06-07T10:28:08Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-07T10:33:19.163Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
+- 2026-06-07T10:33:09Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T10:19:18Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=24768; child_pid=
 - 2026-06-07T10:19:18Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=46; blockers=0
 - 2026-06-07T10:18:41.981Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T10:18:41Z] [INFO] Health status publishing
