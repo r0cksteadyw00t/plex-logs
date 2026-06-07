@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T02:36:01.872Z
+Updated UTC: 2026-06-07T02:38:01.770Z
 Source: live status merge
 
-- 2026-06-07T02:36:01Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
-- 2026-06-07T02:36:01Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
-- 2026-06-07T02:35:58.454Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T02:35:58Z] [REVIEW] QA failed: part=112155 title=I'm Luffy! The Man Who Will Become the Pirate King! reason=Plex Transcoder HLS probe timed out
+- 2026-06-07T02:37:58.594Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T02:37:58Z] [OK] Visible QA cache updated: 232 entries
+- 2026-06-07T02:37:31Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
+- 2026-06-07T02:37:31Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
 - 2026-06-07T02:33:30.423Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
 - 2026-06-07T02:33:16Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T02:18:17.300Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44: Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`...
