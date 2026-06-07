@@ -1,35 +1,25 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-07T21:51:08Z",
-  "current_step": "validation_overlap_running",
+  "status": "RUNNING",
+  "updated_utc": "2026-06-07T21:55:01Z",
+  "current_step": "concurrent_stream_qa_started",
   "jason_action_required": false,
   "counts": {
-    "movies": 19,
+    "movies": 20,
     "tv": 10,
-    "total": 29
+    "total": 30
   },
   "canary_status": "STAGING_CANDIDATES",
   "canary_milestone": "CANARY_STAGING_STARTED",
   "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
   "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-  "direct_strm_admission_checked_visible": 29,
-  "direct_strm_admission_passed_visible": 29,
+  "direct_strm_admission_checked_visible": 30,
+  "direct_strm_admission_passed_visible": 30,
   "direct_strm_admission_quarantined_this_run": 0,
-  "direct_strm_retry_held_count": 8,
+  "direct_strm_retry_held_count": 7,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
-  "overlap_running": [
-    {
-      "name": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "ok": true,
-      "status": "Running",
-      "scheduled_state": "Enabled",
-      "last_run": "8/06/2026 7:51:02 AM",
-      "last_result": "267009",
-      "next_run": "N/A"
-    }
-  ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans",
@@ -37,15 +27,25 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 23816
+          "pid": 43728
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 37508
+          "pid": 12404
         }
       ]
+    },
+    {
+      "action": "start_concurrent_stream_qa",
+      "result": {
+        "task": "ScarFLIX_v2_ConcurrentStreamQA",
+        "enable_ok": true,
+        "run_ok": true,
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
+      }
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Detached 5-concurrent stream QA is running or queued."
 }
