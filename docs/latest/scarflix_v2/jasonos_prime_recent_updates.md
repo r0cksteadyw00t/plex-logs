@@ -1,9 +1,9 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T12:42:03.675Z
+Updated UTC: 2026-06-07T12:44:02.987Z
 Source: live status merge
 
-- 2026-06-07T12:40:55.337Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T12:40:55Z] [PASS] Decision passed: metadata=41242 title=Pink Floyd: The Wall
+- 2026-06-07T12:43:59.430Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T12:43:59Z] [REVIEW] Decision failed: metadata=40441 title=Project Hail Mary reason=The operation has timed out.
 - 2026-06-07T12:37:36.375Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
 - 2026-06-07T12:36:09Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T12:33:07.536Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T12:33:07Z] [REVIEW] QA failed: part=111357 title=Project Hail Mary reason=Plex Transcoder HLS probe timed out
