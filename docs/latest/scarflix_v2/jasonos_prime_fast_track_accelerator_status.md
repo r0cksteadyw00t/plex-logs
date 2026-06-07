@@ -1,10 +1,10 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-07T00:04:03Z
+Updated UTC: 2026-06-07T00:06:03Z
 Status: PASS
 Mode: fast_track_safe_acceleration
-Current milestone: PLATFORM_GATE_RUNNING
-Next autonomous action: Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.
+Current milestone: PLATFORM_GATE_FAIL_SOURCE_QUARANTINE_REQUIRED
+Next autonomous action: Repeated transient-only REVIEW reached retry cap; run controller so it starts source/release quarantine instead of relaunching PlatformGate.
 Expansion eligible: false
 Expansion started this cycle: false
 
@@ -15,12 +15,16 @@ Expansion started this cycle: false
 
 ## Inputs
 - platform_gate: REVIEW
-- checkpoint: RUNNING
-- checkpoint_step: running_platform_gate_attempt_1
-- durable_runner: RUNNING
-- durable_step: running_platform_gate_attempt_1
+- checkpoint: REVIEW
+- checkpoint_step: platform_gate_review
+- durable_runner: REVIEW
+- durable_step: platform_gate_review
 - durable_owner_pid: 28312
 - durable_child_pid: 
+- active_gate_transient_failures: 13
+- active_gate_prunable_failures: 0
+- controller_transient_retry_count: 3
+- repeated_transient_review: true
 - candidate_source_model: UNKNOWN
 - controller: RUNNING
 - predictive_simulator: REVIEW
@@ -42,3 +46,4 @@ Expansion started this cycle: false
 - JasonOS_Prime_PublicMirrorPublisher: PASS fast_track_public_status
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
+- ScarFLIX_v2_AutonomousController: PASS repeated_transient_review_source_quarantine
