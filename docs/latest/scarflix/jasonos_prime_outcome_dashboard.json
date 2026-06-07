@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T04:31:01.996Z",
+  "updated_utc": "2026-06-07T04:33:03.136Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,8 +14,8 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
-    "platform_child_progress_age_minutes": 1,
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 2,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T04:33:12Z",
     "next_check_age_minutes": 0,
@@ -25,11 +25,11 @@
   "child_qa_progress": {
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T04:29:39.231Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-07T04:29:39Z] [PASS] QA passed: part=112150 title=The Box",
-    "pass_lines": 63,
-    "review_lines": 14,
+    "last_progress_utc": "2026-06-07T04:31:26.644Z",
+    "age_minutes": 2,
+    "last_line": "[2026-06-07T04:31:26Z] [REVIEW] QA failed: part=112151 title=Pilot reason=Plex Transcoder HLS probe timed out",
+    "pass_lines": 62,
+    "review_lines": 15,
     "info_lines": 3
   },
   "watchdog_status": {
@@ -41,7 +41,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T04:30:02Z",
+    "updated_utc": "2026-06-07T04:32:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -50,13 +50,13 @@
     "current_step": "running_platform_gate_attempt_1",
     "owner_pid": 29872,
     "child_pid": 44088,
-    "last_progress_utc": "2026-06-07T04:30:44Z",
-    "heartbeat_updated_utc": "2026-06-07T04:30:44Z",
+    "last_progress_utc": "2026-06-07T04:32:44Z",
+    "heartbeat_updated_utc": "2026-06-07T04:32:44Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T04:30:03Z",
+    "updated_utc": "2026-06-07T04:33:01Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -83,19 +83,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T04:30:44Z",
+      "utc": "2026-06-07T04:32:44Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088"
     },
     {
-      "utc": "2026-06-07T04:30:44Z",
+      "utc": "2026-06-07T04:32:44Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
     },
     {
-      "utc": "2026-06-07T04:29:39.231Z",
+      "utc": "2026-06-07T04:31:26.644Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T04:29:39Z] [PASS] QA passed: part=112150 title=The Box"
+      "detail": "Latest child QA line: [2026-06-07T04:31:26Z] [REVIEW] QA failed: part=112151 title=Pilot reason=Plex Transcoder HLS probe timed out"
     },
     {
       "utc": "2026-06-07T04:28:15.854Z",
@@ -166,8 +166,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T04:29:39.231Z - Plex visible/HLS QA",
-      "current": "Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=29872; child_pid=44088.",
+      "last_change": "2026-06-07T04:31:26.644Z - Plex visible/HLS QA",
+      "current": "Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=2 min; owner_pid=29872; child_pid=44088.",
       "progress": 42,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -175,7 +175,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T04:30:03Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T04:33:01Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 75,
       "eta": "runs every 5 minutes",
@@ -229,7 +229,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T04:30:44Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T04:32:44Z - Durable PlatformGate ownership active",
       "current": "Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck.",
       "progress": 56,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
