@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T11:31:01.689Z
+Updated UTC: 2026-06-07T11:33:03.591Z
 Source: live status merge
 
 - 2026-06-07T11:30:45.627Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:30:45Z] [REVIEW] QA failed: part=111277 title=The Dark Knight reason=Plex Transcoder HLS probe timed out
