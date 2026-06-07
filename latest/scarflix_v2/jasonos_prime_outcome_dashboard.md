@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-07T21:13:13.103Z
+Updated UTC: 2026-06-07T21:13:43.562Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -10,7 +10,7 @@ Will progress without Codex: true
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-07T09:53:04.194Z - daily AI usability smoke test | Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=false. | 57% | next: integrate 8805 tool traces into 8791 daily UI | Medium |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-07T21:12:37.552Z - 5-concurrent stream QA | Actual Streaming library .strm output is movies=15, tv=10, total=25. Direct admission=REVIEW_RETRY_HELD, checked=25, passed_visible=25, quarantined_this_run=0, retry_held=12. Direct mirror=PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=STAGING_CANDIDATES/CANARY_STAGING_STARTED, staged=0, new_visible_strm=0. PlatformGate=REVIEW/RUNNING; durable=RUNNING; child_stage=5-concurrent stream QA; child_age=1 min; owner_pid=16644; child_pid=35308. | 23% | after PlatformGate and candidate model PASS | Low |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-07T21:13:43.420Z - 5-concurrent stream QA | Actual Streaming library .strm output is movies=15, tv=10, total=25. Direct admission=REVIEW_RETRY_HELD, checked=25, passed_visible=25, quarantined_this_run=0, retry_held=12. Direct mirror=PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=STAGING_CANDIDATES/CANARY_STAGING_STARTED, staged=0, new_visible_strm=0. PlatformGate=REVIEW/RUNNING; durable=RUNNING; child_stage=5-concurrent stream QA; child_age=under 1 min; owner_pid=16644; child_pid=35308. | 23% | after PlatformGate and candidate model PASS | Low |
 | Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-07T21:13:05Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=25. | 30% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-06T14:17:07Z - scheduled task wrappers refreshed | Status PASS; tasks_updated=15; blockers=0. | 100% | active now | Low |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=11. | 65% | 1 day | Low |
@@ -20,17 +20,17 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-07T21:13:10Z - Durable PlatformGate ownership active | Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=25; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification. | 18% | next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion | Low |
 
 Recent Achievements:
+- 2026-06-07T21:13:43.420Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-07T21:13:43.413Z] end status=REVIEW range=1/1 decisions=1/1
+- 2026-06-07T21:13:13.451Z - Direct STRM Admission Gate Added After Maze Runner Playback Failure - 2026-06-08 07:15: Jason reported that `The Maze Runner (2014)` failed in Plex with a `/video/:/transcode/universal/decision` network error. Forensic result: The visible Plex library file was `D:\StremioCatalog\_Hybrid\Movies\The Maze Runner (2014).strm`. Its content was a local resolver URL: `http://127.0.0.1:18788/live?...`, not a s...
 - 2026-06-07T21:13:10Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=16644; child_pid=35308
 - 2026-06-07T21:13:10Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=1; blockers=0
 - 2026-06-07T21:13:06Z - Autonomous controller: unclassified_review_platform_gate_relaunch: PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason
-- 2026-06-07T21:12:37.552Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-07T21:12:37Z] [REVIEW] Final: REVIEW
-- 2026-06-07T21:11:52.841Z - Direct STRM Admission Gate Added After Maze Runner Playback Failure - 2026-06-08 07:15: Jason reported that `The Maze Runner (2014)` failed in Plex with a `/video/:/transcode/universal/decision` network error. Forensic result: The visible Plex library file was `D:\StremioCatalog\_Hybrid\Movies\The Maze Runner (2014).strm`. Its content was a local resolver URL: `http://127.0.0.1:18788/live?...`, not a s...
 - 2026-06-07T21:09:42Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=33492; child_pid=
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: under 1 min ago
-- Platform child progress: 1 min ago
+- Controller updated: 1 min ago
+- Platform child progress: under 1 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
