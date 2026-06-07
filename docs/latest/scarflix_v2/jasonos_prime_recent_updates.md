@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T01:40:01.075Z
+Updated UTC: 2026-06-07T01:42:02.916Z
 Source: live status merge
 
-- 2026-06-07T01:39:46.490Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T01:39:46Z] [PASS] QA passed: part=111481 title=Superman
-- 2026-06-07T01:39:45Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=25656; child_pid=12360
-- 2026-06-07T01:39:45Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T01:41:45Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=25656; child_pid=12360
+- 2026-06-07T01:41:45Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T01:41:30.876Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T01:41:30Z] [PASS] QA passed: part=112086 title=Seven
 - 2026-06-07T01:38:47.134Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22: Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW.
 - 2026-06-07T01:38:35.157Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T01:38:35Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
 - 2026-06-07T01:38:13Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
