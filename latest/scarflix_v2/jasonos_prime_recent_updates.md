@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T12:23:03.844Z
+Updated UTC: 2026-06-07T12:25:01.403Z
 Source: live status merge
 
-- 2026-06-07T12:20:49.501Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T12:20:49Z] [REVIEW] QA failed: part=112239 title=The Gangster, the Cop, the Devil reason=Plex Transcoder HLS probe timed out
-- 2026-06-07T12:18:13.531Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
-- 2026-06-07T12:18:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-07T12:23:47.305Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T12:23:47Z] [REVIEW] QA failed: part=112254 title=JasonOS Pipeline Sanity Check reason=Visible raw .strm row is not allowed
+- 2026-06-07T12:23:13.923Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
+- 2026-06-07T12:23:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T12:11:16.691Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T12:11:16Z] [INFO] Health status publishing
 - 2026-06-07T12:10:20.943Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T12:10:20Z] [REVIEW] Decision failed: metadata=41147 title=The Godfather reason=The operation has timed out.
 - 2026-06-07T10:41:49.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:41:49Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
