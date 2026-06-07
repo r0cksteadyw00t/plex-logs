@@ -1,0 +1,72 @@
+{
+    "component":  "scarflix_v2_candidate_source_model",
+    "status":  "REVIEW",
+    "updated_utc":  "2026-06-07T10:23:09Z",
+    "platform_gate_status":  "PASS",
+    "model":  {
+                  "failed_source_release_quarantined":  true,
+                  "title_remains_wanted_retryable":  true,
+                  "alternate_candidates_preserved":  true,
+                  "transient_provider_failures_retry_held":  true,
+                  "permanent_policy_playback_failures_quarantine_source":  true,
+                  "publish_only_after_plex_safe_gate":  true,
+                  "no_catalogue_expansion_before_gate_pass":  true
+              },
+    "checks":  [
+                   {
+                       "name":  "platform_gate_pass_required",
+                       "pass":  true,
+                       "detail":  "PlatformGate status is PASS"
+                   },
+                   {
+                       "name":  "seeder_rejected_stage_hash_guard",
+                       "pass":  true,
+                       "detail":  "Seeder records/skips exact rejected stage hashes."
+                   },
+                   {
+                       "name":  "seeder_stage_only_not_plex_visible",
+                       "pass":  false,
+                       "detail":  "Raw candidates are staged outside Plex visibility."
+                   },
+                   {
+                       "name":  "publisher_candidate_reject_function",
+                       "pass":  true,
+                       "detail":  "Publisher rejects failed staged candidates, not whole titles."
+                   },
+                   {
+                       "name":  "publisher_rejected_hash_skip",
+                       "pass":  true,
+                       "detail":  "Publisher skips exact failed source hashes."
+                   },
+                   {
+                       "name":  "publisher_qa_failure_source_reject",
+                       "pass":  true,
+                       "detail":  "Publisher can reject failed source/release after QA."
+                   },
+                   {
+                       "name":  "source_quarantine_exists",
+                       "pass":  true,
+                       "detail":  "Source quarantine script exists."
+                   },
+                   {
+                       "name":  "source_quarantine_transient_skip_default",
+                       "pass":  true,
+                       "detail":  "Transient failures are skipped unless explicitly included."
+                   },
+                   {
+                       "name":  "source_quarantine_reason_codes",
+                       "pass":  true,
+                       "detail":  "Quarantine records source/release reason codes."
+                   }
+               ],
+    "blockers":  [
+                     "seeder_stage_only_not_plex_visible"
+                 ],
+    "files":  {
+                  "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\candidate_source_model_status.json",
+                  "status_md":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\candidate_source_model_status.md",
+                  "seeder":  "D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_LiveCatalogSeeder.ps1",
+                  "publisher":  "D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_WebDavVirtualCatalogPublisher.ps1",
+                  "source_quarantine":  "D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_SourceQuarantine.ps1"
+              }
+}
