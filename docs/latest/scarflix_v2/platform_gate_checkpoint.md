@@ -1,37 +1,37 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-07T10:19:13Z
+Generated UTC: 2026-06-07T20:49:19Z
 
-Status: PASS
-Started UTC: 2026-06-07T10:17:11Z
-Ended UTC: 2026-06-07T10:19:12Z
-Snapshot ID: 20260607T101728Z
-Snapshot hash: 38ca1324ab9a39327109edd53e09ea161f3e8eeb3d91219919e41d883244c56b
-Same-snapshot confirmed: True
+Status: REVIEW
+Started UTC: 2026-06-07T20:48:34Z
+Ended UTC: 2026-06-07T20:49:19Z
+Snapshot ID: 20260607T204850Z
+Snapshot hash: 4a623f46f7ec74fe5e1aac7956f0d075b9ae0bce84ca544f1301555e747b7ec2
+Same-snapshot confirmed: False
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
 
 ## Visible Catalogue
-- visible: 46
-- movies: 36
-- tv: 10
+- visible: 1
+- movies: 0
+- tv: 1
 
 ## QA
-- WebDAV active gate: PASS, checked=46
-- Plex visible/HLS QA: PASS, checked=46
-- Plex client decision QA: PASS, checked=46
-- 5-concurrent stream QA: PASS, target=5, map_tested=5, visible_tested=5
-- Health: REVIEW
+- WebDAV active gate: PASS, checked=1
+- Plex visible/HLS QA: PASS, checked=1
+- Plex client decision QA: PASS, checked=1
+- 5-concurrent stream QA: REVIEW, target=5, map_tested=1, visible_tested=1
+- Health: UNKNOWN
 
 ## Source Handling
-- quarantined/rejected sources: 715
-- transient/retry-held count: 598
-- prunable/permanent count: 117
-- seeder rejected-stage skipped: 1
+- quarantined/rejected sources: 795
+- transient/retry-held count: 659
+- prunable/permanent count: 136
+- seeder rejected-stage skipped: 34
 - publisher rejected-stage skipped: 0
 - top reason codes:
-  - PROVIDER_503: 433
-  - PROVIDER_TIMEOUT: 128
-  - PLEX_INVISIBLE_AFTER_SCAN: 107
+  - PROVIDER_503: 479
+  - PROVIDER_TIMEOUT: 143
+  - PLEX_INVISIBLE_AFTER_SCAN: 126
   - PROVIDER_503_RETRYABLE: 30
   - PLEX_HLS_TIMEOUT: 7
   - PLEX_CODEC_BLOCKED: 4
@@ -51,4 +51,5 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - ScarFLIX_v2_CatalogVisibilityGate: Disabled
 
 ## Blockers
-- none
+- concurrent_stream_qa status=REVIEW
+- concurrent_stream_qa did not test at least 5 concurrent streams
