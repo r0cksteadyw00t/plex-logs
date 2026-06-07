@@ -1,25 +1,30 @@
 {
     "component":  "scarflix_v2_durable_platform_gate_runner",
-    "status":  "RUNNING",
-    "current_step":  "starting",
-    "started_utc":  "2026-06-07T05:56:29Z",
-    "last_progress_utc":  "2026-06-07T05:56:29Z",
-    "ended_utc":  "",
-    "duration_seconds":  0,
+    "status":  "REVIEW",
+    "current_step":  "platform_gate_review",
+    "started_utc":  "2026-06-07T05:56:28Z",
+    "last_progress_utc":  "2026-06-07T05:57:49Z",
+    "ended_utc":  "2026-06-07T05:57:04Z",
+    "duration_seconds":  80,
     "no_catalogue_expansion":  true,
     "single_owner":  true,
-    "owner_pid":  45564,
+    "owner_pid":  31116,
     "child_pid":  0,
-    "child_start_utc":  "",
-    "child_exit_code":  null,
-    "child_qa_last_progress_utc":  "",
-    "child_qa_last_progress_path":  "",
-    "child_qa_stale_minutes":  null,
+    "child_start_utc":  "2026-06-07T05:56:33Z",
+    "child_exit_code":  -1,
+    "child_qa_last_progress_utc":  "2026-06-07T05:40:23Z",
+    "child_qa_last_progress_path":  "D:\\PlexTools\\logs\\scarflix_v2_visible_catalog_qa_20260607.log",
+    "child_qa_stale_minutes":  16.7,
     "child_qa_stale_threshold_minutes":  5,
     "bounded_orphan_kill_minutes":  5,
-    "child_qa_stall_count":  0,
+    "child_qa_stall_count":  1,
     "attempts":  [
-
+                     {
+                         "attempt":  1,
+                         "exit_code":  -1,
+                         "platform_status":  "REVIEW",
+                         "ended_utc":  "2026-06-07T05:57:03Z"
+                     }
                  ],
     "stale_minutes":  5,
     "heartbeat_seconds":  30,
@@ -34,7 +39,8 @@
 
                  ],
     "actions":  [
-
+                    "Stopped stale PlatformGate child pid=38128; context=attempt_1; child_qa_stale_minutes=16.7; threshold=5",
+                    "Checkpoint publisher timed out; local checkpoint remains authoritative"
                 ],
     "overlap_tasks":  [
 
