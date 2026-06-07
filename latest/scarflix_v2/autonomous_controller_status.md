@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: WAITING_RETRY
-Milestone state: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
+Status: RUNNING
+Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-07T22:27:06Z
-Current step: waiting_for_overlap_after_unclassified_review
+Updated UTC: 2026-06-07T22:32:03Z
+Current step: unclassified_review_platform_gate_relaunch
 Jason action required: False
 
 ## PlatformGate
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: PlatformGate REVIEW is unclassified; waiting for active validation overlap before retry
-- next_check_utc: 2026-06-07T22:32:13Z
+- action_taken: PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason
+- next_check_utc: 2026-06-07T22:37:08Z
 
 ## Blockers
 - none
