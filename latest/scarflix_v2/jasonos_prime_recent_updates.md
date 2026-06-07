@@ -1,16 +1,16 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T09:54:01.760Z
+Updated UTC: 2026-06-07T09:56:01.158Z
 Source: live status merge
 
-- 2026-06-07T09:53:20Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39644; child_pid=
-- 2026-06-07T09:53:20Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=47; blockers=0
+- 2026-06-07T09:55:13Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=34540; child_pid=
+- 2026-06-07T09:55:13Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=47; blockers=0
+- 2026-06-07T09:55:08.627Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T09:55:08Z] [PASS] QA passed: part=112228 title=The Journey's End
+- 2026-06-07T09:54:21.703Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T09:54:21Z] [INFO] Running concurrent WebDAV active gate worker for 47 entries.
+- 2026-06-07T09:54:05Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=34540; child_pid=17804
+- 2026-06-07T09:54:05Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=47; blockers=0
 - 2026-06-07T09:53:10.422Z - Grok Peer Review Applied - 2026-06-07 19:36: Grok's forensic peer review was accepted as the implementation brief. Current outcome truth: Actual Streaming `.strm`: movies `1`, TV `0`, total `1`. Dashboard visible QA count: `56` (`38` movies, `18` TV), explicitly not delivery.
-- 2026-06-07T09:53:10.089Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T09:53:10Z] [OK] Visible QA cache updated: 235 entries
 - 2026-06-07T09:53:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
-- 2026-06-07T09:52:23.096Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T09:52:23Z] [INFO] Running concurrent WebDAV active gate worker for 47 entries.
-- 2026-06-07T09:52:06Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39644; child_pid=45964
-- 2026-06-07T09:52:06Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
 - 2026-06-07T09:43:08Z - Autonomous controller: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED: transient-only REVIEW; relaunched detached PlatformGate runner
 - 2026-06-07T09:33:14.159Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
 - 2026-06-07T09:08:16Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
