@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T01:56:01.530Z
+Updated UTC: 2026-06-07T01:58:03.878Z
 Source: live status merge
 
-- 2026-06-07T01:55:58.813Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T01:55:58Z] [PASS] QA passed: part=112102 title=City of God
-- 2026-06-07T01:55:58Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
-- 2026-06-07T01:55:58Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T01:57:58Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
+- 2026-06-07T01:57:58Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T01:57:14.767Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T01:57:14Z] [PASS] QA passed: part=112086 title=Seven
 - 2026-06-07T01:53:29.981Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44: Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`...
 - 2026-06-07T01:53:11Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T01:44:43.970Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T01:44:43Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
