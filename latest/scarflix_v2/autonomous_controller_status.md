@@ -1,17 +1,17 @@
 # ScarFLIX v2 Autonomous Controller
 
 Status: RUNNING
-Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
-Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-07T20:48:04Z
-Current step: candidate_source_model_pending_platform_gate
+Milestone state: PLATFORM_GATE_RUNNING
+Milestone: Complete same-snapshot PlatformGate checkpoint
+Updated UTC: 2026-06-07T20:48:33Z
+Current step: PLATFORM_GATE_RUNNING
 Jason action required: False
 
 ## PlatformGate
 - runner_running: False
-- status: PASS
-- stage: platform_gate_pass
-- visible: 46
+- status: RUNNING
+- stage: starting
+- visible: 1
 - transient_failures: 0
 - prunable_failures: 0
 
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: Candidate-source model is pending PlatformGate PASS
-- next_check_utc: 2026-06-07T20:53:06Z
+- action_taken: PlatformGate runner already running; no inline wait
+- next_check_utc: 2026-06-07T20:53:33Z
 
 ## Blockers
 - none
