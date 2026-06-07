@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T00:16:01.026Z
+Updated UTC: 2026-06-07T00:18:04.554Z
 Source: live status merge
 
-- 2026-06-07T00:15:49Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
-- 2026-06-07T00:15:49Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-07T00:17:49Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
+- 2026-06-07T00:17:49Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
 - 2026-06-07T00:14:49.012Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T00:14:49Z] [PASS] QA passed: part=111481 title=Superman
 - 2026-06-07T00:13:47.601Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
 - 2026-06-07T00:13:44.700Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T00:13:44Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
