@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T04:32:03.307Z
+Updated UTC: 2026-06-07T04:34:01.607Z
 Source: live status merge
 
-- 2026-06-07T04:31:44Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088
-- 2026-06-07T04:31:44Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T04:33:44Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088
+- 2026-06-07T04:33:44Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
 - 2026-06-07T04:31:26.644Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T04:31:26Z] [REVIEW] QA failed: part=112151 title=Pilot reason=Plex Transcoder HLS probe timed out
 - 2026-06-07T04:28:15.854Z - JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36: Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion.
 - 2026-06-07T04:28:09Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
