@@ -1,16 +1,31 @@
 {
-  "updated_utc": "2026-06-07T06:08:03.283Z",
+  "updated_utc": "2026-06-07T06:10:01.398Z",
   "source": "live status merge",
   "updates": [
     {
-      "utc": "2026-06-07T06:07:39Z",
+      "utc": "2026-06-07T06:09:55.209Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-07T06:09:55Z] [REVIEW] Decision failed: metadata=40483 title=Honey Don't! reason=The operation has timed out."
+    },
+    {
+      "utc": "2026-06-07T06:09:39Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=42428; child_pid=30192"
     },
     {
-      "utc": "2026-06-07T06:07:39Z",
+      "utc": "2026-06-07T06:09:39Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T06:08:20.119Z",
+      "title": "JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51",
+      "detail": "Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`."
+    },
+    {
+      "utc": "2026-06-07T06:08:10Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T06:07:23.485Z",
@@ -26,16 +41,6 @@
       "utc": "2026-06-07T06:05:14Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=65; blockers=0"
-    },
-    {
-      "utc": "2026-06-07T06:03:14.476Z",
-      "title": "JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51",
-      "detail": "Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`."
-    },
-    {
-      "utc": "2026-06-07T06:03:09Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T05:59:05.067Z",
@@ -66,11 +71,6 @@
       "utc": "2026-06-07T01:43:34.735Z",
       "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22",
       "detail": "Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW."
-    },
-    {
-      "utc": "2026-06-07T00:19:02.845Z",
-      "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58",
-      "detail": "Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`."
     }
   ]
 }
