@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T04:50:02.433Z",
+  "updated_utc": "2026-06-07T04:52:02.141Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,11 +14,11 @@
     "state": "WATCHING_FOR_STALL",
     "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 12,
-    "platform_child_progress_age_minutes": 9,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 11,
     "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-07T04:43:16Z",
-    "next_check_age_minutes": 7,
+    "next_check_utc": "2026-06-07T04:56:50Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -26,7 +26,7 @@
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
     "last_progress_utc": "2026-06-07T04:40:46.121Z",
-    "age_minutes": 9,
+    "age_minutes": 11,
     "last_line": "[2026-06-07T04:40:46Z] [OK] Visible QA cache updated: 233 entries",
     "pass_lines": 63,
     "review_lines": 13,
@@ -35,13 +35,13 @@
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-07T04:38:08Z",
+    "updated_utc": "2026-06-07T04:51:17Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T04:48:03Z",
+    "updated_utc": "2026-06-07T04:50:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -50,13 +50,13 @@
     "current_step": "running_platform_gate_attempt_1",
     "owner_pid": 29872,
     "child_pid": 44088,
-    "last_progress_utc": "2026-06-07T04:49:46Z",
-    "heartbeat_updated_utc": "2026-06-07T04:49:46Z",
+    "last_progress_utc": "2026-06-07T04:51:46Z",
+    "heartbeat_updated_utc": "2026-06-07T04:51:46Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T04:49:01Z",
+    "updated_utc": "2026-06-07T04:51:02Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -83,14 +83,24 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T04:49:46Z",
+      "utc": "2026-06-07T04:51:54.064Z",
+      "title": "JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36",
+      "detail": "Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion."
+    },
+    {
+      "utc": "2026-06-07T04:51:46Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088"
     },
     {
-      "utc": "2026-06-07T04:49:46Z",
+      "utc": "2026-06-07T04:51:46Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T04:51:15Z",
+      "title": "Autonomous controller: PLATFORM_GATE_RUNNING",
+      "detail": "PlatformGate runner already running; no inline wait"
     },
     {
       "utc": "2026-06-07T04:40:46.121Z",
@@ -98,19 +108,9 @@
       "detail": "Latest child QA line: [2026-06-07T04:40:46Z] [OK] Visible QA cache updated: 233 entries"
     },
     {
-      "utc": "2026-06-07T04:38:19.563Z",
-      "title": "JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36",
-      "detail": "Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion."
-    },
-    {
       "utc": "2026-06-07T04:38:08Z",
       "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
       "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
-    },
-    {
-      "utc": "2026-06-07T04:28:09Z",
-      "title": "Autonomous controller: PLATFORM_GATE_RUNNING",
-      "detail": "PlatformGate runner already running; no inline wait"
     },
     {
       "utc": "2026-06-07T03:42:34.283Z",
@@ -167,7 +167,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T04:40:46.121Z - Plex visible/HLS QA",
-      "current": "Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=9 min; owner_pid=29872; child_pid=44088.",
+      "current": "Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=11 min; owner_pid=29872; child_pid=44088.",
       "progress": 42,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -175,7 +175,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T04:49:01Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T04:51:02Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 75,
       "eta": "runs every 5 minutes",
@@ -229,7 +229,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T04:49:46Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T04:51:46Z - Durable PlatformGate ownership active",
       "current": "Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck.",
       "progress": 56,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
