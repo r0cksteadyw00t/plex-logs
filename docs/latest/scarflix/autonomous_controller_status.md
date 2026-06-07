@@ -3,7 +3,7 @@
 Status: FAIL_ENGINEERING
 Milestone state: BLOCKED_DECISION
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-07T13:07:05Z
+Updated UTC: 2026-06-07T13:08:07Z
 Current step: unhandled_platform_gate_state
 Jason action required: False
 
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: none
-- next_check_utc: 2026-06-07T13:12:05Z
+- next_check_utc: 2026-06-07T13:13:08Z
 
 ## Blockers
 - Unhandled PlatformGate status: REVIEW
