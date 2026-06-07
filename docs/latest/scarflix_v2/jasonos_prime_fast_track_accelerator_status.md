@@ -1,10 +1,10 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-07T20:46:01Z
+Updated UTC: 2026-06-07T20:49:02Z
 Status: PASS
 Mode: fast_track_safe_acceleration
-Current milestone: CANDIDATE_SOURCE_MODEL_RUNNING
-Next autonomous action: PlatformGate is PASS; run candidate-source retry/quarantine verification detached.
+Current milestone: PLATFORM_GATE_RUNNING
+Next autonomous action: Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.
 Expansion eligible: false
 Expansion started this cycle: false
 
@@ -15,18 +15,18 @@ Expansion started this cycle: false
 
 ## Inputs
 - platform_gate: REVIEW
-- checkpoint: PASS
-- checkpoint_step: platform_gate_pass
-- durable_runner: PASS
-- durable_step: platform_gate_pass
-- durable_owner_pid: 24768
-- durable_child_pid: 
+- checkpoint: RUNNING
+- checkpoint_step: running_platform_gate_attempt_1
+- durable_runner: RUNNING
+- durable_step: running_platform_gate_attempt_1
+- durable_owner_pid: 2100
+- durable_child_pid: 38916
 - active_gate_transient_failures: 0
 - active_gate_prunable_failures: 0
 - controller_transient_retry_count: 0
 - repeated_transient_review: false
-- candidate_source_model: REVIEW
-- controller: FAIL_ENGINEERING
+- candidate_source_model: PENDING
+- controller: RUNNING
 - predictive_simulator: REVIEW
 - self_evolution: REVIEW
 - dashboard: PASS
@@ -46,4 +46,3 @@ Expansion started this cycle: false
 - JasonOS_Prime_PublicMirrorPublisher: PASS fast_track_public_status
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
-- candidate_source_model_detached: PASS 
