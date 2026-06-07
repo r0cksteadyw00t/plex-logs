@@ -1,16 +1,26 @@
 {
-  "updated_utc": "2026-06-07T01:45:01.389Z",
+  "updated_utc": "2026-06-07T01:47:03.644Z",
   "source": "live status merge",
   "updates": [
     {
-      "utc": "2026-06-07T01:44:57Z",
+      "utc": "2026-06-07T01:46:57Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816"
     },
     {
-      "utc": "2026-06-07T01:44:57Z",
+      "utc": "2026-06-07T01:46:57Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T01:46:21.611Z",
+      "title": "PlatformGate child QA active: Plex visible/HLS QA",
+      "detail": "Latest child QA line: [2026-06-07T01:46:21Z] [REVIEW] QA failed: part=112087 title=The Lord of the Rings: The Two Towers reason=Plex Transcoder HLS probe timed out"
+    },
+    {
+      "utc": "2026-06-07T01:45:49.860Z",
+      "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44",
+      "detail": "Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`..."
     },
     {
       "utc": "2026-06-07T01:44:43.970Z",
@@ -26,11 +36,6 @@
       "utc": "2026-06-07T01:43:12Z",
       "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
       "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
-    },
-    {
-      "utc": "2026-06-07T01:41:30.876Z",
-      "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T01:41:30Z] [PASS] QA passed: part=112086 title=Seven"
     },
     {
       "utc": "2026-06-07T01:37:07Z",
@@ -66,11 +71,6 @@
       "utc": "2026-06-06T22:43:28.018Z",
       "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 08:21",
       "detail": "Phone-facing GitHub Pages dashboard delivery was repaired. Cause: GitHub Pages for `r0cksteadyw00t/plex-logs` is configured to publish from `main:/docs`. `JasonOS_Prime_PublicMirrorPublisher.js` was publishing live dashboard HTML/JSON to repository-root `latest/...`, which made raw/API status current but left the Pa..."
-    },
-    {
-      "utc": "2026-06-06T22:18:23.534Z",
-      "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 08:12",
-      "detail": "The dashboard `Recent achievements` panel was stale even though the main dashboard/status JSON was current. Cause: `D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_recent_updates.json` was frozen at `2026-06-06T10:55:00Z`. `JasonOS_Prime_OutcomeDashboard.js` returned that stored file unchanged whenever it existed."
     }
   ]
 }
