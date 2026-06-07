@@ -1,13 +1,13 @@
 {
     "component":  "scarflix_v2_autonomous_controller",
-    "status":  "WAITING_RETRY",
-    "milestone_state":  "PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED",
-    "updated_utc":  "2026-06-07T22:27:06Z",
-    "current_step":  "waiting_for_overlap_after_unclassified_review",
+    "status":  "RUNNING",
+    "milestone_state":  "PLATFORM_GATE_RUNNING",
+    "updated_utc":  "2026-06-07T22:32:03Z",
+    "current_step":  "unclassified_review_platform_gate_relaunch",
     "current_milestone":  "Complete same-snapshot PlatformGate checkpoint",
     "next_milestone":  "Blanket candidate-source retry/quarantine model",
-    "action_taken":  "PlatformGate REVIEW is unclassified; waiting for active validation overlap before retry",
-    "next_check_utc":  "2026-06-07T22:32:13Z",
+    "action_taken":  "PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason",
+    "next_check_utc":  "2026-06-07T22:37:08Z",
     "jason_action_required":  false,
     "blockers":  [
 
@@ -20,12 +20,12 @@
                           "runner_task":  "ScarFLIX_v2_DurablePlatformGateRunner",
                           "runner_running":  true,
                           "child_active":  false,
-                          "child_activity_log_utc":  "2026-06-07T22:26:46Z",
+                          "child_activity_log_utc":  "2026-06-07T22:31:35Z",
                           "status":  "REVIEW",
                           "stage":  "platform_gate_review",
                           "visible_count":  1,
-                          "started_utc":  "2026-06-07T22:26:03Z",
-                          "last_progress_utc":  "2026-06-07T22:26:51Z",
+                          "started_utc":  "2026-06-07T22:31:03Z",
+                          "last_progress_utc":  "2026-06-07T22:31:39Z",
                           "transient_failures":  0,
                           "prunable_failures":  0,
                           "failure_signature":  "",
@@ -65,13 +65,5 @@
                         "candidate_source_model_json":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/candidate_source_model_status.json",
                         "candidate_source_model_md":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/candidate_source_model_status.md",
                         "rclone_mount_status_json":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/scarflix_v2_rclone_mount_keepalive_status.json"
-                    },
-    "overlap_tasks":  [
-                          {
-                              "name":  "ScarFLIX_v2_ConcurrentStreamQA",
-                              "state":  "Running",
-                              "last_run":  "8/06/2026 8:27:13 AM",
-                              "last_result":  "267009"
-                          }
-                      ]
+                    }
 }
