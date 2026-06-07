@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-06T23:58:07Z",
-  "duration_seconds": 5,
+  "updated_utc": "2026-06-07T00:00:07Z",
+  "duration_seconds": 3,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "next_autonomous_action": "Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.",
@@ -16,11 +16,11 @@
   },
   "status_inputs": {
     "platform_gate": "REVIEW",
-    "checkpoint": "REVIEW",
-    "checkpoint_step": "platform_gate_review",
-    "durable_runner": "REVIEW",
-    "durable_step": "platform_gate_review",
-    "durable_owner_pid": 45508,
+    "checkpoint": "RUNNING",
+    "checkpoint_step": "running_platform_gate_attempt_1",
+    "durable_runner": "RUNNING",
+    "durable_step": "running_platform_gate_attempt_1",
+    "durable_owner_pid": 8296,
     "durable_child_pid": "",
     "candidate_source_model": "UNKNOWN",
     "controller": "RUNNING",
@@ -76,13 +76,6 @@
       "action": "task_run",
       "task": "JasonOS_Prime_Real_AI_8805_Keepalive",
       "reason": "fast_track_daily_ai_keepalive",
-      "status": "PASS",
-      "error": " "
-    },
-    {
-      "action": "task_run",
-      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "reason": "platform_gate_not_pass",
       "status": "PASS",
       "error": " "
     }
