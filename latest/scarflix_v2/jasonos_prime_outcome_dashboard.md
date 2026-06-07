@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-07T05:52:02.164Z
+Updated UTC: 2026-06-07T05:54:01.113Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -9,9 +9,9 @@ Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
-| Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-07T05:52:02.164Z - truthful AI capability metric refreshed | 8791/8805 service reachability is not enough. Backend supports SSE chat, JSON health, tool traces and command queue after the patched 8805 service is running. | 40% | usable after 8805 patched service restart and live chat smoke test | Medium |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-07T05:40:23.786Z - Plex visible/HLS QA | Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 65 and are not counted as delivered catalogue. PlatformGate=REVIEW; durable=REVIEW; child_stage=Plex visible/HLS QA; child_age=12 min; owner_pid=41708; child_pid=. | 5% | after PlatformGate and candidate model PASS | Low |
-| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-07T05:51:01Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1. | 25% | runs every 5 minutes | Low |
+| Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-07T05:54:01.113Z - truthful AI capability metric refreshed | 8791/8805 service reachability is not enough. Backend supports SSE chat, JSON health, tool traces and command queue after the patched 8805 service is running. | 40% | usable after 8805 patched service restart and live chat smoke test | Medium |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-07T05:40:23.786Z - Plex visible/HLS QA | Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 65 and are not counted as delivered catalogue. PlatformGate=REVIEW; durable=REVIEW; child_stage=Plex visible/HLS QA; child_age=14 min; owner_pid=41708; child_pid=. | 5% | after PlatformGate and candidate model PASS | Low |
+| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-07T05:53:03Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1. | 25% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-06T14:17:07Z - scheduled task wrappers refreshed | Status PASS; tasks_updated=15; blockers=0. | 100% | active now | Low |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=11. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
@@ -29,8 +29,8 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.
-- Controller updated: 3 min ago
-- Platform child progress: 12 min ago
+- Controller updated: 5 min ago
+- Platform child progress: 14 min ago
 - Mirror updated: 1 min ago
 - Platform runner running: false
 - Platform child active: true
