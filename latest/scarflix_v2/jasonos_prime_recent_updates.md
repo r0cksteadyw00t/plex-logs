@@ -1,10 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T02:20:03.927Z
+Updated UTC: 2026-06-07T02:22:01.066Z
 Source: live status merge
 
-- 2026-06-07T02:19:59Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
-- 2026-06-07T02:19:59Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T02:22:00Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
+- 2026-06-07T02:22:00Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T02:21:43.316Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
 - 2026-06-07T02:18:47.054Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T02:18:47Z] [PASS] QA passed: part=112150 title=The Box
 - 2026-06-07T02:18:17.300Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44: Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`...
 - 2026-06-07T02:18:11Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-07T00:19:02.845Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
 - 2026-06-07T00:11:23Z - Autonomous controller: repeated_transient_source_quarantine_started: Repeated transient-only PlatformGate REVIEW reached retry cap; started source/release quarantine with IncludeTransient so failed sources are removed from visibility while titles remain wanted
 - 2026-06-06T23:53:09.986Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:47: PlatformGate progress was checked after Jason reported no visible dashboard update since `Durable PlatformGate runner RUNNING 2026-06-06T22:32:39Z`. Finding: PlatformGate had not stalled. Durable runner/checkpoint progress was fresh at `2026-06-06T22:47:10Z`.
-- 2026-06-06T22:43:28.018Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:21: Phone-facing GitHub Pages dashboard delivery was repaired. Cause: GitHub Pages for `r0cksteadyw00t/plex-logs` is configured to publish from `main:/docs`. `JasonOS_Prime_PublicMirrorPublisher.js` was publishing live dashboard HTML/JSON to repository-root `latest/...`, which made raw/API status current but left the Pa...
