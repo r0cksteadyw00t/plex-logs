@@ -1,0 +1,24 @@
+{
+  "component": "jasonos_daily_ai_usability",
+  "updated_utc": "2026-06-07T09:53:04.194Z",
+  "status": "PASS",
+  "daily_ui_8791": {
+    "reachable": true,
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "appears_open_webui": false
+  },
+  "backend_8805": {
+    "health_json": true,
+    "health_status": 200,
+    "streaming_sse": true,
+    "tool_traces": true,
+    "command_queue": true
+  },
+  "integration": {
+    "openwebui_uses_ollama": true,
+    "openwebui_tool_trace_bridge_proven": false,
+    "next_gap": "Expose 8805 tool traces inside 8791 Open WebUI or provide a first-class 8791 route/link to 8805 command surface."
+  },
+  "user_outcome": "8791 can provide local Ollama chat; 8805 provides streaming tool-trace command chat; full 8791+8805 integrated tool UX is not yet proven."
+}
