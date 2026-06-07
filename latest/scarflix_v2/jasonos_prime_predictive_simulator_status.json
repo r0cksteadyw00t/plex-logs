@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_predictive_simulator",
   "status": "REVIEW",
-  "updated_utc": "2026-06-07T10:41:07.268Z",
+  "updated_utc": "2026-06-07T10:43:05.482Z",
   "no_catalogue_publication": true,
   "expansion_eligible": false,
   "visible": {
@@ -9,12 +9,12 @@
     "movies": 36,
     "tv": 10
   },
-  "pending_candidates": 29,
-  "rejected_sources": 694,
+  "pending_candidates": 28,
+  "rejected_sources": 695,
   "gate": {
     "checkpoint_status": "PASS",
     "platform_status": "PASS",
-    "active_gate": "PASS",
+    "active_gate": "REVIEW",
     "visible_catalog_qa": "PASS",
     "controller": "REVIEW_TRANSIENT",
     "candidate_model": "REVIEW",
@@ -37,15 +37,15 @@
     {
       "id": "provider_retry_backoff",
       "description": "Treat provider 429/503/timeouts as retry-held source failures, not title deletion.",
-      "transient_failures": 0,
+      "transient_failures": 7,
       "prunable_failures": 0,
       "recommendation": "retry_transient_sources_later"
     },
     {
       "id": "candidate_pool_growth",
       "description": "Prepare more candidates without publishing visible Plex rows.",
-      "pending_candidates": 29,
-      "rejected_sources": 694,
+      "pending_candidates": 28,
+      "rejected_sources": 695,
       "recommendation": "candidate_pool_sufficient_for_next_batch"
     }
   ],
