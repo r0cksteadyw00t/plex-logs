@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: FAIL_ENGINEERING
-Milestone state: BLOCKED_DECISION
+Status: RUNNING
+Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-07T20:53:03Z
-Current step: unhandled_platform_gate_state
+Updated UTC: 2026-06-07T20:54:13Z
+Current step: unclassified_review_platform_gate_relaunch
 Jason action required: False
 
 ## PlatformGate
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: none
-- next_check_utc: 2026-06-07T20:58:04Z
+- action_taken: PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason
+- next_check_utc: 2026-06-07T20:59:13Z
 
 ## Blockers
-- Unhandled PlatformGate status: REVIEW
+- none
