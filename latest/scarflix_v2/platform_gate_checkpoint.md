@@ -1,37 +1,37 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-07T20:54:06Z
+Generated UTC: 2026-06-07T20:54:45Z
 
 Status: REVIEW
-Started UTC: 2026-06-07T20:53:06Z
-Ended UTC: 2026-06-07T20:54:05Z
-Snapshot ID: 20260607T205322Z
-Snapshot hash: 4a623f46f7ec74fe5e1aac7956f0d075b9ae0bce84ca544f1301555e747b7ec2
-Same-snapshot confirmed: True
+Started UTC: 2026-06-07T20:54:16Z
+Ended UTC: 2026-06-07T20:54:44Z
+Snapshot ID: 20260607T205433Z
+Snapshot hash: d3e68ddb745c20efc0a44417dbd6369d2f15bbaef0bc7ec9d2b7182ae7c66073
+Same-snapshot confirmed: False
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
 
 ## Visible Catalogue
-- visible: 1
-- movies: 0
+- visible: 3
+- movies: 2
 - tv: 1
 
 ## QA
-- WebDAV active gate: PASS, checked=1
-- Plex visible/HLS QA: PASS, checked=1
-- Plex client decision QA: PASS, checked=1
-- 5-concurrent stream QA: PASS, target=5, map_tested=5, visible_tested=1
-- Health: REVIEW
+- WebDAV active gate: PASS, checked=3
+- Plex visible/HLS QA: FAIL, checked=3
+- Plex client decision QA: UNKNOWN, checked=-1
+- 5-concurrent stream QA: UNKNOWN, target=, map_tested=, visible_tested=
+- Health: UNKNOWN
 
 ## Source Handling
-- quarantined/rejected sources: 821
+- quarantined/rejected sources: 831
 - transient/retry-held count: 685
-- prunable/permanent count: 136
+- prunable/permanent count: 146
 - seeder rejected-stage skipped: 34
 - publisher rejected-stage skipped: 0
 - top reason codes:
   - PROVIDER_503: 495
   - PROVIDER_TIMEOUT: 153
-  - PLEX_INVISIBLE_AFTER_SCAN: 126
+  - PLEX_INVISIBLE_AFTER_SCAN: 136
   - PROVIDER_503_RETRYABLE: 30
   - PLEX_HLS_TIMEOUT: 7
   - PLEX_CODEC_BLOCKED: 4
@@ -51,4 +51,5 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - ScarFLIX_v2_CatalogVisibilityGate: Disabled
 
 ## Blockers
-- concurrent_stream_qa did not test at least 5 concurrent streams
+- visible_catalog_qa status=FAIL
+- visible snapshot drifted during gate: before=3 after=9
