@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-07T10:18:02Z",
+  "updated_utc": "2026-06-07T10:20:03Z",
   "duration_seconds": 2,
   "mode": "fast_track_safe_acceleration",
-  "current_milestone": "PLATFORM_GATE_RUNNING",
-  "next_autonomous_action": "Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.",
+  "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
+  "next_autonomous_action": "PlatformGate is PASS; run candidate-source retry/quarantine verification detached.",
   "no_secret_access": true,
   "expansion_eligible": false,
   "expansion_started_this_cycle": false,
@@ -15,13 +15,13 @@
     "total": 1
   },
   "status_inputs": {
-    "platform_gate": "REVIEW",
-    "checkpoint": "RUNNING",
-    "checkpoint_step": "running_platform_gate_attempt_1",
-    "durable_runner": "RUNNING",
-    "durable_step": "running_platform_gate_attempt_1",
+    "platform_gate": "PASS",
+    "checkpoint": "PASS",
+    "checkpoint_step": "platform_gate_pass",
+    "durable_runner": "PASS",
+    "durable_step": "platform_gate_pass",
     "durable_owner_pid": 24768,
-    "durable_child_pid": 46804,
+    "durable_child_pid": "",
     "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
     "controller_transient_retry_count": 1,
@@ -82,6 +82,12 @@
       "reason": "fast_track_daily_ai_keepalive",
       "status": "PASS",
       "error": " "
+    },
+    {
+      "action": "candidate_source_model_detached",
+      "status": "PASS",
+      "pid": 40576,
+      "error": ""
     }
   ],
   "files": {
