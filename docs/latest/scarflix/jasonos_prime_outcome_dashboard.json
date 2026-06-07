@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T11:46:03Z",
+  "updated_utc": "2026-06-07T11:48:05.049Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -24,8 +24,7 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
-    "plex_safe_webdav_visible_rows": 46
+    "dashboard_basis": "actual filesystem counts plus latest local status JSON"
   },
   "platform_health_contract": {
     "platform_gate_requires": "snapshot_scoped_qa",
@@ -43,7 +42,7 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
+    "controller_updated_age_minutes": 5,
     "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T11:48:09Z",
@@ -54,11 +53,11 @@
   "child_qa_progress": {
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T11:45:48.627Z",
+    "last_progress_utc": "2026-06-07T11:47:47.595Z",
     "age_minutes": 0,
-    "last_line": "[2026-06-07T11:45:48Z] [PASS] QA passed: part=112115 title=Your Name.",
-    "pass_lines": 31,
-    "review_lines": 7,
+    "last_line": "[2026-06-07T11:47:47Z] [REVIEW] QA failed: part=112136 title=The Maze Runner reason=Plex Transcoder HLS probe timed out",
+    "pass_lines": 29,
+    "review_lines": 9,
     "info_lines": 42
   },
   "watchdog_status": {
@@ -70,7 +69,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T11:45:03Z",
+    "updated_utc": "2026-06-07T11:48:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -85,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T11:45:03Z",
+    "updated_utc": "2026-06-07T11:47:05Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -106,7 +105,7 @@
   "scarflix_canary": {
     "status": "RUNNING",
     "milestone": "CANARY_PIPELINE_RUNNING",
-    "updated_utc": "2026-06-07T11:44:02.029Z",
+    "updated_utc": "2026-06-07T11:46:06.054Z",
     "platform_gate_status": "PASS",
     "actual_strm_counts": {
       "movies": 1,
@@ -160,9 +159,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T11:45:48.627Z",
+      "utc": "2026-06-07T11:47:47.595Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T11:45:48Z] [PASS] QA passed: part=112115 title=Your Name."
+      "detail": "Latest child QA line: [2026-06-07T11:47:47Z] [REVIEW] QA failed: part=112136 title=The Maze Runner reason=Plex Transcoder HLS probe timed out"
     },
     {
       "utc": "2026-06-07T11:43:14.330Z",
@@ -243,7 +242,7 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T11:45:48.627Z - Plex visible/HLS QA",
+      "last_change": "2026-06-07T11:47:47.595Z - Plex visible/HLS QA",
       "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=12, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
@@ -252,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T11:45:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T11:47:05Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -319,56 +318,5 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
-  },
-  "grokbuild_forensic_agent": {
-    "status": "ACTIVE",
-    "updated_utc": "2026-06-07T11:46:03Z",
-    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
-    "implementation": "node_native",
-    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
-    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
-  },
-  "node_watchdog_5min": {
-    "component": "jasonos_prime_node_watchdog_5min",
-    "status": "ACTIVE",
-    "updated_utc": "2026-06-07T11:46:03Z",
-    "jason_action_required": false,
-    "cadence": "every 5 minutes",
-    "counts": {
-      "legacy_movie_strm": 1,
-      "legacy_tv_strm": 0,
-      "legacy_total_strm": 1,
-      "plex_safe_webdav_visible_rows": 46
-    },
-    "grokbuild_status": "ACTIVE",
-    "grok_peer_bridge_status": "LOCAL_ONLY_NO_TOKEN",
-    "canary_status": "RUNNING",
-    "canary_status_age_seconds": 120,
-    "safe_pipeline_log_age_seconds": 393,
-    "safe_pipeline_lock_age_seconds": 445,
-    "stale_running_canary": false,
-    "actions": [
-      {
-        "action": "refresh_grokbuild",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "trigger_scarflix_canary",
-        "ok": true,
-        "detail": "SUCCESS: Attempted to run the scheduled task \"JasonOS_Prime_ScarFLIX_Canary\".\r\n"
-      },
-      {
-        "action": "trigger_public_mirror",
-        "ok": true,
-        "detail": "pid=1480"
-      }
-    ],
-    "blockers": []
   }
 }
