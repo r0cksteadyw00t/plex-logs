@@ -1,8 +1,9 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T11:03:03.261Z
+Updated UTC: 2026-06-07T11:05:03.417Z
 Source: live status merge
 
+- 2026-06-07T11:04:14.196Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T11:04:14Z] [INFO] Rows selected for Plex decision QA: 50
 - 2026-06-07T11:01:59.120Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:01:59Z] [REVIEW] QA failed: part=111427 title=Honey Don't! reason=Plex Transcoder HLS probe timed out
 - 2026-06-07T11:00:23.918Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
 - 2026-06-07T11:00:13Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-07T10:17:10Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=46; blockers=0
 - 2026-06-07T10:15:29Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=45644; child_pid=
 - 2026-06-07T10:15:29Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=46; blockers=0
-- 2026-06-07T10:13:15Z - Autonomous controller: unhandled_platform_gate_state: none
