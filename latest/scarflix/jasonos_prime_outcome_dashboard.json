@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T18:58:02Z",
+  "updated_utc": "2026-06-07T19:01:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -330,7 +330,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-07T18:56:02Z",
+    "updated_utc": "2026-06-07T19:01:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -345,7 +345,7 @@
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
       "status": "REVIEW_NO_NEW_WRITES",
-      "updated_utc": "2026-06-07T18:56:05Z",
+      "updated_utc": "2026-06-07T19:01:05Z",
       "platform_gate_status": "PASS",
       "platform_snapshot_id": "20260607T101728Z",
       "snapshot_rows": 46,
@@ -379,15 +379,15 @@
       "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260607.log"
     },
     "canary_status": "PASS_PENDING_PLAYBACK_QA",
-    "canary_status_age_seconds": 720,
-    "safe_pipeline_log_age_seconds": 21950,
+    "canary_status_age_seconds": 298,
+    "safe_pipeline_log_age_seconds": 22251,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
       {
         "action": "refresh_grokbuild",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_GrokBuild_Agent.js\n\r\n\r\n#\r\n# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.\r\n#\r\n----- Native stack trace -----\r\n\r\n 1: 00007FF79F6D70F7 node::SetCppgcReference+18039\r\n 2: 00007FF79F5AB6EF node::TriggerNodeReport+71487\r\n 3: 00007FF7A08A5076 v8::base::FatalOOM+54\r\n 4: 00007FF7A023F1A3 v8::Isolate::ReportExternalAllocationLimitReached+147\r\n 5: 00007FF7A022BCD6 v8::Function::Experimental_IsNopFunction+3302\r\n 6: 00007FF7A0088420 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904\r\n 7: 00007FF7A004F441 v8::CpuProfileNode::GetScriptResourceNameStr+3121\r\n 8: 00007FF7A004FA60 v8::CpuProfileNode::GetScriptResourceNameStr+4688\r\n 9: 00007FF7A004F766 v8::CpuProfileNode::GetScriptResourceNameStr+3926\r\n10: 00007FF7A003F24B v8::FixedArray::Length+127115\r\n11: 00007FF7A003E87A v8::FixedArray::Length+124602\r\n12: 00007FF7A0096260 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+90800\r\n13: 00007FF7A00FA343 v8::base::CPU::has_sse41+73859\r\n14: 00007FF79FD2D3B3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051\r\n15: 00007FF7A0234E01 v8::Isolate::Initialize+433\r\n16: 00007FF79F71511D node::NewContext+397\r\n17: 00007FF79F5DD4EB v8_inspector::protocol::Binary::operator=+128459\r\n18: 00007FF79F6853E6 node::Start+4822\r\n19: 00007FF79F68412E node::Start+30\r\n20: 00007FF79F3EAF9C AES_cbc_encrypt+151436\r\n21: 00007FF7A0F99E7C inflateValidate+40748\r\n22: 00007FFC6843259D BaseThreadInitThunk+29\r\n23: 00007FFC6924AF78 RtlUserThreadStart+40\r\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "refresh_grok_peer_bridge",
@@ -400,14 +400,9 @@
         "detail": "ok"
       },
       {
-        "action": "trigger_scarflix_canary",
-        "ok": true,
-        "detail": "SUCCESS: Attempted to run the scheduled task \"JasonOS_Prime_ScarFLIX_Canary\".\r\n"
-      },
-      {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=38852"
+        "detail": "pid=46228"
       }
     ],
     "blockers": []
@@ -415,7 +410,7 @@
   "direct_strm_mirror": {
     "component": "scarflix_v2_direct_strm_mirror",
     "status": "REVIEW_NO_NEW_WRITES",
-    "updated_utc": "2026-06-07T18:56:05Z",
+    "updated_utc": "2026-06-07T19:01:05Z",
     "platform_gate_status": "PASS",
     "platform_snapshot_id": "20260607T101728Z",
     "snapshot_rows": 46,
@@ -450,7 +445,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-07T18:58:02Z",
+    "updated_utc": "2026-06-07T19:01:02Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
