@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T12:27:03.074Z",
+  "updated_utc": "2026-06-07T12:29:02.150Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,9 +11,9 @@
   "current_milestone": "CANDIDATE_SOURCE_MODEL_PENDING",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 1,
-    "tv_strm_count": 0,
-    "total_strm_count": 1,
+    "movie_strm_count": 28,
+    "tv_strm_count": 10,
+    "total_strm_count": 38,
     "visible_qa_count": 46,
     "visible_qa_movies": 36,
     "visible_qa_tv": 10,
@@ -39,23 +39,23 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 1,
+    "controller_updated_age_minutes": 6,
+    "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-07T12:28:08Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 1,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T12:26:02.255Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-07T12:26:02Z] [REVIEW] QA failed: part=111244 title=The Devil Wears Prada reason=Plex Transcoder HLS probe timed out",
+    "last_progress_utc": "2026-06-07T12:28:52.979Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-07T12:28:52Z] [REVIEW] QA failed: part=111277 title=The Dark Knight reason=Plex Transcoder HLS probe timed out",
     "pass_lines": 59,
     "review_lines": 14,
     "info_lines": 7
@@ -69,7 +69,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T12:25:01Z",
+    "updated_utc": "2026-06-07T12:28:04Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -84,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T12:26:04Z",
+    "updated_utc": "2026-06-07T12:28:06Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -159,9 +159,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T12:26:02.255Z",
+      "utc": "2026-06-07T12:28:52.979Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T12:26:02Z] [REVIEW] QA failed: part=111244 title=The Devil Wears Prada reason=Plex Transcoder HLS probe timed out"
+      "detail": "Latest child QA line: [2026-06-07T12:28:52Z] [REVIEW] QA failed: part=111277 title=The Dark Knight reason=Plex Transcoder HLS probe timed out"
     },
     {
       "utc": "2026-06-07T12:23:13.923Z",
@@ -242,17 +242,17 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T12:26:02.255Z - Plex visible/HLS QA",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=24768; child_pid=.",
-      "progress": 15,
+      "last_change": "2026-06-07T12:28:52.979Z - Plex visible/HLS QA",
+      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
+      "progress": 20,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
     },
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T12:26:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
-      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
+      "last_change": "2026-06-07T12:28:06Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=38.",
       "progress": 30,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
@@ -306,7 +306,7 @@
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
       "last_change": "2026-06-07T10:19:18Z - Durable PlatformGate ownership active",
-      "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=1; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
+      "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=38; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
       "progress": 18,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
       "stall_risk": "Medium"
