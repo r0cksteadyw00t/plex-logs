@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-07T22:37:07Z",
-  "current_step": "validation_overlap_running",
+  "status": "RUNNING",
+  "updated_utc": "2026-06-07T23:00:20Z",
+  "current_step": "direct_strm_admission_required",
   "jason_action_required": false,
   "counts": {
-    "movies": 20,
+    "movies": 21,
     "tv": 10,
-    "total": 30
+    "total": 31
   },
   "canary_status": "WAITING_PLATFORM_GATE_WITH_STAGED_CANDIDATES",
   "canary_milestone": "CANARY_READY_TO_PUBLISH_AFTER_GATE",
@@ -19,17 +19,7 @@
   "direct_strm_retry_held_count": 0,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
-  "overlap_running": [
-    {
-      "name": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "ok": true,
-      "status": "Running",
-      "scheduled_state": "Enabled",
-      "last_run": "8/06/2026 8:37:03 AM",
-      "last_result": "267009",
-      "next_run": "N/A"
-    }
-  ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans",
@@ -37,15 +27,25 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 20124
+          "pid": 35836
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 1288
+          "pid": 36332
         }
       ]
+    },
+    {
+      "action": "start_direct_strm_admission_gate_task",
+      "result": {
+        "task": "ScarFLIX_v2_DirectStrmAdmissionGate",
+        "enable_ok": true,
+        "run_ok": true,
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\"."
+      }
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Direct STRM admission has not passed for visible playback sources."
 }
