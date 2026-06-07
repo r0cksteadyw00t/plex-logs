@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T12:49:06.242Z",
+  "updated_utc": "2026-06-07T12:51:03Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -21,51 +21,52 @@
     "direct_strm_mirror_created": 0,
     "direct_strm_mirror_updated": 0,
     "direct_strm_mirror_written_count": 0,
-    "visible_qa_count": 46,
-    "visible_qa_movies": 36,
-    "visible_qa_tv": 10,
-    "snapshot_scoped_health_status": "PASS",
-    "global_health_status": "REVIEW",
+    "visible_qa_count": 1,
+    "visible_qa_movies": null,
+    "visible_qa_tv": 1,
+    "snapshot_scoped_health_status": "REVIEW",
+    "global_health_status": "UNKNOWN",
     "global_health_blocking": false,
-    "global_health_snapshot_count_match": true,
-    "platform_gate_blocked_by": "none",
+    "global_health_snapshot_count_match": false,
+    "platform_gate_blocked_by": "snapshot_scoped_qa",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON"
+    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
+    "plex_safe_webdav_visible_rows": 46
   },
   "platform_health_contract": {
     "platform_gate_requires": "snapshot_scoped_qa",
-    "snapshot_scoped_health_status": "PASS",
-    "snapshot_blocker_count": 0,
-    "global_health_status": "REVIEW",
+    "snapshot_scoped_health_status": "REVIEW",
+    "snapshot_blocker_count": 2,
+    "global_health_status": "UNKNOWN",
     "global_health_blocking": false,
     "global_health_reason": "visibility_only_non_blocking",
-    "global_health_snapshot_count_match": true,
-    "global_health_client_safe_live_parts": 46,
-    "expected_client_safe_live_parts": 46,
-    "blocked_by": "none"
+    "global_health_snapshot_count_match": false,
+    "global_health_client_safe_live_parts": null,
+    "expected_client_safe_live_parts": 0,
+    "blocked_by": "snapshot_scoped_qa"
   },
   "automation_health": {
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
+    "controller_updated_age_minutes": 3,
     "platform_child_progress_age_minutes": 1,
-    "mirror_updated_age_minutes": 1,
+    "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T12:53:14Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Health",
-    "file": "D:/PlexTools/logs/scarflix_v2_health_status_20260607.log",
-    "last_progress_utc": "2026-06-07T12:48:29.728Z",
+    "stage": "Plex client decision QA",
+    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
+    "last_progress_utc": "2026-06-07T12:50:09.408Z",
     "age_minutes": 1,
-    "last_line": "[2026-06-07T12:48:29Z] [INFO] Health status publishing",
-    "pass_lines": 0,
-    "review_lines": 0,
-    "info_lines": 15
+    "last_line": "[2026-06-07T12:50:09Z] [REVIEW] deferred because lock is active: D:\\PlexTools\\state\\scarflix_v2\\plex_client_decision_qa.lock",
+    "pass_lines": 56,
+    "review_lines": 14,
+    "info_lines": 10
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -76,7 +77,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T12:48:03Z",
+    "updated_utc": "2026-06-07T12:50:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -91,7 +92,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T12:48:06Z",
+    "updated_utc": "2026-06-07T12:50:04Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -166,6 +167,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-07T12:50:09.408Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-07T12:50:09Z] [REVIEW] deferred because lock is active: D:\\PlexTools\\state\\scarflix_v2\\plex_client_decision_qa.lock"
+    },
+    {
       "utc": "2026-06-07T12:48:29.728Z",
       "title": "PlatformGate child QA active: Health",
       "detail": "Latest child QA line: [2026-06-07T12:48:29Z] [INFO] Health status publishing"
@@ -184,11 +190,6 @@
       "utc": "2026-06-07T12:46:10.110Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
       "detail": "Latest child QA line: [2026-06-07T12:46:09Z] [INFO] Visible catalog QA starting MaxItems=0 HideFailed=True PathListFile="
-    },
-    {
-      "utc": "2026-06-07T12:44:43.541Z",
-      "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-07T12:44:43Z] [PASS] Decision passed: metadata=40513 title=Pulp Fiction"
     },
     {
       "utc": "2026-06-07T10:41:49.049Z",
@@ -249,8 +250,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T12:48:29.728Z - Health",
-      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=PASS_IDEMPOTENT, eligible=34, already_current=34. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=37. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=1 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T12:50:09.408Z - Plex client decision QA",
+      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=PASS_IDEMPOTENT, eligible=34, already_current=34. Visible QA rows are 1 and are not counted as delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=37. PlatformGate=REVIEW/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=1 min; owner_pid=24768; child_pid=.",
       "progress": 25,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -258,7 +259,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T12:48:06Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T12:50:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=38.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -325,5 +326,129 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
+  },
+  "grokbuild_forensic_agent": {
+    "status": "ACTIVE",
+    "updated_utc": "2026-06-07T12:51:03Z",
+    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
+    "implementation": "node_native",
+    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
+    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
+  },
+  "node_watchdog_5min": {
+    "component": "jasonos_prime_node_watchdog_5min",
+    "status": "ACTIVE",
+    "updated_utc": "2026-06-07T12:51:03Z",
+    "jason_action_required": false,
+    "cadence": "every 5 minutes",
+    "counts": {
+      "legacy_movie_strm": 28,
+      "legacy_tv_strm": 10,
+      "legacy_total_strm": 38,
+      "plex_safe_webdav_visible_rows": 46
+    },
+    "grokbuild_status": "ACTIVE",
+    "grok_peer_bridge_status": "LOCAL_ONLY_NO_TOKEN",
+    "platform_gate_status": "PASS",
+    "direct_strm_mirror_status": {
+      "component": "scarflix_v2_direct_strm_mirror",
+      "status": "REVIEW_NO_NEW_WRITES",
+      "updated_utc": "2026-06-07T12:51:04Z",
+      "platform_gate_status": "PASS",
+      "platform_snapshot_id": "20260607T101728Z",
+      "snapshot_rows": 46,
+      "map_entries": 1,
+      "eligible_entries": 0,
+      "already_current": 0,
+      "counts_before": {
+        "movies": 28,
+        "tv": 10
+      },
+      "counts_after": {
+        "movies": 28,
+        "tv": 10
+      },
+      "new_total_since_before": 0,
+      "created": 0,
+      "updated": 0,
+      "written_count": 0,
+      "skipped_count": 1,
+      "written": [],
+      "skipped_top": [
+        {
+          "title": "Your Friends & Neighbors",
+          "reason": "not_in_latest_platform_gate_snapshot"
+        }
+      ],
+      "plex_scan_triggered": {
+        "ok": true,
+        "reason": "direct STRM mirror already current; no scan needed"
+      },
+      "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260607.log"
+    },
+    "canary_status": "RUNNING",
+    "canary_status_age_seconds": 419,
+    "safe_pipeline_log_age_seconds": 50,
+    "safe_pipeline_lock_age_seconds": null,
+    "stale_running_canary": false,
+    "actions": [
+      {
+        "action": "refresh_grokbuild",
+        "ok": true,
+        "detail": "ok"
+      },
+      {
+        "action": "refresh_grok_peer_bridge",
+        "ok": true,
+        "detail": "ok"
+      },
+      {
+        "action": "run_direct_strm_mirror",
+        "ok": true,
+        "detail": "ok"
+      },
+      {
+        "action": "trigger_public_mirror",
+        "ok": true,
+        "detail": "pid=41744"
+      }
+    ],
+    "blockers": []
+  },
+  "direct_strm_mirror": {
+    "component": "scarflix_v2_direct_strm_mirror",
+    "status": "REVIEW_NO_NEW_WRITES",
+    "updated_utc": "2026-06-07T12:51:04Z",
+    "platform_gate_status": "PASS",
+    "platform_snapshot_id": "20260607T101728Z",
+    "snapshot_rows": 46,
+    "map_entries": 1,
+    "eligible_entries": 0,
+    "already_current": 0,
+    "counts_before": {
+      "movies": 28,
+      "tv": 10
+    },
+    "counts_after": {
+      "movies": 28,
+      "tv": 10
+    },
+    "new_total_since_before": 0,
+    "created": 0,
+    "updated": 0,
+    "written_count": 0,
+    "skipped_count": 1,
+    "written": [],
+    "skipped_top": [
+      {
+        "title": "Your Friends & Neighbors",
+        "reason": "not_in_latest_platform_gate_snapshot"
+      }
+    ],
+    "plex_scan_triggered": {
+      "ok": true,
+      "reason": "direct STRM mirror already current; no scan needed"
+    },
+    "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260607.log"
   }
 }
