@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T08:32:04.178Z
+Updated UTC: 2026-06-07T08:34:01.777Z
 Source: live status merge
 
-- 2026-06-07T08:32:01.938Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T08:32:01Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=56 passed=49 failed_detected=7 pruned=0
-- 2026-06-07T08:31:58Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=5200; child_pid=22416
-- 2026-06-07T08:31:58Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=56; blockers=0
-- 2026-06-07T08:28:19.236Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
-- 2026-06-07T08:28:07Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
-- 2026-06-07T08:27:16Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=32492; child_pid=
-- 2026-06-07T08:27:16Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=56; blockers=0
+- 2026-06-07T08:33:37Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=26128; child_pid=23264
+- 2026-06-07T08:33:37Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
+- 2026-06-07T08:33:25.862Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T08:33:25Z] [INFO] Running concurrent WebDAV active gate worker for 56 entries.
+- 2026-06-07T08:33:15.895Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
+- 2026-06-07T08:33:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
+- 2026-06-07T08:32:08Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=5200; child_pid=
+- 2026-06-07T08:32:08Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=56; blockers=0
 - 2026-06-07T07:58:10Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-07T06:43:09Z - Autonomous controller: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED: transient-only REVIEW; relaunched detached PlatformGate runner
 - 2026-06-07T06:30:54.134Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T06:30:54Z] [PASS] Decision passed: metadata=41103 title=Yankee White
