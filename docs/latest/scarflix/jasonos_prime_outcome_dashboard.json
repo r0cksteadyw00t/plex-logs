@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T06:33:03.620Z",
+  "updated_utc": "2026-06-07T06:35:01.395Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -25,10 +25,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
+    "controller_updated_age_minutes": 2,
     "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-07T06:33:15Z",
+    "next_check_utc": "2026-06-07T06:38:16Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -36,9 +36,9 @@
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260607.log",
-    "last_progress_utc": "2026-06-07T06:32:19.460Z",
+    "last_progress_utc": "2026-06-07T06:34:11.398Z",
     "age_minutes": 1,
-    "last_line": "[2026-06-07T06:32:19Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=56 passed=55 failed_detected=1 pruned=0",
+    "last_line": "[2026-06-07T06:34:11Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=56 passed=55 failed_detected=1 pruned=0",
     "pass_lines": 12,
     "review_lines": 8,
     "info_lines": 60
@@ -46,7 +46,7 @@
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-07T06:28:09Z",
+    "updated_utc": "2026-06-07T06:33:06Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -57,17 +57,17 @@
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
-    "status": "RUNNING",
-    "current_step": "running_platform_gate_attempt_2",
+    "status": "REVIEW",
+    "current_step": "platform_gate_review",
     "owner_pid": 38848,
-    "child_pid": 42108,
-    "last_progress_utc": "2026-06-07T06:32:50Z",
-    "heartbeat_updated_utc": "2026-06-07T06:32:50Z",
+    "child_pid": "",
+    "last_progress_utc": "2026-06-07T06:34:15Z",
+    "heartbeat_updated_utc": "2026-06-07T06:34:15Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T06:32:01Z",
+    "updated_utc": "2026-06-07T06:34:01Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -94,44 +94,44 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T06:32:50Z",
+      "utc": "2026-06-07T06:34:15Z",
+      "title": "Durable PlatformGate runner REVIEW",
+      "detail": "Step platform_gate_review; owner_pid=38848; child_pid="
+    },
+    {
+      "utc": "2026-06-07T06:34:15Z",
+      "title": "PlatformGate checkpoint REVIEW",
+      "detail": "Step platform_gate_review; visible=56; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T06:34:11.398Z",
+      "title": "PlatformGate child QA active: WebDAV active gate",
+      "detail": "Latest child QA line: [2026-06-07T06:34:11Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=56 passed=55 failed_detected=1 pruned=0"
+    },
+    {
+      "utc": "2026-06-07T06:33:50Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_2; owner_pid=38848; child_pid=42108"
     },
     {
-      "utc": "2026-06-07T06:32:50Z",
+      "utc": "2026-06-07T06:33:50Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_2; visible=56; blockers=0"
     },
     {
-      "utc": "2026-06-07T06:32:19.460Z",
-      "title": "PlatformGate child QA active: WebDAV active gate",
-      "detail": "Latest child QA line: [2026-06-07T06:32:19Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=56 passed=55 failed_detected=1 pruned=0"
+      "utc": "2026-06-07T06:33:20.127Z",
+      "title": "JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51",
+      "detail": "Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`."
     },
     {
-      "utc": "2026-06-07T06:30:58Z",
-      "title": "Durable PlatformGate runner REVIEW",
-      "detail": "Step platform_gate_review; owner_pid=3452; child_pid="
-    },
-    {
-      "utc": "2026-06-07T06:30:58Z",
-      "title": "PlatformGate checkpoint REVIEW",
-      "detail": "Step platform_gate_review; visible=56; blockers=0"
+      "utc": "2026-06-07T06:33:06Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T06:30:54.134Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-07T06:30:54Z] [PASS] Decision passed: metadata=41103 title=Yankee White"
-    },
-    {
-      "utc": "2026-06-07T06:28:19.120Z",
-      "title": "JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51",
-      "detail": "Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`."
-    },
-    {
-      "utc": "2026-06-07T06:28:08Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T06:26:44.895Z",
@@ -168,7 +168,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-07T06:33:03.620Z - truthful AI capability metric refreshed",
+      "last_change": "2026-06-07T06:35:01.395Z - truthful AI capability metric refreshed",
       "current": "8791/8805 service reachability is not enough. Backend supports SSE chat, JSON health, tool traces and command queue after the patched 8805 service is running.",
       "progress": 40,
       "eta": "usable after 8805 patched service restart and live chat smoke test",
@@ -177,8 +177,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T06:32:19.460Z - WebDAV active gate",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 56 and are not counted as delivered catalogue. PlatformGate=RUNNING; durable=RUNNING; child_stage=WebDAV active gate; child_age=1 min; owner_pid=38848; child_pid=42108.",
+      "last_change": "2026-06-07T06:34:11.398Z - WebDAV active gate",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 56 and are not counted as delivered catalogue. PlatformGate=REVIEW; durable=REVIEW; child_stage=WebDAV active gate; child_age=1 min; owner_pid=38848; child_pid=.",
       "progress": 5,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -186,9 +186,9 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T06:32:01Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T06:34:01Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
-      "progress": 30,
+      "progress": 25,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
     },
@@ -240,7 +240,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T06:32:50Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T06:34:15Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=1; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
       "progress": 18,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
