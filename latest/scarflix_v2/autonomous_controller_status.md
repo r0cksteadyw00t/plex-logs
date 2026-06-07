@@ -3,7 +3,7 @@
 Status: REVIEW_TRANSIENT
 Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
 Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-07T11:38:46Z
+Updated UTC: 2026-06-07T11:43:06Z
 Current step: candidate_source_model_review
 Jason action required: False
 
@@ -12,7 +12,7 @@ Jason action required: False
 - status: PASS
 - stage: platform_gate_pass
 - visible: 46
-- transient_failures: 7
+- transient_failures: 0
 - prunable_failures: 0
 
 ## Candidate Source Model
@@ -21,13 +21,13 @@ Jason action required: False
 
 ## Infrastructure
 - rclone_mount_status: UNKNOWN
-- s_media_ready: False
-- s_catalog_ready: False
+- s_media_ready: True
+- s_catalog_ready: True
 - mount_selfheal_attempted: False
 
 ## Action
 - action_taken: Candidate-source model requires engineering review before catalogue expansion
-- next_check_utc: 2026-06-07T11:43:48Z
+- next_check_utc: 2026-06-07T11:48:08Z
 
 ## Blockers
 - seeder_stage_only_not_plex_visible
