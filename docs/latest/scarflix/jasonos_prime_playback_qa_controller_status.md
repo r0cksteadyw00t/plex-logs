@@ -1,10 +1,10 @@
 # JasonOS Prime Playback QA Controller
 
 Status: RUNNING
-Updated UTC: 2026-06-07T23:00:20Z
-Current step: direct_strm_admission_required
+Updated UTC: 2026-06-07T23:02:33Z
+Current step: plex_client_decision_qa_started
 Direct STRM total: 31
-Direct STRM admission: RUNNING_ALREADY
-Decision QA: PASS
-Concurrent QA: REVIEW
-Next action: Direct STRM admission has not passed for visible playback sources.
+Direct STRM admission: REVIEW_RETRY_HELD
+Decision QA: UNKNOWN
+Concurrent QA: UNKNOWN
+Next action: Detached Plex client decision QA is running or queued.
