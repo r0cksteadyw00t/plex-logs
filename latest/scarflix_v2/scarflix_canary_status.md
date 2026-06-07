@@ -1,14 +1,15 @@
 # ScarFLIX Canary
 
-Updated UTC: 2026-06-07T09:34:08.353Z
-Status: WAITING_PLATFORM_GATE
-Milestone: CANARY_WAITING
+Updated UTC: 2026-06-07T09:56:08.314Z
+Status: STAGING_CANDIDATES
+Milestone: CANARY_STAGING_STARTED
 PlatformGate: REVIEW
 Actual .strm: movies=1, tv=0, total=1
+Staged candidates: 3
 Baseline .strm: movies=1, tv=0, total=1
 New .strm since canary start: 0
 Pipeline PID: 
-Next action: Wait for PlatformGate PASS before starting the canary expansion pipeline.
+Next action: Stage-only candidate generation started; candidates remain outside Plex visibility.
 
 Policy:
 - This is a controlled canary, not broad catalogue expansion.
