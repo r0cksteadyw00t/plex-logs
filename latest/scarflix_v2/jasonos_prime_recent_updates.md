@@ -1,10 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T00:14:02.605Z
+Updated UTC: 2026-06-07T00:16:01.026Z
 Source: live status merge
 
-- 2026-06-07T00:13:49Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
-- 2026-06-07T00:13:49Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-07T00:15:49Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248
+- 2026-06-07T00:15:49Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=78; blockers=0
+- 2026-06-07T00:14:49.012Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T00:14:49Z] [PASS] QA passed: part=111481 title=Superman
 - 2026-06-07T00:13:47.601Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
 - 2026-06-07T00:13:44.700Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T00:13:44Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
 - 2026-06-07T00:13:33Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-06T22:43:28.018Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:21: Phone-facing GitHub Pages dashboard delivery was repaired. Cause: GitHub Pages for `r0cksteadyw00t/plex-logs` is configured to publish from `main:/docs`. `JasonOS_Prime_PublicMirrorPublisher.js` was publishing live dashboard HTML/JSON to repository-root `latest/...`, which made raw/API status current but left the Pa...
 - 2026-06-06T22:18:23.534Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 08:12: The dashboard `Recent achievements` panel was stale even though the main dashboard/status JSON was current. Cause: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_recent_updates.json` was frozen at `2026-06-06T10:55:00Z`. `JasonOS_Prime_OutcomeDashboard.js` returned that stored file unchanged whenever it existed.
 - 2026-06-06T22:08:23.808Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 07:58: Eight-hour apparent dashboard stall was diagnosed as a reporting and PlatformGate control-flow issue, not a total automation failure. Durable PlatformGate stayed at the parent milestone `PLATFORM_GATE_RUNNING`. Child QA did progress from VisibleCatalogQA into Plex client decision QA, but the dashboard did not expose...
-- 2026-06-06T10:55:00Z - Watchdog-of-watchdog sentinel added: Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell.
