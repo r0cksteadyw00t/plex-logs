@@ -1,18 +1,18 @@
 # ScarFLIX v2 Autonomous Controller
 
 Status: RUNNING
-Milestone state: PLATFORM_GATE_RUNNING
+Milestone state: PLATFORM_GATE_FAIL_SOURCE_QUARANTINE_REQUIRED
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-07T00:03:09Z
-Current step: PLATFORM_GATE_CHILD_ACTIVE
+Updated UTC: 2026-06-07T00:07:06Z
+Current step: repeated_transient_source_quarantine_started
 Jason action required: False
 
 ## PlatformGate
 - runner_running: False
-- status: RUNNING
-- stage: PLATFORM_GATE_CHILD_ACTIVE
+- status: REVIEW
+- stage: platform_gate_review
 - visible: 78
-- transient_failures: 0
+- transient_failures: 13
 - prunable_failures: 0
 
 ## Candidate Source Model
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: PlatformGate child QA activity is fresh; no duplicate runner launch
-- next_check_utc: 2026-06-07T00:08:11Z
+- action_taken: Repeated transient-only PlatformGate REVIEW reached retry cap; started source/release quarantine with IncludeTransient so failed sources are removed from visibility while titles remain wanted
+- next_check_utc: 2026-06-07T00:12:07Z
 
 ## Blockers
 - none
