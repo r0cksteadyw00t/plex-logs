@@ -2,57 +2,57 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "PASS",
     "stall_risk":  "Low",
-    "updated_utc":  "2026-06-07T21:42:03Z",
-    "started_utc":  "2026-06-07T21:42:02Z",
-    "duration_seconds":  1,
+    "updated_utc":  "2026-06-07T21:43:12Z",
+    "started_utc":  "2026-06-07T21:43:07Z",
+    "duration_seconds":  5,
     "will_progress_without_codex":  true,
     "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
-                    "controller_age_minutes":  4,
+                    "controller_age_minutes":  1,
                     "platform_checkpoint_age_minutes":  0,
                     "durable_platform_gate_age_minutes":  0,
                     "platform_progress_fresh":  true,
-                    "dashboard_age_minutes":  1,
-                    "mirror_age_minutes":  0,
+                    "dashboard_age_minutes":  0,
+                    "mirror_age_minutes":  2,
                     "movie_strm_count":  19,
                     "tv_strm_count":  10,
                     "total_strm_count":  29,
-                    "previous_total_strm_count":  30,
-                    "catalogue_no_growth":  false,
-                    "platform_checkpoint_step":  "platform_gate_review"
+                    "previous_total_strm_count":  29,
+                    "catalogue_no_growth":  true,
+                    "platform_checkpoint_step":  "existing_durable_owner_active"
                 },
     "tasks":  {
                   "controller":  {
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Running",
-                                     "last_run_time":  "8/06/2026 7:42:00 AM",
-                                     "next_run_time":  "8/06/2026 7:47:00 AM",
+                                     "last_run_time":  "8/06/2026 7:43:00 AM",
+                                     "next_run_time":  "8/06/2026 7:48:00 AM",
                                      "last_result":  "267009"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
                                           "exists":  true,
                                           "status":  "Running",
-                                          "last_run_time":  "8/06/2026 7:42:00 AM",
+                                          "last_run_time":  "8/06/2026 7:43:00 AM",
                                           "next_run_time":  "N/A",
                                           "last_result":  "267009"
                                       },
                   "dashboard":  {
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
-                                    "status":  "Running",
-                                    "last_run_time":  "8/06/2026 7:42:03 AM",
-                                    "next_run_time":  "8/06/2026 7:43:00 AM",
-                                    "last_result":  "267009"
+                                    "status":  "Ready",
+                                    "last_run_time":  "8/06/2026 7:43:00 AM",
+                                    "next_run_time":  "8/06/2026 7:48:00 AM",
+                                    "last_result":  "0"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
                                  "exists":  true,
                                  "status":  "Running",
-                                 "last_run_time":  "8/06/2026 7:42:03 AM",
-                                 "next_run_time":  "8/06/2026 7:44:00 AM",
-                                 "last_result":  "267009"
+                                 "last_run_time":  "8/06/2026 7:43:00 AM",
+                                 "next_run_time":  "8/06/2026 7:53:00 AM",
+                                 "last_result":  "-2147020576"
                              }
               },
     "actions":  [
