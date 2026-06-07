@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T18:42:01.931Z",
+  "updated_utc": "2026-06-07T18:44:04.342Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -49,10 +49,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 352,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 354,
     "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-07T18:45:10Z",
+    "next_check_utc": "2026-06-07T18:48:05Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -61,7 +61,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
     "last_progress_utc": "2026-06-07T12:50:09.408Z",
-    "age_minutes": 352,
+    "age_minutes": 354,
     "last_line": "[2026-06-07T12:50:09Z] [REVIEW] deferred because lock is active: D:\\PlexTools\\state\\scarflix_v2\\plex_client_decision_qa.lock",
     "pass_lines": 56,
     "review_lines": 14,
@@ -70,13 +70,13 @@
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "High",
-    "updated_utc": "2026-06-07T18:38:13Z",
+    "updated_utc": "2026-06-07T18:43:05Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "ALERT",
     "alert_level": "HIGH",
-    "updated_utc": "2026-06-07T18:40:03Z",
+    "updated_utc": "2026-06-07T18:43:03Z",
     "codex_action_required": true,
     "jason_action_required": false
   },
@@ -91,7 +91,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T18:41:04Z",
+    "updated_utc": "2026-06-07T18:43:03Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -112,7 +112,7 @@
   "scarflix_canary": {
     "status": "PASS_PENDING_PLAYBACK_QA",
     "milestone": "CANARY_STRM_CREATED",
-    "updated_utc": "2026-06-07T18:34:02.394Z",
+    "updated_utc": "2026-06-07T18:44:02.414Z",
     "platform_gate_status": "REVIEW",
     "actual_strm_counts": {
       "movies": 28,
@@ -129,7 +129,7 @@
     "pipeline_running": false,
     "pipeline_pid": 0,
     "staging_running": true,
-    "staging_pid": 22024,
+    "staging_pid": 43940,
     "next_action": "Run/inspect Plex client playback QA for the new canary items.",
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/scarflix_canary_status.json"
   },
@@ -166,12 +166,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T18:40:15.517Z",
+      "utc": "2026-06-07T18:43:11.469Z",
       "title": "PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23",
       "detail": "Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v..."
     },
     {
-      "utc": "2026-06-07T18:40:04Z",
+      "utc": "2026-06-07T18:43:05Z",
       "title": "Autonomous controller: unhandled_platform_gate_state",
       "detail": "none"
     },
@@ -250,7 +250,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T12:50:09.408Z - Plex client decision QA",
-      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=REVIEW_NO_NEW_WRITES, eligible=0, already_current=0. Visible QA rows are 1 and are not counted as delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PASS_PENDING_PLAYBACK_QA/CANARY_STRM_CREATED, staged=0, new_visible_strm=37. PlatformGate=REVIEW/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=352 min; owner_pid=24768; child_pid=.",
+      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=REVIEW_NO_NEW_WRITES, eligible=0, already_current=0. Visible QA rows are 1 and are not counted as delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PASS_PENDING_PLAYBACK_QA/CANARY_STRM_CREATED, staged=0, new_visible_strm=37. PlatformGate=REVIEW/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=354 min; owner_pid=24768; child_pid=.",
       "progress": 20,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "High"
@@ -258,7 +258,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T18:41:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T18:43:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=38.",
       "progress": 30,
       "eta": "runs every 5 minutes",
