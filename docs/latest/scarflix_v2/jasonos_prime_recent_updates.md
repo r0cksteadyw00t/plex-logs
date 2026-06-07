@@ -1,9 +1,9 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T10:55:03.393Z
+Updated UTC: 2026-06-07T10:57:02.855Z
 Source: live status merge
 
-- 2026-06-07T10:50:57.292Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T10:50:57Z] [PASS] QA passed: part=112091 title=The Green Mile
+- 2026-06-07T10:56:10.967Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T10:56:10Z] [INFO] Visible rows selected for QA: 50
 - 2026-06-07T10:48:43.340Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
 - 2026-06-07T10:48:14Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T10:41:49.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:41:49Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
