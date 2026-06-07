@@ -1,9 +1,9 @@
 # ScarFLIX v2 Durable PlatformGate Runner
 
-Updated UTC: 2026-06-07T06:43:12Z
+Updated UTC: 2026-06-07T06:44:07Z
 Status: RUNNING
 Current step: existing_durable_owner_active
-Owner PID: 25196
+Owner PID: 15508
 Child PID: 0
 Child QA last progress UTC: 
 Child QA stale minutes: 
