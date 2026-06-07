@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T12:30:29Z",
+  "updated_utc": "2026-06-07T12:31:47Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -44,23 +44,23 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 7,
-    "platform_child_progress_age_minutes": 1,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 8,
+    "platform_child_progress_age_minutes": 0,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-07T12:28:08Z",
-    "next_check_age_minutes": 2,
+    "next_check_age_minutes": 3,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T12:28:52.979Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-07T12:28:52Z] [REVIEW] QA failed: part=111277 title=The Dark Knight reason=Plex Transcoder HLS probe timed out",
+    "last_progress_utc": "2026-06-07T12:31:02.346Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-07T12:31:02Z] [REVIEW] QA failed: part=111282 title=Spirited Away reason=Plex Transcoder HLS probe timed out",
     "pass_lines": 59,
-    "review_lines": 14,
-    "info_lines": 7
+    "review_lines": 15,
+    "info_lines": 6
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -69,9 +69,9 @@
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-07T12:28:04Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-07T12:30:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -86,7 +86,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T12:29:03Z",
+    "updated_utc": "2026-06-07T12:30:03Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -161,9 +161,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T12:28:52.979Z",
+      "utc": "2026-06-07T12:31:02.346Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T12:28:52Z] [REVIEW] QA failed: part=111277 title=The Dark Knight reason=Plex Transcoder HLS probe timed out"
+      "detail": "Latest child QA line: [2026-06-07T12:31:02Z] [REVIEW] QA failed: part=111282 title=Spirited Away reason=Plex Transcoder HLS probe timed out"
     },
     {
       "utc": "2026-06-07T12:23:13.923Z",
@@ -244,8 +244,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T12:28:52.979Z - Plex visible/HLS QA",
-      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T12:31:02.346Z - Plex visible/HLS QA",
+      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
       "progress": 20,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -253,7 +253,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T12:29:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T12:30:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=38.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -321,18 +321,10 @@
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
   },
-  "grokbuild_forensic_agent": {
-    "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-07T12:30:29Z",
-    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
-    "implementation": "node_native",
-    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
-    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
-  },
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-07T12:30:29Z",
+    "updated_utc": "2026-06-07T12:31:47Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -346,13 +338,14 @@
     "platform_gate_status": "PASS",
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
-      "status": "REVIEW_NO_NEW_WRITES",
-      "updated_utc": "2026-06-07T12:30:30Z",
+      "status": "PASS_IDEMPOTENT",
+      "updated_utc": "2026-06-07T12:31:48Z",
       "platform_gate_status": "PASS",
       "platform_snapshot_id": "20260607T101728Z",
       "snapshot_rows": 46,
       "map_entries": 64,
       "eligible_entries": 37,
+      "already_current": 37,
       "counts_before": {
         "movies": 28,
         "tv": 10
@@ -565,15 +558,15 @@
         }
       ],
       "plex_scan_triggered": {
-        "ok": false,
-        "reason": "no direct STRM changes"
+        "ok": true,
+        "reason": "direct STRM mirror already current; no scan needed"
       },
       "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260607.log"
     },
     "canary_status": "RUNNING",
-    "canary_status_age_seconds": 260,
-    "safe_pipeline_log_age_seconds": 1114,
-    "safe_pipeline_lock_age_seconds": 1154,
+    "canary_status_age_seconds": 339,
+    "safe_pipeline_log_age_seconds": 1192,
+    "safe_pipeline_lock_age_seconds": 1232,
     "stale_running_canary": false,
     "actions": [
       {
@@ -594,20 +587,21 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=42264"
+        "detail": "pid=30420"
       }
     ],
     "blockers": []
   },
   "direct_strm_mirror": {
     "component": "scarflix_v2_direct_strm_mirror",
-    "status": "REVIEW_NO_NEW_WRITES",
-    "updated_utc": "2026-06-07T12:30:30Z",
+    "status": "PASS_IDEMPOTENT",
+    "updated_utc": "2026-06-07T12:31:48Z",
     "platform_gate_status": "PASS",
     "platform_snapshot_id": "20260607T101728Z",
     "snapshot_rows": 46,
     "map_entries": 64,
     "eligible_entries": 37,
+    "already_current": 37,
     "counts_before": {
       "movies": 28,
       "tv": 10
@@ -820,9 +814,17 @@
       }
     ],
     "plex_scan_triggered": {
-      "ok": false,
-      "reason": "no direct STRM changes"
+      "ok": true,
+      "reason": "direct STRM mirror already current; no scan needed"
     },
     "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260607.log"
+  },
+  "grokbuild_forensic_agent": {
+    "status": "REVIEW_STALE_PROGRESS",
+    "updated_utc": "2026-06-07T12:31:47Z",
+    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
+    "implementation": "node_native",
+    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
+    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
   }
 }
