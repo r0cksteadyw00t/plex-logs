@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T02:46:07.856Z
+Updated UTC: 2026-06-07T02:48:01.612Z
 Source: live status merge
 
-- 2026-06-07T02:46:05Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=46788; child_pid=44060
-- 2026-06-07T02:45:35Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
-- 2026-06-07T02:45:30.079Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T02:45:30Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
+- 2026-06-07T02:47:37Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=46788; child_pid=27944
+- 2026-06-07T02:47:37Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=65; blockers=0
+- 2026-06-07T02:47:06.657Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T02:47:06Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=65 passed=63 failed_detected=2 pruned=0
 - 2026-06-07T02:44:06Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39172; child_pid=
 - 2026-06-07T02:44:06Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=65; blockers=0
 - 2026-06-07T02:43:19.931Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
