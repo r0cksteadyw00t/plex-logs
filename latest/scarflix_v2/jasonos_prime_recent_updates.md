@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T05:56:02.926Z
+Updated UTC: 2026-06-07T05:58:03.212Z
 Source: live status merge
 
+- 2026-06-07T05:57:49Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=31116; child_pid=
+- 2026-06-07T05:57:49Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=65; blockers=0
+- 2026-06-07T05:56:33Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=31116; child_pid=38128
+- 2026-06-07T05:56:33Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
 - 2026-06-07T05:54:13.636Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
-- 2026-06-07T05:50:07Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=41708; child_pid=
-- 2026-06-07T05:50:07Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=65; blockers=0
-- 2026-06-07T05:49:30Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=41708; child_pid=7088
-- 2026-06-07T05:49:30Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
 - 2026-06-07T05:49:01.719Z - JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36: Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion.
 - 2026-06-07T05:48:49Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-07T05:43:07Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
