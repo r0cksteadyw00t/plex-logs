@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T11:13:06.596Z",
+  "updated_utc": "2026-06-07T11:15:06.439Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,28 +42,28 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
+    "controller_updated_age_minutes": 2,
     "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-07T11:17:39Z",
+    "next_check_utc": "2026-06-07T11:18:26Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex client decision QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T11:12:16.648Z",
+    "stage": "Plex visible/HLS QA",
+    "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
+    "last_progress_utc": "2026-06-07T11:14:02.827Z",
     "age_minutes": 1,
-    "last_line": "[2026-06-07T11:12:16Z] [PASS] Decision passed: metadata=41196 title=Mulan",
-    "pass_lines": 73,
-    "review_lines": 3,
-    "info_lines": 4
+    "last_line": "[2026-06-07T11:14:01Z] [PASS] QA passed: part=112097 title=Spider-Man: Into the Spider-Verse",
+    "pass_lines": 69,
+    "review_lines": 5,
+    "info_lines": 6
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-07T11:09:40Z",
+    "updated_utc": "2026-06-07T11:13:17Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -84,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T11:12:02Z",
+    "updated_utc": "2026-06-07T11:14:05Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -105,7 +105,7 @@
   "scarflix_canary": {
     "status": "RUNNING",
     "milestone": "CANARY_PIPELINE_RUNNING",
-    "updated_utc": "2026-06-07T11:04:03.133Z",
+    "updated_utc": "2026-06-07T11:14:03.687Z",
     "platform_gate_status": "PASS",
     "actual_strm_counts": {
       "movies": 1,
@@ -159,12 +159,17 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T11:12:49.039Z",
+      "utc": "2026-06-07T11:14:02.827Z",
+      "title": "PlatformGate child QA active: Plex visible/HLS QA",
+      "detail": "Latest child QA line: [2026-06-07T11:14:01Z] [PASS] QA passed: part=112097 title=Spider-Man: Into the Spider-Verse"
+    },
+    {
+      "utc": "2026-06-07T11:13:33.254Z",
       "title": "PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23",
       "detail": "Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v..."
     },
     {
-      "utc": "2026-06-07T11:12:33Z",
+      "utc": "2026-06-07T11:13:19Z",
       "title": "Autonomous controller: candidate_source_model_review",
       "detail": "Candidate-source model requires engineering review before catalogue expansion"
     },
@@ -172,11 +177,6 @@
       "utc": "2026-06-07T11:12:16.648Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-07T11:12:16Z] [PASS] Decision passed: metadata=41196 title=Mulan"
-    },
-    {
-      "utc": "2026-06-07T11:01:59.120Z",
-      "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T11:01:59Z] [REVIEW] QA failed: part=111427 title=Honey Don't! reason=Plex Transcoder HLS probe timed out"
     },
     {
       "utc": "2026-06-07T10:41:49.049Z",
@@ -242,8 +242,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T11:12:16.648Z - Plex client decision QA",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=21, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=1 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T11:14:02.827Z - Plex visible/HLS QA",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=21, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -251,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T11:12:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T11:14:05Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
