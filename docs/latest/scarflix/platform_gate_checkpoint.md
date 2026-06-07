@@ -1,37 +1,37 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-07T20:51:37Z
+Generated UTC: 2026-06-07T20:55:27Z
 
 Status: REVIEW
-Started UTC: 2026-06-07T20:51:06Z
-Ended UTC: 2026-06-07T20:51:36Z
-Snapshot ID: 20260607T205122Z
-Snapshot hash: 4a623f46f7ec74fe5e1aac7956f0d075b9ae0bce84ca544f1301555e747b7ec2
+Started UTC: 2026-06-07T20:55:06Z
+Ended UTC: 2026-06-07T20:55:26Z
+Snapshot ID: 20260607T205520Z
+Snapshot hash: 086065e6f3ae448304dc69f0dc0b995b8f63470ba8d31516cca4a194f16f397f
 Same-snapshot confirmed: False
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
 
 ## Visible Catalogue
-- visible: 1
-- movies: 0
-- tv: 1
+- visible: 9
+- movies: 4
+- tv: 5
 
 ## QA
-- WebDAV active gate: PASS, checked=1
-- Plex visible/HLS QA: PASS, checked=1
-- Plex client decision QA: PASS, checked=1
-- 5-concurrent stream QA: REVIEW, target=5, map_tested=1, visible_tested=1
+- WebDAV active gate: PASS, checked=3
+- Plex visible/HLS QA: FAIL, checked=9
+- Plex client decision QA: UNKNOWN, checked=-1
+- 5-concurrent stream QA: UNKNOWN, target=, map_tested=, visible_tested=
 - Health: UNKNOWN
 
 ## Source Handling
-- quarantined/rejected sources: 806
-- transient/retry-held count: 670
-- prunable/permanent count: 136
+- quarantined/rejected sources: 831
+- transient/retry-held count: 685
+- prunable/permanent count: 146
 - seeder rejected-stage skipped: 34
 - publisher rejected-stage skipped: 0
 - top reason codes:
-  - PROVIDER_503: 484
-  - PROVIDER_TIMEOUT: 149
-  - PLEX_INVISIBLE_AFTER_SCAN: 126
+  - PROVIDER_503: 495
+  - PROVIDER_TIMEOUT: 153
+  - PLEX_INVISIBLE_AFTER_SCAN: 136
   - PROVIDER_503_RETRYABLE: 30
   - PLEX_HLS_TIMEOUT: 7
   - PLEX_CODEC_BLOCKED: 4
@@ -51,5 +51,5 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - ScarFLIX_v2_CatalogVisibilityGate: Disabled
 
 ## Blockers
-- concurrent_stream_qa status=REVIEW
-- concurrent_stream_qa did not test at least 5 concurrent streams
+- active_gate checked 3, expected snapshot 9
+- visible_catalog_qa status=FAIL
