@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-07T01:40:01.083Z
+Updated UTC: 2026-06-07T01:42:02.920Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -10,27 +10,27 @@ Will progress without Codex: true
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-06T09:36:10Z - dashboard/status refresh confirmed | 8805 Node brain online; 8791 reachable; local tools/status exposed. | 65% | 1-2 days | Low |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-07T01:39:46.490Z - Plex visible/HLS QA | Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=under 1 min; owner_pid=25656; child_pid=12360. | 42% | after PlatformGate and candidate model PASS | Low |
-| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-07T01:39:02Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1. | 75% | runs every 5 minutes | Low |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-07T01:41:30.876Z - Plex visible/HLS QA | Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=25656; child_pid=12360. | 42% | after PlatformGate and candidate model PASS | Low |
+| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-07T01:41:01Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1. | 75% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-06T14:17:07Z - scheduled task wrappers refreshed | Status PASS; tasks_updated=15; blockers=0. | 100% | active now | Low |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=11. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
 | Swarm Intelligence | Parallel local workers for simulations, status, planning and future missions. | 2026-06-06T08:25:00Z - watchdog swarm escalation marker added | Short scheduled workers active; broader worker swarm pending. | 32% | 2-4 days | Medium |
 | Phone/Multi-Device Federation | Stable remote status/control through public mirror plus tunnel/federation layer. | 2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated | Public mirror PASS; raw status base available. | 47% | 1-3 days | Low |
-| Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-07T01:39:45Z - Durable PlatformGate ownership active | Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck. | 56% | next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion | Low |
+| Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-07T01:41:45Z - Durable PlatformGate ownership active | Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck. | 56% | next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion | Low |
 
 Recent Achievements:
-- 2026-06-07T01:39:46.490Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T01:39:46Z] [PASS] QA passed: part=111481 title=Superman
-- 2026-06-07T01:39:45Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=25656; child_pid=12360
-- 2026-06-07T01:39:45Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T01:41:45Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=25656; child_pid=12360
+- 2026-06-07T01:41:45Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T01:41:30.876Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T01:41:30Z] [PASS] QA passed: part=112086 title=Seven
 - 2026-06-07T01:38:47.134Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22: Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW.
 - 2026-06-07T01:38:35.157Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T01:38:35Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
 - 2026-06-07T01:38:13Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 2 min ago
-- Platform child progress: under 1 min ago
+- Controller updated: 4 min ago
+- Platform child progress: 1 min ago
 - Mirror updated: 1 min ago
 - Platform runner running: false
 - Platform child active: true
