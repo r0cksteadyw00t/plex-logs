@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T12:50:04.379Z",
+  "updated_utc": "2026-06-07T12:52:02.647Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -15,9 +15,9 @@
     "tv_strm_count": 10,
     "total_strm_count": 38,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
-    "direct_strm_mirror_status": "PASS_IDEMPOTENT",
-    "direct_strm_mirror_eligible_entries": 34,
-    "direct_strm_mirror_already_current": 34,
+    "direct_strm_mirror_status": "REVIEW_NO_NEW_WRITES",
+    "direct_strm_mirror_eligible_entries": 0,
+    "direct_strm_mirror_already_current": 0,
     "direct_strm_mirror_created": 0,
     "direct_strm_mirror_updated": 0,
     "direct_strm_mirror_written_count": 0,
@@ -49,8 +49,8 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 0,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 2,
     "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-07T12:53:14Z",
     "next_check_age_minutes": 0,
@@ -60,12 +60,12 @@
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T12:49:39.286Z",
-    "age_minutes": 0,
-    "last_line": "[2026-06-07T12:49:39Z] [REVIEW] deferred because lock is active: D:\\PlexTools\\state\\scarflix_v2\\plex_client_decision_qa.lock",
-    "pass_lines": 58,
-    "review_lines": 13,
-    "info_lines": 9
+    "last_progress_utc": "2026-06-07T12:50:09.408Z",
+    "age_minutes": 2,
+    "last_line": "[2026-06-07T12:50:09Z] [REVIEW] deferred because lock is active: D:\\PlexTools\\state\\scarflix_v2\\plex_client_decision_qa.lock",
+    "pass_lines": 56,
+    "review_lines": 14,
+    "info_lines": 10
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -76,7 +76,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T12:48:03Z",
+    "updated_utc": "2026-06-07T12:50:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -91,7 +91,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T12:49:04Z",
+    "updated_utc": "2026-06-07T12:51:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -166,9 +166,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T12:49:39.286Z",
+      "utc": "2026-06-07T12:50:09.408Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-07T12:49:39Z] [REVIEW] deferred because lock is active: D:\\PlexTools\\state\\scarflix_v2\\plex_client_decision_qa.lock"
+      "detail": "Latest child QA line: [2026-06-07T12:50:09Z] [REVIEW] deferred because lock is active: D:\\PlexTools\\state\\scarflix_v2\\plex_client_decision_qa.lock"
     },
     {
       "utc": "2026-06-07T12:48:29.728Z",
@@ -249,16 +249,16 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T12:49:39.286Z - Plex client decision QA",
-      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=PASS_IDEMPOTENT, eligible=34, already_current=34. Visible QA rows are 1 and are not counted as delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=37. PlatformGate=REVIEW/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
-      "progress": 25,
+      "last_change": "2026-06-07T12:50:09.408Z - Plex client decision QA",
+      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=REVIEW_NO_NEW_WRITES, eligible=0, already_current=0. Visible QA rows are 1 and are not counted as delivered catalogue. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=37. PlatformGate=REVIEW/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=2 min; owner_pid=24768; child_pid=.",
+      "progress": 20,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
     },
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T12:49:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T12:51:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=38.",
       "progress": 30,
       "eta": "runs every 5 minutes",
