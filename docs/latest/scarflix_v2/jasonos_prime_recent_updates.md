@@ -1,8 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T10:41:04.508Z
+Updated UTC: 2026-06-07T10:43:08.652Z
 Source: live status merge
 
+- 2026-06-07T10:43:08.339Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T10:43:08Z] [PASS] QA passed: part=111244 title=The Devil Wears Prada
+- 2026-06-07T10:41:49.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:41:49Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
 - 2026-06-07T10:38:35.874Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
 - 2026-06-07T10:38:15Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T10:37:20.608Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T10:37:20Z] [INFO] Health status publishing
@@ -10,10 +12,8 @@ Source: live status merge
 - 2026-06-07T10:19:18Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=46; blockers=0
 - 2026-06-07T10:18:09.884Z - Grok Peer Review Applied - 2026-06-07 19:36: Grok's forensic peer review was accepted as the implementation brief. Current outcome truth: Actual Streaming `.strm`: movies `1`, TV `0`, total `1`. Dashboard visible QA count: `56` (`38` movies, `18` TV), explicitly not delivery.
 - 2026-06-07T10:18:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
-- 2026-06-07T10:17:29.575Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:17:29Z] [INFO] Running concurrent WebDAV active gate worker for 46 entries.
 - 2026-06-07T10:17:10Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=24768; child_pid=46804
 - 2026-06-07T10:17:10Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=46; blockers=0
 - 2026-06-07T10:15:29Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=45644; child_pid=
 - 2026-06-07T10:15:29Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=46; blockers=0
 - 2026-06-07T10:13:15Z - Autonomous controller: unhandled_platform_gate_state: none
-- 2026-06-07T10:08:04Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
