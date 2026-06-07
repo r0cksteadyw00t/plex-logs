@@ -1,17 +1,17 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T04:58:03.622Z
+Updated UTC: 2026-06-07T05:00:05.734Z
 Source: live status merge
 
+- 2026-06-07T04:59:52Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=35936; child_pid=15736
+- 2026-06-07T04:59:52Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=65; blockers=0
+- 2026-06-07T04:58:35.484Z - JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36: Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion.
+- 2026-06-07T04:58:11.475Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T04:58:11Z] [PASS] QA passed: part=111481 title=Superman
+- 2026-06-07T04:58:11Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T04:58:01.622Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T04:58:01Z] [PASS] WebDAV active gate finished status=PASS checked=65 passed=65 failed_detected=0 pruned=0
-- 2026-06-07T04:57:52Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=35936; child_pid=15736
-- 2026-06-07T04:57:52Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=65; blockers=0
-- 2026-06-07T04:53:18.822Z - JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36: Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion.
 - 2026-06-07T04:53:10Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-07T04:52:22Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=29872; child_pid=
 - 2026-06-07T04:52:22Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=65; blockers=0
-- 2026-06-07T04:40:46.121Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T04:40:46Z] [OK] Visible QA cache updated: 233 entries
-- 2026-06-07T04:38:08Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T03:38:38.362Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
 - 2026-06-07T02:18:17.300Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44: Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`...
 - 2026-06-07T01:43:34.735Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22: Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW.
