@@ -1,9 +1,9 @@
 # JasonOS Prime Playback QA Controller
 
 Status: RUNNING
-Updated UTC: 2026-06-07T20:52:15Z
-Current step: concurrent_stream_qa_started
+Updated UTC: 2026-06-07T20:55:02Z
+Current step: plex_client_decision_qa_started
 Direct STRM total: 38
-Decision QA: PASS
-Concurrent QA: REVIEW
-Next action: Detached 5-concurrent stream QA is running or queued.
+Decision QA: UNKNOWN
+Concurrent QA: UNKNOWN
+Next action: Detached Plex client decision QA is running or queued.
