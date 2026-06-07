@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: Candidate-source model requires engineering review before catalogue expansion
-- next_check_utc: 2026-06-07T12:50:51Z
+- next_check_utc: 2026-06-07T12:51:08Z
 
 ## Blockers
 - seeder_stage_only_not_plex_visible
