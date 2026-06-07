@@ -3,14 +3,14 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-07T21:53:08Z
-Current step: unclassified_review_platform_gate_relaunch
+Updated UTC: 2026-06-07T21:58:19Z
+Current step: PLATFORM_GATE_CHILD_ACTIVE
 Jason action required: False
 
 ## PlatformGate
 - runner_running: True
-- status: REVIEW
-- stage: platform_gate_review
+- status: RUNNING
+- stage: PLATFORM_GATE_CHILD_ACTIVE
 - visible: 1
 - transient_failures: 0
 - prunable_failures: 0
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason
-- next_check_utc: 2026-06-07T21:58:14Z
+- action_taken: PlatformGate child QA activity is fresh; no duplicate runner launch
+- next_check_utc: 2026-06-07T22:03:21Z
 
 ## Blockers
 - none
