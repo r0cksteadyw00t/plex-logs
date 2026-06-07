@@ -1,42 +1,42 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
   "status": "PASS_PUBLISHED",
-  "started_utc": "2026-06-07T23:30:07Z",
-  "updated_utc": "2026-06-07T23:31:02Z",
-  "ended_utc": "2026-06-07T23:31:02Z",
+  "started_utc": "2026-06-07T23:35:03Z",
+  "updated_utc": "2026-06-07T23:35:30Z",
+  "ended_utc": "2026-06-07T23:35:30Z",
   "jason_action_required": false,
   "max_items": 8,
   "counts_before": {
-    "movies": 31,
-    "tv": 14,
-    "staged": 47
-  },
-  "counts_after": {
     "movies": 34,
     "tv": 14,
     "staged": 39
   },
-  "candidate_dirs_found": 47,
+  "counts_after": {
+    "movies": 34,
+    "tv": 16,
+    "staged": 31
+  },
+  "candidate_dirs_found": 39,
   "processed": 8,
-  "published": 3,
-  "retry_held": 5,
+  "published": 2,
+  "retry_held": 6,
   "rejected": 0,
   "skipped": 0,
   "plex_scan_triggered": [
     {
       "ok": true,
       "section": "5",
-      "pid": 1348
+      "pid": 34424
     },
     {
       "ok": true,
       "section": "6",
-      "pid": 33636
+      "pid": 46956
     }
   ],
   "results": [
     {
-      "hash": "8ec34ca5ddb1",
+      "hash": "50bd750e8a48",
       "status": "RETRY_HELD",
       "reason_code": "PROVIDER_503_RETRYABLE",
       "retryable": true,
@@ -51,10 +51,10 @@
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\8ec34ca5ddb1"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\50bd750e8a48"
     },
     {
-      "hash": "c08e992b681f",
+      "hash": "5106be4caea7",
       "status": "RETRY_HELD",
       "reason_code": "PROVIDER_503_RETRYABLE",
       "retryable": true,
@@ -69,30 +69,30 @@
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\c08e992b681f"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\5106be4caea7"
     },
     {
-      "hash": "c6fd2c4e63e3",
+      "hash": "5c63f0446881",
       "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+      "reason_code": "PROVIDER_503_RETRYABLE",
       "retryable": true,
       "probe": {
         "ok": false,
         "retryable": true,
-        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "reason": "HEAD timed out",
-        "head_status": null,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
         "range_status": null,
-        "content_type": "",
+        "content_type": "text/plain",
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\c6fd2c4e63e3"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\5c63f0446881"
     },
     {
-      "hash": "e581acf3272b",
+      "hash": "a6cb43dbf3de",
       "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Ice Age Dawn of the Dinosaurs (2009).strm",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\The Last of Us (2023)\\Season 01\\The Last of Us (2023) - S01E01.strm",
       "probe": {
         "ok": true,
         "retryable": false,
@@ -102,46 +102,12 @@
         "range_status": 206,
         "content_type": "application/octet-stream",
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/576737868"
+        "content_range": "bytes 0-1/2519485280"
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\e581acf3272b"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\a6cb43dbf3de"
     },
     {
-      "hash": "eb7499fdf910",
-      "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Cars 2 (2011).strm",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
-        "reason": "HEAD and range probe passed",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/octet-stream",
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/683454748"
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\eb7499fdf910"
-    },
-    {
-      "hash": "ef2c0ce4b8d3",
-      "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Aladdin (1992).strm",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
-        "reason": "HEAD and range probe passed",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/octet-stream",
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/681829239"
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\ef2c0ce4b8d3"
-    },
-    {
-      "hash": "046bdb07473f",
+      "hash": "a6e4f5bf0008",
       "status": "RETRY_HELD",
       "reason_code": "PROVIDER_503_RETRYABLE",
       "retryable": true,
@@ -156,10 +122,10 @@
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\046bdb07473f"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\a6e4f5bf0008"
     },
     {
-      "hash": "211708317205",
+      "hash": "a8b610294c3b",
       "status": "RETRY_HELD",
       "reason_code": "PROVIDER_503_RETRYABLE",
       "retryable": true,
@@ -174,7 +140,42 @@
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\211708317205"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\a8b610294c3b"
+    },
+    {
+      "hash": "b3e6d14e56ca",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\This Is Us (2016)\\Season 01\\This Is Us (2016) - S01E01.strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/442905918"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\b3e6d14e56ca"
+    },
+    {
+      "hash": "b46f8952d833",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\b46f8952d833"
     }
   ],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260607.log",
