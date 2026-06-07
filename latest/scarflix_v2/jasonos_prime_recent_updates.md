@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T08:10:02.737Z
+Updated UTC: 2026-06-07T08:12:01.341Z
 Source: live status merge
 
-- 2026-06-07T08:10:01Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=8624; child_pid=
-- 2026-06-07T08:10:01Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=56; blockers=0
-- 2026-06-07T08:09:59.706Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T08:09:59Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=56 passed=55 failed_detected=1 pruned=0
-- 2026-06-07T08:08:51Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=8624; child_pid=7284
-- 2026-06-07T08:08:51Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=56; blockers=0
+- 2026-06-07T08:11:35Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=3500; child_pid=46016
+- 2026-06-07T08:11:35Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=56; blockers=0
+- 2026-06-07T08:11:25.282Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T08:11:25Z] [INFO] Running concurrent WebDAV active gate worker for 56 entries.
+- 2026-06-07T08:10:07Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=8624; child_pid=
+- 2026-06-07T08:10:07Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=56; blockers=0
 - 2026-06-07T08:08:14.815Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
 - 2026-06-07T08:08:05Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T07:58:10Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
