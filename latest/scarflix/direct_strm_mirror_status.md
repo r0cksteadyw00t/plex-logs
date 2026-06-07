@@ -1,7 +1,7 @@
 # ScarFLIX v2 Direct STRM Mirror
 
 - Status: **REVIEW_NO_NEW_WRITES**
-- Updated UTC: 2026-06-07T15:12:02Z
+- Updated UTC: 2026-06-07T15:16:08Z
 - Platform snapshot: 20260607T101728Z
 - Snapshot rows: 46
 - Eligible entries: 0
