@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T06:10:01.398Z
+Updated UTC: 2026-06-07T06:12:02.873Z
 Source: live status merge
 
-- 2026-06-07T06:09:55.209Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T06:09:55Z] [REVIEW] Decision failed: metadata=40483 title=Honey Don't! reason=The operation has timed out.
-- 2026-06-07T06:09:39Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=42428; child_pid=30192
-- 2026-06-07T06:09:39Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T06:12:01.729Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T06:12:01Z] [PASS] Decision passed: metadata=41003 title=The Matrix
+- 2026-06-07T06:11:40Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=42428; child_pid=30192
+- 2026-06-07T06:11:40Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
 - 2026-06-07T06:08:20.119Z - JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51: Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`.
 - 2026-06-07T06:08:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T06:07:23.485Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T06:07:23Z] [PASS] QA passed: part=112094 title=The Shawshank Redemption
