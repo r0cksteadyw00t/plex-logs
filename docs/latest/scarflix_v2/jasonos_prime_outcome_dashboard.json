@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T12:11:02Z",
+  "updated_utc": "2026-06-07T12:13:05.486Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -24,8 +24,7 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual filesystem counts plus latest local status JSON",
-    "plex_safe_webdav_visible_rows": 46
+    "dashboard_basis": "actual filesystem counts plus latest local status JSON"
   },
   "platform_health_contract": {
     "platform_gate_requires": "snapshot_scoped_qa",
@@ -40,37 +39,37 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 6,
-    "platform_child_progress_age_minutes": 1,
+    "controller_updated_age_minutes": 2,
+    "platform_child_progress_age_minutes": 2,
     "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-07T12:10:47Z",
+    "next_check_utc": "2026-06-07T12:16:19Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex client decision QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T12:10:20.943Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-07T12:10:20Z] [REVIEW] Decision failed: metadata=41147 title=The Godfather reason=The operation has timed out.",
-    "pass_lines": 68,
-    "review_lines": 6,
-    "info_lines": 6
+    "stage": "Health",
+    "file": "D:/PlexTools/logs/scarflix_v2_health_status_20260607.log",
+    "last_progress_utc": "2026-06-07T12:11:16.691Z",
+    "age_minutes": 2,
+    "last_line": "[2026-06-07T12:11:16Z] [INFO] Health status publishing",
+    "pass_lines": 0,
+    "review_lines": 0,
+    "info_lines": 13
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-07T12:03:24Z",
+    "updated_utc": "2026-06-07T12:11:15Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-07T12:10:01Z",
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-07T12:12:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -85,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T12:10:03Z",
+    "updated_utc": "2026-06-07T12:12:02Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -105,8 +104,8 @@
   },
   "scarflix_canary": {
     "status": "RUNNING",
-    "milestone": "CANARY_PIPELINE_RUNNING",
-    "updated_utc": "2026-06-07T12:06:07.576Z",
+    "milestone": "CANARY_PIPELINE_STARTED",
+    "updated_utc": "2026-06-07T12:11:13.755Z",
     "platform_gate_status": "PASS",
     "actual_strm_counts": {
       "movies": 1,
@@ -124,7 +123,7 @@
     "pipeline_pid": 0,
     "staging_running": false,
     "staging_pid": 0,
-    "next_action": "Detached safe expansion pipeline is running; wait for status files and new .strm counts.",
+    "next_action": "Detached safe expansion pipeline started.",
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/scarflix_canary_status.json"
   },
   "daily_ai_usability": {
@@ -160,29 +159,29 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-07T12:11:25.002Z",
+      "title": "PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23",
+      "detail": "Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v..."
+    },
+    {
+      "utc": "2026-06-07T12:11:17Z",
+      "title": "Autonomous controller: candidate_source_model_review",
+      "detail": "Candidate-source model requires engineering review before catalogue expansion"
+    },
+    {
+      "utc": "2026-06-07T12:11:16.691Z",
+      "title": "PlatformGate child QA active: Health",
+      "detail": "Latest child QA line: [2026-06-07T12:11:16Z] [INFO] Health status publishing"
+    },
+    {
       "utc": "2026-06-07T12:10:20.943Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-07T12:10:20Z] [REVIEW] Decision failed: metadata=41147 title=The Godfather reason=The operation has timed out."
     },
     {
-      "utc": "2026-06-07T12:05:52.270Z",
-      "title": "PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23",
-      "detail": "Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v..."
-    },
-    {
-      "utc": "2026-06-07T12:05:04Z",
-      "title": "Autonomous controller: candidate_source_model_review",
-      "detail": "Candidate-source model requires engineering review before catalogue expansion"
-    },
-    {
       "utc": "2026-06-07T11:54:19.118Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
       "detail": "Latest child QA line: [2026-06-07T11:54:19Z] [PASS] QA passed: part=112097 title=Spider-Man: Into the Spider-Verse"
-    },
-    {
-      "utc": "2026-06-07T11:38:40.738Z",
-      "title": "PlatformGate child QA active: Health",
-      "detail": "Latest child QA line: [2026-06-07T11:38:40Z] [INFO] Health status publishing"
     },
     {
       "utc": "2026-06-07T10:41:49.049Z",
@@ -243,8 +242,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T12:10:20.943Z - Plex client decision QA",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=12, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=1 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T12:11:16.691Z - Health",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=12, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=2 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -252,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T12:10:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T12:12:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -319,100 +318,5 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
-  },
-  "node_watchdog_5min": {
-    "component": "jasonos_prime_node_watchdog_5min",
-    "status": "ACTIVE",
-    "updated_utc": "2026-06-07T12:11:02Z",
-    "jason_action_required": false,
-    "cadence": "every 5 minutes",
-    "counts": {
-      "legacy_movie_strm": 1,
-      "legacy_tv_strm": 0,
-      "legacy_total_strm": 1,
-      "plex_safe_webdav_visible_rows": 46
-    },
-    "grokbuild_status": "REVIEW_STALE_PROGRESS",
-    "grok_peer_bridge_status": "LOCAL_ONLY_NO_TOKEN",
-    "canary_status": "RUNNING",
-    "canary_status_age_seconds": 296,
-    "safe_pipeline_log_age_seconds": 1894,
-    "safe_pipeline_lock_age_seconds": 1945,
-    "stale_running_canary": true,
-    "actions": [
-      {
-        "action": "refresh_grokbuild",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "kill_stale_scarflix_process",
-        "ok": true,
-        "pid": "31356",
-        "reason": "stale canary pipeline with no direct output growth",
-        "command": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"  -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_SafeWebDavExpansionPipeline_Run.ps1",
-        "detail": "SUCCESS: The process with PID 40684 (child process of PID 20396) has been terminated.\r\nSUCCESS: The process with PID 44124 (child process of PID 24232) has been terminated.\r\nSUCCESS: The process with PID 13220 (child process of PID 46292) has been terminated.\r\nSUCCESS: The process with PID 27148 (child process of PID 43900) has been terminated.\r\nSUCCESS: The process with PID 20396 (child process of PID 43900) has been terminated.\r\nSUCCESS: The process with PID 24232 (child process of PID 43900) has been terminated.\r\nSUCCESS: The process with PID 46292 (child process of PID 43900) has been terminated.\r\nSUCCESS: The process with PID 43900 (child process of PID 21628) has been terminated.\r\nSUCCESS: The process with PID 43676 (child process of PID 31356) has been terminated.\r\nSUCCESS: The process with PID 21628 (child process of PID 31356) has been terminated.\r\nSUCCESS: The process with PID 31356 (child process of PID 42120) has been terminated.\r\n"
-      },
-      {
-        "action": "kill_stale_scarflix_process",
-        "ok": false,
-        "pid": "21628",
-        "reason": "stale canary pipeline with no direct output growth",
-        "command": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_SafeWebDavExpansionPipeline.ps1 -RunOnce -StageMaxItems 40 -StagePagesPerSource 1 -PublishMaxCandidates 40 -DelayedQaSeconds 45 -VisibleQaTimeoutSeconds 20 -Concurrency 5",
-        "detail": "ERROR: The process \"21628\" not found.\r\n"
-      },
-      {
-        "action": "kill_stale_scarflix_process",
-        "ok": false,
-        "pid": "43900",
-        "reason": "stale canary pipeline with no direct output growth",
-        "command": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -ExecutionPolicy Bypass -File D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_WebDavVirtualCatalogPublisher.ps1 -MaxCandidates 40 -DelayedQaSeconds 45 -VisibleQaTimeoutSeconds 20",
-        "detail": "ERROR: The process \"43900\" not found.\r\n"
-      },
-      {
-        "action": "kill_stale_scarflix_process",
-        "ok": false,
-        "pid": "46292",
-        "reason": "stale canary pipeline with no direct output growth",
-        "command": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -ExecutionPolicy Bypass -File D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_PlexClientDecisionQA.ps1 -MaxItems 0 -IgnoreBusyLocks",
-        "detail": "ERROR: The process \"46292\" not found.\r\n"
-      },
-      {
-        "action": "kill_stale_scarflix_process",
-        "ok": false,
-        "pid": "46744",
-        "reason": "stale canary pipeline with no direct output growth",
-        "command": "wmic.exe process where \"CommandLine like '%ScarFLIX_v2_SafeWebDavExpansionPipeline%' or CommandLine like '%ScarFLIX_v2_WebDavVirtualCatalogPublisher%' or CommandLine like '%ScarFLIX_v2_VisibleCatalogQA%' or CommandLine like '%ScarFLIX_v2_PlexClientDecisionQA%'\" get ProcessId,ParentProcessId,Name,CommandLine /format:list",
-        "detail": "ERROR: The process \"46744\" not found.\r\n"
-      },
-      {
-        "action": "backup_remove_stale_lock",
-        "ok": true,
-        "path": "D:/PlexTools/state/scarflix_v2/safe_webdav_expansion_pipeline.lock",
-        "backup": "D:/PlexTools/state/scarflix_v2/safe_webdav_expansion_pipeline.lock.nodewatchdog_stale_20260607121110.bak"
-      },
-      {
-        "action": "backup_remove_stale_lock",
-        "ok": true,
-        "path": "D:/PlexTools/state/scarflix_v2/scarflix_canary.lock.json",
-        "backup": "D:/PlexTools/state/scarflix_v2/scarflix_canary.lock.json.nodewatchdog_stale_20260607121110.bak"
-      },
-      {
-        "action": "trigger_scarflix_canary",
-        "ok": true,
-        "detail": "SUCCESS: Attempted to run the scheduled task \"JasonOS_Prime_ScarFLIX_Canary\".\r\n"
-      },
-      {
-        "action": "trigger_public_mirror",
-        "ok": true,
-        "detail": "pid=44584"
-      }
-    ],
-    "blockers": []
   }
 }
