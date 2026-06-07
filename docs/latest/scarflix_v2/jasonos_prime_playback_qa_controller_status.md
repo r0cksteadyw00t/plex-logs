@@ -1,10 +1,10 @@
 # JasonOS Prime Playback QA Controller
 
-Status: RUNNING
-Updated UTC: 2026-06-07T21:21:04Z
-Current step: concurrent_stream_qa_started
-Direct STRM total: 25
-Direct STRM admission: REVIEW_RETRY_HELD
+Status: REVIEW_DIRECT_STRM_ADMISSION
+Updated UTC: 2026-06-07T21:26:07Z
+Current step: direct_strm_failures_quarantined_waiting_plex_rescan
+Direct STRM total: 28
+Direct STRM admission: REVIEW_QUARANTINED_VISIBLE_FAILURES
 Decision QA: PASS
 Concurrent QA: REVIEW
-Next action: Detached 5-concurrent stream QA is running or queued.
+Next action: Failed visible STRM sources were quarantined. Wait for Plex rescan and next direct admission pass.
