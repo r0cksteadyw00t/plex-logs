@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T23:23:01.369Z
+Updated UTC: 2026-06-07T23:25:01.828Z
 Source: live status merge
 
-- 2026-06-07T23:22:37Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=16824; child_pid=
-- 2026-06-07T23:22:37Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
-- 2026-06-07T23:22:32.844Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-07T23:22:32Z] [REVIEW] Final: REVIEW
+- 2026-06-07T23:24:36Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=43484; child_pid=
+- 2026-06-07T23:24:36Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
+- 2026-06-07T23:24:32.143Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-07T23:24:32Z] [REVIEW] Final: REVIEW
 - 2026-06-07T23:21:01Z - Durable PlatformGate runner RUNNING: Step starting; owner_pid=27332; child_pid=
 - 2026-06-07T23:21:01Z - PlatformGate checkpoint RUNNING: Step starting; visible=1; blockers=0
 - 2026-06-07T23:20:13.830Z - Direct STRM Admission Gate Added After Maze Runner Playback Failure - 2026-06-08 07:15: Jason reported that `The Maze Runner (2014)` failed in Plex with a `/video/:/transcode/universal/decision` network error. Forensic result: The visible Plex library file was `D:\StremioCatalog\_Hybrid\Movies\The Maze Runner (2014).strm`. Its content was a local resolver URL: `http://127.0.0.1:18788/live?...`, not a s...
