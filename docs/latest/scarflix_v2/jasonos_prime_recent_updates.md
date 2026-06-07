@@ -1,16 +1,16 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T21:58:33.722Z
+Updated UTC: 2026-06-07T21:59:11.054Z
 Source: live status merge
 
+- 2026-06-07T21:59:00Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=27712; child_pid=
+- 2026-06-07T21:59:00Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
+- 2026-06-07T21:58:55.271Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-07T21:58:55Z] [REVIEW] Final: REVIEW
 - 2026-06-07T21:58:29.122Z - Direct STRM Admission Gate Added After Maze Runner Playback Failure - 2026-06-08 07:15: Jason reported that `The Maze Runner (2014)` failed in Plex with a `/video/:/transcode/universal/decision` network error. Forensic result: The visible Plex library file was `D:\StremioCatalog\_Hybrid\Movies\The Maze Runner (2014).strm`. Its content was a local resolver URL: `http://127.0.0.1:18788/live?...`, not a s...
 - 2026-06-07T21:58:28.750Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T21:58:28Z] [PASS] QA passed: part=112587 title=This Is What Happens
 - 2026-06-07T21:58:19Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T21:58:12Z - Durable PlatformGate runner RUNNING: Step existing_durable_owner_active; owner_pid=12604; child_pid=
 - 2026-06-07T21:58:12Z - PlatformGate checkpoint RUNNING: Step existing_durable_owner_active; visible=1; blockers=0
-- 2026-06-07T21:56:15Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=1336; child_pid=
-- 2026-06-07T21:56:15Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
-- 2026-06-07T21:55:54.728Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-07T21:55:54Z] [REVIEW] Final: REVIEW
 - 2026-06-07T21:53:08Z - Autonomous controller: unclassified_review_platform_gate_relaunch: PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason
 - 2026-06-07T21:23:03Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-07T21:09:27.645Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T21:09:27Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=20 Retries=0
