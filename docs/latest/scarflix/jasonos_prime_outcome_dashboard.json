@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T00:43:17.325Z",
+  "updated_utc": "2026-06-07T00:44:12.482Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,11 +14,11 @@
     "state": "WATCHING_FOR_STALL",
     "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 10,
-    "platform_child_progress_age_minutes": 6,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 11,
+    "platform_child_progress_age_minutes": 7,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-07T00:38:13Z",
-    "next_check_age_minutes": 5,
+    "next_check_age_minutes": 6,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -26,7 +26,7 @@
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
     "last_progress_utc": "2026-06-07T00:37:19.768Z",
-    "age_minutes": 6,
+    "age_minutes": 7,
     "last_line": "[2026-06-07T00:37:19Z] [PASS] QA passed: part=112136 title=The Maze Runner",
     "pass_lines": 42,
     "review_lines": 35,
@@ -50,13 +50,13 @@
     "current_step": "running_platform_gate_attempt_1",
     "owner_pid": 13964,
     "child_pid": 38248,
-    "last_progress_utc": "2026-06-07T00:42:52Z",
-    "heartbeat_updated_utc": "2026-06-07T00:42:52Z",
+    "last_progress_utc": "2026-06-07T00:43:53Z",
+    "heartbeat_updated_utc": "2026-06-07T00:43:53Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T00:42:10Z",
+    "updated_utc": "2026-06-07T00:43:35Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -83,12 +83,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T00:42:52Z",
+      "utc": "2026-06-07T00:43:53Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248"
     },
     {
-      "utc": "2026-06-07T00:42:52Z",
+      "utc": "2026-06-07T00:43:53Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=78; blockers=0"
     },
@@ -167,7 +167,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T00:37:19.768Z - Plex visible/HLS QA",
-      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=6 min; owner_pid=13964; child_pid=38248.",
+      "current": "Visible 78 items; movies=53; tv=25; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=7 min; owner_pid=13964; child_pid=38248.",
       "progress": 46,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -175,7 +175,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T00:42:10Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T00:43:35Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 75,
       "eta": "runs every 5 minutes",
@@ -229,7 +229,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T00:42:52Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T00:43:53Z - Durable PlatformGate ownership active",
       "current": "Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck.",
       "progress": 56,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
