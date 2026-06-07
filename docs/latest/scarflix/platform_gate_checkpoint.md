@@ -1,20 +1,55 @@
-# ScarFLIX v2 Durable PlatformGate Runner
+# ScarFLIX v2 Platform Gate Checkpoint
 
-Updated UTC: 2026-06-07T21:43:05Z
-Status: RUNNING
-Current step: existing_durable_owner_active
-Owner PID: 32652
-Child PID: 0
-Child QA last progress UTC: 
-Child QA stale minutes: 
-Child QA stale threshold minutes: 5
-No catalogue expansion: True
+Generated UTC: 2026-06-07T21:44:45Z
 
-## Attempts
-- none
+Status: REVIEW
+Started UTC: 2026-06-07T21:44:13Z
+Ended UTC: 2026-06-07T21:44:44Z
+Snapshot ID: 20260607T214430Z
+Snapshot hash: 4a623f46f7ec74fe5e1aac7956f0d075b9ae0bce84ca544f1301555e747b7ec2
+Same-snapshot confirmed: False
+Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
 
-## Actions
-- Existing durable owner is active pid=12284; duplicate runner exits
+## Visible Catalogue
+- visible: 1
+- movies: 0
+- tv: 1
+
+## QA
+- WebDAV active gate: PASS, checked=1
+- Plex visible/HLS QA: PASS, checked=1
+- Plex client decision QA: PASS, checked=1
+- 5-concurrent stream QA: REVIEW, target=5, map_tested=1, visible_tested=1
+- Health: UNKNOWN
+
+## Source Handling
+- quarantined/rejected sources: 833
+- transient/retry-held count: 685
+- prunable/permanent count: 148
+- seeder rejected-stage skipped: 34
+- publisher rejected-stage skipped: 0
+- top reason codes:
+  - PROVIDER_503: 495
+  - PROVIDER_TIMEOUT: 153
+  - PLEX_INVISIBLE_AFTER_SCAN: 136
+  - PROVIDER_503_RETRYABLE: 30
+  - PLEX_HLS_TIMEOUT: 7
+  - PLEX_CODEC_BLOCKED: 4
+  - PLEX_PROFILE_FAILED: 4
+  - POLICY_BLOCKED: 2
+  - RELEASE_WINDOW_BLOCKED: 1
+  - PLEX_HLS_PROBE_FAILED: 1
+
+## Schedules
+- schedules safely re-enabled by PlatformGate: False
+- ScarFLIX_v2_SafeWebDavExpansionPipeline: Disabled
+- ScarFLIX_v2_LiveCatalogSeeder: Disabled
+- ScarFLIX_v2_WebDavVirtualCatalogPublisher: Disabled
+- ScarFLIX_v2_AutoGate: Disabled
+- ScarFLIX_v2_SafeCatalogOrchestrator: Disabled
+- ScarFLIX_v2_CatalogPromoter: Disabled
+- ScarFLIX_v2_CatalogVisibilityGate: Disabled
 
 ## Blockers
-- none
+- concurrent_stream_qa status=REVIEW
+- concurrent_stream_qa did not test at least 5 concurrent streams
