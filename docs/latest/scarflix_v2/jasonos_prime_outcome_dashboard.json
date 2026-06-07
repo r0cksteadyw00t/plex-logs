@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T21:01:03Z",
+  "updated_utc": "2026-06-07T21:06:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -333,7 +333,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "ACTIVE",
-    "updated_utc": "2026-06-07T21:01:04Z",
+    "updated_utc": "2026-06-07T21:06:03Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -342,7 +342,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-07T21:01:03Z",
+    "updated_utc": "2026-06-07T21:06:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -353,11 +353,11 @@
     },
     "grokbuild_status": "ACTIVE",
     "grok_peer_bridge_status": "LOCAL_ONLY_NO_TOKEN",
-    "platform_gate_status": "RUNNING",
+    "platform_gate_status": "REVIEW",
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
       "status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
-      "updated_utc": "2026-06-07T20:57:01Z",
+      "updated_utc": "2026-06-07T21:02:01Z",
       "reason": "Latest PlatformGate checkpoint is not PASS.",
       "counts_before": {
         "movies": 28,
@@ -374,7 +374,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "RUNNING",
-      "updated_utc": "2026-06-07T21:01:06Z",
+      "updated_utc": "2026-06-07T21:06:04Z",
       "current_step": "concurrent_stream_qa_started",
       "jason_action_required": false,
       "counts": {
@@ -382,8 +382,8 @@
         "tv": 10,
         "total": 38
       },
-      "canary_status": "RUNNING",
-      "canary_milestone": "CANARY_PIPELINE_RUNNING",
+      "canary_status": "STAGING_CANDIDATES",
+      "canary_milestone": "CANARY_STAGING_STARTED",
       "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
       "decision_qa_status": "PASS",
       "concurrent_stream_qa_status": "REVIEW",
@@ -395,12 +395,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 3144
+              "pid": 24856
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 41268
+              "pid": 46348
             }
           ]
         },
@@ -417,9 +417,9 @@
       ],
       "next_action": "Detached 5-concurrent stream QA is running or queued."
     },
-    "canary_status": "RUNNING",
-    "canary_status_age_seconds": 422,
-    "safe_pipeline_log_age_seconds": 29452,
+    "canary_status": "STAGING_CANDIDATES",
+    "canary_status_age_seconds": 120,
+    "safe_pipeline_log_age_seconds": 29750,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -441,7 +441,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=18796"
+        "detail": "pid=15608"
       }
     ],
     "blockers": []
@@ -449,7 +449,7 @@
   "direct_strm_mirror": {
     "component": "scarflix_v2_direct_strm_mirror",
     "status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
-    "updated_utc": "2026-06-07T20:57:01Z",
+    "updated_utc": "2026-06-07T21:02:01Z",
     "reason": "Latest PlatformGate checkpoint is not PASS.",
     "counts_before": {
       "movies": 28,
@@ -466,7 +466,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "RUNNING",
-    "updated_utc": "2026-06-07T21:01:06Z",
+    "updated_utc": "2026-06-07T21:06:04Z",
     "current_step": "concurrent_stream_qa_started",
     "jason_action_required": false,
     "counts": {
@@ -474,8 +474,8 @@
       "tv": 10,
       "total": 38
     },
-    "canary_status": "RUNNING",
-    "canary_milestone": "CANARY_PIPELINE_RUNNING",
+    "canary_status": "STAGING_CANDIDATES",
+    "canary_milestone": "CANARY_STAGING_STARTED",
     "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
     "decision_qa_status": "PASS",
     "concurrent_stream_qa_status": "REVIEW",
@@ -487,12 +487,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 3144
+            "pid": 24856
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 41268
+            "pid": 46348
           }
         ]
       },
