@@ -1,12 +1,182 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
-  "status": "RUNNING_ALREADY",
-  "updated_utc": "2026-06-07T23:25:07Z",
-  "existing_lock": {
-    "component": "scarflix_v2_staged_candidate_publisher",
-    "pid": 44824,
-    "started_utc": "2026-06-07T23:25:03Z",
-    "updated_utc": "2026-06-07T23:25:04Z"
+  "status": "PASS_PUBLISHED",
+  "started_utc": "2026-06-07T23:25:03Z",
+  "updated_utc": "2026-06-07T23:25:52Z",
+  "ended_utc": "2026-06-07T23:25:52Z",
+  "jason_action_required": false,
+  "max_items": 8,
+  "counts_before": {
+    "movies": 28,
+    "tv": 14,
+    "staged": 55
   },
-  "jason_action_required": false
+  "counts_after": {
+    "movies": 31,
+    "tv": 14,
+    "staged": 47
+  },
+  "candidate_dirs_found": 55,
+  "processed": 8,
+  "published": 3,
+  "retry_held": 5,
+  "rejected": 0,
+  "skipped": 0,
+  "plex_scan_triggered": [
+    {
+      "ok": true,
+      "section": "5",
+      "pid": 38136
+    },
+    {
+      "ok": true,
+      "section": "6",
+      "pid": 38532
+    }
+  ],
+  "results": [
+    {
+      "hash": "0bbb116c4783",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\0bbb116c4783_1"
+    },
+    {
+      "hash": "03b32e04a7f6",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Oldboy (2003).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/2456956687"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\03b32e04a7f6"
+    },
+    {
+      "hash": "418ff9e652bc",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\A Silent Voice The Movie (2016).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/952149088"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\418ff9e652bc"
+    },
+    {
+      "hash": "45a0264a1510",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\45a0264a1510"
+    },
+    {
+      "hash": "5e7aa7195e76",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Cars (2006).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/7578221816"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\5e7aa7195e76"
+    },
+    {
+      "hash": "6242ef8298ce",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD timed out",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\6242ef8298ce"
+    },
+    {
+      "hash": "7a9ee534e964",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\7a9ee534e964"
+    },
+    {
+      "hash": "8ae8ffb47072",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\8ae8ffb47072"
+    }
+  ],
+  "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260607.log",
+  "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
 }
