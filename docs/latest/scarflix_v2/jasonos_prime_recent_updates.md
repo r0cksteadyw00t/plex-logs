@@ -1,17 +1,17 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T02:50:02.011Z
+Updated UTC: 2026-06-07T02:52:01.396Z
 Source: live status merge
 
-- 2026-06-07T02:49:38Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=46788; child_pid=27944
-- 2026-06-07T02:49:38Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=65; blockers=0
+- 2026-06-07T02:51:38Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=46788; child_pid=27944
+- 2026-06-07T02:51:38Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=65; blockers=0
+- 2026-06-07T02:50:11.223Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T02:50:11Z] [PASS] QA passed: part=111481 title=Superman
 - 2026-06-07T02:49:10.455Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T02:49:10Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
 - 2026-06-07T02:48:50.924Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
 - 2026-06-07T02:48:47Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T02:44:06Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39172; child_pid=
 - 2026-06-07T02:44:06Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=65; blockers=0
 - 2026-06-07T02:43:07Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-07T02:37:58.594Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T02:37:58Z] [OK] Visible QA cache updated: 232 entries
 - 2026-06-07T02:18:17.300Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44: Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`...
 - 2026-06-07T01:43:34.735Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22: Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW.
 - 2026-06-07T00:19:02.845Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 09:58: Jason reported the dashboard/status still looked unchanged since overnight. Finding: The system was not simply idle; it was caught in a control-loop. Latest ActiveGate result: `REVIEW`, visible checked `78`, passed `65`, failed `13`.
