@@ -1,8 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T10:23:02.761Z
+Updated UTC: 2026-06-07T10:25:05.299Z
 Source: live status merge
 
+- 2026-06-07T10:23:55.330Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
+- 2026-06-07T10:23:08Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T10:19:18Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=24768; child_pid=
 - 2026-06-07T10:19:18Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=46; blockers=0
 - 2026-06-07T10:18:41.981Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T10:18:41Z] [INFO] Health status publishing
@@ -15,5 +17,3 @@ Source: live status merge
 - 2026-06-07T10:15:29Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=46; blockers=0
 - 2026-06-07T10:13:15Z - Autonomous controller: unhandled_platform_gate_state: none
 - 2026-06-07T10:08:04Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-07T09:58:04Z - Autonomous controller: visible_catalog_source_quarantine_started: VisibleCatalogQA found Plex-incompatible sources; started source/release quarantine while titles remain wanted
-- 2026-06-07T09:57:06.698Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T09:57:06Z] [PASS] QA passed: part=112228 title=The Journey's End
