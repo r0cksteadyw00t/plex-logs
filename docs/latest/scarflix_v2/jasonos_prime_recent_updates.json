@@ -1,16 +1,21 @@
 {
-  "updated_utc": "2026-06-07T00:14:02.605Z",
+  "updated_utc": "2026-06-07T00:16:01.026Z",
   "source": "live status merge",
   "updates": [
     {
-      "utc": "2026-06-07T00:13:49Z",
+      "utc": "2026-06-07T00:15:49Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=13964; child_pid=38248"
     },
     {
-      "utc": "2026-06-07T00:13:49Z",
+      "utc": "2026-06-07T00:15:49Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=78; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T00:14:49.012Z",
+      "title": "PlatformGate child QA active: Plex visible/HLS QA",
+      "detail": "Latest child QA line: [2026-06-07T00:14:49Z] [PASS] QA passed: part=111481 title=Superman"
     },
     {
       "utc": "2026-06-07T00:13:47.601Z",
@@ -66,11 +71,6 @@
       "utc": "2026-06-06T22:08:23.808Z",
       "title": "JasonOS Prime / ScarFLIX Update - 2026-06-07 07:58",
       "detail": "Eight-hour apparent dashboard stall was diagnosed as a reporting and PlatformGate control-flow issue, not a total automation failure. Durable PlatformGate stayed at the parent milestone `PLATFORM_GATE_RUNNING`. Child QA did progress from VisibleCatalogQA into Plex client decision QA, but the dashboard did not expose..."
-    },
-    {
-      "utc": "2026-06-06T10:55:00Z",
-      "title": "Watchdog-of-watchdog sentinel added",
-      "detail": "Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell."
     }
   ]
 }
