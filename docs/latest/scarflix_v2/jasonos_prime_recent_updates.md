@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T11:22:04.340Z
+Updated UTC: 2026-06-07T11:23:05.901Z
 Source: live status merge
 
-- 2026-06-07T11:21:31.948Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:21:31Z] [PASS] QA passed: part=112127 title=Zootropolis
-- 2026-06-07T11:18:40.571Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
+- 2026-06-07T11:22:23.536Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:22:23Z] [REVIEW] QA failed: part=112134 title=Toy Story 2 reason=Plex Transcoder HLS probe timed out
+- 2026-06-07T11:22:16.496Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
 - 2026-06-07T11:18:19Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T11:12:16.648Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T11:12:16Z] [PASS] Decision passed: metadata=41196 title=Mulan
 - 2026-06-07T10:41:49.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:41:49Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
