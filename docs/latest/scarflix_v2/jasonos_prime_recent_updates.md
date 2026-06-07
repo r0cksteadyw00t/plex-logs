@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T12:15:01.298Z
+Updated UTC: 2026-06-07T12:17:06.304Z
 Source: live status merge
 
+- 2026-06-07T12:16:54.132Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T12:16:54Z] [PASS] QA passed: part=112136 title=The Maze Runner
 - 2026-06-07T12:13:16.954Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
 - 2026-06-07T12:13:09Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T12:11:16.691Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T12:11:16Z] [INFO] Health status publishing
 - 2026-06-07T12:10:20.943Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T12:10:20Z] [REVIEW] Decision failed: metadata=41147 title=The Godfather reason=The operation has timed out.
-- 2026-06-07T11:54:19.118Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:54:19Z] [PASS] QA passed: part=112097 title=Spider-Man: Into the Spider-Verse
 - 2026-06-07T10:41:49.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:41:49Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
 - 2026-06-07T10:19:18Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=24768; child_pid=
 - 2026-06-07T10:19:18Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=46; blockers=0
