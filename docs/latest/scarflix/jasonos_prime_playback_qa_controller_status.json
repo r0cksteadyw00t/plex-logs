@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "RUNNING",
-  "updated_utc": "2026-06-07T22:22:03Z",
-  "current_step": "concurrent_stream_qa_started",
+  "status": "WAITING_OVERLAP",
+  "updated_utc": "2026-06-07T22:27:07Z",
+  "current_step": "validation_overlap_running",
   "jason_action_required": false,
   "counts": {
     "movies": 20,
@@ -10,7 +10,7 @@
     "total": 30
   },
   "canary_status": "STAGING_CANDIDATES",
-  "canary_milestone": "CANARY_STAGING_STARTED",
+  "canary_milestone": "CANARY_STAGING_RECENTLY_STARTED",
   "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
   "direct_strm_admission_status": "REVIEW_RETRY_HELD",
   "direct_strm_admission_checked_visible": 30,
@@ -19,7 +19,17 @@
   "direct_strm_retry_held_count": 7,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
-  "overlap_running": [],
+  "overlap_running": [
+    {
+      "name": "ScarFLIX_v2_DurablePlatformGateRunner",
+      "ok": true,
+      "status": "Running",
+      "scheduled_state": "Enabled",
+      "last_run": "8/06/2026 8:27:04 AM",
+      "last_result": "267009",
+      "next_run": "N/A"
+    }
+  ],
   "actions": [
     {
       "action": "trigger_plex_scans",
@@ -27,25 +37,15 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 15028
+          "pid": 42004
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 15900
+          "pid": 31928
         }
       ]
-    },
-    {
-      "action": "start_concurrent_stream_qa",
-      "result": {
-        "task": "ScarFLIX_v2_ConcurrentStreamQA",
-        "enable_ok": true,
-        "run_ok": true,
-        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
-        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
-      }
     }
   ],
-  "next_action": "Detached 5-concurrent stream QA is running or queued."
+  "next_action": "Wait for current ScarFLIX validation task to finish."
 }
