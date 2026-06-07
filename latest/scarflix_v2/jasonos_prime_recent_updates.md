@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T03:14:02.089Z
+Updated UTC: 2026-06-07T03:16:01.105Z
 Source: live status merge
 
-- 2026-06-07T03:13:36Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=44104; child_pid=17968
-- 2026-06-07T03:13:36Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
-- 2026-06-07T03:09:17.112Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T03:09:17Z] [REVIEW] QA failed: part=112087 title=The Lord of the Rings: The Two Towers reason=Plex Transcoder HLS probe timed out
+- 2026-06-07T03:15:36Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=44104; child_pid=17968
+- 2026-06-07T03:15:36Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T03:14:29.674Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T03:14:29Z] [REVIEW] QA failed: part=112088 title=Harry Potter and the Goblet of Fire reason=Plex Transcoder HLS probe timed out
 - 2026-06-07T03:08:25.331Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 12:18: Jason reported the dashboard still appeared stale and the project did not appear to progress. Findings: Public RawGithack dashboard content was current from Codex inspection at `2026-06-07T02:15:01Z`, but the user may still see cached/legacy page state on phone. Local dashboard status was also current: `PLATFORM_GAT...
 - 2026-06-07T03:08:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-07T02:56:35.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T02:56:35Z] [PASS] WebDAV active gate finished status=PASS checked=65 passed=65 failed_detected=0 pruned=0
