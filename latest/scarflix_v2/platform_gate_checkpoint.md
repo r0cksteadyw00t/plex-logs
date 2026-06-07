@@ -1,11 +1,11 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-07T20:49:19Z
+Generated UTC: 2026-06-07T20:50:33Z
 
 Status: REVIEW
-Started UTC: 2026-06-07T20:48:34Z
-Ended UTC: 2026-06-07T20:49:19Z
-Snapshot ID: 20260607T204850Z
+Started UTC: 2026-06-07T20:50:04Z
+Ended UTC: 2026-06-07T20:50:33Z
+Snapshot ID: 20260607T205019Z
 Snapshot hash: 4a623f46f7ec74fe5e1aac7956f0d075b9ae0bce84ca544f1301555e747b7ec2
 Same-snapshot confirmed: False
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
@@ -23,14 +23,14 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - Health: UNKNOWN
 
 ## Source Handling
-- quarantined/rejected sources: 795
-- transient/retry-held count: 659
+- quarantined/rejected sources: 800
+- transient/retry-held count: 664
 - prunable/permanent count: 136
 - seeder rejected-stage skipped: 34
 - publisher rejected-stage skipped: 0
 - top reason codes:
-  - PROVIDER_503: 479
-  - PROVIDER_TIMEOUT: 143
+  - PROVIDER_503: 481
+  - PROVIDER_TIMEOUT: 146
   - PLEX_INVISIBLE_AFTER_SCAN: 126
   - PROVIDER_503_RETRYABLE: 30
   - PLEX_HLS_TIMEOUT: 7
