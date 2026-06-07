@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T10:44:02.614Z",
+  "updated_utc": "2026-06-07T10:46:07.073Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,8 +42,8 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 0,
+    "controller_updated_age_minutes": 3,
+    "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T10:48:18Z",
     "next_check_age_minutes": 0,
@@ -53,11 +53,11 @@
   "child_qa_progress": {
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T10:43:51.915Z",
-    "age_minutes": 0,
-    "last_line": "[2026-06-07T10:43:51Z] [PASS] QA passed: part=111384 title=Michael Jackson: The Life of an Icon",
-    "pass_lines": 75,
-    "review_lines": 0,
+    "last_progress_utc": "2026-06-07T10:44:39.275Z",
+    "age_minutes": 1,
+    "last_line": "[2026-06-07T10:44:39Z] [REVIEW] QA failed: part=111427 title=Honey Don't! reason=Plex Transcoder HLS probe timed out",
+    "pass_lines": 74,
+    "review_lines": 1,
     "info_lines": 5
   },
   "watchdog_status": {
@@ -69,7 +69,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T10:43:03Z",
+    "updated_utc": "2026-06-07T10:45:04Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -84,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T10:43:09Z",
+    "updated_utc": "2026-06-07T10:45:04Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -105,7 +105,7 @@
   "scarflix_canary": {
     "status": "RUNNING",
     "milestone": "CANARY_PIPELINE_RUNNING",
-    "updated_utc": "2026-06-07T10:38:18.261Z",
+    "updated_utc": "2026-06-07T10:44:02.547Z",
     "platform_gate_status": "PASS",
     "actual_strm_counts": {
       "movies": 1,
@@ -118,7 +118,7 @@
       "total": 1
     },
     "new_strm_since_baseline": 0,
-    "staged_candidate_count": 42,
+    "staged_candidate_count": 21,
     "pipeline_running": true,
     "pipeline_pid": 0,
     "staging_running": false,
@@ -159,9 +159,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T10:43:51.915Z",
+      "utc": "2026-06-07T10:44:39.275Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T10:43:51Z] [PASS] QA passed: part=111384 title=Michael Jackson: The Life of an Icon"
+      "detail": "Latest child QA line: [2026-06-07T10:44:39Z] [REVIEW] QA failed: part=111427 title=Honey Don't! reason=Plex Transcoder HLS probe timed out"
     },
     {
       "utc": "2026-06-07T10:43:24.576Z",
@@ -242,8 +242,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T10:43:51.915Z - Plex visible/HLS QA",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=42, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T10:44:39.275Z - Plex visible/HLS QA",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=21, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -251,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T10:43:09Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T10:45:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
