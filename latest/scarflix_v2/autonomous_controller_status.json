@@ -1,16 +1,16 @@
 {
     "component":  "scarflix_v2_autonomous_controller",
-    "status":  "FAIL_ENGINEERING",
-    "milestone_state":  "BLOCKED_DECISION",
-    "updated_utc":  "2026-06-07T20:46:05Z",
-    "current_step":  "unhandled_platform_gate_state",
-    "current_milestone":  "Complete same-snapshot PlatformGate checkpoint",
+    "status":  "RUNNING",
+    "milestone_state":  "CANDIDATE_SOURCE_MODEL_PENDING",
+    "updated_utc":  "2026-06-07T20:48:04Z",
+    "current_step":  "candidate_source_model_pending_platform_gate",
+    "current_milestone":  "Same-snapshot PlatformGate checkpoint complete",
     "next_milestone":  "Blanket candidate-source retry/quarantine model",
-    "action_taken":  "none",
-    "next_check_utc":  "2026-06-07T20:51:05Z",
+    "action_taken":  "Candidate-source model is pending PlatformGate PASS",
+    "next_check_utc":  "2026-06-07T20:53:06Z",
     "jason_action_required":  false,
     "blockers":  [
-                     "Unhandled PlatformGate status: REVIEW"
+
                  ],
     "docs":  {
                  "next_actions_path":  "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\docs\\NEXT_ACTIONS.md",
@@ -21,7 +21,7 @@
                           "runner_running":  false,
                           "child_active":  false,
                           "child_activity_log_utc":  "2026-06-07T12:50:12Z",
-                          "status":  "REVIEW",
+                          "status":  "PASS",
                           "stage":  "platform_gate_pass",
                           "visible_count":  46,
                           "started_utc":  "2026-06-07T10:17:07Z",
@@ -34,11 +34,12 @@
                       },
     "candidate_source_model":  {
                                    "script":  "D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_CandidateSourceModel.ps1",
-                                   "status":  "REVIEW",
+                                   "status":  "PENDING",
                                    "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\candidate_source_model_status.json",
                                    "status_md":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\candidate_source_model_status.md",
-                                   "updated_utc":  "2026-06-07T12:48:13Z",
+                                   "updated_utc":  "2026-06-07T20:48:05Z",
                                    "blockers":  [
+                                                    "platform_gate_pass_required",
                                                     "seeder_stage_only_not_plex_visible"
                                                 ]
                                },
