@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T11:08:03.642Z",
+  "updated_utc": "2026-06-07T11:10:03.357Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 4,
     "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T11:11:29Z",
@@ -53,23 +53,23 @@
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T11:07:57.299Z",
+    "last_progress_utc": "2026-06-07T11:09:37.590Z",
     "age_minutes": 0,
-    "last_line": "[2026-06-07T11:07:57Z] [REVIEW] Decision failed: metadata=41189 title=Finding Nemo reason=The operation has timed out.",
-    "pass_lines": 74,
-    "review_lines": 2,
+    "last_line": "[2026-06-07T11:09:37Z] [PASS] Decision passed: metadata=41019 title=Hope",
+    "pass_lines": 73,
+    "review_lines": 3,
     "info_lines": 4
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-07T11:04:13Z",
+    "updated_utc": "2026-06-07T11:09:40Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T11:07:01Z",
+    "updated_utc": "2026-06-07T11:08:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -84,7 +84,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T11:07:01Z",
+    "updated_utc": "2026-06-07T11:09:04Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -159,9 +159,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T11:07:57.299Z",
+      "utc": "2026-06-07T11:09:37.590Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-07T11:07:57Z] [REVIEW] Decision failed: metadata=41189 title=Finding Nemo reason=The operation has timed out."
+      "detail": "Latest child QA line: [2026-06-07T11:09:37Z] [PASS] Decision passed: metadata=41019 title=Hope"
     },
     {
       "utc": "2026-06-07T11:06:35.469Z",
@@ -242,7 +242,7 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T11:07:57.299Z - Plex client decision QA",
+      "last_change": "2026-06-07T11:09:37.590Z - Plex client decision QA",
       "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=21, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
       "progress": 15,
       "eta": "after PlatformGate and candidate model PASS",
@@ -251,7 +251,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T11:07:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T11:09:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
