@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T11:43:04.954Z
+Updated UTC: 2026-06-07T11:45:03.066Z
 Source: live status merge
 
-- 2026-06-07T11:43:03.601Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:43:03Z] [INFO] Waiting for shared catalog lock.
-- 2026-06-07T11:40:13.563Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
-- 2026-06-07T11:38:46Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-07T11:44:59.346Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T11:44:59Z] [INFO] Waiting for shared catalog lock.
+- 2026-06-07T11:43:14.330Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
+- 2026-06-07T11:43:07Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-07T11:38:40.738Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-07T11:38:40Z] [INFO] Health status publishing
 - 2026-06-07T11:12:16.648Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-07T11:12:16Z] [PASS] Decision passed: metadata=41196 title=Mulan
 - 2026-06-07T10:41:49.049Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T10:41:49Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
