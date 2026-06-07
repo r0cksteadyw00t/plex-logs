@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T06:01:01.075Z",
+  "updated_utc": "2026-06-07T06:03:03.409Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -25,8 +25,8 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 1,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 3,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T06:03:47Z",
     "next_check_age_minutes": 0,
@@ -37,7 +37,7 @@
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
     "last_progress_utc": "2026-06-07T06:00:05.523Z",
-    "age_minutes": 1,
+    "age_minutes": 3,
     "last_line": "[2026-06-07T06:00:05Z] [PASS] QA passed: part=112104 title=Hope",
     "pass_lines": 67,
     "review_lines": 9,
@@ -52,7 +52,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T06:00:02Z",
+    "updated_utc": "2026-06-07T06:03:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -61,13 +61,13 @@
     "current_step": "running_platform_gate_attempt_1",
     "owner_pid": 800,
     "child_pid": 32492,
-    "last_progress_utc": "2026-06-07T06:00:40Z",
-    "heartbeat_updated_utc": "2026-06-07T06:00:40Z",
+    "last_progress_utc": "2026-06-07T06:02:40Z",
+    "heartbeat_updated_utc": "2026-06-07T06:02:40Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T06:00:02Z",
+    "updated_utc": "2026-06-07T06:03:02Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -94,12 +94,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T06:00:40Z",
+      "utc": "2026-06-07T06:02:40Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=800; child_pid=32492"
     },
     {
-      "utc": "2026-06-07T06:00:40Z",
+      "utc": "2026-06-07T06:02:40Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
     },
@@ -168,7 +168,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-07T06:01:01.075Z - truthful AI capability metric refreshed",
+      "last_change": "2026-06-07T06:03:03.409Z - truthful AI capability metric refreshed",
       "current": "8791/8805 service reachability is not enough. Backend supports SSE chat, JSON health, tool traces and command queue after the patched 8805 service is running.",
       "progress": 40,
       "eta": "usable after 8805 patched service restart and live chat smoke test",
@@ -178,7 +178,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T06:00:05.523Z - Plex visible/HLS QA",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 65 and are not counted as delivered catalogue. PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=1 min; owner_pid=800; child_pid=32492.",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 65 and are not counted as delivered catalogue. PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=3 min; owner_pid=800; child_pid=32492.",
       "progress": 5,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -186,9 +186,9 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T06:00:02Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T06:03:02Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
-      "progress": 30,
+      "progress": 25,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
     },
@@ -224,7 +224,7 @@
       "target": "Parallel local workers for simulations, status, planning and future missions.",
       "last_change": "2026-06-06T08:25:00Z - watchdog swarm escalation marker added",
       "current": "Short scheduled workers active; broader worker swarm pending.",
-      "progress": 32,
+      "progress": 28,
       "eta": "2-4 days",
       "stall_risk": "Medium"
     },
@@ -232,17 +232,17 @@
       "outcome": "Phone/Multi-Device Federation",
       "target": "Stable remote status/control through public mirror plus tunnel/federation layer.",
       "last_change": "2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated",
-      "current": "Public mirror PASS; raw status base available.",
-      "progress": 47,
+      "current": "Public mirror REVIEW; raw status base available.",
+      "progress": 35,
       "eta": "1-3 days",
-      "stall_risk": "Low"
+      "stall_risk": "Medium"
     },
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T06:00:40Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T06:02:40Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=1; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
-      "progress": 18,
+      "progress": 15,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
       "stall_risk": "Low"
     }
