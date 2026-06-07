@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T04:17:01.882Z",
+  "updated_utc": "2026-06-07T04:19:03.107Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,10 +14,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 2,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 4,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-07T04:18:10Z",
+    "next_check_utc": "2026-06-07T04:23:10Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -26,7 +26,7 @@
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
     "last_progress_utc": "2026-06-07T04:15:23.689Z",
-    "age_minutes": 2,
+    "age_minutes": 4,
     "last_line": "[2026-06-07T04:15:23Z] [PASS] QA passed: part=112239 title=The Gangster, the Cop, the Devil",
     "pass_lines": 63,
     "review_lines": 14,
@@ -35,13 +35,13 @@
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-07T04:13:08Z",
+    "updated_utc": "2026-06-07T04:18:09Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T04:15:00Z",
+    "updated_utc": "2026-06-07T04:18:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -50,13 +50,13 @@
     "current_step": "running_platform_gate_attempt_1",
     "owner_pid": 29872,
     "child_pid": 44088,
-    "last_progress_utc": "2026-06-07T04:16:43Z",
-    "heartbeat_updated_utc": "2026-06-07T04:16:43Z",
+    "last_progress_utc": "2026-06-07T04:18:43Z",
+    "heartbeat_updated_utc": "2026-06-07T04:18:43Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T04:16:01Z",
+    "updated_utc": "2026-06-07T04:18:03Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -83,29 +83,29 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T04:16:43Z",
+      "utc": "2026-06-07T04:18:43Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=29872; child_pid=44088"
     },
     {
-      "utc": "2026-06-07T04:16:43Z",
+      "utc": "2026-06-07T04:18:43Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
+    },
+    {
+      "utc": "2026-06-07T04:18:13.510Z",
+      "title": "JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36",
+      "detail": "Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion."
+    },
+    {
+      "utc": "2026-06-07T04:18:09Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T04:15:23.689Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
       "detail": "Latest child QA line: [2026-06-07T04:15:23Z] [PASS] QA passed: part=112239 title=The Gangster, the Cop, the Devil"
-    },
-    {
-      "utc": "2026-06-07T04:13:14.089Z",
-      "title": "JasonOS Prime / ScarFLIX Forensic Pause - 2026-06-07 13:36",
-      "detail": "Jason declared current progress a user-outcome failure and requested no further project progress while a forensic technical review is performed. Current mode: `PAUSED_FOR_FORENSIC_REVIEW` No catalogue expansion."
-    },
-    {
-      "utc": "2026-06-07T04:13:08Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-07T03:42:34.283Z",
@@ -167,7 +167,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T04:15:23.689Z - Plex visible/HLS QA",
-      "current": "Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=2 min; owner_pid=29872; child_pid=44088.",
+      "current": "Visible 65 items; movies=45; tv=20; .strm movies=1; .strm tv=0; .strm total=1; PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=4 min; owner_pid=29872; child_pid=44088.",
       "progress": 42,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -175,7 +175,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T04:16:01Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T04:18:03Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 75,
       "eta": "runs every 5 minutes",
@@ -229,7 +229,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T04:16:43Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T04:18:43Z - Durable PlatformGate ownership active",
       "current": "Core services online; FastTrack is pushing short workers while Durable PlatformGate owns the current ScarFLIX bottleneck.",
       "progress": 56,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
