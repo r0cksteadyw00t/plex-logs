@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T02:04:01.771Z
+Updated UTC: 2026-06-07T02:06:03.454Z
 Source: live status merge
 
-- 2026-06-07T02:03:58Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
-- 2026-06-07T02:03:58Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T02:05:58Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
+- 2026-06-07T02:05:58Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T02:04:41.923Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T02:04:41Z] [PASS] QA passed: part=112207 title=The Good, the Bad and the Ugly
 - 2026-06-07T02:03:27.610Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44: Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`...
 - 2026-06-07T02:03:20Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
-- 2026-06-07T02:02:36.742Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T02:02:36Z] [PASS] QA passed: part=112136 title=The Maze Runner
 - 2026-06-07T01:44:43.970Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T01:44:43Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
 - 2026-06-07T01:43:34.735Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 10:22: Jason reported the status continued to look unchanged since overnight. Finding: This was a real control-flow stall, not just a stale dashboard. The repeated loop was: PlatformGate REVIEW -> WebDAV ActiveGate transient HTTP `503` failures -> relaunch PlatformGate -> same REVIEW.
 - 2026-06-07T01:37:07Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=13964; child_pid=
