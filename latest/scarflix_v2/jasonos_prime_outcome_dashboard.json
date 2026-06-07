@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T12:44:03.155Z",
+  "updated_utc": "2026-06-07T12:46:13.643Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -16,8 +16,8 @@
     "total_strm_count": 38,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "direct_strm_mirror_status": "PASS_IDEMPOTENT",
-    "direct_strm_mirror_eligible_entries": 37,
-    "direct_strm_mirror_already_current": 37,
+    "direct_strm_mirror_eligible_entries": 35,
+    "direct_strm_mirror_already_current": 35,
     "direct_strm_mirror_created": 0,
     "direct_strm_mirror_updated": 0,
     "direct_strm_mirror_written_count": 0,
@@ -46,38 +46,38 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 8,
+    "controller_updated_age_minutes": 0,
     "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-07T12:42:31Z",
-    "next_check_age_minutes": 2,
+    "next_check_utc": "2026-06-07T12:51:10Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex client decision QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260607.log",
-    "last_progress_utc": "2026-06-07T12:43:59.430Z",
+    "stage": "Plex visible/HLS QA",
+    "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
+    "last_progress_utc": "2026-06-07T12:46:10.110Z",
     "age_minutes": 0,
-    "last_line": "[2026-06-07T12:43:59Z] [REVIEW] Decision failed: metadata=40441 title=Project Hail Mary reason=The operation has timed out.",
-    "pass_lines": 64,
-    "review_lines": 10,
-    "info_lines": 6
+    "last_line": "[2026-06-07T12:46:09Z] [INFO] Visible catalog QA starting MaxItems=0 HideFailed=True PathListFile=",
+    "pass_lines": 57,
+    "review_lines": 16,
+    "info_lines": 7
   },
   "watchdog_status": {
     "status": "REVIEW",
-    "stall_risk": "Medium",
+    "stall_risk": "High",
     "updated_utc": "2026-06-07T12:39:52Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-07T12:43:04Z",
-    "codex_action_required": false,
+    "status": "ALERT",
+    "alert_level": "HIGH",
+    "updated_utc": "2026-06-07T12:45:04Z",
+    "codex_action_required": true,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
@@ -91,7 +91,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T12:43:02Z",
+    "updated_utc": "2026-06-07T12:45:04Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -112,7 +112,7 @@
   "scarflix_canary": {
     "status": "RUNNING",
     "milestone": "CANARY_PIPELINE_RUNNING",
-    "updated_utc": "2026-06-07T12:34:02.409Z",
+    "updated_utc": "2026-06-07T12:44:03.521Z",
     "platform_gate_status": "PASS",
     "actual_strm_counts": {
       "movies": 28,
@@ -166,24 +166,24 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-07T12:43:59.430Z",
-      "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-07T12:43:59Z] [REVIEW] Decision failed: metadata=40441 title=Project Hail Mary reason=The operation has timed out."
+      "utc": "2026-06-07T12:46:10.110Z",
+      "title": "PlatformGate child QA active: Plex visible/HLS QA",
+      "detail": "Latest child QA line: [2026-06-07T12:46:09Z] [INFO] Visible catalog QA starting MaxItems=0 HideFailed=True PathListFile="
     },
     {
-      "utc": "2026-06-07T12:37:36.375Z",
+      "utc": "2026-06-07T12:45:58.047Z",
       "title": "PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23",
       "detail": "Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v..."
     },
     {
-      "utc": "2026-06-07T12:36:09Z",
+      "utc": "2026-06-07T12:45:47Z",
       "title": "Autonomous controller: candidate_source_model_review",
       "detail": "Candidate-source model requires engineering review before catalogue expansion"
     },
     {
-      "utc": "2026-06-07T12:33:07.536Z",
-      "title": "PlatformGate child QA active: Plex visible/HLS QA",
-      "detail": "Latest child QA line: [2026-06-07T12:33:07Z] [REVIEW] QA failed: part=111357 title=Project Hail Mary reason=Plex Transcoder HLS probe timed out"
+      "utc": "2026-06-07T12:44:43.541Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-07T12:44:43Z] [PASS] Decision passed: metadata=40513 title=Pulp Fiction"
     },
     {
       "utc": "2026-06-07T12:11:16.691Z",
@@ -249,16 +249,16 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-07T12:43:59.430Z - Plex client decision QA",
-      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=PASS_IDEMPOTENT, eligible=37, already_current=37. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=37. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
+      "last_change": "2026-06-07T12:46:10.110Z - Plex visible/HLS QA",
+      "current": "Actual Streaming library .strm output is movies=28, tv=10, total=38. Direct mirror=PASS_IDEMPOTENT, eligible=35, already_current=35. Visible QA rows are 46 and are not counted as delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=9, new_visible_strm=37. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=under 1 min; owner_pid=24768; child_pid=.",
       "progress": 25,
       "eta": "after PlatformGate and candidate model PASS",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     },
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T12:43:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-07T12:45:04Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=38.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -316,7 +316,7 @@
       "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=38; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
       "progress": 18,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     }
   ],
   "files": {
