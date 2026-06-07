@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T18:53:15.754Z
+Updated UTC: 2026-06-07T18:55:09.079Z
 Source: live status merge
 
 - 2026-06-07T18:51:16.319Z - PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23: Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v...
