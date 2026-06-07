@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-07T05:55:03.340Z",
+  "updated_utc": "2026-06-07T05:57:03.118Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -25,11 +25,11 @@
     "state": "WATCHING_FOR_STALL",
     "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 6,
-    "platform_child_progress_age_minutes": 15,
+    "controller_updated_age_minutes": 8,
+    "platform_child_progress_age_minutes": 17,
     "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-07T05:53:58Z",
-    "next_check_age_minutes": 1,
+    "next_check_age_minutes": 3,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -37,7 +37,7 @@
     "stage": "Plex visible/HLS QA",
     "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260607.log",
     "last_progress_utc": "2026-06-07T05:40:23.786Z",
-    "age_minutes": 15,
+    "age_minutes": 17,
     "last_line": "[2026-06-07T05:40:23Z] [OK] Visible QA cache updated: 235 entries",
     "pass_lines": 65,
     "review_lines": 10,
@@ -46,28 +46,28 @@
   "watchdog_status": {
     "status": "PASS",
     "stall_risk": "Low",
-    "updated_utc": "2026-06-07T05:48:21Z",
+    "updated_utc": "2026-06-07T05:56:32Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-07T05:53:01Z",
+    "updated_utc": "2026-06-07T05:55:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
-    "status": "REVIEW",
-    "current_step": "platform_gate_review",
-    "owner_pid": 41708,
-    "child_pid": "",
-    "last_progress_utc": "2026-06-07T05:50:07Z",
-    "heartbeat_updated_utc": "2026-06-07T05:50:07Z",
+    "status": "RUNNING",
+    "current_step": "running_platform_gate_attempt_1",
+    "owner_pid": 31116,
+    "child_pid": 38128,
+    "last_progress_utc": "2026-06-07T05:56:33Z",
+    "heartbeat_updated_utc": "2026-06-07T05:56:33Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-07T05:54:01Z",
+    "updated_utc": "2026-06-07T05:56:03Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -94,6 +94,16 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-07T05:56:33Z",
+      "title": "Durable PlatformGate runner RUNNING",
+      "detail": "Step running_platform_gate_attempt_1; owner_pid=31116; child_pid=38128"
+    },
+    {
+      "utc": "2026-06-07T05:56:33Z",
+      "title": "PlatformGate checkpoint RUNNING",
+      "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
+    },
+    {
       "utc": "2026-06-07T05:54:13.636Z",
       "title": "JasonOS Prime / ScarFLIX Forensic Investigator Update - 2026-06-07 15:51",
       "detail": "Jason requested a forensic status pass plus scoped technical fixes. Current facts: Durable PlatformGate status at capture: `REVIEW`. Durable owner PID: `41708`."
@@ -107,16 +117,6 @@
       "utc": "2026-06-07T05:50:07Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=65; blockers=0"
-    },
-    {
-      "utc": "2026-06-07T05:49:30Z",
-      "title": "Durable PlatformGate runner RUNNING",
-      "detail": "Step running_platform_gate_attempt_1; owner_pid=41708; child_pid=7088"
-    },
-    {
-      "utc": "2026-06-07T05:49:30Z",
-      "title": "PlatformGate checkpoint RUNNING",
-      "detail": "Step running_platform_gate_attempt_1; visible=65; blockers=0"
     },
     {
       "utc": "2026-06-07T05:49:01.719Z",
@@ -168,7 +168,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-07T05:55:03.340Z - truthful AI capability metric refreshed",
+      "last_change": "2026-06-07T05:57:03.117Z - truthful AI capability metric refreshed",
       "current": "8791/8805 service reachability is not enough. Backend supports SSE chat, JSON health, tool traces and command queue after the patched 8805 service is running.",
       "progress": 40,
       "eta": "usable after 8805 patched service restart and live chat smoke test",
@@ -178,7 +178,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-07T05:40:23.786Z - Plex visible/HLS QA",
-      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 65 and are not counted as delivered catalogue. PlatformGate=REVIEW; durable=REVIEW; child_stage=Plex visible/HLS QA; child_age=15 min; owner_pid=41708; child_pid=.",
+      "current": "Actual Streaming library .strm output is movies=1, tv=0, total=1. Visible QA rows are 65 and are not counted as delivered catalogue. PlatformGate=RUNNING; durable=RUNNING; child_stage=Plex visible/HLS QA; child_age=17 min; owner_pid=31116; child_pid=38128.",
       "progress": 5,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -186,9 +186,9 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-07T05:54:01Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-07T05:56:03Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
-      "progress": 25,
+      "progress": 30,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
     },
@@ -240,7 +240,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-07T05:50:07Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-07T05:56:33Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=1; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
       "progress": 18,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
