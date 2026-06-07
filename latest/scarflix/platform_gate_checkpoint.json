@@ -1,0 +1,158 @@
+{
+    "component":  "scarflix_v2_durable_platform_gate_runner",
+    "status":  "RUNNING",
+    "current_step":  "running_platform_gate_attempt_1",
+    "started_utc":  "2026-06-07T01:44:25Z",
+    "last_progress_utc":  "2026-06-07T01:46:57Z",
+    "ended_utc":  "",
+    "duration_seconds":  152,
+    "no_catalogue_expansion":  true,
+    "single_owner":  true,
+    "owner_pid":  39172,
+    "child_pid":  28816,
+    "child_start_utc":  "2026-06-07T01:44:27Z",
+    "child_exit_code":  null,
+    "child_qa_last_progress_utc":  "2026-06-07T01:46:21Z",
+    "child_qa_last_progress_path":  "D:\\PlexTools\\logs\\scarflix_v2_visible_catalog_qa_20260607.log",
+    "child_qa_stale_minutes":  0.6,
+    "child_qa_stale_threshold_minutes":  15,
+    "child_qa_stall_count":  0,
+    "attempts":  [
+
+                 ],
+    "stale_minutes":  5,
+    "heartbeat_seconds":  30,
+    "lock_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable.lock",
+    "heartbeat_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable_heartbeat.json",
+    "checkpoint_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.json",
+    "checkpoint_md":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.md",
+    "status_latest":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_status.json",
+    "status_run":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_20260607_114425.json",
+    "log":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_20260607.log",
+    "blockers":  [
+
+                 ],
+    "actions":  [
+
+                ],
+    "overlap_tasks":  [
+
+                      ],
+    "orphan_processes_killed":  [
+
+                                ],
+    "stale_locks_removed":  [
+
+                            ],
+    "platform_gate":  {
+                          "component":  "scarflix_v2_platform_gate",
+                          "status":  "REVIEW",
+                          "started_utc":  "2026-06-07T00:13:22Z",
+                          "ended_utc":  "2026-06-07T01:36:52Z",
+                          "duration_seconds":  5011,
+                          "visible":  {
+                                          "count":  65,
+                                          "movies":  45,
+                                          "tv":  20
+                                      },
+                          "snapshot":  {
+                                           "id":  "20260607T001338Z",
+                                           "hash":  "c5319cf869ee95f79cb7760c67ef5e4974f0a6890801529f556d82e3da3990ca",
+                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260607T001338Z.txt",
+                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260607T001338Z.json"
+                                       },
+                          "qa":  {
+                                     "active_gate":  {
+                                                         "status":  "PASS",
+                                                         "exit_code":  0,
+                                                         "fresh":  true,
+                                                         "checked":  65,
+                                                         "status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\webdav_active_gate_status.json"
+                                                     },
+                                     "visible_catalog_qa":  {
+                                                                "status":  "FAIL",
+                                                                "exit_code":  1,
+                                                                "fresh":  true,
+                                                                "checked":  66,
+                                                                "status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\visible_catalog_qa_status.json"
+                                                            }
+                                 },
+                          "quarantine":  {
+                                             "count":  697,
+                                             "top_reason_codes":  [
+                                                                      {
+                                                                          "code":  "PROVIDER_503",
+                                                                          "count":  433
+                                                                      },
+                                                                      {
+                                                                          "code":  "PROVIDER_TIMEOUT",
+                                                                          "count":  128
+                                                                      },
+                                                                      {
+                                                                          "code":  "PLEX_INVISIBLE_AFTER_SCAN",
+                                                                          "count":  107
+                                                                      },
+                                                                      {
+                                                                          "code":  "PROVIDER_503_RETRYABLE",
+                                                                          "count":  21
+                                                                      },
+                                                                      {
+                                                                          "code":  "PLEX_CODEC_BLOCKED",
+                                                                          "count":  3
+                                                                      },
+                                                                      {
+                                                                          "code":  "POLICY_BLOCKED",
+                                                                          "count":  2
+                                                                      },
+                                                                      {
+                                                                          "code":  "PLEX_PROFILE_FAILED",
+                                                                          "count":  2
+                                                                      },
+                                                                      {
+                                                                          "code":  "RELEASE_WINDOW_BLOCKED",
+                                                                          "count":  1
+                                                                      }
+                                                                  ]
+                                         },
+                          "schedules_safely_reenabled":  false,
+                          "schedule_states":  [
+                                                  {
+                                                      "task":  "ScarFLIX_v2_SafeWebDavExpansionPipeline",
+                                                      "state":  "Disabled"
+                                                  },
+                                                  {
+                                                      "task":  "ScarFLIX_v2_LiveCatalogSeeder",
+                                                      "state":  "Disabled"
+                                                  },
+                                                  {
+                                                      "task":  "ScarFLIX_v2_WebDavVirtualCatalogPublisher",
+                                                      "state":  "Disabled"
+                                                  },
+                                                  {
+                                                      "task":  "ScarFLIX_v2_AutoGate",
+                                                      "state":  "Disabled"
+                                                  },
+                                                  {
+                                                      "task":  "ScarFLIX_v2_SafeCatalogOrchestrator",
+                                                      "state":  "Disabled"
+                                                  },
+                                                  {
+                                                      "task":  "ScarFLIX_v2_CatalogPromoter",
+                                                      "state":  "Disabled"
+                                                  },
+                                                  {
+                                                      "task":  "ScarFLIX_v2_CatalogVisibilityGate",
+                                                      "state":  "Disabled"
+                                                  }
+                                              ],
+                          "blockers":  [
+                                           "visible_catalog_qa status=FAIL",
+                                           "visible_catalog_qa checked 66, expected snapshot 65"
+                                       ],
+                          "files":  {
+                                        "status":  "D:\\PlexTools\\public\\latest\\scarflix\\platform_gate_status.json",
+                                        "report":  "D:\\PlexTools\\public\\latest\\scarflix\\platform_gate_STATUS.md",
+                                        "log":  "D:\\PlexTools\\logs\\scarflix_v2_platform_gate_20260607.log"
+                                    }
+                      }
+}
