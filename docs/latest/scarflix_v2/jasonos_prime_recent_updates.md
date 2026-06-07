@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-07T01:46:44.387Z
+Updated UTC: 2026-06-07T01:48:02.324Z
 Source: live status merge
 
-- 2026-06-07T01:46:27Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
-- 2026-06-07T01:46:27Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
+- 2026-06-07T01:47:57Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39172; child_pid=28816
+- 2026-06-07T01:47:57Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=65; blockers=0
 - 2026-06-07T01:46:21.611Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-07T01:46:21Z] [REVIEW] QA failed: part=112087 title=The Lord of the Rings: The Two Towers reason=Plex Transcoder HLS probe timed out
 - 2026-06-07T01:45:49.860Z - JasonOS Prime / ScarFLIX Update - 2026-06-07 11:44: Jason reported the RawGithack dashboard still appeared stuck at the same `Durable PlatformGate runner REVIEW` / `PlatformGate checkpoint REVIEW` entries. Findings: The local v2 dashboard was progressing, but the legacy RawGithack URL `https://raw.githack.com/r0cksteadyw00t/plex-logs/main/latest/scarflix/index.html`...
 - 2026-06-07T01:44:43.970Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-07T01:44:43Z] [INFO] Running concurrent WebDAV active gate worker for 65 entries.
