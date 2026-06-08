@@ -1,6 +1,6 @@
 # ScarFLIX v2 Materialized Canary Plex Decision QA
 
-Updated UTC: 2026-06-08T09:42:20Z
+Updated UTC: 2026-06-08T09:43:06Z
 Status: PASS
 Targets: 2
 Rows found: 2
