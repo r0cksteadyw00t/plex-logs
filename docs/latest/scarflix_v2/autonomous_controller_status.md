@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: REVIEW_TRANSIENT
-Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
-Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-08T15:20:13Z
-Current step: candidate_source_model_review
+Status: FAIL_ENGINEERING
+Milestone state: BLOCKED_DECISION
+Milestone: Complete same-snapshot PlatformGate checkpoint
+Updated UTC: 2026-06-08T15:30:34Z
+Current step: controller_exception
 Jason action required: False
 
 ## PlatformGate
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: Candidate-source model requires engineering review before catalogue expansion
-- next_check_utc: 2026-06-08T15:27:27Z
+- action_taken: none
+- next_check_utc: 
 
 ## Blockers
-- seeder_stage_only_not_plex_visible
+- Controller exception: Exception calling "WriteAllText" with "3" argument(s): "The process cannot access the file 'D:\PlexTools\state\scarflix_v2\autonomous_controller_retry_state.json' because it is being used by another process."
