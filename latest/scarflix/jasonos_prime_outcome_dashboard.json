@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T02:36:01.287Z",
+  "updated_utc": "2026-06-08T02:37:01.679Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -21,21 +21,21 @@
     "direct_strm_mirror_created": 0,
     "direct_strm_mirror_updated": 0,
     "direct_strm_mirror_written_count": 0,
-    "direct_strm_admission_status": "RUNNING_ALREADY",
-    "direct_strm_admission_checked_visible": 0,
-    "direct_strm_admission_passed_visible": 0,
-    "direct_strm_admission_failed_visible": null,
+    "direct_strm_admission_status": "REVIEW_RETRY_HELD",
+    "direct_strm_admission_checked_visible": 95,
+    "direct_strm_admission_passed_visible": 95,
+    "direct_strm_admission_failed_visible": 0,
     "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_admission_retry_held_count": 0,
-    "direct_strm_admission_permanent_quarantine_count": 0,
-    "direct_strm_admission_raw_live_proxy_visible_count": 0,
-    "plex_playback_sample_status": "REVIEW",
-    "plex_playback_sample_source_mode": "direct_strm",
+    "direct_strm_admission_retry_held_count": 6,
+    "direct_strm_admission_permanent_quarantine_count": 1,
+    "direct_strm_admission_raw_live_proxy_visible_count": 95,
+    "plex_playback_sample_status": "UNKNOWN",
+    "plex_playback_sample_source_mode": "unknown",
     "plex_playback_sample_target_concurrency": 5,
-    "plex_playback_sample_range_passed": 5,
+    "plex_playback_sample_range_passed": 0,
     "plex_playback_sample_range_failed": 0,
     "plex_playback_sample_decision_passed": 0,
-    "plex_playback_sample_decision_failed": 5,
+    "plex_playback_sample_decision_failed": 0,
     "plex_playback_verified_sample_count": 0,
     "plex_playback_verification_note": "direct STRM URL/range checks are not enough; Plex decision QA has not passed the direct playback sample",
     "staged_candidate_pending_count": 0,
@@ -77,7 +77,7 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
+    "controller_updated_age_minutes": 2,
     "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-08T02:40:08Z",
@@ -86,14 +86,14 @@
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex visible/HLS QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_visible_catalog_qa_20260608.log",
-    "last_progress_utc": "2026-06-08T02:36:00.845Z",
+    "stage": "WebDAV active gate",
+    "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260608.log",
+    "last_progress_utc": "2026-06-08T02:36:55.298Z",
     "age_minutes": 0,
-    "last_line": "[2026-06-08T02:36:00Z] [PASS] QA passed: part=112885 title=The Stolen Eagle",
-    "pass_lines": 21,
-    "review_lines": 54,
-    "info_lines": 2
+    "last_line": "[2026-06-08T02:36:55Z] [INFO] Running concurrent WebDAV active gate worker for 12 entries.",
+    "pass_lines": 19,
+    "review_lines": 1,
+    "info_lines": 60
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -118,14 +118,23 @@
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
-    "status": "RUNNING_ALREADY",
-    "updated_utc": "2026-06-08T02:35:04Z",
-    "checked_visible": 0,
-    "passed_visible": 0,
-    "failed_visible": null,
+    "status": "REVIEW_RETRY_HELD",
+    "updated_utc": "2026-06-08T02:36:31Z",
+    "checked_visible": 95,
+    "passed_visible": 95,
+    "failed_visible": 0,
     "quarantined_this_run": 0,
-    "retry_held_count": 0,
-    "top_reason_codes": [],
+    "retry_held_count": 6,
+    "top_reason_codes": [
+      {
+        "code": "PROVIDER_503_RETRYABLE",
+        "count": 6
+      },
+      {
+        "code": "SOURCE_EXPIRED_OR_GONE",
+        "count": 1
+      }
+    ],
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json"
   },
   "staged_candidate_publisher": {
@@ -147,7 +156,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T02:35:03Z",
+    "updated_utc": "2026-06-08T02:36:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -222,6 +231,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-08T02:36:55.298Z",
+      "title": "PlatformGate child QA active: WebDAV active gate",
+      "detail": "Latest child QA line: [2026-06-08T02:36:55Z] [INFO] Running concurrent WebDAV active gate worker for 12 entries."
+    },
+    {
       "utc": "2026-06-08T02:36:00.845Z",
       "title": "PlatformGate child QA active: Plex visible/HLS QA",
       "detail": "Latest child QA line: [2026-06-08T02:36:00Z] [PASS] QA passed: part=112885 title=The Stolen Eagle"
@@ -240,11 +254,6 @@
       "utc": "2026-06-08T02:34:34.523Z",
       "title": "PlatformGate child QA active: Health",
       "detail": "Latest child QA line: [2026-06-08T02:34:34Z] [INFO] Health status publishing"
-    },
-    {
-      "utc": "2026-06-08T02:33:59.033Z",
-      "title": "PlatformGate child QA active: WebDAV active gate",
-      "detail": "Latest child QA line: [2026-06-08T02:33:59Z] [INFO] Running concurrent WebDAV active gate worker for 7 entries."
     },
     {
       "utc": "2026-06-08T02:30:11.644Z",
@@ -305,8 +314,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-08T02:36:00.845Z - Plex visible/HLS QA",
-      "current": "Actual Streaming library .strm output is movies=60, tv=35, total=95. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=RUNNING_ALREADY, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=0. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 12 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=5. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex visible/HLS QA; child_age=under 1 min; owner_pid=44064; child_pid=.",
+      "last_change": "2026-06-08T02:36:55.298Z - WebDAV active gate",
+      "current": "Actual Streaming library .strm output is movies=60, tv=35, total=95. Plex playback sample=UNKNOWN mode=unknown, range=0/0, decision=0/0. Staged pending=0; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=95, passed_visible=95, quarantined_this_run=0, retry_held=6. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 12 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=5. PlatformGate=PASS/PASS; durable=PASS; child_stage=WebDAV active gate; child_age=under 1 min; owner_pid=44064; child_pid=.",
       "progress": 25,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -314,7 +323,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T02:35:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T02:36:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=95.",
       "progress": 30,
       "eta": "runs every 5 minutes",
