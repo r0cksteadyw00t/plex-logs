@@ -1,7 +1,7 @@
 # ScarFLIX v2 Candidate Source Model
 
 Status: REVIEW
-Updated UTC: 2026-06-08T16:50:12Z
+Updated UTC: 2026-06-08T17:05:12Z
 PlatformGate status: PASS
 
 ## Checks
