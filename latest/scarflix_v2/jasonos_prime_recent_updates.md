@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T02:32:01.095Z
+Updated UTC: 2026-06-08T02:34:01.535Z
 Source: live status merge
 
+- 2026-06-08T02:33:59.033Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T02:33:59Z] [INFO] Running concurrent WebDAV active gate worker for 7 entries.
 - 2026-06-08T02:30:12.161Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
 - 2026-06-08T02:30:11.644Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T02:30:11Z] [REVIEW] Final: REVIEW
 - 2026-06-08T02:30:04Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T02:27:40.236Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T02:27:40Z] [INFO] Health status publishing
 - 2026-06-08T02:25:08Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
-- 2026-06-08T02:23:55.849Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T02:23:55Z] [INFO] Running concurrent WebDAV active gate worker for 11 entries.
 - 2026-06-08T02:08:01.548Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T02:08:01Z] [PASS] Decision passed: metadata=41608 title=That '70s Pilot
 - 2026-06-08T02:05:02.861Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-08T02:05:02Z] [OK] Backed up Plex DB: D:\PlexTools\backups\scarflix_v2\plex_db\plex_before_visible_catalog_qa_20260608_120501.db
 - 2026-06-08T01:18:52Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=44064; child_pid=
