@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T03:47:02.282Z",
+  "updated_utc": "2026-06-08T03:49:01.804Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -35,7 +35,7 @@
     "plex_playback_sample_range_passed": 5,
     "plex_playback_sample_range_failed": 0,
     "plex_playback_sample_decision_passed": 0,
-    "plex_playback_sample_decision_failed": 0,
+    "plex_playback_sample_decision_failed": 5,
     "plex_playback_verified_sample_count": 0,
     "plex_playback_verification_note": "direct STRM URL/range checks are not enough; Plex decision QA has not passed the direct playback sample",
     "staged_candidate_pending_count": 0,
@@ -49,9 +49,9 @@
     "playback_qa_direct_strm_admission_status": "RUNNING_ALREADY",
     "playback_qa_decision_status": "PASS",
     "playback_qa_concurrent_status": "REVIEW",
-    "visible_qa_count": 8,
-    "visible_qa_movies": 2,
-    "visible_qa_tv": 6,
+    "visible_qa_count": 3,
+    "visible_qa_movies": null,
+    "visible_qa_tv": 3,
     "snapshot_scoped_health_status": "PASS",
     "global_health_status": "REVIEW",
     "global_health_blocking": false,
@@ -69,17 +69,17 @@
     "global_health_blocking": false,
     "global_health_reason": "visibility_only_non_blocking",
     "global_health_snapshot_count_match": true,
-    "global_health_client_safe_live_parts": 8,
-    "expected_client_safe_live_parts": 8,
+    "global_health_client_safe_live_parts": 3,
+    "expected_client_safe_live_parts": 3,
     "blocked_by": "none"
   },
   "automation_health": {
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 1,
-    "mirror_updated_age_minutes": 0,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 2,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-08T03:50:09Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
@@ -88,12 +88,12 @@
   "child_qa_progress": {
     "stage": "Health",
     "file": "D:/PlexTools/logs/scarflix_v2_health_status_20260608.log",
-    "last_progress_utc": "2026-06-08T03:46:13.728Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-08T03:46:13Z] [INFO] Health status publishing",
+    "last_progress_utc": "2026-06-08T03:47:19.299Z",
+    "age_minutes": 2,
+    "last_line": "[2026-06-08T03:47:19Z] [INFO] Health status publishing",
     "pass_lines": 0,
     "review_lines": 0,
-    "info_lines": 55
+    "info_lines": 56
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -104,7 +104,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-08T03:45:02Z",
+    "updated_utc": "2026-06-08T03:47:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -156,7 +156,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T03:46:01Z",
+    "updated_utc": "2026-06-08T03:48:02Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -231,9 +231,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-08T03:46:13.728Z",
+      "utc": "2026-06-08T03:47:19.299Z",
       "title": "PlatformGate child QA active: Health",
-      "detail": "Latest child QA line: [2026-06-08T03:46:13Z] [INFO] Health status publishing"
+      "detail": "Latest child QA line: [2026-06-08T03:47:19Z] [INFO] Health status publishing"
     },
     {
       "utc": "2026-06-08T03:45:15.768Z",
@@ -314,8 +314,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-08T03:46:13.728Z - Health",
-      "current": "Actual Streaming library .strm output is movies=69, tv=38, total=107. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/0. Staged pending=0; staged publisher=PASS_PUBLISHED, processed=8, published=3. Direct admission=REVIEW_RETRY_HELD, checked=104, passed_visible=104, quarantined_this_run=0, retry_held=8. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 8 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=3. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=1 min; owner_pid=44064; child_pid=.",
+      "last_change": "2026-06-08T03:47:19.299Z - Health",
+      "current": "Actual Streaming library .strm output is movies=69, tv=38, total=107. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PASS_PUBLISHED, processed=8, published=3. Direct admission=REVIEW_RETRY_HELD, checked=104, passed_visible=104, quarantined_this_run=0, retry_held=8. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 3 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=3. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=2 min; owner_pid=44064; child_pid=.",
       "progress": 30,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -323,7 +323,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T03:46:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T03:48:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=107.",
       "progress": 30,
       "eta": "runs every 5 minutes",
