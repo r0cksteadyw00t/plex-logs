@@ -1,6 +1,6 @@
 # ScarFLIX v2 Materialized Canary Plex Decision QA
 
-Updated UTC: 2026-06-08T09:03:07Z
+Updated UTC: 2026-06-08T09:08:08Z
 Status: REVIEW_PLEX_SCAN_PENDING
 Targets: 2
 Rows found: 1
