@@ -1,0 +1,53 @@
+{
+    "component":  "scarflix_v2_materialized_playback_canary",
+    "status":  "REVIEW_PLEX_SCAN_PENDING",
+    "started_utc":  "2026-06-08T08:00:35Z",
+    "primary_playback_architecture":  "materialized_webdav_symlink",
+    "legacy_resolver_default_allowed":  false,
+    "legacy_resolver_role":  "fallback_only",
+    "publication_gate":  "Plex decision QA after WebDAV/materialized canary",
+    "canary_target_count":  2,
+    "canary_published":  2,
+    "canary_hls_pass":  2,
+    "canary_decision_pass":  1,
+    "expansion_pause_status":  "PAUSED_PLAYBACK_FIX",
+    "expansion_pause_respected":  true,
+    "jason_action_required":  false,
+    "next_action":  "Materialized/WebDAV canary files were published but Plex has not scanned/profiled them yet. Plex scan was requested; retry targeted decision QA later.",
+    "log":  "D:\\PlexTools\\logs\\scarflix_v2_materialized_playback_canary_20260608.log",
+    "updated_utc":  "2026-06-08T08:28:07Z",
+    "seeded_sources":  [
+                           {
+                               "moved_utc":  "2026-06-08T08:00:36Z",
+                               "original_path":  "D:\\StremioCatalog\\_Hybrid\\Movies\\The Green Mile (1999)\\The Green Mile (1999).strm",
+                               "staged_path":  "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\pending\\79f7be121498\\The Green Mile (1999).strm",
+                               "reason":  "materialized/WebDAV playback canary seeded from legacy resolver inventory",
+                               "canary":  true,
+                               "source_path":  "D:\\StremioCatalog\\_Hybrid\\Movies\\The Green Mile (1999).strm",
+                               "kind":  "movie"
+                           },
+                           {
+                               "moved_utc":  "2026-06-08T08:00:36Z",
+                               "original_path":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01.strm",
+                               "staged_path":  "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\pending\\65b800eae577\\Alchemy of Souls (2022) - S01E01.strm",
+                               "reason":  "materialized/WebDAV playback canary seeded from legacy resolver inventory",
+                               "canary":  true,
+                               "source_path":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01.strm",
+                               "kind":  "tv"
+                           }
+                       ],
+    "seeded_count":  2,
+    "publisher_exit_code":  0,
+    "publisher_status":  "PASS",
+    "publisher_status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\catalog_symlink_publisher_status.json",
+    "results":  [
+
+                ],
+    "ended_utc":  "2026-06-08T08:01:12Z",
+    "duration_seconds":  37,
+    "decision_qa_trigger":  {
+                                "task":  "ScarFLIX_v2_PlexClientDecisionQA",
+                                "run_ok":  true,
+                                "text":  "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_PlexClientDecisionQA\"."
+                            }
+}
