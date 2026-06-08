@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T04:16:02.348Z",
+  "updated_utc": "2026-06-08T04:17:01.503Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -21,21 +21,21 @@
     "direct_strm_mirror_created": 0,
     "direct_strm_mirror_updated": 0,
     "direct_strm_mirror_written_count": 0,
-    "direct_strm_admission_status": "RUNNING_ALREADY",
-    "direct_strm_admission_checked_visible": 0,
-    "direct_strm_admission_passed_visible": 0,
-    "direct_strm_admission_failed_visible": null,
+    "direct_strm_admission_status": "REVIEW_RETRY_HELD",
+    "direct_strm_admission_checked_visible": 111,
+    "direct_strm_admission_passed_visible": 111,
+    "direct_strm_admission_failed_visible": 0,
     "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_admission_retry_held_count": 0,
-    "direct_strm_admission_permanent_quarantine_count": 0,
-    "direct_strm_admission_raw_live_proxy_visible_count": 0,
+    "direct_strm_admission_retry_held_count": 10,
+    "direct_strm_admission_permanent_quarantine_count": 1,
+    "direct_strm_admission_raw_live_proxy_visible_count": 111,
     "plex_playback_sample_status": "REVIEW",
     "plex_playback_sample_source_mode": "direct_strm",
     "plex_playback_sample_target_concurrency": 5,
     "plex_playback_sample_range_passed": 5,
     "plex_playback_sample_range_failed": 0,
     "plex_playback_sample_decision_passed": 0,
-    "plex_playback_sample_decision_failed": 5,
+    "plex_playback_sample_decision_failed": 0,
     "plex_playback_verified_sample_count": 0,
     "plex_playback_verification_note": "direct STRM URL/range checks are not enough; Plex decision QA has not passed the direct playback sample",
     "staged_candidate_pending_count": 0,
@@ -77,9 +77,9 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
+    "controller_updated_age_minutes": 2,
     "platform_child_progress_age_minutes": 0,
-    "mirror_updated_age_minutes": 2,
+    "mirror_updated_age_minutes": 0,
     "next_check_utc": "2026-06-08T04:20:10Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
@@ -88,12 +88,12 @@
   "child_qa_progress": {
     "stage": "Health",
     "file": "D:/PlexTools/logs/scarflix_v2_health_status_20260608.log",
-    "last_progress_utc": "2026-06-08T04:15:49.694Z",
+    "last_progress_utc": "2026-06-08T04:16:48.716Z",
     "age_minutes": 0,
-    "last_line": "[2026-06-08T04:15:49Z] [INFO] Health status publishing",
+    "last_line": "[2026-06-08T04:16:48Z] [INFO] Health status publishing",
     "pass_lines": 0,
     "review_lines": 0,
-    "info_lines": 67
+    "info_lines": 68
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -118,14 +118,27 @@
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
-    "status": "RUNNING_ALREADY",
-    "updated_utc": "2026-06-08T04:15:05Z",
-    "checked_visible": 0,
-    "passed_visible": 0,
-    "failed_visible": null,
+    "status": "REVIEW_RETRY_HELD",
+    "updated_utc": "2026-06-08T04:16:49Z",
+    "checked_visible": 111,
+    "passed_visible": 111,
+    "failed_visible": 0,
     "quarantined_this_run": 0,
-    "retry_held_count": 0,
-    "top_reason_codes": [],
+    "retry_held_count": 10,
+    "top_reason_codes": [
+      {
+        "code": "PROVIDER_503_RETRYABLE",
+        "count": 9
+      },
+      {
+        "code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "count": 1
+      },
+      {
+        "code": "SOURCE_EXPIRED_OR_GONE",
+        "count": 1
+      }
+    ],
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json"
   },
   "staged_candidate_publisher": {
@@ -147,7 +160,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T04:15:02Z",
+    "updated_utc": "2026-06-08T04:16:02Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -222,9 +235,14 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-08T04:15:49.694Z",
+      "utc": "2026-06-08T04:16:48.716Z",
       "title": "PlatformGate child QA active: Health",
-      "detail": "Latest child QA line: [2026-06-08T04:15:49Z] [INFO] Health status publishing"
+      "detail": "Latest child QA line: [2026-06-08T04:16:48Z] [INFO] Health status publishing"
+    },
+    {
+      "utc": "2026-06-08T04:16:12.627Z",
+      "title": "Phase 0 PM Baseline - 2026-06-08 14:15",
+      "detail": "Formal project-management files have been created at repo root: `PROJECT_PLAN.md` `TASKS.md` `OUTCOMES.md`"
     },
     {
       "utc": "2026-06-08T04:15:16.067Z",
@@ -285,11 +303,6 @@
       "utc": "2026-06-08T01:18:52Z",
       "title": "PlatformGate checkpoint PASS",
       "detail": "Step platform_gate_pass; visible=1; blockers=0"
-    },
-    {
-      "utc": "2026-06-08T01:17:46Z",
-      "title": "Durable PlatformGate runner RUNNING",
-      "detail": "Step running_platform_gate_attempt_1; owner_pid=44064; child_pid=39572"
     }
   ],
   "outcomes": [
@@ -305,8 +318,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-08T04:15:49.694Z - Health",
-      "current": "Actual Streaming library .strm output is movies=73, tv=38, total=111. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=RUNNING_ALREADY, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=0. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=-2. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=under 1 min; owner_pid=44064; child_pid=.",
+      "last_change": "2026-06-08T04:16:48.716Z - Health",
+      "current": "Actual Streaming library .strm output is movies=73, tv=38, total=111. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/0. Staged pending=0; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=111, passed_visible=111, quarantined_this_run=0, retry_held=10. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=-2. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=under 1 min; owner_pid=44064; child_pid=.",
       "progress": 25,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -314,7 +327,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T04:15:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T04:16:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=111.",
       "progress": 30,
       "eta": "runs every 5 minutes",
