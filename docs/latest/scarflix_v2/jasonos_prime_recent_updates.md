@@ -1,8 +1,9 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T10:18:01.954Z
+Updated UTC: 2026-06-08T10:20:03.054Z
 Source: live status merge
 
+- 2026-06-08T10:18:37.619Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
 - 2026-06-08T10:15:16.559Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
 - 2026-06-08T10:15:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T09:00:13.119Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T09:00:13Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-08T04:15:16.067Z - Autonomous Expansion Reached 113 Direct STRM Entries - 2026-06-08 13:56: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `74`, TV `39`, total `113`. Staged pending candidates on disk: `0`. Latest staged publisher status: `PASS_PUBLISHED`, candidate dirs found `10`, processed `8`, published `6`.
 - 2026-06-08T03:55:54.539Z - Autonomous Expansion Reached 107 Direct STRM Entries - 2026-06-08 13:54: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `69`, TV `38`, total `107`. Staged pending candidates on disk: `0`. Latest staged publisher status: `WAITING_STAGED_CANDIDATES`, candidate dirs found `0`, processed `0`, published `0`.
 - 2026-06-08T03:50:11.815Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
-- 2026-06-08T03:15:04Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
