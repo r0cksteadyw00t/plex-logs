@@ -1,11 +1,35 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
-  "status": "WAITING_STAGED_CANDIDATES",
-  "started_utc": "2026-06-08T04:30:03Z",
-  "updated_utc": "2026-06-08T04:30:03Z",
-  "ended_utc": "2026-06-08T04:30:03Z",
+  "status": "PAUSED_PLAYBACK_FIX",
+  "updated_utc": "2026-06-08T04:35:41Z",
   "jason_action_required": false,
-  "max_items": 8,
+  "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
+  "pause": {
+    "component": "scarflix_v2_expansion_pause",
+    "status": "PAUSED_PLAYBACK_FIX",
+    "paused": true,
+    "updated_utc": "2026-06-08T04:34:10Z",
+    "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
+    "trigger_titles": [
+      "The Maze Runner (2014)",
+      "Saw (2004)"
+    ],
+    "allowed_while_paused": [
+      "direct_strm_admission_gate",
+      "playback_qa_controller",
+      "dashboard",
+      "public_mirror",
+      "watchdog_status_only"
+    ],
+    "blocked_while_paused": [
+      "canary_expansion",
+      "safe_webdav_expansion_pipeline",
+      "stage_only_seeder",
+      "staged_candidate_publisher",
+      "direct_strm_mirror"
+    ],
+    "jason_action_required": false
+  },
   "counts_before": {
     "movies": 73,
     "tv": 39,
@@ -22,8 +46,6 @@
   "retry_held": 0,
   "rejected": 0,
   "skipped": 0,
-  "plex_scan_triggered": [],
-  "results": [],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
   "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
 }
