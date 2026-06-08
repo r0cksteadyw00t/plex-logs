@@ -1,29 +1,164 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
-  "status": "WAITING_STAGED_CANDIDATES",
-  "started_utc": "2026-06-08T03:30:02Z",
-  "updated_utc": "2026-06-08T03:30:03Z",
-  "ended_utc": "2026-06-08T03:30:03Z",
+  "status": "PASS_PUBLISHED",
+  "started_utc": "2026-06-08T03:35:02Z",
+  "updated_utc": "2026-06-08T03:35:12Z",
+  "ended_utc": "2026-06-08T03:35:12Z",
   "jason_action_required": false,
   "max_items": 8,
   "counts_before": {
     "movies": 63,
     "tv": 38,
-    "staged": 0
+    "staged": 7
   },
   "counts_after": {
-    "movies": 63,
+    "movies": 66,
     "tv": 38,
     "staged": 0
   },
-  "candidate_dirs_found": 0,
-  "processed": 0,
-  "published": 0,
+  "candidate_dirs_found": 7,
+  "processed": 7,
+  "published": 3,
   "retry_held": 0,
-  "rejected": 0,
+  "rejected": 4,
   "skipped": 0,
-  "plex_scan_triggered": [],
-  "results": [],
+  "plex_scan_triggered": [
+    {
+      "ok": true,
+      "section": "5",
+      "pid": 43684
+    },
+    {
+      "ok": true,
+      "section": "6",
+      "pid": 3888
+    }
+  ],
+  "results": [
+    {
+      "hash": "2eba67b32c24",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Godzilla King of the Monsters (2019).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/3156468541"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\2eba67b32c24"
+    },
+    {
+      "hash": "31aa4fbe0b67",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Babylon (2022).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/4523757967"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\31aa4fbe0b67"
+    },
+    {
+      "hash": "f8ba944f2d03",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Perfect Blue (1998).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/543558716"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\f8ba944f2d03"
+    },
+    {
+      "hash": "293fd098f75b",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\293fd098f75b_1"
+    },
+    {
+      "hash": "462fe153a8b7",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\462fe153a8b7_1"
+    },
+    {
+      "hash": "6f26cf2e8c3e",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\6f26cf2e8c3e_1"
+    },
+    {
+      "hash": "82fb094e11a0",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\82fb094e11a0_1"
+    }
+  ],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
   "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
 }
