@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "RUNNING",
-  "updated_utc": "2026-06-08T02:25:05Z",
-  "current_step": "concurrent_stream_qa_started",
+  "status": "WAITING_OVERLAP",
+  "updated_utc": "2026-06-08T02:30:04Z",
+  "current_step": "validation_overlap_running",
   "jason_action_required": false,
   "counts": {
-    "movies": 57,
-    "tv": 33,
-    "total": 90
+    "movies": 60,
+    "tv": 35,
+    "total": 95
   },
   "canary_status": "RUNNING",
   "canary_milestone": "CANARY_PIPELINE_STARTED",
@@ -20,7 +20,17 @@
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
-  "overlap_running": [],
+  "overlap_running": [
+    {
+      "name": "ScarFLIX_v2_ConcurrentStreamQA",
+      "ok": true,
+      "status": "Running",
+      "scheduled_state": "Enabled",
+      "last_run": "8/06/2026 12:30:05 PM",
+      "last_result": "267009",
+      "next_run": "8/06/2026 3:00:00 PM"
+    }
+  ],
   "actions": [
     {
       "action": "trigger_plex_scans",
@@ -28,25 +38,15 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 20960
+          "pid": 14632
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 46512
+          "pid": 41096
         }
       ]
-    },
-    {
-      "action": "start_concurrent_stream_qa",
-      "result": {
-        "task": "ScarFLIX_v2_ConcurrentStreamQA",
-        "enable_ok": true,
-        "run_ok": true,
-        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
-        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
-      }
     }
   ],
-  "next_action": "Detached 5-concurrent stream QA is running or queued."
+  "next_action": "Wait for current ScarFLIX validation task to finish."
 }
