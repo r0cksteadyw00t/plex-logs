@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T20:54:01.937Z
+Updated UTC: 2026-06-08T21:04:01.505Z
 Source: live status merge
 
-- 2026-06-08T20:50:18.792Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
-- 2026-06-08T20:50:07Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
-- 2026-06-08T19:00:11.048Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T19:00:11Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
+- 2026-06-08T21:00:22.588Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
+- 2026-06-08T21:00:16Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T21:00:09.541Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T21:00:09Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
 - 2026-06-08T17:00:20.871Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T17:00:20Z] [REVIEW] Final: REVIEW
 - 2026-06-08T15:28:37Z - Autonomous controller: controller_exception: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T10:15:16.559Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
