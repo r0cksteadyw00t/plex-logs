@@ -1,7 +1,7 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
 Status: PASS
-Updated UTC: 2026-06-08T16:25:18Z
+Updated UTC: 2026-06-08T16:30:33Z
 Targets: 11
 Rows found: 11
 Checked: 11
