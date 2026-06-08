@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T09:12:02.272Z
+Updated UTC: 2026-06-08T09:14:02.872Z
 Source: live status merge
 
 - 2026-06-08T09:10:16.102Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
