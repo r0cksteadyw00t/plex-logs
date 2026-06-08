@@ -1,22 +1,10 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
-  "status": "WAITING_PLAYBACK_QA",
-  "started_utc": "2026-06-08T01:10:06Z",
-  "updated_utc": "2026-06-08T01:10:06Z",
-  "ended_utc": "2026-06-08T01:10:06Z",
+  "status": "PASS_PUBLISHED",
+  "started_utc": "2026-06-08T01:15:04Z",
+  "updated_utc": "2026-06-08T01:16:13Z",
+  "ended_utc": "2026-06-08T01:16:13Z",
   "jason_action_required": false,
-  "reason": "Direct STRM publishing is paused until direct-mode Plex playback sample passes range and decision QA.",
-  "playback_gate": {
-    "ok": false,
-    "status": "REVIEW",
-    "source_mode": "direct_strm",
-    "target_concurrency": 5,
-    "range_passed": 5,
-    "range_failed": 0,
-    "decision_passed": 0,
-    "decision_failed": 5,
-    "status_file": "D:/PlexTools/public/latest/scarflix/concurrent_stream_qa_status.json"
-  },
   "max_items": 8,
   "counts_before": {
     "movies": 43,
@@ -25,17 +13,170 @@
   },
   "counts_after": {
     "movies": 43,
-    "tv": 24,
-    "staged": 50
+    "tv": 27,
+    "staged": 42
   },
   "candidate_dirs_found": 50,
-  "processed": 0,
-  "published": 0,
-  "retry_held": 0,
+  "processed": 8,
+  "published": 3,
+  "retry_held": 5,
   "rejected": 0,
   "skipped": 0,
-  "plex_scan_triggered": [],
-  "results": [],
+  "plex_scan_triggered": [
+    {
+      "ok": true,
+      "section": "5",
+      "pid": 37912
+    },
+    {
+      "ok": true,
+      "section": "6",
+      "pid": 44888
+    }
+  ],
+  "results": [
+    {
+      "hash": "113adfafcdb6",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD timed out",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\113adfafcdb6"
+    },
+    {
+      "hash": "13245b122c7d",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\13245b122c7d"
+    },
+    {
+      "hash": "1d8a54f4a00c",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD timed out",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\1d8a54f4a00c"
+    },
+    {
+      "hash": "1fe28e182219",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\New Amsterdam (2018)\\Season 01\\New Amsterdam (2018) - S01E01.strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/155675804"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\1fe28e182219"
+    },
+    {
+      "hash": "39853d4b8382",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\9-1-1 Lone Star (2020)\\Season 01\\9-1-1 Lone Star (2020) - S01E01.strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/205530617"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\39853d4b8382"
+    },
+    {
+      "hash": "3a485c0df50f",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD timed out",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\3a485c0df50f"
+    },
+    {
+      "hash": "45d4ab38a954",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\45d4ab38a954"
+    },
+    {
+      "hash": "540f567fad3a",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\Hawaii Five-O (1968)\\Season 01\\Hawaii Five-O (1968) - S01E01.strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/268696456"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\540f567fad3a"
+    }
+  ],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
   "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
 }
