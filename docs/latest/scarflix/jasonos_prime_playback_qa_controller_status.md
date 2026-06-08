@@ -1,10 +1,10 @@
 # JasonOS Prime Playback QA Controller
 
-Status: WAITING_OVERLAP
-Updated UTC: 2026-06-08T06:55:04Z
-Current step: validation_overlap_running
-Direct STRM total: 112
+Status: RUNNING
+Updated UTC: 2026-06-08T07:00:04Z
+Current step: concurrent_stream_qa_started
+Direct STRM total: 113
 Direct STRM admission: REVIEW_RETRY_HELD
 Decision QA: PASS
 Concurrent QA: REVIEW
-Next action: Wait for current ScarFLIX validation task to finish.
+Next action: Detached 5-concurrent stream QA is running or queued.
