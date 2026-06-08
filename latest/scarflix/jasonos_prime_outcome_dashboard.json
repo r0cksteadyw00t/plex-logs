@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T08:44:02.237Z",
+  "updated_utc": "2026-06-08T08:46:02.447Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -54,12 +54,12 @@
     "direct_strm_admission_permanent_quarantine_count": 1,
     "direct_strm_admission_raw_live_proxy_visible_count": 2,
     "plex_playback_sample_status": "REVIEW",
-    "plex_playback_sample_source_mode": "direct_strm",
+    "plex_playback_sample_source_mode": "webdav_map",
     "plex_playback_sample_target_concurrency": 5,
-    "plex_playback_sample_range_passed": 5,
+    "plex_playback_sample_range_passed": 3,
     "plex_playback_sample_range_failed": 0,
-    "plex_playback_sample_decision_passed": 0,
-    "plex_playback_sample_decision_failed": 5,
+    "plex_playback_sample_decision_passed": 1,
+    "plex_playback_sample_decision_failed": 0,
     "plex_playback_verified_sample_count": 0,
     "plex_playback_verification_note": "direct STRM URL/range checks are not enough; Plex decision QA has not passed the direct playback sample",
     "staged_candidate_pending_count": 0,
@@ -68,8 +68,8 @@
     "staged_candidate_publisher_published": 0,
     "staged_candidate_publisher_retry_held": 0,
     "staged_candidate_publisher_rejected": 0,
-    "playback_qa_controller_status": "WAITING",
-    "playback_qa_controller_step": "waiting_for_delivery",
+    "playback_qa_controller_status": "WAITING_OVERLAP",
+    "playback_qa_controller_step": "validation_overlap_running",
     "playback_qa_direct_strm_admission_status": "REVIEW_RETRY_HELD",
     "playback_qa_decision_status": "PASS",
     "playback_qa_concurrent_status": "REVIEW",
@@ -101,34 +101,34 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 43,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 1,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-08T08:45:10Z",
+    "next_check_utc": "2026-06-08T08:50:07Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex client decision QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260608.log",
-    "last_progress_utc": "2026-06-08T08:01:17.682Z",
-    "age_minutes": 43,
-    "last_line": "[2026-06-08T08:01:17Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity",
-    "pass_lines": 40,
-    "review_lines": 0,
-    "info_lines": 40
+    "stage": "5-concurrent stream QA",
+    "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260608.log",
+    "last_progress_utc": "2026-06-08T08:45:21.750Z",
+    "age_minutes": 1,
+    "last_line": "[2026-06-08T08:45:21Z] [REVIEW] Final: REVIEW",
+    "pass_lines": 0,
+    "review_lines": 21,
+    "info_lines": 59
   },
   "watchdog_status": {
-    "status": "REVIEW",
-    "stall_risk": "Medium",
-    "updated_utc": "2026-06-08T08:40:06Z",
+    "status": "PASS",
+    "stall_risk": "Low",
+    "updated_utc": "2026-06-08T08:45:04Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-08T08:42:01Z",
+    "updated_utc": "2026-06-08T08:45:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -143,7 +143,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-08T08:40:30Z",
+    "updated_utc": "2026-06-08T08:45:07Z",
     "checked_visible": 2,
     "passed_visible": 2,
     "failed_visible": 0,
@@ -180,7 +180,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T08:43:01Z",
+    "updated_utc": "2026-06-08T08:45:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -224,7 +224,7 @@
   },
   "daily_ai_usability": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T08:40:03Z",
+    "updated_utc": "2026-06-08T08:45:02Z",
     "daily_ui_8791": {
       "reachable": true,
       "status": 200,
@@ -255,12 +255,17 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-08T08:40:16.287Z",
+      "utc": "2026-06-08T08:45:21.750Z",
+      "title": "PlatformGate child QA active: 5-concurrent stream QA",
+      "detail": "Latest child QA line: [2026-06-08T08:45:21Z] [REVIEW] Final: REVIEW"
+    },
+    {
+      "utc": "2026-06-08T08:45:16.092Z",
       "title": "Green Mile Playback Failure Confirmed Legacy Resolver Issue - 2026-06-08 18:15",
       "detail": "Jason reported `The Green Mile` failed in Plex with the same HTTP request/playback error class as Maze Runner and Saw. Forensic result: `The Green Mile (1999).strm` was a legacy local resolver entry pointing at `18788/live`. This confirms the failure is systemic to the old direct `.strm` plus local resolver model, n..."
     },
     {
-      "utc": "2026-06-08T08:40:08Z",
+      "utc": "2026-06-08T08:45:03Z",
       "title": "Autonomous controller: candidate_source_model_review",
       "detail": "Candidate-source model requires engineering review before catalogue expansion"
     },
@@ -273,11 +278,6 @@
       "utc": "2026-06-08T08:01:17.682Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-08T08:01:17Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity"
-    },
-    {
-      "utc": "2026-06-08T07:55:12.416Z",
-      "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-08T07:55:12Z] [REVIEW] Final: REVIEW"
     },
     {
       "utc": "2026-06-08T07:40:17.822Z",
@@ -329,7 +329,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-08T08:40:03Z - daily AI usability smoke test",
+      "last_change": "2026-06-08T08:45:02Z - daily AI usability smoke test",
       "current": "Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
       "progress": 57,
       "eta": "next: integrate 8805 tool traces into 8791 daily UI",
@@ -339,15 +339,15 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-08T08:43:05Z - materialized canary Plex decision QA",
-      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; targeted materialized decision QA=REVIEW_PLEX_SCAN_PENDING, rows_found=1, checked=1, decision=1/2. Legacy resolver .strm=2; materialized/WebDAV .strm=0; materialized visible links=2 (publisher=2, scan=2); materialized canary published=2/2, HLS=2/2, success_rate=50%. Actual Streaming library .strm output is movies=2, tv=0, total=2. Legacy direct Plex sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=2, passed_visible=2, quarantined_this_run=0, retry_held=6. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
+      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; targeted materialized decision QA=REVIEW_PLEX_SCAN_PENDING, rows_found=1, checked=1, decision=1/2. Legacy resolver .strm=2; materialized/WebDAV .strm=0; materialized visible links=2 (publisher=2, scan=2); materialized canary published=2/2, HLS=2/2, success_rate=50%. Actual Streaming library .strm output is movies=2, tv=0, total=2. Legacy direct Plex sample=REVIEW mode=webdav_map, range=3/3, decision=1/1. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=2, passed_visible=2, quarantined_this_run=0, retry_held=6. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 20,
       "eta": "after two-title materialized/WebDAV canary passes Plex decision QA",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     },
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T08:43:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T08:45:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=2.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -405,7 +405,7 @@
       "current": "Infrastructure exists, but ScarFLIX user outcome is not delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=2; materialized canary decision=1/2; broad publishing remains paused until targeted Plex decision QA passes.",
       "progress": 18,
       "eta": "next: targeted materialized decision QA retry; TV canary scan/profile pending",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     }
   ],
   "files": {
