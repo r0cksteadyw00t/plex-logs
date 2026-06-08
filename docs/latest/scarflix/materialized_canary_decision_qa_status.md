@@ -1,10 +1,10 @@
-# ScarFLIX v2 Materialized Plex Decision QA
+# ScarFLIX v2 Materialized Canary Plex Decision QA
 
-Status: REVIEW
-Updated UTC: 2026-06-08T12:49:54Z
-Targets: 14
-Rows found: 14
-Checked: 14
-Passed: 12
-Failed: 2
-Next action: Quarantine failed materialized source/release and keep title retryable.
+Updated UTC: 2026-06-08T13:03:28Z
+Status: REVIEW_PLEX_SCAN_PENDING
+Targets: 10
+Rows found: 8
+Checked: 8
+Passed: 8
+Failed: 0
+Next action: Plex has not scanned/profiled all materialized canary paths yet. Retry after Plex scan.
