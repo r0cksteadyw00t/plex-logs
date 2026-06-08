@@ -1,8 +1,10 @@
 # ScarFLIX Staged Candidate Publisher
 
-Updated UTC: 2026-06-08T01:10:06Z
-Status: WAITING_PLAYBACK_QA
-Reason: Direct STRM publishing is paused until direct-mode Plex playback sample passes range and decision QA.
-Playback QA: REVIEW mode=direct_strm range=5/5 decision=0/5
-Pending staged candidates: 50
-Published: 0
+Updated UTC: 2026-06-08T01:16:13Z
+Status: PASS_PUBLISHED
+Processed: 8
+Published: 3
+Retry held: 5
+Rejected: 0
+Direct .strm after: movies=43, tv=27, total=70
+Staged remaining: 42
