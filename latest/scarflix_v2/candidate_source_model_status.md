@@ -1,11 +1,11 @@
 # ScarFLIX v2 Candidate Source Model
 
-Status: PENDING
-Updated UTC: 2026-06-07T20:48:05Z
-PlatformGate status: REVIEW
+Status: REVIEW
+Updated UTC: 2026-06-08T01:20:07Z
+PlatformGate status: PASS
 
 ## Checks
-- platform_gate_pass_required: False - PlatformGate status is REVIEW
+- platform_gate_pass_required: True - PlatformGate status is PASS
 - seeder_rejected_stage_hash_guard: True - Seeder records/skips exact rejected stage hashes.
 - seeder_stage_only_not_plex_visible: False - Raw candidates are staged outside Plex visibility.
 - publisher_candidate_reject_function: True - Publisher rejects failed staged candidates, not whole titles.
