@@ -3,7 +3,7 @@
 Status: RUNNING
 Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
 Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-08T02:10:04Z
+Updated UTC: 2026-06-08T02:15:06Z
 Current step: candidate_source_model_pending_platform_gate
 Jason action required: False
 
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: Candidate-source model is pending PlatformGate PASS
-- next_check_utc: 2026-06-08T02:15:06Z
+- next_check_utc: 2026-06-08T02:20:08Z
 
 ## Blockers
 - none
