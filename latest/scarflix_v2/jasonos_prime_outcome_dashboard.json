@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T08:19:02.748Z",
+  "updated_utc": "2026-06-08T08:21:02.112Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -28,6 +28,9 @@
       "ScarFLIX_part-23f3fa0fd9dba040",
       "ScarFLIX_part-2bbb984740c720d8"
     ],
+    "materialized_canary_decision_qa_status": "REVIEW_PLEX_SCAN_PENDING",
+    "materialized_canary_decision_qa_checked": 1,
+    "materialized_canary_decision_qa_rows_found": 1,
     "materialized_canary_target_count": 2,
     "materialized_canary_published": 2,
     "materialized_canary_hls_pass": 2,
@@ -98,10 +101,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 18,
-    "mirror_updated_age_minutes": 0,
-    "next_check_utc": "2026-06-08T08:20:11Z",
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 20,
+    "mirror_updated_age_minutes": 1,
+    "next_check_utc": "2026-06-08T08:25:11Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -110,7 +113,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260608.log",
     "last_progress_utc": "2026-06-08T08:01:17.682Z",
-    "age_minutes": 18,
+    "age_minutes": 20,
     "last_line": "[2026-06-08T08:01:17Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity",
     "pass_lines": 40,
     "review_lines": 0,
@@ -119,13 +122,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-08T08:15:07Z",
+    "updated_utc": "2026-06-08T08:20:07Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-08T08:17:02Z",
+    "updated_utc": "2026-06-08T08:20:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -140,7 +143,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-08T08:15:03Z",
+    "updated_utc": "2026-06-08T08:20:04Z",
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
@@ -177,7 +180,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T08:18:02Z",
+    "updated_utc": "2026-06-08T08:20:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -221,7 +224,7 @@
   },
   "daily_ai_usability": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T08:15:03Z",
+    "updated_utc": "2026-06-08T08:20:02Z",
     "daily_ui_8791": {
       "reachable": true,
       "status": 200,
@@ -252,19 +255,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-08T08:16:05.124Z",
+      "utc": "2026-06-08T08:20:18.068Z",
       "title": "Green Mile Playback Failure Confirmed Legacy Resolver Issue - 2026-06-08 18:15",
       "detail": "Jason reported `The Green Mile` failed in Plex with the same HTTP request/playback error class as Maze Runner and Saw. Forensic result: `The Green Mile (1999).strm` was a legacy local resolver entry pointing at `18788/live`. This confirms the failure is systemic to the old direct `.strm` plus local resolver model, n..."
+    },
+    {
+      "utc": "2026-06-08T08:20:10Z",
+      "title": "Autonomous controller: candidate_source_model_review",
+      "detail": "Candidate-source model requires engineering review before catalogue expansion"
     },
     {
       "utc": "2026-06-08T08:15:17.698Z",
       "title": "Materialized Playback Canary Started - 2026-06-08 17:45",
       "detail": "Jason approved moving away from the current direct `.strm` plus local resolver URL model as the primary playback architecture. Decision and action: Primary playback architecture is now `materialized_webdav_symlink`. Local resolver `18788` remains fallback-only, not the default for new publication."
-    },
-    {
-      "utc": "2026-06-08T08:15:09Z",
-      "title": "Autonomous controller: candidate_source_model_review",
-      "detail": "Candidate-source model requires engineering review before catalogue expansion"
     },
     {
       "utc": "2026-06-08T08:01:17.682Z",
@@ -326,7 +329,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-08T08:15:03Z - daily AI usability smoke test",
+      "last_change": "2026-06-08T08:20:02Z - daily AI usability smoke test",
       "current": "Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
       "progress": 57,
       "eta": "next: integrate 8805 tool traces into 8791 daily UI",
@@ -335,8 +338,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-08T08:01:17.682Z - Plex client decision QA",
-      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=2 (publisher=2, scan=2); materialized canary published=2/2, HLS=2/2, decision=1/2, success_rate=50%. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=9. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=18 min; owner_pid=44064; child_pid=.",
+      "last_change": "2026-06-08T08:18:06Z - materialized canary Plex decision QA",
+      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; targeted materialized decision QA=REVIEW_PLEX_SCAN_PENDING, rows_found=1, checked=1, decision=1/2. Legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=2 (publisher=2, scan=2); materialized canary published=2/2, HLS=2/2, success_rate=50%. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=9. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 15,
       "eta": "after two-title materialized/WebDAV canary passes Plex decision QA",
       "stall_risk": "Medium"
@@ -344,7 +347,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T08:18:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T08:20:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=0.",
       "progress": 30,
       "eta": "runs every 5 minutes",
