@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_candidate_source_model",
-    "status":  "PENDING",
-    "updated_utc":  "2026-06-07T20:48:05Z",
-    "platform_gate_status":  "REVIEW",
+    "status":  "REVIEW",
+    "updated_utc":  "2026-06-08T01:20:07Z",
+    "platform_gate_status":  "PASS",
     "model":  {
                   "failed_source_release_quarantined":  true,
                   "title_remains_wanted_retryable":  true,
@@ -15,8 +15,8 @@
     "checks":  [
                    {
                        "name":  "platform_gate_pass_required",
-                       "pass":  false,
-                       "detail":  "PlatformGate status is REVIEW"
+                       "pass":  true,
+                       "detail":  "PlatformGate status is PASS"
                    },
                    {
                        "name":  "seeder_rejected_stage_hash_guard",
@@ -60,7 +60,6 @@
                    }
                ],
     "blockers":  [
-                     "platform_gate_pass_required",
                      "seeder_stage_only_not_plex_visible"
                  ],
     "files":  {
