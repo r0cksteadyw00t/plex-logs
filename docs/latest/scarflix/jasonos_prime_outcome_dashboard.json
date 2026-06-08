@@ -2,7 +2,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-08T12:15:02Z",
+    "updated_utc": "2026-06-08T12:20:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -65,9 +65,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-08T12:15:02Z",
-      "updated_utc": "2026-06-08T12:15:12Z",
-      "ended_utc": "2026-06-08T12:15:12Z",
+      "started_utc": "2026-06-08T12:20:02Z",
+      "updated_utc": "2026-06-08T12:20:12Z",
+      "ended_utc": "2026-06-08T12:20:12Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -123,26 +123,26 @@
         {
           "relative_path": "12 Angry Men (1957).strm",
           "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T12:20:03Z",
+          "retry_after_utc": "2026-06-08T12:30:05Z",
           "url_host": "127.0.0.1:18788",
           "is_local_live_proxy": true
         },
         {
           "relative_path": "The Garfield Movie (2024).strm",
           "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T12:20:04Z",
+          "retry_after_utc": "2026-06-08T12:30:07Z",
           "url_host": "192.168.1.184:18788",
           "is_local_live_proxy": true
         }
       ],
       "sample_passed": [
         {
-          "relative_path": "The Notebook (2004).strm",
+          "relative_path": "The Maze Runner (2014).strm",
           "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
           "is_local_live_proxy": true
         },
         {
-          "relative_path": "The Maze Runner (2014).strm",
+          "relative_path": "The Notebook (2004).strm",
           "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
           "is_local_live_proxy": true
         }
@@ -247,7 +247,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "RUNNING",
-      "updated_utc": "2026-06-08T12:15:14Z",
+      "updated_utc": "2026-06-08T12:20:15Z",
       "current_step": "concurrent_stream_qa_started",
       "jason_action_required": false,
       "counts": {
@@ -274,12 +274,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 27184
+              "pid": 19320
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 31532
+              "pid": 20972
             }
           ]
         },
@@ -297,8 +297,8 @@
       "next_action": "Detached 5-concurrent stream QA is running or queued."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 27416,
-    "safe_pipeline_log_age_seconds": 84300,
+    "canary_status_age_seconds": 27716,
+    "safe_pipeline_log_age_seconds": 84600,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -315,7 +315,7 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=41456"
+        "detail": "pid=18212"
       },
       {
         "action": "run_playback_qa_controller",
@@ -325,12 +325,12 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=22216"
+        "detail": "pid=34144"
       }
     ],
     "blockers": []
   },
-  "updated_utc": "2026-06-08T12:15:02Z",
+  "updated_utc": "2026-06-08T12:20:02Z",
   "truth_metrics": {
     "movie_strm_count": 2,
     "tv_strm_count": 0,
@@ -397,9 +397,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-08T12:15:02Z",
-    "updated_utc": "2026-06-08T12:15:12Z",
-    "ended_utc": "2026-06-08T12:15:12Z",
+    "started_utc": "2026-06-08T12:20:02Z",
+    "updated_utc": "2026-06-08T12:20:12Z",
+    "ended_utc": "2026-06-08T12:20:12Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -455,26 +455,26 @@
       {
         "relative_path": "12 Angry Men (1957).strm",
         "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T12:20:03Z",
+        "retry_after_utc": "2026-06-08T12:30:05Z",
         "url_host": "127.0.0.1:18788",
         "is_local_live_proxy": true
       },
       {
         "relative_path": "The Garfield Movie (2024).strm",
         "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T12:20:04Z",
+        "retry_after_utc": "2026-06-08T12:30:07Z",
         "url_host": "192.168.1.184:18788",
         "is_local_live_proxy": true
       }
     ],
     "sample_passed": [
       {
-        "relative_path": "The Notebook (2004).strm",
+        "relative_path": "The Maze Runner (2014).strm",
         "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
         "is_local_live_proxy": true
       },
       {
-        "relative_path": "The Maze Runner (2014).strm",
+        "relative_path": "The Notebook (2004).strm",
         "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
         "is_local_live_proxy": true
       }
@@ -546,7 +546,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "RUNNING",
-    "updated_utc": "2026-06-08T12:15:14Z",
+    "updated_utc": "2026-06-08T12:20:15Z",
     "current_step": "concurrent_stream_qa_started",
     "jason_action_required": false,
     "counts": {
@@ -573,12 +573,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 27184
+            "pid": 19320
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 31532
+            "pid": 20972
           }
         ]
       },
@@ -597,7 +597,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-08T12:15:02Z",
+    "updated_utc": "2026-06-08T12:20:02Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
