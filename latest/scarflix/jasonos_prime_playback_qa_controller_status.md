@@ -1,10 +1,10 @@
 # JasonOS Prime Playback QA Controller
 
-Status: WAITING
-Updated UTC: 2026-06-08T11:50:02Z
-Current step: waiting_for_delivery
-Direct STRM total: 1
+Status: RUNNING
+Updated UTC: 2026-06-08T12:00:06Z
+Current step: concurrent_stream_qa_started
+Direct STRM total: 2
 Direct STRM admission: REVIEW_RETRY_HELD
 Decision QA: PASS
 Concurrent QA: REVIEW
-Next action: Wait for direct STRM delivery.
+Next action: Detached 5-concurrent stream QA is running or queued.
