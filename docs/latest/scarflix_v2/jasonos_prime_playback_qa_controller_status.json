@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-08T00:00:11Z",
-  "current_step": "validation_overlap_running",
+  "status": "RUNNING",
+  "updated_utc": "2026-06-08T00:05:08Z",
+  "current_step": "direct_strm_admission_required",
   "jason_action_required": false,
   "counts": {
     "movies": 42,
@@ -19,18 +19,18 @@
   "direct_strm_retry_held_count": 0,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
-  "ignored_overlap": [],
-  "overlap_running": [
+  "ignored_overlap": [
     {
-      "name": "ScarFLIX_v2_ConcurrentStreamQA",
+      "name": "ScarFLIX_v2_DurablePlatformGateRunner",
       "ok": true,
       "status": "Running",
       "scheduled_state": "Enabled",
-      "last_run": "8/06/2026 10:00:20 AM",
+      "last_run": "8/06/2026 10:05:06 AM",
       "last_result": "267009",
-      "next_run": "8/06/2026 3:00:00 PM"
+      "next_run": "N/A"
     }
   ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans",
@@ -38,15 +38,25 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 16304
+          "pid": 35132
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 17000
+          "pid": 4568
         }
       ]
+    },
+    {
+      "action": "start_direct_strm_admission_gate_task",
+      "result": {
+        "task": "ScarFLIX_v2_DirectStrmAdmissionGate",
+        "enable_ok": true,
+        "run_ok": true,
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\"."
+      }
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Direct STRM admission has not passed for visible playback sources."
 }
