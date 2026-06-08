@@ -1,7 +1,32 @@
 {
-  "updated_utc": "2026-06-08T00:09:31.221Z",
+  "updated_utc": "2026-06-08T00:12:01.683Z",
   "source": "live status merge",
   "updates": [
+    {
+      "utc": "2026-06-08T00:11:04Z",
+      "title": "Durable PlatformGate runner REVIEW",
+      "detail": "Step platform_gate_review; owner_pid=24856; child_pid="
+    },
+    {
+      "utc": "2026-06-08T00:11:04Z",
+      "title": "PlatformGate checkpoint REVIEW",
+      "detail": "Step platform_gate_review; visible=1; blockers=0"
+    },
+    {
+      "utc": "2026-06-08T00:10:56.000Z",
+      "title": "PlatformGate child QA active: 5-concurrent stream QA",
+      "detail": "Latest child QA line: [2026-06-08T00:10:55Z] [REVIEW] Final: REVIEW"
+    },
+    {
+      "utc": "2026-06-08T00:10:41.240Z",
+      "title": "Direct STRM Playback QA Failing; Publisher Paused - 2026-06-08 10:10",
+      "detail": "Current audit result: Actual direct `.strm` files visible in Streaming libraries: movies `43`, TV `24`, total `67`. Staged candidate publisher now has `50` staged candidates held. Direct URL/range testing is not the blocker: 5 direct `.strm` sample URLs passed byte-range testing (`5/5` returned `206`)."
+    },
+    {
+      "utc": "2026-06-08T00:10:09Z",
+      "title": "Autonomous controller: unclassified_review_platform_gate_relaunch",
+      "detail": "PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason"
+    },
     {
       "utc": "2026-06-08T00:09:31.080Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
@@ -18,21 +43,6 @@
       "detail": "Step running_platform_gate_attempt_1; visible=1; blockers=0"
     },
     {
-      "utc": "2026-06-08T00:08:48Z",
-      "title": "Durable PlatformGate runner REVIEW",
-      "detail": "Step platform_gate_review; owner_pid=27500; child_pid="
-    },
-    {
-      "utc": "2026-06-08T00:08:48Z",
-      "title": "PlatformGate checkpoint REVIEW",
-      "detail": "Step platform_gate_review; visible=1; blockers=0"
-    },
-    {
-      "utc": "2026-06-08T00:08:42.967Z",
-      "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-08T00:08:42Z] [REVIEW] Final: REVIEW"
-    },
-    {
       "utc": "2026-06-08T00:05:17.301Z",
       "title": "Direct STRM Admission Gate Added After Maze Runner Playback Failure - 2026-06-08 07:15",
       "detail": "Jason reported that `The Maze Runner (2014)` failed in Plex with a `/video/:/transcode/universal/decision` network error. Forensic result: The visible Plex library file was `D:\\StremioCatalog\\_Hybrid\\Movies\\The Maze Runner (2014).strm`. Its content was a local resolver URL: `http://127.0.0.1:18788/live?...`, not a s..."
@@ -41,11 +51,6 @@
       "utc": "2026-06-08T00:05:10Z",
       "title": "Autonomous controller: PLATFORM_GATE_RUNNING",
       "detail": "PlatformGate runner already running; no inline wait"
-    },
-    {
-      "utc": "2026-06-07T23:55:06Z",
-      "title": "Autonomous controller: unclassified_review_platform_gate_relaunch",
-      "detail": "PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason"
     },
     {
       "utc": "2026-06-07T23:02:31.284Z",
@@ -66,11 +71,6 @@
       "utc": "2026-06-07T21:08:14.156Z",
       "title": "PlatformGate Snapshot Health Contract Patched - 2026-06-07 20:23",
       "detail": "Jason approved the forensic conclusion that the latest PlatformGate failure was a health-contract mismatch, not a playback blocker. Current result: PlatformGate now requires snapshot-scoped QA only: ActiveGate, VisibleCatalogQA, PlexClientDecisionQA, and ConcurrentStreamQA. Global `scarflix_v2_health.json` remains v..."
-    },
-    {
-      "utc": "2026-06-07T20:54:04.701Z",
-      "title": "PlatformGate child QA active: Health",
-      "detail": "Latest child QA line: [2026-06-07T20:54:04Z] [INFO] Health status publishing"
     }
   ]
 }
