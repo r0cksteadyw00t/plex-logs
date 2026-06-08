@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-08T02:50:04Z
+Updated UTC: 2026-06-08T03:01:01Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CANDIDATE_SOURCE_MODEL_RUNNING
@@ -9,12 +9,12 @@ Expansion eligible: false
 Expansion started this cycle: false
 
 ## Actual STRM Counts
-- movies: 60
-- tv: 35
-- total: 95
+- movies: 64
+- tv: 38
+- total: 102
 
 ## Inputs
-- platform_gate: PASS
+- platform_gate: REVIEW
 - checkpoint: PASS
 - checkpoint_step: platform_gate_pass
 - durable_runner: PASS
@@ -25,12 +25,12 @@ Expansion started this cycle: false
 - active_gate_prunable_failures: 0
 - controller_transient_retry_count: 0
 - repeated_transient_review: false
-- candidate_source_model: REVIEW
-- controller: REVIEW_TRANSIENT
+- candidate_source_model: PENDING
+- controller: RUNNING
 - predictive_simulator: REVIEW
 - self_evolution: REVIEW
 - dashboard: PASS
-- public_mirror: PASS
+- public_mirror: REVIEW
 
 ## Next 4 Hours
 - Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.
