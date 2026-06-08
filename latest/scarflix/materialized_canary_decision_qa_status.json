@@ -1,20 +1,20 @@
 {
     "component":  "scarflix_v2_materialized_plex_decision_qa",
-    "status":  "REVIEW_PLEX_SCAN_PENDING",
-    "started_utc":  "2026-06-08T09:38:45Z",
-    "ended_utc":  "2026-06-08T09:38:50Z",
-    "duration_seconds":  5,
+    "status":  "PASS",
+    "started_utc":  "2026-06-08T09:43:02Z",
+    "ended_utc":  "2026-06-08T09:43:06Z",
+    "duration_seconds":  4,
     "target_count":  2,
-    "rows_found":  1,
-    "checked":  1,
-    "passed":  1,
+    "rows_found":  2,
+    "checked":  2,
+    "passed":  2,
     "failed":  0,
     "base_url":  "http://192.168.1.184:32400",
     "targets":  [
                     {
                         "hash":  "ScarFLIX_part-23f3fa0fd9dba040",
                         "title_path":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01.strm",
-                        "link":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01 - ScarFLIX_part-23f3fa0fd9dba040.mkv",
+                        "link":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01 - ScarFLIX_part-23f3fa0fd9dba040\\stream.mkv",
                         "webdav_path":  "/media/ScarFLIX_part-23f3fa0fd9dba040/stream.mkv",
                         "publisher_status":  "PASS"
                     },
@@ -31,12 +31,18 @@
                                "target":  {
                                               "hash":  "ScarFLIX_part-23f3fa0fd9dba040",
                                               "title_path":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01.strm",
-                                              "link":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01 - ScarFLIX_part-23f3fa0fd9dba040.mkv",
+                                              "link":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01 - ScarFLIX_part-23f3fa0fd9dba040\\stream.mkv",
                                               "webdav_path":  "/media/ScarFLIX_part-23f3fa0fd9dba040/stream.mkv",
                                               "publisher_status":  "PASS"
                                           },
                                "rows":  [
-
+                                            {
+                                                "metadata_id":  41811,
+                                                "part_id":  113084,
+                                                "section_id":  6,
+                                                "title":  "Episode 1",
+                                                "file":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01 - ScarFLIX_part-23f3fa0fd9dba040\\stream.mkv"
+                                            }
                                         ]
                            },
                            {
@@ -60,6 +66,19 @@
                        ],
     "results":  [
                     {
+                        "metadata_id":  41811,
+                        "part_id":  113084,
+                        "section_id":  6,
+                        "title":  "Episode 1",
+                        "file":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01 - ScarFLIX_part-23f3fa0fd9dba040\\stream.mkv",
+                        "status":  "PASS",
+                        "http_status":  200,
+                        "reason":  "Plex transcode decision returned HTTP 200 for materialized path",
+                        "attempts":  1,
+                        "target_hash":  "ScarFLIX_part-23f3fa0fd9dba040",
+                        "target_link":  "D:\\StremioCatalog\\_Hybrid\\Shows\\Alchemy of Souls (2022)\\Season 01\\Alchemy of Souls (2022) - S01E01 - ScarFLIX_part-23f3fa0fd9dba040\\stream.mkv"
+                    },
+                    {
                         "metadata_id":  41792,
                         "part_id":  113055,
                         "section_id":  5,
@@ -74,16 +93,7 @@
                     }
                 ],
     "plex_scan_refresh":  [
-                              {
-                                  "section":  5,
-                                  "ok":  true,
-                                  "text":  "HTTP 200"
-                              },
-                              {
-                                  "section":  6,
-                                  "ok":  true,
-                                  "text":  "HTTP 200"
-                              }
+
                           ],
     "warnings":  [
                      "saved Plex token was rejected; using local allowedNetworks fallback"
@@ -91,6 +101,6 @@
     "errors":  [
 
                ],
-    "next_action":  "Plex has not scanned/profiled all materialized canary paths yet. Retry after Plex scan.",
+    "next_action":  "Materialized/WebDAV canary passed Plex decision QA.",
     "log":  "D:\\PlexTools\\logs\\scarflix_v2_materialized_plex_decision_qa_20260608.log"
 }
