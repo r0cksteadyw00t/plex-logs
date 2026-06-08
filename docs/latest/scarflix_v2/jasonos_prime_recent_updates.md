@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T16:40:02.358Z
+Updated UTC: 2026-06-08T16:42:01.940Z
 Source: live status merge
 
-- 2026-06-08T16:35:18.296Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
-- 2026-06-08T16:35:07Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T16:40:23.858Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
+- 2026-06-08T16:40:13Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T15:28:37Z - Autonomous controller: controller_exception: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T15:00:07.204Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T15:00:07Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
 - 2026-06-08T12:21:07.300Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T12:21:07Z] [REVIEW] Final: REVIEW
