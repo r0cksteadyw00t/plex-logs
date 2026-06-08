@@ -1,12 +1,12 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T03:50:03.572Z
+Updated UTC: 2026-06-08T03:52:01.404Z
 Source: live status merge
 
+- 2026-06-08T03:50:13.078Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T03:50:13Z] [REVIEW] Final: REVIEW
+- 2026-06-08T03:50:11.815Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
+- 2026-06-08T03:50:04Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T03:47:19.299Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:47:19Z] [INFO] Health status publishing
-- 2026-06-08T03:45:15.768Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
-- 2026-06-08T03:45:13.142Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T03:45:13Z] [REVIEW] Final: REVIEW
-- 2026-06-08T03:45:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T03:43:54.784Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T03:43:54Z] [INFO] Running concurrent WebDAV active gate worker for 11 entries.
 - 2026-06-08T03:24:02.142Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:24:02Z] [PASS] Decision passed: metadata=41685 title=I Saw the Devil
 - 2026-06-08T03:15:04Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
