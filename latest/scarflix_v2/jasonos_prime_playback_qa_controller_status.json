@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
   "status": "RUNNING",
-  "updated_utc": "2026-06-08T02:40:02Z",
-  "current_step": "concurrent_stream_qa_started",
+  "updated_utc": "2026-06-08T02:45:04Z",
+  "current_step": "plex_client_decision_qa_started",
   "jason_action_required": false,
   "counts": {
     "movies": 60,
@@ -17,7 +17,7 @@
   "direct_strm_admission_passed_visible": 95,
   "direct_strm_admission_quarantined_this_run": 0,
   "direct_strm_retry_held_count": 6,
-  "decision_qa_status": "PASS",
+  "decision_qa_status": "RUNNING",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
   "overlap_running": [],
@@ -28,25 +28,25 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 42988
+          "pid": 7036
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 38576
+          "pid": 3364
         }
       ]
     },
     {
-      "action": "start_concurrent_stream_qa",
+      "action": "start_plex_client_decision_qa",
       "result": {
-        "task": "ScarFLIX_v2_ConcurrentStreamQA",
+        "task": "ScarFLIX_v2_PlexClientDecisionQA",
         "enable_ok": true,
         "run_ok": true,
-        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
-        "run_text": "INFO: scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" is currently running.\r\nSUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_PlexClientDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_PlexClientDecisionQA\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_PlexClientDecisionQA\"."
       }
     }
   ],
-  "next_action": "Detached 5-concurrent stream QA is running or queued."
+  "next_action": "Detached Plex client decision QA is running or queued."
 }
