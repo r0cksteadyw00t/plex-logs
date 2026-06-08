@@ -1,11 +1,11 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-07T23:56:42Z
+Generated UTC: 2026-06-08T00:04:52Z
 
 Status: REVIEW
-Started UTC: 2026-06-07T23:56:08Z
-Ended UTC: 2026-06-07T23:56:41Z
-Snapshot ID: 20260607T235626Z
+Started UTC: 2026-06-08T00:04:07Z
+Ended UTC: 2026-06-08T00:04:52Z
+Snapshot ID: 20260608T000428Z
 Snapshot hash: 4a623f46f7ec74fe5e1aac7956f0d075b9ae0bce84ca544f1301555e747b7ec2
 Same-snapshot confirmed: False
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
@@ -19,14 +19,14 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - WebDAV active gate: PASS, checked=1
 - Plex visible/HLS QA: PASS, checked=1
 - Plex client decision QA: PASS, checked=1
-- 5-concurrent stream QA: REVIEW, target=5, map_tested=1, visible_tested=1
+- 5-concurrent stream QA: REVIEW, target=5, map_tested=5, visible_tested=5
 - Health: UNKNOWN
 
 ## Source Handling
 - quarantined/rejected sources: 833
 - transient/retry-held count: 685
 - prunable/permanent count: 148
-- seeder rejected-stage skipped: 46
+- seeder rejected-stage skipped: 45
 - publisher rejected-stage skipped: 0
 - top reason codes:
   - PROVIDER_503: 495
@@ -52,4 +52,3 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 
 ## Blockers
 - concurrent_stream_qa status=REVIEW
-- concurrent_stream_qa did not test at least 5 concurrent streams
