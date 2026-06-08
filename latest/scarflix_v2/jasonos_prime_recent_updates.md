@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T07:50:01.886Z
+Updated UTC: 2026-06-08T07:52:01.233Z
 Source: live status merge
 
-- 2026-06-08T07:45:16.808Z - Materialized Playback Canary Started - 2026-06-08 17:45: Jason approved moving away from the current direct `.strm` plus local resolver URL model as the primary playback architecture. Decision and action: Primary playback architecture is now `materialized_webdav_symlink`. Local resolver `18788` remains fallback-only, not the default for new publication.
-- 2026-06-08T07:45:14.051Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T07:45:14Z] [REVIEW] Final: REVIEW
-- 2026-06-08T07:45:08Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T07:50:14.229Z - Materialized Playback Canary Started - 2026-06-08 17:45: Jason approved moving away from the current direct `.strm` plus local resolver URL model as the primary playback architecture. Decision and action: Primary playback architecture is now `materialized_webdav_symlink`. Local resolver `18788` remains fallback-only, not the default for new publication.
+- 2026-06-08T07:50:12.136Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T07:50:12Z] [REVIEW] Final: REVIEW
+- 2026-06-08T07:50:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T07:40:17.822Z - Expansion Paused After Saw Playback Failure - 2026-06-08 14:40: Jason reported that `Saw (2004)` failed in Plex with the same HTTP `400` playback/decision error class as earlier failures. Decision and action: Stop adding titles until the direct Plex playback issue is technically fixed. Expansion pause flag is active: `D:\PlexTools\state\scarflix_v2\expansion_paused_until_playbac...
 - 2026-06-08T05:00:10.290Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T05:00:10Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
 - 2026-06-08T04:40:15.515Z - Phase 0 PM Baseline - 2026-06-08 14:15: Formal project-management files have been created at repo root: `PROJECT_PLAN.md` `TASKS.md` `OUTCOMES.md`
