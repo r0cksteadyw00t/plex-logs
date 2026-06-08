@@ -1,11 +1,11 @@
 # JasonOS Prime Predictive Simulator
 
 Status: REVIEW
-Updated UTC: 2026-06-08T01:32:01.704Z
+Updated UTC: 2026-06-08T01:34:01.193Z
 Expansion eligible: false
 Visible count: 1 movies=0 tv=1
-Pending candidates: 38
-Rejected sources: 837
+Pending candidates: 26
+Rejected sources: 849
 
 ## Gate
 - checkpoint: PASS
