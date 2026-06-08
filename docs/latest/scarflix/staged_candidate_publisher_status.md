@@ -1,10 +1,10 @@
 # ScarFLIX Staged Candidate Publisher
 
-Updated UTC: 2026-06-07T23:40:56Z
-Status: PASS_PUBLISHED
-Processed: 8
-Published: 5
-Retry held: 3
+Updated UTC: 2026-06-08T00:00:07Z
+Status: WAITING_STAGED_CANDIDATES
+Processed: 0
+Published: 0
+Retry held: 0
 Rejected: 0
-Direct .strm after: movies=38, tv=17, total=55
-Staged remaining: 23
+Direct .strm after: movies=42, tv=23, total=65
+Staged remaining: 0
