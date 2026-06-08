@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T10:54:02.734Z
+Updated UTC: 2026-06-08T11:02:02.574Z
 Source: live status merge
 
-- 2026-06-08T10:52:23.650Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
-- 2026-06-08T10:52:14Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T11:01:54.412Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
+- 2026-06-08T11:01:15.041Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T11:01:15Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
+- 2026-06-08T11:01:11Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T11:00:32.683Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T11:00:32Z] [REVIEW] Final: REVIEW
 - 2026-06-08T10:15:16.559Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
-- 2026-06-08T09:00:13.119Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T09:00:13Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
-- 2026-06-08T08:55:18.355Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T08:55:18Z] [REVIEW] Final: REVIEW
 - 2026-06-08T08:55:17.097Z - Green Mile Playback Failure Confirmed Legacy Resolver Issue - 2026-06-08 18:15: Jason reported `The Green Mile` failed in Plex with the same HTTP request/playback error class as Maze Runner and Saw. Forensic result: `The Green Mile (1999).strm` was a legacy local resolver entry pointing at `18788/live`. This confirms the failure is systemic to the old direct `.strm` plus local resolver model, n...
 - 2026-06-08T08:15:17.698Z - Materialized Playback Canary Started - 2026-06-08 17:45: Jason approved moving away from the current direct `.strm` plus local resolver URL model as the primary playback architecture. Decision and action: Primary playback architecture is now `materialized_webdav_symlink`. Local resolver `18788` remains fallback-only, not the default for new publication.
 - 2026-06-08T07:40:17.822Z - Expansion Paused After Saw Playback Failure - 2026-06-08 14:40: Jason reported that `Saw (2004)` failed in Plex with the same HTTP `400` playback/decision error class as earlier failures. Decision and action: Stop adding titles until the direct Plex playback issue is technically fixed. Expansion pause flag is active: `D:\PlexTools\state\scarflix_v2\expansion_paused_until_playbac...
