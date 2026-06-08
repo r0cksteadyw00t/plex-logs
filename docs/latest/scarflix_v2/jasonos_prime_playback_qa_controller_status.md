@@ -1,13 +1,13 @@
 # JasonOS Prime Playback QA Controller
 
 Status: RUNNING
-Updated UTC: 2026-06-08T17:50:04Z
+Updated UTC: 2026-06-08T18:00:04Z
 Current step: materialized_plex_decision_qa_started
 Direct STRM total: 2
 Materialized/WebDAV primary: true
 Materialized visible verified: 18
 Materialized decision QA: PASS
-Direct STRM admission: RUNNING_ALREADY
+Direct STRM admission: REVIEW_RETRY_HELD
 Decision QA: PASS
 Concurrent QA: REVIEW
 Next action: Detached materialized/WebDAV Plex decision QA is running or queued.
