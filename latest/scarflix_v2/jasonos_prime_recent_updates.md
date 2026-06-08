@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T09:04:03.033Z
+Updated UTC: 2026-06-08T09:06:02.235Z
 Source: live status merge
 
-- 2026-06-08T09:00:15.744Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
+- 2026-06-08T09:05:15.369Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
+- 2026-06-08T09:05:05Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T09:00:13.119Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T09:00:13Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
-- 2026-06-08T09:00:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T08:55:18.355Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T08:55:18Z] [REVIEW] Final: REVIEW
 - 2026-06-08T08:55:17.097Z - Green Mile Playback Failure Confirmed Legacy Resolver Issue - 2026-06-08 18:15: Jason reported `The Green Mile` failed in Plex with the same HTTP request/playback error class as Maze Runner and Saw. Forensic result: `The Green Mile (1999).strm` was a legacy local resolver entry pointing at `18788/live`. This confirms the failure is systemic to the old direct `.strm` plus local resolver model, n...
 - 2026-06-08T08:15:17.698Z - Materialized Playback Canary Started - 2026-06-08 17:45: Jason approved moving away from the current direct `.strm` plus local resolver URL model as the primary playback architecture. Decision and action: Primary playback architecture is now `materialized_webdav_symlink`. Local resolver `18788` remains fallback-only, not the default for new publication.
