@@ -1,29 +1,180 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
-  "status": "WAITING_STAGED_CANDIDATES",
-  "started_utc": "2026-06-08T02:20:01Z",
-  "updated_utc": "2026-06-08T02:20:01Z",
-  "ended_utc": "2026-06-08T02:20:01Z",
+  "status": "PASS_PUBLISHED",
+  "started_utc": "2026-06-08T02:25:02Z",
+  "updated_utc": "2026-06-08T02:25:17Z",
+  "ended_utc": "2026-06-08T02:25:17Z",
   "jason_action_required": false,
   "max_items": 8,
   "counts_before": {
     "movies": 57,
     "tv": 33,
-    "staged": 0
+    "staged": 11
   },
   "counts_after": {
-    "movies": 57,
-    "tv": 33,
-    "staged": 0
+    "movies": 60,
+    "tv": 35,
+    "staged": 1
   },
-  "candidate_dirs_found": 0,
-  "processed": 0,
-  "published": 0,
+  "candidate_dirs_found": 11,
+  "processed": 8,
+  "published": 5,
   "retry_held": 0,
-  "rejected": 0,
+  "rejected": 3,
   "skipped": 0,
-  "plex_scan_triggered": [],
-  "results": [],
+  "plex_scan_triggered": [
+    {
+      "ok": true,
+      "section": "5",
+      "pid": 32436
+    },
+    {
+      "ok": true,
+      "section": "6",
+      "pid": 6828
+    }
+  ],
+  "results": [
+    {
+      "hash": "10e3647dc5a0",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\American History X (1998).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/2432454837"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\10e3647dc5a0"
+    },
+    {
+      "hash": "16cececca25b",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\My Neighbor Totoro (1988).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/447997446540"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\16cececca25b"
+    },
+    {
+      "hash": "287c2f92bca0",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\2012 (2009).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/1824889717"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\287c2f92bca0"
+    },
+    {
+      "hash": "60775db0f669",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01.strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/5194361033"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\60775db0f669"
+    },
+    {
+      "hash": "7a07e6211728",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\Initial D (1998)\\Season 01\\Initial D (1998) - S01E01.strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/3275481269"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\7a07e6211728"
+    },
+    {
+      "hash": "962c5463cab4",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\962c5463cab4_1"
+    },
+    {
+      "hash": "9acb0b9baade",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\9acb0b9baade_1"
+    },
+    {
+      "hash": "abed045816b3",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\abed045816b3_1"
+    }
+  ],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
   "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
 }
