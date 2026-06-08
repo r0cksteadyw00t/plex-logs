@@ -2,55 +2,55 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "PASS",
     "stall_risk":  "Low",
-    "updated_utc":  "2026-06-08T00:00:18Z",
-    "started_utc":  "2026-06-08T00:00:07Z",
-    "duration_seconds":  11,
+    "updated_utc":  "2026-06-08T00:05:16Z",
+    "started_utc":  "2026-06-08T00:05:04Z",
+    "duration_seconds":  12,
     "will_progress_without_codex":  true,
     "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
-                    "controller_age_minutes":  5,
-                    "platform_checkpoint_age_minutes":  3,
-                    "durable_platform_gate_age_minutes":  3,
+                    "controller_age_minutes":  1,
+                    "platform_checkpoint_age_minutes":  0,
+                    "durable_platform_gate_age_minutes":  0,
                     "platform_progress_fresh":  true,
                     "dashboard_age_minutes":  0,
-                    "mirror_age_minutes":  0,
+                    "mirror_age_minutes":  1,
                     "movie_strm_count":  42,
                     "tv_strm_count":  23,
                     "total_strm_count":  65,
-                    "previous_total_strm_count":  63,
-                    "catalogue_no_growth":  false,
-                    "platform_checkpoint_step":  "running_platform_gate_attempt_1"
+                    "previous_total_strm_count":  65,
+                    "catalogue_no_growth":  true,
+                    "platform_checkpoint_step":  "platform_gate_review"
                 },
     "tasks":  {
                   "controller":  {
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "8/06/2026 10:00:01 AM",
-                                     "next_run_time":  "8/06/2026 10:05:00 AM",
+                                     "last_run_time":  "8/06/2026 10:05:01 AM",
+                                     "next_run_time":  "8/06/2026 10:10:00 AM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
                                           "exists":  true,
-                                          "status":  "Ready",
-                                          "last_run_time":  "8/06/2026 9:57:03 AM",
+                                          "status":  "Running",
+                                          "last_run_time":  "8/06/2026 10:05:06 AM",
                                           "next_run_time":  "N/A",
-                                          "last_result":  "267014"
+                                          "last_result":  "267009"
                                       },
                   "dashboard":  {
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "8/06/2026 10:00:07 AM",
-                                    "next_run_time":  "8/06/2026 10:05:00 AM",
+                                    "last_run_time":  "8/06/2026 10:05:02 AM",
+                                    "next_run_time":  "8/06/2026 10:10:00 AM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
                                  "exists":  true,
                                  "status":  "Ready",
-                                 "last_run_time":  "8/06/2026 10:00:08 AM",
+                                 "last_run_time":  "8/06/2026 10:05:02 AM",
                                  "next_run_time":  "8/06/2026 10:10:00 AM",
                                  "last_result":  "0"
                              }
