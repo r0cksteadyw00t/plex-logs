@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T03:22:01.732Z
+Updated UTC: 2026-06-08T03:24:02.866Z
 Source: live status merge
 
+- 2026-06-08T03:24:02.142Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:24:02Z] [PASS] Decision passed: metadata=41685 title=I Saw the Devil
 - 2026-06-08T03:20:13.841Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
 - 2026-06-08T03:20:12.954Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T03:20:12Z] [REVIEW] Final: REVIEW
 - 2026-06-08T03:20:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T03:19:05.212Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:19:05Z] [INFO] Health status publishing
-- 2026-06-08T03:16:57.907Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:16:57Z] [PASS] Decision passed: metadata=41621 title=The Prestige
 - 2026-06-08T03:15:04Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
 - 2026-06-08T03:13:50.055Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T03:13:50Z] [PASS] WebDAV active gate finished status=PASS checked=10 passed=10 failed_detected=0 pruned=0
 - 2026-06-08T02:57:02.057Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-08T02:57:02Z] [PASS] QA passed: part=112929 title=I Saw the Devil
