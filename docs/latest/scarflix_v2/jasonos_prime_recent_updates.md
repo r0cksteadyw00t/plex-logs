@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T03:25:02.725Z
+Updated UTC: 2026-06-08T03:27:02.373Z
 Source: live status merge
 
-- 2026-06-08T03:24:11.142Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:24:11Z] [INFO] Health status publishing
+- 2026-06-08T03:26:47.097Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T03:26:47Z] [INFO] Running concurrent WebDAV active gate worker for 18 entries.
+- 2026-06-08T03:25:56.783Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:25:56Z] [INFO] Health status publishing
+- 2026-06-08T03:25:11.830Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
+- 2026-06-08T03:25:03Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T03:24:02.142Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:24:02Z] [PASS] Decision passed: metadata=41685 title=I Saw the Devil
-- 2026-06-08T03:20:13.841Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
 - 2026-06-08T03:20:12.954Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T03:20:12Z] [REVIEW] Final: REVIEW
-- 2026-06-08T03:20:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T03:15:04Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
-- 2026-06-08T03:13:50.055Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T03:13:50Z] [PASS] WebDAV active gate finished status=PASS checked=10 passed=10 failed_detected=0 pruned=0
 - 2026-06-08T02:57:02.057Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-08T02:57:02Z] [PASS] QA passed: part=112929 title=I Saw the Devil
 - 2026-06-08T02:55:11.498Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
 - 2026-06-08T01:18:52Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=44064; child_pid=
