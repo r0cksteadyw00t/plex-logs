@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: FAIL_ENGINEERING
-Milestone state: BLOCKED_DECISION
+Status: REVIEW_TRANSIENT
+Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
 Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-08T15:28:37Z
-Current step: controller_exception
+Updated UTC: 2026-06-08T15:32:06Z
+Current step: candidate_source_model_review
 Jason action required: False
 
 ## PlatformGate
@@ -27,8 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: Candidate-source model requires engineering review before catalogue expansion
-- next_check_utc: 2026-06-08T15:36:19Z
+- next_check_utc: 2026-06-08T15:37:08Z
 
 ## Blockers
-- Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
-Parameter name: chars"
+- seeder_stage_only_not_plex_visible
