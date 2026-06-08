@@ -1,22 +1,30 @@
 {
   "component": "scarflix_v2_legacy_resolver_visibility_quarantine",
   "status": "PASS",
-  "started_utc": "2026-06-08T08:26:47Z",
-  "updated_utc": "2026-06-08T08:26:47Z",
+  "started_utc": "2026-06-08T08:56:00Z",
+  "updated_utc": "2026-06-08T08:56:01Z",
   "jason_action_required": false,
   "reason": "Legacy 18788/live resolver STRM entries are not Plex-decision-safe. They have been moved out of Plex visibility while materialized/WebDAV playback is proven.",
-  "candidates_found": 1,
-  "moved_count": 1,
+  "candidates_found": 2,
+  "moved_count": 2,
   "failed_count": 0,
-  "manifest_path": "D:\\PlexTools\\state\\scarflix_v2\\legacy_resolver_visibility_quarantine\\manifest_20260608_1780907207722.json",
+  "manifest_path": "D:\\PlexTools\\state\\scarflix_v2\\legacy_resolver_visibility_quarantine\\manifest_20260608_1780908961046.json",
   "quarantine_root": "D:/PlexTools/state/scarflix_v2/legacy_resolver_visibility_quarantine",
   "moved_sample": [
     {
-      "source_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\Your Name (2016).strm",
-      "quarantine_path": "D:\\PlexTools\\state\\scarflix_v2\\legacy_resolver_visibility_quarantine\\Movies\\Your Name (2016).strm",
+      "source_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\Schindler's List (1993).strm",
+      "quarantine_path": "D:\\PlexTools\\state\\scarflix_v2\\legacy_resolver_visibility_quarantine\\Movies\\Schindler's List (1993).strm",
       "library": "Movies",
-      "relative_path": "Your Name (2016).strm",
-      "first_line": "http://127.0.0.1:18788/live?type=movie&tmdb_id=372058&title=Your%20Name.&year=2016",
+      "relative_path": "Schindler's List (1993).strm",
+      "first_line": "http://127.0.0.1:18788/live?type=movie&tmdb_id=424&title=Schindler's%20List&year=1993",
+      "reason": "legacy direct resolver STRM hidden after repeated Plex HTTP playback failures"
+    },
+    {
+      "source_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\Zootopia (2016).strm",
+      "quarantine_path": "D:\\PlexTools\\state\\scarflix_v2\\legacy_resolver_visibility_quarantine\\Movies\\Zootopia (2016).strm",
+      "library": "Movies",
+      "relative_path": "Zootopia (2016).strm",
+      "first_line": "http://127.0.0.1:18788/live?type=movie&tmdb_id=269149&title=Zootopia&year=2016",
       "reason": "legacy direct resolver STRM hidden after repeated Plex HTTP playback failures"
     }
   ],
@@ -25,12 +33,12 @@
     {
       "ok": true,
       "section": "5",
-      "pid": 4452
+      "pid": 24736
     },
     {
       "ok": true,
       "section": "6",
-      "pid": 19316
+      "pid": 45964
     }
   ],
   "log": "D:/PlexTools/logs/scarflix_v2_legacy_resolver_visibility_quarantine_20260608.log"
