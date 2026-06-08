@@ -1,12 +1,12 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T04:03:01.266Z
+Updated UTC: 2026-06-08T04:05:02.824Z
 Source: live status merge
 
+- 2026-06-08T04:03:43.688Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T04:03:43Z] [INFO] Health status publishing
 - 2026-06-08T04:00:11.536Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T04:00:11Z] [REVIEW] Final: REVIEW
 - 2026-06-08T04:00:10.527Z - Autonomous Expansion Reached 113 Direct STRM Entries - 2026-06-08 13:56: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `74`, TV `39`, total `113`. Staged pending candidates on disk: `0`. Latest staged publisher status: `PASS_PUBLISHED`, candidate dirs found `10`, processed `8`, published `6`.
 - 2026-06-08T04:00:04Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
-- 2026-06-08T03:57:38.012Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:57:37Z] [INFO] Health status publishing
 - 2026-06-08T03:56:19.387Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:56:18Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1
 - 2026-06-08T03:55:54.539Z - Autonomous Expansion Reached 107 Direct STRM Entries - 2026-06-08 13:54: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `69`, TV `38`, total `107`. Staged pending candidates on disk: `0`. Latest staged publisher status: `WAITING_STAGED_CANDIDATES`, candidate dirs found `0`, processed `0`, published `0`.
 - 2026-06-08T03:50:11.815Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
