@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T05:41:02.028Z",
+  "updated_utc": "2026-06-08T05:42:01.153Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,9 +11,9 @@
   "current_milestone": "CANDIDATE_SOURCE_MODEL_PENDING",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 73,
+    "movie_strm_count": 72,
     "tv_strm_count": 39,
-    "total_strm_count": 112,
+    "total_strm_count": 111,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "expansion_pause_status": "PAUSED_PLAYBACK_FIX",
     "expansion_paused": true,
@@ -24,14 +24,14 @@
     "direct_strm_mirror_created": 0,
     "direct_strm_mirror_updated": 0,
     "direct_strm_mirror_written_count": 0,
-    "direct_strm_admission_status": "RUNNING_ALREADY",
-    "direct_strm_admission_checked_visible": 0,
-    "direct_strm_admission_passed_visible": 0,
-    "direct_strm_admission_failed_visible": null,
-    "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_admission_retry_held_count": 0,
-    "direct_strm_admission_permanent_quarantine_count": 0,
-    "direct_strm_admission_raw_live_proxy_visible_count": 0,
+    "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+    "direct_strm_admission_checked_visible": 113,
+    "direct_strm_admission_passed_visible": 111,
+    "direct_strm_admission_failed_visible": 2,
+    "direct_strm_admission_quarantined_this_run": 2,
+    "direct_strm_admission_retry_held_count": 10,
+    "direct_strm_admission_permanent_quarantine_count": 1,
+    "direct_strm_admission_raw_live_proxy_visible_count": 113,
     "plex_playback_sample_status": "REVIEW",
     "plex_playback_sample_source_mode": "direct_strm",
     "plex_playback_sample_target_concurrency": 5,
@@ -80,9 +80,9 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 1,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 2,
+    "platform_child_progress_age_minutes": 2,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-08T05:45:08Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
@@ -92,7 +92,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260608.log",
     "last_progress_utc": "2026-06-08T05:40:10.928Z",
-    "age_minutes": 1,
+    "age_minutes": 2,
     "last_line": "[2026-06-08T05:40:10Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 21,
@@ -121,14 +121,23 @@
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
-    "status": "RUNNING_ALREADY",
-    "updated_utc": "2026-06-08T05:40:04Z",
-    "checked_visible": 0,
-    "passed_visible": 0,
-    "failed_visible": null,
-    "quarantined_this_run": 0,
-    "retry_held_count": 0,
-    "top_reason_codes": [],
+    "status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+    "updated_utc": "2026-06-08T05:41:50Z",
+    "checked_visible": 113,
+    "passed_visible": 111,
+    "failed_visible": 2,
+    "quarantined_this_run": 2,
+    "retry_held_count": 10,
+    "top_reason_codes": [
+      {
+        "code": "PROVIDER_503_RETRYABLE",
+        "count": 12
+      },
+      {
+        "code": "SOURCE_EXPIRED_OR_GONE",
+        "count": 1
+      }
+    ],
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json"
   },
   "staged_candidate_publisher": {
@@ -142,22 +151,22 @@
     "rejected": 0,
     "skipped": 0,
     "direct_counts_after": {
-      "movies": 73,
+      "movies": 72,
       "tv": 39,
-      "total": 112
+      "total": 111
     },
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T05:40:02Z",
+    "updated_utc": "2026-06-08T05:41:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
     "actual_strm_counts": {
-      "movies": 74,
+      "movies": 73,
       "tv": 39,
-      "total": 113
+      "total": 112
     },
     "next_4_hour_actions": [
       "Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.",
@@ -309,7 +318,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-08T05:40:10.928Z - 5-concurrent stream QA",
-      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.. Actual Streaming library .strm output is movies=73, tv=39, total=112. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=RUNNING_ALREADY, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX, staged=0, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=1 min; owner_pid=44064; child_pid=.",
+      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.. Actual Streaming library .strm output is movies=72, tv=39, total=111. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_QUARANTINED_VISIBLE_FAILURES, checked=113, passed_visible=111, quarantined_this_run=2, retry_held=10. Direct mirror=PAUSED_PLAYBACK_FIX, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX, staged=0, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=2 min; owner_pid=44064; child_pid=.",
       "progress": 20,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -317,8 +326,8 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T05:40:02Z - CANDIDATE_SOURCE_MODEL_RUNNING",
-      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=112.",
+      "last_change": "2026-06-08T05:41:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=111.",
       "progress": 30,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
@@ -372,7 +381,7 @@
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
       "last_change": "2026-06-08T01:18:52Z - Durable PlatformGate ownership active",
-      "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=112; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
+      "current": "Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=111; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification.",
       "progress": 18,
       "eta": "next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion",
       "stall_risk": "Medium"
