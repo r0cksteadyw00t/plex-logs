@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_predictive_simulator",
   "status": "REVIEW",
-  "updated_utc": "2026-06-08T02:30:03.229Z",
+  "updated_utc": "2026-06-08T02:32:00.742Z",
   "no_catalogue_publication": true,
   "expansion_eligible": false,
   "visible": {
@@ -9,15 +9,15 @@
     "movies": 5,
     "tv": 7
   },
-  "pending_candidates": 0,
-  "rejected_sources": 930,
+  "pending_candidates": 19,
+  "rejected_sources": 943,
   "gate": {
     "checkpoint_status": "PASS",
     "platform_status": "PASS",
     "active_gate": "PASS",
     "visible_catalog_qa": "PASS",
-    "controller": "RUNNING",
-    "candidate_model": "PENDING",
+    "controller": "REVIEW_TRANSIENT",
+    "candidate_model": "REVIEW",
     "rclone": "PASS",
     "health": "REVIEW"
   },
@@ -44,9 +44,9 @@
     {
       "id": "candidate_pool_growth",
       "description": "Prepare more candidates without publishing visible Plex rows.",
-      "pending_candidates": 0,
-      "rejected_sources": 930,
-      "recommendation": "stage_candidates_without_publishing_after_gate_status_known"
+      "pending_candidates": 19,
+      "rejected_sources": 943,
+      "recommendation": "candidate_pool_sufficient_for_next_batch"
     }
   ],
   "next_autonomous_action": "continue_platform_gate_and_candidate_model_path",
