@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T13:22:01.148Z
+Updated UTC: 2026-06-08T13:24:01.713Z
 Source: live status merge
 
 - 2026-06-08T13:20:42.001Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
