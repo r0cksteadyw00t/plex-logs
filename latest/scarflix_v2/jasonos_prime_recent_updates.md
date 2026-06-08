@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T05:49:01.843Z
+Updated UTC: 2026-06-08T05:50:03.201Z
 Source: live status merge
 
 - 2026-06-08T05:45:11.291Z - Expansion Paused After Saw Playback Failure - 2026-06-08 14:40: Jason reported that `Saw (2004)` failed in Plex with the same HTTP `400` playback/decision error class as earlier failures. Decision and action: Stop adding titles until the direct Plex playback issue is technically fixed. Expansion pause flag is active: `D:\PlexTools\state\scarflix_v2\expansion_paused_until_playbac...
