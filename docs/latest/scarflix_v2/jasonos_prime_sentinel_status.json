@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "PASS",
-  "alert_level": "LOW",
-  "updated_utc": "2026-06-08T11:52:01Z",
+  "status": "REVIEW",
+  "alert_level": "MEDIUM",
+  "updated_utc": "2026-06-08T11:54:01Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
@@ -10,21 +10,28 @@
   "signals": {
     "controller_status": "REVIEW_TRANSIENT",
     "controller_milestone": "CANDIDATE_SOURCE_MODEL_PENDING",
-    "controller_age_minutes": 5,
+    "controller_age_minutes": 7,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 0,
+    "watchdog_age_minutes": 2,
     "dashboard_status": "",
-    "dashboard_age_minutes": 2,
+    "dashboard_age_minutes": 4,
     "mirror_status": "PASS",
     "mirror_age_minutes": 1,
     "checkpoint_status": "PASS",
     "checkpoint_step": "platform_gate_pass",
-    "checkpoint_age_minutes": 633,
-    "durable_platform_gate_age_minutes": 633,
+    "checkpoint_age_minutes": 635,
+    "durable_platform_gate_age_minutes": 635,
     "platform_progress_fresh": false
   },
-  "recovery_actions": [],
+  "recovery_actions": [
+    {
+      "task": "ScarFLIX_v2_AutonomousController",
+      "reason": "controller_stale_or_blocked",
+      "result": "PASS",
+      "note": "enable pid=19252; run pid=31592"
+    }
+  ],
   "notes": [],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
