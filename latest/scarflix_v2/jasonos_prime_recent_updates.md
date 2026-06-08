@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T07:15:01.653Z
+Updated UTC: 2026-06-08T07:17:01.692Z
 Source: live status merge
 
-- 2026-06-08T07:10:17.003Z - Expansion Paused After Saw Playback Failure - 2026-06-08 14:40: Jason reported that `Saw (2004)` failed in Plex with the same HTTP `400` playback/decision error class as earlier failures. Decision and action: Stop adding titles until the direct Plex playback issue is technically fixed. Expansion pause flag is active: `D:\PlexTools\state\scarflix_v2\expansion_paused_until_playbac...
-- 2026-06-08T07:10:12.713Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T07:10:12Z] [REVIEW] Final: REVIEW
-- 2026-06-08T07:10:09Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T07:15:13.995Z - Expansion Paused After Saw Playback Failure - 2026-06-08 14:40: Jason reported that `Saw (2004)` failed in Plex with the same HTTP `400` playback/decision error class as earlier failures. Decision and action: Stop adding titles until the direct Plex playback issue is technically fixed. Expansion pause flag is active: `D:\PlexTools\state\scarflix_v2\expansion_paused_until_playbac...
+- 2026-06-08T07:15:10.010Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T07:15:10Z] [REVIEW] Final: REVIEW
+- 2026-06-08T07:15:05Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T05:00:10.290Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T05:00:10Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
 - 2026-06-08T04:40:15.515Z - Phase 0 PM Baseline - 2026-06-08 14:15: Formal project-management files have been created at repo root: `PROJECT_PLAN.md` `TASKS.md` `OUTCOMES.md`
 - 2026-06-08T04:35:03.648Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T04:35:03Z] [INFO] Health status publishing
