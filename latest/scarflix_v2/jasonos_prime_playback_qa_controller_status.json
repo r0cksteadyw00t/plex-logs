@@ -1,22 +1,22 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "RUNNING",
-  "updated_utc": "2026-06-08T05:40:04Z",
-  "current_step": "concurrent_stream_qa_started",
+  "status": "REVIEW_DIRECT_STRM_ADMISSION",
+  "updated_utc": "2026-06-08T05:45:04Z",
+  "current_step": "direct_strm_failures_quarantined_waiting_plex_rescan",
   "jason_action_required": false,
   "counts": {
-    "movies": 74,
+    "movies": 72,
     "tv": 39,
-    "total": 113
+    "total": 111
   },
   "canary_status": "PAUSED_PLAYBACK_FIX",
   "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
   "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-  "direct_strm_admission_status": "REVIEW_RETRY_HELD",
+  "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
   "direct_strm_admission_checked_visible": 113,
-  "direct_strm_admission_passed_visible": 113,
-  "direct_strm_admission_quarantined_this_run": 0,
-  "direct_strm_retry_held_count": 8,
+  "direct_strm_admission_passed_visible": 111,
+  "direct_strm_admission_quarantined_this_run": 2,
+  "direct_strm_retry_held_count": 10,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
@@ -28,25 +28,15 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 41504
+          "pid": 16252
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 20960
+          "pid": 2668
         }
       ]
-    },
-    {
-      "action": "start_concurrent_stream_qa",
-      "result": {
-        "task": "ScarFLIX_v2_ConcurrentStreamQA",
-        "enable_ok": true,
-        "run_ok": true,
-        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
-        "run_text": "INFO: scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" is currently running.\r\nSUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
-      }
     }
   ],
-  "next_action": "Detached 5-concurrent stream QA is running or queued."
+  "next_action": "Failed visible STRM sources were quarantined. Wait for Plex rescan and next direct admission pass."
 }
