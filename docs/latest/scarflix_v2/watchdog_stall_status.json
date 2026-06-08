@@ -2,39 +2,39 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "PASS",
     "stall_risk":  "Low",
-    "updated_utc":  "2026-06-08T01:10:06Z",
-    "started_utc":  "2026-06-08T01:10:04Z",
-    "duration_seconds":  2,
+    "updated_utc":  "2026-06-08T01:15:14Z",
+    "started_utc":  "2026-06-08T01:15:06Z",
+    "duration_seconds":  7,
     "will_progress_without_codex":  true,
     "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
                     "controller_age_minutes":  5,
-                    "platform_checkpoint_age_minutes":  0,
-                    "durable_platform_gate_age_minutes":  0,
+                    "platform_checkpoint_age_minutes":  1,
+                    "durable_platform_gate_age_minutes":  1,
                     "platform_progress_fresh":  true,
                     "dashboard_age_minutes":  0,
-                    "mirror_age_minutes":  2,
+                    "mirror_age_minutes":  1,
                     "movie_strm_count":  43,
                     "tv_strm_count":  24,
                     "total_strm_count":  67,
                     "previous_total_strm_count":  67,
                     "catalogue_no_growth":  true,
-                    "platform_checkpoint_step":  "platform_gate_review"
+                    "platform_checkpoint_step":  "running_platform_gate_attempt_1"
                 },
     "tasks":  {
                   "controller":  {
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "8/06/2026 11:10:01 AM",
-                                     "next_run_time":  "8/06/2026 11:15:00 AM",
+                                     "last_run_time":  "8/06/2026 11:15:01 AM",
+                                     "next_run_time":  "8/06/2026 11:20:00 AM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
                                           "exists":  true,
                                           "status":  "Running",
-                                          "last_run_time":  "8/06/2026 11:10:03 AM",
+                                          "last_run_time":  "8/06/2026 11:14:02 AM",
                                           "next_run_time":  "N/A",
                                           "last_result":  "267009"
                                       },
@@ -42,15 +42,15 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "8/06/2026 11:10:01 AM",
-                                    "next_run_time":  "8/06/2026 11:15:00 AM",
+                                    "last_run_time":  "8/06/2026 11:15:08 AM",
+                                    "next_run_time":  "8/06/2026 11:20:00 AM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
                                  "exists":  true,
                                  "status":  "Ready",
-                                 "last_run_time":  "8/06/2026 11:10:01 AM",
+                                 "last_run_time":  "8/06/2026 11:15:09 AM",
                                  "next_run_time":  "8/06/2026 11:20:00 AM",
                                  "last_result":  "0"
                              }
