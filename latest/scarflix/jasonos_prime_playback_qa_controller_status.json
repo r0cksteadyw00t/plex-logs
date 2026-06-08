@@ -1,42 +1,26 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "REVIEW_DIRECT_STRM_ADMISSION",
-  "updated_utc": "2026-06-08T08:00:06Z",
-  "current_step": "direct_strm_failures_quarantined_waiting_plex_rescan",
+  "status": "WAITING",
+  "updated_utc": "2026-06-08T08:05:03Z",
+  "current_step": "waiting_for_delivery",
   "jason_action_required": false,
   "counts": {
-    "movies": 74,
-    "tv": 38,
-    "total": 112
+    "movies": 0,
+    "tv": 0,
+    "total": 0
   },
   "canary_status": "PAUSED_PLAYBACK_FIX",
   "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
   "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-  "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
-  "direct_strm_admission_checked_visible": 113,
+  "direct_strm_admission_status": "REVIEW_RETRY_HELD",
+  "direct_strm_admission_checked_visible": 112,
   "direct_strm_admission_passed_visible": 112,
-  "direct_strm_admission_quarantined_this_run": 1,
+  "direct_strm_admission_quarantined_this_run": 0,
   "direct_strm_retry_held_count": 9,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
   "overlap_running": [],
-  "actions": [
-    {
-      "action": "trigger_plex_scans",
-      "result": [
-        {
-          "ok": true,
-          "section": "5",
-          "pid": 8356
-        },
-        {
-          "ok": true,
-          "section": "6",
-          "pid": 46292
-        }
-      ]
-    }
-  ],
-  "next_action": "Failed visible STRM sources were quarantined. Wait for Plex rescan and next direct admission pass."
+  "actions": [],
+  "next_action": "Wait for direct STRM delivery."
 }
