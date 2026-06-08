@@ -3,7 +3,7 @@
 Status: REVIEW_TRANSIENT
 Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
 Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-08T15:35:23Z
+Updated UTC: 2026-06-08T15:40:08Z
 Current step: candidate_source_model_review
 Jason action required: False
 
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: Candidate-source model requires engineering review before catalogue expansion
-- next_check_utc: 2026-06-08T15:40:29Z
+- next_check_utc: 2026-06-08T15:45:13Z
 
 ## Blockers
 - seeder_stage_only_not_plex_visible
