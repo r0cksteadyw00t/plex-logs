@@ -1,41 +1,12 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
-  "status": "WAITING_PLAYBACK_QA",
-  "started_utc": "2026-06-08T01:10:06Z",
-  "updated_utc": "2026-06-08T01:10:06Z",
-  "ended_utc": "2026-06-08T01:10:06Z",
-  "jason_action_required": false,
-  "reason": "Direct STRM publishing is paused until direct-mode Plex playback sample passes range and decision QA.",
-  "playback_gate": {
-    "ok": false,
-    "status": "REVIEW",
-    "source_mode": "direct_strm",
-    "target_concurrency": 5,
-    "range_passed": 5,
-    "range_failed": 0,
-    "decision_passed": 0,
-    "decision_failed": 5,
-    "status_file": "D:/PlexTools/public/latest/scarflix/concurrent_stream_qa_status.json"
+  "status": "RUNNING_ALREADY",
+  "updated_utc": "2026-06-08T01:15:28Z",
+  "existing_lock": {
+    "component": "scarflix_v2_staged_candidate_publisher",
+    "pid": 36280,
+    "started_utc": "2026-06-08T01:15:04Z",
+    "updated_utc": "2026-06-08T01:15:21Z"
   },
-  "max_items": 8,
-  "counts_before": {
-    "movies": 43,
-    "tv": 24,
-    "staged": 50
-  },
-  "counts_after": {
-    "movies": 43,
-    "tv": 24,
-    "staged": 50
-  },
-  "candidate_dirs_found": 50,
-  "processed": 0,
-  "published": 0,
-  "retry_held": 0,
-  "rejected": 0,
-  "skipped": 0,
-  "plex_scan_triggered": [],
-  "results": [],
-  "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
-  "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
+  "jason_action_required": false
 }
