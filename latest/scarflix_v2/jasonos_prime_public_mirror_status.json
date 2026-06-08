@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-08T23:23:13.013Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-08T23:25:28.544Z",
   "pat_present": true,
   "pushed": [
     {
@@ -107,10 +107,6 @@
     {
       "file": "watchdog_swarm_escalation.json",
       "status": 304
-    },
-    {
-      "file": "jasonos_prime_sentinel_status.json",
-      "status": 200
     },
     {
       "file": "jasonos_prime_sentinel_status.md",
@@ -426,11 +422,11 @@
     },
     {
       "file": "docs/latest/scarflix/materialized_canary_decision_qa_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix/materialized_canary_decision_qa_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix/legacy_resolver_visibility_quarantine_status.json",
@@ -462,11 +458,11 @@
     },
     {
       "file": "docs/latest/scarflix/jasonos_prime_playback_qa_controller_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix/jasonos_prime_playback_qa_controller_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix/platform_gate_checkpoint.md",
@@ -478,15 +474,20 @@
     },
     {
       "file": "docs/latest/scarflix/autonomous_controller_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix/autonomous_controller_status.json",
-      "status": 304
+      "status": 200
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "jasonos_prime_sentinel_status.json",
+      "status": 422
+    }
+  ],
   "raw_base_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/",
   "pages_source_branch": "main",
   "pages_source_path": "/docs",
