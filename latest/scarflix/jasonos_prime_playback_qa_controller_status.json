@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-08T08:45:04Z",
-  "current_step": "validation_overlap_running",
+  "status": "RUNNING",
+  "updated_utc": "2026-06-08T08:50:15Z",
+  "current_step": "concurrent_stream_qa_started",
   "jason_action_required": false,
   "counts": {
     "movies": 2,
@@ -20,17 +20,7 @@
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
-  "overlap_running": [
-    {
-      "name": "ScarFLIX_v2_ConcurrentStreamQA",
-      "ok": true,
-      "status": "Running",
-      "scheduled_state": "Enabled",
-      "last_run": "8/06/2026 6:45:04 PM",
-      "last_result": "267009",
-      "next_run": "8/06/2026 9:00:00 PM"
-    }
-  ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans",
@@ -38,15 +28,25 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 39724
+          "pid": 31488
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 25332
+          "pid": 41560
         }
       ]
+    },
+    {
+      "action": "start_concurrent_stream_qa",
+      "result": {
+        "task": "ScarFLIX_v2_ConcurrentStreamQA",
+        "enable_ok": true,
+        "run_ok": true,
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
+      }
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Detached 5-concurrent stream QA is running or queued."
 }
