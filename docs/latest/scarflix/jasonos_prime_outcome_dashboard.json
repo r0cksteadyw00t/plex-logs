@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T10:17:07.413Z",
+  "updated_utc": "2026-06-08T10:19:02.539Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -107,9 +107,9 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 77,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 79,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-08T10:20:09Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
@@ -119,7 +119,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260608.log",
     "last_progress_utc": "2026-06-08T09:00:13.119Z",
-    "age_minutes": 77,
+    "age_minutes": 79,
     "last_line": "[2026-06-08T09:00:13Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity",
     "pass_lines": 38,
     "review_lines": 0,
@@ -134,7 +134,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-08T10:17:01Z",
+    "updated_utc": "2026-06-08T10:19:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -186,7 +186,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T10:17:01Z",
+    "updated_utc": "2026-06-08T10:19:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -261,6 +261,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-08T10:18:37.619Z",
+      "title": "Controlled Materialized Expansion Working - 2026-06-08 20:17",
+      "detail": "Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s..."
+    },
+    {
       "utc": "2026-06-08T10:15:16.559Z",
       "title": "Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56",
       "detail": "Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\\StremioCatalog\\_Hybrid\\Movies\\Schindler's List (1993).strm` `D:\\StremioCatalog\\_Hybrid\\Movies\\Zootopia (2016).strm` Actions taken:"
@@ -324,11 +329,6 @@
       "utc": "2026-06-08T03:50:11.815Z",
       "title": "Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58",
       "detail": "Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`."
-    },
-    {
-      "utc": "2026-06-08T03:15:04Z",
-      "title": "Autonomous controller: candidate_source_model_pending_platform_gate",
-      "detail": "Candidate-source model is pending PlatformGate PASS"
     }
   ],
   "outcomes": [
@@ -353,7 +353,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T10:17:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T10:19:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
