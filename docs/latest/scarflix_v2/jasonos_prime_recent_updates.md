@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T00:30:06.776Z
+Updated UTC: 2026-06-08T00:32:01.715Z
 Source: live status merge
 
-- 2026-06-08T00:29:38Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=41408; child_pid=
-- 2026-06-08T00:29:38Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
-- 2026-06-08T00:29:34.286Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T00:29:34Z] [REVIEW] Final: REVIEW
-- 2026-06-08T00:25:11.642Z - Direct STRM Playback QA Failing; Publisher Paused - 2026-06-08 10:10: Current audit result: Actual direct `.strm` files visible in Streaming libraries: movies `43`, TV `24`, total `67`. Staged candidate publisher now has `50` staged candidates held. Direct URL/range testing is not the blocker: 5 direct `.strm` sample URLs passed byte-range testing (`5/5` returned `206`).
-- 2026-06-08T00:25:05Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
+- 2026-06-08T00:31:37Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=33388; child_pid=
+- 2026-06-08T00:31:37Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
+- 2026-06-08T00:31:32.188Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T00:31:32Z] [REVIEW] Final: REVIEW
+- 2026-06-08T00:30:18.985Z - Direct STRM Playback QA Failing; Publisher Paused - 2026-06-08 10:10: Current audit result: Actual direct `.strm` files visible in Streaming libraries: movies `43`, TV `24`, total `67`. Staged candidate publisher now has `50` staged candidates held. Direct URL/range testing is not the blocker: 5 direct `.strm` sample URLs passed byte-range testing (`5/5` returned `206`).
+- 2026-06-08T00:30:13Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-08T00:10:09Z - Autonomous controller: unclassified_review_platform_gate_relaunch: PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason
 - 2026-06-08T00:09:31.080Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T00:09:31Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=20 Retries=0
 - 2026-06-08T00:09:06Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=20424; child_pid=7632
