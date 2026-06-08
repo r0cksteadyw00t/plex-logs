@@ -1,10 +1,10 @@
 # JasonOS Prime Playback QA Controller
 
 Status: RUNNING
-Updated UTC: 2026-06-08T00:05:08Z
-Current step: direct_strm_admission_required
-Direct STRM total: 65
-Direct STRM admission: RUNNING_ALREADY
+Updated UTC: 2026-06-08T00:10:07Z
+Current step: concurrent_stream_qa_started
+Direct STRM total: 67
+Direct STRM admission: REVIEW_RETRY_HELD
 Decision QA: PASS
 Concurrent QA: REVIEW
-Next action: Direct STRM admission has not passed for visible playback sources.
+Next action: Detached 5-concurrent stream QA is running or queued.
