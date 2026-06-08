@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T05:20:02Z",
+  "updated_utc": "2026-06-08T05:22:01.304Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -62,9 +62,7 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
-    "plex_safe_webdav_visible_rows": 1,
-    "staged_candidate_count": 0
+    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON"
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -82,10 +80,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 5,
-    "mirror_updated_age_minutes": 0,
-    "next_check_utc": "2026-06-08T05:20:08Z",
+    "controller_updated_age_minutes": 2,
+    "platform_child_progress_age_minutes": 2,
+    "mirror_updated_age_minutes": 1,
+    "next_check_utc": "2026-06-08T05:25:09Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -93,9 +91,9 @@
   "child_qa_progress": {
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260608.log",
-    "last_progress_utc": "2026-06-08T05:15:11.386Z",
-    "age_minutes": 5,
-    "last_line": "[2026-06-08T05:15:11Z] [REVIEW] Final: REVIEW",
+    "last_progress_utc": "2026-06-08T05:20:10.292Z",
+    "age_minutes": 2,
+    "last_line": "[2026-06-08T05:20:10Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 20,
     "info_lines": 60
@@ -103,13 +101,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-08T05:15:04Z",
+    "updated_utc": "2026-06-08T05:20:05Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-08T05:19:01Z",
+    "updated_utc": "2026-06-08T05:20:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -123,91 +121,45 @@
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
-    "counts_before": {
-      "movies": 74,
-      "tv": 39,
-      "total": 113
-    },
-    "counts_after": {
-      "movies": 74,
-      "tv": 39,
-      "total": 113
-    },
-    "checked_visible": 0,
-    "passed_visible": 0,
+    "status": "REVIEW_RETRY_HELD",
+    "updated_utc": "2026-06-08T05:21:45Z",
+    "checked_visible": 113,
+    "passed_visible": 113,
+    "failed_visible": 0,
     "quarantined_this_run": 0,
-    "restored_this_run": 0,
-    "retry_held_count": 0,
-    "permanent_quarantine_count": 0,
-    "raw_live_proxy_visible_count": 0,
-    "top_reason_codes": [],
-    "retry_queue_items": [],
-    "recent_quarantined": [],
-    "component": "scarflix_v2_direct_strm_admission_gate",
-    "status": "RUNNING_ALREADY",
-    "updated_utc": "2026-06-08T05:20:04Z",
-    "existing_lock": {
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "pid": 5400,
-      "started_utc": "2026-06-08T05:20:02Z",
-      "updated_utc": "2026-06-08T05:20:02Z"
-    },
-    "jason_action_required": false
+    "retry_held_count": 8,
+    "top_reason_codes": [
+      {
+        "code": "PROVIDER_503_RETRYABLE",
+        "count": 8
+      },
+      {
+        "code": "SOURCE_EXPIRED_OR_GONE",
+        "count": 1
+      }
+    ],
+    "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json"
   },
   "staged_candidate_publisher": {
-    "component": "scarflix_v2_staged_candidate_publisher",
     "status": "PAUSED_PLAYBACK_FIX",
     "updated_utc": "2026-06-08T04:35:41Z",
-    "jason_action_required": false,
-    "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-    "pause": {
-      "component": "scarflix_v2_expansion_pause",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "paused": true,
-      "updated_utc": "2026-06-08T04:34:10Z",
-      "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-      "trigger_titles": [
-        "The Maze Runner (2014)",
-        "Saw (2004)"
-      ],
-      "allowed_while_paused": [
-        "direct_strm_admission_gate",
-        "playback_qa_controller",
-        "dashboard",
-        "public_mirror",
-        "watchdog_status_only"
-      ],
-      "blocked_while_paused": [
-        "canary_expansion",
-        "safe_webdav_expansion_pipeline",
-        "stage_only_seeder",
-        "staged_candidate_publisher",
-        "direct_strm_mirror"
-      ],
-      "jason_action_required": false
-    },
-    "counts_before": {
-      "movies": 73,
-      "tv": 39,
-      "staged": 0
-    },
-    "counts_after": {
-      "movies": 73,
-      "tv": 39,
-      "staged": 0
-    },
     "candidate_dirs_found": 0,
+    "pending_count": 0,
     "processed": 0,
     "published": 0,
     "retry_held": 0,
     "rejected": 0,
     "skipped": 0,
-    "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
+    "direct_counts_after": {
+      "movies": 74,
+      "tv": 39,
+      "total": 113
+    },
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T05:20:01Z",
+    "updated_utc": "2026-06-08T05:21:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -282,17 +234,17 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-08T05:15:14.143Z",
+      "utc": "2026-06-08T05:20:14.422Z",
       "title": "Expansion Paused After Saw Playback Failure - 2026-06-08 14:40",
       "detail": "Jason reported that `Saw (2004)` failed in Plex with the same HTTP `400` playback/decision error class as earlier failures. Decision and action: Stop adding titles until the direct Plex playback issue is technically fixed. Expansion pause flag is active: `D:\\PlexTools\\state\\scarflix_v2\\expansion_paused_until_playbac..."
     },
     {
-      "utc": "2026-06-08T05:15:11.386Z",
+      "utc": "2026-06-08T05:20:10.292Z",
       "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-08T05:15:11Z] [REVIEW] Final: REVIEW"
+      "detail": "Latest child QA line: [2026-06-08T05:20:10Z] [REVIEW] Final: REVIEW"
     },
     {
-      "utc": "2026-06-08T05:15:06Z",
+      "utc": "2026-06-08T05:20:06Z",
       "title": "Autonomous controller: candidate_source_model_review",
       "detail": "Candidate-source model requires engineering review before catalogue expansion"
     },
@@ -365,8 +317,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-08T05:15:11.386Z - 5-concurrent stream QA",
-      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.. Actual Streaming library .strm output is movies=74, tv=39, total=113. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=113, passed_visible=113, quarantined_this_run=0, retry_held=8. Direct mirror=PAUSED_PLAYBACK_FIX, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX, staged=0, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=5 min; owner_pid=44064; child_pid=.",
+      "last_change": "2026-06-08T05:20:10.292Z - 5-concurrent stream QA",
+      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.. Actual Streaming library .strm output is movies=74, tv=39, total=113. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=113, passed_visible=113, quarantined_this_run=0, retry_held=8. Direct mirror=PAUSED_PLAYBACK_FIX, eligible=unknown, already_current=unknown. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX, staged=0, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=2 min; owner_pid=44064; child_pid=.",
       "progress": 20,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -374,7 +326,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T05:20:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T05:21:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=113.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -441,369 +393,5 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
-  },
-  "grokbuild_forensic_agent": {
-    "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-08T05:20:02Z",
-    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
-    "implementation": "node_native",
-    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
-    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
-  },
-  "node_watchdog_5min": {
-    "component": "jasonos_prime_node_watchdog_5min",
-    "status": "ACTIVE",
-    "updated_utc": "2026-06-08T05:20:02Z",
-    "jason_action_required": false,
-    "cadence": "every 5 minutes",
-    "counts": {
-      "legacy_movie_strm": 74,
-      "legacy_tv_strm": 39,
-      "legacy_total_strm": 113,
-      "plex_safe_webdav_visible_rows": 1
-    },
-    "grokbuild_status": "REVIEW_STALE_PROGRESS",
-    "grok_peer_bridge_status": "LOCAL_ONLY_NO_TOKEN",
-    "platform_gate_status": "PASS",
-    "direct_strm_mirror_status": {
-      "component": "scarflix_v2_direct_strm_mirror",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "updated_utc": "2026-06-08T04:35:42Z",
-      "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-      "pause": {
-        "component": "scarflix_v2_expansion_pause",
-        "status": "PAUSED_PLAYBACK_FIX",
-        "paused": true,
-        "updated_utc": "2026-06-08T04:34:10Z",
-        "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-        "trigger_titles": [
-          "The Maze Runner (2014)",
-          "Saw (2004)"
-        ],
-        "allowed_while_paused": [
-          "direct_strm_admission_gate",
-          "playback_qa_controller",
-          "dashboard",
-          "public_mirror",
-          "watchdog_status_only"
-        ],
-        "blocked_while_paused": [
-          "canary_expansion",
-          "safe_webdav_expansion_pipeline",
-          "stage_only_seeder",
-          "staged_candidate_publisher",
-          "direct_strm_mirror"
-        ],
-        "jason_action_required": false
-      },
-      "counts_before": {
-        "movies": 73,
-        "tv": 39
-      },
-      "counts_after": {
-        "movies": 73,
-        "tv": 39
-      },
-      "delivered_total": 112,
-      "created": 0,
-      "updated": 0,
-      "written_count": 0,
-      "skipped_count": 0,
-      "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260608.log"
-    },
-    "direct_strm_admission_gate_status": {
-      "counts_before": {
-        "movies": 74,
-        "tv": 39,
-        "total": 113
-      },
-      "counts_after": {
-        "movies": 74,
-        "tv": 39,
-        "total": 113
-      },
-      "checked_visible": 0,
-      "passed_visible": 0,
-      "quarantined_this_run": 0,
-      "restored_this_run": 0,
-      "retry_held_count": 0,
-      "permanent_quarantine_count": 0,
-      "raw_live_proxy_visible_count": 0,
-      "top_reason_codes": [],
-      "retry_queue_items": [],
-      "recent_quarantined": [],
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "status": "RUNNING_ALREADY",
-      "updated_utc": "2026-06-08T05:20:04Z",
-      "existing_lock": {
-        "component": "scarflix_v2_direct_strm_admission_gate",
-        "pid": 5400,
-        "started_utc": "2026-06-08T05:20:02Z",
-        "updated_utc": "2026-06-08T05:20:02Z"
-      },
-      "jason_action_required": false
-    },
-    "staged_candidate_count": 0,
-    "staged_candidate_publisher_status": {
-      "component": "scarflix_v2_staged_candidate_publisher",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "updated_utc": "2026-06-08T04:35:41Z",
-      "jason_action_required": false,
-      "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-      "pause": {
-        "component": "scarflix_v2_expansion_pause",
-        "status": "PAUSED_PLAYBACK_FIX",
-        "paused": true,
-        "updated_utc": "2026-06-08T04:34:10Z",
-        "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-        "trigger_titles": [
-          "The Maze Runner (2014)",
-          "Saw (2004)"
-        ],
-        "allowed_while_paused": [
-          "direct_strm_admission_gate",
-          "playback_qa_controller",
-          "dashboard",
-          "public_mirror",
-          "watchdog_status_only"
-        ],
-        "blocked_while_paused": [
-          "canary_expansion",
-          "safe_webdav_expansion_pipeline",
-          "stage_only_seeder",
-          "staged_candidate_publisher",
-          "direct_strm_mirror"
-        ],
-        "jason_action_required": false
-      },
-      "counts_before": {
-        "movies": 73,
-        "tv": 39,
-        "staged": 0
-      },
-      "counts_after": {
-        "movies": 73,
-        "tv": 39,
-        "staged": 0
-      },
-      "candidate_dirs_found": 0,
-      "processed": 0,
-      "published": 0,
-      "retry_held": 0,
-      "rejected": 0,
-      "skipped": 0,
-      "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
-      "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
-    },
-    "expansion_paused": true,
-    "expansion_pause": {
-      "component": "scarflix_v2_expansion_pause",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "paused": true,
-      "updated_utc": "2026-06-08T04:34:10Z",
-      "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-      "trigger_titles": [
-        "The Maze Runner (2014)",
-        "Saw (2004)"
-      ],
-      "allowed_while_paused": [
-        "direct_strm_admission_gate",
-        "playback_qa_controller",
-        "dashboard",
-        "public_mirror",
-        "watchdog_status_only"
-      ],
-      "blocked_while_paused": [
-        "canary_expansion",
-        "safe_webdav_expansion_pipeline",
-        "stage_only_seeder",
-        "staged_candidate_publisher",
-        "direct_strm_mirror"
-      ],
-      "jason_action_required": false
-    },
-    "playback_qa_controller_status": {
-      "component": "jasonos_prime_playback_qa_controller",
-      "status": "RUNNING",
-      "updated_utc": "2026-06-08T05:20:04Z",
-      "current_step": "concurrent_stream_qa_started",
-      "jason_action_required": false,
-      "counts": {
-        "movies": 74,
-        "tv": 39,
-        "total": 113
-      },
-      "canary_status": "PAUSED_PLAYBACK_FIX",
-      "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
-      "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-      "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-      "direct_strm_admission_checked_visible": 113,
-      "direct_strm_admission_passed_visible": 113,
-      "direct_strm_admission_quarantined_this_run": 0,
-      "direct_strm_retry_held_count": 8,
-      "decision_qa_status": "PASS",
-      "concurrent_stream_qa_status": "REVIEW",
-      "ignored_overlap": [],
-      "overlap_running": [],
-      "actions": [
-        {
-          "action": "trigger_plex_scans",
-          "result": [
-            {
-              "ok": true,
-              "section": "5",
-              "pid": 43132
-            },
-            {
-              "ok": true,
-              "section": "6",
-              "pid": 2124
-            }
-          ]
-        },
-        {
-          "action": "start_concurrent_stream_qa",
-          "result": {
-            "task": "ScarFLIX_v2_ConcurrentStreamQA",
-            "enable_ok": true,
-            "run_ok": true,
-            "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
-            "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
-          }
-        }
-      ],
-      "next_action": "Detached 5-concurrent stream QA is running or queued."
-    },
-    "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 2506,
-    "safe_pipeline_log_age_seconds": 59390,
-    "safe_pipeline_lock_age_seconds": null,
-    "stale_running_canary": false,
-    "actions": [
-      {
-        "action": "refresh_grokbuild",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "run_direct_strm_admission_gate",
-        "ok": true,
-        "detail": "pid=17036"
-      },
-      {
-        "action": "run_playback_qa_controller",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "trigger_public_mirror",
-        "ok": true,
-        "detail": "pid=34344"
-      }
-    ],
-    "blockers": []
-  },
-  "direct_strm_mirror": {
-    "component": "scarflix_v2_direct_strm_mirror",
-    "status": "PAUSED_PLAYBACK_FIX",
-    "updated_utc": "2026-06-08T04:35:42Z",
-    "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-    "pause": {
-      "component": "scarflix_v2_expansion_pause",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "paused": true,
-      "updated_utc": "2026-06-08T04:34:10Z",
-      "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
-      "trigger_titles": [
-        "The Maze Runner (2014)",
-        "Saw (2004)"
-      ],
-      "allowed_while_paused": [
-        "direct_strm_admission_gate",
-        "playback_qa_controller",
-        "dashboard",
-        "public_mirror",
-        "watchdog_status_only"
-      ],
-      "blocked_while_paused": [
-        "canary_expansion",
-        "safe_webdav_expansion_pipeline",
-        "stage_only_seeder",
-        "staged_candidate_publisher",
-        "direct_strm_mirror"
-      ],
-      "jason_action_required": false
-    },
-    "counts_before": {
-      "movies": 73,
-      "tv": 39
-    },
-    "counts_after": {
-      "movies": 73,
-      "tv": 39
-    },
-    "delivered_total": 112,
-    "created": 0,
-    "updated": 0,
-    "written_count": 0,
-    "skipped_count": 0,
-    "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260608.log"
-  },
-  "playback_qa_controller": {
-    "component": "jasonos_prime_playback_qa_controller",
-    "status": "RUNNING",
-    "updated_utc": "2026-06-08T05:20:04Z",
-    "current_step": "concurrent_stream_qa_started",
-    "jason_action_required": false,
-    "counts": {
-      "movies": 74,
-      "tv": 39,
-      "total": 113
-    },
-    "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
-    "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-    "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-    "direct_strm_admission_checked_visible": 113,
-    "direct_strm_admission_passed_visible": 113,
-    "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_retry_held_count": 8,
-    "decision_qa_status": "PASS",
-    "concurrent_stream_qa_status": "REVIEW",
-    "ignored_overlap": [],
-    "overlap_running": [],
-    "actions": [
-      {
-        "action": "trigger_plex_scans",
-        "result": [
-          {
-            "ok": true,
-            "section": "5",
-            "pid": 43132
-          },
-          {
-            "ok": true,
-            "section": "6",
-            "pid": 2124
-          }
-        ]
-      },
-      {
-        "action": "start_concurrent_stream_qa",
-        "result": {
-          "task": "ScarFLIX_v2_ConcurrentStreamQA",
-          "enable_ok": true,
-          "run_ok": true,
-          "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
-          "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
-        }
-      }
-    ],
-    "next_action": "Detached 5-concurrent stream QA is running or queued."
   }
 }
