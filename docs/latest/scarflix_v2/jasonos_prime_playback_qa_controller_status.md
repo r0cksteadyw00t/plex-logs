@@ -1,8 +1,8 @@
 # JasonOS Prime Playback QA Controller
 
-Status: WAITING_OVERLAP
-Updated UTC: 2026-06-08T14:00:02Z
-Current step: validation_overlap_running
+Status: RUNNING
+Updated UTC: 2026-06-08T14:05:04Z
+Current step: materialized_plex_decision_qa_started
 Direct STRM total: 2
 Materialized/WebDAV primary: true
 Materialized visible verified: 18
@@ -10,4 +10,4 @@ Materialized decision QA: REVIEW_PLEX_SCAN_PENDING
 Direct STRM admission: REVIEW_RETRY_HELD
 Decision QA: PASS
 Concurrent QA: REVIEW
-Next action: Wait for current ScarFLIX validation task to finish.
+Next action: Detached materialized/WebDAV Plex decision QA is running or queued.
