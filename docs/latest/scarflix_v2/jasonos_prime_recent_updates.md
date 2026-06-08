@@ -1,8 +1,9 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T08:16:01.406Z
+Updated UTC: 2026-06-08T08:18:02.312Z
 Source: live status merge
 
+- 2026-06-08T08:16:05.124Z - Green Mile Playback Failure Confirmed Legacy Resolver Issue - 2026-06-08 18:15: Jason reported `The Green Mile` failed in Plex with the same HTTP request/playback error class as Maze Runner and Saw. Forensic result: `The Green Mile (1999).strm` was a legacy local resolver entry pointing at `18788/live`. This confirms the failure is systemic to the old direct `.strm` plus local resolver model, n...
 - 2026-06-08T08:15:17.698Z - Materialized Playback Canary Started - 2026-06-08 17:45: Jason approved moving away from the current direct `.strm` plus local resolver URL model as the primary playback architecture. Decision and action: Primary playback architecture is now `materialized_webdav_symlink`. Local resolver `18788` remains fallback-only, not the default for new publication.
 - 2026-06-08T08:15:09Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T08:01:17.682Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T08:01:17Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-08T03:50:11.815Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
 - 2026-06-08T03:15:04Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
 - 2026-06-08T02:57:02.057Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-08T02:57:02Z] [PASS] QA passed: part=112929 title=I Saw the Devil
-- 2026-06-08T02:55:11.498Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
