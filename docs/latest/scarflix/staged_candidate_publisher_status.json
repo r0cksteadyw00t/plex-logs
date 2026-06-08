@@ -1,183 +1,41 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
-  "status": "PASS_PUBLISHED",
-  "started_utc": "2026-06-08T00:05:03Z",
-  "updated_utc": "2026-06-08T00:05:45Z",
-  "ended_utc": "2026-06-08T00:05:45Z",
+  "status": "WAITING_PLAYBACK_QA",
+  "started_utc": "2026-06-08T00:10:08Z",
+  "updated_utc": "2026-06-08T00:10:08Z",
+  "ended_utc": "2026-06-08T00:10:08Z",
   "jason_action_required": false,
+  "reason": "Direct STRM publishing is paused until direct-mode Plex playback sample passes range and decision QA.",
+  "playback_gate": {
+    "ok": false,
+    "status": "REVIEW",
+    "source_mode": "direct_strm",
+    "target_concurrency": 5,
+    "range_passed": 5,
+    "range_failed": 0,
+    "decision_passed": 0,
+    "decision_failed": 5,
+    "status_file": "D:/PlexTools/public/latest/scarflix/concurrent_stream_qa_status.json"
+  },
   "max_items": 8,
   "counts_before": {
-    "movies": 42,
-    "tv": 23,
-    "staged": 58
+    "movies": 43,
+    "tv": 24,
+    "staged": 50
   },
   "counts_after": {
     "movies": 43,
     "tv": 24,
     "staged": 50
   },
-  "candidate_dirs_found": 58,
-  "processed": 8,
-  "published": 2,
-  "retry_held": 6,
+  "candidate_dirs_found": 50,
+  "processed": 0,
+  "published": 0,
+  "retry_held": 0,
   "rejected": 0,
   "skipped": 0,
-  "plex_scan_triggered": [
-    {
-      "ok": true,
-      "section": "5",
-      "pid": 42876
-    },
-    {
-      "ok": true,
-      "section": "6",
-      "pid": 22020
-    }
-  ],
-  "results": [
-    {
-      "hash": "0bbb116c4783",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\0bbb116c4783_2"
-    },
-    {
-      "hash": "af15c8187d07",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\af15c8187d07"
-    },
-    {
-      "hash": "080c75f13064",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\080c75f13064"
-    },
-    {
-      "hash": "59de3bea6557",
-      "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Jurassic World (2015).strm",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
-        "reason": "HEAD and range probe passed",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/octet-stream",
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/3363955307"
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\59de3bea6557"
-    },
-    {
-      "hash": "933113330ff5",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\933113330ff5"
-    },
-    {
-      "hash": "fed7e96eee2c",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "reason": "HEAD timed out",
-        "head_status": null,
-        "range_status": null,
-        "content_type": "",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\fed7e96eee2c"
-    },
-    {
-      "hash": "0856d74be93f",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\0856d74be93f"
-    },
-    {
-      "hash": "0f562162c9ec",
-      "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\The Originals (2013)\\Season 01\\The Originals (2013) - S01E01.strm",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
-        "reason": "HEAD and range probe passed",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/octet-stream",
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/72094859"
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\0f562162c9ec"
-    }
-  ],
+  "plex_scan_triggered": [],
+  "results": [],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
   "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
 }
