@@ -1,24 +1,24 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
   "status": "RUNNING",
-  "updated_utc": "2026-06-08T02:50:04Z",
-  "current_step": "concurrent_stream_qa_started",
+  "updated_utc": "2026-06-08T03:00:06Z",
+  "current_step": "plex_client_decision_qa_started",
   "jason_action_required": false,
   "counts": {
-    "movies": 60,
-    "tv": 35,
-    "total": 95
+    "movies": 64,
+    "tv": 38,
+    "total": 102
   },
   "canary_status": "RUNNING",
-  "canary_milestone": "CANARY_PIPELINE_STARTED",
+  "canary_milestone": "CANARY_PIPELINE_RUNNING",
   "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT",
   "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-  "direct_strm_admission_checked_visible": 95,
-  "direct_strm_admission_passed_visible": 95,
+  "direct_strm_admission_checked_visible": 100,
+  "direct_strm_admission_passed_visible": 100,
   "direct_strm_admission_quarantined_this_run": 0,
-  "direct_strm_retry_held_count": 6,
-  "decision_qa_status": "PASS",
-  "concurrent_stream_qa_status": "REVIEW",
+  "direct_strm_retry_held_count": 7,
+  "decision_qa_status": "UNKNOWN",
+  "concurrent_stream_qa_status": "UNKNOWN",
   "ignored_overlap": [],
   "overlap_running": [],
   "actions": [
@@ -28,25 +28,25 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 9332
+          "pid": 38160
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 42952
+          "pid": 22356
         }
       ]
     },
     {
-      "action": "start_concurrent_stream_qa",
+      "action": "start_plex_client_decision_qa",
       "result": {
-        "task": "ScarFLIX_v2_ConcurrentStreamQA",
+        "task": "ScarFLIX_v2_PlexClientDecisionQA",
         "enable_ok": true,
         "run_ok": true,
-        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
-        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_PlexClientDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_PlexClientDecisionQA\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_PlexClientDecisionQA\"."
       }
     }
   ],
-  "next_action": "Detached 5-concurrent stream QA is running or queued."
+  "next_action": "Detached Plex client decision QA is running or queued."
 }
