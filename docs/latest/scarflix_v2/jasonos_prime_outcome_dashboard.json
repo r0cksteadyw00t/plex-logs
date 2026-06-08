@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T13:00:02Z",
+  "updated_utc": "2026-06-08T13:05:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -158,9 +158,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-08T13:00:02Z",
-    "updated_utc": "2026-06-08T13:00:07Z",
-    "ended_utc": "2026-06-08T13:00:07Z",
+    "started_utc": "2026-06-08T13:05:02Z",
+    "updated_utc": "2026-06-08T13:05:08Z",
+    "ended_utc": "2026-06-08T13:05:08Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -202,14 +202,14 @@
       {
         "relative_path": "The Four Seasons/Season 01/The Four Seasons - S01E01.strm",
         "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T13:00:04Z",
+        "retry_after_utc": "2026-06-08T13:10:08Z",
         "url_host": "127.0.0.1:18788",
         "is_local_live_proxy": true
       },
       {
         "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
         "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T13:00:04Z",
+        "retry_after_utc": "2026-06-08T13:10:08Z",
         "url_host": "192.168.1.184:18788",
         "is_local_live_proxy": true
       },
@@ -543,7 +543,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-08T13:00:03Z",
+    "updated_utc": "2026-06-08T13:05:03Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -552,7 +552,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-08T13:00:02Z",
+    "updated_utc": "2026-06-08T13:05:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -615,9 +615,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-08T13:00:02Z",
-      "updated_utc": "2026-06-08T13:00:07Z",
-      "ended_utc": "2026-06-08T13:00:07Z",
+      "started_utc": "2026-06-08T13:05:02Z",
+      "updated_utc": "2026-06-08T13:05:08Z",
+      "ended_utc": "2026-06-08T13:05:08Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -659,14 +659,14 @@
         {
           "relative_path": "The Four Seasons/Season 01/The Four Seasons - S01E01.strm",
           "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T13:00:04Z",
+          "retry_after_utc": "2026-06-08T13:10:08Z",
           "url_host": "127.0.0.1:18788",
           "is_local_live_proxy": true
         },
         {
           "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
           "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T13:00:04Z",
+          "retry_after_utc": "2026-06-08T13:10:08Z",
           "url_host": "192.168.1.184:18788",
           "is_local_live_proxy": true
         },
@@ -796,9 +796,9 @@
     },
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
-      "status": "RUNNING",
-      "updated_utc": "2026-06-08T13:00:07Z",
-      "current_step": "materialized_plex_decision_qa_started",
+      "status": "WAITING_OVERLAP",
+      "updated_utc": "2026-06-08T13:05:09Z",
+      "current_step": "validation_overlap_running",
       "jason_action_required": false,
       "counts": {
         "movies": 2,
@@ -815,14 +815,24 @@
       "direct_strm_retry_held_count": 4,
       "materialized_primary": true,
       "materialized_visible_verified": 18,
-      "materialized_decision_qa_status": "PASS",
-      "materialized_decision_qa_target_count": 12,
-      "materialized_decision_qa_passed": 12,
+      "materialized_decision_qa_status": "REVIEW_PLEX_SCAN_PENDING",
+      "materialized_decision_qa_target_count": 10,
+      "materialized_decision_qa_passed": 8,
       "materialized_decision_qa_failed": 0,
       "decision_qa_status": "PASS",
       "concurrent_stream_qa_status": "REVIEW",
       "ignored_overlap": [],
-      "overlap_running": [],
+      "overlap_running": [
+        {
+          "name": "ScarFLIX_v2_MaterializedPlexDecisionQA",
+          "ok": true,
+          "status": "Running",
+          "scheduled_state": "Enabled",
+          "last_run": "8/06/2026 11:05:05 PM",
+          "last_result": "267009",
+          "next_run": "8/06/2026 11:59:00 PM"
+        }
+      ],
       "actions": [
         {
           "action": "trigger_plex_scans_materialized",
@@ -830,39 +840,21 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 42788
+              "pid": 9764
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 40704
+              "pid": 38068
             }
           ]
-        },
-        {
-          "action": "start_materialized_plex_decision_qa_task",
-          "result": {
-            "task": "ScarFLIX_v2_MaterializedPlexDecisionQA",
-            "enable_ok": true,
-            "run_ok": true,
-            "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" have been changed.",
-            "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\"."
-          }
-        },
-        {
-          "action": "start_materialized_plex_decision_qa_node_fallback",
-          "result": {
-            "ok": true,
-            "pid": 26876,
-            "script": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js"
-          }
         }
       ],
-      "next_action": "Detached materialized/WebDAV Plex decision QA is running or queued."
+      "next_action": "Wait for current ScarFLIX validation task to finish."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 30110,
-    "safe_pipeline_log_age_seconds": 86994,
+    "canary_status_age_seconds": 30411,
+    "safe_pipeline_log_age_seconds": 87295,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -879,7 +871,7 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=17592"
+        "detail": "pid=25436"
       },
       {
         "action": "run_playback_qa_controller",
@@ -889,7 +881,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=45692"
+        "detail": "pid=15376"
       }
     ],
     "blockers": []
@@ -944,9 +936,9 @@
   },
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
-    "status": "RUNNING",
-    "updated_utc": "2026-06-08T13:00:07Z",
-    "current_step": "materialized_plex_decision_qa_started",
+    "status": "WAITING_OVERLAP",
+    "updated_utc": "2026-06-08T13:05:09Z",
+    "current_step": "validation_overlap_running",
     "jason_action_required": false,
     "counts": {
       "movies": 2,
@@ -963,14 +955,24 @@
     "direct_strm_retry_held_count": 4,
     "materialized_primary": true,
     "materialized_visible_verified": 18,
-    "materialized_decision_qa_status": "PASS",
-    "materialized_decision_qa_target_count": 12,
-    "materialized_decision_qa_passed": 12,
+    "materialized_decision_qa_status": "REVIEW_PLEX_SCAN_PENDING",
+    "materialized_decision_qa_target_count": 10,
+    "materialized_decision_qa_passed": 8,
     "materialized_decision_qa_failed": 0,
     "decision_qa_status": "PASS",
     "concurrent_stream_qa_status": "REVIEW",
     "ignored_overlap": [],
-    "overlap_running": [],
+    "overlap_running": [
+      {
+        "name": "ScarFLIX_v2_MaterializedPlexDecisionQA",
+        "ok": true,
+        "status": "Running",
+        "scheduled_state": "Enabled",
+        "last_run": "8/06/2026 11:05:05 PM",
+        "last_result": "267009",
+        "next_run": "8/06/2026 11:59:00 PM"
+      }
+    ],
     "actions": [
       {
         "action": "trigger_plex_scans_materialized",
@@ -978,34 +980,16 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 42788
+            "pid": 9764
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 40704
+            "pid": 38068
           }
         ]
-      },
-      {
-        "action": "start_materialized_plex_decision_qa_task",
-        "result": {
-          "task": "ScarFLIX_v2_MaterializedPlexDecisionQA",
-          "enable_ok": true,
-          "run_ok": true,
-          "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" have been changed.",
-          "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\"."
-        }
-      },
-      {
-        "action": "start_materialized_plex_decision_qa_node_fallback",
-        "result": {
-          "ok": true,
-          "pid": 26876,
-          "script": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js"
-        }
       }
     ],
-    "next_action": "Detached materialized/WebDAV Plex decision QA is running or queued."
+    "next_action": "Wait for current ScarFLIX validation task to finish."
   }
 }
