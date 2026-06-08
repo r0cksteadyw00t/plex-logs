@@ -1,10 +1,10 @@
-# ScarFLIX v2 Materialized Canary Plex Decision QA
+# ScarFLIX v2 Materialized Plex Decision QA
 
-Updated UTC: 2026-06-08T14:05:15Z
-Status: REVIEW_PLEX_SCAN_PENDING
-Targets: 10
-Rows found: 7
-Checked: 7
-Passed: 7
+Status: PASS
+Updated UTC: 2026-06-08T14:10:18Z
+Targets: 11
+Rows found: 11
+Checked: 11
+Passed: 11
 Failed: 0
-Next action: Plex has not scanned/profiled all materialized canary paths yet. Retry after Plex scan.
+Next action: Materialized/WebDAV visible set passed Plex decision QA.
