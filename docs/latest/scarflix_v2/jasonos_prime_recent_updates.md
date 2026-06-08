@@ -1,12 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T04:15:02.847Z
+Updated UTC: 2026-06-08T04:17:01.415Z
 Source: live status merge
 
-- 2026-06-08T04:14:21.361Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T04:14:21Z] [INFO] Health status publishing
+- 2026-06-08T04:16:48.716Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T04:16:48Z] [INFO] Health status publishing
+- 2026-06-08T04:16:12.627Z - Phase 0 PM Baseline - 2026-06-08 14:15: Formal project-management files have been created at repo root: `PROJECT_PLAN.md` `TASKS.md` `OUTCOMES.md`
+- 2026-06-08T04:15:16.067Z - Autonomous Expansion Reached 113 Direct STRM Entries - 2026-06-08 13:56: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `74`, TV `39`, total `113`. Staged pending candidates on disk: `0`. Latest staged publisher status: `PASS_PUBLISHED`, candidate dirs found `10`, processed `8`, published `6`.
+- 2026-06-08T04:15:08Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T04:13:52.486Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T04:13:52Z] [PASS] WebDAV active gate finished status=PASS checked=9 passed=9 failed_detected=0 pruned=0
-- 2026-06-08T04:10:11.194Z - Autonomous Expansion Reached 113 Direct STRM Entries - 2026-06-08 13:56: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `74`, TV `39`, total `113`. Staged pending candidates on disk: `0`. Latest staged publisher status: `PASS_PUBLISHED`, candidate dirs found `10`, processed `8`, published `6`.
-- 2026-06-08T04:10:03Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T04:00:11.536Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T04:00:11Z] [REVIEW] Final: REVIEW
 - 2026-06-08T03:56:19.387Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:56:18Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1
 - 2026-06-08T03:55:54.539Z - Autonomous Expansion Reached 107 Direct STRM Entries - 2026-06-08 13:54: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `69`, TV `38`, total `107`. Staged pending candidates on disk: `0`. Latest staged publisher status: `WAITING_STAGED_CANDIDATES`, candidate dirs found `0`, processed `0`, published `0`.
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-08T02:55:11.498Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
 - 2026-06-08T01:18:52Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=44064; child_pid=
 - 2026-06-08T01:18:52Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
-- 2026-06-08T01:17:46Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=44064; child_pid=39572
