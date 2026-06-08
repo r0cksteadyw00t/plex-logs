@@ -1,22 +1,22 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
   "status": "RUNNING",
-  "updated_utc": "2026-06-08T01:20:02Z",
-  "current_step": "concurrent_stream_qa_started",
+  "updated_utc": "2026-06-08T01:25:04Z",
+  "current_step": "direct_strm_admission_required",
   "jason_action_required": false,
   "counts": {
-    "movies": 43,
+    "movies": 45,
     "tv": 27,
-    "total": 70
+    "total": 72
   },
   "canary_status": "RUNNING",
-  "canary_milestone": "CANARY_PIPELINE_STARTED",
-  "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_WAITING_PLATFORM_GATE",
-  "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-  "direct_strm_admission_checked_visible": 67,
-  "direct_strm_admission_passed_visible": 67,
+  "canary_milestone": "CANARY_PIPELINE_RUNNING",
+  "direct_strm_mirror_status": "PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT",
+  "direct_strm_admission_status": "RUNNING_ALREADY",
+  "direct_strm_admission_checked_visible": 0,
+  "direct_strm_admission_passed_visible": 0,
   "direct_strm_admission_quarantined_this_run": 0,
-  "direct_strm_retry_held_count": 7,
+  "direct_strm_retry_held_count": 0,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
@@ -28,25 +28,25 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 36732
+          "pid": 42860
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 40880
+          "pid": 16416
         }
       ]
     },
     {
-      "action": "start_concurrent_stream_qa",
+      "action": "start_direct_strm_admission_gate_task",
       "result": {
-        "task": "ScarFLIX_v2_ConcurrentStreamQA",
+        "task": "ScarFLIX_v2_DirectStrmAdmissionGate",
         "enable_ok": true,
         "run_ok": true,
-        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" have been changed.",
-        "run_text": "INFO: scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\" is currently running.\r\nSUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_ConcurrentStreamQA\"."
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_DirectStrmAdmissionGate\"."
       }
     }
   ],
-  "next_action": "Detached 5-concurrent stream QA is running or queued."
+  "next_action": "Direct STRM admission has not passed for visible playback sources."
 }
