@@ -1,30 +1,30 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-08T10:07:02Z
-Status: ALERT
-Alert level: HIGH
+Updated UTC: 2026-06-08T10:10:02Z
+Status: PASS
+Alert level: LOW
 Jason action required: false
-Codex action required: true
+Codex action required: false
 
 ## Signals
 - controller_status: REVIEW_TRANSIENT
 - controller_milestone: CANDIDATE_SOURCE_MODEL_PENDING
-- controller_age_minutes: 11
+- controller_age_minutes: 1
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 5
+- watchdog_age_minutes: 1
 - dashboard_status: PASS
-- dashboard_age_minutes: 2
+- dashboard_age_minutes: 0
 - mirror_status: PASS
-- mirror_age_minutes: 2
+- mirror_age_minutes: 1
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 528
-- durable_platform_gate_age_minutes: 528
+- checkpoint_age_minutes: 531
+- durable_platform_gate_age_minutes: 531
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=44852; run pid=40644
+- None.
 
 ## Notes
-- Same unresolved sentinel signature repeated for three cycles.
+- None.
