@@ -1,15 +1,34 @@
 {
   "component": "scarflix_v2_direct_strm_mirror",
-  "status": "PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT",
-  "updated_utc": "2026-06-08T04:30:07Z",
-  "platform_gate_status": "PASS",
-  "platform_snapshot_id": "20260608T011803Z",
-  "snapshot_rows": 0,
-  "map_entries": 1,
-  "eligible_entries": 0,
-  "admitted_entries": 0,
-  "admission_rejected_entries": 0,
-  "already_current": 0,
+  "status": "PAUSED_PLAYBACK_FIX",
+  "updated_utc": "2026-06-08T04:35:42Z",
+  "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
+  "pause": {
+    "component": "scarflix_v2_expansion_pause",
+    "status": "PAUSED_PLAYBACK_FIX",
+    "paused": true,
+    "updated_utc": "2026-06-08T04:34:10Z",
+    "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
+    "trigger_titles": [
+      "The Maze Runner (2014)",
+      "Saw (2004)"
+    ],
+    "allowed_while_paused": [
+      "direct_strm_admission_gate",
+      "playback_qa_controller",
+      "dashboard",
+      "public_mirror",
+      "watchdog_status_only"
+    ],
+    "blocked_while_paused": [
+      "canary_expansion",
+      "safe_webdav_expansion_pipeline",
+      "stage_only_seeder",
+      "staged_candidate_publisher",
+      "direct_strm_mirror"
+    ],
+    "jason_action_required": false
+  },
   "counts_before": {
     "movies": 73,
     "tv": 39
@@ -19,21 +38,9 @@
     "tv": 39
   },
   "delivered_total": 112,
-  "new_total_since_before": 0,
   "created": 0,
   "updated": 0,
   "written_count": 0,
-  "skipped_count": 1,
-  "written": [],
-  "skipped_top": [
-    {
-      "title": "The Bourne Identity (2002)",
-      "reason": "not_in_latest_platform_gate_snapshot"
-    }
-  ],
-  "plex_scan_triggered": {
-    "ok": true,
-    "reason": "direct STRM mirror already current; no scan needed"
-  },
+  "skipped_count": 0,
   "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260608.log"
 }
