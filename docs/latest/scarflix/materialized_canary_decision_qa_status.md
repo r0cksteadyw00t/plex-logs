@@ -1,10 +1,10 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: REVIEW
-Updated UTC: 2026-06-08T13:23:19Z
-Targets: 12
-Rows found: 12
-Checked: 12
+Status: PASS
+Updated UTC: 2026-06-08T13:32:18Z
+Targets: 11
+Rows found: 11
+Checked: 11
 Passed: 11
-Failed: 1
-Next action: Quarantine failed materialized source/release and keep title retryable.
+Failed: 0
+Next action: Materialized/WebDAV visible set passed Plex decision QA.
