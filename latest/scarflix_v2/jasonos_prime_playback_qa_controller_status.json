@@ -1,26 +1,52 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING",
-  "updated_utc": "2026-06-08T08:40:01Z",
-  "current_step": "waiting_for_delivery",
+  "status": "WAITING_OVERLAP",
+  "updated_utc": "2026-06-08T08:45:04Z",
+  "current_step": "validation_overlap_running",
   "jason_action_required": false,
   "counts": {
-    "movies": 0,
+    "movies": 2,
     "tv": 0,
-    "total": 0
+    "total": 2
   },
   "canary_status": "PAUSED_PLAYBACK_FIX",
   "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
   "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
   "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-  "direct_strm_admission_checked_visible": 0,
-  "direct_strm_admission_passed_visible": 0,
+  "direct_strm_admission_checked_visible": 2,
+  "direct_strm_admission_passed_visible": 2,
   "direct_strm_admission_quarantined_this_run": 0,
-  "direct_strm_retry_held_count": 8,
+  "direct_strm_retry_held_count": 6,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
-  "overlap_running": [],
-  "actions": [],
-  "next_action": "Wait for direct STRM delivery."
+  "overlap_running": [
+    {
+      "name": "ScarFLIX_v2_ConcurrentStreamQA",
+      "ok": true,
+      "status": "Running",
+      "scheduled_state": "Enabled",
+      "last_run": "8/06/2026 6:45:04 PM",
+      "last_result": "267009",
+      "next_run": "8/06/2026 9:00:00 PM"
+    }
+  ],
+  "actions": [
+    {
+      "action": "trigger_plex_scans",
+      "result": [
+        {
+          "ok": true,
+          "section": "5",
+          "pid": 39724
+        },
+        {
+          "ok": true,
+          "section": "6",
+          "pid": 25332
+        }
+      ]
+    }
+  ],
+  "next_action": "Wait for current ScarFLIX validation task to finish."
 }
