@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T08:06:01.514Z
+Updated UTC: 2026-06-08T08:08:02.147Z
 Source: live status merge
 
 - 2026-06-08T08:05:12.947Z - Materialized Playback Canary Started - 2026-06-08 17:45: Jason approved moving away from the current direct `.strm` plus local resolver URL model as the primary playback architecture. Decision and action: Primary playback architecture is now `materialized_webdav_symlink`. Local resolver `18788` remains fallback-only, not the default for new publication.
