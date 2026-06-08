@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T01:22:14.146Z",
+  "updated_utc": "2026-06-08T01:23:02.320Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -38,7 +38,7 @@
     "plex_playback_sample_decision_failed": 5,
     "plex_playback_verified_sample_count": 0,
     "plex_playback_verification_note": "direct STRM URL/range checks are not enough; Plex decision QA has not passed the direct playback sample",
-    "staged_candidate_pending_count": 47,
+    "staged_candidate_pending_count": 42,
     "staged_candidate_publisher_status": "PASS_PUBLISHED",
     "staged_candidate_publisher_processed": 8,
     "staged_candidate_publisher_published": 2,
@@ -77,9 +77,9 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 2,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 3,
+    "platform_child_progress_age_minutes": 3,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-08T01:25:09Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
@@ -89,7 +89,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260608.log",
     "last_progress_utc": "2026-06-08T01:20:16.625Z",
-    "age_minutes": 2,
+    "age_minutes": 3,
     "last_line": "[2026-06-08T01:20:16Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 20,
@@ -141,7 +141,7 @@
     "status": "PASS_PUBLISHED",
     "updated_utc": "2026-06-08T01:20:48Z",
     "candidate_dirs_found": 74,
-    "pending_count": 47,
+    "pending_count": 42,
     "processed": 8,
     "published": 2,
     "retry_held": 6,
@@ -231,7 +231,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-08T01:21:26.737Z",
+      "utc": "2026-06-08T01:22:34.613Z",
       "title": "5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20",
       "detail": "Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`"
     },
@@ -315,7 +315,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-08T01:20:16.625Z - 5-concurrent stream QA",
-      "current": "Actual Streaming library .strm output is movies=45, tv=27, total=72. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=47; staged publisher=PASS_PUBLISHED, processed=8, published=2. Direct admission=REVIEW_RETRY_HELD, checked=70, passed_visible=70, quarantined_this_run=0, retry_held=7. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=74, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=2 min; owner_pid=44064; child_pid=.",
+      "current": "Actual Streaming library .strm output is movies=45, tv=27, total=72. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=42; staged publisher=PASS_PUBLISHED, processed=8, published=2. Direct admission=REVIEW_RETRY_HELD, checked=70, passed_visible=70, quarantined_this_run=0, retry_held=7. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=74, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=3 min; owner_pid=44064; child_pid=.",
       "progress": 30,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
