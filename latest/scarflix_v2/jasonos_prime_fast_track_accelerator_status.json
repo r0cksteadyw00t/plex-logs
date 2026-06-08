@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-08T07:40:02Z",
+  "updated_utc": "2026-06-08T07:42:01Z",
   "duration_seconds": 1,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
@@ -14,13 +14,14 @@
     "component": "scarflix_v2_expansion_pause",
     "status": "PAUSED_PLAYBACK_FIX",
     "paused": true,
-    "updated_utc": "2026-06-08T04:34:10Z",
-    "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
+    "updated_utc": "2026-06-08T07:41:00Z",
+    "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
     "trigger_titles": [
       "The Maze Runner (2014)",
       "Saw (2004)"
     ],
     "allowed_while_paused": [
+      "materialized_playback_canary",
       "direct_strm_admission_gate",
       "playback_qa_controller",
       "dashboard",
@@ -32,7 +33,8 @@
       "safe_webdav_expansion_pipeline",
       "stage_only_seeder",
       "staged_candidate_publisher",
-      "direct_strm_mirror"
+      "direct_strm_mirror",
+      "direct_resolver_default_publish"
     ],
     "jason_action_required": false
   },
@@ -113,7 +115,7 @@
     {
       "action": "candidate_source_model_detached",
       "status": "PASS",
-      "pid": 38020,
+      "pid": 9364,
       "error": ""
     }
   ],
