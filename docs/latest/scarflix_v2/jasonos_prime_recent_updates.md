@@ -1,12 +1,12 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T03:10:06.247Z
+Updated UTC: 2026-06-08T03:12:01.344Z
 Source: live status merge
 
-- 2026-06-08T03:05:14.996Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
+- 2026-06-08T03:10:16.423Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
+- 2026-06-08T03:10:07.719Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:10:07Z] [INFO] Health status publishing
+- 2026-06-08T03:10:06Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
 - 2026-06-08T03:05:11.096Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T03:05:11Z] [REVIEW] Final: REVIEW
-- 2026-06-08T03:05:06Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
-- 2026-06-08T03:00:44.582Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:00:44Z] [INFO] Health status publishing
 - 2026-06-08T03:00:02.965Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:00:02Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1
 - 2026-06-08T02:57:02.057Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-08T02:57:02Z] [PASS] QA passed: part=112929 title=I Saw the Devil
 - 2026-06-08T02:55:11.498Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
