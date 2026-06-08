@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T00:13:01.881Z
+Updated UTC: 2026-06-08T00:15:03.621Z
 Source: live status merge
 
-- 2026-06-08T00:12:45Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=25676; child_pid=
-- 2026-06-08T00:12:45Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
-- 2026-06-08T00:12:40.239Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T00:12:40Z] [REVIEW] Final: REVIEW
+- 2026-06-08T00:14:40Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=11492; child_pid=
+- 2026-06-08T00:14:40Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
+- 2026-06-08T00:14:35.584Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T00:14:35Z] [REVIEW] Final: REVIEW
 - 2026-06-08T00:10:41.240Z - Direct STRM Playback QA Failing; Publisher Paused - 2026-06-08 10:10: Current audit result: Actual direct `.strm` files visible in Streaming libraries: movies `43`, TV `24`, total `67`. Staged candidate publisher now has `50` staged candidates held. Direct URL/range testing is not the blocker: 5 direct `.strm` sample URLs passed byte-range testing (`5/5` returned `206`).
 - 2026-06-08T00:10:09Z - Autonomous controller: unclassified_review_platform_gate_relaunch: PlatformGate REVIEW was unclassified; relaunched detached PlatformGate runner instead of blocking for Jason
 - 2026-06-08T00:09:31.080Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T00:09:31Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=20 Retries=0
