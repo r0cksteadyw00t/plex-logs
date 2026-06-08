@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-08T01:29:01.349Z
+Updated UTC: 2026-06-08T01:30:03.306Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PENDING
 Jason action required: false
@@ -10,8 +10,8 @@ Will progress without Codex: true
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-08T01:25:02Z - daily AI usability smoke test | Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true. | 57% | next: integrate 8805 tool traces into 8791 daily UI | Low |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-08T01:26:12.895Z - Health | Actual Streaming library .strm output is movies=46, tv=27, total=73. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=27; staged publisher=PASS_PUBLISHED, processed=8, published=1. Direct admission=REVIEW_RETRY_HELD, checked=72, passed_visible=72, quarantined_this_run=0, retry_held=7. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=74, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=3 min; owner_pid=44064; child_pid=. | 30% | after PlatformGate and candidate model PASS | Low |
-| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-08T01:28:01Z - CANDIDATE_SOURCE_MODEL_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=73. | 30% | runs every 5 minutes | Low |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-08T01:26:12.895Z - Health | Actual Streaming library .strm output is movies=46, tv=27, total=73. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=27; staged publisher=PASS_PUBLISHED, processed=8, published=1. Direct admission=REVIEW_RETRY_HELD, checked=72, passed_visible=72, quarantined_this_run=0, retry_held=7. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 1 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=74, new_visible_strm=0. PlatformGate=PASS/PASS; durable=PASS; child_stage=Health; child_age=4 min; owner_pid=44064; child_pid=. | 30% | after PlatformGate and candidate model PASS | Low |
+| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-08T01:30:02Z - CANDIDATE_SOURCE_MODEL_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=73. | 30% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-07T22:59:49Z - scheduled task wrappers refreshed | Status PASS; tasks_updated=25; blockers=0. | 100% | active now | Low |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=11. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
@@ -29,9 +29,9 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 4 min ago
-- Platform child progress: 3 min ago
-- Mirror updated: 1 min ago
+- Controller updated: 5 min ago
+- Platform child progress: 4 min ago
+- Mirror updated: under 1 min ago
 - Platform runner running: false
 - Platform child active: true
 
