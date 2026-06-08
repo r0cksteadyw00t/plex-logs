@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-08T03:20:02Z
+Updated UTC: 2026-06-08T03:22:01Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CANDIDATE_SOURCE_MODEL_RUNNING
@@ -9,9 +9,9 @@ Expansion eligible: false
 Expansion started this cycle: false
 
 ## Actual STRM Counts
-- movies: 60
+- movies: 61
 - tv: 38
-- total: 98
+- total: 99
 
 ## Inputs
 - platform_gate: PASS
@@ -25,8 +25,8 @@ Expansion started this cycle: false
 - active_gate_prunable_failures: 0
 - controller_transient_retry_count: 0
 - repeated_transient_review: false
-- candidate_source_model: PENDING
-- controller: RUNNING
+- candidate_source_model: REVIEW
+- controller: REVIEW_TRANSIENT
 - predictive_simulator: REVIEW
 - self_evolution: REVIEW
 - dashboard: PASS
