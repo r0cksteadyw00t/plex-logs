@@ -1,30 +1,30 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-08T12:07:01Z
-Status: REVIEW
-Alert level: MEDIUM
+Updated UTC: 2026-06-08T12:10:02Z
+Status: ALERT
+Alert level: HIGH
 Jason action required: false
-Codex action required: false
+Codex action required: true
 
 ## Signals
 - controller_status: REVIEW_TRANSIENT
 - controller_milestone: CANDIDATE_SOURCE_MODEL_PENDING
-- controller_age_minutes: 1
+- controller_age_minutes: 4
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 2
+- watchdog_age_minutes: 5
 - dashboard_status: 
 - dashboard_age_minutes: null
 - mirror_status: PASS
-- mirror_age_minutes: 2
+- mirror_age_minutes: 1
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 648
-- durable_platform_gate_age_minutes: 648
+- checkpoint_age_minutes: 651
+- durable_platform_gate_age_minutes: 651
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- JasonOS_Prime_OutcomeDashboard: dashboard_stale (PASS) enable pid=30676; run pid=8040
+- JasonOS_Prime_OutcomeDashboard: dashboard_stale (PASS) enable pid=32012; run pid=42796
 
 ## Notes
-- None.
+- Same unresolved sentinel signature repeated for three cycles.
