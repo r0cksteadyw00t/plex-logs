@@ -1,29 +1,182 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
-  "status": "WAITING_STAGED_CANDIDATES",
-  "started_utc": "2026-06-08T03:40:02Z",
-  "updated_utc": "2026-06-08T03:40:02Z",
-  "ended_utc": "2026-06-08T03:40:02Z",
+  "status": "PASS_PUBLISHED",
+  "started_utc": "2026-06-08T03:45:02Z",
+  "updated_utc": "2026-06-08T03:45:13Z",
+  "ended_utc": "2026-06-08T03:45:13Z",
   "jason_action_required": false,
   "max_items": 8,
   "counts_before": {
     "movies": 66,
     "tv": 38,
-    "staged": 0
+    "staged": 11
   },
   "counts_after": {
-    "movies": 66,
+    "movies": 69,
     "tv": 38,
     "staged": 0
   },
-  "candidate_dirs_found": 0,
-  "processed": 0,
-  "published": 0,
+  "candidate_dirs_found": 11,
+  "processed": 8,
+  "published": 3,
   "retry_held": 0,
-  "rejected": 0,
+  "rejected": 5,
   "skipped": 0,
-  "plex_scan_triggered": [],
-  "results": [],
+  "plex_scan_triggered": [
+    {
+      "ok": true,
+      "section": "5",
+      "pid": 41096
+    },
+    {
+      "ok": true,
+      "section": "6",
+      "pid": 37808
+    }
+  ],
+  "results": [
+    {
+      "hash": "3d701d911440",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Free Guy (2021).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/4136924601"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\3d701d911440"
+    },
+    {
+      "hash": "4b118e1fa866",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\The Human Centipede 2 (Full Sequence) (2011).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/1858246010"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\4b118e1fa866"
+    },
+    {
+      "hash": "6eb8a3b9ee55",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Fantastic Beasts and Where to Find Them (2016).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/2086640814"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\6eb8a3b9ee55"
+    },
+    {
+      "hash": "7d411ac1c5bb",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\7d411ac1c5bb_1"
+    },
+    {
+      "hash": "a6070585c7dd",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\a6070585c7dd_1"
+    },
+    {
+      "hash": "bfc5b4f29ec6",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\bfc5b4f29ec6_1"
+    },
+    {
+      "hash": "ecae9a4d3035",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\ecae9a4d3035_1"
+    },
+    {
+      "hash": "060efe072700",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
+        "head_status": null,
+        "range_status": null,
+        "content_type": "",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\060efe072700_1"
+    }
+  ],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
   "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
 }
