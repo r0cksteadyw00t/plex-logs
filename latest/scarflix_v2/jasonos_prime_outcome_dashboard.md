@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-08T01:45:03.764Z
+Updated UTC: 2026-06-08T01:47:01.493Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PENDING
 Jason action required: false
@@ -10,8 +10,8 @@ Will progress without Codex: true
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-08T01:45:03Z - daily AI usability smoke test | Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true. | 57% | next: integrate 8805 tool traces into 8791 daily UI | Low |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-08T01:40:13.907Z - 5-concurrent stream QA | Actual Streaming library .strm output is movies=52, tv=30, total=82. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=81, passed_visible=81, quarantined_this_run=0, retry_held=6. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 9 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=3, new_visible_strm=8. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=5 min; owner_pid=44064; child_pid=. | 25% | after PlatformGate and candidate model PASS | Low |
-| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-08T01:44:01Z - CANDIDATE_SOURCE_MODEL_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=82. | 30% | runs every 5 minutes | Low |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-08T01:45:10.798Z - 5-concurrent stream QA | Actual Streaming library .strm output is movies=52, tv=30, total=82. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=82, passed_visible=82, quarantined_this_run=0, retry_held=6. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 9 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_RUNNING, staged=3, new_visible_strm=8. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=2 min; owner_pid=44064; child_pid=. | 25% | after PlatformGate and candidate model PASS | Low |
+| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-08T01:46:00Z - CANDIDATE_SOURCE_MODEL_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=82. | 30% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-07T22:59:49Z - scheduled task wrappers refreshed | Status PASS; tasks_updated=25; blockers=0. | 100% | active now | Low |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=11. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
@@ -20,17 +20,17 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but user outcomes are not delivered yet: actual .strm total=82; Plex-safe catalogue expansion remains blocked by PlatformGate/retry model; 8805 chat requires patched-service verification. | 18% | next 4 hours: finish gate if provider/local QA completes, then candidate-source, then controlled expansion | Low |
 
 Recent Achievements:
-- 2026-06-08T01:40:14.298Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
-- 2026-06-08T01:40:13.907Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T01:40:13Z] [REVIEW] Final: REVIEW
-- 2026-06-08T01:40:05Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T01:45:14.412Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
+- 2026-06-08T01:45:10.798Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T01:45:10Z] [REVIEW] Final: REVIEW
+- 2026-06-08T01:45:05Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T01:39:49.104Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T01:39:49Z] [INFO] Health status publishing
 - 2026-06-08T01:35:52.440Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-08T01:35:52Z] [OK] Backed up Plex DB: D:\PlexTools\backups\scarflix_v2\plex_db\plex_before_visible_catalog_qa_20260608_113551.db
 - 2026-06-08T01:26:00.270Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T01:26:00Z] [INFO] Running concurrent WebDAV active gate worker for 1 entries.
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 5 min ago
-- Platform child progress: 5 min ago
+- Controller updated: 2 min ago
+- Platform child progress: 2 min ago
 - Mirror updated: 1 min ago
 - Platform runner running: false
 - Platform child active: true
@@ -42,8 +42,8 @@ PlatformGate Health Contract:
 
 Direct STRM Admission:
 - Status: REVIEW_RETRY_HELD
-- Checked visible: 81
-- Passed visible: 81
+- Checked visible: 82
+- Passed visible: 82
 - Failed visible: 0
 - Quarantined this run: 0
 - Retry-held sources: 6
