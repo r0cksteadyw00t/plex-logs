@@ -1,9 +1,9 @@
 {
   "component": "scarflix_v2_expansion_pause",
-  "status": "PAUSED_PLAYBACK_FIX",
+  "status": "LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED",
   "paused": true,
-  "updated_utc": "2026-06-08T07:57:48Z",
-  "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
+  "updated_utc": "2026-06-08T10:05:50.213Z",
+  "reason": "Direct resolver playback failed in Plex; only materialized/WebDAV-backed candidates that pass HLS and Plex decision QA may remain visible.",
   "trigger_titles": [
     "The Maze Runner (2014)",
     "Saw (2004)",
@@ -27,5 +27,14 @@
   ],
   "jason_action_required": false,
   "latest_user_playback_failure": "The Green Mile (1999)",
-  "latest_user_playback_failure_note": "Jason reported same Plex HTTP playback failure; file is legacy resolver STRM pointing at 18788/live."
+  "latest_user_playback_failure_note": "Jason reported same Plex HTTP playback failure; file is legacy resolver STRM pointing at 18788/live.",
+  "broad_legacy_resolver_expansion_paused": true,
+  "controlled_materialized_webdav_expansion_allowed": true,
+  "latest_materialized_batch": {
+    "published": 10,
+    "decision_pass": 10,
+    "decision_fail": 0,
+    "visible_verified": 10,
+    "unverified_removed": 35
+  }
 }
