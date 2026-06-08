@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-08T02:10:01Z
+Updated UTC: 2026-06-08T02:12:01Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CANDIDATE_SOURCE_MODEL_RUNNING
@@ -25,8 +25,8 @@ Expansion started this cycle: false
 - active_gate_prunable_failures: 0
 - controller_transient_retry_count: 0
 - repeated_transient_review: false
-- candidate_source_model: REVIEW
-- controller: REVIEW_TRANSIENT
+- candidate_source_model: PENDING
+- controller: RUNNING
 - predictive_simulator: REVIEW
 - self_evolution: REVIEW
 - dashboard: PASS
