@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T08:17:39.461Z
+Updated UTC: 2026-06-08T08:19:02.414Z
 Source: live status merge
 
 - 2026-06-08T08:16:05.124Z - Green Mile Playback Failure Confirmed Legacy Resolver Issue - 2026-06-08 18:15: Jason reported `The Green Mile` failed in Plex with the same HTTP request/playback error class as Maze Runner and Saw. Forensic result: `The Green Mile (1999).strm` was a legacy local resolver entry pointing at `18788/live`. This confirms the failure is systemic to the old direct `.strm` plus local resolver model, n...
