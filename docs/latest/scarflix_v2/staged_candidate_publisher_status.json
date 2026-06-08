@@ -1,42 +1,60 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
   "status": "PASS_PUBLISHED",
-  "started_utc": "2026-06-08T01:25:01Z",
-  "updated_utc": "2026-06-08T01:25:58Z",
-  "ended_utc": "2026-06-08T01:25:58Z",
+  "started_utc": "2026-06-08T01:30:01Z",
+  "updated_utc": "2026-06-08T01:31:08Z",
+  "ended_utc": "2026-06-08T01:31:08Z",
   "jason_action_required": false,
   "max_items": 8,
   "counts_before": {
-    "movies": 45,
-    "tv": 27,
-    "staged": 35
-  },
-  "counts_after": {
     "movies": 46,
     "tv": 27,
     "staged": 27
   },
-  "candidate_dirs_found": 35,
+  "counts_after": {
+    "movies": 49,
+    "tv": 28,
+    "staged": 43
+  },
+  "candidate_dirs_found": 27,
   "processed": 8,
-  "published": 1,
-  "retry_held": 7,
+  "published": 3,
+  "retry_held": 5,
   "rejected": 0,
   "skipped": 0,
   "plex_scan_triggered": [
     {
       "ok": true,
       "section": "5",
-      "pid": 33432
+      "pid": 13008
     },
     {
       "ok": true,
       "section": "6",
-      "pid": 6884
+      "pid": 30004
     }
   ],
   "results": [
     {
-      "hash": "aed834fa3c0c",
+      "hash": "e2e1317dfc3d",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\e2e1317dfc3d"
+    },
+    {
+      "hash": "c54774ff2066",
       "status": "RETRY_HELD",
       "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
       "retryable": true,
@@ -51,12 +69,12 @@
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\aed834fa3c0c"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\c54774ff2066"
     },
     {
-      "hash": "b0951197bd03",
+      "hash": "c6b1a976978b",
       "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Ice Age The Meltdown (2006).strm",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Rush Hour (1998).strm",
       "probe": {
         "ok": true,
         "retryable": false,
@@ -66,12 +84,65 @@
         "range_status": 206,
         "content_type": "application/octet-stream",
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/576180396"
+        "content_range": "bytes 0-1/734413400"
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\b0951197bd03"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\c6b1a976978b"
     },
     {
-      "hash": "b50bd62a4719",
+      "hash": "de116ecc3434",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\de116ecc3434"
+    },
+    {
+      "hash": "f2165fa35f1e",
+      "status": "RETRY_HELD",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "retryable": true,
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\f2165fa35f1e"
+    },
+    {
+      "hash": "abdef59933e3",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Life Is Beautiful (1997).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/5704813462"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\abdef59933e3"
+    },
+    {
+      "hash": "ad5e7af46d7a",
       "status": "RETRY_HELD",
       "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
       "retryable": true,
@@ -86,97 +157,24 @@
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\b50bd62a4719"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\ad5e7af46d7a"
     },
     {
-      "hash": "bb3cbea806e4",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-      "retryable": true,
+      "hash": "dc6af5ea2eee",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\Heroes (2006)\\Season 01\\Heroes (2006) - S01E01.strm",
       "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "reason": "HEAD timed out",
-        "head_status": null,
-        "range_status": null,
-        "content_type": "",
-        "accept_ranges": "",
-        "content_range": ""
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/1915499969"
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\bb3cbea806e4"
-    },
-    {
-      "hash": "d85797fd18c3",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\d85797fd18c3"
-    },
-    {
-      "hash": "e1c66d76582d",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\e1c66d76582d"
-    },
-    {
-      "hash": "f128b8978e08",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\f128b8978e08"
-    },
-    {
-      "hash": "f69b48d8e316",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\f69b48d8e316"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\dc6af5ea2eee"
     }
   ],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
