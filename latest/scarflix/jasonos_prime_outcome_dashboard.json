@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T02:32:01.190Z",
+  "updated_utc": "2026-06-08T02:34:01.719Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -38,7 +38,7 @@
     "plex_playback_sample_decision_failed": 5,
     "plex_playback_verified_sample_count": 0,
     "plex_playback_verification_note": "direct STRM URL/range checks are not enough; Plex decision QA has not passed the direct playback sample",
-    "staged_candidate_pending_count": 19,
+    "staged_candidate_pending_count": 7,
     "staged_candidate_publisher_status": "WAITING_STAGED_CANDIDATES",
     "staged_candidate_publisher_processed": 0,
     "staged_candidate_publisher_published": 0,
@@ -77,23 +77,23 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 2,
-    "mirror_updated_age_minutes": 0,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 0,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-08T02:35:06Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "5-concurrent stream QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260608.log",
-    "last_progress_utc": "2026-06-08T02:30:11.644Z",
-    "age_minutes": 2,
-    "last_line": "[2026-06-08T02:30:11Z] [REVIEW] Final: REVIEW",
-    "pass_lines": 0,
-    "review_lines": 21,
-    "info_lines": 59
+    "stage": "WebDAV active gate",
+    "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260608.log",
+    "last_progress_utc": "2026-06-08T02:33:59.033Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-08T02:33:59Z] [INFO] Running concurrent WebDAV active gate worker for 7 entries.",
+    "pass_lines": 19,
+    "review_lines": 1,
+    "info_lines": 60
   },
   "watchdog_status": {
     "status": "PASS",
@@ -104,7 +104,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-08T02:30:03Z",
+    "updated_utc": "2026-06-08T02:32:00Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -141,7 +141,7 @@
     "status": "WAITING_STAGED_CANDIDATES",
     "updated_utc": "2026-06-08T02:30:02Z",
     "candidate_dirs_found": 0,
-    "pending_count": 19,
+    "pending_count": 7,
     "processed": 0,
     "published": 0,
     "retry_held": 0,
@@ -156,7 +156,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T02:31:01Z",
+    "updated_utc": "2026-06-08T02:33:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -231,6 +231,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-08T02:33:59.033Z",
+      "title": "PlatformGate child QA active: WebDAV active gate",
+      "detail": "Latest child QA line: [2026-06-08T02:33:59Z] [INFO] Running concurrent WebDAV active gate worker for 7 entries."
+    },
+    {
       "utc": "2026-06-08T02:30:12.161Z",
       "title": "5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20",
       "detail": "Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`"
@@ -254,11 +259,6 @@
       "utc": "2026-06-08T02:25:08Z",
       "title": "Autonomous controller: candidate_source_model_pending_platform_gate",
       "detail": "Candidate-source model is pending PlatformGate PASS"
-    },
-    {
-      "utc": "2026-06-08T02:23:55.849Z",
-      "title": "PlatformGate child QA active: WebDAV active gate",
-      "detail": "Latest child QA line: [2026-06-08T02:23:55Z] [INFO] Running concurrent WebDAV active gate worker for 11 entries."
     },
     {
       "utc": "2026-06-08T02:08:01.548Z",
@@ -314,8 +314,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-08T02:30:11.644Z - 5-concurrent stream QA",
-      "current": "Actual Streaming library .strm output is movies=60, tv=35, total=95. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=19; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=95, passed_visible=95, quarantined_this_run=0, retry_held=6. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 12 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=5. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=2 min; owner_pid=44064; child_pid=.",
+      "last_change": "2026-06-08T02:33:59.033Z - WebDAV active gate",
+      "current": "Actual Streaming library .strm output is movies=60, tv=35, total=95. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=7; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=95, passed_visible=95, quarantined_this_run=0, retry_held=6. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 12 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=5. PlatformGate=PASS/PASS; durable=PASS; child_stage=WebDAV active gate; child_age=under 1 min; owner_pid=44064; child_pid=.",
       "progress": 30,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Low"
@@ -323,7 +323,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T02:31:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T02:33:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=95.",
       "progress": 30,
       "eta": "runs every 5 minutes",
