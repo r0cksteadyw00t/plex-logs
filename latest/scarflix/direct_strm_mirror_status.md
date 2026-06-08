@@ -1,6 +1,6 @@
 # ScarFLIX v2 Direct STRM Mirror
 
 - Status: **PAUSED_PLAYBACK_FIX**
-- Updated UTC: 2026-06-08T04:35:42Z
-- Reason: Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.
-- Counts: movies=73, tv=39, total=112
+- Updated UTC: 2026-06-08T07:41:22Z
+- Reason: Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.
+- Counts: movies=74, tv=39, total=113
