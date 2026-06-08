@@ -3,7 +3,7 @@
 Status: FAIL_ENGINEERING
 Milestone state: BLOCKED_DECISION
 Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-08T15:25:19Z
+Updated UTC: 2026-06-08T15:28:37Z
 Current step: controller_exception
 Jason action required: False
 
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: Candidate-source model requires engineering review before catalogue expansion
-- next_check_utc: 2026-06-08T15:35:55Z
+- next_check_utc: 2026-06-08T15:36:19Z
 
 ## Blockers
 - Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
