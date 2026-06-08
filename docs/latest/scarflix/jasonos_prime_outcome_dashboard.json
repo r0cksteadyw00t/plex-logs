@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T11:35:02Z",
+  "updated_utc": "2026-06-08T11:40:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -150,18 +150,6 @@
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
-    "component": "scarflix_v2_direct_strm_admission_gate",
-    "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-08T11:30:02Z",
-    "updated_utc": "2026-06-08T11:30:13Z",
-    "ended_utc": "2026-06-08T11:30:13Z",
-    "dry_run": false,
-    "jason_action_required": false,
-    "title_not_rejected": true,
-    "source_only_quarantine": true,
-    "probe_timeout_ms": 12000,
-    "range_timeout_ms": 16000,
-    "concurrency": 3,
     "counts_before": {
       "movies": 1,
       "tv": 0,
@@ -172,77 +160,26 @@
       "tv": 0,
       "total": 1
     },
-    "checked_visible": 1,
-    "passed_visible": 1,
-    "failed_visible": 0,
+    "checked_visible": 0,
+    "passed_visible": 0,
     "quarantined_this_run": 0,
     "restored_this_run": 0,
-    "retry_held_count": 5,
-    "permanent_quarantine_count": 1,
-    "raw_live_proxy_visible_count": 1,
-    "direct_https_visible_count": 0,
-    "top_reason_codes": [
-      {
-        "code": "PROVIDER_503_RETRYABLE",
-        "count": 5
-      },
-      {
-        "code": "SOURCE_EXPIRED_OR_GONE",
-        "count": 1
-      }
-    ],
+    "retry_held_count": 0,
+    "permanent_quarantine_count": 0,
+    "raw_live_proxy_visible_count": 0,
+    "top_reason_codes": [],
+    "retry_queue_items": [],
     "recent_quarantined": [],
-    "retry_queue_items": [
-      {
-        "relative_path": "The Four Seasons/Season 01/The Four Seasons - S01E01.strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T11:40:04Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T11:40:05Z",
-        "url_host": "192.168.1.184:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "12 Angry Men (1957).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T11:40:06Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Notebook (2004).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T11:40:07Z",
-        "url_host": "127.0.0.1:18788",
-        "is_local_live_proxy": true
-      },
-      {
-        "relative_path": "The Garfield Movie (2024).strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-08T11:40:08Z",
-        "url_host": "192.168.1.184:18788",
-        "is_local_live_proxy": true
-      }
-    ],
-    "sample_passed": [
-      {
-        "relative_path": "The Maze Runner (2014).strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
-      }
-    ],
-    "plex_scan_triggered": {
-      "ok": true,
-      "reason": "no visible changes"
+    "component": "scarflix_v2_direct_strm_admission_gate",
+    "status": "RUNNING_ALREADY",
+    "updated_utc": "2026-06-08T11:35:09Z",
+    "existing_lock": {
+      "component": "scarflix_v2_direct_strm_admission_gate",
+      "pid": 35308,
+      "started_utc": "2026-06-08T11:35:02Z",
+      "updated_utc": "2026-06-08T11:35:04Z"
     },
-    "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260608.log",
-    "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
-    "retry_queue_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_retry_queue.json"
+    "jason_action_required": false
   },
   "staged_candidate_publisher": {
     "component": "scarflix_v2_staged_candidate_publisher",
@@ -539,7 +476,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-08T11:35:02Z",
+    "updated_utc": "2026-06-08T11:40:03Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -548,7 +485,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-08T11:35:02Z",
+    "updated_utc": "2026-06-08T11:40:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -609,18 +546,6 @@
       "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260608.log"
     },
     "direct_strm_admission_gate_status": {
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-08T11:30:02Z",
-      "updated_utc": "2026-06-08T11:30:13Z",
-      "ended_utc": "2026-06-08T11:30:13Z",
-      "dry_run": false,
-      "jason_action_required": false,
-      "title_not_rejected": true,
-      "source_only_quarantine": true,
-      "probe_timeout_ms": 12000,
-      "range_timeout_ms": 16000,
-      "concurrency": 3,
       "counts_before": {
         "movies": 1,
         "tv": 0,
@@ -631,77 +556,26 @@
         "tv": 0,
         "total": 1
       },
-      "checked_visible": 1,
-      "passed_visible": 1,
-      "failed_visible": 0,
+      "checked_visible": 0,
+      "passed_visible": 0,
       "quarantined_this_run": 0,
       "restored_this_run": 0,
-      "retry_held_count": 5,
-      "permanent_quarantine_count": 1,
-      "raw_live_proxy_visible_count": 1,
-      "direct_https_visible_count": 0,
-      "top_reason_codes": [
-        {
-          "code": "PROVIDER_503_RETRYABLE",
-          "count": 5
-        },
-        {
-          "code": "SOURCE_EXPIRED_OR_GONE",
-          "count": 1
-        }
-      ],
+      "retry_held_count": 0,
+      "permanent_quarantine_count": 0,
+      "raw_live_proxy_visible_count": 0,
+      "top_reason_codes": [],
+      "retry_queue_items": [],
       "recent_quarantined": [],
-      "retry_queue_items": [
-        {
-          "relative_path": "The Four Seasons/Season 01/The Four Seasons - S01E01.strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T11:40:04Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T11:40:05Z",
-          "url_host": "192.168.1.184:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "12 Angry Men (1957).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T11:40:06Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Notebook (2004).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T11:40:07Z",
-          "url_host": "127.0.0.1:18788",
-          "is_local_live_proxy": true
-        },
-        {
-          "relative_path": "The Garfield Movie (2024).strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-08T11:40:08Z",
-          "url_host": "192.168.1.184:18788",
-          "is_local_live_proxy": true
-        }
-      ],
-      "sample_passed": [
-        {
-          "relative_path": "The Maze Runner (2014).strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
-        }
-      ],
-      "plex_scan_triggered": {
-        "ok": true,
-        "reason": "no visible changes"
+      "component": "scarflix_v2_direct_strm_admission_gate",
+      "status": "RUNNING_ALREADY",
+      "updated_utc": "2026-06-08T11:35:09Z",
+      "existing_lock": {
+        "component": "scarflix_v2_direct_strm_admission_gate",
+        "pid": 35308,
+        "started_utc": "2026-06-08T11:35:02Z",
+        "updated_utc": "2026-06-08T11:35:04Z"
       },
-      "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260608.log",
-      "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
-      "retry_queue_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_retry_queue.json"
+      "jason_action_required": false
     },
     "staged_candidate_count": 2,
     "staged_candidate_publisher_status": {
@@ -795,7 +669,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "WAITING",
-      "updated_utc": "2026-06-08T11:35:02Z",
+      "updated_utc": "2026-06-08T11:40:03Z",
       "current_step": "waiting_for_delivery",
       "jason_action_required": false,
       "counts": {
@@ -806,11 +680,11 @@
       "canary_status": "PAUSED_PLAYBACK_FIX",
       "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
       "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-      "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-      "direct_strm_admission_checked_visible": 1,
-      "direct_strm_admission_passed_visible": 1,
+      "direct_strm_admission_status": "RUNNING_ALREADY",
+      "direct_strm_admission_checked_visible": 0,
+      "direct_strm_admission_passed_visible": 0,
       "direct_strm_admission_quarantined_this_run": 0,
-      "direct_strm_retry_held_count": 5,
+      "direct_strm_retry_held_count": 0,
       "decision_qa_status": "PASS",
       "concurrent_stream_qa_status": "REVIEW",
       "ignored_overlap": [],
@@ -819,8 +693,8 @@
       "next_action": "Wait for direct STRM delivery."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 25011,
-    "safe_pipeline_log_age_seconds": 81895,
+    "canary_status_age_seconds": 25310,
+    "safe_pipeline_log_age_seconds": 82193,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -837,12 +711,12 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=18652"
+        "detail": "pid=30940"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=21864"
+        "detail": "pid=29228"
       }
     ],
     "blockers": []
@@ -898,7 +772,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "WAITING",
-    "updated_utc": "2026-06-08T11:35:02Z",
+    "updated_utc": "2026-06-08T11:40:03Z",
     "current_step": "waiting_for_delivery",
     "jason_action_required": false,
     "counts": {
@@ -909,11 +783,11 @@
     "canary_status": "PAUSED_PLAYBACK_FIX",
     "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
     "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-    "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-    "direct_strm_admission_checked_visible": 1,
-    "direct_strm_admission_passed_visible": 1,
+    "direct_strm_admission_status": "RUNNING_ALREADY",
+    "direct_strm_admission_checked_visible": 0,
+    "direct_strm_admission_passed_visible": 0,
     "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_retry_held_count": 5,
+    "direct_strm_retry_held_count": 0,
     "decision_qa_status": "PASS",
     "concurrent_stream_qa_status": "REVIEW",
     "ignored_overlap": [],
