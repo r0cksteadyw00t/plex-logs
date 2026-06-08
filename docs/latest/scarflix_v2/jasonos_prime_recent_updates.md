@@ -1,19 +1,19 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T03:54:01.942Z
+Updated UTC: 2026-06-08T04:01:02.156Z
 Source: live status merge
 
-- 2026-06-08T03:50:13.078Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T03:50:13Z] [REVIEW] Final: REVIEW
+- 2026-06-08T04:00:11.536Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T04:00:11Z] [REVIEW] Final: REVIEW
+- 2026-06-08T04:00:10.527Z - Autonomous Expansion Reached 113 Direct STRM Entries - 2026-06-08 13:56: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `74`, TV `39`, total `113`. Staged pending candidates on disk: `0`. Latest staged publisher status: `PASS_PUBLISHED`, candidate dirs found `10`, processed `8`, published `6`.
+- 2026-06-08T04:00:04Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T03:57:38.012Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:57:37Z] [INFO] Health status publishing
+- 2026-06-08T03:56:19.387Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:56:18Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1
+- 2026-06-08T03:55:54.539Z - Autonomous Expansion Reached 107 Direct STRM Entries - 2026-06-08 13:54: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `69`, TV `38`, total `107`. Staged pending candidates on disk: `0`. Latest staged publisher status: `WAITING_STAGED_CANDIDATES`, candidate dirs found `0`, processed `0`, published `0`.
 - 2026-06-08T03:50:11.815Z - Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`.
-- 2026-06-08T03:50:04Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
-- 2026-06-08T03:47:19.299Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T03:47:19Z] [INFO] Health status publishing
 - 2026-06-08T03:43:54.784Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T03:43:54Z] [INFO] Running concurrent WebDAV active gate worker for 11 entries.
-- 2026-06-08T03:24:02.142Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:24:02Z] [PASS] Decision passed: metadata=41685 title=I Saw the Devil
 - 2026-06-08T03:15:04Z - Autonomous controller: candidate_source_model_pending_platform_gate: Candidate-source model is pending PlatformGate PASS
 - 2026-06-08T02:57:02.057Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-08T02:57:02Z] [PASS] QA passed: part=112929 title=I Saw the Devil
 - 2026-06-08T02:55:11.498Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
 - 2026-06-08T01:18:52Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=44064; child_pid=
 - 2026-06-08T01:18:52Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
 - 2026-06-08T01:17:46Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=44064; child_pid=39572
-- 2026-06-08T01:17:46Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=1; blockers=0
-- 2026-06-08T01:15:19.893Z - Direct STRM Playback QA Failing; Publisher Paused - 2026-06-08 10:10: Current audit result: Actual direct `.strm` files visible in Streaming libraries: movies `43`, TV `24`, total `67`. Staged candidate publisher now has `50` staged candidates held. Direct URL/range testing is not the blocker: 5 direct `.strm` sample URLs passed byte-range testing (`5/5` returned `206`).
