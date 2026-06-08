@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T08:17:03.509Z",
+  "updated_utc": "2026-06-08T08:18:03.097Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -98,9 +98,9 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 16,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 3,
+    "platform_child_progress_age_minutes": 17,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-08T08:20:11Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
@@ -110,7 +110,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260608.log",
     "last_progress_utc": "2026-06-08T08:01:17.682Z",
-    "age_minutes": 16,
+    "age_minutes": 17,
     "last_line": "[2026-06-08T08:01:17Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity",
     "pass_lines": 40,
     "review_lines": 0,
@@ -125,7 +125,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-08T08:15:01Z",
+    "updated_utc": "2026-06-08T08:17:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -177,7 +177,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T08:16:01Z",
+    "updated_utc": "2026-06-08T08:17:03Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -336,7 +336,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-08T08:01:17.682Z - Plex client decision QA",
-      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=2 (publisher=2, scan=2); materialized canary published=2/2, HLS=2/2, decision=1/2, success_rate=50%. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=9. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=16 min; owner_pid=44064; child_pid=.",
+      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=2 (publisher=2, scan=2); materialized canary published=2/2, HLS=2/2, decision=1/2, success_rate=50%. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=0; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=9. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=17 min; owner_pid=44064; child_pid=.",
       "progress": 15,
       "eta": "after two-title materialized/WebDAV canary passes Plex decision QA",
       "stall_risk": "Medium"
@@ -344,7 +344,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T08:16:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T08:17:03Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=0.",
       "progress": 30,
       "eta": "runs every 5 minutes",
