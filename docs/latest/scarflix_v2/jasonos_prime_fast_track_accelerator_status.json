@@ -1,16 +1,41 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-08T04:34:02Z",
-  "duration_seconds": 1,
+  "updated_utc": "2026-06-08T04:35:02Z",
+  "duration_seconds": 2,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
   "next_autonomous_action": "PlatformGate is PASS; run candidate-source retry/quarantine verification detached.",
   "no_secret_access": true,
   "expansion_eligible": false,
   "expansion_started_this_cycle": false,
-  "expansion_paused": false,
-  "expansion_pause": null,
+  "expansion_paused": true,
+  "expansion_pause": {
+    "component": "scarflix_v2_expansion_pause",
+    "status": "PAUSED_PLAYBACK_FIX",
+    "paused": true,
+    "updated_utc": "2026-06-08T04:34:10Z",
+    "reason": "Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.",
+    "trigger_titles": [
+      "The Maze Runner (2014)",
+      "Saw (2004)"
+    ],
+    "allowed_while_paused": [
+      "direct_strm_admission_gate",
+      "playback_qa_controller",
+      "dashboard",
+      "public_mirror",
+      "watchdog_status_only"
+    ],
+    "blocked_while_paused": [
+      "canary_expansion",
+      "safe_webdav_expansion_pipeline",
+      "stage_only_seeder",
+      "staged_candidate_publisher",
+      "direct_strm_mirror"
+    ],
+    "jason_action_required": false
+  },
   "actual_strm_counts": {
     "movies": 73,
     "tv": 39,
@@ -88,7 +113,7 @@
     {
       "action": "candidate_source_model_detached",
       "status": "PASS",
-      "pid": 37904,
+      "pid": 7012,
       "error": ""
     }
   ],
