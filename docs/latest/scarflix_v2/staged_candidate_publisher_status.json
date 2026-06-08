@@ -1,42 +1,110 @@
 {
   "component": "scarflix_v2_staged_candidate_publisher",
   "status": "PASS_PUBLISHED",
-  "started_utc": "2026-06-08T01:30:01Z",
-  "updated_utc": "2026-06-08T01:31:08Z",
-  "ended_utc": "2026-06-08T01:31:08Z",
+  "started_utc": "2026-06-08T01:35:01Z",
+  "updated_utc": "2026-06-08T01:35:38Z",
+  "ended_utc": "2026-06-08T01:35:38Z",
   "jason_action_required": false,
   "max_items": 8,
   "counts_before": {
-    "movies": 46,
-    "tv": 27,
-    "staged": 27
-  },
-  "counts_after": {
     "movies": 49,
     "tv": 28,
-    "staged": 43
+    "staged": 20
   },
-  "candidate_dirs_found": 27,
+  "counts_after": {
+    "movies": 52,
+    "tv": 29,
+    "staged": 11
+  },
+  "candidate_dirs_found": 20,
   "processed": 8,
-  "published": 3,
-  "retry_held": 5,
-  "rejected": 0,
+  "published": 5,
+  "retry_held": 2,
+  "rejected": 1,
   "skipped": 0,
   "plex_scan_triggered": [
     {
       "ok": true,
       "section": "5",
-      "pid": 13008
+      "pid": 8200
     },
     {
       "ok": true,
       "section": "6",
-      "pid": 30004
+      "pid": 31632
     }
   ],
   "results": [
     {
-      "hash": "e2e1317dfc3d",
+      "hash": "f41057aa5733",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\The Twilight Saga Breaking Dawn - Part 2 (2012).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/944145911"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\f41057aa5733"
+    },
+    {
+      "hash": "f4d94c5dd6fe",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\The Super Mario Galaxy Movie (2026).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/4613200839"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\f4d94c5dd6fe"
+    },
+    {
+      "hash": "bcedca4b7a23",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\The Invisible Guest (2017).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/1189986225"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\bcedca4b7a23"
+    },
+    {
+      "hash": "f53321fd7942",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\The Matrix Reloaded (2003).strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/788020200"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\f53321fd7942"
+    },
+    {
+      "hash": "f922dc7eb86f",
       "status": "RETRY_HELD",
       "reason_code": "PROVIDER_503_RETRYABLE",
       "retryable": true,
@@ -51,130 +119,60 @@
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\e2e1317dfc3d"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\f922dc7eb86f"
     },
     {
-      "hash": "c54774ff2066",
+      "hash": "f93306b4e2f5",
       "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+      "reason_code": "PROVIDER_503_RETRYABLE",
       "retryable": true,
       "probe": {
         "ok": false,
         "retryable": true,
-        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "reason": "HEAD timed out",
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "HEAD returned HTTP 503",
+        "head_status": 503,
+        "range_status": null,
+        "content_type": "text/plain",
+        "accept_ranges": "",
+        "content_range": ""
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\f93306b4e2f5"
+    },
+    {
+      "hash": "9c0faf8cc0b3",
+      "status": "PUBLISHED",
+      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\That Time I Got Reincarnated as a Slime (2018)\\Season 01\\That Time I Got Reincarnated as a Slime (2018) - S01E01.strm",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
+        "reason": "HEAD and range probe passed",
+        "head_status": 200,
+        "range_status": 206,
+        "content_type": "application/octet-stream",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/694371752"
+      },
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\9c0faf8cc0b3"
+    },
+    {
+      "hash": "f277060ce1f4",
+      "status": "REJECTED",
+      "reason_code": "INVALID_URL",
+      "retryable": false,
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "INVALID_URL",
+        "reason": "STRM content is not HTTP/HTTPS",
         "head_status": null,
         "range_status": null,
         "content_type": "",
         "accept_ranges": "",
         "content_range": ""
       },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\c54774ff2066"
-    },
-    {
-      "hash": "c6b1a976978b",
-      "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Rush Hour (1998).strm",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
-        "reason": "HEAD and range probe passed",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/octet-stream",
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/734413400"
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\c6b1a976978b"
-    },
-    {
-      "hash": "de116ecc3434",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\de116ecc3434"
-    },
-    {
-      "hash": "f2165fa35f1e",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "HEAD returned HTTP 503",
-        "head_status": 503,
-        "range_status": null,
-        "content_type": "text/plain",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\f2165fa35f1e"
-    },
-    {
-      "hash": "abdef59933e3",
-      "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Movies\\Life Is Beautiful (1997).strm",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
-        "reason": "HEAD and range probe passed",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/octet-stream",
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/5704813462"
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\abdef59933e3"
-    },
-    {
-      "hash": "ad5e7af46d7a",
-      "status": "RETRY_HELD",
-      "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-      "retryable": true,
-      "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "reason": "HEAD timed out",
-        "head_status": null,
-        "range_status": null,
-        "content_type": "",
-        "accept_ranges": "",
-        "content_range": ""
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\retry\\ad5e7af46d7a"
-    },
-    {
-      "hash": "dc6af5ea2eee",
-      "status": "PUBLISHED",
-      "target": "D:\\StremioCatalog\\_Hybrid\\Shows\\Heroes (2006)\\Season 01\\Heroes (2006) - S01E01.strm",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_STAGED_CANDIDATE_ADMITTED",
-        "reason": "HEAD and range probe passed",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/octet-stream",
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/1915499969"
-      },
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\published\\dc6af5ea2eee"
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\staged_raw_strm\\rejected\\f277060ce1f4_1"
     }
   ],
   "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
