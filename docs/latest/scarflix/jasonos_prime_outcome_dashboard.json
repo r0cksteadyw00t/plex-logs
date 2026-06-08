@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-08T03:22:01.830Z",
+  "updated_utc": "2026-06-08T03:24:02.982Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -38,7 +38,7 @@
     "plex_playback_sample_decision_failed": 5,
     "plex_playback_verified_sample_count": 0,
     "plex_playback_verification_note": "direct STRM URL/range checks are not enough; Plex decision QA has not passed the direct playback sample",
-    "staged_candidate_pending_count": 17,
+    "staged_candidate_pending_count": 9,
     "staged_candidate_publisher_status": "WAITING_STAGED_CANDIDATES",
     "staged_candidate_publisher_processed": 0,
     "staged_candidate_publisher_published": 0,
@@ -77,23 +77,23 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 2,
-    "mirror_updated_age_minutes": 0,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 0,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-08T03:25:08Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "5-concurrent stream QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260608.log",
-    "last_progress_utc": "2026-06-08T03:20:12.954Z",
-    "age_minutes": 2,
-    "last_line": "[2026-06-08T03:20:12Z] [REVIEW] Final: REVIEW",
-    "pass_lines": 0,
-    "review_lines": 21,
-    "info_lines": 59
+    "stage": "Plex client decision QA",
+    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260608.log",
+    "last_progress_utc": "2026-06-08T03:24:02.142Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-08T03:24:02Z] [PASS] Decision passed: metadata=41685 title=I Saw the Devil",
+    "pass_lines": 72,
+    "review_lines": 0,
+    "info_lines": 8
   },
   "watchdog_status": {
     "status": "REVIEW",
@@ -104,7 +104,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-08T03:20:02Z",
+    "updated_utc": "2026-06-08T03:24:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -141,7 +141,7 @@
     "status": "WAITING_STAGED_CANDIDATES",
     "updated_utc": "2026-06-08T03:20:02Z",
     "candidate_dirs_found": 0,
-    "pending_count": 17,
+    "pending_count": 9,
     "processed": 0,
     "published": 0,
     "retry_held": 0,
@@ -156,7 +156,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-08T03:21:01Z",
+    "updated_utc": "2026-06-08T03:24:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -231,6 +231,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-08T03:24:02.142Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-08T03:24:02Z] [PASS] Decision passed: metadata=41685 title=I Saw the Devil"
+    },
+    {
       "utc": "2026-06-08T03:20:13.841Z",
       "title": "Autonomous Expansion Reached 102 Direct STRM Entries - 2026-06-08 12:58",
       "detail": "Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `64`, TV `38`, total `102`. Staged pending candidates: `0`. Latest staged publisher pass processed `2`, published `2`, retry-held `0`, rejected `0`."
@@ -249,11 +254,6 @@
       "utc": "2026-06-08T03:19:05.212Z",
       "title": "PlatformGate child QA active: Health",
       "detail": "Latest child QA line: [2026-06-08T03:19:05Z] [INFO] Health status publishing"
-    },
-    {
-      "utc": "2026-06-08T03:16:57.907Z",
-      "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-08T03:16:57Z] [PASS] Decision passed: metadata=41621 title=The Prestige"
     },
     {
       "utc": "2026-06-08T03:15:04Z",
@@ -314,8 +314,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-08T03:20:12.954Z - 5-concurrent stream QA",
-      "current": "Actual Streaming library .strm output is movies=61, tv=38, total=99. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=17; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=99, passed_visible=99, quarantined_this_run=0, retry_held=10. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 18 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=-3. PlatformGate=PASS/PASS; durable=PASS; child_stage=5-concurrent stream QA; child_age=2 min; owner_pid=44064; child_pid=.",
+      "last_change": "2026-06-08T03:24:02.142Z - Plex client decision QA",
+      "current": "Actual Streaming library .strm output is movies=61, tv=38, total=99. Plex playback sample=REVIEW mode=direct_strm, range=5/5, decision=0/5. Staged pending=9; staged publisher=WAITING_STAGED_CANDIDATES, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=99, passed_visible=99, quarantined_this_run=0, retry_held=10. Direct mirror=PASS_EXISTING_DELIVERY_PENDING_SNAPSHOT, eligible=0, already_current=0. Legacy WebDAV visible QA rows are 18 and are not counted as direct delivered catalogue. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=RUNNING/CANARY_PIPELINE_STARTED, staged=0, new_visible_strm=-3. PlatformGate=PASS/PASS; durable=PASS; child_stage=Plex client decision QA; child_age=under 1 min; owner_pid=44064; child_pid=.",
       "progress": 30,
       "eta": "after PlatformGate and candidate model PASS",
       "stall_risk": "Medium"
@@ -323,7 +323,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-08T03:21:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-08T03:24:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=99.",
       "progress": 30,
       "eta": "runs every 5 minutes",
