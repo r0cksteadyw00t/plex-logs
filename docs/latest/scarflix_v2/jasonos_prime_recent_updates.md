@@ -1,12 +1,12 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T04:09:01.920Z
+Updated UTC: 2026-06-08T04:11:01.314Z
 Source: live status merge
 
-- 2026-06-08T04:06:11.064Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T04:06:11Z] [INFO] Health status publishing
+- 2026-06-08T04:10:11.194Z - Autonomous Expansion Reached 113 Direct STRM Entries - 2026-06-08 13:56: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `74`, TV `39`, total `113`. Staged pending candidates on disk: `0`. Latest staged publisher status: `PASS_PUBLISHED`, candidate dirs found `10`, processed `8`, published `6`.
+- 2026-06-08T04:10:04.946Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T04:10:04Z] [INFO] Health status publishing
+- 2026-06-08T04:10:03Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T04:05:58.230Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T04:05:58Z] [INFO] Running concurrent WebDAV active gate worker for 1 entries.
-- 2026-06-08T04:05:13.430Z - Autonomous Expansion Reached 113 Direct STRM Entries - 2026-06-08 13:56: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `74`, TV `39`, total `113`. Staged pending candidates on disk: `0`. Latest staged publisher status: `PASS_PUBLISHED`, candidate dirs found `10`, processed `8`, published `6`.
-- 2026-06-08T04:05:05Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T04:00:11.536Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T04:00:11Z] [REVIEW] Final: REVIEW
 - 2026-06-08T03:56:19.387Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T03:56:18Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1
 - 2026-06-08T03:55:54.539Z - Autonomous Expansion Reached 107 Direct STRM Entries - 2026-06-08 13:54: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `69`, TV `38`, total `107`. Staged pending candidates on disk: `0`. Latest staged publisher status: `WAITING_STAGED_CANDIDATES`, candidate dirs found `0`, processed `0`, published `0`.
