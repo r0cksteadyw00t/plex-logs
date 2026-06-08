@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T00:46:01.814Z
+Updated UTC: 2026-06-08T00:48:01.949Z
 Source: live status merge
 
-- 2026-06-08T00:45:51Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=38456; child_pid=
-- 2026-06-08T00:45:51Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
-- 2026-06-08T00:45:46.004Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T00:45:46Z] [REVIEW] Final: REVIEW
+- 2026-06-08T00:47:37Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=35868; child_pid=
+- 2026-06-08T00:47:37Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
+- 2026-06-08T00:47:32.892Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T00:47:32Z] [REVIEW] Final: REVIEW
 - 2026-06-08T00:45:18.581Z - Direct STRM Playback QA Failing; Publisher Paused - 2026-06-08 10:10: Current audit result: Actual direct `.strm` files visible in Streaming libraries: movies `43`, TV `24`, total `67`. Staged candidate publisher now has `50` staged candidates held. Direct URL/range testing is not the blocker: 5 direct `.strm` sample URLs passed byte-range testing (`5/5` returned `206`).
 - 2026-06-08T00:45:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-08T00:40:05Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
