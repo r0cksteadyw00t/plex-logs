@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-08T10:20:03.930Z
+Updated UTC: 2026-06-08T10:22:02.861Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PENDING
 Jason action required: false
@@ -9,9 +9,9 @@ Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
-| Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-08T10:15:02Z - daily AI usability smoke test | Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true. | 57% | next: integrate 8805 tool traces into 8791 daily UI | Low |
-| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-08T10:16:22Z - materialized canary Plex decision QA | Expansion pause=PAUSED_PLAYBACK_FIX reason=Direct resolver playback failed in Plex; only materialized/WebDAV-backed candidates that pass HLS and Plex decision QA may remain visible.. Primary playback architecture=materialized_webdav_symlink status=PASS; targeted materialized decision QA=PASS, rows_found=8, checked=8, decision=8/2. Legacy resolver .strm=1; materialized/WebDAV .strm=0; materialized visible links=8 (publisher=8, scan=13); materialized canary published=2/2, HLS=2/2, success_rate=400%. Actual Streaming library .strm output is movies=1, tv=0, total=1. Legacy direct Plex sample=REVIEW mode=webdav_map, range=3/3, decision=1/1. Staged pending=2; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=1, passed_visible=1, quarantined_this_run=0, retry_held=5. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=. | 28% | resume controlled materialized/WebDAV publishing | Medium |
-| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-08T10:19:01Z - CANDIDATE_SOURCE_MODEL_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1. | 30% | runs every 5 minutes | Low |
+| Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-08T10:20:03Z - daily AI usability smoke test | Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true. | 57% | next: integrate 8805 tool traces into 8791 daily UI | Low |
+| ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-08T10:16:22Z - materialized canary Plex decision QA | Expansion pause=PAUSED_PLAYBACK_FIX reason=Direct resolver playback failed in Plex; only materialized/WebDAV-backed candidates that pass HLS and Plex decision QA may remain visible.. Primary playback architecture=materialized_webdav_symlink status=PASS; targeted materialized decision QA=PASS, rows_found=8, checked=8, decision=8/2. Legacy resolver .strm=1; materialized/WebDAV .strm=0; materialized visible links=8 (publisher=8, scan=13); materialized canary published=2/2, HLS=2/2, success_rate=400%. Actual Streaming library .strm output is movies=1, tv=0, total=1. Legacy direct Plex sample=REVIEW mode=webdav_map, range=3/3, decision=1/1. Staged pending=2; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=RUNNING_ALREADY, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=. | 28% | resume controlled materialized/WebDAV publishing | Medium |
+| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-08T10:21:02Z - CANDIDATE_SOURCE_MODEL_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=1. | 30% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-07T22:59:49Z - scheduled task wrappers refreshed | Status PASS; tasks_updated=25; blockers=0. | 100% | active now | Low |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=11. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
@@ -20,18 +20,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; materialized canary decision=8/2; broad publishing remains paused until targeted Plex decision QA passes. | 18% | next: resume controlled materialized/WebDAV publishing | Medium |
 
 Recent Achievements:
-- 2026-06-08T10:18:37.619Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
+- 2026-06-08T10:20:16.807Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
+- 2026-06-08T10:20:07Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T10:15:16.559Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
-- 2026-06-08T10:15:06Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T09:00:13.119Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-08T09:00:13Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
 - 2026-06-08T08:55:18.355Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T08:55:18Z] [REVIEW] Final: REVIEW
 - 2026-06-08T08:55:17.097Z - Green Mile Playback Failure Confirmed Legacy Resolver Issue - 2026-06-08 18:15: Jason reported `The Green Mile` failed in Plex with the same HTTP request/playback error class as Maze Runner and Saw. Forensic result: `The Green Mile (1999).strm` was a legacy local resolver entry pointing at `18788/live`. This confirms the failure is systemic to the old direct `.strm` plus local resolver model, n...
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 5 min ago
-- Platform child progress: 80 min ago
-- Mirror updated: 1 min ago
+- Controller updated: 2 min ago
+- Platform child progress: 82 min ago
+- Mirror updated: under 1 min ago
 - Platform runner running: false
 - Platform child active: true
 
@@ -41,12 +41,12 @@ PlatformGate Health Contract:
 - Blocked by: none
 
 Direct STRM Admission:
-- Status: REVIEW_RETRY_HELD
-- Checked visible: 1
-- Passed visible: 1
-- Failed visible: 0
+- Status: RUNNING_ALREADY
+- Checked visible: 0
+- Passed visible: 0
+- Failed visible: null
 - Quarantined this run: 0
-- Retry-held sources: 5
+- Retry-held sources: 0
 
 Staged Candidate Publisher:
 - Status: PAUSED_PLAYBACK_FIX
