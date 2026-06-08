@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-08T14:00:02Z",
-  "current_step": "validation_overlap_running",
+  "status": "RUNNING",
+  "updated_utc": "2026-06-08T14:05:04Z",
+  "current_step": "materialized_plex_decision_qa_started",
   "jason_action_required": false,
   "counts": {
     "movies": 2,
@@ -26,17 +26,7 @@
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
-  "overlap_running": [
-    {
-      "name": "ScarFLIX_v2_MaterializedPlexDecisionQA",
-      "ok": true,
-      "status": "Running",
-      "scheduled_state": "Enabled",
-      "last_run": "9/06/2026 12:00:07 AM",
-      "last_result": "267009",
-      "next_run": "N/A"
-    }
-  ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans_materialized",
@@ -44,15 +34,33 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 13388
+          "pid": 17388
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 30544
+          "pid": 45856
         }
       ]
+    },
+    {
+      "action": "start_materialized_plex_decision_qa_task",
+      "result": {
+        "task": "ScarFLIX_v2_MaterializedPlexDecisionQA",
+        "enable_ok": true,
+        "run_ok": true,
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" have been changed.",
+        "run_text": "INFO: scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" is currently running.\r\nSUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\"."
+      }
+    },
+    {
+      "action": "start_materialized_plex_decision_qa_node_fallback",
+      "result": {
+        "ok": true,
+        "pid": 39032,
+        "script": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js"
+      }
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Detached materialized/WebDAV Plex decision QA is running or queued."
 }
