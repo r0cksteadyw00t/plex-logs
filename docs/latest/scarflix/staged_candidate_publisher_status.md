@@ -1,7 +1,7 @@
 # ScarFLIX Staged Candidate Publisher
 
-Updated UTC: 2026-06-08T04:35:41Z
+Updated UTC: 2026-06-08T07:41:22Z
 Status: PAUSED_PLAYBACK_FIX
-Reason: Jason reported Saw (2004) Plex HTTP 400 playback failure. Stop adding titles until the direct Plex playback decision failure is fixed technically.
-Direct .strm current: movies=73, tv=39, total=112
+Reason: Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.
+Direct .strm current: movies=74, tv=39, total=113
 Staged pending: 0
