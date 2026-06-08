@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-08T01:45:03.657Z
+Updated UTC: 2026-06-08T01:47:01.370Z
 Source: live status merge
 
-- 2026-06-08T01:40:14.298Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
-- 2026-06-08T01:40:13.907Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T01:40:13Z] [REVIEW] Final: REVIEW
-- 2026-06-08T01:40:05Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-08T01:45:14.412Z - 5-Concurrent QA Decoupled From PlatformGate/Canary Publishing - 2026-06-08 11:20: Jason approved the forensic correction that 5-concurrent QA must not block PlatformGate/Canary when the PlatformGate snapshot has only one visible row. Current result: PlatformGate core gates are PASS for the current snapshot: ActiveGate `PASS`
+- 2026-06-08T01:45:10.798Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T01:45:10Z] [REVIEW] Final: REVIEW
+- 2026-06-08T01:45:05Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T01:39:49.104Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T01:39:49Z] [INFO] Health status publishing
 - 2026-06-08T01:35:52.440Z - PlatformGate child QA active: Plex visible/HLS QA: Latest child QA line: [2026-06-08T01:35:52Z] [OK] Backed up Plex DB: D:\PlexTools\backups\scarflix_v2\plex_db\plex_before_visible_catalog_qa_20260608_113551.db
 - 2026-06-08T01:26:00.270Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T01:26:00Z] [INFO] Running concurrent WebDAV active gate worker for 1 entries.
