@@ -12,6 +12,7 @@
 - Consumer v2 staged: `D:\PlexTools\Foundry\workers\JasonOS_Prime_CodexInstructionConsumer_v2.js`
 - Hidden wrappers redirected to v2 scripts.
 - Token detection order in bridge: `GROK_API_KEY.txt`, `XAI_API_KEY.txt`, `xai.key`, `grok_token.txt`, then compatibility names.
+- Default xAI chat model: `grok-4.3` unless overridden by `GROK_MODEL.txt`.
 - Expected bridge modes: `REAL_API` when a usable token is present and Grok returns valid JSON; `LOCAL_FALLBACK` when no token/API failure/malformed output.
 - Bridge v2 asks Grok for structured instructions, ScarFLIX expansion strategy recommendations, autonomy-loop suggestions, and instruction quality metrics.
 - Consumer v2 executes only approved, non-expired, low/medium-risk, allowlisted actions and records execution success rate.
