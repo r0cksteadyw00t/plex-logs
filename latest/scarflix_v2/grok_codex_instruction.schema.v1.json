@@ -1,38 +1,45 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/grok_codex_instruction.schema.v1.json",
-  "title": "Grok-Codex Instruction Envelope v1",
+  "$id": "https://jasonos.local/schemas/grok_codex_instruction.schema.v1.json",
+  "title": "Grok Codex Instruction Envelope v1",
   "type": "object",
+  "additionalProperties": true,
   "required": [
     "schema_version",
-    "component",
-    "updated_utc",
+    "generated_at",
     "source",
     "instructions"
   ],
-  "additionalProperties": false,
   "properties": {
     "schema_version": {
       "const": "grok_codex_instruction.v1"
     },
-    "component": {
-      "const": "jasonos_prime_grok_instruction_bridge"
-    },
-    "updated_utc": {
+    "generated_at": {
       "type": "string",
       "format": "date-time"
     },
     "source": {
+      "type": "string"
+    },
+    "bridge_mode": {
       "type": "string",
       "enum": [
-        "grok_api",
-        "local_only_no_token",
-        "local_status_fallback",
-        "manual_grok_response"
+        "REAL_API",
+        "LOCAL_FALLBACK",
+        "PENDING_HIDDEN_TASK"
       ]
     },
-    "human_summary": {
-      "type": "string"
+    "fallback_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/instruction"
+      }
     },
     "strategy_recommendations": {
       "type": "array",
@@ -50,35 +57,14 @@
     },
     "quality_metrics": {
       "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "grok_reasoning_scope": {
-          "type": "string"
-        },
-        "expected_impact": {
-          "type": "string"
-        },
-        "confidence": {
-          "type": "string",
-          "enum": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      }
-    },
-    "instructions": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/$defs/instruction"
-      }
+      "additionalProperties": true,
+      "default": {}
     }
   },
   "$defs": {
     "instruction": {
       "type": "object",
+      "additionalProperties": true,
       "required": [
         "instruction_id",
         "created_at",
@@ -90,13 +76,10 @@
         "success_criteria",
         "retry_policy"
       ],
-      "additionalProperties": false,
       "properties": {
         "instruction_id": {
           "type": "string",
-          "minLength": 8,
-          "maxLength": 120,
-          "pattern": "^[A-Za-z0-9_.:-]+$"
+          "minLength": 1
         },
         "created_at": {
           "type": "string",
@@ -109,13 +92,11 @@
         "target_component": {
           "type": "string",
           "enum": [
-            "scarflix_materialized_pipeline",
-            "scarflix_qa",
-            "jasonos_prime",
-            "public_mirror",
-            "status_dashboard",
-            "worker_mesh",
-            "grok_codex_bridge",
+            "status_reporting",
+            "dashboard",
+            "scarflix_materialized_expansion",
+            "qa_orchestration",
+            "autonomy_loop",
             "documentation"
           ]
         },
@@ -134,11 +115,38 @@
         "approved_for_codex_execution": {
           "type": "boolean"
         },
-        "title": {
-          "type": "string"
-        },
         "summary": {
           "type": "string"
+        },
+        "success_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "retry_policy": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [
+            "max_attempts"
+          ],
+          "properties": {
+            "max_attempts": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "retry_delay_seconds": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "backoff_strategy": {
+              "type": "string"
+            },
+            "on_failure": {
+              "type": "string"
+            }
+          }
         },
         "actions": {
           "type": "array",
@@ -146,132 +154,65 @@
             "$ref": "#/$defs/action"
           },
           "default": []
-        },
-        "success_criteria": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "retry_policy": {
-          "type": "object",
-          "required": [
-            "max_attempts",
-            "backoff_seconds",
-            "escalate_after_attempts"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "max_attempts": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 10
-            },
-            "backoff_seconds": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 86400
-            },
-            "escalate_after_attempts": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 10
-            },
-            "escalation_target": {
-              "type": "string",
-              "enum": [
-                "none",
-                "grok_handoff",
-                "jason"
-              ],
-              "default": "grok_handoff"
-            }
-          }
-        },
-        "evidence_required": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": []
-        },
-        "blocked_actions": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": []
-        },
-        "source_handoff_path": {
-          "type": "string"
-        },
-        "notes": {
-          "type": "string"
         }
       }
     },
     "action": {
       "type": "object",
+      "additionalProperties": true,
       "required": [
         "action_type"
       ],
-      "additionalProperties": false,
       "properties": {
         "action_type": {
           "type": "string",
           "enum": [
-            "status_only",
-            "publish_status_summary",
-            "start_detached_task"
+            "write_status_summary",
+            "write_strategy_note",
+            "queue_detached_task_request",
+            "update_dashboard_note",
+            "update_next_actions"
           ]
         },
-        "task_name": {
-          "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
-        "reason": {
-          "type": "string"
+        "parameters": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
         }
       }
     },
     "recommendation": {
       "type": "object",
+      "additionalProperties": true,
       "required": [
-        "recommendation_id",
-        "target_component",
-        "risk_level",
         "summary"
       ],
-      "additionalProperties": false,
       "properties": {
         "recommendation_id": {
-          "type": "string",
-          "minLength": 4,
-          "maxLength": 120
-        },
-        "target_component": {
           "type": "string"
         },
-        "risk_level": {
+        "priority": {
           "type": "string",
           "enum": [
             "low",
             "medium",
             "high",
-            "critical"
+            "critical",
+            "unspecified"
           ]
+        },
+        "target_component": {
+          "type": "string"
         },
         "summary": {
           "type": "string"
         },
-        "success_signal": {
-          "type": "string"
-        },
-        "notes": {
-          "type": "string"
+        "success_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
         }
       }
     }
