@@ -230,3 +230,23 @@ Command Centre features:
 - Project layer for tasks, risks, decisions, next actions, and plan excerpts.
 
 No safety policy changed. Legacy/direct resolver expansion remains paused. Materialized/WebDAV remains primary. Long validation remains detached only.
+
+# 2026-06-09 21:55 Australia/Sydney - Strategic/Remote Access Update
+
+Grok planner output contract is expanded with:
+
+- `risk_mitigations`
+- `cycle_commentary`
+- `cycle_commentary.batch_recommendation`
+- cycle quality/health assessment fields
+
+These fields are planner/dashboard inputs only. The Codex consumer may still execute only explicit `instructions[]` entries that are approved, non-expired, low/medium-risk, allowlisted, and do not require a user decision.
+
+Remote Command Centre access is staged but not enabled:
+
+- Worker: `D:\PlexTools\Foundry\workers\JasonOS_Prime_CommandCenterStaticServer.js`
+- Wrapper: `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_CommandCenterStaticServer.vbs`
+- Installer: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_CommandCenterStaticServer_InstallTask.ps1`
+- Guide: `docs\COMMAND_CENTRE_REMOTE_ACCESS.md`
+
+Safety rule: no unauthenticated public exposure. Preferred remote access is Tailscale if already in use, then UniFi/local VPN, then Cloudflare Tunnel with Access authentication.
