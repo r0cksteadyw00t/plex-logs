@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_grok_instruction_bridge",
   "status": "LOCAL_FALLBACK",
-  "updated_utc": "2026-06-09T11:17:04.486Z",
+  "updated_utc": "2026-06-09T12:02:02.239Z",
   "bridge_mode": "LOCAL_FALLBACK",
   "api_mode": "LOCAL_FALLBACK",
   "token_file_present": false,
@@ -13,6 +13,17 @@
   "executable_instruction_count": 1,
   "strategy_recommendation_count": 1,
   "autonomy_suggestion_count": 1,
+  "risk_mitigation_count": 1,
+  "cycle_commentary": {
+    "summary": "Controlled expansion should remain bounded until QA gates are fully PASS.",
+    "health_assessment": "Degraded",
+    "quality_score": 58,
+    "batch_recommendation": {
+      "allowed": false,
+      "recommended_batch_size": "hold_or_10-20",
+      "reason": "One or more expansion gates is not PASS."
+    }
+  },
   "instruction_quality_score": 85,
   "validation_errors": [],
   "output_files": {
@@ -22,10 +33,10 @@
     "quality_json": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grok_instruction_quality_status.json"
   },
   "scarflix_metrics": {
-    "dashboard_updated_utc": "2026-06-09T11:16:02.465Z",
+    "dashboard_updated_utc": "2026-06-09T12:01:01.754Z",
     "movie_strm_count": 1,
-    "tv_strm_count": 1,
-    "total_strm_count": 2,
+    "tv_strm_count": 0,
+    "total_strm_count": 1,
     "materialized_artifacts": 225,
     "targeted_materialized_qa_status": "PASS",
     "targeted_materialized_qa_checked": 124,
