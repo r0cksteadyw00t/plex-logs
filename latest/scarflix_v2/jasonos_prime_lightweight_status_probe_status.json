@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_lightweight_status_probe",
   "status": "REVIEW",
-  "updated_utc": "2026-06-09T16:34:01Z",
-  "duration_ms": 6,
+  "updated_utc": "2026-06-09T17:02:00Z",
+  "duration_ms": 14,
   "probe_contract": "Node-only bounded read of current public status JSON; no long validation and no schtasks/process scans.",
   "counts": {
     "direct_movies": 0,
@@ -13,7 +13,7 @@
     "staged_pending": 43
   },
   "statuses": {
-    "public_mirror": "PASS",
+    "public_mirror": "REVIEW_RECOVERABLE",
     "materialized_decision_qa": "REVIEW",
     "playback_qa_controller": "REVIEW_MATERIALIZED_DECISION_FAILURE",
     "fast_track": "PASS",
@@ -22,7 +22,7 @@
     "direct_strm_mirror": "PAUSED_PLAYBACK_FIX",
     "canary": "PAUSED_PLAYBACK_FIX",
     "node_watchdog": "ACTIVE",
-    "sentinel": "ALERT",
+    "sentinel": "PASS",
     "candidate_source_model": "PASS",
     "autonomous_controller": "PASS",
     "ai_8791": "PASS",
@@ -42,17 +42,19 @@
     "expansion_started_this_cycle": false,
     "staged_pending_count": 43,
     "materialized_decision_qa_status": "REVIEW",
-    "updated_utc": "2026-06-09T16:33:01Z"
+    "updated_utc": "2026-06-09T17:02:00Z"
   },
   "mirror": {
-    "status": "PASS",
-    "updated_utc": "2026-06-09T16:33:37.288Z",
-    "last_success_utc": "2026-06-09T16:33:37.288Z",
-    "failed_count": 0,
+    "status": "REVIEW_RECOVERABLE",
+    "updated_utc": "2026-06-09T16:57:51.414Z",
+    "last_success_utc": "2026-06-09T16:35:41.801Z",
+    "failed_count": 121,
     "failure_summary": {
-      "recoverable": 0,
+      "recoverable": 121,
       "hard": 0,
-      "by_status": {}
+      "by_status": {
+        "403": 121
+      }
     }
   },
   "maze_runner": {
@@ -66,8 +68,8 @@
     "ready_to_test": false
   },
   "file_mtimes": {
-    "dashboard": "2026-06-09T16:33:02.317Z",
-    "mirror": "2026-06-09T16:33:37.293Z",
+    "dashboard": "2026-06-09T17:01:02.253Z",
+    "mirror": "2026-06-09T16:57:51.417Z",
     "materialized_qa": "2026-06-09T16:11:20.392Z"
   },
   "files": {
