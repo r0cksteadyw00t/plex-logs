@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-09T16:54:46Z",
-    "ended_utc":  "2026-06-09T17:05:37Z",
+    "started_utc":  "2026-06-09T16:54:51Z",
+    "ended_utc":  "2026-06-09T17:10:40Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -13,7 +13,7 @@
     "rclone_exe_present":  true,
     "rclone_config_present":  true,
     "drive_s_present":  true,
-    "media_path_ready":  false,
+    "media_path_ready":  true,
     "catalog_path_ready":  true,
     "mount_ready":  false,
     "start":  {
@@ -34,7 +34,7 @@
                             }
                         ],
     "actions":  [
-
+                    "rclone process already present; waiting for mount readiness"
                 ],
     "failures":  [
                      "rclone mount did not expose S:\\media\\catalog within timeout"
