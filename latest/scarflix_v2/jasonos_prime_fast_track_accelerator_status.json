@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-09T03:24:04Z",
-  "duration_seconds": 3,
+  "updated_utc": "2026-06-09T03:25:46Z",
+  "duration_seconds": 5,
   "mode": "fast_track_safe_acceleration",
-  "current_milestone": "CONTROLLED_EXPANSION_RUNNING",
-  "next_autonomous_action": "PlatformGate and candidate model are PASS; launch controlled safe WebDAV expansion.",
+  "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+  "next_autonomous_action": "Legacy resolver remains paused; controlled materialized/WebDAV batches are allowed after materialized decision QA PASS.",
   "no_secret_access": true,
   "expansion_eligible": true,
   "expansion_started_this_cycle": true,
@@ -13,7 +13,7 @@
   "broad_legacy_resolver_expansion_paused": true,
   "controlled_materialized_webdav_expansion_allowed": true,
   "primary_playback_architecture": "materialized_webdav_symlink",
-  "materialized_decision_qa_status": "REVIEW",
+  "materialized_decision_qa_status": "PASS",
   "staged_pending_count": 1,
   "expansion_pause": {
     "component": "scarflix_v2_expansion_pause",
@@ -131,8 +131,8 @@
     },
     {
       "action": "task_run",
-      "task": "ScarFLIX_v2_SafeWebDavExpansionPipeline",
-      "reason": "fast_track_expansion_eligible",
+      "task": "ScarFLIX_v2_MaterializedCandidateStageOnly",
+      "reason": "controlled_materialized_candidate_replenishment",
       "status": "PASS",
       "error": " "
     }
