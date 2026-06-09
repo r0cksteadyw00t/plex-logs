@@ -1,52 +1,20 @@
 {
   "component": "jasonos_prime_codex_instruction_consumer",
-  "status": "PASS_ALL_SKIPPED_BY_SAFETY_GATE",
-  "updated_utc": "2026-06-09T11:02:01.556Z",
-  "bridge_mode_observed": "unknown",
-  "source_observed": "local_status_fallback",
-  "instruction_count": 1,
+  "status": "STAGED_WAITING_FOR_HIDDEN_TASK_RUN",
+  "updated_utc": "2026-06-09T11:20:00Z",
+  "active_worker": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CodexInstructionConsumer_v2.js",
+  "hidden_wrapper": "D:/PlexTools/Scripts/scarflix_v2/hidden_tasks/JasonOS_Prime_CodexInstructionConsumer.vbs",
+  "instruction_count": 0,
   "executable_instruction_count": 0,
-  "skipped_instruction_count": 1,
+  "skipped_instruction_count": 0,
   "action_attempt_count": 0,
   "action_pass_count": 0,
-  "executed_action_count": 0,
   "execution_success_rate": 0,
   "strategy_recommendation_count": 0,
   "autonomy_suggestion_count": 0,
-  "skipped": [
-    {
-      "instruction_id": "local-only-no-token-20260609104702",
-      "reasons": [
-        "not_approved",
-        "target_not_allowlisted",
-        "action_0_not_allowlisted"
-      ]
-    }
-  ],
-  "results": [],
   "safety_policy": {
-    "allowed_targets": [
-      "status_reporting",
-      "dashboard",
-      "scarflix_materialized_expansion",
-      "qa_orchestration",
-      "autonomy_loop",
-      "documentation"
-    ],
-    "allowed_actions": [
-      "write_status_summary",
-      "write_strategy_note",
-      "queue_detached_task_request",
-      "update_dashboard_note",
-      "update_next_actions"
-    ],
     "long_validation_inline_allowed": false,
     "legacy_direct_resolver_expansion_allowed": false
   },
-  "output_files": {
-    "codex_status_for_grok": "D:\\PlexTools\\public\\latest\\scarflix_v2\\CODEX_STATUS_FOR_GROK.md",
-    "strategy_note": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_STRATEGY_FOR_CODEX.md",
-    "execution_log": "D:\\PlexTools\\state\\scarflix_v2\\grok_codex_instruction_execution_log.jsonl",
-    "queue": "D:\\PlexTools\\state\\scarflix_v2\\grok_codex_detached_task_requests.json"
-  }
+  "note": "v2 consumer is staged. It will execute only approved, non-expired, low/medium-risk, allowlisted instructions when hidden task runs."
 }
