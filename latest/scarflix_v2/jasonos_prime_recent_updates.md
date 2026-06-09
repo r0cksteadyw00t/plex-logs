@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T04:40:02.944Z
+Updated UTC: 2026-06-09T04:42:01.753Z
 Source: live status merge
 
-- 2026-06-09T04:39:16.697Z - Public Mirror Recovered; Lightweight Probe Hardening Started - 2026-06-09 14:20: Latest successful live snapshot before the local execution channel degraded again: Direct/legacy `.strm` counts in Plex Streaming libraries: movies `0`, TV `1`, total `1`. Primary delivery metric remains materialized/WebDAV-backed Plex playback success, not direct `.strm` count. Primary playback architecture remains...
-- 2026-06-09T04:38:47Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-09T04:41:16.987Z - Public Mirror Recovered; Lightweight Probe Hardening Started - 2026-06-09 14:20: Latest successful live snapshot before the local execution channel degraded again: Direct/legacy `.strm` counts in Plex Streaming libraries: movies `0`, TV `1`, total `1`. Primary delivery metric remains materialized/WebDAV-backed Plex playback success, not direct `.strm` count. Primary playback architecture remains...
+- 2026-06-09T04:40:58Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T04:36:09.832Z - Controlled Materialized Expansion Held After Next Batch Index Lag - 2026-06-09 13:43: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
 - 2026-06-09T03:42:30.189Z - Controlled Materialized Expansion Resumed After Plex Index Catch-Up - 2026-06-09 13:36: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
 - 2026-06-09T03:35:39.578Z - Controlled Materialized Expansion Held On Plex Index Lag - 2026-06-09 13:31: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
