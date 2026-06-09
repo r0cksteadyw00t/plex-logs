@@ -1,17 +1,17 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T07:30:03.519Z
+Updated UTC: 2026-06-09T08:02:10.520Z
 Source: live status merge
 
-- 2026-06-09T07:25:15.607Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
-- 2026-06-09T07:25:03Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-09T08:02:02.921Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-09T08:01:48Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-09T07:35:57.536Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-09T07:35:57Z] [REVIEW] Final: REVIEW
 - 2026-06-09T07:00:15.258Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T07:00:15Z] [PASS] Decision passed: metadata=42387 title=The Bourne Identity
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
 - 2026-06-09T06:20:29.274Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:18: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:16:06Z` Probe duration: `38ms`
 - 2026-06-09T06:15:56.866Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:10: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:07:03Z` Probe duration: `30ms`
 - 2026-06-09T06:10:25.605Z - Controlled Materialized Batch Progressing Under Lightweight Probe - 2026-06-09 15:52: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T05:52:13Z` Probe duration: `69ms`
 - 2026-06-09T05:55:11.392Z - Codex-Side Probe Channel Blocked Again - 2026-06-09 14:45: Last verified lightweight probe snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T04:42:47Z` Probe duration: `93ms` after Node launched
-- 2026-06-09T05:00:59.926Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-09T05:00:59Z] [REVIEW] Final: REVIEW
 - 2026-06-09T04:52:21.528Z - Public Mirror Recovered; Lightweight Probe Hardening Started - 2026-06-09 14:20: Latest successful live snapshot before the local execution channel degraded again: Direct/legacy `.strm` counts in Plex Streaming libraries: movies `0`, TV `1`, total `1`. Primary delivery metric remains materialized/WebDAV-backed Plex playback success, not direct `.strm` count. Primary playback architecture remains...
 - 2026-06-09T04:36:09.832Z - Controlled Materialized Expansion Held After Next Batch Index Lag - 2026-06-09 13:43: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
 - 2026-06-09T03:42:30.189Z - Controlled Materialized Expansion Resumed After Plex Index Catch-Up - 2026-06-09 13:36: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
