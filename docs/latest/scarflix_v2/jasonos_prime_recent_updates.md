@@ -1,12 +1,12 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T08:38:01.010Z
+Updated UTC: 2026-06-09T09:02:02.224Z
 Source: live status merge
 
-- 2026-06-09T08:36:08.229Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
-- 2026-06-09T08:35:51Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
-- 2026-06-09T07:35:57.536Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-09T07:35:57Z] [REVIEW] Final: REVIEW
-- 2026-06-09T07:00:15.258Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T07:00:15Z] [PASS] Decision passed: metadata=42387 title=The Bourne Identity
+- 2026-06-09T09:00:32.672Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-09T09:00:32Z] [REVIEW] Final: REVIEW
+- 2026-06-09T09:00:21.670Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-09T09:00:12Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-09T09:00:04.711Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T09:00:04Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
 - 2026-06-09T06:20:29.274Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:18: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:16:06Z` Probe duration: `38ms`
 - 2026-06-09T06:15:56.866Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:10: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:07:03Z` Probe duration: `30ms`
