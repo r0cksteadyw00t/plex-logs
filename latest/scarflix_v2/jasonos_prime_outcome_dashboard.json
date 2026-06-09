@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T04:04:02.058Z",
+  "updated_utc": "2026-06-09T04:06:02.388Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -108,14 +108,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 64,
-    "mirror_updated_age_minutes": 1,
+    "controller_updated_age_minutes": 6,
+    "platform_child_progress_age_minutes": 66,
+    "mirror_updated_age_minutes": 0,
     "next_check_utc": "2026-06-09T04:05:18Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 1,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -123,7 +123,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260609.log",
     "last_progress_utc": "2026-06-09T03:00:21.004Z",
-    "age_minutes": 64,
+    "age_minutes": 66,
     "last_line": "[2026-06-09T03:00:20Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity",
     "pass_lines": 6,
     "review_lines": 1,
@@ -132,13 +132,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-09T04:00:08Z",
+    "updated_utc": "2026-06-09T04:05:09Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-09T04:02:01Z",
+    "updated_utc": "2026-06-09T04:05:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -153,7 +153,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-09T04:00:09Z",
+    "updated_utc": "2026-06-09T04:05:06Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -190,7 +190,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T04:03:01Z",
+    "updated_utc": "2026-06-09T04:05:03Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
     "expansion_eligible": true,
     "expansion_started_this_cycle": false,
@@ -234,7 +234,7 @@
   },
   "daily_ai_usability": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T04:00:03Z",
+    "updated_utc": "2026-06-09T04:05:02Z",
     "daily_ui_8791": {
       "reachable": true,
       "status": 200,
@@ -339,7 +339,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-09T04:00:03Z - daily AI usability smoke test",
+      "last_change": "2026-06-09T04:05:02Z - daily AI usability smoke test",
       "current": "Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
       "progress": 57,
       "eta": "next: integrate 8805 tool traces into 8791 daily UI",
@@ -357,9 +357,9 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T04:03:01Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+      "last_change": "2026-06-09T04:05:03Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
       "current": "Status PASS; expansion_eligible=true; expansion_started_this_cycle=false; total_strm=1.",
-      "progress": 25,
+      "progress": 30,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
     },
@@ -395,25 +395,25 @@
       "target": "Parallel local workers for simulations, status, planning and future missions.",
       "last_change": "2026-06-06T08:25:00Z - watchdog swarm escalation marker added",
       "current": "Short scheduled workers active; broader worker swarm pending.",
-      "progress": 28,
+      "progress": 32,
       "eta": "2-4 days",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     },
     {
       "outcome": "Phone/Multi-Device Federation",
       "target": "Stable remote status/control through public mirror plus tunnel/federation layer.",
       "last_change": "2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated",
-      "current": "Public mirror REVIEW; raw status base available.",
-      "progress": 38,
+      "current": "Public mirror PASS; raw status base available.",
+      "progress": 50,
       "eta": "1-3 days",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     },
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
       "last_change": "2026-06-08T01:18:52Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=27/27; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
-      "progress": 15,
+      "progress": 18,
       "eta": "next: resume controlled materialized/WebDAV publishing",
       "stall_risk": "Medium"
     }
