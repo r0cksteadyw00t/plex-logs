@@ -1,31 +1,52 @@
 {
   "component": "jasonos_prime_codex_instruction_consumer",
-  "status": "PASS",
-  "updated_utc": "2026-06-09T10:17:01Z",
-  "instructions_json_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.json",
+  "status": "PASS_ALL_SKIPPED_BY_SAFETY_GATE",
+  "updated_utc": "2026-06-09T11:02:01.556Z",
+  "bridge_mode_observed": "unknown",
+  "source_observed": "local_status_fallback",
   "instruction_count": 1,
   "executable_instruction_count": 0,
+  "skipped_instruction_count": 1,
+  "action_attempt_count": 0,
+  "action_pass_count": 0,
   "executed_action_count": 0,
-  "source": "local_only_no_token",
-  "validation_errors": [],
-  "results": [
+  "execution_success_rate": 0,
+  "strategy_recommendation_count": 0,
+  "autonomy_suggestion_count": 0,
+  "skipped": [
     {
-      "instruction_id": "local-only-no-token-20260609100201",
-      "target_component": "grok_codex_bridge",
-      "risk_level": "low",
-      "approved_for_codex_execution": false,
-      "requires_user_decision": false,
-      "validation_errors": [],
-      "executable": false,
-      "skip_reason": "not_approved_for_codex_execution",
-      "action_results": []
+      "instruction_id": "local-only-no-token-20260609104702",
+      "reasons": [
+        "not_approved",
+        "target_not_allowlisted",
+        "action_0_not_allowlisted"
+      ]
     }
   ],
+  "results": [],
   "safety_policy": {
-    "max_autonomous_risk": "medium",
-    "requires_user_decision_allowed": false,
-    "legacy_direct_resolver_expansion_allowed": false,
-    "forbidden_task_pattern": "/PlatformGate|VisibleCatalogQA|PlexClientDecisionQA|AutoGate|DirectStrmMirror|StagedCandidatePublisher|SafeWebDavExpansion|Autopilot/i"
+    "allowed_targets": [
+      "status_reporting",
+      "dashboard",
+      "scarflix_materialized_expansion",
+      "qa_orchestration",
+      "autonomy_loop",
+      "documentation"
+    ],
+    "allowed_actions": [
+      "write_status_summary",
+      "write_strategy_note",
+      "queue_detached_task_request",
+      "update_dashboard_note",
+      "update_next_actions"
+    ],
+    "long_validation_inline_allowed": false,
+    "legacy_direct_resolver_expansion_allowed": false
   },
-  "jason_action_required": false
+  "output_files": {
+    "codex_status_for_grok": "D:\\PlexTools\\public\\latest\\scarflix_v2\\CODEX_STATUS_FOR_GROK.md",
+    "strategy_note": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_STRATEGY_FOR_CODEX.md",
+    "execution_log": "D:\\PlexTools\\state\\scarflix_v2\\grok_codex_instruction_execution_log.jsonl",
+    "queue": "D:\\PlexTools\\state\\scarflix_v2\\grok_codex_detached_task_requests.json"
+  }
 }
