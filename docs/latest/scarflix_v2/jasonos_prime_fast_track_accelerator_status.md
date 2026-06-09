@@ -1,17 +1,17 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-09T02:52:02Z
+Updated UTC: 2026-06-09T03:02:02Z
 Status: PASS
 Mode: fast_track_safe_acceleration
-Current milestone: CANDIDATE_SOURCE_MODEL_RUNNING
-Next autonomous action: PlatformGate is PASS; run candidate-source retry/quarantine verification detached.
+Current milestone: EXPANSION_PAUSED_PLAYBACK_FIX
+Next autonomous action: Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.
 Expansion eligible: false
 Expansion started this cycle: false
 
 ## Actual STRM Counts
 - movies: 0
-- tv: 0
-- total: 0
+- tv: 1
+- total: 1
 
 ## Inputs
 - platform_gate: PASS
@@ -25,12 +25,12 @@ Expansion started this cycle: false
 - active_gate_prunable_failures: 0
 - controller_transient_retry_count: 0
 - repeated_transient_review: false
-- candidate_source_model: REVIEW
-- controller: REVIEW_TRANSIENT
-- predictive_simulator: REVIEW
-- self_evolution: REVIEW
+- candidate_source_model: PASS
+- controller: PASS
+- predictive_simulator: PASS
+- self_evolution: PASS
 - dashboard: PASS
-- public_mirror: PASS
+- public_mirror: REVIEW
 
 ## Next 4 Hours
 - Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.
@@ -46,4 +46,3 @@ Expansion started this cycle: false
 - JasonOS_Prime_PublicMirrorPublisher: PASS fast_track_public_status
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
-- candidate_source_model_detached: PASS 
