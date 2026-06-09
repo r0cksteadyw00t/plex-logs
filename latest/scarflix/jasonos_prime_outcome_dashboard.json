@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T15:03:01.560Z",
+  "updated_utc": "2026-06-09T15:06:02.510Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -92,7 +92,7 @@
     "playback_qa_controller_status": "WAITING_OVERLAP",
     "playback_qa_controller_step": "validation_overlap_running",
     "playback_qa_direct_strm_admission_status": "REVIEW_RETRY_HELD",
-    "playback_qa_decision_status": "PASS",
+    "playback_qa_decision_status": "FAIL",
     "playback_qa_concurrent_status": "REVIEW",
     "visible_qa_count": 1,
     "visible_qa_movies": 1,
@@ -122,22 +122,22 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 27,
-    "platform_child_progress_age_minutes": 1,
-    "mirror_updated_age_minutes": 3,
+    "controller_updated_age_minutes": 30,
+    "platform_child_progress_age_minutes": 3,
+    "mirror_updated_age_minutes": 2,
     "next_check_utc": "2026-06-09T14:55:00Z",
-    "next_check_age_minutes": 8,
+    "next_check_age_minutes": 11,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
-    "last_progress_utc": "2026-06-09T15:01:52.218Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-09T15:01:52Z] [INFO] Rows selected for Plex decision QA: 1",
+    "last_progress_utc": "2026-06-09T15:03:24.374Z",
+    "age_minutes": 3,
+    "last_line": "[2026-06-09T15:03:24Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 0,
-    "review_lines": 0,
+    "review_lines": 1,
     "info_lines": 2
   },
   "watchdog_status": {
@@ -149,7 +149,7 @@
   "sentinel_status": {
     "status": "ALERT",
     "alert_level": "HIGH",
-    "updated_utc": "2026-06-09T15:02:02Z",
+    "updated_utc": "2026-06-09T15:05:01Z",
     "codex_action_required": true,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-09T15:00:03Z",
+    "updated_utc": "2026-06-09T15:05:02Z",
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
@@ -201,7 +201,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T15:02:03Z",
+    "updated_utc": "2026-06-09T15:05:02Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
     "expansion_eligible": true,
     "expansion_started_this_cycle": false,
@@ -247,7 +247,7 @@
   },
   "daily_ai_usability": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T15:00:02Z",
+    "updated_utc": "2026-06-09T15:05:02Z",
     "daily_ui_8791": {
       "reachable": true,
       "status": 200,
@@ -294,9 +294,9 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-09T15:01:52.218Z",
+      "utc": "2026-06-09T15:03:24.374Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-09T15:01:52Z] [INFO] Rows selected for Plex decision QA: 1"
+      "detail": "Latest child QA line: [2026-06-09T15:03:24Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out."
     },
     {
       "utc": "2026-06-09T14:50:05.272Z",
@@ -368,7 +368,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-09T15:00:02Z - daily AI usability smoke test",
+      "last_change": "2026-06-09T15:05:02Z - daily AI usability smoke test",
       "current": "Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
       "progress": 57,
       "eta": "next: integrate 8805 tool traces into 8791 daily UI",
@@ -395,7 +395,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T15:02:03Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+      "last_change": "2026-06-09T15:05:02Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
       "current": "Status PASS; expansion_eligible=true; expansion_started_this_cycle=false; total_strm=0.",
       "progress": 25,
       "eta": "runs every 5 minutes",
@@ -423,10 +423,10 @@
       "outcome": "Recursive Self-Evolution Cycle",
       "target": "Daily autonomous proposals and controlled implementation backlog.",
       "last_change": "2026-06-06T08:25:00Z - status tracking retained in dashboard",
-      "current": "Self-evolution planner REVIEW.",
+      "current": "Self-evolution planner PASS.",
       "progress": 40,
       "eta": "1-2 days",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     },
     {
       "outcome": "Swarm Intelligence",
