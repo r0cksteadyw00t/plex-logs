@@ -169,6 +169,26 @@ Guidance:
 
 # 2026-06-09 20:05 Australia/Sydney - Structured Autonomy Update
 
+# 2026-06-09 20:35 Australia/Sydney - Grok API Token Integration Update
+
+`JasonOS_Prime_GrokInstructionBridge` now reports bridge mode as `REAL_API` or `LOCAL_FALLBACK`.
+
+Token detection order:
+
+1. `GROK_API_KEY.txt`
+2. `XAI_API_KEY.txt`
+3. `xai.key`
+4. `grok_token.txt`
+
+Older lowercase/compatibility token filenames are still checked after those four names. If a usable token is present and Grok returns valid `grok_codex_instruction.v1` JSON, the bridge writes Grok-sourced instructions and reports `REAL_API`. If no usable token exists, the API call fails, or Grok returns malformed JSON, the bridge reports `LOCAL_FALLBACK` and writes a non-executable fallback instruction. This protects ScarFLIX from unsafe or ambiguous autonomous actions.
+
+Dashboard fields to check:
+
+- `truth_metrics.grok_instruction_bridge_mode`
+- `truth_metrics.grok_instruction_bridge_last_successful_grok_instruction_utc`
+- `grok_codex_instruction_loop.bridge_mode`
+- `grok_codex_instruction_loop.last_successful_grok_instruction_utc`
+
 The earlier materialized QA regression has been cleared. Current gates:
 
 - Targeted materialized Plex decision QA: `PASS`, `124/124`, failed `0`.
@@ -178,3 +198,15 @@ The earlier materialized QA regression has been cleared. Current gates:
 - Legacy/direct resolver expansion: still paused.
 
 Structured Grok-Codex instruction contract v1 has been added. `JasonOS_Prime_GrokInstructionBridge` and `JasonOS_Prime_CodexInstructionConsumer` are installed as hidden 15-minute tasks. Current bridge mode is `LOCAL_ONLY_NO_TOKEN`, so no Grok-approved instruction has been executed yet. This is a credential limitation for external Grok invocation, not a ScarFLIX playback failure.
+# 2026-06-09 21:20 Australia/Sydney - Deep Grok Integration Update
+
+Grok-Codex loop v2 is staged. Hidden wrappers now target:
+
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokInstructionBridge_v2.js`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_CodexInstructionConsumer_v2.js`
+
+Bridge v2 treats Grok as an active planner when a valid token is present. It sends current ScarFLIX metrics, dashboard state, recent Codex/Grok handoff excerpts, bridge/consumer state, and saturation status. Expected Grok output now includes structured Codex instructions, ScarFLIX expansion strategy recommendations, autonomy-loop suggestions, and instruction quality metrics.
+
+Consumer v2 executes only instructions that are approved, non-expired, low/medium-risk, target allowlisted, action allowlisted, and do not require a user decision. It may write status/strategy notes or queue detached-task requests for local workers. It must not run long ScarFLIX validation inline, re-enable legacy/direct resolver expansion, or perform destructive operations.
+
+Current known runtime limitation: Codex inline process launch is saturated, so v2 verification is delegated to hidden scheduled tasks. Latest public dashboard still shows targeted materialized QA `PASS 124/124`, representative concurrent QA `PASS 5/5`, materialized artifacts `225`, and legacy/direct resolver expansion paused.
