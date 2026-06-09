@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-09T07:22:02Z
+Updated UTC: 2026-06-09T07:24:02Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CONTROLLED_MATERIALIZED_QA_HOLD
@@ -10,8 +10,8 @@ Expansion started this cycle: false
 
 ## Actual STRM Counts
 - movies: 1
-- tv: 1
-- total: 2
+- tv: 0
+- total: 1
 
 ## Inputs
 - platform_gate: PASS
