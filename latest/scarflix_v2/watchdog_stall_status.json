@@ -2,18 +2,18 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-09T04:45:08Z",
-    "started_utc":  "2026-06-09T04:45:04Z",
-    "duration_seconds":  4,
+    "updated_utc":  "2026-06-09T05:00:54Z",
+    "started_utc":  "2026-06-09T05:00:20Z",
+    "duration_seconds":  34,
     "will_progress_without_codex":  true,
     "current_milestone":  "CANDIDATE_SOURCE_MODEL_PASS",
     "signals":  {
                     "controller_age_minutes":  4,
-                    "platform_checkpoint_age_minutes":  1646,
-                    "durable_platform_gate_age_minutes":  1646,
+                    "platform_checkpoint_age_minutes":  1661,
+                    "durable_platform_gate_age_minutes":  1661,
                     "platform_progress_fresh":  false,
                     "dashboard_age_minutes":  0,
-                    "mirror_age_minutes":  2,
+                    "mirror_age_minutes":  9,
                     "movie_strm_count":  0,
                     "tv_strm_count":  1,
                     "total_strm_count":  1,
@@ -26,8 +26,8 @@
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "9/06/2026 2:45:01 PM",
-                                     "next_run_time":  "9/06/2026 2:50:00 PM",
+                                     "last_run_time":  "9/06/2026 3:00:01 PM",
+                                     "next_run_time":  "9/06/2026 3:05:00 PM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
@@ -42,20 +42,26 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "9/06/2026 2:45:01 PM",
-                                    "next_run_time":  "9/06/2026 2:50:00 PM",
+                                    "last_run_time":  "9/06/2026 3:00:34 PM",
+                                    "next_run_time":  "9/06/2026 3:05:00 PM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
                                  "exists":  true,
                                  "status":  "Ready",
-                                 "last_run_time":  "9/06/2026 2:45:01 PM",
-                                 "next_run_time":  "9/06/2026 2:51:00 PM",
+                                 "last_run_time":  "9/06/2026 3:00:41 PM",
+                                 "next_run_time":  "9/06/2026 3:05:00 PM",
                                  "last_result":  "0"
                              }
               },
     "actions":  [
+                    {
+                        "task":  "JasonOS_Prime_PublicMirrorPublisher",
+                        "changed":  false,
+                        "ran":  true,
+                        "note":  "run_triggered"
+                    },
                     {
                         "task":  "ScarFLIX_v2_AutonomousController",
                         "changed":  false,
@@ -64,6 +70,7 @@
                     }
                 ],
     "notes":  [
+                  "Public mirror status was disabled or stale; watchdog triggered mirror task.",
                   "Catalogue count has not changed during expansion/candidate milestone; watchdog triggered controller."
               ],
     "files":  {
