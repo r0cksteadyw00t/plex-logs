@@ -108,3 +108,19 @@ Forbidden task/action classes:
   }
 }
 ```
+
+## 2026-06-09 Token Integration Update
+
+Bridge mode is explicit:
+
+- `REAL_API`: a usable Grok/xAI token was found, the API call succeeded, and Grok returned valid `grok_codex_instruction.v1` JSON.
+- `LOCAL_FALLBACK`: no usable token was found, the API call failed, or the response was not valid v1 JSON. Fallback instructions are non-executable unless explicitly approved by a real Grok response.
+
+Token detection order:
+
+1. `GROK_API_KEY.txt`
+2. `XAI_API_KEY.txt`
+3. `xai.key`
+4. `grok_token.txt`
+
+The bridge also keeps older lowercase/compatibility names after those four preferred names.
