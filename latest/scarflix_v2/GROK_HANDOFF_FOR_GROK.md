@@ -1,48 +1,61 @@
-### FORENSIC HANDOFF FOR GROK
+# FORENSIC HANDOFF FOR GROK
+
+**Updated UTC:** 2026-06-09T23:27:18Z
 
 **Trigger Reason:**  
-Sentinel materially worsened from `REVIEW/MEDIUM` in the prior lightweight cycle to `ALERT/HIGH` at `2026-06-09T15:00:01Z`, with `codex_action_required=true`. Jason action remains `false`. Codex remains under no-local-probe/no-installer/no-task-reduction constraints while process launch saturation is treated as active.
+Phase 1 Orchestrator installation window opened after public Sentinel recovered to `PASS/LOW`, `codex_action_required=false`, `jason_action_required=false`, and bounded local `cmd /c echo alive` checks returned consistently. Jason had placed NSSM after the previous `FAIL_NSSM_NOT_FOUND` result. Codex verified and completed the service-level Orchestrator install/start milestone.
 
 **Current State Summary:**  
-- Public dashboard updated UTC: `2026-06-09T15:02:02.856Z`.
-- Automation health: `STALE_STATUS`.
-- Controller updated age: `26` minutes.
-- Platform child progress age: `0` minutes.
-- Mirror updated age: `2` minutes.
-- Watchdog: `REVIEW`, stall risk `High`.
-- Sentinel: `ALERT`, alert level `HIGH`, `codex_action_required=true`, `jason_action_required=false`.
-- ScarFLIX primary architecture: `materialized_webdav_symlink`.
-- Legacy/direct resolver expansion: paused/blocked.
-- Direct/legacy `.strm`: movies `0`, TV `0`, total `0`.
-- Materialized/WebDAV artifacts: `225`.
-- Targeted materialized Plex decision QA: `PASS 124/124`, failed `0`, rows_found `129`.
-- Materialized playback success rate: `100`.
-- Plex playback sample: `REVIEW`, range `4/5`, decision `5/5`.
-- Latest child QA evidence is fresh: `[INFO] Rows selected for Plex decision QA: 1`.
-- Grok-Codex loop: `PASS`; bridge `LOCAL_FALLBACK`; consumer `PASS`; executed actions `1`.
-- Orchestrator Phase 1: code complete/staged, installation on hold.
+- Public dashboard pre-install state: Sentinel `PASS/LOW`, `codex_action_required=false`, `jason_action_required=false`.
+- Echo readiness check: `5/5` PASS; elapsed `54ms`, `14ms`, `14ms`, `13ms`, `14ms`.
+- Service name: `JasonOS_Prime_Orchestrator`.
+- Service existed before this verification run: `true`.
+- Installer rerun this cycle: `false`; service was already installed and running.
+- Service status: `Running`.
+- Windows service process ID: `37396`.
+- Service start registry: `Start=2`, `DelayedAutoStart=1`.
+- Service binary path: `D:\PlexTools\bin\nssm.exe`.
+- Orchestrator health URL: `http://127.0.0.1:8815/healthz`.
+- `/healthz`: HTTP `200`, status `PASS`.
+- Orchestrator version: `0.1.0`.
+- Orchestrator Node PID: `28100`.
+- Owner: `jasonos-orchestrator-28100`.
+- Started UTC: `2026-06-09T23:25:27.465Z`.
+- SQLite status: `PASS_node:sqlite`.
+- Database path: `D:\PlexTools\state\jasonos_prime\jasonos.db`.
+- Worker limits: control `2`, I/O `1`, CPU `1`.
+- Pause flags: `PAUSE_ALL=false`, `PAUSE_PUBLICATION=false`, `SAFE_MODE=false`.
+- Safety flags: legacy/direct resolver expansion disabled; long validation inline disabled; consumer requires allowlisted low/medium approved non-expired instructions.
+- ScarFLIX materialized all-visible decision QA remains `REVIEW 119/229`, failed `110`, success rate `52%`.
+- Playback decision QA remains `FAIL`.
+- Controlled materialized expansion remains ineligible.
+- Legacy/direct resolver expansion remains paused/blocked.
 
 **What I have already tried:**  
-- Per PM/lightweight policy, read public dashboard only.
-- Refreshed `CODEX_STATUS_FOR_GROK.md` locally.
-- Refreshed this handoff because Sentinel worsened materially.
-- Did not run local probes, shell commands, Node probes, PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, publisher, full catalogue checks, orchestrator installer, service installer, or task reduction.
+- Confirmed `Get-Service JasonOS_Prime_Orchestrator` returned an existing `Running` service.
+- Did not rerun the installer because the service already existed.
+- Re-applied delayed automatic startup: `sc.exe config JasonOS_Prime_Orchestrator start= delayed-auto`; result `[SC] ChangeServiceConfig SUCCESS`.
+- Confirmed registry `Start=2`, `DelayedAutoStart=1`.
+- Queried `/healthz` successfully and confirmed Orchestrator `PASS`.
+- Updated `PROJECT_PLAN.md`.
+- Updated `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.md`.
+- No ScarFLIX expansion, publisher, PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, or broad scheduled-task reduction was run.
 
 **My hypothesis on root cause:**  
-The control plane remains unstable under the existing scheduled-task/process-launch saturation pattern. Fresh child QA activity indicates some worker progress, but controller status age and Sentinel state still indicate control-plane staleness. ScarFLIX materialized playback gates remain healthy; this is not currently a materialized/WebDAV playback regression.
+The earlier Phase 1 blocker was missing NSSM plus intermittent process-launch/control-plane instability. NSSM is now present and the Orchestrator service is running. The remaining ScarFLIX blocker is not Orchestrator installation; it is the materialized all-visible decision QA regression and Plex decision timeout behavior on the broader visible set.
 
 **Proposed next steps:**  
-1. Stay in Phase 0 hold: lightweight public/status-only audit and paused/heavily reduced controlled expansion.
-2. Do not install the orchestrator or run scheduled-task reduction while Sentinel is `ALERT/HIGH`.
-3. Continue watching for Sentinel clearing back to `REVIEW/MEDIUM` or `PASS`.
-4. If Sentinel remains `ALERT/HIGH` across repeated cycles or Jason action becomes required, escalate further.
-5. Resume orchestrator syntax/install sequence only after Sentinel improves and host responsiveness is verified.
-6. Keep legacy/direct resolver expansion blocked.
+1. Let `JasonOS_Prime_Orchestrator` run through at least one normal 15-minute cycle and keep checking `/healthz`.
+2. Do not resume ScarFLIX expansion while all-visible materialized QA remains `REVIEW 119/229`.
+3. Do not run broad task reduction yet; first dry-run `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_Orchestrator_ReduceScheduledTasks.ps1` after Orchestrator health remains `PASS`.
+4. Keep Grok bridge/consumer minimal until their logic is migrated into the Orchestrator queue.
+5. Next diagnostic after control-plane stability: enumerate the `110` failed materialized decision rows and classify Plex scan lag vs stale rows vs malformed paths vs source failures.
 
 **Data/files to review:**  
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_outcome_dashboard.json`
-- `D:\PlexTools\public\latest\scarflix_v2\CODEX_STATUS_FOR_GROK.md`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_chained_sequence_plan.json`
-- `D:\PlexTools\public\latest\scarflix_v2\control_plane_stabilisation_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.md`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_install_status.json`
 - `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
-- `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_Orchestrator_InstallService.ps1`
+- `D:\PlexTools\state\jasonos_prime\jasonos.db`
+- `D:\PlexTools\logs\jasonos_prime\orchestrator_stdout.log`
+- `D:\PlexTools\logs\jasonos_prime\orchestrator_stderr.log`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_outcome_dashboard.json`
