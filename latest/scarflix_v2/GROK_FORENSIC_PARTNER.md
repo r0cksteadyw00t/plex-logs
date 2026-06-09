@@ -210,3 +210,23 @@ Bridge v2 treats Grok as an active planner when a valid token is present. It sen
 Consumer v2 executes only instructions that are approved, non-expired, low/medium-risk, target allowlisted, action allowlisted, and do not require a user decision. It may write status/strategy notes or queue detached-task requests for local workers. It must not run long ScarFLIX validation inline, re-enable legacy/direct resolver expansion, or perform destructive operations.
 
 Current known runtime limitation: Codex inline process launch is saturated, so v2 verification is delegated to hidden scheduled tasks. Latest public dashboard still shows targeted materialized QA `PASS 124/124`, representative concurrent QA `PASS 5/5`, materialized artifacts `225`, and legacy/direct resolver expansion paused.
+
+# 2026-06-09 21:45 Australia/Sydney - Command Centre Update
+
+New primary monitoring surface is staged:
+
+- HTML: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_command_center.html`
+- JSON: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_command_center.json`
+- Generator: `D:\PlexTools\Foundry\workers\JasonOS_Prime_CommandCenterDashboard_v1.js`
+- Hidden wrapper: `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_CommandCenterDashboard.vbs`
+- Installer: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_CommandCenterDashboard_InstallTask.ps1`
+
+Command Centre features:
+
+- 15-minute Staged Report as first view.
+- Bridge mode, Grok call status, instruction generated/executed counts, execution success rate, Grok strategy input, ScarFLIX cycle metrics, health score, anomalies, and next actions.
+- Native interactive Gantt derived from project plan, task state, and live ScarFLIX/autonomy metrics.
+- Observability for 24-hour/7-day trends, hidden task health, process saturation, instruction quality, and ScarFLIX QA gates.
+- Project layer for tasks, risks, decisions, next actions, and plan excerpts.
+
+No safety policy changed. Legacy/direct resolver expansion remains paused. Materialized/WebDAV remains primary. Long validation remains detached only.
