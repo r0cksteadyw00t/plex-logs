@@ -1,13 +1,13 @@
 # JasonOS Prime Codex Instruction Consumer Status
 
-- Updated UTC: 2026-06-09T11:02:01.556Z
-- Status: PASS_ALL_SKIPPED_BY_SAFETY_GATE
-- Bridge mode observed: unknown
+- Updated UTC: 2026-06-09T11:17:04.548Z
+- Status: PASS
+- Bridge mode observed: LOCAL_FALLBACK
 - Instructions seen: 1
-- Executable instructions: 0
-- Skipped instructions: 1
-- Actions attempted: 0
-- Actions passed: 0
-- Execution success rate: 0
-- Strategy recommendations observed: 0
-- Autonomy suggestions observed: 0
+- Executable instructions: 1
+- Skipped instructions: 0
+- Actions attempted: 1
+- Actions passed: 1
+- Execution success rate: 100
+- Strategy recommendations observed: 1
+- Autonomy suggestions observed: 1
