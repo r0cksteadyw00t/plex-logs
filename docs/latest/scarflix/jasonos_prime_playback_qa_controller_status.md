@@ -1,7 +1,7 @@
 # JasonOS Prime Playback QA Controller
 
 Status: WAITING_OVERLAP
-Updated UTC: 2026-06-09T14:05:01Z
+Updated UTC: 2026-06-09T14:10:01Z
 Current step: validation_overlap_running
 Direct STRM total: 0
 Materialized/WebDAV primary: true
