@@ -1,8 +1,12 @@
 {
     "component":  "scarflix_v2_candidate_source_model",
-    "status":  "REVIEW",
-    "updated_utc":  "2026-06-09T02:50:35Z",
+    "status":  "PASS",
+    "updated_utc":  "2026-06-09T03:05:10Z",
     "platform_gate_status":  "PASS",
+    "primary_delivery_metric":  "materialized_webdav_backed_playback_success",
+    "primary_playback_architecture":  "materialized_webdav_symlink",
+    "controlled_materialized_webdav_expansion_allowed":  true,
+    "broad_legacy_resolver_expansion_paused":  true,
     "model":  {
                   "failed_source_release_quarantined":  true,
                   "title_remains_wanted_retryable":  true,
@@ -10,7 +14,8 @@
                   "transient_provider_failures_retry_held":  true,
                   "permanent_policy_playback_failures_quarantine_source":  true,
                   "publish_only_after_plex_safe_gate":  true,
-                  "no_catalogue_expansion_before_gate_pass":  true
+                  "no_catalogue_expansion_before_gate_pass":  true,
+                  "raw_stage_only_visibility_blocker_downgraded_for_materialized_path":  true
               },
     "checks":  [
                    {
@@ -19,14 +24,24 @@
                        "detail":  "PlatformGate status is PASS"
                    },
                    {
+                       "name":  "primary_materialized_webdav_architecture",
+                       "pass":  true,
+                       "detail":  "Primary playback architecture is materialized_webdav_symlink"
+                   },
+                   {
+                       "name":  "controlled_materialized_webdav_expansion_allowed",
+                       "pass":  true,
+                       "detail":  "Controlled materialized/WebDAV expansion allowed is True; legacy resolver paused is True"
+                   },
+                   {
                        "name":  "seeder_rejected_stage_hash_guard",
                        "pass":  true,
                        "detail":  "Seeder records/skips exact rejected stage hashes."
                    },
                    {
                        "name":  "seeder_stage_only_not_plex_visible",
-                       "pass":  false,
-                       "detail":  "Raw candidates are staged outside Plex visibility."
+                       "pass":  true,
+                       "detail":  "Raw candidates are intentionally outside Plex visibility until materialized/WebDAV symlink publication and Plex decision QA."
                    },
                    {
                        "name":  "publisher_candidate_reject_function",
@@ -60,7 +75,7 @@
                    }
                ],
     "blockers":  [
-                     "seeder_stage_only_not_plex_visible"
+
                  ],
     "files":  {
                   "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\candidate_source_model_status.json",
