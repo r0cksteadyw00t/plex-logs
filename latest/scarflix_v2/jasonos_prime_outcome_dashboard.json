@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T01:11:29.151Z",
+  "updated_utc": "2026-06-09T01:14:01.461Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -25,11 +25,11 @@
     "materialized_current_publisher_visible_links": 0,
     "materialized_current_publisher_missing_links": 0,
     "materialized_current_publisher_hashes": [],
-    "materialized_canary_decision_qa_status": "REVIEW",
+    "materialized_canary_decision_qa_status": "PASS",
     "materialized_canary_decision_qa_target_count": 10,
-    "materialized_canary_decision_qa_checked": 9,
-    "materialized_canary_decision_qa_rows_found": 9,
-    "materialized_canary_decision_qa_passed": 9,
+    "materialized_canary_decision_qa_checked": 10,
+    "materialized_canary_decision_qa_rows_found": 10,
+    "materialized_canary_decision_qa_passed": 10,
     "materialized_canary_decision_qa_failed": 0,
     "materialized_canary_target_count": 2,
     "materialized_canary_published": 2,
@@ -104,9 +104,9 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 11,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 14,
+    "mirror_updated_age_minutes": 1,
     "next_check_utc": "2026-06-09T01:15:24Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
@@ -116,7 +116,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260609.log",
     "last_progress_utc": "2026-06-09T01:00:09.947Z",
-    "age_minutes": 11,
+    "age_minutes": 14,
     "last_line": "[2026-06-09T01:00:09Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity",
     "pass_lines": 5,
     "review_lines": 1,
@@ -131,7 +131,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-09T01:10:02Z",
+    "updated_utc": "2026-06-09T01:12:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -183,7 +183,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T01:11:01Z",
+    "updated_utc": "2026-06-09T01:13:01Z",
     "current_milestone": "CANDIDATE_SOURCE_MODEL_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -341,8 +341,8 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-09T01:10:22Z - materialized canary Plex decision QA",
-      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Direct resolver playback failed in Plex; only materialized/WebDAV-backed candidates that pass HLS and Plex decision QA may remain visible.. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=10, rows_found=9, checked=9, decision=9/9, failed=0, success_rate=100%. Materialized cleanup=PASS_QUARANTINED_FAILED_SOURCES, quarantined_this_run=1, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=6 (publisher=0, scan=6). Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=webdav_map, range=4/5, decision=1/1. Staged pending=1; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=3. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
+      "last_change": "2026-06-09T01:11:54Z - materialized canary Plex decision QA",
+      "current": "Expansion pause=PAUSED_PLAYBACK_FIX reason=Direct resolver playback failed in Plex; only materialized/WebDAV-backed candidates that pass HLS and Plex decision QA may remain visible.. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=PASS, targets=10, rows_found=10, checked=10, decision=10/10, failed=0, success_rate=100%. Materialized cleanup=PASS_QUARANTINED_FAILED_SOURCES, quarantined_this_run=1, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=6 (publisher=0, scan=6). Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=webdav_map, range=4/5, decision=1/1. Staged pending=1; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=3. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 28,
       "eta": "resume controlled materialized/WebDAV publishing",
       "stall_risk": "Medium"
@@ -350,7 +350,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T01:11:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
+      "last_change": "2026-06-09T01:13:01Z - CANDIDATE_SOURCE_MODEL_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=0.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -405,7 +405,7 @@
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
       "last_change": "2026-06-08T01:18:52Z - Durable PlatformGate ownership active",
-      "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=9/9; broad publishing remains paused until all-visible materialized QA passes.",
+      "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=10/10; broad publishing remains paused until all-visible materialized QA passes.",
       "progress": 18,
       "eta": "next: resume controlled materialized/WebDAV publishing",
       "stall_risk": "Medium"
