@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T22:24:02.584Z",
+  "updated_utc": "2026-06-09T22:26:06.797Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -122,11 +122,11 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 6,
-    "platform_child_progress_age_minutes": 73,
+    "controller_updated_age_minutes": 8,
+    "platform_child_progress_age_minutes": 75,
     "mirror_updated_age_minutes": 0,
     "next_check_utc": "2026-06-09T22:23:40Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 2,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
     "last_progress_utc": "2026-06-09T21:10:42.493Z",
-    "age_minutes": 73,
+    "age_minutes": 75,
     "last_line": "[2026-06-09T21:10:42Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 2,
@@ -149,7 +149,7 @@
   "sentinel_status": {
     "status": "REVIEW",
     "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-09T22:24:01Z",
+    "updated_utc": "2026-06-09T22:25:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-09T22:20:03Z",
+    "updated_utc": "2026-06-09T22:25:03Z",
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
@@ -201,7 +201,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T22:23:01Z",
+    "updated_utc": "2026-06-09T22:25:06Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -247,7 +247,7 @@
   },
   "daily_ai_usability": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T22:20:02Z",
+    "updated_utc": "2026-06-09T22:25:01Z",
     "daily_ui_8791": {
       "reachable": true,
       "status": 200,
@@ -368,7 +368,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-09T22:20:02Z - daily AI usability smoke test",
+      "last_change": "2026-06-09T22:25:01Z - daily AI usability smoke test",
       "current": "Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
       "progress": 57,
       "eta": "next: integrate 8805 tool traces into 8791 daily UI",
@@ -395,7 +395,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T22:23:01Z - CONTROLLED_MATERIALIZED_QA_HOLD",
+      "last_change": "2026-06-09T22:25:06Z - CONTROLLED_MATERIALIZED_QA_HOLD",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=0.",
       "progress": 30,
       "eta": "runs every 5 minutes",
