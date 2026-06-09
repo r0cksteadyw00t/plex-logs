@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T15:07:01.739Z",
+  "updated_utc": "2026-06-09T15:09:09.123Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -122,11 +122,11 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 31,
-    "platform_child_progress_age_minutes": 4,
+    "controller_updated_age_minutes": 7,
+    "platform_child_progress_age_minutes": 6,
     "mirror_updated_age_minutes": 0,
-    "next_check_utc": "2026-06-09T14:55:00Z",
-    "next_check_age_minutes": 12,
+    "next_check_utc": "2026-06-09T15:13:59Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
     "last_progress_utc": "2026-06-09T15:03:24.374Z",
-    "age_minutes": 4,
+    "age_minutes": 6,
     "last_line": "[2026-06-09T15:03:24Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 0,
     "review_lines": 1,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "High",
-    "updated_utc": "2026-06-09T15:01:50Z",
+    "updated_utc": "2026-06-09T15:08:59Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "ALERT",
     "alert_level": "HIGH",
-    "updated_utc": "2026-06-09T15:05:01Z",
+    "updated_utc": "2026-06-09T15:07:01Z",
     "codex_action_required": true,
     "jason_action_required": false
   },
@@ -201,7 +201,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T15:06:02Z",
+    "updated_utc": "2026-06-09T15:08:01Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
     "expansion_eligible": true,
     "expansion_started_this_cycle": false,
@@ -294,17 +294,17 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-09T15:09:06.193Z",
+      "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
+      "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
+    },
+    {
       "utc": "2026-06-09T15:03:24.374Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-09T15:03:24Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out."
     },
     {
-      "utc": "2026-06-09T14:50:05.272Z",
-      "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
-      "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
-    },
-    {
-      "utc": "2026-06-09T14:35:37Z",
+      "utc": "2026-06-09T15:01:46Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -395,7 +395,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T15:06:02Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+      "last_change": "2026-06-09T15:08:01Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
       "current": "Status PASS; expansion_eligible=true; expansion_started_this_cycle=false; total_strm=0.",
       "progress": 30,
       "eta": "runs every 5 minutes",
@@ -435,7 +435,7 @@
       "current": "Short scheduled workers active; broader worker swarm pending.",
       "progress": 32,
       "eta": "2-4 days",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     },
     {
       "outcome": "Phone/Multi-Device Federation",
