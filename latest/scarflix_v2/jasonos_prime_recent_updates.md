@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T04:48:01.706Z
+Updated UTC: 2026-06-09T04:50:02.374Z
 Source: live status merge
 
 - 2026-06-09T04:41:16.987Z - Public Mirror Recovered; Lightweight Probe Hardening Started - 2026-06-09 14:20: Latest successful live snapshot before the local execution channel degraded again: Direct/legacy `.strm` counts in Plex Streaming libraries: movies `0`, TV `1`, total `1`. Primary delivery metric remains materialized/WebDAV-backed Plex playback success, not direct `.strm` count. Primary playback architecture remains...
