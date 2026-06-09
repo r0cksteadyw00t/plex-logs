@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-09T08:35:04Z",
-  "current_step": "validation_overlap_running",
+  "status": "PASS_MATERIALIZED_DECISION",
+  "updated_utc": "2026-06-09T09:00:03Z",
+  "current_step": "materialized_playback_decision_pass",
   "jason_action_required": false,
   "counts": {
     "movies": 1,
@@ -19,24 +19,14 @@
   "direct_strm_retry_held_count": 0,
   "materialized_primary": true,
   "materialized_visible_verified": 18,
-  "materialized_decision_qa_status": "REVIEW",
-  "materialized_decision_qa_target_count": 129,
-  "materialized_decision_qa_passed": 3,
-  "materialized_decision_qa_failed": 85,
+  "materialized_decision_qa_status": "PASS",
+  "materialized_decision_qa_target_count": 124,
+  "materialized_decision_qa_passed": 124,
+  "materialized_decision_qa_failed": 0,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
-  "overlap_running": [
-    {
-      "name": "ScarFLIX_v2_MaterializedPlexDecisionQA",
-      "ok": true,
-      "status": "Running",
-      "scheduled_state": "Enabled",
-      "last_run": "9/06/2026 6:08:49 PM",
-      "last_result": "267009",
-      "next_run": "9/06/2026 11:59:00 PM"
-    }
-  ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans_materialized",
@@ -44,15 +34,15 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 8968
+          "pid": 38048
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 26660
+          "pid": 33832
         }
       ]
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Materialized/WebDAV decision QA has passed; next step is client playback durability QA and controlled expansion."
 }
