@@ -1,12 +1,12 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-09T03:52:01Z
+Updated UTC: 2026-06-09T04:04:01Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED
 Next autonomous action: Legacy resolver remains paused; controlled materialized/WebDAV batches are allowed after materialized decision QA PASS.
 Expansion eligible: true
-Expansion started this cycle: true
+Expansion started this cycle: false
 
 ## Actual STRM Counts
 - movies: 0
@@ -30,7 +30,7 @@ Expansion started this cycle: true
 - predictive_simulator: PASS
 - self_evolution: REVIEW
 - dashboard: PASS
-- public_mirror: PASS
+- public_mirror: REVIEW
 
 ## Next 4 Hours
 - Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.
@@ -46,4 +46,4 @@ Expansion started this cycle: true
 - JasonOS_Prime_PublicMirrorPublisher: PASS fast_track_public_status
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
-- ScarFLIX_v2_MaterializedCandidateStageOnly: PASS controlled_materialized_candidate_replenishment
+- controlled_materialized_batch_already_running: PASS 
