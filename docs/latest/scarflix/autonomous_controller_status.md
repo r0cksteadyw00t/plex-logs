@@ -3,7 +3,7 @@
 Status: PASS
 Milestone state: CANDIDATE_SOURCE_MODEL_PASS
 Milestone: PlatformGate and candidate-source retry/quarantine model complete
-Updated UTC: 2026-06-09T20:59:03Z
+Updated UTC: 2026-06-09T21:11:01Z
 Current step: candidate_source_model_pass
 Jason action required: False
 
@@ -20,14 +20,14 @@ Jason action required: False
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: UNKNOWN
+- rclone_mount_status: PASS
 - s_media_ready: True
 - s_catalog_ready: True
 - mount_selfheal_attempted: False
 
 ## Action
 - action_taken: PlatformGate PASS; candidate-source retry/quarantine model verified
-- next_check_utc: 2026-06-09T21:04:25Z
+- next_check_utc: 2026-06-09T21:16:25Z
 
 ## Blockers
 - none
