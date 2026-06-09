@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T05:30:03.182Z
+Updated UTC: 2026-06-09T05:32:05.647Z
 Source: live status merge
 
-- 2026-06-09T05:25:18.662Z - Codex-Side Probe Channel Blocked Again - 2026-06-09 14:45: Last verified lightweight probe snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T04:42:47Z` Probe duration: `93ms` after Node launched
-- 2026-06-09T05:25:11Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-09T05:30:24.182Z - Codex-Side Probe Channel Blocked Again - 2026-06-09 14:45: Last verified lightweight probe snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T04:42:47Z` Probe duration: `93ms` after Node launched
+- 2026-06-09T05:30:14Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T05:02:09.483Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T05:02:09Z] [REVIEW] Decision failed: metadata=42131 title=The Bourne Identity reason=The operation has timed out.
 - 2026-06-09T05:00:59.926Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-09T05:00:59Z] [REVIEW] Final: REVIEW
 - 2026-06-09T04:52:21.528Z - Public Mirror Recovered; Lightweight Probe Hardening Started - 2026-06-09 14:20: Latest successful live snapshot before the local execution channel degraded again: Direct/legacy `.strm` counts in Plex Streaming libraries: movies `0`, TV `1`, total `1`. Primary delivery metric remains materialized/WebDAV-backed Plex playback success, not direct `.strm` count. Primary playback architecture remains...
