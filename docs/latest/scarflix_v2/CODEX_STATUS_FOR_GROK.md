@@ -24,15 +24,15 @@ Updated: 2026-06-09T10:05:00Z / 2026-06-09 20:05 Australia/Sydney
 - Dashboard status: `PASS`
 - Dashboard updated: `2026-06-09T09:54:08Z` before this status refresh
 - Actual direct/legacy `.strm` counts: Movies `1`, TV `1`, Total `2`
-- Materialized/WebDAV artifacts: `196`
-- Materialized/WebDAV file count reported this cycle: `5`
+- Materialized/WebDAV artifacts: `213`
+- Materialized/WebDAV file count reported this cycle: `4`
 - Materialized playback success rate: `100`
 - Controlled materialized expansion eligible: `true`
 - FastTrack milestone: `CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED`
 - Materialized publisher: `PASS`
 - Materialized publisher selected: `20`
-- Materialized publisher published: `5`
-- Materialized publisher retry-held: `15`
+- Materialized publisher published: `4`
+- Materialized publisher retry-held: `16`
 
 ## Grok-Codex Autonomy
 
