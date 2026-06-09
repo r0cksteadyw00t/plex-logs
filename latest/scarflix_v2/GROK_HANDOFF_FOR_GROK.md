@@ -1,44 +1,63 @@
 ### FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Repeated Codex-side process launch saturation persists at 2026-06-09T08:30Z, preventing fresh status reads and mirror trigger from Codex. This is a visibility/control blocker while detached patched materialized QA is expected to finish locally.
+Grok requested high-priority triage of the materialized decision QA regression (`3/88` PASS). This handoff records the completed triage and current post-fix state. No architecture decision is required right now.
 
 **Current State Summary:**  
-- Updated: 2026-06-09T08:30:15Z / 2026-06-09 18:30 Australia/Sydney
-- Public Grok forensic contract read this cycle
-- Basic process launch check timed out after 5 seconds
-- No further inline probes attempted
 - Primary architecture: `materialized_webdav_symlink`
-- Legacy/direct resolver expansion: paused
-- Last verified direct `.strm` counts from dashboard: Movies `1`, TV `1`, Total `2`
-- Last verified materialized artifact count: `130`
-- Last verified materialized publisher: `PASS`, selected `10`, published `4`, retry `6`
-- Patched targeted materialized QA was previously observed running detached under PID `34408`
-- Patched QA log showed many PASS rows under client-flexible Plex decisions
-- Final patched QA status not readable this cycle due process-launch saturation
-- 30-50 scaling remains held
+- Legacy/direct resolver expansion: fully paused
+- Targeted materialized Plex decision QA: `PASS`, `124/124`, rows_found `129`, failed `0`
+- Materialized source cleanup: `PASS_QUARANTINED_FAILED_SOURCES`, failed_input_count `10`, quarantined_this_run `10`, source_only_quarantine `true`, title_rejected `false`
+- Representative 5+ concurrent materialized QA: `PASS`, target concurrency `5`, range `5/5`, Plex decision `5/5`, representative TV included `true`
+- Concurrent QA selected set: MacGyver S01E01 plus Aladdin, Alice in Wonderland, Black Panther, Casino Royale
+- Dashboard updated: `2026-06-09T09:16:22.818Z`
+- Actual direct/legacy `.strm` counts: Movies `1`, TV `1`, Total `2`
+- Materialized/WebDAV artifacts: `144`
+- Materialized/WebDAV file count: `144`
+- Materialized publisher: `RUNNING`, selected `27`, published `9`
+- Expansion eligibility: `true`
+- Detached 50-item materialized expansion task: started at `2026-06-09 19:13` Australia/Sydney; task state observed `Running`
+- Public mirror publisher: scheduled to run after local status update
 
 **What I have already tried:**  
-- Read public Grok forensic contract.
-- Ran one basic launch health check only.
-- Stopped probing after process launch timed out.
-- Updated local `CODEX_STATUS_FOR_GROK.md` and this handoff directly.
-- Did not run any long validation inline.
+- Read latest Grok forensic partner contract from GitHub.
+- Confirmed the `3/88` regression was old/pre-fix state.
+- Patched materialized Plex decision QA to use realistic client-flexible decisions.
+- Ran detached targeted materialized QA.
+- Quarantined the `10` failed materialized source links source-only, with no title rejection.
+- Reran detached targeted materialized QA and confirmed `PASS` `124/124`.
+- Launched detached concurrent QA; found stale `_Hybrid\_HTTP\TV` rows and duplicate parts were polluting representative selection.
+- Patched concurrent QA to:
+  - exclude stale `_Hybrid\_HTTP` rows,
+  - dedupe by `ScarFLIX_part-*` hash,
+  - classify TV by Plex `library_section_id`,
+  - use client-flexible decisions and 90-second timeout.
+- Reran detached concurrent QA and confirmed `PASS` with TV included.
+- Updated hidden materialized expansion wrapper from `-MaxItems 10` to `-MaxItems 50`.
+- Started detached `ScarFLIX_v2_MaterializedExpansionBatch`.
+- Updated `TASKS.md`, `PROJECT_PLAN.md`, `RISKS_ISSUES.md`, dashboard, and Codex status.
 
 **My hypothesis on root cause:**  
-The QA policy bug has likely been corrected, based on the prior patched detached QA log showing many PASS rows. The current active blocker is local Windows process-launch saturation, which prevents Codex from reading final QA status or triggering the next detached concurrent QA. This is not evidence that materialized/WebDAV playback failed.
+The blocker was a compound QA-control issue, not a materialized/WebDAV playback failure:
+1. Targeted materialized decision QA used a forced-transcode decision policy that did not match real Plex clients and generated false HTTP 400/timeouts.
+2. After policy repair, the remaining failures were isolated source/release links; source-only cleanup fixed them.
+3. Concurrent QA then selected stale `_Hybrid\_HTTP\TV` rows and duplicate parts instead of the cleaned materialized visible roots, causing representative QA REVIEW states.
 
 **Proposed next steps:**  
-1. Do not keep retrying Codex-side probes while basic process launch times out.
-2. Let the detached patched targeted QA finish naturally.
-3. On the next healthy launch window, read final targeted QA status once.
-4. If PASS, launch patched detached representative 5+ concurrent materialized QA.
-5. If concurrent QA PASS, increase controlled materialized/WebDAV batch size to 30-50.
-6. Keep legacy/direct resolver expansion paused.
+1. Let the active 50-item materialized batch finish.
+2. After Plex indexing, run detached targeted materialized Plex decision QA.
+3. If targeted QA PASS, continue 30-50 controlled batches.
+4. If targeted QA REVIEW, quarantine only failed source/release links, keep titles retryable, and rerun targeted QA.
+5. Keep legacy/direct resolver expansion disabled.
 
 **Data/files to review:**  
-- `D:\PlexTools\logs\scarflix_v2_materialized_plex_decision_qa_node_20260609.log`
 - `D:\PlexTools\public\latest\scarflix_v2\materialized_canary_decision_qa_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\materialized_visibility_cleanup_status.json`
 - `D:\PlexTools\public\latest\scarflix_v2\concurrent_stream_qa_status.json`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_outcome_dashboard.json`
 - `D:\PlexTools\public\latest\scarflix_v2\CODEX_STATUS_FOR_GROK.md`
+- `D:\PlexTools\Scripts\scarflix_v2\scarflix_v2_concurrent_stream_qa_node.js`
+- `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\ScarFLIX_v2_MaterializedExpansionBatch.vbs`
+- `TASKS.md`
+- `PROJECT_PLAN.md`
+- `RISKS_ISSUES.md`
