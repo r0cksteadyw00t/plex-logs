@@ -1,46 +1,83 @@
 {
   "schema_version": "grok_codex_instruction.v1",
-  "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-09T10:17:02Z",
-  "source": "local_only_no_token",
-  "human_summary": "No Grok/xAI token file found; bridge wrote a schema-valid non-executable local fallback.",
+  "generated_at": "2026-06-09T11:02:02.742Z",
+  "source": "local_status_fallback",
+  "bridge_mode": "LOCAL_FALLBACK",
+  "fallback_reason": "NO_USABLE_TOKEN",
   "instructions": [
     {
-      "instruction_id": "local-only-no-token-20260609101702",
-      "created_at": "2026-06-09T10:17:02Z",
-      "expires_at": "2026-06-09T11:17:02Z",
-      "target_component": "grok_codex_bridge",
+      "instruction_id": "local-status-summary-20260609110202",
+      "created_at": "2026-06-09T11:02:02.742Z",
+      "expires_at": "2026-06-09T11:47:02.743Z",
+      "target_component": "status_reporting",
       "risk_level": "low",
       "requires_user_decision": false,
-      "approved_for_codex_execution": false,
-      "title": "Local-only Grok bridge fallback",
-      "summary": "No Grok/xAI token is available. Codex must not execute this as a Grok-approved instruction.",
-      "actions": [
-        {
-          "action_type": "status_only",
-          "reason": "Credential missing; keep local ScarFLIX workers authoritative."
-        }
-      ],
+      "approved_for_codex_execution": true,
+      "summary": "Write a safe status summary; do not run long validation inline.",
       "success_criteria": [
-        "Instruction file is schema-valid.",
-        "Codex consumer records that no autonomous Grok-approved action was executed."
+        "CODEX_STATUS_FOR_GROK.md is updated",
+        "Legacy/direct resolver expansion remains paused",
+        "Materialized/WebDAV remains primary"
       ],
       "retry_policy": {
         "max_attempts": 1,
-        "backoff_seconds": 900,
-        "escalate_after_attempts": 1,
-        "escalation_target": "grok_handoff"
+        "retry_delay_seconds": 0,
+        "backoff_strategy": "none",
+        "on_failure": "write_forensic_handoff_if_repeated"
       },
-      "evidence_required": [
-        "jasonos_prime_grok_instruction_bridge_status.json",
-        "jasonos_prime_codex_instruction_consumer_status.json"
-      ],
-      "blocked_actions": [
-        "Do not re-enable legacy/direct resolver expansion.",
-        "Do not run long ScarFLIX validation inline from Codex."
-      ],
-      "source_handoff_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_HANDOFF_FOR_GROK.md",
-      "notes": "Local fallback is intentional and non-destructive."
+      "actions": [
+        {
+          "action_type": "write_status_summary",
+          "parameters": {
+            "mode": "LOCAL_FALLBACK",
+            "reason": "NO_USABLE_TOKEN",
+            "materialized_artifacts": 225,
+            "targeted_qa_status": "PASS",
+            "concurrent_qa_status": "PASS"
+          }
+        }
+      ]
     }
-  ]
+  ],
+  "strategy_recommendations": [
+    {
+      "recommendation_id": "scarflix-controlled-scale",
+      "priority": "high",
+      "target_component": "scarflix_materialized_expansion",
+      "summary": "Allow hidden workers to continue controlled 30-50 item materialized/WebDAV cycles while preserving per-batch targeted QA.",
+      "success_criteria": [
+        "Legacy/direct resolver remains paused",
+        "Targeted materialized Plex decision QA remains PASS",
+        "Representative 5+ concurrent materialized QA remains PASS before larger scaling"
+      ]
+    }
+  ],
+  "autonomy_suggestions": [
+    {
+      "recommendation_id": "process-saturation-backoff",
+      "priority": "high",
+      "target_component": "codex_runtime",
+      "summary": "When basic process launch times out, stop inline probing and rely on hidden scheduled workers plus public status files.",
+      "success_criteria": [
+        "No repeated inline process-launch probes during saturation",
+        "Bridge and consumer still publish status through scheduled tasks"
+      ]
+    }
+  ],
+  "quality_metrics": {
+    "generated_instruction_count": 1,
+    "executable_instruction_count": 1,
+    "strategy_recommendation_count": 1,
+    "autonomy_suggestion_count": 1,
+    "schema_parse_status": "PASS_LOCAL_FALLBACK",
+    "safety_gate_status": "PASS",
+    "component": "grok_instruction_quality",
+    "status": "PASS",
+    "updated_utc": "2026-06-09T11:02:02.746Z",
+    "bridge_mode": "LOCAL_FALLBACK",
+    "last_grok_failure_reason": "NO_USABLE_TOKEN",
+    "instruction_count": 1,
+    "validation_errors": [],
+    "quality_score": 85
+  }
 }
