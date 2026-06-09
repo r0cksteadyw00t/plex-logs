@@ -1,78 +1,69 @@
 # Codex Status for Grok - ScarFLIX v2
 
-Updated: 2026-06-09T08:50:30Z / 2026-06-09 18:50 Australia/Sydney
+Updated: 2026-06-09T09:17:00Z / 2026-06-09 19:17 Australia/Sydney
 
 ## Current Mode
 
 - Primary architecture: `materialized_webdav_symlink`
-- Legacy/direct resolver expansion: paused
-- Controlled materialized/WebDAV expansion: allowed only under targeted materialized Plex decision QA gates
-- 30-50 item scaling: held until the rerun targeted materialized decision QA writes PASS and patched representative 5+ concurrent QA passes
+- Legacy/direct resolver expansion: fully paused
+- Controlled materialized/WebDAV expansion: unlocked for 30-50 item batches after PASS gates
+- Broad/unconstrained expansion: still gated by repeated batch QA and production stability
 
-## Probe Health
+## QA Regression Triage Result
 
-- Public Grok forensic contract was read from GitHub this cycle.
-- Basic process launch is currently healthy.
-- No PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, publisher, or full catalogue checks were run inline.
-- Only detached scheduled tasks were started.
+- The reported `3/88` materialized decision QA regression was not a playback architecture failure.
+- Root cause: automated QA was forcing transcode (`directPlay=0`, `directStream=0`) and stale failed source links remained visible.
+- Fix applied: materialized decision QA now uses `client_flexible_direct_play_stream_allowed`.
+- Source cleanup applied: `10` failed source links quarantined, source-only, no titles rejected.
 
-## Latest Materialized QA State
+## Current Gates
 
-- Patched targeted materialized Plex decision QA final result: `REVIEW`
-- Started: `2026-06-09T08:08:51Z`
-- Ended: `2026-06-09T08:35:59Z`
-- Target count: `134`
-- Rows found: `141`
-- Checked: `134`
-- Passed: `124`
-- Failed: `10`
-- Decision policy: `client_flexible_direct_play_stream_allowed`
-- Improvement versus pre-patch larger-set QA: from `3/88` PASS to `124/134` PASS.
+- Targeted materialized Plex decision QA: `PASS`
+- Targeted QA result: `124/124` PASS, rows_found `129`, failed `0`
+- Materialized cleanup: `PASS_QUARANTINED_FAILED_SOURCES`, quarantined_this_run `10`
+- Representative 5+ concurrent materialized QA: `PASS`
+- Concurrent QA result: target concurrency `5`, range `5/5`, Plex decision `5/5`, TV included `true`
+- Concurrent QA visible set: raw rows `13`, visible rows `13`, unique TV `4`, unique movies `7`
 
-## Cleanup Action Taken
+## Selector Fixes Applied
 
-- Started detached `ScarFLIX_v2_MaterializedVisibilityCleanup`.
-- Cleanup status: `PASS_QUARANTINED_FAILED_SOURCES`
-- Started: `2026-06-09T08:48:44Z`
-- Ended: `2026-06-09T08:48:47Z`
-- Failed input count: `10`
-- Quarantined this run: `10`
-- Source-only quarantine: `true`
-- Title rejected: `false`
-- Quarantine root: `D:\PlexTools\state\scarflix_v2\materialized_source_quarantine\20260609_084844Z`
-- Plex scan triggered: section `5` returned HTTP `200` via `http://192.168.1.184:32400`; localhost tokenless scan attempts returned `401`.
+- Patched `D:\PlexTools\Scripts\scarflix_v2\scarflix_v2_concurrent_stream_qa_node.js`.
+- Excludes stale `_Hybrid\_HTTP` rows from materialized representative QA.
+- Deduplicates rows by `ScarFLIX_part-*` hash.
+- Uses Plex `library_section_id` to classify TV rows.
+- Uses client-flexible Plex decision policy and 90-second decision timeout.
 
-## Rerun Action Taken
+## Expansion Action
 
-- Started detached `ScarFLIX_v2_MaterializedPlexDecisionQA` after cleanup.
-- Scheduled task last run: `2026-06-09 18:49:49 Australia/Sydney`
-- Scheduled task result while running: `267009`
-- Next expected state: final targeted materialized QA should re-check after the failed source links are hidden/quarantined and Plex refresh completes.
+- Updated hidden materialized expansion wrapper:
+  - File: `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\ScarFLIX_v2_MaterializedExpansionBatch.vbs`
+  - Old: `-MaxItems 10`
+  - New: `-MaxItems 50`
+- Detached task started: `ScarFLIX_v2_MaterializedExpansionBatch`
+- Start time: `2026-06-09 19:13` Australia/Sydney
+- Task state after start: `Running`
 
-## Counts And Gates
+## Dashboard Snapshot
 
-- Direct legacy `.strm` count from latest dashboard: Movies `1`, TV `1`, Total `2`
-- Materialized/WebDAV artifacts from latest dashboard: `130`
-- Materialized file count from latest dashboard: `4`
-- Concurrent QA: old pre-rerun result remains `REVIEW`; range reads passed `5/5`, Plex decisions failed `0/5` under the old forced-transcode/20s worker policy
-- Patched concurrent worker exists and syntax-check passed, but it has not been rerun yet
-- Expansion eligible: `false` until targeted QA PASS and patched representative concurrent QA PASS
+- Dashboard status: `PASS`
+- Dashboard updated: `2026-06-09T09:16:22.818Z`
+- Actual direct/legacy `.strm` counts: Movies `1`, TV `1`, Total `2`
+- Materialized/WebDAV artifacts: `144`
+- Materialized/WebDAV file count: `144`
+- Materialized playback success rate: `100`
+- Materialized publisher: `RUNNING`
+- Materialized publisher selected: `27`
+- Materialized publisher published: `9`
+- Controlled materialized expansion eligible: `true`
+- FastTrack milestone: `CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED`
 
-## Current Decision
+## Next Actions
 
-- Do not scale to 30-50 yet.
-- Wait for the detached targeted materialized QA rerun to finish.
-- If targeted QA returns PASS, launch patched detached `ScarFLIX_v2_ConcurrentStreamQA` immediately.
-- If concurrent QA returns PASS, allow controlled materialized/WebDAV batch size increase to 30-50.
-- If targeted QA remains REVIEW, quarantine only failed source/release links again and keep titles retryable.
-
-## Mirror Status
-
-- Local `CODEX_STATUS_FOR_GROK.md` was updated.
-- Public mirror publisher should be triggered after this write.
-- Public mirror failures are treated as recoverable transport issues; local status remains authoritative.
+1. Let the active 50-item materialized batch complete.
+2. Run detached targeted materialized Plex decision QA after Plex indexing catches up.
+3. Quarantine only failed source/release links, keep titles retryable, then continue 30-50 item controlled batches.
 
 ## Jason Action
 
 - No Jason action required.
-- Do not manually test new items based on this heartbeat; wait for final QA gate status or a safe-to-test notification.
+- Do not re-enable legacy/direct resolver expansion.
