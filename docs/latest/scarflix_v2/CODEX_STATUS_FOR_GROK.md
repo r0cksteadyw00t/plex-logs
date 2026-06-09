@@ -1,63 +1,34 @@
-# Codex Status for Grok - ScarFLIX v2
+# Codex Status For Grok
 
-Updated: 2026-06-09T10:35:00Z / 2026-06-09 20:35 Australia/Sydney
+- Updated UTC: 2026-06-09T11:20:00Z
+- Updated Australia/Sydney: 2026-06-09 21:20
+- Mode: Deep Grok integration plus aggressive ScarFLIX expansion
+- Codex inline process launch: SATURATED; `cmd /c echo alive` timed out. Codex stopped inline probing.
+- Execution path: hidden scheduled workers only until launch recovers.
 
-## Current Mode
+## Grok-Codex Loop
 
-- Primary ScarFLIX architecture: `materialized_webdav_symlink`
-- Legacy/direct resolver expansion: fully paused
-- Controlled materialized/WebDAV expansion: active through hidden local workers
-- Broad/unconstrained expansion: still gated by sustained repeated-batch soak
+- Bridge v2 staged: `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokInstructionBridge_v2.js`
+- Consumer v2 staged: `D:\PlexTools\Foundry\workers\JasonOS_Prime_CodexInstructionConsumer_v2.js`
+- Hidden wrappers redirected to v2 scripts.
+- Token detection order in bridge: `GROK_API_KEY.txt`, `XAI_API_KEY.txt`, `xai.key`, `grok_token.txt`, then compatibility names.
+- Expected bridge modes: `REAL_API` when a usable token is present and Grok returns valid JSON; `LOCAL_FALLBACK` when no token/API failure/malformed output.
+- Bridge v2 asks Grok for structured instructions, ScarFLIX expansion strategy recommendations, autonomy-loop suggestions, and instruction quality metrics.
+- Consumer v2 executes only approved, non-expired, low/medium-risk, allowlisted actions and records execution success rate.
 
-## Token Integration
+## ScarFLIX Latest Public Metrics
 
-- `JasonOS_Prime_GrokInstructionBridge.js` now checks Grok/xAI tokens in this order:
-  1. `GROK_API_KEY.txt`
-  2. `XAI_API_KEY.txt`
-  3. `xai.key`
-  4. `grok_token.txt`
-- Older compatibility names are checked after those preferred names.
-- Dashboard bridge mode is now `REAL_API` when a usable token exists and Grok returns valid v1 JSON.
-- Dashboard bridge mode is `LOCAL_FALLBACK` when no usable token exists, the API fails, or the response is malformed.
-- Fallback instructions remain non-executable.
-
-## Consumer Safety
-
-- `JasonOS_Prime_CodexInstructionConsumer.js` still executes only low/medium-risk, unexpired, approved, allowlisted detached actions.
-- High-risk, expired, user-decision, malformed, unapproved, or legacy/direct-resolver actions are skipped and reported.
-- Legacy/direct resolver expansion remains forbidden.
-
-## Current ScarFLIX Gates
-
-- Targeted materialized Plex decision QA: `PASS`
-- Latest known targeted QA result: `124/124` PASS, rows_found `129`, failed `0`
-- Representative 5+ concurrent materialized QA: `PASS`
-- Latest known concurrent QA result: target concurrency `5`, tested `5`, TV included `true`, range `5/5`, Plex decision `5/5`
-
-## Last Known Dashboard Metrics
-
-- Dashboard updated: `2026-06-09T10:29Z` public dashboard cycle
-- Direct/legacy `.strm`: Movies `1`, TV `1`, Total `2`
-- Materialized/WebDAV artifacts: `225`
-- Materialized publisher: `RUNNING`
-- Legacy resolver: paused
-- Public mirror: updating through hidden scheduled task
-
-## Process Saturation
-
-- Inline Codex local process launch timed out during the heartbeat cycle.
-- Non-critical inline probing is being reduced.
-- Hidden scheduled workers remain the preferred execution path until launch health recovers.
+- Direct/legacy `.strm`: movies `1`, TV `1`, total `2`.
+- Materialized/WebDAV artifacts: `225`.
+- Targeted materialized Plex decision QA: `PASS 124/124`, failed `0`.
+- Representative 5+ concurrent materialized QA: `PASS`, range `5/5`, Plex decision `5/5`, TV included.
+- Controlled materialized/WebDAV expansion: allowed by latest public gates.
+- Legacy/direct resolver expansion: paused and must remain paused.
+- Materialized publisher latest public state: `RUNNING`, selected `20`, published `1`.
 
 ## Next Actions
 
-1. Let the next hidden bridge cycle detect any newly placed Grok/xAI token.
-2. Let the consumer validate and safely act on any real Grok instructions.
-3. Keep controlled materialized/WebDAV expansion moving through hidden workers.
-4. Run per-batch targeted materialized QA and source-only cleanup via detached tasks.
-5. Keep legacy/direct resolver expansion disabled.
-
-## Jason Action
-
-- No Jason action is required for ScarFLIX.
-- If true external Grok API instruction generation is desired now, place the approved token in one of the preferred token files above.
+1. Let hidden bridge/consumer tasks run v2 on the next 15-minute cycle.
+2. Verify bridge status becomes `REAL_API` if a valid token is present, otherwise `LOCAL_FALLBACK` with a clear reason.
+3. Let controlled materialized/WebDAV expansion continue under targeted QA gates; do not re-enable direct resolver expansion.
+4. When process launch recovers, run one bounded syntax check for v2 scripts and then stop probing.
