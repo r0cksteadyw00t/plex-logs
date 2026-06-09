@@ -1,14 +1,14 @@
 {
   "schema_version": "grok_codex_instruction.v1",
-  "generated_at": "2026-06-09T11:17:04.203Z",
+  "generated_at": "2026-06-09T12:02:02.205Z",
   "source": "local_status_fallback",
   "bridge_mode": "LOCAL_FALLBACK",
   "fallback_reason": "NO_USABLE_TOKEN",
   "instructions": [
     {
-      "instruction_id": "local-status-summary-20260609111704",
-      "created_at": "2026-06-09T11:17:04.203Z",
-      "expires_at": "2026-06-09T12:02:04.208Z",
+      "instruction_id": "local-status-summary-20260609120202",
+      "created_at": "2026-06-09T12:02:02.205Z",
+      "expires_at": "2026-06-09T12:47:02.206Z",
       "target_component": "status_reporting",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -52,6 +52,19 @@
       ]
     }
   ],
+  "risk_mitigations": [
+    {
+      "recommendation_id": "qa-regression-containment",
+      "priority": "high",
+      "target_component": "qa_orchestration",
+      "summary": "If targeted materialized decision QA or representative concurrent QA regresses, hold batch-size increases and quarantine only confirmed bad source/release rows while keeping titles retryable.",
+      "success_criteria": [
+        "No broad legacy/direct resolver expansion resumes",
+        "Only confirmed bad source rows are quarantined",
+        "Batch scaling resumes only after targeted and concurrent QA return PASS"
+      ]
+    }
+  ],
   "autonomy_suggestions": [
     {
       "recommendation_id": "process-saturation-backoff",
@@ -64,19 +77,31 @@
       ]
     }
   ],
+  "cycle_commentary": {
+    "summary": "Controlled expansion should remain bounded until QA gates are fully PASS.",
+    "health_assessment": "Degraded",
+    "quality_score": 58,
+    "batch_recommendation": {
+      "allowed": false,
+      "recommended_batch_size": "hold_or_10-20",
+      "reason": "One or more expansion gates is not PASS."
+    }
+  },
   "quality_metrics": {
     "generated_instruction_count": 1,
     "executable_instruction_count": 1,
     "strategy_recommendation_count": 1,
     "autonomy_suggestion_count": 1,
+    "risk_mitigation_count": 1,
     "schema_parse_status": "PASS_LOCAL_FALLBACK",
     "safety_gate_status": "PASS",
     "component": "grok_instruction_quality",
     "status": "PASS",
-    "updated_utc": "2026-06-09T11:17:04.209Z",
+    "updated_utc": "2026-06-09T12:02:02.206Z",
     "bridge_mode": "LOCAL_FALLBACK",
     "last_grok_failure_reason": "NO_USABLE_TOKEN",
     "instruction_count": 1,
+    "cycle_commentary_present": true,
     "validation_errors": [],
     "quality_score": 85
   }
