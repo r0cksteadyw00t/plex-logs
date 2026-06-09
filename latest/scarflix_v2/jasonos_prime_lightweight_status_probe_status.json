@@ -1,19 +1,19 @@
 {
   "component": "jasonos_prime_lightweight_status_probe",
-  "status": "PASS",
-  "updated_utc": "2026-06-09T05:42:01Z",
-  "duration_ms": 15,
+  "status": "REVIEW",
+  "updated_utc": "2026-06-09T06:02:07Z",
+  "duration_ms": 5,
   "probe_contract": "Node-only bounded read of current public status JSON; no long validation and no schtasks/process scans.",
   "counts": {
     "direct_movies": 0,
     "direct_tv": 1,
     "direct_total": 1,
-    "materialized_webdav_artifacts": 51,
-    "materialized_webdav_files": 2,
-    "staged_pending": 6
+    "materialized_webdav_artifacts": 73,
+    "materialized_webdav_files": 73,
+    "staged_pending": 22
   },
   "statuses": {
-    "public_mirror": "PASS",
+    "public_mirror": "REVIEW_RECOVERABLE",
     "materialized_decision_qa": "PASS",
     "playback_qa_controller": "PASS_MATERIALIZED_DECISION",
     "fast_track": "PASS",
@@ -40,19 +40,21 @@
     "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
     "expansion_eligible": true,
     "expansion_started_this_cycle": false,
-    "staged_pending_count": 26,
+    "staged_pending_count": 22,
     "materialized_decision_qa_status": "PASS",
-    "updated_utc": "2026-06-09T05:41:01Z"
+    "updated_utc": "2026-06-09T06:02:03Z"
   },
   "mirror": {
-    "status": "PASS",
-    "updated_utc": "2026-06-09T05:41:44.322Z",
+    "status": "REVIEW_RECOVERABLE",
+    "updated_utc": "2026-06-09T05:54:36.439Z",
     "last_success_utc": "2026-06-09T05:41:44.322Z",
-    "failed_count": 0,
+    "failed_count": 67,
     "failure_summary": {
-      "recoverable": 0,
+      "recoverable": 67,
       "hard": 0,
-      "by_status": {}
+      "by_status": {
+        "403": 67
+      }
     }
   },
   "maze_runner": {
@@ -66,8 +68,8 @@
     "ready_to_test": false
   },
   "file_mtimes": {
-    "dashboard": "2026-06-09T05:40:04.098Z",
-    "mirror": "2026-06-09T05:41:44.329Z",
+    "dashboard": "2026-06-09T06:02:03.333Z",
+    "mirror": "2026-06-09T05:54:36.442Z",
     "materialized_qa": "2026-06-09T03:52:15.667Z"
   },
   "files": {
