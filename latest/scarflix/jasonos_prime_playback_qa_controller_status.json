@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "PASS_MATERIALIZED_DECISION",
-  "updated_utc": "2026-06-09T03:40:01Z",
-  "current_step": "materialized_playback_decision_pass",
+  "status": "RUNNING",
+  "updated_utc": "2026-06-09T03:45:01Z",
+  "current_step": "materialized_plex_decision_qa_started",
   "jason_action_required": false,
   "counts": {
     "movies": 0,
@@ -19,9 +19,9 @@
   "direct_strm_retry_held_count": 2,
   "materialized_primary": true,
   "materialized_visible_verified": 18,
-  "materialized_decision_qa_status": "PASS",
-  "materialized_decision_qa_target_count": 19,
-  "materialized_decision_qa_passed": 19,
+  "materialized_decision_qa_status": "REVIEW",
+  "materialized_decision_qa_target_count": 24,
+  "materialized_decision_qa_passed": 23,
   "materialized_decision_qa_failed": 0,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
@@ -34,15 +34,33 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 45824
+          "pid": 43836
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 38512
+          "pid": 12164
         }
       ]
+    },
+    {
+      "action": "start_materialized_plex_decision_qa_task",
+      "result": {
+        "task": "ScarFLIX_v2_MaterializedPlexDecisionQA",
+        "enable_ok": true,
+        "run_ok": true,
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\"."
+      }
+    },
+    {
+      "action": "start_materialized_plex_decision_qa_node_fallback",
+      "result": {
+        "ok": true,
+        "pid": 32392,
+        "script": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js"
+      }
     }
   ],
-  "next_action": "Materialized/WebDAV decision QA has passed; next step is client playback durability QA and controlled expansion."
+  "next_action": "Detached materialized/WebDAV Plex decision QA is running or queued."
 }
