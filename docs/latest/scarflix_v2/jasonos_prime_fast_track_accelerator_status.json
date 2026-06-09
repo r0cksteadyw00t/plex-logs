@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-09T06:19:03Z",
-  "duration_seconds": 2,
+  "updated_utc": "2026-06-09T06:20:14Z",
+  "duration_seconds": 11,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
   "next_autonomous_action": "Legacy resolver remains paused; controlled materialized/WebDAV batches are allowed after materialized decision QA PASS.",
@@ -14,7 +14,7 @@
   "controlled_materialized_webdav_expansion_allowed": true,
   "primary_playback_architecture": "materialized_webdav_symlink",
   "materialized_decision_qa_status": "PASS",
-  "staged_pending_count": 16,
+  "staged_pending_count": 8,
   "expansion_pause": {
     "component": "scarflix_v2_expansion_pause",
     "status": "LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED",
@@ -134,13 +134,13 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 37320,
+      "pid": 34392,
       "error": ""
     },
     {
       "action": "task_run",
-      "task": "ScarFLIX_v2_MaterializedExpansionBatch",
-      "reason": "controlled_materialized_batch_pending_ready",
+      "task": "ScarFLIX_v2_MaterializedCandidateStageOnly",
+      "reason": "controlled_materialized_candidate_replenishment",
       "status": "PASS",
       "error": " "
     }
