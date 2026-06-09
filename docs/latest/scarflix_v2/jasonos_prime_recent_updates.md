@@ -1,9 +1,9 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T08:36:03.058Z
+Updated UTC: 2026-06-09T08:38:01.010Z
 Source: live status merge
 
-- 2026-06-09T08:35:53.549Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-09T08:36:08.229Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
 - 2026-06-09T08:35:51Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T07:35:57.536Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-09T07:35:57Z] [REVIEW] Final: REVIEW
 - 2026-06-09T07:00:15.258Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T07:00:15Z] [PASS] Decision passed: metadata=42387 title=The Bourne Identity
