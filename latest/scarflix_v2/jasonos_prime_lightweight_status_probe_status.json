@@ -1,21 +1,21 @@
 {
   "component": "jasonos_prime_lightweight_status_probe",
   "status": "REVIEW",
-  "updated_utc": "2026-06-09T08:40:03Z",
-  "duration_ms": 51,
+  "updated_utc": "2026-06-09T09:03:04Z",
+  "duration_ms": 110,
   "probe_contract": "Node-only bounded read of current public status JSON; no long validation and no schtasks/process scans.",
   "counts": {
     "direct_movies": 1,
     "direct_tv": 1,
     "direct_total": 2,
-    "materialized_webdav_artifacts": 130,
-    "materialized_webdav_files": 4,
-    "staged_pending": 6
+    "materialized_webdav_artifacts": 125,
+    "materialized_webdav_files": 1,
+    "staged_pending": 7
   },
   "statuses": {
-    "public_mirror": "PASS",
-    "materialized_decision_qa": "REVIEW",
-    "playback_qa_controller": "WAITING_OVERLAP",
+    "public_mirror": "REVIEW_RECOVERABLE",
+    "materialized_decision_qa": "PASS",
+    "playback_qa_controller": "PASS_MATERIALIZED_DECISION",
     "fast_track": "PASS",
     "expansion_pause": "LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED",
     "playback_architecture": "REVIEW_PLEX_SCAN_PENDING",
@@ -29,30 +29,32 @@
     "ai_8805": "PASS"
   },
   "materialized_decision_qa": {
-    "target_count": 134,
-    "rows_found": 141,
-    "checked": 134,
+    "target_count": 124,
+    "rows_found": 129,
+    "checked": 124,
     "passed": 124,
-    "failed": 10,
-    "updated_utc": "2026-06-09T08:35:59Z"
+    "failed": 0,
+    "updated_utc": "2026-06-09T08:52:04Z"
   },
   "fast_track": {
-    "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
-    "expansion_eligible": false,
-    "expansion_started_this_cycle": false,
-    "staged_pending_count": 6,
-    "materialized_decision_qa_status": "REVIEW",
-    "updated_utc": "2026-06-09T08:40:03Z"
+    "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+    "expansion_eligible": true,
+    "expansion_started_this_cycle": true,
+    "staged_pending_count": 7,
+    "materialized_decision_qa_status": "PASS",
+    "updated_utc": "2026-06-09T09:02:02Z"
   },
   "mirror": {
-    "status": "PASS",
-    "updated_utc": "2026-06-09T08:39:18.439Z",
+    "status": "REVIEW_RECOVERABLE",
+    "updated_utc": "2026-06-09T09:03:02.941Z",
     "last_success_utc": "2026-06-09T08:39:18.439Z",
-    "failed_count": 0,
+    "failed_count": 97,
     "failure_summary": {
-      "recoverable": 0,
+      "recoverable": 97,
       "hard": 0,
-      "by_status": {}
+      "by_status": {
+        "403": 97
+      }
     }
   },
   "maze_runner": {
@@ -66,9 +68,9 @@
     "ready_to_test": false
   },
   "file_mtimes": {
-    "dashboard": "2026-06-09T08:38:25.796Z",
-    "mirror": "2026-06-09T08:39:18.440Z",
-    "materialized_qa": "2026-06-09T08:35:59.517Z"
+    "dashboard": "2026-06-09T09:02:02.785Z",
+    "mirror": "2026-06-09T09:03:02.943Z",
+    "materialized_qa": "2026-06-09T08:52:05.034Z"
   },
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_lightweight_status_probe_status.json",
