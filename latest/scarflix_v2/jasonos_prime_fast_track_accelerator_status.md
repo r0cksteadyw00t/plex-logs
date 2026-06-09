@@ -1,12 +1,12 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-09T03:38:01Z
+Updated UTC: 2026-06-09T03:39:02Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED
 Next autonomous action: Legacy resolver remains paused; controlled materialized/WebDAV batches are allowed after materialized decision QA PASS.
 Expansion eligible: true
-Expansion started this cycle: false
+Expansion started this cycle: true
 
 ## Actual STRM Counts
 - movies: 0
@@ -46,4 +46,4 @@ Expansion started this cycle: false
 - JasonOS_Prime_PublicMirrorPublisher: PASS fast_track_public_status
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
-- controlled_materialized_batch_already_running: PASS 
+- ScarFLIX_v2_MaterializedExpansionBatch: PASS controlled_materialized_batch_pending_ready
