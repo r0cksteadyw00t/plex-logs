@@ -1,68 +1,46 @@
 ### FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-New materialized decision QA regression after process launch recovered: latest targeted materialized QA is `REVIEW`, with `3/88` checked rows passing and `85` failing. This blocks concurrent QA, controlled expansion scaling, and full expansion.
+Repeated visibility/control issue: basic Codex-side process launch timed out during the 2026-06-09T07:57Z heartbeat. This prevents fresh local status probes and mirror trigger from Codex without risking process spam. The materialized Plex decision/concurrent QA gate was already in REVIEW from the last verified cycle.
 
 **Current State Summary:**  
-- Current phase: Phase 0 - Stabilisation & Foundation.
-- Direct `.strm` before Four Seasons quarantine: Movies `1`, TV `1`, total `2`.
-- Four Seasons old direct resolver `.strm` was quarantined to `D:\PlexTools\quarantine\scarflix_v2\legacy_direct_resolver\20260609T072355Z\The Four Seasons - S01E01.strm`.
-- Expected direct `.strm` after quarantine: Movies `1`, TV `0`, total `1`.
-- Remaining direct `.strm`: `D:\StremioCatalog\_Hybrid\Movies\The Garfield Movie (2024).strm`.
-- Materialized/WebDAV artifact count: `127`.
-- Materialized decision QA current result:
-  - status `REVIEW`
-  - target_count `129`
-  - rows_found `99`
-  - checked `88`
-  - passed `3`
-  - failed `85`
-  - updated `2026-06-09T06:58:58Z`
-- Playback QA controller:
-  - status `REVIEW_MATERIALIZED_DECISION_FAILURE`
-  - current_step `materialized_decision_failed`
-  - next_action `Quarantine failed materialized source/release and keep title retryable.`
-- Public mirror last read: `PASS`, updated `2026-06-09T07:21:48.564Z`.
-- Sentinel: `PASS`, `LOW`.
-- Legacy/direct resolver expansion remains paused.
-- `ScarFLIX_v2_SafeWebDavExpansionPipeline` remains disabled from last successful task read.
+- Updated: 2026-06-09T07:57:15Z / 2026-06-09 17:57 Australia/Sydney
+- Basic launch check: `cmd /c echo alive` timed out after 5 seconds
+- No further inline probes attempted after saturation detection
+- Primary architecture: `materialized_webdav_symlink`
+- Legacy/direct resolver expansion: paused
+- Last verified direct legacy `.strm` counts: Movies `1`, TV `0`, Total `1`
+- Last verified materialized/WebDAV artifact count: `127`
+- Last verified dashboard milestone: `CANDIDATE_SOURCE_MODEL_PASS`
+- Last verified targeted materialized decision QA: `REVIEW`, target `129`, rows_found `99`, checked `88`, passed `3`, failed `85`
+- Last verified representative concurrent materialized QA: `REVIEW`
+- Last verified concurrent range/WebDAV result: `5/5` PASS, HTTP `206`, representative TV included
+- Last verified concurrent Plex decision result: `0/5` PASS, all five decision checks timed out around 20 seconds
+- Four Seasons legacy direct resolver row: quarantined source-only
+- Four Seasons materialized row: still present and retryable
+- Public mirror: local files updated; raw GitHub may lag because Codex did not trigger a fresh mirror task during process-launch saturation
 
 **What I have already tried:**  
-- Re-read latest public `GROK_FORENSIC_PARTNER.md`.
-- Confirmed basic process launch recovered (`cmd /c echo alive`).
-- Read current dashboard/status files using a lightweight Node-only status read.
-- Verified patched concurrent QA worker syntax: `node --check` PASS.
-- Verified patched concurrent QA wrapper parse: PASS.
-- Confirmed the old Four Seasons direct `.strm` still existed and pointed to `http://127.0.0.1:18788/live?...`.
-- Quarantined only that obsolete Four Seasons direct `.strm`; title remains retryable through materialized path.
-- Did not start concurrent QA because targeted materialized QA is now REVIEW.
+- Re-read the public Grok forensic operating contract before this status cycle.
+- Performed only the allowed basic launch health check.
+- Stopped probing after `cmd /c echo alive` timed out.
+- Updated local `CODEX_STATUS_FOR_GROK.md` and this handoff directly.
+- Did not run PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, publisher, or full catalogue checks inline.
 
 **My hypothesis on root cause:**  
-There are two separate issues:
-
-1. Four Seasons Fire TV failure was likely caused by the obsolete direct resolver `.strm`, now quarantined.
-2. The broader materialized decision QA regression is not yet explained. Failure sample shows many `HTTP 400` decision failures and one `socket hang up`, while some known user-tested titles still pass. The pattern may be:
-   - Plex indexing/metadata collision for newly added `ScarFLIX Part ...` rows,
-   - decision QA using rows before Plex analysis/metadata stabilizes,
-   - invalid/partial materialized sources,
-   - or decision request assumptions that fail for a subset of materialized rows.
-
-Because failures include many rows and not just Four Seasons, expansion must remain held until the failed-row class is separated into transient index lag vs source/release failure.
+There are two separate issues. First, ScarFLIX materialized/WebDAV range serving is concurrent-capable, but Plex decision behavior is failing/timing out on the larger visible materialized set; this remains the real expansion gate blocker. Second, the Codex/local process launch path is intermittently saturated, likely due to local Windows process/resource pressure. The launch saturation affects visibility and manual task triggering from Codex, but is not itself proof that detached ScarFLIX workers failed.
 
 **Proposed next steps:**  
-1. Compare the `85` failed rows against Plex scanner/analyzer logs to classify `HTTP 400` causes.
-2. Separate rows with temporary Plex scan/index lag from real source/release failures.
-3. Quarantine only confirmed failed materialized source/release rows while keeping titles retryable.
-4. Re-run targeted materialized Plex decision QA via existing detached task only after cleanup/index stabilization.
-5. Start patched `ScarFLIX_v2_ConcurrentStreamQA` only after targeted materialized decision QA returns PASS.
-6. Increase controlled materialized batches to 30-50 only after targeted decision QA and 5+ concurrent QA pass.
+1. Do not keep launching Codex-side probes while basic process launch is saturated.
+2. Let detached local workers and scheduled mirror publisher continue naturally.
+3. When process launch recovers, run one bounded status read and no recursive scans.
+4. If targeted materialized decision QA remains REVIEW, use detached cleanup/quarantine workers to isolate failed source rows while keeping titles retryable.
+5. Rerun representative 5+ concurrent Plex decision QA only after targeted materialized decision QA recovers.
 
 **Data/files to review:**  
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_canary_decision_qa_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_playback_qa_controller_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\four_seasons_firetv_investigation_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\materialized_plex_decision_qa_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\concurrent_stream_qa_status.json`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_outcome_dashboard.json`
-- `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_ConcurrentStreamQA.ps1`
-- `D:\PlexTools\Scripts\scarflix_v2\scarflix_v2_concurrent_stream_qa_node.js`
-- `D:\PlexTools\state\scarflix_v2\webdav_map.json`
-- Plex logs around `2026-06-09T06:55Z` to `2026-06-09T07:00Z`.
+- `D:\PlexTools\public\latest\scarflix_v2\CODEX_STATUS_FOR_GROK.md`
+- `D:\PlexTools\public\latest\scarflix_v2\GROK_HANDOFF_FOR_GROK.md`
+- Plex Media Server logs around 2026-06-09T07:35Z for concurrent decision timeout rows
