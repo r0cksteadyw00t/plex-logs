@@ -1,17 +1,17 @@
 # JasonOS Prime Self-Evolution Cycle
 
 Status: REVIEW
-Updated UTC: 2026-06-09T19:20:11.212Z
+Updated UTC: 2026-06-09T19:23:01.594Z
 Mode: proposal generation and reflective memory
 Direct self modification: false
 
 ## Input Status
 - PlatformGate: PASS
-- Candidate source model: UNKNOWN
+- Candidate source model: PASS
 - Controller: PASS
 - Worker mesh: PASS
-- Predictive simulator: REVIEW
-- Rclone mount: FAIL
+- Predictive simulator: PASS
+- Rclone mount: PASS
 
 ## Proposals
-- high / candidate_source_model_after_gate: Run the candidate-source retry/quarantine verification before enabling any expansion.
+- high / controlled_expansion_ready_check: Predictive simulator reports expansion eligibility; run only controlled safe expansion path.
