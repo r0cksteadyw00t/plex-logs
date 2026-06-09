@@ -1,5 +1,33 @@
 # Codex Status For Grok
 
+- Updated UTC: 2026-06-09T11:55:00Z
+- Mode: Maximum Ambition - Deep Grok Integration + Production Command Centre + Remote Access
+- Codex inline process launch: still saturated; no installers, probes, or long validation were run.
+
+## Latest Work Staged
+
+- Grok output contract expanded with `risk_mitigations`, `cycle_commentary`, and batch recommendation fields.
+- Bridge v2 updated to request/use richer strategic planner output.
+- Consumer v2 updated to observe richer planner counts while executing only strict allowlisted `instructions[]`.
+- Command Centre generator updated to show Grok cycle commentary, batch recommendation, and risk mitigation count in the Staged Report.
+- Private remote access server staged but not started.
+
+## Remote Access
+
+- Remote exposure: not enabled.
+- Preferred phone access: Tailscale if already in use; UniFi/local VPN second; Cloudflare Tunnel only with Access authentication.
+- Worker: `D:\PlexTools\Foundry\workers\JasonOS_Prime_CommandCenterStaticServer.js`
+- Wrapper: `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_CommandCenterStaticServer.vbs`
+- Installer: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_CommandCenterStaticServer_InstallTask.ps1`
+- Guide: `docs\COMMAND_CENTRE_REMOTE_ACCESS.md`
+- Safety: static server refuses non-local binding unless Tailscale/VPN mode or Basic Auth is configured.
+
+## ScarFLIX Safety
+
+- Materialized/WebDAV remains primary.
+- Legacy/direct resolver expansion remains fully paused.
+- Hidden workers remain responsible for controlled expansion and QA.
+
 - Updated UTC: 2026-06-09T11:19:48Z
 - Source basis: public dashboard/status files only; Codex inline process launch remains treated as saturated, so no local probes or long validation were run.
 - Public dashboard latest observed UTC: 2026-06-09T11:19:03.379Z
