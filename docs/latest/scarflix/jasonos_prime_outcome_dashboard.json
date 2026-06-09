@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T07:06:50.927Z",
+  "updated_utc": "2026-06-09T07:10:23.949Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -111,13 +111,13 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 6,
-    "platform_child_progress_age_minutes": 6,
+    "controller_updated_age_minutes": 0,
+    "platform_child_progress_age_minutes": 7,
     "mirror_updated_age_minutes": 0,
-    "next_check_utc": "2026-06-09T07:05:36Z",
+    "next_check_utc": "2026-06-09T07:11:56Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -126,7 +126,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260609.log",
     "last_progress_utc": "2026-06-09T07:00:15.258Z",
-    "age_minutes": 6,
+    "age_minutes": 7,
     "last_line": "[2026-06-09T07:00:15Z] [PASS] Decision passed: metadata=42387 title=The Bourne Identity",
     "pass_lines": 7,
     "review_lines": 2,
@@ -135,7 +135,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-09T07:00:27Z",
+    "updated_utc": "2026-06-09T07:06:56Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -193,7 +193,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T07:05:02Z",
+    "updated_utc": "2026-06-09T07:06:02Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -270,12 +270,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-09T07:00:40.482Z",
+      "utc": "2026-06-09T07:07:02.520Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-09T07:00:31Z",
+      "utc": "2026-06-09T07:06:51Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -362,7 +362,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T07:05:02Z - CONTROLLED_MATERIALIZED_QA_HOLD",
+      "last_change": "2026-06-09T07:06:02Z - CONTROLLED_MATERIALIZED_QA_HOLD",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=2.",
       "progress": 30,
       "eta": "runs every 5 minutes",
