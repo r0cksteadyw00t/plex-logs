@@ -124,3 +124,13 @@ Token detection order:
 4. `grok_token.txt`
 
 The bridge also keeps older lowercase/compatibility names after those four preferred names.
+# 2026-06-09 21:20 Australia/Sydney - v2 Bridge/Consumer Extension
+
+The v1 envelope remains canonical, but it now explicitly supports richer planner output:
+
+- `instructions`: strict executable instruction candidates.
+- `strategy_recommendations`: high-level ScarFLIX expansion strategy and planning guidance.
+- `autonomy_suggestions`: loop/process improvement suggestions.
+- `quality_metrics`: bridge-side instruction quality, generated/executable counts, and validation status.
+
+Codex execution remains intentionally narrow. The consumer may execute only approved, non-expired, low/medium-risk, allowlisted actions. It may write status/strategy notes or queue detached-task requests for local worker review. It must not run PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, publishers, or full catalogue checks inline, and it must not re-enable legacy/direct resolver expansion.
