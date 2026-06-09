@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T06:19:02.678Z
+Updated UTC: 2026-06-09T06:21:01.977Z
 Source: live status merge
 
-- 2026-06-09T06:18:37.180Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:18: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:16:06Z` Probe duration: `38ms`
+- 2026-06-09T06:20:29.274Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:18: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:16:06Z` Probe duration: `38ms`
+- 2026-06-09T06:20:20Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:15:56.866Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:10: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:07:03Z` Probe duration: `30ms`
-- 2026-06-09T06:15:31Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:10:25.605Z - Controlled Materialized Batch Progressing Under Lightweight Probe - 2026-06-09 15:52: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T05:52:13Z` Probe duration: `69ms`
 - 2026-06-09T05:55:11.392Z - Codex-Side Probe Channel Blocked Again - 2026-06-09 14:45: Last verified lightweight probe snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T04:42:47Z` Probe duration: `93ms` after Node launched
 - 2026-06-09T05:02:09.483Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T05:02:09Z] [REVIEW] Decision failed: metadata=42131 title=The Bourne Identity reason=The operation has timed out.
