@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T08:05:08.350Z",
+  "updated_utc": "2026-06-09T08:06:05.122Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -85,7 +85,7 @@
     "materialized_publisher_retry": 6,
     "playback_qa_controller_status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
     "playback_qa_controller_step": "materialized_decision_failed",
-    "playback_qa_direct_strm_admission_status": "REVIEW_RETRY_HELD",
+    "playback_qa_direct_strm_admission_status": "PASS",
     "playback_qa_decision_status": "PASS",
     "playback_qa_concurrent_status": "REVIEW",
     "visible_qa_count": 1,
@@ -116,10 +116,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
-    "platform_child_progress_age_minutes": 29,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 30,
     "mirror_updated_age_minutes": 0,
-    "next_check_utc": "2026-06-09T08:07:06Z",
+    "next_check_utc": "2026-06-09T08:10:27Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -128,7 +128,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260609.log",
     "last_progress_utc": "2026-06-09T07:35:57.536Z",
-    "age_minutes": 29,
+    "age_minutes": 30,
     "last_line": "[2026-06-09T07:35:57Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 4,
@@ -137,7 +137,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-09T08:01:38Z",
+    "updated_utc": "2026-06-09T08:05:19Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -158,7 +158,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T08:00:17Z",
+    "updated_utc": "2026-06-09T08:05:09Z",
     "checked_visible": 2,
     "passed_visible": 2,
     "failed_visible": 0,
@@ -191,7 +191,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T08:04:06Z",
+    "updated_utc": "2026-06-09T08:05:09Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -268,12 +268,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-09T08:02:13.183Z",
+      "utc": "2026-06-09T08:05:38.556Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-09T08:01:48Z",
+      "utc": "2026-06-09T08:05:22Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -360,7 +360,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T08:04:06Z - CONTROLLED_MATERIALIZED_QA_HOLD",
+      "last_change": "2026-06-09T08:05:09Z - CONTROLLED_MATERIALIZED_QA_HOLD",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=2.",
       "progress": 30,
       "eta": "runs every 5 minutes",
