@@ -1,6 +1,6 @@
 # Codex Status for Grok - ScarFLIX v2
 
-Updated: 2026-06-09T08:12:00Z / 2026-06-09 18:12 Australia/Sydney
+Updated: 2026-06-09T08:15:15Z / 2026-06-09 18:15 Australia/Sydney
 
 ## Current Mode
 
@@ -9,54 +9,37 @@ Updated: 2026-06-09T08:12:00Z / 2026-06-09 18:12 Australia/Sydney
 - Controlled materialized/WebDAV expansion: allowed only under targeted materialized Plex decision QA gates
 - 30-50 item scaling: held until patched targeted materialized decision QA writes final PASS, then patched representative 5+ concurrent QA passes
 
-## Investigation Result
+## Probe Health
 
-The larger-set materialized Plex decision QA failure is not primarily WebDAV range failure.
+- Public Grok forensic contract was read from GitHub for this cycle.
+- Basic process launch check timed out: `Write-Output alive` did not return within 5 seconds.
+- Per operating rules, no further Codex-side probes were attempted.
+- No PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, publisher, or full catalogue checks were run inline.
 
-Evidence:
+## Last Verified State Before Saturation
 
-- Concurrent WebDAV/range QA passed `5/5` with HTTP `206`.
-- Plex logs show real client-style decisions with `directPlay=1&directStream=1&directStreamAudio=1` returning HTTP `200` for materialized rows.
-- The old QA workers forced `directPlay=0&directStream=0&directStreamAudio=0`, which produced widespread HTTP `400` and long decision/container timeouts.
-- Some visible rows were stale or misindexed as `ScarFLIX Part <hash>`, so cleanup/index catch-up still matters.
-
-## Changes Made
-
-- Backed up both QA workers under `D:\PlexTools\backups`.
-- Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`:
-  - blocking policy is now `client_flexible_direct_play_stream_allowed`
-  - forced-transcode policy is diagnostic-only
-- Patched `D:\PlexTools\Scripts\scarflix_v2\scarflix_v2_concurrent_stream_qa_node.js`:
-  - same client-flexible policy
-  - Plex decision timeout increased from 20s to 90s
-- Syntax checks passed for both Node workers.
-- Started detached `ScarFLIX_v2_MaterializedPlexDecisionQA`.
-
-## Current Detached QA State
-
-- Detached QA PID observed: `34408`
+- Patched targeted materialized Plex decision QA was running detached.
+- Observed detached QA PID: `34408`
 - Scheduled task result while running: `267009`
-- Log shows many PASS rows after patch, including `Aladdin`, `Alice in Wonderland`, `Black Panther`, `Casino Royale`, `Free Guy`, `Mulan`, `A Beautiful Mind`, and many Discover Movies rows.
-- One early row showed `socket hang up`; final QA status has not been written yet.
-- Process launch became unstable while the detached QA task was active, so Codex stopped live polling.
+- The patched QA log showed many PASS rows under `client_flexible_direct_play_stream_allowed`.
+- One early row showed `socket hang up`; final status had not written before process-launch saturation returned.
+- Latest dashboard before patch cycle: direct `.strm` Movies `1`, TV `1`, Total `2`; materialized artifact count `130`; materialized publisher `PASS`, selected `10`, published `4`, retry `6`.
 
 ## Scaling Decision
 
-- Do not scale to 30-50 yet.
-- When detached targeted materialized QA writes final PASS:
-  1. start detached `ScarFLIX_v2_ConcurrentStreamQA` under the patched client-flexible policy;
-  2. if concurrent QA passes, increase controlled materialized/WebDAV batch size to 30-50;
-  3. keep legacy/direct resolver expansion paused.
+- Do not scale to 30-50 while fresh final QA status cannot be read.
+- Wait for local launch path to recover.
+- Then read the patched targeted QA final status once.
+- If targeted QA is PASS, launch patched detached representative 5+ materialized concurrent QA.
+- If concurrent QA is PASS, allow controlled materialized/WebDAV batch size increase to 30-50.
 
-## PM Docs Updated
+## Mirror Status
 
-- `TASKS.md`
-- `PROJECT_PLAN.md`
-- `RISKS_ISSUES.md`
+- Local status and handoff files were updated directly.
+- A fresh mirror push was not attempted because basic process launch is currently saturated.
+- Hidden mirror publisher should retry naturally when local launch health recovers.
 
-## Next Actions
+## Jason Action
 
-1. Wait for detached targeted materialized QA final status.
-2. If PASS, run detached 5+ concurrent materialized QA with patched policy.
-3. If concurrent QA PASS, scale controlled materialized/WebDAV batches to 30-50.
-4. If targeted QA remains REVIEW only for isolated failed rows, run detached source-level cleanup/quarantine and rerun QA.
+- No Jason action required.
+- Do not manually test new titles based on this heartbeat; wait for final targeted QA and concurrent QA status.
