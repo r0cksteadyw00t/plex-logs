@@ -1,10 +1,10 @@
 ### FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Repeated control-plane alert: dashboard still reports automation health `STALE_STATUS`, watchdog stall risk `High`, and sentinel `ALERT` with `codex_action_required=true`. Jason action remains `false`. Codex cannot run recovery commands because basic process launch remains saturated, so this is escalated as an orchestration/visibility stall while ScarFLIX materialized playback gates remain healthy.
+Repeated control-plane alert persists: dashboard reports automation health `STALE_STATUS`, watchdog stall risk `High`, and sentinel `ALERT` with `codex_action_required=true`. Jason action remains `false`. Codex cannot run local recovery because process launch remains saturated. ScarFLIX materialized playback gates remain healthy.
 
 **Current State Summary:**  
-- Public dashboard updated UTC: `2026-06-09T13:04:01.893Z`.
+- Public dashboard updated UTC: `2026-06-09T13:18:02.314Z`.
 - ScarFLIX primary architecture: `materialized_webdav_symlink`.
 - Legacy/direct resolver expansion: paused/blocked.
 - Direct/legacy `.strm`: movies `1`, TV `0`, total `1`.
@@ -14,8 +14,10 @@ Repeated control-plane alert: dashboard still reports automation health `STALE_S
 - Materialized publisher: `RUNNING`, selected `20`, published `1`.
 - Controlled materialized expansion eligible: `true`.
 - Plex playback sample: `REVIEW`, range `4/5`, decision `5/5`.
-- Latest child QA line: `The Bourne Identity` timeout at `2026-06-09T11:03:48Z`.
-- Automation health: `STALE_STATUS`; controller updated age `8` minutes.
+- Latest child QA progress is positive: `[PASS] Decision passed: metadata=46093 title=The Bourne Identity`.
+- Child QA progress UTC: `2026-06-09T13:08:01.177Z`, age `10` minutes.
+- Automation health: `STALE_STATUS`; controller updated age `10` minutes.
+- Platform child active: `true`; platform runner running: `false`.
 - Watchdog: `REVIEW`, stall risk `High`.
 - Sentinel: `ALERT`, alert level `HIGH`, `codex_action_required=true`, `jason_action_required=false`.
 - FastTrack: `PASS`, milestone `CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED`.
@@ -29,7 +31,7 @@ Repeated control-plane alert: dashboard still reports automation health `STALE_S
 - Did not run PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, publisher, full catalogue checks, service installers, or task disablement inline.
 
 **My hypothesis on root cause:**  
-The host remains constrained by process-launch saturation from the existing many-short-lived scheduled task model. Existing ScarFLIX materialized playback gates are healthy, but the controller/worker status refresh cadence is stale enough to keep sentinel in high alert. This is not currently evidence of a materialized/WebDAV playback architecture regression.
+The host remains constrained by process-launch saturation from the existing many-short-lived scheduled task model. ScarFLIX materialized playback gates and child QA evidence are healthy, but controller status refresh cadence remains stale enough to keep sentinel in high alert. This is a control-plane/orchestration saturation issue, not a materialized/WebDAV playback regression.
 
 **Proposed next steps:**  
 1. Continue allowing existing watchdog/sentinel bounded recovery while Jason action remains false and materialized QA remains PASS.
