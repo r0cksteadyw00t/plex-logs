@@ -22,12 +22,12 @@ Jason action required: False
 ## Infrastructure
 - rclone_mount_status: FAIL
 - s_media_ready: True
-- s_catalog_ready: True
+- s_catalog_ready: False
 - mount_selfheal_attempted: False
 
 ## Action
 - action_taken: PlatformGate PASS; candidate-source retry/quarantine model verified
-- next_check_utc: 2026-06-09T17:10:42Z
+- next_check_utc: 2026-06-09T17:15:38Z
 
 ## Blockers
 - none
