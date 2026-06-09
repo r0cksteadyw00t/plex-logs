@@ -55,6 +55,35 @@
       },
       "default": []
     },
+    "risk_mitigations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/recommendation"
+      },
+      "default": []
+    },
+    "cycle_commentary": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "health_assessment": {
+          "type": "string"
+        },
+        "batch_recommendation": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "quality_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "default": {}
+    },
     "quality_metrics": {
       "type": "object",
       "additionalProperties": true,
