@@ -1,14 +1,14 @@
 {
   "schema_version": "grok_codex_instruction.v1",
-  "generated_at": "2026-06-09T11:02:02.742Z",
+  "generated_at": "2026-06-09T11:17:04.203Z",
   "source": "local_status_fallback",
   "bridge_mode": "LOCAL_FALLBACK",
   "fallback_reason": "NO_USABLE_TOKEN",
   "instructions": [
     {
-      "instruction_id": "local-status-summary-20260609110202",
-      "created_at": "2026-06-09T11:02:02.742Z",
-      "expires_at": "2026-06-09T11:47:02.743Z",
+      "instruction_id": "local-status-summary-20260609111704",
+      "created_at": "2026-06-09T11:17:04.203Z",
+      "expires_at": "2026-06-09T12:02:04.208Z",
       "target_component": "status_reporting",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -33,7 +33,7 @@
             "reason": "NO_USABLE_TOKEN",
             "materialized_artifacts": 225,
             "targeted_qa_status": "PASS",
-            "concurrent_qa_status": "PASS"
+            "concurrent_qa_status": "REVIEW"
           }
         }
       ]
@@ -42,9 +42,9 @@
   "strategy_recommendations": [
     {
       "recommendation_id": "scarflix-controlled-scale",
-      "priority": "high",
+      "priority": "medium",
       "target_component": "scarflix_materialized_expansion",
-      "summary": "Allow hidden workers to continue controlled 30-50 item materialized/WebDAV cycles while preserving per-batch targeted QA.",
+      "summary": "Hold scaling until targeted materialized QA and representative concurrent QA are both PASS.",
       "success_criteria": [
         "Legacy/direct resolver remains paused",
         "Targeted materialized Plex decision QA remains PASS",
@@ -73,7 +73,7 @@
     "safety_gate_status": "PASS",
     "component": "grok_instruction_quality",
     "status": "PASS",
-    "updated_utc": "2026-06-09T11:02:02.746Z",
+    "updated_utc": "2026-06-09T11:17:04.209Z",
     "bridge_mode": "LOCAL_FALLBACK",
     "last_grok_failure_reason": "NO_USABLE_TOKEN",
     "instruction_count": 1,
