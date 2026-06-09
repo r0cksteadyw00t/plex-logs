@@ -1,24 +1,18 @@
 # Grok Instructions For Codex
 
-Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-09T10:17:02Z
-Source: local_only_no_token
-
-## Summary
-
-No Grok/xAI token file found; bridge wrote a schema-valid non-executable local fallback.
-
-## Validation
-
-PASS
+- Updated UTC: 2026-06-09T11:02:02.748Z
+- Source: local_status_fallback
+- Bridge mode: LOCAL_FALLBACK
+- Instruction count: 1
+- Executable instruction count: 1
+- Quality status: PASS
 
 ## Instructions
 
-### local-only-no-token-20260609101702
-
-- Target: `grok_codex_bridge`
-- Risk: `low`
-- Requires user decision: `false`
-- Approved for Codex execution: `false`
-- Expires: `2026-06-09T11:17:02Z`
-- Summary: No Grok/xAI token is available. Codex must not execute this as a Grok-approved instruction.
+### local-status-summary-20260609110202
+- Target: status_reporting
+- Risk: low
+- Approved: true
+- Requires user decision: false
+- Expires UTC: 2026-06-09T11:47:02.743Z
+- Summary: Write a safe status summary; do not run long validation inline.
