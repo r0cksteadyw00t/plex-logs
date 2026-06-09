@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-09T04:28:06Z",
-  "duration_seconds": 5,
+  "updated_utc": "2026-06-09T04:30:06Z",
+  "duration_seconds": 6,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
   "next_autonomous_action": "Legacy resolver remains paused; controlled materialized/WebDAV batches are allowed after materialized decision QA PASS.",
@@ -58,7 +58,9 @@
   "actual_strm_counts": {
     "movies": 0,
     "tv": 1,
-    "total": 1
+    "total": 1,
+    "count_probe_timed_out": false,
+    "staged_pending_probe_timed_out": false
   },
   "status_inputs": {
     "platform_gate": "PASS",
@@ -128,6 +130,12 @@
       "reason": "fast_track_daily_ai_keepalive",
       "status": "PASS",
       "error": " "
+    },
+    {
+      "action": "lightweight_status_probe",
+      "status": "PASS",
+      "pid": 22736,
+      "error": ""
     },
     {
       "action": "controlled_materialized_batch_already_running",
