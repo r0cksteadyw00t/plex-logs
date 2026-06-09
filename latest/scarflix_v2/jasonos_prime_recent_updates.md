@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T06:24:02.123Z
+Updated UTC: 2026-06-09T06:26:01.693Z
 Source: live status merge
 
-- 2026-06-09T06:22:41.522Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
+- 2026-06-09T06:25:31.478Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
+- 2026-06-09T06:25:22Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:20:29.274Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:18: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:16:06Z` Probe duration: `38ms`
-- 2026-06-09T06:20:20Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:15:56.866Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:10: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:07:03Z` Probe duration: `30ms`
 - 2026-06-09T06:10:25.605Z - Controlled Materialized Batch Progressing Under Lightweight Probe - 2026-06-09 15:52: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T05:52:13Z` Probe duration: `69ms`
 - 2026-06-09T05:55:11.392Z - Codex-Side Probe Channel Blocked Again - 2026-06-09 14:45: Last verified lightweight probe snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T04:42:47Z` Probe duration: `93ms` after Node launched
