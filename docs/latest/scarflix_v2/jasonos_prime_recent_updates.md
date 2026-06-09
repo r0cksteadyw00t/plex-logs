@@ -1,10 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T06:34:02.096Z
+Updated UTC: 2026-06-09T06:36:02.449Z
 Source: live status merge
 
+- 2026-06-09T06:35:23.303Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-09T06:35:10Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
-- 2026-06-09T06:30:12Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:20:29.274Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:18: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:16:06Z` Probe duration: `38ms`
 - 2026-06-09T06:15:56.866Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:10: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:07:03Z` Probe duration: `30ms`
 - 2026-06-09T06:10:25.605Z - Controlled Materialized Batch Progressing Under Lightweight Probe - 2026-06-09 15:52: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T05:52:13Z` Probe duration: `69ms`
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-09T03:42:30.189Z - Controlled Materialized Expansion Resumed After Plex Index Catch-Up - 2026-06-09 13:36: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
 - 2026-06-09T03:35:39.578Z - Controlled Materialized Expansion Held On Plex Index Lag - 2026-06-09 13:31: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
 - 2026-06-09T03:30:34.728Z - Controlled Expansion Resumed With Candidate Retry Cleanup - 2026-06-09 11:10: Jason manually tested several materialized/WebDAV-backed Plex items and reported successful playback: `Aladdin (1992)` `Casino Royale (2006)` `Black Panther (2018)`
-- 2026-06-09T02:55:10Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
