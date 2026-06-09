@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-09T14:27:34.968Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-09T14:31:06.387Z",
   "last_success_utc": "2026-06-09T14:27:34.968Z",
   "pat_present": true,
   "pushed": [
@@ -34,20 +34,12 @@
       "status": 200
     },
     {
-      "file": "latest/scarflix_v2/jasonos_prime_fast_track_accelerator_status.md",
-      "status": 200
-    },
-    {
       "file": "latest/scarflix_v2/jasonos_prime_quiet_tasks_status.json",
       "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_quiet_tasks_status.md",
       "status": 304
-    },
-    {
-      "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.json",
-      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.md",
@@ -211,11 +203,11 @@
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_playback_qa_controller_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_playback_qa_controller_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_worker_mesh_status.json",
@@ -335,10 +327,6 @@
     },
     {
       "file": "docs/latest/scarflix_v2/playback_architecture_status.json",
-      "status": 304
-    },
-    {
-      "file": "docs/latest/scarflix_v2/playback_architecture_status.md",
       "status": 304
     },
     {
@@ -596,13 +584,28 @@
     "docs/latest/scarflix_v2/grok_instruction_bridge_raw_response.md",
     "docs/latest/scarflix_v2/CODEX_INSTRUCTION_CONSUMER_LAST_SUMMARY.md"
   ],
-  "failed": [],
+  "failed": [
+    {
+      "file": "latest/scarflix_v2/jasonos_prime_fast_track_accelerator_status.md",
+      "status": 422
+    },
+    {
+      "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.json",
+      "status": 422
+    },
+    {
+      "file": "docs/latest/scarflix_v2/playback_architecture_status.md",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 3,
+    "by_status": {
+      "422": 3
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
