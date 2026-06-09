@@ -1,10 +1,13 @@
-# JasonOS Prime Grok Instruction Bridge
+# JasonOS Prime Grok Instruction Bridge Status
 
-Status: LOCAL_ONLY_NO_TOKEN
-Updated UTC: 2026-06-09T10:17:02Z
-Source: local_only_no_token
-Instructions: 1
-Executable instructions: 0
-Jason action required: false
-
-Instruction JSON: `D:\PlexTools\public\latest\scarflix_v2\GROK_INSTRUCTIONS_FOR_CODEX.json`
+- Updated UTC: 2026-06-09T11:02:02.752Z
+- Status: LOCAL_FALLBACK
+- Bridge mode: LOCAL_FALLBACK
+- Last Grok call status: NOT_ATTEMPTED
+- Last Grok failure reason: NO_USABLE_TOKEN
+- Instructions generated: 1
+- Executable instructions: 1
+- Strategy recommendations: 1
+- Autonomy suggestions: 1
+- Token file present: false
+- Token file used: none
