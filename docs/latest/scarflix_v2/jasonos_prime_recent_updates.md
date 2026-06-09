@@ -1,12 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T02:52:02.281Z
+Updated UTC: 2026-06-09T03:02:01.962Z
 Source: live status merge
 
-- 2026-06-09T02:50:41.856Z - Controlled Expansion Resumed With Candidate Retry Cleanup - 2026-06-09 11:10: Jason manually tested several materialized/WebDAV-backed Plex items and reported successful playback: `Aladdin (1992)` `Casino Royale (2006)` `Black Panther (2018)`
-- 2026-06-09T02:50:19Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
+- 2026-06-09T03:00:27.407Z - Controlled Expansion Resumed With Candidate Retry Cleanup - 2026-06-09 11:10: Jason manually tested several materialized/WebDAV-backed Plex items and reported successful playback: `Aladdin (1992)` `Casino Royale (2006)` `Black Panther (2018)`
+- 2026-06-09T03:00:21.004Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T03:00:20Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
+- 2026-06-09T03:00:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-09T02:55:10Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-09T01:05:16.516Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
-- 2026-06-09T01:00:09.947Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T01:00:09Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
 - 2026-06-08T23:00:08.792Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-08T23:00:08Z] [REVIEW] Final: REVIEW
 - 2026-06-08T15:28:37Z - Autonomous controller: controller_exception: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-08T10:15:16.559Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-08T04:40:15.515Z - Phase 0 PM Baseline - 2026-06-08 14:15: Formal project-management files have been created at repo root: `PROJECT_PLAN.md` `TASKS.md` `OUTCOMES.md`
 - 2026-06-08T04:35:03.648Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-08T04:35:03Z] [INFO] Health status publishing
 - 2026-06-08T04:32:56.239Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-08T04:32:56Z] [INFO] Running concurrent WebDAV active gate worker for 9 entries.
-- 2026-06-08T04:15:16.067Z - Autonomous Expansion Reached 113 Direct STRM Entries - 2026-06-08 13:56: Current local result: Actual direct `.strm` files visible in Streaming libraries: movies `74`, TV `39`, total `113`. Staged pending candidates on disk: `0`. Latest staged publisher status: `PASS_PUBLISHED`, candidate dirs found `10`, processed `8`, published `6`.
