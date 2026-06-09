@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T05:10:26.349Z",
+  "updated_utc": "2026-06-09T05:15:34.302Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -112,9 +112,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 8,
-    "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-09T05:10:34Z",
+    "platform_child_progress_age_minutes": 13,
+    "mirror_updated_age_minutes": 6,
+    "next_check_utc": "2026-06-09T05:16:14Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -123,7 +123,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260609.log",
     "last_progress_utc": "2026-06-09T05:02:09.483Z",
-    "age_minutes": 8,
+    "age_minutes": 13,
     "last_line": "[2026-06-09T05:02:09Z] [REVIEW] Decision failed: metadata=42131 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 6,
     "review_lines": 2,
@@ -132,13 +132,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-09T05:05:17Z",
+    "updated_utc": "2026-06-09T05:10:50Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-09T05:10:05Z",
+    "updated_utc": "2026-06-09T05:15:07Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -190,7 +190,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T05:09:21Z",
+    "updated_utc": "2026-06-09T05:10:48Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
     "expansion_eligible": true,
     "expansion_started_this_cycle": false,
@@ -235,17 +235,17 @@
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/scarflix_canary_status.json"
   },
   "daily_ai_usability": {
-    "status": "PASS",
-    "updated_utc": "2026-06-09T05:10:06Z",
+    "status": "REVIEW",
+    "updated_utc": "2026-06-09T05:15:05Z",
     "daily_ui_8791": {
-      "reachable": true,
-      "status": 200,
-      "content_type": "application/json; charset=utf-8",
-      "error": ""
+      "reachable": false,
+      "status": 0,
+      "content_type": "",
+      "error": "connect ECONNREFUSED 127.0.0.1:8791"
     },
     "backend_8805": {
-      "health_json": true,
-      "health_status": 200,
+      "health_json": false,
+      "health_status": 0,
       "streaming_sse": true,
       "tool_traces": true,
       "command_queue": true
@@ -267,12 +267,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-09T05:05:40.781Z",
+      "utc": "2026-06-09T05:15:32.885Z",
       "title": "Codex-Side Probe Channel Blocked Again - 2026-06-09 14:45",
       "detail": "Last verified lightweight probe snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T04:42:47Z` Probe duration: `93ms` after Node launched"
     },
     {
-      "utc": "2026-06-09T05:05:22Z",
+      "utc": "2026-06-09T05:10:55Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -341,9 +341,9 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-09T05:10:06Z - daily AI usability smoke test",
-      "current": "Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
-      "progress": 57,
+      "last_change": "2026-06-09T05:15:05Z - daily AI usability smoke test",
+      "current": "Daily AI status=REVIEW. 8791 reachable=false; 8805 health_json=false; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
+      "progress": 45,
       "eta": "next: integrate 8805 tool traces into 8791 daily UI",
       "stall_risk": "Low"
     },
@@ -359,7 +359,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T05:09:21Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+      "last_change": "2026-06-09T05:10:48Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
       "current": "Status PASS; expansion_eligible=true; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
