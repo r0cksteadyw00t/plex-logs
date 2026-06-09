@@ -250,3 +250,27 @@ Remote Command Centre access is staged but not enabled:
 - Guide: `docs\COMMAND_CENTRE_REMOTE_ACCESS.md`
 
 Safety rule: no unauthenticated public exposure. Preferred remote access is Tailscale if already in use, then UniFi/local VPN, then Cloudflare Tunnel with Access authentication.
+
+# 2026-06-09 22:05 Australia/Sydney - JasonOS Prime Orchestrator Phase 1
+
+Architectural direction accepted for implementation: replace the many-short-lived scheduled task pattern with a persistent Windows service:
+
+- Service name: `JasonOS_Prime_Orchestrator`
+- Entrypoint: `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
+- Installer: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_Orchestrator_InstallService.ps1`
+- Task reduction script: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_Orchestrator_ReduceScheduledTasks.ps1`
+- Status: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.json`
+- DB: `D:\PlexTools\state\jasonos_prime\jasonos.db`
+- Health: `http://127.0.0.1:8815/healthz`
+
+Phase 1 foundation staged:
+
+- SQLite schema for jobs, events, snapshots, planner instructions, leases, and settings.
+- Durable job queue with leases and retry.
+- Conservative worker pools: control `2`, I/O `1`, CPU `1`.
+- JSONL logs with correlation IDs.
+- Emergency pause files: `PAUSE_ALL`, `PAUSE_PUBLICATION`, `SAFE_MODE`.
+- Grok instruction ingestion and strict safe-instruction execution queue foundation.
+- Command Centre generation job.
+
+Important: Codex process launch remains saturated, so the service was not installed or started and no scheduled tasks were disabled. Scheduled-task reduction must remain dry-run until orchestrator `/healthz` is PASS.
