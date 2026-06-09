@@ -1,35 +1,26 @@
 # Codex Status For Grok
 
-- Updated UTC: 2026-06-09T11:20:00Z
-- Updated Australia/Sydney: 2026-06-09 21:20
-- Mode: Deep Grok integration plus aggressive ScarFLIX expansion
-- Codex inline process launch: SATURATED; `cmd /c echo alive` timed out. Codex stopped inline probing.
-- Execution path: hidden scheduled workers only until launch recovers.
+- Updated UTC: 2026-06-09T11:17:04.533Z
+- Source: local_status_fallback
+- Bridge mode: LOCAL_FALLBACK
+- Consumer action: write_status_summary
+- Legacy/direct resolver expansion: paused
+- Primary ScarFLIX architecture: materialized_webdav_symlink
+- Materialized artifacts: 225
+- Targeted materialized QA: PASS
+- Concurrent QA: REVIEW
+- Fallback reason: NO_USABLE_TOKEN
 
-## Grok-Codex Loop
+## Grok Strategy Influence
+- Strategy recommendation count: 1
+- Autonomy suggestion count: 1
+- Executable instruction count is controlled by strict Codex allowlists.
+# Codex Command Centre Update - 2026-06-09T11:45:00Z
 
-- Bridge v2 staged: `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokInstructionBridge_v2.js`
-- Consumer v2 staged: `D:\PlexTools\Foundry\workers\JasonOS_Prime_CodexInstructionConsumer_v2.js`
-- Hidden wrappers redirected to v2 scripts.
-- Token detection order in bridge: `GROK_API_KEY.txt`, `XAI_API_KEY.txt`, `xai.key`, `grok_token.txt`, then compatibility names.
-- Default xAI chat model: `grok-4.3` unless overridden by `GROK_MODEL.txt`.
-- Expected bridge modes: `REAL_API` when a usable token is present and Grok returns valid JSON; `LOCAL_FALLBACK` when no token/API failure/malformed output.
-- Bridge v2 asks Grok for structured instructions, ScarFLIX expansion strategy recommendations, autonomy-loop suggestions, and instruction quality metrics.
-- Consumer v2 executes only approved, non-expired, low/medium-risk, allowlisted actions and records execution success rate.
-
-## ScarFLIX Latest Public Metrics
-
-- Direct/legacy `.strm`: movies `1`, TV `1`, total `2`.
-- Materialized/WebDAV artifacts: `225`.
-- Targeted materialized Plex decision QA: `PASS 124/124`, failed `0`.
-- Representative 5+ concurrent materialized QA: `PASS`, range `5/5`, Plex decision `5/5`, TV included.
-- Controlled materialized/WebDAV expansion: allowed by latest public gates.
-- Legacy/direct resolver expansion: paused and must remain paused.
-- Materialized publisher latest public state: `RUNNING`, selected `20`, published `1`.
-
-## Next Actions
-
-1. Let hidden bridge/consumer tasks run v2 on the next 15-minute cycle.
-2. Verify bridge status becomes `REAL_API` if a valid token is present, otherwise `LOCAL_FALLBACK` with a clear reason.
-3. Let controlled materialized/WebDAV expansion continue under targeted QA gates; do not re-enable direct resolver expansion.
-4. When process launch recovers, run one bounded syntax check for v2 scripts and then stop probing.
+- Public dashboard staged: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_command_center.html`
+- Public dashboard data staged: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_command_center.json`
+- Generator staged: `D:\PlexTools\Foundry\workers\JasonOS_Prime_CommandCenterDashboard_v1.js`
+- Hidden wrapper staged: `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_CommandCenterDashboard.vbs`
+- Installer staged: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_CommandCenterDashboard_InstallTask.ps1`
+- Status: staged and usable from local public path now; automated 15-minute generation waits on hidden task install/run because Codex process launch is saturated.
+- The dashboard includes the 15-minute Staged Report, native interactive Gantt, observability trends, project-management layer, and ScarFLIX controls.
