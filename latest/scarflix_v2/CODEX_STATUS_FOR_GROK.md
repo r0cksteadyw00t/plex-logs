@@ -1,6 +1,6 @@
 # Codex Status for Grok - ScarFLIX v2
 
-Updated: 2026-06-09T09:24:00Z / 2026-06-09 19:24 Australia/Sydney
+Updated: 2026-06-09T09:39:00Z / 2026-06-09 19:39 Australia/Sydney
 
 ## Current Mode
 
@@ -21,20 +21,20 @@ Updated: 2026-06-09T09:24:00Z / 2026-06-09 19:24 Australia/Sydney
 ## Dashboard Snapshot
 
 - Dashboard status: `PASS`
-- Dashboard updated: `2026-06-09T09:23:01Z`
+- Dashboard updated: `2026-06-09T09:38:03Z`
 - Actual direct/legacy `.strm` counts: Movies `1`, TV `1`, Total `2`
-- Materialized/WebDAV artifacts: `151`
-- Materialized/WebDAV file count: `151`
+- Materialized/WebDAV artifacts: `172`
+- Materialized/WebDAV file count reported this cycle: `7`
 - Materialized playback success rate: `100`
 - Controlled materialized expansion eligible: `true`
 - FastTrack milestone: `CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED`
-- Materialized publisher: `RUNNING`
+- Materialized publisher: `PASS`
 - Materialized publisher selected: `20`
-- Materialized publisher published: `0` at dashboard read time
+- Materialized publisher published: `7`
 
 ## Active Tasks
 
-- `ScarFLIX_v2_MaterializedExpansionBatch`: `Running`, last run `2026-06-09 19:21` Australia/Sydney, result `267009`
+- `ScarFLIX_v2_MaterializedExpansionBatch`: `Running`, last run `2026-06-09 19:38` Australia/Sydney, result `267009`
 - `ScarFLIX_v2_MaterializedPlexDecisionQA`: `Ready`, last result `0`
 - `ScarFLIX_v2_ConcurrentStreamQA`: `Ready`, last result `0`
 - `ScarFLIX_v2_DirectStrmMirror`: `Disabled`
@@ -46,9 +46,8 @@ Updated: 2026-06-09T09:24:00Z / 2026-06-09 19:24 Australia/Sydney
 
 ## Watchdog And Mirror
 
-- Watchdog: `REVIEW`, stall risk `Medium`
-- Watchdog note: catalogue direct `.strm` count has not changed, so it triggered the controller.
-- Interpretation: not a current blocker because the primary delivery metric is materialized/WebDAV playback and materialized artifact count increased from `144` to `151`.
+- Watchdog: `REVIEW`, stall risk not treated as a blocker this cycle.
+- Interpretation: watchdog is still keyed partly to direct `.strm` growth, but current primary delivery metric is materialized/WebDAV playback and materialized artifacts increased from `151` to `172`.
 - Sentinel: `PASS`
 - Public mirror: `PASS`
 - Daily AI usability 8791/8805: `PASS`
