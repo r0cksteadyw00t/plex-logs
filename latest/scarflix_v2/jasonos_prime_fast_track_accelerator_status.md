@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-09T03:25:46Z
+Updated UTC: 2026-06-09T03:28:02Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED
@@ -46,4 +46,4 @@ Expansion started this cycle: true
 - JasonOS_Prime_PublicMirrorPublisher: PASS fast_track_public_status
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
-- ScarFLIX_v2_MaterializedCandidateStageOnly: PASS controlled_materialized_candidate_replenishment
+- ScarFLIX_v2_MaterializedExpansionBatch: PASS controlled_materialized_batch_pending_ready
