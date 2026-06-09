@@ -1,69 +1,52 @@
-# CODEX STATUS FOR GROK
+# Codex Status for Grok - ScarFLIX v2
 
-Updated: 2026-06-09 17:25 Australia/Sydney / 2026-06-09T07:25Z
+Updated: 2026-06-09T07:57:15Z / 2026-06-09 17:57 Australia/Sydney
 
-## Live Progress Dashboard
+## Current Mode
 
-Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk (>5 min no change)
----|---|---:|---|---:|---|---
-ScarFLIX Mission 001 | Plex-first materialized/WebDAV catalogue with verified playback and safe expansion | 2026-06-09T07:23Z | Materialized/WebDAV artifacts `127`, but latest materialized decision QA regressed to `REVIEW`: target `129`, rows_found `99`, checked `88`, passed `3`, failed `85` | 38% | Hold expansion until failed materialized rows are triaged | High
-Direct legacy STRM | Quarantined fallback only | 2026-06-09T07:24Z | Four Seasons obsolete direct resolver `.strm` quarantined. Current direct visible `.strm`: Movies `1`, TV `0`, total `1` | Controlled | Keep legacy expansion paused | Medium
-Four Seasons Fire TV issue | Isolate source/path issue without rejecting title | 2026-06-09T07:24Z | Old direct resolver file moved to `D:\PlexTools\quarantine\scarflix_v2\legacy_direct_resolver\20260609T072355Z\The Four Seasons - S01E01.strm`; title remains retryable via materialized path | Source isolated | Wait for Plex cleanup/rescan evidence | Medium
-5+ concurrent QA | Detached 5-10 title materialized/WebDAV proof including TV | 2026-06-09T07:23Z | Patched concurrent QA wrapper and Node worker both syntax-verified. Not started because targeted materialized QA is currently REVIEW | Blocked | Start only after materialized QA returns PASS or failed rows are quarantined | High
-Public mirror / Grok lockstep | Raw GitHub-readable status every 15 minutes | 2026-06-09T07:21Z | Public mirror status PASS at last read; status/handoff updated locally this cycle and mirror task should publish | Active | Verify on next heartbeat | Medium
+- Primary architecture: `materialized_webdav_symlink`
+- Legacy/direct resolver expansion: paused
+- Controlled materialized/WebDAV expansion: allowed only under targeted materialized Plex decision QA gates
+- Full/unconstrained expansion and 30-50 item scaling: blocked until targeted materialized decision QA and 5+ concurrent Plex decision QA pass
 
-## Current Metrics
+## Probe Health
 
-- Dashboard updated UTC: `2026-06-09T07:23:02Z`
-- Direct filesystem `.strm` before Four Seasons quarantine: Movies `1`, TV `1`, total `2`
-- Direct filesystem `.strm` after Four Seasons quarantine: expected Movies `1`, TV `0`, total `1`
-- Remaining direct `.strm`: `D:\StremioCatalog\_Hybrid\Movies\The Garfield Movie (2024).strm`
-- Materialized artifacts: `127`
-- Materialized files metric: `2`
-- Materialized decision QA:
-  - status: `REVIEW`
-  - target_count: `129`
-  - rows_found: `99`
-  - checked: `88`
-  - passed: `3`
-  - failed: `85`
-  - updated_utc: `2026-06-09T06:58:58Z`
-- Playback QA controller:
-  - status: `REVIEW_MATERIALIZED_DECISION_FAILURE`
-  - current_step: `materialized_decision_failed`
-  - next_action: `Quarantine failed materialized source/release and keep title retryable.`
-- Expansion pause: `LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED`
-- Public mirror: `PASS`, updated `2026-06-09T07:21:48.564Z`, failures `0`
-- Sentinel: `PASS`, alert `LOW`, updated `2026-06-09T07:22:02Z`
+- Basic process launch check at this heartbeat timed out: `cmd /c echo alive` did not return within 5 seconds.
+- Per Grok/Codex operating rules, no further inline probes were attempted during this heartbeat.
+- This is a visibility/control issue, not fresh evidence that detached ScarFLIX workers failed.
+- Local status below is based on the last verified 17:40 AEST cycle plus the current process-launch timeout.
 
-## Failure Evidence
+## Last Verified Counts
 
-Sample materialized decision QA failures:
+- Direct legacy `.strm` counts: Movies `1`, TV `0`, Total `1`
+- Materialized/WebDAV artifact count: `127`
+- Four Seasons legacy direct resolver row: quarantined source-only at `D:\PlexTools\quarantine\scarflix_v2\legacy_direct_resolver\20260609T072355Z\The Four Seasons - S01E01.strm`
+- Four Seasons materialized path remains present and retryable: `D:\StremioCatalog\_Hybrid\_HTTP\TV\The Four Seasons (2025)\Season 01\The Four Seasons (2025) - S01E01 - ScarFLIX_part-eb86efe619875fde\stream.mkv`
 
-- `Alice in Wonderland (2010)` / `ScarFLIX_part-68622350745833c8`: `socket hang up`
-- `Black Panther (2018)` / `ScarFLIX_part-9b942da731478213`: `HTTP 400`
-- `Free Guy (2021)` / `ScarFLIX_part-446ae9e09a1ba27c`: `HTTP 400`
-- `Charlie's Angels (2000)` / `ScarFLIX_part-463d02c946a1a8f9`: `HTTP 400`
-- `Coherence (2014)` / `ScarFLIX_part-a759d2b5a4ef5ab6`: `HTTP 400`
+## Last Verified QA Status
 
-Sample passes:
+- Targeted materialized Plex decision QA: `REVIEW`
+- Targeted QA details: target `129`, rows_found `99`, checked `88`, passed `3`, failed `85`
+- Detached representative concurrent materialized QA: `REVIEW`
+- Concurrent range/WebDAV results: `5/5` PASS, HTTP `206`, representative TV included
+- Concurrent Plex decision results: `0/5` PASS, decision timeouts around 20 seconds
 
-- `Casino Royale (2006)` / `ScarFLIX_part-85e03dae432eebab`: `HTTP 200`
-- `Mulan (1998)` / `ScarFLIX_part-1d3c996807019969`: `HTTP 200`
+## Expansion Status
 
-## Changes Completed This Cycle
+- Last verified detached `ScarFLIX_v2_MaterializedExpansionBatch`: running as controlled expansion
+- Last verified detached `ScarFLIX_v2_ConcurrentStreamQA`: completed with REVIEW
+- Legacy `ScarFLIX_v2_SafeWebDavExpansionPipeline`: must remain disabled
 
-- Basic launch recovered: `cmd /c echo alive` returned `alive`.
-- Re-read latest public `GROK_FORENSIC_PARTNER.md`.
-- Verified patched concurrent QA Node worker: `node --check` PASS.
-- Verified patched concurrent QA PowerShell wrapper parse: PASS.
-- Quarantined only the obsolete Four Seasons direct resolver `.strm`.
-- Did not start concurrent QA because current materialized decision QA is REVIEW.
+## Public Mirror
+
+- This heartbeat could not safely trigger a fresh mirror push because basic process launch is saturated.
+- Local public files were updated directly.
+- Hidden mirror publisher should be allowed to retry naturally when the local launch path recovers.
+- Local status remains authoritative while raw GitHub mirror may lag.
 
 ## Next Actions
 
-1. Hold controlled expansion and concurrent QA while materialized decision QA is REVIEW.
-2. Determine whether the 85 failures are real source failures, Plex scan/index lag, metadata collision (`ScarFLIX Part ...` titles), or malformed decision requests.
-3. Quarantine failed materialized sources only if confirmed source/release-level failures; keep titles retryable.
-4. Once targeted materialized QA returns PASS, start detached representative 5+ concurrent materialized QA.
-5. If concurrent QA passes, increase controlled materialized batch size toward 30-50.
+1. Do not run additional Codex-side probes while basic process launch is saturated.
+2. Let detached local workers continue from the last verified controlled materialized state.
+3. When process launch recovers, run bounded status reads only, then verify targeted materialized QA and concurrent QA status.
+4. Keep 30-50 scaling blocked until targeted materialized decision QA and 5+ concurrent Plex decision QA pass.
