@@ -1,8 +1,9 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T06:14:10.068Z
+Updated UTC: 2026-06-09T06:15:16.000Z
 Source: live status merge
 
+- 2026-06-09T06:14:38.602Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:10: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:07:03Z` Probe duration: `30ms`
 - 2026-06-09T06:10:25.605Z - Controlled Materialized Batch Progressing Under Lightweight Probe - 2026-06-09 15:52: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T05:52:13Z` Probe duration: `69ms`
 - 2026-06-09T06:10:13Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T05:55:11.392Z - Codex-Side Probe Channel Blocked Again - 2026-06-09 14:45: Last verified lightweight probe snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T04:42:47Z` Probe duration: `93ms` after Node launched
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-09T02:55:10Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-09T01:05:16.516Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
 - 2026-06-08T15:28:37Z - Autonomous controller: controller_exception: Candidate-source model requires engineering review before catalogue expansion
-- 2026-06-08T10:15:16.559Z - Heartbeat Audit Re-Quarantined Two Stray Legacy Resolver Files - 2026-06-08 18:56: Heartbeat audit found two visible legacy `18788/live` resolver `.strm` files while broad expansion was paused: `D:\StremioCatalog\_Hybrid\Movies\Schindler's List (1993).strm` `D:\StremioCatalog\_Hybrid\Movies\Zootopia (2016).strm` Actions taken:
