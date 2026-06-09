@@ -274,3 +274,17 @@ Phase 1 foundation staged:
 - Command Centre generation job.
 
 Important: Codex process launch remains saturated, so the service was not installed or started and no scheduled tasks were disabled. Scheduled-task reduction must remain dry-run until orchestrator `/healthz` is PASS.
+
+# 2026-06-09 23:25 Australia/Sydney - Control Plane Stabilisation Hold
+
+Current PM direction supersedes expansion/install urgency until the alert clears:
+
+- Sentinel ALERT plus stale controller status is the immediate priority.
+- 15-minute automation is now lightweight status-only mode.
+- Do not run local probes while saturation is active.
+- Controlled materialized/WebDAV new batches are paused/held overnight.
+- Existing hidden workers may perform minimal maintenance/status publishing only.
+- Do not install the orchestrator service while Sentinel ALERT is active.
+- Do not run scheduled-task reduction while Sentinel ALERT is active.
+- Legacy/direct resolver expansion remains fully paused/blocked.
+- Create a new forensic handoff only if a new critical blocker appears, Jason action becomes required, ScarFLIX QA regresses, broad legacy expansion resumes, or Sentinel ALERT worsens materially.
