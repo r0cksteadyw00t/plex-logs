@@ -1,67 +1,63 @@
 # Codex Status for Grok - ScarFLIX v2
 
-Updated: 2026-06-09T10:05:00Z / 2026-06-09 20:05 Australia/Sydney
+Updated: 2026-06-09T10:35:00Z / 2026-06-09 20:35 Australia/Sydney
 
 ## Current Mode
 
-- Primary architecture: `materialized_webdav_symlink`
-- Primary delivery metric: materialized/WebDAV-backed Plex playback success
+- Primary ScarFLIX architecture: `materialized_webdav_symlink`
 - Legacy/direct resolver expansion: fully paused
 - Controlled materialized/WebDAV expansion: active through hidden local workers
 - Broad/unconstrained expansion: still gated by sustained repeated-batch soak
 
+## Token Integration
+
+- `JasonOS_Prime_GrokInstructionBridge.js` now checks Grok/xAI tokens in this order:
+  1. `GROK_API_KEY.txt`
+  2. `XAI_API_KEY.txt`
+  3. `xai.key`
+  4. `grok_token.txt`
+- Older compatibility names are checked after those preferred names.
+- Dashboard bridge mode is now `REAL_API` when a usable token exists and Grok returns valid v1 JSON.
+- Dashboard bridge mode is `LOCAL_FALLBACK` when no usable token exists, the API fails, or the response is malformed.
+- Fallback instructions remain non-executable.
+
+## Consumer Safety
+
+- `JasonOS_Prime_CodexInstructionConsumer.js` still executes only low/medium-risk, unexpired, approved, allowlisted detached actions.
+- High-risk, expired, user-decision, malformed, unapproved, or legacy/direct-resolver actions are skipped and reported.
+- Legacy/direct resolver expansion remains forbidden.
+
 ## Current ScarFLIX Gates
 
 - Targeted materialized Plex decision QA: `PASS`
-- Targeted QA result: `124/124` PASS, rows_found `129`, failed `0`
-- Materialized cleanup: `PASS_QUARANTINED_FAILED_SOURCES`, quarantined_this_run `10`
+- Latest known targeted QA result: `124/124` PASS, rows_found `129`, failed `0`
 - Representative 5+ concurrent materialized QA: `PASS`
-- Concurrent QA result: target concurrency `5`, tested `5`, TV included `true`, range `5/5`, Plex decision `5/5`
-- Playback QA controller: `PASS_MATERIALIZED_DECISION`
+- Latest known concurrent QA result: target concurrency `5`, tested `5`, TV included `true`, range `5/5`, Plex decision `5/5`
 
-## Dashboard Snapshot
+## Last Known Dashboard Metrics
 
-- Dashboard status: `PASS`
-- Dashboard updated: `2026-06-09T09:54:08Z` before this status refresh
-- Actual direct/legacy `.strm` counts: Movies `1`, TV `1`, Total `2`
-- Materialized/WebDAV artifacts: `213`
-- Materialized/WebDAV file count reported this cycle: `4`
-- Materialized playback success rate: `100`
-- Controlled materialized expansion eligible: `true`
-- FastTrack milestone: `CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED`
-- Materialized publisher: `PASS`
-- Materialized publisher selected: `20`
-- Materialized publisher published: `4`
-- Materialized publisher retry-held: `16`
+- Dashboard updated: `2026-06-09T10:29Z` public dashboard cycle
+- Direct/legacy `.strm`: Movies `1`, TV `1`, Total `2`
+- Materialized/WebDAV artifacts: `225`
+- Materialized publisher: `RUNNING`
+- Legacy resolver: paused
+- Public mirror: updating through hidden scheduled task
 
-## Grok-Codex Autonomy
+## Process Saturation
 
-- Instruction schema: `grok_codex_instruction.v1`
-- Schema doc: `schemas/grok_codex_instruction.schema.v1.json`
-- Contract doc: `docs/GROK_CODEX_INSTRUCTION_CONTRACT.md`
-- Bridge task: `JasonOS_Prime_GrokInstructionBridge`, hidden 15-minute scheduled task
-- Consumer task: `JasonOS_Prime_CodexInstructionConsumer`, hidden 15-minute scheduled task
-- Bridge status: `LOCAL_ONLY_NO_TOKEN`
-- Consumer status: `PASS`
-- Instruction count: `1`
-- Executable instruction count: `0`
-- Executed actions: `0`
-- Interpretation: the local bridge is working and safe. External Grok API invocation is waiting for an approved Grok/xAI token in `C:\Users\jason\OneDrive\Public\TOKENS`.
-
-## Public Mirror
-
-- Public mirror publisher was patched to include `GROK_FORENSIC_PARTNER.md`, `GROK_CODEX_INSTRUCTION_CONTRACT.md`, `grok_codex_instruction.schema.v1.json`, `GROK_INSTRUCTIONS_FOR_CODEX.*`, and bridge/consumer status files.
-- Local public files are authoritative until the next mirror cycle confirms GitHub push success.
+- Inline Codex local process launch timed out during the heartbeat cycle.
+- Non-critical inline probing is being reduced.
+- Hidden scheduled workers remain the preferred execution path until launch health recovers.
 
 ## Next Actions
 
-1. Let controlled materialized/WebDAV workers continue 30-50 item batches.
-2. After each batch, run detached targeted materialized Plex decision QA and source-only cleanup if needed.
-3. Keep the Grok instruction bridge and Codex consumer running every 15 minutes.
-4. Do not re-enable legacy/direct resolver expansion.
-5. Defer GitHub-private migration until authenticated private raw access is proven for Grok/Codex.
+1. Let the next hidden bridge cycle detect any newly placed Grok/xAI token.
+2. Let the consumer validate and safely act on any real Grok instructions.
+3. Keep controlled materialized/WebDAV expansion moving through hidden workers.
+4. Run per-batch targeted materialized QA and source-only cleanup via detached tasks.
+5. Keep legacy/direct resolver expansion disabled.
 
 ## Jason Action
 
-- No Jason action required for ScarFLIX right now.
-- To enable true external Grok API instructions later, an approved Grok/xAI token must be placed in the approved token vault. Local-only mode is safe and non-blocking.
+- No Jason action is required for ScarFLIX.
+- If true external Grok API instruction generation is desired now, place the approved token in one of the preferred token files above.
