@@ -34,6 +34,40 @@
     "human_summary": {
       "type": "string"
     },
+    "strategy_recommendations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/recommendation"
+      },
+      "default": []
+    },
+    "autonomy_suggestions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/recommendation"
+      },
+      "default": []
+    },
+    "quality_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "grok_reasoning_scope": {
+          "type": "string"
+        },
+        "expected_impact": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      }
+    },
     "instructions": {
       "type": "array",
       "minItems": 1,
@@ -199,6 +233,44 @@
           "type": "string"
         },
         "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "required": [
+        "recommendation_id",
+        "target_component",
+        "risk_level",
+        "summary"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "recommendation_id": {
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 120
+        },
+        "target_component": {
+          "type": "string"
+        },
+        "risk_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        },
+        "success_signal": {
+          "type": "string"
+        },
+        "notes": {
           "type": "string"
         }
       }
