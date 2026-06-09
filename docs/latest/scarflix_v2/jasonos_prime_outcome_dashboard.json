@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T13:20:10.608Z",
+  "updated_utc": "2026-06-09T13:24:03.576Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 12,
-    "platform_child_progress_age_minutes": 12,
-    "mirror_updated_age_minutes": 0,
-    "next_check_utc": "2026-06-09T13:13:14Z",
-    "next_check_age_minutes": 7,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 16,
+    "mirror_updated_age_minutes": 2,
+    "next_check_utc": "2026-06-09T13:28:31Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260609.log",
     "last_progress_utc": "2026-06-09T13:08:01.177Z",
-    "age_minutes": 12,
+    "age_minutes": 16,
     "last_line": "[2026-06-09T13:08:01Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 9,
     "review_lines": 3,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "High",
-    "updated_utc": "2026-06-09T13:07:54Z",
+    "updated_utc": "2026-06-09T13:23:15Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "ALERT",
     "alert_level": "HIGH",
-    "updated_utc": "2026-06-09T13:20:03Z",
+    "updated_utc": "2026-06-09T13:22:01Z",
     "codex_action_required": true,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-09T13:15:06Z",
+    "updated_utc": "2026-06-09T13:20:09Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -201,7 +201,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T13:19:01Z",
+    "updated_utc": "2026-06-09T13:23:01Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
     "expansion_eligible": true,
     "expansion_started_this_cycle": false,
@@ -294,19 +294,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-09T13:08:20.984Z",
+      "utc": "2026-06-09T13:23:38.153Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
+    },
+    {
+      "utc": "2026-06-09T13:23:24Z",
+      "title": "Autonomous controller: candidate_source_model_pass",
+      "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
     {
       "utc": "2026-06-09T13:08:01.177Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-09T13:08:01Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity"
-    },
-    {
-      "utc": "2026-06-09T13:08:01Z",
-      "title": "Autonomous controller: candidate_source_model_pass",
-      "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
     {
       "utc": "2026-06-09T09:09:39.224Z",
@@ -395,7 +395,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T13:19:01Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+      "last_change": "2026-06-09T13:23:01Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
       "current": "Status PASS; expansion_eligible=true; expansion_started_this_cycle=false; total_strm=1.",
       "progress": 30,
       "eta": "runs every 5 minutes",
