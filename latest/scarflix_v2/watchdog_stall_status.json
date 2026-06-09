@@ -2,18 +2,18 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-09T16:28:09Z",
-    "started_utc":  "2026-06-09T16:28:07Z",
-    "duration_seconds":  2,
+    "updated_utc":  "2026-06-09T16:55:45Z",
+    "started_utc":  "2026-06-09T16:55:18Z",
+    "duration_seconds":  27,
     "will_progress_without_codex":  true,
     "current_milestone":  "CANDIDATE_SOURCE_MODEL_PASS",
     "signals":  {
-                    "controller_age_minutes":  11,
-                    "platform_checkpoint_age_minutes":  2349,
-                    "durable_platform_gate_age_minutes":  2349,
+                    "controller_age_minutes":  1,
+                    "platform_checkpoint_age_minutes":  2377,
+                    "durable_platform_gate_age_minutes":  2377,
                     "platform_progress_fresh":  false,
                     "dashboard_age_minutes":  0,
-                    "mirror_age_minutes":  1,
+                    "mirror_age_minutes":  20,
                     "movie_strm_count":  0,
                     "tv_strm_count":  0,
                     "total_strm_count":  0,
@@ -25,10 +25,10 @@
                   "controller":  {
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
-                                     "status":  "Ready",
-                                     "last_run_time":  "10/06/2026 2:27:01 AM",
-                                     "next_run_time":  "10/06/2026 2:30:00 AM",
-                                     "last_result":  "0"
+                                     "status":  "Running",
+                                     "last_run_time":  "10/06/2026 2:55:22 AM",
+                                     "next_run_time":  "10/06/2026 3:00:00 AM",
+                                     "last_result":  "267009"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
@@ -42,22 +42,22 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "10/06/2026 2:28:01 AM",
-                                    "next_run_time":  "10/06/2026 2:30:00 AM",
+                                    "last_run_time":  "10/06/2026 2:55:05 AM",
+                                    "next_run_time":  "10/06/2026 3:00:00 AM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
                                  "exists":  true,
                                  "status":  "Ready",
-                                 "last_run_time":  "10/06/2026 2:28:01 AM",
-                                 "next_run_time":  "10/06/2026 2:31:00 AM",
+                                 "last_run_time":  "10/06/2026 2:55:18 AM",
+                                 "next_run_time":  "10/06/2026 3:01:00 AM",
                                  "last_result":  "0"
                              }
               },
     "actions":  [
                     {
-                        "task":  "ScarFLIX_v2_AutonomousController",
+                        "task":  "JasonOS_Prime_PublicMirrorPublisher",
                         "changed":  false,
                         "ran":  true,
                         "note":  "run_triggered"
@@ -70,7 +70,7 @@
                     }
                 ],
     "notes":  [
-                  "Controller status is stale or missing; watchdog triggered controller task.",
+                  "Public mirror status was disabled or stale; watchdog triggered mirror task.",
                   "Catalogue count has not changed during expansion/candidate milestone; watchdog triggered controller."
               ],
     "files":  {
