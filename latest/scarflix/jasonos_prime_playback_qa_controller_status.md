@@ -1,13 +1,13 @@
 # JasonOS Prime Playback QA Controller
 
-Status: WAITING_OVERLAP
-Updated UTC: 2026-06-09T08:35:04Z
-Current step: validation_overlap_running
+Status: PASS_MATERIALIZED_DECISION
+Updated UTC: 2026-06-09T09:00:03Z
+Current step: materialized_playback_decision_pass
 Direct STRM total: 2
 Materialized/WebDAV primary: true
 Materialized visible verified: 18
-Materialized decision QA: REVIEW
+Materialized decision QA: PASS
 Direct STRM admission: PASS
 Decision QA: PASS
 Concurrent QA: REVIEW
-Next action: Wait for current ScarFLIX validation task to finish.
+Next action: Materialized/WebDAV decision QA has passed; next step is client playback durability QA and controlled expansion.
