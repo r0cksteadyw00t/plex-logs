@@ -21,8 +21,8 @@ Goal: stop repeated loops and establish a productive ScarFLIX delivery pipeline.
 As of 2026-06-09T10:02Z:
 
 - Direct `.strm` output visible in Plex libraries: movies `1`, TV `1`, total `2`; this is legacy/fallback telemetry, not the primary metric.
-- Materialized/WebDAV dashboard artifact count: `196`.
-- Current materialized expansion state: controlled materialized publishing is active through detached hidden workers; latest dashboard publisher cycle selected `20`, published `5`, retry-held `15`.
+- Materialized/WebDAV dashboard artifact count: `213`.
+- Current materialized expansion state: controlled materialized publishing is active through detached hidden workers; latest dashboard publisher cycle selected `20`, published `4`, retry-held `16`.
 - Repaired controlled materialized publisher cycles after wrapper fix published `25` candidates total across seven completed cycles: `2`, `3`, `3`, `5`, `4`, `4`, and `4`.
 - Staged pending status drift: lightweight/FastTrack reports `6`; dashboard staged-candidate field reports `26`.
 - PlatformGate: `PASS`.
@@ -174,7 +174,7 @@ The earlier materialized QA regression has been cleared. Current gates:
 - Targeted materialized Plex decision QA: `PASS`, `124/124`, failed `0`.
 - Representative 5+ concurrent materialized QA: `PASS`, range `5/5`, Plex decision `5/5`, TV included.
 - Controlled materialized/WebDAV expansion: unlocked for 30-50 item batches under per-batch targeted QA.
-- Latest materialized artifact count: `196`.
+- Latest materialized artifact count: `213`.
 - Legacy/direct resolver expansion: still paused.
 
 Structured Grok-Codex instruction contract v1 has been added. `JasonOS_Prime_GrokInstructionBridge` and `JasonOS_Prime_CodexInstructionConsumer` are installed as hidden 15-minute tasks. Current bridge mode is `LOCAL_ONLY_NO_TOKEN`, so no Grok-approved instruction has been executed yet. This is a credential limitation for external Grok invocation, not a ScarFLIX playback failure.
