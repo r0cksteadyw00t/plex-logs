@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: REVIEW_TRANSIENT
-Milestone state: CANDIDATE_SOURCE_MODEL_PENDING
-Milestone: Same-snapshot PlatformGate checkpoint complete
-Updated UTC: 2026-06-09T02:50:19Z
-Current step: candidate_source_model_review
+Status: PASS
+Milestone state: CANDIDATE_SOURCE_MODEL_PASS
+Milestone: PlatformGate and candidate-source retry/quarantine model complete
+Updated UTC: 2026-06-09T03:00:16Z
+Current step: candidate_source_model_pass
 Jason action required: False
 
 ## PlatformGate
@@ -16,7 +16,7 @@ Jason action required: False
 - prunable_failures: 0
 
 ## Candidate Source Model
-- status: REVIEW
+- status: PASS
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: Candidate-source model requires engineering review before catalogue expansion
-- next_check_utc: 2026-06-09T02:55:36Z
+- action_taken: PlatformGate PASS; candidate-source retry/quarantine model verified
+- next_check_utc: 2026-06-09T03:05:22Z
 
 ## Blockers
-- seeder_stage_only_not_plex_visible
+- none
