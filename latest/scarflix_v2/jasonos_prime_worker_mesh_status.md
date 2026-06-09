@@ -1,14 +1,14 @@
 # JasonOS Prime Worker Mesh
 
 Status: PASS
-Updated UTC: 2026-06-09T17:36:03.749Z
+Updated UTC: 2026-06-09T18:03:02.325Z
 Mode: autonomous local worker mesh
 Processed commands this run: 0
 JasonOS short-worker tasks: JasonOS_Prime_PredictiveSimulator=Ready, JasonOS_Prime_SelfEvolutionCycle=Ready, JasonOS_Prime_PublicMirrorPublisher=Ready, JasonOS_Prime_OutcomeDashboard=Ready, JasonOS_Prime_FastTrackAccelerator=Ready, JasonOS_Prime_CommandCentre_8791_Keepalive=Ready
 
 ## Live Status
-- controller: FAIL_ENGINEERING
-- milestone: BLOCKED_DECISION
+- controller: PASS
+- milestone: CANDIDATE_SOURCE_MODEL_PASS
 - platform_gate: PASS
 - platform_step: platform_gate_pass
 - rclone: PASS
@@ -16,7 +16,7 @@ JasonOS short-worker tasks: JasonOS_Prime_PredictiveSimulator=Ready, JasonOS_Pri
 - visible_parts: 1
 - predictive_simulator: PASS
 - self_evolution: REVIEW
-- public_mirror: PASS
+- public_mirror: REVIEW_RECOVERABLE
 - outcome_dashboard: PASS
 - fast_track: PASS
 
