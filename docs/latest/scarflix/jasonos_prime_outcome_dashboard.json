@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T11:24:02.434Z",
+  "updated_utc": "2026-06-09T11:26:01.706Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 7,
-    "platform_child_progress_age_minutes": 20,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-09T11:21:59Z",
-    "next_check_age_minutes": 2,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 22,
+    "mirror_updated_age_minutes": 1,
+    "next_check_utc": "2026-06-09T11:30:24Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260609.log",
     "last_progress_utc": "2026-06-09T11:03:48.762Z",
-    "age_minutes": 20,
+    "age_minutes": 22,
     "last_line": "[2026-06-09T11:03:48Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 8,
     "review_lines": 3,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-09T11:16:49Z",
+    "updated_utc": "2026-06-09T11:25:17Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-09T11:22:00Z",
+    "updated_utc": "2026-06-09T11:25:04Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T11:20:06Z",
+    "updated_utc": "2026-06-09T11:25:11Z",
     "checked_visible": 2,
     "passed_visible": 2,
     "failed_visible": 0,
@@ -197,7 +197,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T11:23:01Z",
+    "updated_utc": "2026-06-09T11:25:17Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
     "expansion_eligible": true,
     "expansion_started_this_cycle": false,
@@ -243,7 +243,7 @@
   },
   "daily_ai_usability": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T11:20:02Z",
+    "updated_utc": "2026-06-09T11:25:05Z",
     "daily_ui_8791": {
       "reachable": true,
       "status": 200,
@@ -290,12 +290,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-09T11:17:07.752Z",
+      "utc": "2026-06-09T11:25:35.989Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-09T11:16:53Z",
+      "utc": "2026-06-09T11:25:21Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -364,7 +364,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-09T11:20:02Z - daily AI usability smoke test",
+      "last_change": "2026-06-09T11:25:05Z - daily AI usability smoke test",
       "current": "Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
       "progress": 57,
       "eta": "next: integrate 8805 tool traces into 8791 daily UI",
@@ -391,7 +391,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T11:23:01Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+      "last_change": "2026-06-09T11:25:17Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
       "current": "Status PASS; expansion_eligible=true; expansion_started_this_cycle=false; total_strm=2.",
       "progress": 30,
       "eta": "runs every 5 minutes",
