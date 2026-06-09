@@ -1,6 +1,6 @@
 # Grok Instructions For Codex
 
-- Updated UTC: 2026-06-09T13:32:01.341Z
+- Updated UTC: 2026-06-09T14:02:02.228Z
 - Source: local_status_fallback
 - Bridge mode: LOCAL_FALLBACK
 - Instruction count: 1
@@ -9,10 +9,10 @@
 
 ## Instructions
 
-### local-status-summary-20260609133201
+### local-status-summary-20260609140202
 - Target: status_reporting
 - Risk: low
 - Approved: true
 - Requires user decision: false
-- Expires UTC: 2026-06-09T14:17:01.317Z
+- Expires UTC: 2026-06-09T14:47:02.226Z
 - Summary: Write a safe status summary; do not run long validation inline.
