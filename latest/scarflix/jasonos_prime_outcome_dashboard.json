@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-09T11:15:11.742Z",
+  "updated_utc": "2026-06-09T11:17:10.380Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -40,16 +40,16 @@
     "materialized_visibility_cleanup_quarantined_this_run": 10,
     "materialized_visibility_cleanup_skipped": 0,
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
-    "grok_instruction_bridge_status": "STAGED_WAITING_FOR_HIDDEN_TASK_RUN",
-    "grok_instruction_bridge_mode": "PENDING_HIDDEN_TASK",
+    "grok_instruction_bridge_status": "LOCAL_FALLBACK",
+    "grok_instruction_bridge_mode": "LOCAL_FALLBACK",
     "grok_instruction_bridge_last_successful_grok_instruction_utc": "",
     "grok_instruction_bridge_source": "",
     "grok_instruction_count": 1,
-    "grok_executable_instruction_count": 0,
-    "codex_instruction_consumer_status": "STAGED_WAITING_FOR_HIDDEN_TASK_RUN",
-    "codex_executable_instruction_count": 0,
-    "codex_executed_instruction_actions": 0,
-    "grok_codex_loop_status": "STAGED_WAITING_FOR_HIDDEN_TASK_RUN",
+    "grok_executable_instruction_count": 1,
+    "codex_instruction_consumer_status": "PASS",
+    "codex_executable_instruction_count": 1,
+    "codex_executed_instruction_actions": 1,
+    "grok_codex_loop_status": "PASS",
     "expansion_pause_status": "LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED",
     "expansion_paused": false,
     "expansion_pause_reason": "Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.",
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 11,
-    "platform_child_progress_age_minutes": 11,
+    "controller_updated_age_minutes": 0,
+    "platform_child_progress_age_minutes": 13,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-09T11:09:05Z",
-    "next_check_age_minutes": 6,
+    "next_check_utc": "2026-06-09T11:21:59Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260609.log",
     "last_progress_utc": "2026-06-09T11:03:48.762Z",
-    "age_minutes": 11,
+    "age_minutes": 13,
     "last_line": "[2026-06-09T11:03:48Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 8,
     "review_lines": 3,
@@ -143,7 +143,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "High",
-    "updated_utc": "2026-06-09T11:15:07Z",
+    "updated_utc": "2026-06-09T11:16:49Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T11:10:05Z",
+    "updated_utc": "2026-06-09T11:15:12Z",
     "checked_visible": 2,
     "passed_visible": 2,
     "failed_visible": 0,
@@ -197,7 +197,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-09T11:14:01Z",
+    "updated_utc": "2026-06-09T11:16:02Z",
     "current_milestone": "CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
     "expansion_eligible": true,
     "expansion_started_this_cycle": false,
@@ -273,29 +273,29 @@
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_quiet_tasks_status.json"
   },
   "grok_codex_instruction_loop": {
-    "status": "STAGED_WAITING_FOR_HIDDEN_TASK_RUN",
-    "bridge_status": "STAGED_WAITING_FOR_HIDDEN_TASK_RUN",
-    "bridge_mode": "PENDING_HIDDEN_TASK",
-    "bridge_updated_utc": "2026-06-09T11:20:00Z",
+    "status": "PASS",
+    "bridge_status": "LOCAL_FALLBACK",
+    "bridge_mode": "LOCAL_FALLBACK",
+    "bridge_updated_utc": "2026-06-09T11:17:04.486Z",
     "last_successful_grok_instruction_utc": "",
     "bridge_source": "",
-    "consumer_status": "STAGED_WAITING_FOR_HIDDEN_TASK_RUN",
-    "consumer_updated_utc": "2026-06-09T11:20:00Z",
+    "consumer_status": "PASS",
+    "consumer_updated_utc": "2026-06-09T11:17:04.548Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
-    "executable_instruction_count": 0,
-    "executed_action_count": 0,
+    "executable_instruction_count": 1,
+    "executed_action_count": 1,
     "instructions_json": "D:/PlexTools/public/latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.json",
     "instructions_md": "D:/PlexTools/public/latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md"
   },
   "recent_updates": [
     {
-      "utc": "2026-06-09T11:05:20.269Z",
+      "utc": "2026-06-09T11:17:07.752Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-09T11:03:57Z",
+      "utc": "2026-06-09T11:16:53Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -373,11 +373,11 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-09T11:20:00Z - structured instruction loop",
-      "current": "Schema=grok_codex_instruction.v1; bridge=STAGED_WAITING_FOR_HIDDEN_TASK_RUN; mode=PENDING_HIDDEN_TASK; consumer=STAGED_WAITING_FOR_HIDDEN_TASK_RUN; source=unknown; instructions=1; executable_by_bridge=0; executable_by_consumer=0; executed_actions=0.",
-      "progress": 40,
+      "last_change": "2026-06-09T11:17:04.548Z - structured instruction loop",
+      "current": "Schema=grok_codex_instruction.v1; bridge=LOCAL_FALLBACK; mode=LOCAL_FALLBACK; consumer=PASS; source=unknown; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
+      "progress": 55,
       "eta": "active locally; Grok API waits for approved token",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     },
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
@@ -391,7 +391,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-09T11:14:01Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
+      "last_change": "2026-06-09T11:16:02Z - CONTROLLED_MATERIALIZED_EXPANSION_ALLOWED",
       "current": "Status PASS; expansion_eligible=true; expansion_started_this_cycle=false; total_strm=2.",
       "progress": 30,
       "eta": "runs every 5 minutes",
