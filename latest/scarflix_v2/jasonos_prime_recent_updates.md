@@ -1,6 +1,6 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T04:08:01.765Z
+Updated UTC: 2026-06-09T04:10:02.796Z
 Source: live status merge
 
 - 2026-06-09T04:07:40.523Z - Controlled Materialized Expansion Held After Next Batch Index Lag - 2026-06-09 13:43: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
