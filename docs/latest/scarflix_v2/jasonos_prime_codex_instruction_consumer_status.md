@@ -1,10 +1,13 @@
-# JasonOS Prime Codex Instruction Consumer
+# JasonOS Prime Codex Instruction Consumer Status
 
-Status: PASS
-Updated UTC: 2026-06-09T10:17:01Z
-Instructions: 1
-Executable instructions: 0
-Executed actions: 0
-Source: local_only_no_token
-
-Safety: only low/medium risk approved instructions without user decisions can execute. Legacy/direct resolver expansion remains forbidden.
+- Updated UTC: 2026-06-09T11:02:01.556Z
+- Status: PASS_ALL_SKIPPED_BY_SAFETY_GATE
+- Bridge mode observed: unknown
+- Instructions seen: 1
+- Executable instructions: 0
+- Skipped instructions: 1
+- Actions attempted: 0
+- Actions passed: 0
+- Execution success rate: 0
+- Strategy recommendations observed: 0
+- Autonomy suggestions observed: 0
