@@ -169,6 +169,26 @@ Guidance:
 
 # 2026-06-09 20:05 Australia/Sydney - Structured Autonomy Update
 
+# 2026-06-09 20:35 Australia/Sydney - Grok API Token Integration Update
+
+`JasonOS_Prime_GrokInstructionBridge` now reports bridge mode as `REAL_API` or `LOCAL_FALLBACK`.
+
+Token detection order:
+
+1. `GROK_API_KEY.txt`
+2. `XAI_API_KEY.txt`
+3. `xai.key`
+4. `grok_token.txt`
+
+Older lowercase/compatibility token filenames are still checked after those four names. If a usable token is present and Grok returns valid `grok_codex_instruction.v1` JSON, the bridge writes Grok-sourced instructions and reports `REAL_API`. If no usable token exists, the API call fails, or Grok returns malformed JSON, the bridge reports `LOCAL_FALLBACK` and writes a non-executable fallback instruction. This protects ScarFLIX from unsafe or ambiguous autonomous actions.
+
+Dashboard fields to check:
+
+- `truth_metrics.grok_instruction_bridge_mode`
+- `truth_metrics.grok_instruction_bridge_last_successful_grok_instruction_utc`
+- `grok_codex_instruction_loop.bridge_mode`
+- `grok_codex_instruction_loop.last_successful_grok_instruction_utc`
+
 The earlier materialized QA regression has been cleared. Current gates:
 
 - Targeted materialized Plex decision QA: `PASS`, `124/124`, failed `0`.
