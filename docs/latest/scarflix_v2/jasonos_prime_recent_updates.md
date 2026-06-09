@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T10:09:02.749Z
+Updated UTC: 2026-06-09T10:11:04.534Z
 Source: live status merge
 
-- 2026-06-09T10:05:57.604Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
-- 2026-06-09T10:05:49Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-09T10:10:50.647Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-09T10:10:40Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T09:09:39.224Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-09T09:09:39Z] [PASS] Final: PASS
 - 2026-06-09T09:00:04.711Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T09:00:04Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
