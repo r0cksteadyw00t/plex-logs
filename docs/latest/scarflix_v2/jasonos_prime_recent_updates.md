@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-09T03:30:04.523Z
+Updated UTC: 2026-06-09T03:32:01.235Z
 Source: live status merge
 
-- 2026-06-09T03:25:34.846Z - Controlled Expansion Resumed With Candidate Retry Cleanup - 2026-06-09 11:10: Jason manually tested several materialized/WebDAV-backed Plex items and reported successful playback: `Aladdin (1992)` `Casino Royale (2006)` `Black Panther (2018)`
-- 2026-06-09T03:25:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-09T03:30:34.728Z - Controlled Expansion Resumed With Candidate Retry Cleanup - 2026-06-09 11:10: Jason manually tested several materialized/WebDAV-backed Plex items and reported successful playback: `Aladdin (1992)` `Casino Royale (2006)` `Black Panther (2018)`
+- 2026-06-09T03:30:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T03:00:21.004Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-09T03:00:20Z] [PASS] Decision passed: metadata=41761 title=The Bourne Identity
 - 2026-06-09T02:55:10Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-09T01:05:16.516Z - Controlled Materialized Expansion Working - 2026-06-08 20:17: Current ScarFLIX playback architecture: Legacy direct `18788/live` resolver `.strm` publishing remains paused and hidden. Controlled materialized/WebDAV-backed publishing is allowed. `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_CatalogSymlinkPublisher.ps1` now mounts rclone with `--links`, writes running progress s...
