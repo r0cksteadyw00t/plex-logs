@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T00:40:02Z",
+  "updated_utc": "2026-06-10T00:45:01Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -125,9 +125,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 98,
-    "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-10T00:40:37Z",
+    "platform_child_progress_age_minutes": 103,
+    "mirror_updated_age_minutes": 2,
+    "next_check_utc": "2026-06-10T00:45:16Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
     "last_progress_utc": "2026-06-09T23:01:45.469Z",
-    "age_minutes": 98,
+    "age_minutes": 103,
     "last_line": "[2026-06-09T23:01:45Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 2,
     "review_lines": 3,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-10T00:35:12Z",
+    "updated_utc": "2026-06-10T00:40:08Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-10T00:40:02Z",
+    "updated_utc": "2026-06-10T00:45:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -329,7 +329,7 @@
   },
   "daily_ai_usability": {
     "status": "PASS",
-    "updated_utc": "2026-06-10T00:26:49Z",
+    "updated_utc": "2026-06-10T00:42:04Z",
     "daily_ui_8791": {
       "reachable": true,
       "status": 200,
@@ -376,12 +376,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-10T00:35:43.951Z",
+      "utc": "2026-06-10T00:40:21.959Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-10T00:35:32Z",
+      "utc": "2026-06-10T00:40:13Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -450,7 +450,7 @@
     {
       "outcome": "Real God-mode Conversational Brain (8791 + 8805)",
       "target": "Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory.",
-      "last_change": "2026-06-10T00:26:49Z - daily AI usability smoke test",
+      "last_change": "2026-06-10T00:42:04Z - daily AI usability smoke test",
       "current": "Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true.",
       "progress": 57,
       "eta": "next: integrate 8805 tool traces into 8791 daily UI",
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T00:40:02Z",
+    "updated_utc": "2026-06-10T00:45:01Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -807,8 +807,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 158511,
-    "safe_pipeline_log_age_seconds": 215395,
+    "canary_status_age_seconds": 158806,
+    "safe_pipeline_log_age_seconds": 215690,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -825,7 +825,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=35164"
+        "detail": "pid=33360"
       }
     ],
     "blockers": []
