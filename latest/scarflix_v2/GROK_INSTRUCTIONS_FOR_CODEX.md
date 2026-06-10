@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-10T04:38:54Z
+Updated UTC: 2026-06-10T04:55:12Z
 Source: grok_api
 
 ## Summary
@@ -14,10 +14,10 @@ PASS
 
 ## Instructions
 
-### scarflix_qa_write_strategy_note_incident_review_20260610
+### orchestrator_write_strategy_note_service_context_diagnosis_20260610
 
-- Target: `scarflix_qa`
+- Target: `orchestrator`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-11T04:38:54Z`
+- Expires: `2026-06-11T04:55:12Z`
