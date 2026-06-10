@@ -1,17 +1,8 @@
 # Materialized QA Incident Hypothesis Ledger
 
-- Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
-- Updated UTC: 2026-06-10T23:26:20.043Z
-- Current status: `PASS_UNCAPPED_BASELINE_CAPTURED`
-- Current hypothesis: The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 83/105 expected affected hashes currently present in Plex Section 5.
-- Next safe action: Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
+- Updated UTC: 2026-06-10T23:31:54.684Z
+- Current status: `PASS_FRESH_BASELINE_CORRELATION_COMPLETE`
+- Current hypothesis: The affected Section 5 set is still naturally converging: current visibility improved to 83/105. The remaining 22 items remain absent from exact Plex metadata/API rows in this bounded check, and Plex DB rows mirror that absence for the probed hash/title terms.
+- Recommendation: Controlled expansion of the currently visible 83 hashes is reasonable only behind a verification gate: rerun focused Section 5 QA against visible-only hashes, require high pass rate and zero publication side effects, keep the 22 missing hashes held/retryable, and leave PAUSE_PUBLICATION active until the gate is explicitly passed. Waiting one more natural drift cycle may reduce residual misses further and is lower risk; proceeding visible-only is moderate risk but bounded if the gate is enforced.
 
-## Latest Uncapped Section 5 Snapshot
-
-- Plex reported Section 5 total size: 176
-- Parsed Section 5 Video rows: 176
-- Unique indexed ScarFLIX_part hashes: 171
-- Expected affected hashes present: 83/105
-- Expected affected hashes missing: 22
-
-No publication, expansion, cleanup, deletion, source mutation, path rewrite, refresh, or cache clear was performed.
+No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
