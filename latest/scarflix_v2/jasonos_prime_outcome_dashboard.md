@@ -1,16 +1,16 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-10T11:20:02.999Z
+Updated UTC: 2026-06-10T11:25:03.099Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: STALE_STATUS
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-10T02:27:50Z - daily AI usability smoke test | Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true. | 57% | next: integrate 8805 tool traces into 8791 daily UI | Low |
-| Grok-Codex Autonomous Instruction Loop | 15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions. | 2026-06-10T11:05:31Z - structured instruction loop | Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1. | 75% | active every 15 minutes with Grok API | Low |
+| Grok-Codex Autonomous Instruction Loop | 15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions. | 2026-06-10T11:21:10Z - structured instruction loop | Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=2. | 75% | active every 15 minutes with Grok API | Low |
 | ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-09T16:11:20Z - materialized canary Plex decision QA | Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=4/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=1. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=. | 28% | after all-visible materialized QA passes | Medium |
 | Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-10T00:27:02Z - CONTROLLED_MATERIALIZED_QA_HOLD | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=0. | 30% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-07T22:59:49Z - scheduled task wrappers refreshed | Status PASS; tasks_updated=25; blockers=0. | 100% | active now | Low |
@@ -29,9 +29,9 @@ Recent Achievements:
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 3 min ago
-- Platform child progress: 5 min ago
+- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
+- Controller updated: 8 min ago
+- Platform child progress: 10 min ago
 - Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
