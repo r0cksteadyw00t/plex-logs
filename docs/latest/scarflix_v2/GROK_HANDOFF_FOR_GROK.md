@@ -52,6 +52,49 @@ The system was still too dependent on external pasted prompts for routine sequen
 
 ---
 
+### UPDATE - 2026-06-10T07:46:30Z - Plex Metadata vs WebDAV Map Comparison Complete
+
+**Trigger Reason:**  
+Same-sample read-only comparison completed for the active Materialized QA incident.
+
+**Current State Summary:**  
+- Orchestrator health: PASS.
+- Sentinel: PASS/LOW.
+- Publication: `PAUSE_PUBLICATION=true`.
+- Materialized QA: REVIEW 119/229, failed 110.
+- Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
+- Comparison status: `PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE`.
+- Grok delivery after comparison: `PASS_DELIVERED_TO_GROK_API`.
+- No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
+
+**What I have already tried:**  
+- Added read-only worker `D:\PlexTools\Foundry\workers\JasonOS_Prime_PlexMetadataVsWebdavMapComparison.js`.
+- Added Orchestrator job `run_plex_metadata_vs_webdav_map_comparison`.
+- Ran same 8-path sample, max concurrency `1`.
+- Initial hub-search output included unrelated actor/keyword hub rows; worker was corrected to count only strict title/year matches before final evidence was accepted.
+- Final result: expected `ScarFLIX_part-*` path matches `0/8`; same-section Plex rows `0/8`; strict other-section title/year matches `0/8`; not-found/not-indexed `8/8`.
+
+**My hypothesis on root cause:**  
+The sample files exist in user context and WebDAV/Plex endpoints are responsive, but Plex metadata/search is not surfacing the materialized `hybrid_movies_live` sample titles/parts. The leading actionable root cause is now Plex metadata/indexing/cache visibility gap. Service-context path visibility remains a separate structural constraint, but it no longer explains the Plex-visible QA timeout cluster by itself.
+
+**Proposed next steps:**  
+1. Keep `PAUSE_PUBLICATION=true`.
+2. Prepare a QA-only Plex indexing/metadata reconciliation plan for the same sample.
+3. Do not execute cleanup, source quarantine, path rewrites, broad QA, or publication without reviewed plan.
+4. Escalate before any mitigation with blast radius beyond read-only/status-only QA reconciliation.
+
+**Data/files to review:**  
+- `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_vs_webdav_map_comparison_results.json`
+- `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_vs_webdav_map_comparison_results.md`
+- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_incident_hypothesis_ledger.json`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_PlexMetadataVsWebdavMapComparison.js`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\PROJECT_PLAN.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
+---
+
 ### UPDATE - 2026-06-10T07:02:00Z - Corrected Materialized QA Timing Evidence
 
 **Trigger Reason:**  
