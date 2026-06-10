@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T11:10:01Z",
+  "updated_utc": "2026-06-10T11:15:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -73,8 +73,8 @@
     "plex_playback_sample_status": "REVIEW",
     "plex_playback_sample_source_mode": "materialized_webdav_visible_rows",
     "plex_playback_sample_target_concurrency": 5,
-    "plex_playback_sample_range_passed": 5,
-    "plex_playback_sample_range_failed": 0,
+    "plex_playback_sample_range_passed": 4,
+    "plex_playback_sample_range_failed": 1,
     "plex_playback_sample_decision_passed": 0,
     "plex_playback_sample_decision_failed": 5,
     "plex_playback_verified_sample_count": 0,
@@ -124,35 +124,35 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 12,
-    "platform_child_progress_age_minutes": 125,
-    "mirror_updated_age_minutes": 3,
+    "controller_updated_age_minutes": 17,
+    "platform_child_progress_age_minutes": 0,
+    "mirror_updated_age_minutes": 4,
     "next_check_utc": "2026-06-10T11:10:08Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 5,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex client decision QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
-    "last_progress_utc": "2026-06-10T09:05:10.854Z",
-    "age_minutes": 125,
-    "last_line": "[2026-06-10T09:05:10Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
-    "pass_lines": 3,
-    "review_lines": 7,
-    "info_lines": 20
+    "stage": "5-concurrent stream QA",
+    "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260610.log",
+    "last_progress_utc": "2026-06-10T11:14:58.217Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-10T11:14:58Z] [REVIEW] Final: REVIEW",
+    "pass_lines": 0,
+    "review_lines": 4,
+    "info_lines": 12
   },
   "watchdog_status": {
     "status": "REVIEW",
-    "stall_risk": "Medium",
-    "updated_utc": "2026-06-10T10:58:00Z",
+    "stall_risk": "High",
+    "updated_utc": "2026-06-10T11:14:32Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-10T11:10:01Z",
-    "codex_action_required": false,
+    "status": "ALERT",
+    "alert_level": "HIGH",
+    "updated_utc": "2026-06-10T11:15:01Z",
+    "codex_action_required": true,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-10T11:10:02Z",
-    "updated_utc": "2026-06-10T11:10:02Z",
-    "ended_utc": "2026-06-10T11:10:02Z",
+    "started_utc": "2026-06-10T11:15:02Z",
+    "updated_utc": "2026-06-10T11:15:03Z",
+    "ended_utc": "2026-06-10T11:15:03Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -211,7 +211,7 @@
       {
         "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
         "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-10T11:10:03Z",
+        "retry_after_utc": "2026-06-10T11:25:02Z",
         "url_host": "192.168.1.184:18788",
         "is_local_live_proxy": true
       }
@@ -376,6 +376,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-10T11:14:58.217Z",
+      "title": "PlatformGate child QA active: 5-concurrent stream QA",
+      "detail": "Latest child QA line: [2026-06-10T11:14:58Z] [REVIEW] Final: REVIEW"
+    },
+    {
       "utc": "2026-06-10T11:05:15.196Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
@@ -394,11 +399,6 @@
       "utc": "2026-06-09T20:40:44Z",
       "title": "Autonomous controller: controller_exception",
       "detail": "none"
-    },
-    {
-      "utc": "2026-06-09T17:13:20.507Z",
-      "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-09T17:13:20Z] [REVIEW] Final: REVIEW"
     },
     {
       "utc": "2026-06-09T06:30:22.020Z",
@@ -469,10 +469,10 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-09T16:11:20Z - materialized canary Plex decision QA",
-      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=1. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
+      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=4/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=1. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 28,
       "eta": "after all-visible materialized QA passes",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     },
     {
       "outcome": "Fast-Track Accelerator",
@@ -535,7 +535,7 @@
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 18,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     }
   ],
   "files": {
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T11:10:01Z",
+    "updated_utc": "2026-06-10T11:15:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -611,9 +611,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-10T11:10:02Z",
-      "updated_utc": "2026-06-10T11:10:02Z",
-      "ended_utc": "2026-06-10T11:10:02Z",
+      "started_utc": "2026-06-10T11:15:02Z",
+      "updated_utc": "2026-06-10T11:15:03Z",
+      "ended_utc": "2026-06-10T11:15:03Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -655,7 +655,7 @@
         {
           "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
           "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-10T11:10:03Z",
+          "retry_after_utc": "2026-06-10T11:25:02Z",
           "url_host": "192.168.1.184:18788",
           "is_local_live_proxy": true
         }
@@ -761,7 +761,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-10T11:10:02Z",
+      "updated_utc": "2026-06-10T11:15:02Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -783,7 +783,7 @@
       "materialized_decision_qa_target_count": 229,
       "materialized_decision_qa_passed": 119,
       "materialized_decision_qa_failed": 110,
-      "decision_qa_status": "FAIL",
+      "decision_qa_status": "PASS",
       "concurrent_stream_qa_status": "REVIEW",
       "ignored_overlap": [],
       "overlap_running": [],
@@ -794,12 +794,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 10372
+              "pid": 16028
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 32616
+              "pid": 36088
             }
           ]
         }
@@ -807,8 +807,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 196320,
-    "safe_pipeline_log_age_seconds": 253204,
+    "canary_status_age_seconds": 196619,
+    "safe_pipeline_log_age_seconds": 253503,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -819,13 +819,13 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=35996"
+        "detail": "pid=1632"
       }
     ],
     "blockers": []
@@ -881,7 +881,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-10T11:10:02Z",
+    "updated_utc": "2026-06-10T11:15:02Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -903,7 +903,7 @@
     "materialized_decision_qa_target_count": 229,
     "materialized_decision_qa_passed": 119,
     "materialized_decision_qa_failed": 110,
-    "decision_qa_status": "FAIL",
+    "decision_qa_status": "PASS",
     "concurrent_stream_qa_status": "REVIEW",
     "ignored_overlap": [],
     "overlap_running": [],
@@ -914,12 +914,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 10372
+            "pid": 16028
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 32616
+            "pid": 36088
           }
         ]
       }
