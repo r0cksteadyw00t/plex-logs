@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T11:25:03.099Z",
+  "updated_utc": "2026-06-10T11:30:03.142Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 8,
-    "platform_child_progress_age_minutes": 10,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 15,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-10T11:21:53Z",
-    "next_check_age_minutes": 3,
+    "next_check_utc": "2026-06-10T11:31:11Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260610.log",
     "last_progress_utc": "2026-06-10T11:14:58.217Z",
-    "age_minutes": 10,
+    "age_minutes": 15,
     "last_line": "[2026-06-10T11:14:58Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 4,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-10T11:23:05Z",
+    "updated_utc": "2026-06-10T11:25:47Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-10T11:25:01Z",
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-10T11:30:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-10T11:20:02Z",
+    "updated_utc": "2026-06-10T11:25:03Z",
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
@@ -294,12 +294,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-10T11:16:59.338Z",
+      "utc": "2026-06-10T11:26:17.916Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-10T11:16:48Z",
+      "utc": "2026-06-10T11:26:09Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
