@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T15:25:02Z",
+  "updated_utc": "2026-06-10T15:35:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 15,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-10T15:25:10Z",
+    "controller_updated_age_minutes": 0,
+    "platform_child_progress_age_minutes": 25,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-10T15:39:42Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260611.log",
     "last_progress_utc": "2026-06-10T15:10:15.646Z",
-    "age_minutes": 15,
+    "age_minutes": 25,
     "last_line": "[2026-06-10T15:10:15Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 0,
     "review_lines": 1,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-10T15:20:07Z",
+    "updated_utc": "2026-06-10T15:34:36Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-10T15:20:02Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-10T15:30:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-10T15:25:01Z",
-    "updated_utc": "2026-06-10T15:25:04Z",
-    "ended_utc": "2026-06-10T15:25:04Z",
+    "started_utc": "2026-06-10T15:35:02Z",
+    "updated_utc": "2026-06-10T15:35:06Z",
+    "ended_utc": "2026-06-10T15:35:06Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -370,12 +370,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-10T15:20:17.580Z",
+      "utc": "2026-06-10T15:34:48.736Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-10T15:20:08Z",
+      "utc": "2026-06-10T15:34:39Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -541,7 +541,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-10T15:25:02Z",
+    "updated_utc": "2026-06-10T15:35:03Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -550,7 +550,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T15:25:02Z",
+    "updated_utc": "2026-06-10T15:35:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -613,9 +613,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-10T15:25:01Z",
-      "updated_utc": "2026-06-10T15:25:04Z",
-      "ended_utc": "2026-06-10T15:25:04Z",
+      "started_utc": "2026-06-10T15:35:02Z",
+      "updated_utc": "2026-06-10T15:35:06Z",
+      "ended_utc": "2026-06-10T15:35:06Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -757,7 +757,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-10T15:25:01Z",
+      "updated_utc": "2026-06-10T15:35:02Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -790,12 +790,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 31324
+              "pid": 14268
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 27304
+              "pid": 11260
             }
           ]
         }
@@ -803,8 +803,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 211613,
-    "safe_pipeline_log_age_seconds": 268497,
+    "canary_status_age_seconds": 212216,
+    "safe_pipeline_log_age_seconds": 269100,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -821,7 +821,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=39352"
+        "detail": "pid=23152"
       }
     ],
     "blockers": []
@@ -877,7 +877,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-10T15:25:01Z",
+    "updated_utc": "2026-06-10T15:35:02Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -910,12 +910,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 31324
+            "pid": 14268
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 27304
+            "pid": 11260
           }
         ]
       }
