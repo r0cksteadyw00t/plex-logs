@@ -1,3 +1,23 @@
+## FRESH SECTION 5 BASELINE + CURRENT-MISSING CORRELATION
+
+**Updated UTC:** 2026-06-10T23:16:15.710Z
+
+**Status:** `PASS_FRESH_BASELINE_CORRELATION_COMPLETE`
+
+**Fresh baseline:** `95/105` affected hashes visible (`90.5%`); `10` remain missing.
+
+**Current missing hashes:** `scarflix_part-7c4868fe7b1db021`, `scarflix_part-db3f532fdd48fe57`, `scarflix_part-942255f029875306`, `scarflix_part-bf8b8fcb4150df6b`, `scarflix_part-2248c141861c0a2c`, `scarflix_part-ea2489ddc0285b99`, `scarflix_part-3ac0e5bd2415a5fc`, `scarflix_part-d708c8b30a147319`, `scarflix_part-89731919b552c615`, `scarflix_part-491a4bfccb102f1e`
+
+**Tiny current-missing correlation:** Plex exact rows `3/10`, DB rows `3/10`, log matches `62`.
+
+**Hypothesis:** The affected Section 5 set is still naturally converging: current visibility improved to 95/105. The remaining 10 items remain absent from exact Plex metadata/API rows in this bounded check, and Plex DB rows mirror that absence for the probed hash/title terms.
+
+**Recommendation:** Controlled expansion of the currently visible 95 hashes is reasonable only behind a verification gate: rerun focused Section 5 QA against visible-only hashes, require high pass rate and zero publication side effects, keep the 10 missing hashes held/retryable, and leave PAUSE_PUBLICATION active until the gate is explicitly passed. Waiting one more natural drift cycle may reduce residual misses further and is lower risk; proceeding visible-only is moderate risk but bounded if the gate is enforced.
+
+**Safety:** Strict read-only. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-10T23:09:27.980Z
