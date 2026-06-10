@@ -1,0 +1,207 @@
+{
+  "component": "scarflix_v2_materialized_qa_incident_hypothesis_ledger",
+  "schema_version": "scarflix.materialized_qa_incident_ledger.v1",
+  "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
+  "status": "REVIEW_ACTION_A_NO_IMPROVEMENT",
+  "updated_utc": "2026-06-10T08:48:15Z",
+  "p0": true,
+  "qa_summary": {
+    "status": "REVIEW",
+    "checked": 229,
+    "passed": 119,
+    "failed": 110,
+    "timeout_failures": 106,
+    "section_5_failures": 106,
+    "hybrid_movies_live_failures": 105
+  },
+  "leading_hypotheses": [
+    {
+      "id": "H1_SERVICE_CONTEXT_PATH_VISIBILITY",
+      "confidence": "HIGH",
+      "confidence_score": 0.9,
+      "next_bounded_test": "Keep service diagnostics metadata-first. Use only controlled user-context samples for target-follow evidence; do not attempt service/system rclone mount changes in this incident."
+    },
+    {
+      "id": "H5_PLEX_SECTION_CACHE_OR_METADATA_BEHAVIOR",
+      "confidence": "HIGH",
+      "confidence_score": 0.86,
+      "next_bounded_test": "Escalate the no-improvement Action A result to Grok before any Action B, broad scan, cleanup, path rewrite, source mutation, QA retry, publication, or expansion."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1_SERVICE_CONTEXT_PATH_VISIBILITY",
+      "hypothesis": "Service-context path visibility or symlink target resolution fails because the Orchestrator service context cannot reliably follow user-session S: rclone mount targets.",
+      "confidence": "HIGH",
+      "confidence_score": 0.9,
+      "evidence_for": [
+        "Service-context probe classified 20/20 sampled paths as service/host visibility inaccessible.",
+        "User-context tiny probe statted 8/8 sampled target stream files with 0 timeouts.",
+        "Known path model: D:\\StremioCatalog ScarFLIX_part entries are directory symlinks to S:\\media, while S: is maintained in user context.",
+        "Timing probe reconfirmed service-context inaccessible paths 8/8 while user-context evidence remained OK for 8/8."
+      ],
+      "evidence_against": [
+        "This explains service-context diagnostics, but not by itself why Plex/materialized decision QA timed out once Plex-visible rows existed.",
+        "User-context probe confirms sampled files exist, so the Materialized QA failure cannot be reduced to missing files."
+      ],
+      "next_bounded_test": "Keep service diagnostics metadata-first. Use only controlled user-context samples for target-follow evidence; do not attempt service/system rclone mount changes in this incident.",
+      "allowed_actions": [
+        "metadata_first_path_resolution",
+        "tiny_user_context_probe"
+      ],
+      "forbidden_actions": [
+        "system_rclone_mount_change",
+        "service_account_rights_change",
+        "path_rewrite",
+        "publication_change"
+      ]
+    },
+    {
+      "id": "H2_RESOLVER_INDEXING_TIMING_LOAD",
+      "hypothesis": "Resolver, Plex indexing, or decision timing is load-sensitive for hybrid_movies_live paths after files are present.",
+      "confidence": "MEDIUM_HIGH",
+      "confidence_score": 0.68,
+      "evidence_for": [
+        "Materialized QA is REVIEW 119/229 failed=110 with 106 timeout-class failures.",
+        "Timeouts are concentrated in Movies section 5 and hybrid_movies_live paths.",
+        "User-context file stat succeeded for sampled rows, moving suspicion toward Plex decision/indexing/load timing.",
+        "Timing probe Plex metadata result: 2xx=8/8, timeouts=0.",
+        "Plex metadata comparison found not-indexed/not-found samples=8/8."
+      ],
+      "evidence_against": [
+        "Timing probe did not run full Materialized PlexDecisionQA, so this remains a diagnostic signal rather than a gate result.",
+        "Some rows passed in the same QA set, so timing may be path-family-specific rather than globally systemic."
+      ],
+      "next_bounded_test": "Use Plex metadata comparison evidence to plan a QA-only reconciliation diagnostic; do not broaden QA yet.",
+      "allowed_actions": [
+        "detached_tiny_decision_timing_diagnostic",
+        "status_only_result_logging"
+      ],
+      "forbidden_actions": [
+        "inline_plex_decision_qa",
+        "full_materialized_qa_retry",
+        "publication_change"
+      ]
+    },
+    {
+      "id": "H3_WEBDAV_RCLONE_LATENCY_UNDER_LOAD",
+      "hypothesis": "WebDAV or rclone latency under load is causing timeout behavior for large or live-path materialized files.",
+      "confidence": "LOW_MEDIUM",
+      "confidence_score": 0.3,
+      "evidence_for": [
+        "Affected paths traverse rclone/WebDAV-backed materialized storage.",
+        "The failure mode is timeout-heavy rather than deterministic wrong-path or missing-file failure.",
+        "File sizes in the confirmed sample include multi-GB streams.",
+        "Timing probe WebDAV HEAD result: 2xx=7/8, timeouts=0."
+      ],
+      "evidence_against": [
+        "User-context target stat completed quickly for all sampled files.",
+        "WebDAV HEAD did not timeout on the sampled paths."
+      ],
+      "next_bounded_test": "Measure WebDAV HEAD plus optional tiny range timing on the same 8-path sample, concurrency 1, strict timeout, no media read beyond tiny range.",
+      "allowed_actions": [
+        "webdav_head_timing",
+        "tiny_range_timing"
+      ],
+      "forbidden_actions": [
+        "bulk_get",
+        "large_media_read",
+        "concurrent_load_test_above_2"
+      ]
+    },
+    {
+      "id": "H4_QA_HARNESS_TIMEOUT_THRESHOLD_MISMATCH",
+      "hypothesis": "The QA harness timeout threshold is too aggressive for the hybrid_movies_live path family or large-file decision path.",
+      "confidence": "MEDIUM",
+      "confidence_score": 0.42,
+      "evidence_for": [
+        "Timeout is the dominant reported reason.",
+        "Affected samples include large files and live-path family rows.",
+        "QA target count is broad enough that a fixed timeout mismatch could create clustered REVIEW results."
+      ],
+      "evidence_against": [
+        "Timing probe completed without changing QA harness settings; harness tuning remains a planning-only mitigation.",
+        "The current evidence does not separate Plex decision timeout from WebDAV/rclone timeout."
+      ],
+      "next_bounded_test": "Read harness timeout config and compare elapsed timing distributions for pass controls versus confirmed fail samples before changing any timeout.",
+      "allowed_actions": [
+        "read_harness_config",
+        "compare_existing_elapsed_timings"
+      ],
+      "forbidden_actions": [
+        "global_timeout_increase_without_sample_evidence",
+        "full_qa_retry_inline"
+      ]
+    },
+    {
+      "id": "H5_PLEX_SECTION_CACHE_OR_METADATA_BEHAVIOR",
+      "hypothesis": "Plex section-specific cache freshness or metadata/path extraction behavior is contributing to the timeout cluster.",
+      "confidence": "HIGH",
+      "confidence_score": 0.86,
+      "evidence_for": [
+        "Failures are heavily concentrated in Movies section 5.",
+        "Playback QA controller previously triggered Plex scans for sections 5 and 6.",
+        "Smaller TV section 6 involvement suggests section/path cache behavior still needs control comparison.",
+        "Plex metadata vs webdav_map comparison expected ScarFLIX_part matches=0/8, same-section mismatches=0, same-section rows without parts=0, rows with part files=0.",
+        "After approved Action A path-scoped section 5 refresh attempt and 120-second wait, repeat comparison still showed expected matches=0/8 and not-found/not-indexed=8/8."
+      ],
+      "evidence_against": [
+        "Path family concentration may be stronger than section behavior.",
+        "Timing probe Plex path matching result: matching ScarFLIX_part paths=0/8.",
+        "No evidence yet contradicts the Plex metadata/path mapping mismatch hypothesis."
+      ],
+      "next_bounded_test": "Escalate the no-improvement Action A result to Grok before any Action B, broad scan, cleanup, path rewrite, source mutation, QA retry, publication, or expansion.",
+      "allowed_actions": [
+        "plex_metadata_path_read",
+        "status_only_path_compare"
+      ],
+      "forbidden_actions": [
+        "plex_library_mutation",
+        "broad_scan_loop",
+        "metadata_rewrite"
+      ]
+    }
+  ],
+  "evidence_sources": {
+    "materialized_qa_status": "D:\\PlexTools\\public\\latest\\scarflix_v2\\materialized_canary_decision_qa_status.json",
+    "triage": "D:\\PlexTools\\public\\latest\\scarflix_v2\\materialized_qa_failure_triage.json",
+    "service_context_probe": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_materialized_qa_incident_probe.json",
+    "user_context_probe": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_materialized_qa_user_context_probe.json",
+    "timing_plan": "D:\\PlexTools\\public\\latest\\scarflix_v2\\materialized_qa_decision_timing_probe_plan.json",
+    "timing_results": "D:\\PlexTools\\public\\latest\\scarflix_v2\\materialized_qa_timing_probe_results.json",
+    "plex_metadata_vs_webdav_map_comparison": "D:\\PlexTools\\public\\latest\\scarflix_v2\\plex_metadata_vs_webdav_map_comparison_results.json",
+    "plex_metadata_reconciliation_execution_status": "D:\\PlexTools\\public\\latest\\scarflix_v2\\plex_metadata_reconciliation_execution_status.json"
+  },
+  "reconciliation_execution": {
+    "status": "REVIEW_ACTION_A_NO_IMPROVEMENT",
+    "updated_utc": "2026-06-10T08:48:15Z",
+    "action": "ACTION_A_PATH_SCOPED_SECTION_5_REFRESH",
+    "scope": "locked_8_path_movies_section_5_hybrid_movies_live_sample",
+    "request_sent": true,
+    "duplicate_refresh_sent": false,
+    "stabilization_wait_seconds": 120,
+    "post_refresh_comparison_updated_utc": "2026-06-10T08:47:09.222Z",
+    "expected_part_match_count": 0,
+    "target_expected_part_match_count": 6,
+    "title_not_found_or_not_indexed_count": 8,
+    "plex_query_count": 34,
+    "plex_query_http_2xx": 34,
+    "plex_query_timeouts": 0,
+    "success_criteria_met": false,
+    "next_required_step": "Grok review of no-improvement result before any further reconciliation action."
+  },
+  "safety_rules": {
+    "pause_publication_must_remain_active": true,
+    "no_publication": true,
+    "no_deletion": true,
+    "no_cleanup": true,
+    "no_path_rewrite": true,
+    "no_broad_retry": true,
+    "max_bounded_paths_per_round": 30,
+    "max_diagnostic_concurrency": 2
+  },
+  "next_required_step": "Grok review of no-improvement Action A result before any further reconciliation action.",
+  "no_publication_started": true,
+  "no_cleanup_performed": true,
+  "no_source_mutation_performed": true
+}
