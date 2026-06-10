@@ -1,0 +1,186 @@
+{
+  "component": "plex_metadata_reconciliation_plan_8path_sample",
+  "schema_version": "scarflix.plex_metadata_reconciliation_plan.v1",
+  "created_utc": "2026-06-10T07:53:14Z",
+  "created_local": "2026-06-10 17:53 Australia/Sydney",
+  "status": "REVIEW_READY_FOR_GROK_PEER_REVIEW",
+  "execution_state": "NOT_EXECUTED",
+  "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
+  "requires_grok_review_before_execution": true,
+  "pause_publication_must_remain_active": true,
+  "scope": {
+    "description": "QA-only Plex indexing/metadata reconciliation plan for the same 8 Movies section 5 / hybrid_movies_live sample.",
+    "section_id": 5,
+    "path_family": "hybrid_movies_live",
+    "sample_count": 8,
+    "max_concurrency_for_future_verification": 1
+  },
+  "current_evidence": {
+    "materialized_qa_status": "REVIEW",
+    "checked": 229,
+    "passed": 119,
+    "failed": 110,
+    "timeout_failures": 106,
+    "timing_probe": {
+      "service_context_inaccessible": 8,
+      "user_context_ok": 8,
+      "webdav_head_2xx": 7,
+      "webdav_timeouts": 0,
+      "plex_metadata_2xx": 8,
+      "plex_metadata_timeouts": 0,
+      "plex_expected_part_matches": 0
+    },
+    "metadata_vs_webdav_map": {
+      "expected_part_matches": 0,
+      "same_section_rows": 0,
+      "strict_other_section_matches": 0,
+      "not_found_or_not_indexed": 8
+    }
+  },
+  "locked_sample": [
+    {
+      "title": "9 1/2 Weeks",
+      "folder": "Nine 1 2 Weeks (1986)",
+      "section_id": 5,
+      "expected_part": "ScarFLIX_part-2248c141861c0a2c",
+      "classification": "plex_title_not_found_or_not_indexed"
+    },
+    {
+      "title": "Annabelle",
+      "folder": "Annabelle (2014)",
+      "section_id": 5,
+      "expected_part": "ScarFLIX_part-c08b683f68e4e49e",
+      "classification": "plex_title_not_found_or_not_indexed"
+    },
+    {
+      "title": "Anna",
+      "folder": "Anna (2019)",
+      "section_id": 5,
+      "expected_part": "ScarFLIX_part-81107989d2e30cfb",
+      "classification": "plex_title_not_found_or_not_indexed"
+    },
+    {
+      "title": "Annihilation",
+      "folder": "Annihilation (2018)",
+      "section_id": 5,
+      "expected_part": "ScarFLIX_part-d8b22fb3f498688e",
+      "classification": "plex_title_not_found_or_not_indexed"
+    },
+    {
+      "title": "Armageddon",
+      "folder": "Armageddon (1998)",
+      "section_id": 5,
+      "expected_part": "ScarFLIX_part-2eaab8df357724dc",
+      "classification": "plex_title_not_found_or_not_indexed"
+    },
+    {
+      "title": "Battleship",
+      "folder": "Battleship (2012)",
+      "section_id": 5,
+      "expected_part": "ScarFLIX_part-8aa2235ef7c1e0f6",
+      "classification": "plex_title_not_found_or_not_indexed"
+    },
+    {
+      "title": "Crank",
+      "folder": "Crank (2006)",
+      "section_id": 5,
+      "expected_part": "ScarFLIX_part-bd37929b54c7c1bf",
+      "classification": "plex_title_not_found_or_not_indexed"
+    },
+    {
+      "title": "Creed",
+      "folder": "Creed (2015)",
+      "section_id": 5,
+      "expected_part": "ScarFLIX_part-8312e4b6385fd16c",
+      "classification": "plex_title_not_found_or_not_indexed"
+    }
+  ],
+  "working_hypothesis": {
+    "id": "H5_PLEX_SECTION_CACHE_OR_METADATA_BEHAVIOR",
+    "confidence": "HIGH",
+    "summary": "Plex metadata/indexing/cache visibility is the leading actionable issue for the 8-path sample. Files exist from user context and WebDAV/Plex endpoints respond, but Plex does not surface strict title/year metadata rows or expected ScarFLIX_part paths."
+  },
+  "read_only_confirmation_steps": [
+    "Re-read plex_metadata_vs_webdav_map_comparison_results.json and confirm 0/8 expected part matches.",
+    "Re-read materialized_qa_timing_probe_results.json and confirm no WebDAV/Plex timeout regression.",
+    "Read Plex section 5 metadata/location information.",
+    "Repeat the same 8-path metadata comparison only after review approval.",
+    "Read Plex scanner logs for the locked sample names and part hashes only after review approval."
+  ],
+  "proposed_actions": [
+    {
+      "id": "ACTION_A_PATH_SCOPED_SECTION_5_REFRESH",
+      "status": "PLANNED_REVIEW_REQUIRED",
+      "description": "Ask Plex to refresh only D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies if Plex accepts the path parameter.",
+      "blast_radius": "intended_one_folder_path",
+      "rollback": "No filesystem change. Stop after one request and escalate if Plex ignores path scoping or causes unexpected churn.",
+      "success_check": "After settle window, same-sample comparison improves toward strict expected part matches."
+    },
+    {
+      "id": "ACTION_B_SINGLE_SECTION_5_REFRESH",
+      "status": "PLANNED_REVIEW_REQUIRED_FALLBACK_ONLY",
+      "description": "Ask Plex to refresh Movies section 5 once if path-scoped refresh is unsupported or inconclusive.",
+      "blast_radius": "one_plex_library_section",
+      "rollback": "No repeated scans. Stop after one request; no cleanup or database/cache mutation.",
+      "success_check": "After settle window, same-sample comparison reaches at least 6/8 strict expected part matches."
+    },
+    {
+      "id": "ACTION_C_RATING_KEY_REFRESH",
+      "status": "HOLD_NOT_ELIGIBLE_YET",
+      "description": "Refresh specific Plex rating keys only if future read-only comparison finds strict title/year rows with stale or missing part paths.",
+      "blast_radius": "single_plex_metadata_item",
+      "rollback": "Do not run unless strict rating keys exist; stop if wrong-title risk appears.",
+      "success_check": "Specific rating key part paths converge to expected ScarFLIX_part paths."
+    },
+    {
+      "id": "ACTION_D_POST_REFRESH_SAME_SAMPLE_COMPARISON",
+      "status": "PLANNED_REVIEW_REQUIRED",
+      "description": "Rerun run_plex_metadata_vs_webdav_map_comparison against the same locked 8-path sample only.",
+      "blast_radius": "status_only",
+      "rollback": "No mutation; evidence-only.",
+      "success_check": "At least 6/8 strict expected part matches, zero wrong-title matches."
+    }
+  ],
+  "forbidden_actions": [
+    "publication",
+    "expansion",
+    "broad_materialized_qa_retry",
+    "platform_gate_inline",
+    "visible_catalog_qa_inline",
+    "plex_decision_qa_inline",
+    "concurrent_qa_inline",
+    "autogate_inline",
+    "full_catalogue_check",
+    "file_deletion",
+    "cleanup",
+    "source_mutation",
+    "source_quarantine",
+    "path_rewrite",
+    "symlink_rewrite",
+    "plex_empty_trash",
+    "plex_clean_bundles",
+    "plex_database_optimize_or_repair",
+    "plex_cache_clear",
+    "repeated_scan_loop",
+    "system_rclone_mount_change",
+    "service_account_change"
+  ],
+  "success_criteria": [
+    "PAUSE_PUBLICATION remains true.",
+    "Sentinel remains PASS/LOW or REVIEW/MEDIUM.",
+    "Process launch health does not enter degraded mode.",
+    "Same-sample comparison improves from 0/8 to at least 6/8 strict expected ScarFLIX_part matches.",
+    "Zero wrong-title metadata matches.",
+    "Zero newly visible legacy/direct resolver rows.",
+    "No publication, expansion, cleanup, deletion, path rewrite, or source mutation occurs."
+  ],
+  "stop_conditions": [
+    "Sentinel ALERT/HIGH.",
+    "Process launch degraded mode.",
+    "Unexpected Plex authentication or permission failure.",
+    "Path-scoped refresh triggers broad unexpected scan churn.",
+    "Wrong-title or legacy direct resolver evidence appears.",
+    "Any next step requires destructive cleanup, database/cache mutation, source quarantine, path rewrite, or publication."
+  ],
+  "next_required_step": "Grok peer review before any execution."
+}
