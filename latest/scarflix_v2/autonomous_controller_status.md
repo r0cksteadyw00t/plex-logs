@@ -3,7 +3,7 @@
 Status: PASS
 Milestone state: CANDIDATE_SOURCE_MODEL_PASS
 Milestone: PlatformGate and candidate-source retry/quarantine model complete
-Updated UTC: 2026-06-10T11:14:31Z
+Updated UTC: 2026-06-10T11:16:29Z
 Current step: candidate_source_model_pass
 Jason action required: False
 
