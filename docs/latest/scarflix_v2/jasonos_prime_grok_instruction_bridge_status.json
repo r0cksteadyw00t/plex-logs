@@ -1,37 +1,44 @@
 {
   "component": "jasonos_prime_grok_instruction_bridge",
   "status": "LOCAL_FALLBACK",
-  "updated_utc": "2026-06-10T00:39:34Z",
+  "updated_utc": "2026-06-10T00:54:46Z",
   "bridge_mode": "LOCAL_FALLBACK",
   "api_mode": "LOCAL_FALLBACK",
   "source": "local_status_fallback",
   "local_only_mode": true,
   "token_file_present": true,
   "token_file_used": "GROK_API_KEY.txt",
-  "fallback_reason": "Grok/xAI token file exists but is empty or invalid length; bridge wrote a non-executable local fallback.",
+  "fallback_reason": "Grok/xAI API call failed; bridge wrote non-executable fallback.",
   "prompt_context": {
     "public_contract_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_FORENSIC_PARTNER.md",
     "public_contract_loaded": true,
     "handoff": {
       "exists": true,
       "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_HANDOFF_FOR_GROK.md",
-      "mtime_utc": "2026-06-10T00:09:30.002Z",
-      "bytes": 5965
+      "mtime_utc": "2026-06-10T00:48:20.656Z",
+      "bytes": 5410
     },
     "codex_status": {
       "exists": true,
       "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\CODEX_STATUS_FOR_GROK.md",
-      "mtime_utc": "2026-06-09T15:32:01.542Z",
-      "bytes": 560
+      "mtime_utc": "2026-06-10T00:48:20.656Z",
+      "bytes": 865
     },
     "dashboard": {
       "exists": true,
       "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_outcome_dashboard.json",
-      "mtime_utc": "2026-06-10T00:35:03.427Z",
-      "bytes": 39085
+      "mtime_utc": "2026-06-10T00:50:07.530Z",
+      "bytes": 39131
     }
   },
-  "provider": null,
+  "provider": {
+    "ok": false,
+    "status": 400,
+    "endpoint": "https://api.x.ai/v1/chat/completions",
+    "model": "grok-4",
+    "parse_status": "PASS",
+    "raw_response_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grok_instruction_bridge_raw_response.md"
+  },
   "instructions_json_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.json",
   "instructions_md_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.md",
   "instruction_count": 1,
