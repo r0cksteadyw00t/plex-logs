@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-10T03:02:55Z
+Updated UTC: 2026-06-10T03:34:04Z
 Source: grok_api
 
 ## Summary
@@ -14,10 +14,10 @@ PASS
 
 ## Instructions
 
-### scarflix-stabilize-001
+### scarflix_qa_single_owner_dedup_retest_20260610
 
-- Target: `status_dashboard`
+- Target: `scarflix_qa`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-10T15:02:55Z`
+- Expires: `2026-06-11T03:34:04Z`
