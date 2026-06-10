@@ -1,3 +1,25 @@
+## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
+
+**Updated UTC:** 2026-06-10T22:29:20.937Z
+
+**Status:** `REVIEW_PLEX_INDEX_QUERY_FAILED`
+
+**True baseline:** not captured because the read-only Plex Section 5 index query failed.
+
+**Plex Section 5 reported total size:** `unknown`
+
+**Parsed Section 5 Video rows:** `0`
+
+**Unique indexed ScarFLIX_part hashes:** `0`
+
+**Conclusion:** No trustworthy Section 5 visibility baseline was captured because the read-only Plex Section 5 index query failed before any rows were returned.
+
+**Recommendation:** Verify Plex Media Server is running and reachable from the Orchestrator context, then rerun this same read-only uncapped snapshot. Do not refresh, mutate, publish, or expand before a successful baseline is captured.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
 ## SECTION 5 INDEXING DIAGNOSTIC -- REVIEW_NEEDED
 
 **Updated UTC:** 2026-06-10T22:16:54.500Z
