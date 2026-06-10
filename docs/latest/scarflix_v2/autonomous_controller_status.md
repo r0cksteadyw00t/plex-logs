@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: PASS
-Milestone state: CANDIDATE_SOURCE_MODEL_PASS
+Status: FAIL_ENGINEERING
+Milestone state: BLOCKED_DECISION
 Milestone: PlatformGate and candidate-source retry/quarantine model complete
-Updated UTC: 2026-06-10T12:22:40Z
-Current step: candidate_source_model_pass
+Updated UTC: 2026-06-10T12:28:33Z
+Current step: controller_exception
 Jason action required: False
 
 ## PlatformGate
@@ -27,7 +27,8 @@ Jason action required: False
 
 ## Action
 - action_taken: PlatformGate PASS; candidate-source retry/quarantine model verified
-- next_check_utc: 2026-06-10T12:33:41Z
+- next_check_utc: 2026-06-10T12:45:18Z
 
 ## Blockers
-- none
+- Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
+Parameter name: chars"
