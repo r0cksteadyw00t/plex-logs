@@ -49,3 +49,45 @@ The system was still too dependent on external pasted prompts for routine sequen
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
+---
+
+### UPDATE - 2026-06-10T07:02:00Z - Corrected Materialized QA Timing Evidence
+
+**Trigger Reason:**  
+Corrected evidence after Jason confirmed Plex Media Server had been off during the first timing probe.
+
+**Current State Summary:**  
+- Orchestrator health: PASS.
+- Sentinel: PASS/LOW.
+- Publication: `PAUSE_PUBLICATION=true`.
+- Materialized QA: REVIEW 119/229, failed 110.
+- Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
+- Corrected timing probe: `PASS_TINY_TIMING_PROBE_COMPLETE`.
+- No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
+
+**What I have already tried:**  
+- Verified Plex Media Server is now reachable at both `http://127.0.0.1:32400/identity` and `http://192.168.1.184:32400/identity`.
+- Isolated Plex API behavior: the same token returns `401` for `127.0.0.1` library metadata but `200` for LAN-base library metadata.
+- Patched `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaDecisionTimingProbe.js` to try Plex base candidates and use the first successful metadata base without logging tokens.
+- Re-ran the same 8-path, max-concurrency-1 Orchestrator-owned timing probe.
+
+**My hypothesis on root cause:**  
+The sampled files are present from user context, and Plex/WebDAV endpoints are currently responsive. The leading hypothesis is now Plex metadata/path visibility or indexing/cache mismatch: Plex metadata calls return quickly, but do not expose matching `ScarFLIX_part-*` paths for the sampled rows. Service-context path visibility remains a confirmed structural constraint because the Orchestrator cannot follow user-session `S:` rclone symlink targets.
+
+**Proposed next steps:**  
+1. Keep `PAUSE_PUBLICATION=true`.
+2. Do not run broad QA, publisher, cleanup, deletion, source mutation, or path rewrites.
+3. Run only a reviewed, same-sample, read-only comparison of Plex section metadata paths against `D:\PlexTools\state\scarflix_v2\webdav_map.json`.
+4. Use the comparison to decide whether this is stale Plex rows, alternate hidden locations, or metadata not exposing file paths.
+5. Escalate before any cleanup or source quarantine.
+
+**Data/files to review:**  
+- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timing_probe_results.json`
+- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timing_probe_results.md`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaDecisionTimingProbe.js`
+- `D:\PlexTools\state\scarflix_v2\webdav_map.json`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\PROJECT_PLAN.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
