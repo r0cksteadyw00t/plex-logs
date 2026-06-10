@@ -1,6 +1,16 @@
 # Codex Status For Grok
 
-- Updated UTC: 2026-06-10T07:53:14Z
+## GROK REVIEW URL (COPY THIS)
+
+Raw URL for current handoff (contains full reconciliation plan):
+https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+Example of correct format (replace with actual values):
+https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+If the file is in a different path or branch, use the correct raw URL.
+
+- Updated UTC: 2026-06-10T08:34:04Z
 - Operating model: `TRUE_HANDS_OFF_ACTIVE_PERMANENT`.
 - Primary operator: `JasonOS_Prime_Orchestrator`.
 - Orchestrator health: PASS.
@@ -16,7 +26,7 @@
 - Leading root cause: Plex metadata/indexing/cache visibility gap for the materialized `hybrid_movies_live` sample, with service-context path visibility as a separate accepted diagnostic constraint.
 - New plan: QA-only Plex metadata/indexing reconciliation plan created for the same locked 8-path sample.
 - Plan status: `REVIEW_READY_FOR_GROK_PEER_REVIEW`; execution blocked pending Grok review.
-- Handoff visibility: full reconciliation plan embedded at the top of `GROK_HANDOFF_FOR_GROK.md` under `PENDING GROK PEER REVIEW -- RECONCILIATION PLAN`; embedded content verified against source plan.
+- Handoff visibility: full reconciliation plan embedded at the top of `GROK_HANDOFF_FOR_GROK.md` under `PENDING GROK PEER REVIEW — RECONCILIATION PLAN`; embedded content verified against source plan.
 - Plan artifacts:
   - `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_reconciliation_plan_8path_sample.md`
   - `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_reconciliation_plan_8path_sample.json`
