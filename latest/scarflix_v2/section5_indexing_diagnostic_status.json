@@ -1,0 +1,375 @@
+{
+  "component": "section5_indexing_diagnostic",
+  "schema_version": "jasonos.section5_indexing_diagnostic.v1",
+  "status": "REVIEW_DIAGNOSTIC_COMPLETE",
+  "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
+  "started_utc": "2026-06-10T22:16:54.489Z",
+  "updated_utc": "2026-06-10T22:16:54.500Z",
+  "read_only": true,
+  "no_plex_refresh_run": true,
+  "no_new_plex_api_index_query_run": true,
+  "no_publication_started": true,
+  "no_expansion_started": true,
+  "no_cleanup_performed": true,
+  "no_deletion_performed": true,
+  "no_source_mutation_performed": true,
+  "no_path_rewrite_performed": true,
+  "phase1_launch_gate": {
+    "sentinel_status": "PASS",
+    "sentinel_alert_level": "LOW",
+    "pause_publication": true,
+    "launch_health": {
+      "updated_utc": "2026-06-10T22:16:54.427Z",
+      "window_minutes": 10,
+      "sample_count": 4,
+      "latency_sample_count": 4,
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 3445,
+      "timeout_count": 0,
+      "timeout_rate": 0,
+      "launches_last_minute": 0,
+      "budget_per_minute": 8,
+      "degraded_required": false,
+      "active_child_count": 2,
+      "tracked_child_count": 2
+    },
+    "degraded": false,
+    "mode": "status_file_analysis"
+  },
+  "evidence": {
+    "section5_gate_status": "REVIEW_NEEDED",
+    "previous_decision_gate": {
+      "status": "REVIEW_NEEDED",
+      "affected_majority_improved": false,
+      "affected_strict_match_target": "16/105",
+      "control_target_6_of_8": "1/8",
+      "no_webdav_timeout_regression": false,
+      "residual_patterns": [
+        {
+          "key": "plex_title_not_found_or_not_indexed",
+          "count": 89
+        }
+      ],
+      "expansion_allowed": false,
+      "pause_publication_must_remain_active": true
+    },
+    "phase_b_refresh": {
+      "path_scoped_refresh": {
+        "scope": "path_scoped",
+        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 1,
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1475,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://mediaserver:32400",
+            "http_status": 401,
+            "elapsed_ms": 16,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      "full_section_refresh": {
+        "scope": "full_section",
+        "path": "",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 0,
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://mediaserver:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      "webdav_map_alignment": {
+        "webdav_map_rows": 302,
+        "affected_rows": 105,
+        "matched_map_entries": 105,
+        "missing_map_entries": 0
+      },
+      "cache_clear": {
+        "status": "SKIPPED_NO_SAFE_REVERSIBLE_SECTION_ONLY_CACHE_CLEAR",
+        "reason": "Plex cache clearing options available here are not safely scoped to section 5 and are not reversible."
+      }
+    },
+    "phase_c_verification": {
+      "affected_selected": 105,
+      "affected_strict_matches": 16,
+      "affected_webdav_checked": 15,
+      "affected_webdav_ok": 13,
+      "affected_webdav_timeouts": 1,
+      "affected_classifications": [
+        {
+          "key": "plex_title_not_found_or_not_indexed",
+          "count": 89
+        },
+        {
+          "key": "strict_expected_part_match",
+          "count": 16
+        }
+      ],
+      "affected_section_index": {
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 28,
+        "video_count": 40,
+        "part_hash_count": 37
+      },
+      "control_selected": 8,
+      "control_strict_matches": 1,
+      "control_classifications": [
+        {
+          "key": "plex_title_not_found_or_not_indexed",
+          "count": 7
+        },
+        {
+          "key": "strict_expected_part_match",
+          "count": 1
+        }
+      ]
+    },
+    "expected_counts": {
+      "qa_rows_total": 229,
+      "expected_affected_hybrid_movies_live_failures": 105,
+      "webdav_map_aligned_affected_rows": 105
+    },
+    "worker_measurement_caps": [
+      {
+        "file": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5HybridReconcileThenVerify.js",
+        "cap": 40,
+        "finding": "Section 5 verifier parsePlexVideos stops at 40 Video rows. The previous section_index.video_count=40 hit this cap, so it is not authoritative evidence that Plex only exposed 40 items."
+      },
+      {
+        "file": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PlexMetadataVsWebdavMapComparison.js",
+        "cap": 30,
+        "finding": "The 8-path comparison worker also caps parsed Video rows per query at 30. It is acceptable for small title searches, but not for proving section-wide visibility."
+      }
+    ],
+    "strict_vs_missing_structure": {
+      "strict_match": {
+        "count": 16,
+        "path_depth_counts": [
+          {
+            "key": "9",
+            "count": 16
+          }
+        ],
+        "extension_counts": [
+          {
+            "key": "mkv",
+            "count": 16
+          }
+        ],
+        "movie_folder_samples": [
+          "Armageddon (1998)",
+          "Ballerina (2016)",
+          "Dr. No (1962)",
+          "Idiocracy (2006)",
+          "In the Mood for Love (2000)",
+          "Legends of the Fall (1994)",
+          "My Hero Academia You're Next (2024)",
+          "Sherlock Holmes (2009)",
+          "Silent Hill (2006)",
+          "Snow White and the Seven Dwarfs (1938)"
+        ],
+        "webdav_status_counts": [
+          {
+            "key": "http_200",
+            "count": 3
+          },
+          {
+            "key": "skipped_after_sample_limit_map_entry_present",
+            "count": 13
+          }
+        ],
+        "observed_title_samples": [
+          {
+            "expected_title": "Armageddon",
+            "observed_title": "ScarFLIX Part 2eaab8df357724dc",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv"
+          },
+          {
+            "expected_title": "The Ballerina",
+            "observed_title": "ScarFLIX Part 6bc868616f378edf",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv"
+          },
+          {
+            "expected_title": "Dr. No",
+            "observed_title": "ScarFLIX Part 00effd68c382bc07",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dr. No (1962)\\ScarFLIX_part-00effd68c382bc07\\stream.mkv"
+          },
+          {
+            "expected_title": "Idiocracy",
+            "observed_title": "ScarFLIX Part 02ca4b68340aafa1",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Idiocracy (2006)\\ScarFLIX_part-02ca4b68340aafa1\\stream.mkv"
+          },
+          {
+            "expected_title": "In the Mood for Love",
+            "observed_title": "ScarFLIX Part 1ce460822ca1239a",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\In the Mood for Love (2000)\\ScarFLIX_part-1ce460822ca1239a\\stream.mkv"
+          },
+          {
+            "expected_title": "Legends of the Fall",
+            "observed_title": "ScarFLIX Part 0d465a7414c7c73a",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Legends of the Fall (1994)\\ScarFLIX_part-0d465a7414c7c73a\\stream.mkv"
+          },
+          {
+            "expected_title": "My Hero Academia: You're Next",
+            "observed_title": "ScarFLIX Part 5f2b46ebc01460e6",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You&#39;re Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv"
+          },
+          {
+            "expected_title": "Sherlock Holmes",
+            "observed_title": "ScarFLIX Part 0e300705b506774a",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sherlock Holmes (2009)\\ScarFLIX_part-0e300705b506774a\\stream.mkv"
+          },
+          {
+            "expected_title": "Silent Hill",
+            "observed_title": "ScarFLIX Part 3ac0e5bd2415a5fc",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Silent Hill (2006)\\ScarFLIX_part-3ac0e5bd2415a5fc\\stream.mkv"
+          },
+          {
+            "expected_title": "Snow White and the Seven Dwarfs",
+            "observed_title": "ScarFLIX Part 0cc30734b0488863",
+            "observed_year": "",
+            "observed_section_id": "",
+            "observed_part": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Snow White and the Seven Dwarfs (1938)\\ScarFLIX_part-0cc30734b0488863\\stream.mkv"
+          }
+        ]
+      },
+      "missing_or_not_indexed": {
+        "count": 89,
+        "path_depth_counts": [
+          {
+            "key": "9",
+            "count": 89
+          }
+        ],
+        "extension_counts": [
+          {
+            "key": "mkv",
+            "count": 89
+          }
+        ],
+        "movie_folder_samples": [
+          "Anna (2019)",
+          "Annabelle (2014)",
+          "Annihilation (2018)",
+          "Battleship (2012)",
+          "Crank (2006)",
+          "Creed (2015)",
+          "Dances with Wolves (1990)",
+          "Daredevil (2003)",
+          "Dawn of the Dead (2004)",
+          "Despicable Me 3 (2017)"
+        ],
+        "webdav_status_counts": [
+          {
+            "key": "http_200",
+            "count": 10
+          },
+          {
+            "key": "http_503",
+            "count": 1
+          },
+          {
+            "key": "skipped_after_sample_limit_map_entry_present",
+            "count": 77
+          },
+          {
+            "key": "timeout",
+            "count": 1
+          }
+        ],
+        "observed_title_samples": []
+      }
+    }
+  },
+  "findings": [
+    "The previous Section 5 verification result is not a reliable proof that Plex only exposes 16/105 expected paths because the verifier's section index parser capped parsed Video rows at 40, and the artifact hit exactly video_count=40.",
+    "The previous worker did successfully prove path-scoped and full Section 5 refresh requests returned HTTP 200 against http://192.168.1.184:32400.",
+    "webdav_map alignment is strong: 105/105 affected rows have corresponding map entries. This argues against source/map mismatch as the primary explanation.",
+    "The successful strict-match rows appear as Plex items titled like 'ScarFLIX Part <hash>' rather than normal movie title/year metadata. This suggests Plex is seeing at least some leaf ScarFLIX_part directories as standalone video items.",
+    "Most residual rows are classified as plex_title_not_found_or_not_indexed in the capped section-index artifact, but that classification is confounded by the parser cap and should be re-measured before any mitigation."
+  ],
+  "leading_hypothesis": {
+    "statement": "Current evidence supports a diagnostic measurement flaw plus possible Plex scanner/indexing behavior issue. The strongest immediate finding is that the 16/105 result is under-instrumented because the verifier capped parsed Section 5 rows at 40; the next step must establish true Section 5 index cardinality before deciding whether Plex is ignoring most ScarFLIX_part paths.",
+    "confidence": "HIGH for measurement-cap issue; MEDIUM for Plex scanner/indexing mismatch until a full uncapped read-only index snapshot is captured.",
+    "not_supported_yet": [
+      "It is not yet proven that Plex truly exposes only 15% of expected paths.",
+      "It is not yet proven that library agent/scanner settings are wrong; those settings are not present in current artifacts.",
+      "It is not yet safe to accept residual failures or expand based on the 16/105 figure."
+    ]
+  },
+  "recommendation": {
+    "next_safe_action": "Run one read-only, uncapped Section 5 index snapshot job that records MediaContainer total size and all Part file hashes without refresh, cache clear, deletion, or publication. Then recompute strict matches against the 105 affected expected hashes.",
+    "priority": "P0",
+    "why": "This separates a diagnostic-tool cap from a real Plex indexing failure. It is lower blast radius than any new reconciliation or mitigation.",
+    "alternatives": [
+      "If full uncapped index shows most hashes present, rerun the Section 5 gate with corrected verifier.",
+      "If full uncapped index confirms only a small subset present, inspect Section 5 scanner/agent settings and Plex scanner logs for the affected path family.",
+      "Do not accept residual failures or expand until the true index cardinality is known."
+    ],
+    "expansion_recommendation": "BLOCKED"
+  }
+}
