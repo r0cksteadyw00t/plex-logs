@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T15:10:02Z",
+  "updated_utc": "2026-06-10T15:15:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -92,7 +92,7 @@
     "playback_qa_controller_status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
     "playback_qa_controller_step": "materialized_decision_failed",
     "playback_qa_direct_strm_admission_status": "PASS",
-    "playback_qa_decision_status": "FAIL",
+    "playback_qa_decision_status": "RUNNING",
     "playback_qa_concurrent_status": "REVIEW",
     "visible_qa_count": 1,
     "visible_qa_movies": 1,
@@ -121,38 +121,38 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 14,
-    "platform_child_progress_age_minutes": 1,
+    "controller_updated_age_minutes": 3,
+    "platform_child_progress_age_minutes": 5,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-10T15:00:55Z",
-    "next_check_age_minutes": 9,
+    "next_check_utc": "2026-06-10T15:17:29Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260611.log",
-    "last_progress_utc": "2026-06-10T15:08:43.518Z",
-    "age_minutes": 1,
-    "last_line": "[2026-06-10T15:08:43Z] [INFO] Rows selected for Plex decision QA: 1",
+    "last_progress_utc": "2026-06-10T15:10:15.646Z",
+    "age_minutes": 5,
+    "last_line": "[2026-06-10T15:10:15Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 0,
-    "review_lines": 0,
+    "review_lines": 1,
     "info_lines": 2
   },
   "watchdog_status": {
     "status": "REVIEW",
-    "stall_risk": "Medium",
-    "updated_utc": "2026-06-10T15:08:41Z",
+    "stall_risk": "High",
+    "updated_utc": "2026-06-10T15:11:07Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-10T15:05:02Z",
-    "codex_action_required": false,
+    "status": "ALERT",
+    "alert_level": "HIGH",
+    "updated_utc": "2026-06-10T15:10:02Z",
+    "codex_action_required": true,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-10T15:10:01Z",
-    "updated_utc": "2026-06-10T15:10:04Z",
-    "ended_utc": "2026-06-10T15:10:04Z",
+    "started_utc": "2026-06-10T15:15:01Z",
+    "updated_utc": "2026-06-10T15:15:04Z",
+    "ended_utc": "2026-06-10T15:15:04Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -370,19 +370,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-10T15:08:43.518Z",
-      "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-10T15:08:43Z] [INFO] Rows selected for Plex decision QA: 1"
-    },
-    {
-      "utc": "2026-06-10T14:56:03.056Z",
+      "utc": "2026-06-10T15:12:38.845Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-10T14:55:53Z",
+      "utc": "2026-06-10T15:12:24Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
+    },
+    {
+      "utc": "2026-06-10T15:10:15.646Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-10T15:10:15Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out."
     },
     {
       "utc": "2026-06-10T13:27:41Z",
@@ -466,7 +466,7 @@
       "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=1, total=1. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=4/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=PASS, checked=1, passed_visible=1, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 28,
       "eta": "after all-visible materialized QA passes",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     },
     {
       "outcome": "Fast-Track Accelerator",
@@ -529,7 +529,7 @@
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 15,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     }
   ],
   "files": {
@@ -541,7 +541,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-10T15:10:02Z",
+    "updated_utc": "2026-06-10T15:15:02Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -550,7 +550,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T15:10:02Z",
+    "updated_utc": "2026-06-10T15:15:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -613,9 +613,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-10T15:10:01Z",
-      "updated_utc": "2026-06-10T15:10:04Z",
-      "ended_utc": "2026-06-10T15:10:04Z",
+      "started_utc": "2026-06-10T15:15:01Z",
+      "updated_utc": "2026-06-10T15:15:04Z",
+      "ended_utc": "2026-06-10T15:15:04Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -757,7 +757,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-10T15:10:01Z",
+      "updated_utc": "2026-06-10T15:15:01Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -779,7 +779,7 @@
       "materialized_decision_qa_target_count": 229,
       "materialized_decision_qa_passed": 119,
       "materialized_decision_qa_failed": 110,
-      "decision_qa_status": "RUNNING",
+      "decision_qa_status": "FAIL",
       "concurrent_stream_qa_status": "REVIEW",
       "ignored_overlap": [],
       "overlap_running": [],
@@ -790,12 +790,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 3816
+              "pid": 37912
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 39568
+              "pid": 16496
             }
           ]
         }
@@ -803,8 +803,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 210713,
-    "safe_pipeline_log_age_seconds": 267597,
+    "canary_status_age_seconds": 211012,
+    "safe_pipeline_log_age_seconds": 267895,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -821,7 +821,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=17112"
+        "detail": "pid=25756"
       }
     ],
     "blockers": []
@@ -877,7 +877,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-10T15:10:01Z",
+    "updated_utc": "2026-06-10T15:15:01Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -899,7 +899,7 @@
     "materialized_decision_qa_target_count": 229,
     "materialized_decision_qa_passed": 119,
     "materialized_decision_qa_failed": 110,
-    "decision_qa_status": "RUNNING",
+    "decision_qa_status": "FAIL",
     "concurrent_stream_qa_status": "REVIEW",
     "ignored_overlap": [],
     "overlap_running": [],
@@ -910,12 +910,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 3816
+            "pid": 37912
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 39568
+            "pid": 16496
           }
         ]
       }
