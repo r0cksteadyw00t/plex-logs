@@ -1,0 +1,58 @@
+{
+  "component": "plex_metadata_reconciliation_execution_status",
+  "schema_version": "scarflix.plex_metadata_reconciliation_execution.v1",
+  "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
+  "updated_utc": "2026-06-10T08:48:15Z",
+  "status": "REVIEW_ACTION_A_NO_IMPROVEMENT",
+  "grok_decision": "APPROVED_TO_EXECUTE_WITH_GUARDRAILS",
+  "scope": "locked_8_path_movies_section_5_hybrid_movies_live_sample",
+  "action_a": {
+    "name": "Path-scoped Plex section 5 refresh",
+    "refresh_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies",
+    "section_id": 5,
+    "token_loaded_securely": true,
+    "token_printed": false,
+    "request_sent": true,
+    "response_capture": "REVIEW_LOCAL_RESULT_OBJECT_ERROR_AFTER_REQUEST",
+    "duplicate_refresh_sent": false,
+    "note": "The refresh request was sent, but the local PowerShell result object failed after the request due to an invalid boolean literal. The refresh was not repeated to avoid a duplicate scan request."
+  },
+  "stabilization_wait_seconds": 120,
+  "post_refresh_comparison": {
+    "status": "PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE",
+    "updated_utc": "2026-06-10T08:47:09.222Z",
+    "expected_part_match_count": 0,
+    "same_section_path_mismatch_count": 0,
+    "same_section_row_without_part_count": 0,
+    "title_found_other_section_count": 0,
+    "title_not_found_or_not_indexed_count": 8,
+    "rows_with_part_files_count": 0,
+    "plex_query_count": 34,
+    "plex_query_http_2xx": 34,
+    "plex_query_timeouts": 0,
+    "plex_query_max_elapsed_ms": 197,
+    "classification_counts": [
+      {
+        "key": "plex_title_not_found_or_not_indexed",
+        "count": 8
+      }
+    ]
+  },
+  "success_criteria": {
+    "target_expected_matches": 6,
+    "actual_expected_matches": 0,
+    "met": false,
+    "reason": "Expected ScarFLIX_part-* Plex metadata matches remained 0/8 after the approved path-scoped refresh attempt."
+  },
+  "safety": {
+    "pause_publication_preserved": true,
+    "no_publication_started": true,
+    "no_expansion_started": true,
+    "no_cleanup_performed": true,
+    "no_deletion_performed": true,
+    "no_source_mutation_performed": true,
+    "no_path_rewrite_performed": true,
+    "no_broad_scan_or_qa_retry_performed": true
+  },
+  "decision": "STOP_AND_ESCALATE_TO_GROK_FOR_NEXT_STEPS"
+}
