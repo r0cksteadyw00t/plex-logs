@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-10T08:09:28Z
-Instruction: phase0_maintain_hold_status_only_20260610_v7
+Updated UTC: 2026-06-10T08:26:15Z
+Instruction: phase0_maintain_hold_peer_review_status_20260610
 
-Phase 0 hold maintained: PAUSE_PUBLICATION remains active. Materialized QA in REVIEW (119/229 passed). No publication, expansion, or resolver actions. hands_off_operator_cycle continues. Status-only operations only. Plex metadata reconciliation plan remains under peer review.
+Phase 0 hold maintained. PAUSE_PUBLICATION active. Reconciliation plan for 8-path sample is PENDING GROK PEER REVIEW and must not be executed. Materialized QA remains REVIEW. No publication, expansion, resolver, or scan actions permitted. Status-only record complete.
