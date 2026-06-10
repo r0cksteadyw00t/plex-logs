@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T11:00:03.264Z",
+  "updated_utc": "2026-06-10T11:05:03.003Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,13 +119,13 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 115,
-    "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-10T11:02:54Z",
+    "controller_updated_age_minutes": 7,
+    "platform_child_progress_age_minutes": 120,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-10T11:05:47Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -134,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
     "last_progress_utc": "2026-06-10T09:05:10.854Z",
-    "age_minutes": 115,
+    "age_minutes": 120,
     "last_line": "[2026-06-10T09:05:10Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 3,
     "review_lines": 7,
@@ -147,9 +147,9 @@
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-10T11:00:01Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-10T11:05:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-10T10:55:02Z",
+    "updated_utc": "2026-06-10T11:00:03Z",
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
@@ -294,12 +294,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-10T10:58:00.585Z",
+      "utc": "2026-06-10T11:00:53.306Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-10T10:57:41Z",
+      "utc": "2026-06-10T10:57:42Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
