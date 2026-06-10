@@ -1,14 +1,10 @@
-# JasonOS Prime Codex Instruction Consumer Status
+# JasonOS Prime Codex Instruction Consumer
 
-- Updated UTC: 2026-06-09T15:32:01.545Z
-- Status: PASS
-- Bridge mode observed: LOCAL_FALLBACK
-- Instructions seen: 1
-- Executable instructions: 1
-- Skipped instructions: 0
-- Actions attempted: 1
-- Actions passed: 1
-- Execution success rate: 100
-- Strategy recommendations observed: 1
-- Autonomy suggestions observed: 1
-- Risk mitigations observed: 1
+Status: PASS
+Updated UTC: 2026-06-10T00:39:34Z
+Instructions: 1
+Executable instructions: 0
+Executed actions: 0
+Source: local_status_fallback
+
+Safety: only low/medium risk approved instructions without user decisions can execute. Legacy/direct resolver expansion remains forbidden.
