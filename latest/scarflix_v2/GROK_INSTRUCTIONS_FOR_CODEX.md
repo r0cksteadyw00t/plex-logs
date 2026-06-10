@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-10T01:26:32Z
+Updated UTC: 2026-06-10T02:09:19Z
 Source: local_status_fallback
 
 ## Summary
@@ -14,11 +14,11 @@ PASS
 
 ## Instructions
 
-### local-only-no-token-20260610012632
+### local-only-no-token-20260610020919
 
 - Target: `grok_codex_bridge`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `false`
-- Expires: `2026-06-10T02:26:33Z`
+- Expires: `2026-06-10T03:09:19Z`
 - Summary: No Grok/xAI token is available. Codex must not execute this as a Grok-approved instruction.
