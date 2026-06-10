@@ -1,7 +1,7 @@
 ## PENDING GROK PEER REVIEW -- RECONCILIATION PLAN (DO NOT EXECUTE ANY ACTIONS YET)
 
 **Plan File:** plex_metadata_reconciliation_plan_8path_sample.md  
-**Created:** 2026-06-10T18:11:21+10:00  
+**Created:** 2026-06-10T18:15:38+10:00  
 **Status:** Plan created. Awaiting Grok review and approval before any execution.  
 **Scope:** Strictly limited to the confirmed 8-path sample. QA-only.
 
@@ -73,7 +73,7 @@ These steps are safe to run before any mitigation, but this plan does not execut
 
 ```powershell
 $PlexBase = 'http://192.168.1.184:32400'
-$PlexToken = '<secure token loader; do not print>'
+$PlexToken = 'SECURE_TOKEN_LOADER_DO_NOT_PRINT'
 Invoke-WebRequest -UseBasicParsing -Method Get -Uri "$PlexBase/library/sections/5?X-Plex-Token=$PlexToken" -TimeoutSec 15
 ```
 
@@ -110,7 +110,7 @@ Future command, review required before execution:
 
 ```powershell
 $PlexBase = 'http://192.168.1.184:32400'
-$PlexToken = '<secure token loader; do not print>'
+$PlexToken = 'SECURE_TOKEN_LOADER_DO_NOT_PRINT'
 $RefreshPath = 'D:\StremioCatalog\_Hybrid\Movies\_ScarFLIXLive\06 Discover Movies'
 $EncodedPath = [System.Uri]::EscapeDataString($RefreshPath)
 Invoke-WebRequest -UseBasicParsing -Method Get -Uri "$PlexBase/library/sections/5/refresh?path=$EncodedPath&X-Plex-Token=$PlexToken" -TimeoutSec 15
@@ -143,7 +143,7 @@ Future command, review required before execution:
 
 ```powershell
 $PlexBase = 'http://192.168.1.184:32400'
-$PlexToken = '<secure token loader; do not print>'
+$PlexToken = 'SECURE_TOKEN_LOADER_DO_NOT_PRINT'
 Invoke-WebRequest -UseBasicParsing -Method Get -Uri "$PlexBase/library/sections/5/refresh?X-Plex-Token=$PlexToken" -TimeoutSec 15
 ```
 
@@ -171,8 +171,8 @@ Future command template, review required before execution:
 
 ```powershell
 $PlexBase = 'http://192.168.1.184:32400'
-$PlexToken = '<secure token loader; do not print>'
-$RatingKey = '<rating key from strict title/year metadata match>'
+$PlexToken = 'SECURE_TOKEN_LOADER_DO_NOT_PRINT'
+$RatingKey = 'RATING_KEY_FROM_STRICT_TITLE_YEAR_METADATA_MATCH'
 Invoke-WebRequest -UseBasicParsing -Method Get -Uri "$PlexBase/library/metadata/$RatingKey/refresh?X-Plex-Token=$PlexToken" -TimeoutSec 15
 ```
 
@@ -247,7 +247,6 @@ Please review whether the proposed sequence is safe and technically coherent:
 5. Escalate before any broader mitigation.
 
 No execution should occur until Grok approves or revises this plan.
-
 
 --- END OF RECONCILIATION PLAN ---
 
@@ -427,4 +426,5 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
