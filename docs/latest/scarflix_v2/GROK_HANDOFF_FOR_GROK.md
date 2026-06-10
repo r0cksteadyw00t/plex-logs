@@ -1,63 +1,59 @@
 # FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Aggressive Autonomy Push Phase 2 completed. The Autonomous Incident Manager executed the first bounded diagnostic playbook iteration for `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610` and found a service-context path visibility issue that blocks useful second-pass content probing.
+Aggressive Autonomy Push Phase 3 completed. The Orchestrator service-context path visibility blocker for materialized QA incident diagnostics has been diagnosed and a safe resolver workaround is active.
 
 **Current State Summary:**  
-- Orchestrator service: `JasonOS_Prime_Orchestrator`, running.
-- `/healthz`: `PASS` after restart and post-probe telemetry correction.
+- Orchestrator: `PASS`, degraded mode `false`.
 - Sentinel: `PASS` / `LOW` at latest checked state.
 - `PAUSE_PUBLICATION`: active.
-- ScarFLIX expansion/publishing/cleanup: not started.
-- Legacy/direct resolver expansion: disabled.
+- ScarFLIX expansion/publication/cleanup: not started.
 - Materialized QA: `REVIEW`, checked `229`, passed `119`, failed `110`.
 - Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
-- Incident probe job: `job_incident_probe_phase2_1781066308617`, status `done`, attempts `1`.
-- Probe scope: Movies section `5` / `hybrid_movies_live` timeout rows, plus small TV section `6` and non-live movie controls.
-- Probe constraints: max concurrency `1`, selected paths `20`, read-only, no publication, no cleanup, no source mutation.
-- Probe result: all `20/20` sampled primary/control paths returned `host_or_visibility_path_inaccessible` from the Orchestrator service context.
-- Interactive cross-check: representative paths that failed from the service context are visible from the interactive shell.
-- Orchestrator service account: `LocalSystem`, which is the suspected boundary causing `D:\StremioCatalog` visibility mismatch.
-- Current incident playbook decision: `HOLD_SECOND_ITERATION_SERVICE_CONTEXT_PATH_ACCESS`.
+- Latest service-context probe job: `job_phase3_final_service_probe_mq7m1u4u_f070f6`, status `done`, attempts `1`.
+- Probe execution user: `MEDIASERVER$`.
+- Paths probed: `20`.
+- Layer result: `service_context_symlink_target_mount_inaccessible = 20`.
+- Resolver decision: `HOLD_SECOND_ITERATION_SERVICE_CONTEXT_PATH_ACCESS`.
 
 **What I have already tried:**  
-- Created a bounded read-only worker: `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaIncidentProbe.js`.
-- Patched `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js` with a first-class job type: `run_materialized_qa_incident_probe_cycle`.
-- Wired the probe into `autonomousIncidentManager()` with strict gates:
-  - `PAUSE_PUBLICATION` required.
-  - Sentinel `ALERT/HIGH` blocks the job.
-  - degraded launch health blocks the job.
-  - no second iteration if all sampled paths are host-inaccessible.
-- Ran the first bounded probe iteration through the Orchestrator queue.
-- Confirmed no publishing, expansion, deletion, cleanup, broad QA, or source mutation occurred.
-- Corrected launch telemetry after a false degraded-mode signal:
-  - Old telemetry treated full worker runtime as spawn latency.
-  - New telemetry separates `launch_latency_ms` from `process_runtime_ms`.
-  - False degraded mode was cleared only after bounded external launch checks were healthy.
-- Updated the incident probe artifact interpretation to `SERVICE_CONTEXT_PATH_ACCESS_ISSUE`.
-- Regenerated the Grok differential cycle report so the incident finding is included.
+- Confirmed interactively that `D:\StremioCatalog` entries exist.
+- Confirmed materialized `ScarFLIX_part-*` directories are directory symlinks.
+- Confirmed symlink targets point to `S:\media\ScarFLIX_part-*`.
+- Confirmed `S:\media\...\stream.mkv` is visible in the interactive/user context.
+- Confirmed `ScarFLIX_v2_RcloneMountKeepalive` runs as user `jason`.
+- Confirmed the Orchestrator service runs in a service context (`LocalSystem` / Node reports `MEDIASERVER$`).
+- Added `D:\PlexTools\Foundry\lib\JasonOS_Prime_PathResolver.js`.
+- Patched `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaIncidentProbe.js` to:
+  - resolve symlinks via `lstat` / `readlink`;
+  - use `D:\PlexTools\state\scarflix_v2\webdav_map.json` as metadata fallback;
+  - disable target following by default;
+  - disable WebDAV media read-head by default;
+  - record execution context and resolver status counts.
+- Registered on-demand user-context metadata fallback task `JasonOS_Prime_UserContextMaterializedQaIncidentProbe` under user `jason` with no recurring trigger.
+- Queued and completed final service-context validation through the Orchestrator.
+- Refreshed AutonomousIncidentManager and the Grok cycle report.
 
 **My hypothesis on root cause:**  
-The current bounded probe did not reproduce a WebDAV/materializer/Plex timing failure because the Orchestrator service context could not see any sampled `D:\StremioCatalog` paths, including known passing non-live controls. Since the interactive shell can see representative paths, this is likely a service-account/path-namespace issue: the NSSM/Orchestrator process running as `LocalSystem` does not have the same filesystem view or mounted path visibility as the user context used by Plex/materialized tooling.
-
-This means a second content probe would not produce useful ScarFLIX QA evidence until the Orchestrator probe either runs in the same account/path namespace as the materialized workers or uses a service-visible canonical path.
+The `D:` catalogue paths are valid, but they are symlinks into the `S:` rclone mount. `S:` is maintained in the logged-in `jason` user session, not the Orchestrator service namespace. Service-context diagnostics therefore see valid `D:` symlink metadata but cannot safely follow the target path to `S:\media\...`. The previous generic `ENOENT` result was a resolver/classification defect, not evidence that the materialized rows themselves are missing or bad.
 
 **Proposed next steps:**  
 1. Keep `PAUSE_PUBLICATION` active.
-2. Do not run a second materialized content probe yet.
-3. Diagnose and fix Orchestrator service-context access to `D:\StremioCatalog`:
-   - preferred: run the diagnostic worker through the same user context/path namespace as the existing materialized/Plex workers, or
-   - alternative: add a service-visible canonical path mapping for `D:\StremioCatalog`.
-4. After service-context path visibility is fixed, run one more bounded probe with the same constraints before any QA cleanup or retest.
-5. Keep broad ScarFLIX expansion blocked until materialized QA recovers and representative concurrent QA remains healthy.
+2. Do not run a second content probe yet.
+3. Decide the long-term path strategy:
+   - keep Orchestrator service as-is and run only metadata diagnostics from service context, with tiny explicit user-context samples when needed; or
+   - move the Orchestrator/service probe execution to a context that shares `S:` visibility; or
+   - expose a service-visible canonical path for the rclone mount.
+4. After the path strategy is selected, run one tiny bounded target-follow sample before any materialized QA cleanup or retest.
+5. Keep broad ScarFLIX expansion blocked until materialized QA recovers.
 
 **Data/files to review:**  
+- `D:\PlexTools\Foundry\lib\JasonOS_Prime_PathResolver.js`
 - `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaIncidentProbe.js`
-- `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_path_resolution_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_path_resolution_status.md`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_materialized_qa_incident_probe.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_materialized_qa_incident_probe.md`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_autonomous_incidents.json`
-- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT_DIFF.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_launch_telemetry.json`
+- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT.json`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\PROJECT_PLAN.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
