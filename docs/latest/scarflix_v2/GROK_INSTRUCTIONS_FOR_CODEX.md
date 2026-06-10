@@ -1,23 +1,23 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-10T02:24:49Z
+Updated UTC: 2026-06-10T02:27:35Z
 Source: grok_api
 
 ## Summary
 
-Grok response normalized into instruction envelope.
+
 
 ## Validation
 
-REVIEW: instructions[0].instruction_id is required.; instructions[0].created_at is required.; instructions[0].expires_at is required.; instructions[0].target_component is required.; instructions[0].risk_level is required.; instructions[0].requires_user_decision is required.; instructions[0].approved_for_codex_execution is required.; instructions[0].success_criteria is required.; instructions[0].retry_policy is required.; instructions[0].success_criteria must have at least one item.; instructions[0].retry_policy is required.
+REVIEW: instructions[0].success_criteria must have at least one item.; instructions[0].retry_policy is required.
 
 ## Instructions
 
-### unnamed
+### inst_20260610_022735_status_only_orchestrator
 
-- Target: ``
-- Risk: ``
+- Target: `orchestrator`
+- Risk: `low`
 - Requires user decision: `false`
-- Approved for Codex execution: `false`
-- Expires: ``
+- Approved for Codex execution: `true`
+- Expires: `2026-06-11T02:27:35Z`
