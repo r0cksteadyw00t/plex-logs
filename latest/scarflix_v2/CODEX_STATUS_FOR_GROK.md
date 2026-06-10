@@ -1,14 +1,18 @@
 # Codex Status For Grok
 
-- Updated UTC: 2026-06-10T05:31:00Z
-- Current phase: Phase 5 controlled prep.
-- Publication: HELD; `PAUSE_PUBLICATION=true`.
+- Updated UTC: 2026-06-10T05:51:00Z
+- Operating model: `TRUE_HANDS_OFF_ACTIVE_PERMANENT`.
+- Primary operator: `JasonOS_Prime_Orchestrator`.
+- Hands-off status: `PASS_ACTIVE_TRUE_HANDS_OFF`.
+- External input policy: exception-only.
+- Orchestrator health: PASS after restart.
+- Sentinel: PASS/LOW.
+- Publication: held; `PAUSE_PUBLICATION=true`.
 - Legacy/direct resolver expansion: disabled.
-- Orchestrator: PASS, degraded mode false after restart.
-- Sentinel: PASS/LOW at latest checked public status.
-- Materialized QA: REVIEW 119/229, failed 110, timeout failures 106.
-- Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610` remains ACTIVE_DIAGNOSE.
-- Path strategy decision: Strategy A locked. Service context is metadata-first; target-follow checks are allowed only through tightly bounded user-context probes.
-- Tiny user-context probe: PASS, 8/8 sampled `hybrid_movies_live` rows statted `stream.mkv`, timeout count 0, layer `user_context_target_stat_ok`.
-- Current hypothesis: sampled materialized files exist; remaining QA REVIEW is more likely Plex decision/indexing/load timing than missing files.
-- Next safe action: tiny bounded Plex decision/indexing timing diagnostic on already-confirmed sample, or wait for Grok's next narrow instruction. No expansion.
+- Materialized QA: REVIEW 119/229, failed 110.
+- Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
+- Timing plan: `PASS_PLAN_READY_STATUS_ONLY`, sample count 8, blockers 0.
+- Grok delivery: `PASS_DELIVERED_TO_GROK_API`, `REAL_API`, HTTP 200.
+- New recurring Orchestrator job: `hands_off_operator_cycle` every 300 seconds.
+- No publication, expansion, cleanup, deletion, path rewrite, source mutation, or broad QA retry was performed.
+- Next autonomous target: tiny detached Plex decision/indexing timing diagnostic against the confirmed 8-path sample if all gates remain clear.
