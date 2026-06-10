@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T13:00:03.320Z",
+  "updated_utc": "2026-06-10T13:05:03.368Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 105,
+    "controller_updated_age_minutes": 7,
+    "platform_child_progress_age_minutes": 110,
     "mirror_updated_age_minutes": 3,
     "next_check_utc": "2026-06-10T13:03:15Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 2,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260610.log",
     "last_progress_utc": "2026-06-10T11:14:58.217Z",
-    "age_minutes": 105,
+    "age_minutes": 110,
     "last_line": "[2026-06-10T11:14:58Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 4,
@@ -147,9 +147,9 @@
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-10T13:00:01Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-10T13:05:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-10T12:55:05Z",
+    "updated_utc": "2026-06-10T13:00:06Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
