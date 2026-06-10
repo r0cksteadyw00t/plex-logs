@@ -1,3 +1,23 @@
+## Phase 5 Section 5 Indexing Diagnostic
+
+**Updated UTC:** 2026-06-10T22:16:54.500Z
+
+**Status:** `REVIEW_DIAGNOSTIC_COMPLETE`
+
+**Main finding:** Prior `16/105` Section 5 visibility result is confounded by a verifier parser cap at 40 Plex Video rows.
+
+**Refresh evidence:** Path-scoped and full Section 5 refresh returned HTTP 200.
+
+**Map evidence:** `105/105` affected rows have webdav_map entries.
+
+**Recommendation:** Run one read-only, uncapped Section 5 index snapshot job that records MediaContainer total size and all Part file hashes without refresh, cache clear, deletion, or publication. Then recompute strict matches against the 105 affected expected hashes.
+
+**Expansion:** BLOCKED. `PAUSE_PUBLICATION` remains active.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+---
+
 ## Phase 5 Section 5 Reconciliation Update
 
 **Updated UTC:** 2026-06-10T09:56:52.632Z
