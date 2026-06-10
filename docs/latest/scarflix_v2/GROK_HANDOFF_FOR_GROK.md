@@ -1,60 +1,71 @@
 # FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Phase 5 diagnostic update: timeout-pattern analysis of the current Materialized QA regression completed. No cleanup, publication, expansion, source movement, or inline validation was executed.
+Autonomous inbound instruction channel hardened and end-to-end tested. Goal was to close the Grok -> Orchestrator -> Codex execution -> Grok report-back loop without requiring Jason to paste prompts.
 
 **Current State Summary:**  
-- Phase 4 direct Orchestrator-to-Grok reporting: complete and operational.
-- Grok model-call credential: `GROK_API_KEY.txt` only.
 - Orchestrator service: `JasonOS_Prime_Orchestrator`, running.
-- Recent Orchestrator health: `/healthz` HTTP `200`, status `PASS`.
-- Sentinel: `PASS`, alert level `LOW`, updated `2026-06-10T03:25:01Z`.
-- Controlled materialized expansion hold: `ACTIVE`.
-- Legacy/direct resolver expansion: forbidden.
-- Materialized QA: `REVIEW`, checked `229`, passed `119`, failed `110`.
-- Failure reasons from triage: timeout `106`, HTTP `400` `3`, socket hang-up `1`.
-- Failed sections: movies section `5` failed `106`, TV section `6` failed `4`.
-- Failed path categories: `hybrid_movies_live` `105`, `hybrid_shows` `4`, `hybrid_movies_root_seed` `1`.
-- Timeout diagnostic outputs:
-  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.json`
-  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.md`
+- Recent health: `/healthz` HTTP `200`, status `PASS`.
+- Sentinel: `PASS` / `LOW`.
+- `PAUSE_PUBLICATION`: active.
+- ScarFLIX expansion/publishing: not started.
+- Grok outbound reporting: operational, `REAL_API`, HTTP `200`.
+- Grok inbound instruction bridge: operational, `REAL_API`, HTTP `200`.
+- Inbound instruction cadence:
+  - `ingest_grok_instructions`: every `300s`.
+  - `run_grok_bridge_consumer_cycle`: every `900s`.
+  - `deliver_grok_cycle_report`: every `1800s`.
+- Instruction-loop status file:
+  - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_instruction_loop_status.json`
+  - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_instruction_loop_status.md`
+- Current tracked instruction counts: Safe `3`, Review `7`, Requires Human Approval `0`, executed `1`.
+- Latest successful executed instruction: `scarflix_qa_write_strategy_note_hold_20260610`.
+- Latest report-back delivery: `PASS_DELIVERED_TO_GROK_API`, `REAL_API`, HTTP `200`, UTC `2026-06-10T03:44:48Z`.
 
 **What I have already tried:**  
-- Ran read-only analysis only against existing status/log data.
-- Read current materialized QA JSON, triage outputs, playback QA controller status, concurrent QA status, Sentinel status, publication hold status, and the materialized decision QA log.
-- Did not run PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, publisher, or expansion.
-- Did not move, hide, quarantine, edit, or publish any ScarFLIX source/content rows.
-- Wrote a diagnostic JSON/MD artifact for Grok/public review.
-- Updated `PROJECT_PLAN.md` with the current REVIEW state and recommended next safe action.
+- Diagnosed the inbound loop weakness:
+  - Grok could return approved instructions with no actions.
+  - Bridge prompt action names did not match Orchestrator action names.
+  - Standalone consumer and Orchestrator had different safety/execution semantics.
+  - Orchestrator ingestion was mostly passive and did not publish clear instruction-loop status.
+- Patched `JasonOS_Prime_GrokInstructionBridge.js`.
+  - It now sends richer context to Grok and requests Orchestrator-compatible safe actions.
+  - It normalizes legacy action types.
+  - It auto-adds a safe `write_status_summary` action when a low/medium approved instruction has no explicit action.
+- Patched `JasonOS_Prime_CodexInstructionConsumer.js`.
+  - Added safety classification: `Safe`, `Review`, `Requires Human Approval`.
+  - Added support for Orchestrator action vocabulary.
+  - Safe actions execute; Review/Human actions are blocked and reported.
+- Patched `JasonOS_Prime_Orchestrator.js`.
+  - Added first-class `execute_grok_instruction_*` jobs.
+  - Added Orchestrator-side instruction normalization, classification, execution, result logging, status artifacts, and report inclusion.
+  - Increased inbound cadence while keeping report delivery at `1800s`.
+- Restarted Orchestrator after syntax checks.
+- Ran a controlled end-to-end test.
 
 **My hypothesis on root cause:**  
-The `hybrid_movies_live` timeout concentration is most likely systemic transient/orchestration/Plex decision pressure, not 110 independently bad titles.
+The loop was not blocked by Grok API access. It was blocked by contract drift and split ownership:
 
-Evidence:
-
-- The QA log has two materialized decision QA start lines inside the same run window: `2026-06-09T11:55:04Z` and `2026-06-09T11:55:05Z`.
-- The log has `458` result lines for `229` unique `ScarFLIX_part-*` hashes; every part appeared twice.
-- `55` parts had mixed PASS/FAIL outcomes. Examples include rows that passed Plex decision once and then timed out minutes later, or timed out first and passed later.
-- Timeout failures increased during the middle/later ordered portion of the run: Q1 fail rate `0.322`, Q2 `0.400`, Q3 `0.643`, Q4 `0.549`.
-- Later concurrent QA showed range/WebDAV reads mostly working (`4/5`) while Plex decision checks timed out (`0/5`) at about 90 seconds, pointing at Plex decision/indexing pressure rather than broad media-path failure.
-- Playback QA controller triggered Plex scans for sections `5` and `6`, so indexing lag remains plausible.
+- Grok produced valid schema but sometimes omitted executable actions.
+- The bridge's allowed-action wording drifted from the Orchestrator's real allowlist.
+- The standalone consumer could mark an instruction handled while the Orchestrator did not queue it.
+- The cycle report did not clearly expose blocked/review/executed instruction state back to Grok.
 
 **Proposed next steps:**  
-1. Keep `PAUSE_PUBLICATION` active and keep all expansion held.
-2. Do not quarantine the 110 timeout rows yet.
-3. Patch/configure Materialized Plex Decision QA orchestration so only one owner can run per target set.
-4. Add deterministic same-hash de-duplication: mixed PASS/FAIL outcomes should be treated as unstable/retest-needed, not immediate source quarantine.
-5. Replace one large 229-row retest with a detached small retest of 12-20 rows after a quiet Plex scan window.
-6. Include rows from mixed PASS/FAIL timeouts, HTTP `400` rows, late-run timeout rows, and 1-2 TV rows.
-7. Resume controlled materialized/WebDAV batches only after the small retest clears the timeout pattern and representative concurrent QA is healthy.
+1. Treat the inbound loop as operational for Safe, allowlisted work.
+2. Continue rejecting Review/Human instructions until Grok produces safer structure or Jason approves.
+3. Add a cleanup pass for historical `observed` instructions that predate this hardening so loop metrics are easier to read.
+4. Keep `PAUSE_PUBLICATION` active.
+5. Do not resume ScarFLIX expansion until Materialized QA timeout ownership/deduplication is fixed and retested.
+6. Next engineering target: patch Materialized QA single-owner/dedup behavior under the same Safe instruction model.
 
 **Data/files to review:**  
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.json`
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.md`
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_failure_triage.json`
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_failure_triage.md`
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_canary_decision_qa_status.json`
-- `D:\PlexTools\Logs\scarflix_v2_materialized_plex_decision_qa_node_20260609.log`
-- `D:\PlexTools\public\latest\scarflix_v2\concurrent_stream_qa_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_playback_qa_controller_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\CONTROLLED_MATERIALIZED_EXPANSION_HOLD.json`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokInstructionBridge.js`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_CodexInstructionConsumer.js`
+- `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_instruction_loop_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_codex_instruction_consumer_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_grok_instruction_bridge_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_grok_report_delivery_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.md`
