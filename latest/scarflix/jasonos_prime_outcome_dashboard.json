@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T23:50:02Z",
+  "updated_utc": "2026-06-10T23:55:26Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-10T23:36:53Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-10T23:53:09Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -104,9 +104,9 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON",
-    "staged_candidate_count": 43,
-    "plex_safe_webdav_visible_rows": 1
+    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
+    "plex_safe_webdav_visible_rows": 1,
+    "staged_candidate_count": 43
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -125,10 +125,10 @@
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 8,
-    "platform_child_progress_age_minutes": 48,
+    "platform_child_progress_age_minutes": 54,
     "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-10T23:49:28Z",
-    "next_check_age_minutes": 1,
+    "next_check_utc": "2026-06-11T00:00:25Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -136,7 +136,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260611.log",
     "last_progress_utc": "2026-06-10T23:01:37.603Z",
-    "age_minutes": 48,
+    "age_minutes": 54,
     "last_line": "[2026-06-10T23:01:37Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 2,
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-10T23:50:02Z",
-    "updated_utc": "2026-06-10T23:50:11Z",
-    "ended_utc": "2026-06-10T23:50:11Z",
+    "started_utc": "2026-06-10T23:55:31Z",
+    "updated_utc": "2026-06-10T23:55:38Z",
+    "ended_utc": "2026-06-10T23:55:38Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -356,11 +356,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-10T23:36:53Z",
-    "last_successful_grok_instruction_utc": "2026-06-10T23:36:53Z",
+    "bridge_updated_utc": "2026-06-10T23:53:09Z",
+    "last_successful_grok_instruction_utc": "2026-06-10T23:53:09Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-10T23:37:02Z",
+    "consumer_updated_utc": "2026-06-10T23:53:13Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -370,14 +370,14 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-10T23:47:10Z",
+      "title": "Autonomous controller: candidate_source_model_pass",
+      "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
+    },
+    {
       "utc": "2026-06-10T23:44:33.686Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
-    },
-    {
-      "utc": "2026-06-10T23:42:24Z",
-      "title": "Autonomous controller: candidate_source_model_pass",
-      "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
     {
       "utc": "2026-06-10T23:01:37.603Z",
@@ -453,7 +453,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-10T23:37:02Z - structured instruction loop",
+      "last_change": "2026-06-10T23:53:13Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
@@ -539,10 +539,18 @@
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
   },
+  "grokbuild_forensic_agent": {
+    "status": "REVIEW_STALE_PROGRESS",
+    "updated_utc": "2026-06-10T23:55:31Z",
+    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
+    "implementation": "node_native",
+    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
+    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
+  },
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T23:50:02Z",
+    "updated_utc": "2026-06-10T23:55:26Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -605,9 +613,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-10T23:50:02Z",
-      "updated_utc": "2026-06-10T23:50:11Z",
-      "ended_utc": "2026-06-10T23:50:11Z",
+      "started_utc": "2026-06-10T23:55:31Z",
+      "updated_utc": "2026-06-10T23:55:38Z",
+      "ended_utc": "2026-06-10T23:55:38Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -795,8 +803,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 241915,
-    "safe_pipeline_log_age_seconds": 298799,
+    "canary_status_age_seconds": 242249,
+    "safe_pipeline_log_age_seconds": 299133,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -813,7 +821,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=27336"
+        "detail": "pid=13692"
       }
     ],
     "blockers": []
