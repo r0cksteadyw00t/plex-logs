@@ -1,3 +1,23 @@
+## SECTION 5 TINY PLEX FORENSIC CHECK -- 3 VS 3
+
+**Updated UTC:** 2026-06-10T23:05:10.271Z
+
+**Status:** `PASS_TINY_PLEX_FORENSIC_COMPLETE`
+
+**Tiny sample:** 3 missing hashes vs 3 present hashes.
+
+**Plex targeted metadata result:** missing exact rows `1/3`; present exact rows `3/3`.
+
+**Scanner/log result:** `45` bounded log matches found across `12` scanned log files.
+
+**Hypothesis:** The tiny targeted Plex metadata check was inconclusive; use the detailed probe rows and logs for the next bounded diagnostic.
+
+**Recommendation:** Hold controlled expansion until the targeted probe ambiguity is resolved. Continue with a tiny database/log correlation check before any expansion decision.
+
+**Safety:** Strict read-only tiny checks. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
 ## SECTION 5 FORENSIC DIFF -- 18 MISSING HASHES
 
 **Updated UTC:** 2026-06-10T22:55:22.489Z
