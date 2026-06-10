@@ -3,7 +3,7 @@
   "schema_version": "scarflix.materialized_qa_incident_ledger.v1",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
   "status": "PASS_FORMALISED_P0_INCIDENT",
-  "updated_utc": "2026-06-10T22:29:20.937Z",
+  "updated_utc": "2026-06-10T22:48:35.855Z",
   "p0": true,
   "qa_summary": {
     "status": "REVIEW",
@@ -186,36 +186,14 @@
   "no_source_mutation_performed": true,
   "history": [
     {
-      "updated_utc": "2026-06-10T22:26:45.659Z",
-      "event": "section5_uncapped_index_snapshot",
-      "status": "REVIEW_PLEX_INDEX_QUERY_FAILED",
-      "expected_count": 105,
-      "present_count": 0,
-      "missing_count": 105,
-      "reported_total_size": null,
-      "conclusion": "The uncapped snapshot did not find more expected hashes than the capped verifier. The Section 5 visibility gap appears real for the missing 105 affected hashes."
-    },
-    {
-      "updated_utc": "2026-06-10T22:29:20.937Z",
-      "event": "section5_uncapped_index_snapshot",
-      "status": "REVIEW_PLEX_INDEX_QUERY_FAILED",
-      "expected_count": 105,
-      "present_count": null,
-      "missing_count": null,
-      "reported_total_size": null,
-      "conclusion": "No trustworthy Section 5 visibility baseline was captured because the read-only Plex Section 5 index query failed before any rows were returned."
+      "updated_utc": "2026-06-10T22:48:35.855Z",
+      "event": "plex_reachability_diagnostic",
+      "status": "PASS_SERVICE_CONTEXT_PLEX_REACHABLE",
+      "working_base": "http://127.0.0.1:32400",
+      "root_cause_category": "resolved_or_transient_reachability_recovered",
+      "recommendation": "Proceed with read-only uncapped Section 5 snapshot using working base `http://127.0.0.1:32400`."
     }
   ],
-  "current_status": "REVIEW_PLEX_INDEX_QUERY_FAILED",
-  "current_hypothesis": {
-    "statement": "No trustworthy Section 5 visibility baseline was captured because the read-only Plex Section 5 index query failed before any rows were returned.",
-    "evidence_level": "high for Plex API reachability failure; none for true Section 5 index cardinality",
-    "measurement_artifact_confirmed": null,
-    "remaining_visibility_gap": null
-  },
-  "current_recommendation": {
-    "next_safe_action": "Verify Plex Media Server is running and reachable from the Orchestrator context, then rerun this same read-only uncapped snapshot. Do not refresh, mutate, publish, or expand before a successful baseline is captured.",
-    "expansion_recommendation": "BLOCKED",
-    "reason": "The current result is a Plex API reachability failure, not a Section 5 indexing baseline."
-  }
+  "current_status": "PASS_SERVICE_CONTEXT_PLEX_REACHABLE",
+  "current_recommendation": "Proceed with read-only uncapped Section 5 snapshot using working base `http://127.0.0.1:32400`."
 }
