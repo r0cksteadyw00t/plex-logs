@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_action_a_no_improvement_review_20260610",
-      "created_at": "2026-06-10T08:57:54Z",
-      "expires_at": "2026-06-11T08:57:54Z",
+      "instruction_id": "phase0_record_hold_and_review_status_20260610",
+      "created_at": "2026-06-10T09:28:55Z",
+      "expires_at": "2026-06-11T09:28:55Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -20,9 +20,15 @@
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_record_action_a_no_improvement_review_20260610",
-            "auto_added_by_bridge": true
+            "summary": "Phase 0 hold maintained. PAUSE_PUBLICATION=true. Materialized QA REVIEW (119/229). Stabilization gate degraded; Action A completed with 0/8 improvement. No publication, expansion, or resolver actions. Escalate to Grok peer review only. All constraints observed.",
+            "source_instruction_id": "phase0_record_hold_and_review_status_20260610"
+          }
+        },
+        {
+          "action_type": "write_strategy_note",
+          "parameters": {
+            "note": "Continue hands_off_operator_cycle. Re-attempt stabilization gate only after local command health recovery. No section reconciliation, broad scans, or QA expansion until Grok explicit approval.",
+            "source_instruction_id": "phase0_record_hold_and_review_status_20260610"
           }
         }
       ],
@@ -30,6 +36,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T08:57:54Z",
+  "updated_utc": "2026-06-10T09:28:55Z",
   "source": "grok_api"
 }
