@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "scarflix_qa_single_owner_dedup_retest_20260610",
-      "created_at": "2026-06-10T03:34:04Z",
-      "expires_at": "2026-06-11T03:34:04Z",
+      "instruction_id": "scarflix_qa_write_strategy_note_hold_20260610",
+      "created_at": "2026-06-10T03:42:41Z",
+      "expires_at": "2026-06-11T03:42:41Z",
       "target_component": "scarflix_qa",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,12 +13,19 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_attempts": 1,
-        "backoff_seconds": 300
-      }
+        "max_retries": 1,
+        "backoff_seconds": 60
+      },
+      "actions": [
+        {
+          "action_type": "write_strategy_note",
+          "note": "Phase 5 diagnostic complete. Timeout pattern in hybrid_movies_live is systemic (duplicate QA ownership, 55 mixed outcomes, increasing late-run fail rate). Keep PAUSE_PUBLICATION and expansion hold ACTIVE. Do not quarantine 110 rows. Next safe step: enforce single-owner materialized decision QA + same-hash de-duplication before any detached 12-20 row retest after quiet Plex scan window."
+        }
+      ],
+      "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T03:34:04Z",
+  "updated_utc": "2026-06-10T03:42:41Z",
   "source": "grok_api"
 }
