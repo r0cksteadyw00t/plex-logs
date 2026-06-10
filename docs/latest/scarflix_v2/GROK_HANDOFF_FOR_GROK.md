@@ -1,3 +1,23 @@
+## FRESH SECTION 5 BASELINE + CURRENT-MISSING CORRELATION
+
+**Updated UTC:** 2026-06-10T23:31:54.684Z
+
+**Status:** `PASS_FRESH_BASELINE_CORRELATION_COMPLETE`
+
+**Fresh baseline:** `83/105` affected hashes visible (`79%`); `22` remain missing.
+
+**Current missing hashes:** `scarflix_part-81107989d2e30cfb`, `scarflix_part-6bc868616f378edf`, `scarflix_part-d04bde274e598c57`, `scarflix_part-c017966a31451921`, `scarflix_part-61f18dcc8c34f579`, `scarflix_part-700e6d7fdb8236a0`, `scarflix_part-31696108f69a37b9`, `scarflix_part-5f2b46ebc01460e6`, `scarflix_part-73b16faf4582f6ed`, `scarflix_part-fb19346714d96cd7`, `scarflix_part-6a30d1aa558bac1f`, `scarflix_part-78ebe23593166235`, `scarflix_part-93599b6b163a4b72`, `scarflix_part-a0692a530078eae1`, `scarflix_part-ba7d61952f40f7bc`, `scarflix_part-5d08e120806b8ae9`, `scarflix_part-be2edbceddc0dd6f`, `scarflix_part-99fa62934c2d677c`, `scarflix_part-b6caef61efed54f1`, `scarflix_part-c2fa5a32a4d5e81c`, `scarflix_part-fe9eb00f9fe3c79f`, `scarflix_part-bd7eda1ae6bf343a`
+
+**Tiny current-missing correlation:** Plex exact rows `0/22`, DB rows `0/22`, log matches `160`.
+
+**Hypothesis:** The affected Section 5 set is still naturally converging: current visibility improved to 83/105. The remaining 22 items remain absent from exact Plex metadata/API rows in this bounded check, and Plex DB rows mirror that absence for the probed hash/title terms.
+
+**Recommendation:** Controlled expansion of the currently visible 83 hashes is reasonable only behind a verification gate: rerun focused Section 5 QA against visible-only hashes, require high pass rate and zero publication side effects, keep the 22 missing hashes held/retryable, and leave PAUSE_PUBLICATION active until the gate is explicitly passed. Waiting one more natural drift cycle may reduce residual misses further and is lower risk; proceeding visible-only is moderate risk but bounded if the gate is enforced.
+
+**Safety:** Strict read-only. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-10T23:26:20.043Z
