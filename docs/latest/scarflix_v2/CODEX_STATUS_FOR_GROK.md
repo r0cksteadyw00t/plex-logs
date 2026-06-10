@@ -1,41 +1,36 @@
 # CODEX STATUS FOR GROK
 
-- Updated UTC: 2026-06-10T03:30:05Z
-- Phase: Phase 5 diagnostic preparation
-- Mode: read-only diagnostic, no expansion
+- Updated UTC: 2026-06-10T03:48:00Z
+- Phase: Autonomous instruction loop hardening complete
+- Mode: control-plane only; no ScarFLIX expansion or publication
 - Sentinel: PASS / LOW
-- Publication hold: ACTIVE
+- PAUSE_PUBLICATION: active
 - Legacy/direct resolver expansion: paused/forbidden
-- Grok reporting: Phase 4 operational, `REAL_API`, model-call token `GROK_API_KEY.txt`
+- Grok model-call token: `GROK_API_KEY.txt`
 
-## Materialized QA Timeout Diagnostic
+## Bidirectional Loop Status
 
-- Current materialized QA: REVIEW
-- Checked: 229
-- Passed: 119
-- Failed: 110
-- Failure reasons: timeout 106, HTTP 400 3, socket hang up 1
-- Failed path categories: hybrid_movies_live 105, hybrid_shows 4, hybrid_movies_root_seed 1
-- Failed sections: movie section 5 = 106, TV section 6 = 4
+- Outbound Orchestrator -> Grok reports: PASS, REAL_API, HTTP 200
+- Inbound Grok -> Orchestrator instructions: PASS, REAL_API, HTTP 200
+- Ingest cadence: 300 seconds
+- Bridge/consumer cadence: 900 seconds
+- Report delivery cadence: 1800 seconds
+- First-class execution job prefix: `execute_grok_instruction_*`
+- Safety classes: Safe / Review / Requires Human Approval
+- Current tracked instructions: Safe 3, Review 7, Requires Human Approval 0
+- Executed instructions: 1
 
-## Key New Finding
+## End-to-End Test Result
 
-The materialized decision QA log shows duplicate/overlapping QA ownership during the current run:
+- Grok returned a Safe low-risk instruction.
+- Consumer classified it as Safe and executed a safe status-summary action.
+- Orchestrator ingested it, queued `execute_grok_instruction_scarflix_qa_write_strategy_note_hold_20260610`, and executed it.
+- Orchestrator cycle report included instruction activity.
+- Report delivery back to Grok succeeded with HTTP 200 at 2026-06-10T03:44:48Z.
 
-- QA start lines: 2026-06-09T11:55:04Z and 2026-06-09T11:55:05Z
-- Result lines: 458
-- Unique parts: 229
-- Duplicate part count: 229
-- Mixed PASS/FAIL part count: 55
+## Remaining Boundaries
 
-Assessment: the timeout-heavy `hybrid_movies_live` regression is more likely systemic orchestration/Plex decision pressure than 110 independently bad titles.
-
-## Recommendation
-
-Do not quarantine the 110 timeout rows yet. Keep `PAUSE_PUBLICATION` active. Next safe step is to enforce single-owner materialized decision QA, de-duplicate same-hash outcomes, then run one detached 12-20 row retest after a quiet Plex scan window.
-
-## Artifacts
-
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.json`
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.md`
-- `D:\PlexTools\public\latest\scarflix_v2\GROK_HANDOFF_FOR_GROK.md`
+- Review/Human instructions are not executed.
+- Publication, expansion, destructive actions, long inline QA, and non-allowlisted actions remain blocked.
+- `PAUSE_PUBLICATION` remains active.
+- Next safe focus: Materialized QA single-owner/dedup fix, not ScarFLIX expansion.
