@@ -3,7 +3,7 @@
   "schema_version": "scarflix.materialized_qa_incident_ledger.v1",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
   "status": "PASS_FORMALISED_P0_INCIDENT",
-  "updated_utc": "2026-06-10T22:48:35.855Z",
+  "updated_utc": "2026-06-10T22:49:22.581Z",
   "p0": true,
   "qa_summary": {
     "status": "REVIEW",
@@ -192,8 +192,28 @@
       "working_base": "http://127.0.0.1:32400",
       "root_cause_category": "resolved_or_transient_reachability_recovered",
       "recommendation": "Proceed with read-only uncapped Section 5 snapshot using working base `http://127.0.0.1:32400`."
+    },
+    {
+      "updated_utc": "2026-06-10T22:49:22.581Z",
+      "event": "section5_uncapped_index_snapshot",
+      "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+      "expected_count": 105,
+      "present_count": 87,
+      "missing_count": 18,
+      "reported_total_size": 231,
+      "conclusion": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 87/105 expected affected hashes currently present in Plex Section 5."
     }
   ],
-  "current_status": "PASS_SERVICE_CONTEXT_PLEX_REACHABLE",
-  "current_recommendation": "Proceed with read-only uncapped Section 5 snapshot using working base `http://127.0.0.1:32400`."
+  "current_status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+  "current_recommendation": {
+    "next_safe_action": "Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.",
+    "expansion_recommendation": "BLOCKED",
+    "reason": "A true visibility gap remains after removing the parser cap."
+  },
+  "current_hypothesis": {
+    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 87/105 expected affected hashes currently present in Plex Section 5.",
+    "evidence_level": "high",
+    "measurement_artifact_confirmed": true,
+    "remaining_visibility_gap": true
+  }
 }
