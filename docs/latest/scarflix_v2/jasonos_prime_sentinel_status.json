@@ -2,40 +2,40 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "REVIEW",
   "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-10T12:45:01Z",
+  "updated_utc": "2026-06-10T12:50:01Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 1,
+  "repeat_count": 2,
   "signals": {
     "controller_status": "FAIL_ENGINEERING",
     "controller_milestone": "BLOCKED_DECISION",
-    "controller_age_minutes": 16,
+    "controller_age_minutes": 21,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 4,
+    "watchdog_age_minutes": 9,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 5,
     "mirror_status": "PASS",
     "mirror_age_minutes": 3,
     "checkpoint_status": "PASS",
     "checkpoint_step": "platform_gate_pass",
-    "checkpoint_age_minutes": 3566,
-    "durable_platform_gate_age_minutes": 3566,
+    "checkpoint_age_minutes": 3571,
+    "durable_platform_gate_age_minutes": 3571,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
     {
-      "task": "autonomous_controller.lock",
-      "reason": "stale_lock",
+      "task": "ScarFLIX_v2_Watchdog_StallDetector",
+      "reason": "watchdog_stale_or_failed",
       "result": "PASS",
-      "note": "removed age_min=5 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260610124501.bak"
+      "note": "enable pid=38848; run pid=24000"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "controller_stale_or_blocked",
       "result": "PASS",
-      "note": "enable pid=33292; run pid=5608"
+      "note": "enable pid=26556; run pid=25196"
     }
   ],
   "notes": [],
