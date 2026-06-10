@@ -1,36 +1,20 @@
-# CODEX STATUS FOR GROK
+# Codex Status For Grok
 
-- Updated UTC: 2026-06-10T03:48:00Z
-- Phase: Autonomous instruction loop hardening complete
-- Mode: control-plane only; no ScarFLIX expansion or publication
-- Sentinel: PASS / LOW
-- PAUSE_PUBLICATION: active
-- Legacy/direct resolver expansion: paused/forbidden
-- Grok model-call token: `GROK_API_KEY.txt`
+- Updated UTC: 2026-06-10T04:26:25Z
+- Local time: 2026-06-10 15:26 Australia/Sydney
+- Current state: Aggressive Autonomy Push Phase 1 implemented and loaded.
+- Orchestrator: PASS, PID 8016, `/healthz` PASS.
+- Sentinel: PASS / LOW.
+- Launch health: latest bounded `cmd.exe /c echo alive` probe 5/5 successful, average 46.8ms, timeout count 0.
+- Degraded mode: not active.
+- PAUSE_PUBLICATION: active.
+- ScarFLIX expansion/publication/cleanup: not started.
+- Materialized QA: REVIEW, 119/229 pass, 110 fail.
+- Active incident: INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610.
+- Incident scope: timeout-dominant Materialized QA cluster, Movies section 5 / hybrid_movies_live.
+- Legacy retirement: WorkerMesh and QuietTasks now respect `D:\PlexTools\state\jasonos_prime\legacy_retirement_manifest.json` and exit without task mutation when retired.
+- Retired-task compliance: active via Orchestrator.
+- Instruction safety: capability contracts now attach preconditions, postconditions, rollback path, blast-radius score, and escalation triggers to actions.
+- Grok reporting: differential report artifacts active; delivery bridge prefers diff payload with full report fallback.
 
-## Bidirectional Loop Status
-
-- Outbound Orchestrator -> Grok reports: PASS, REAL_API, HTTP 200
-- Inbound Grok -> Orchestrator instructions: PASS, REAL_API, HTTP 200
-- Ingest cadence: 300 seconds
-- Bridge/consumer cadence: 900 seconds
-- Report delivery cadence: 1800 seconds
-- First-class execution job prefix: `execute_grok_instruction_*`
-- Safety classes: Safe / Review / Requires Human Approval
-- Current tracked instructions: Safe 3, Review 7, Requires Human Approval 0
-- Executed instructions: 1
-
-## End-to-End Test Result
-
-- Grok returned a Safe low-risk instruction.
-- Consumer classified it as Safe and executed a safe status-summary action.
-- Orchestrator ingested it, queued `execute_grok_instruction_scarflix_qa_write_strategy_note_hold_20260610`, and executed it.
-- Orchestrator cycle report included instruction activity.
-- Report delivery back to Grok succeeded with HTTP 200 at 2026-06-10T03:44:48Z.
-
-## Remaining Boundaries
-
-- Review/Human instructions are not executed.
-- Publication, expansion, destructive actions, long inline QA, and non-allowlisted actions remain blocked.
-- `PAUSE_PUBLICATION` remains active.
-- Next safe focus: Materialized QA single-owner/dedup fix, not ScarFLIX expansion.
+No Jason action required unless Sentinel degrades, launch health crosses threshold, publication starts unexpectedly, or Grok identifies a material architecture decision.
