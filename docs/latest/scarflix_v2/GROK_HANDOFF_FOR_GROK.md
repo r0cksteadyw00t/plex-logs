@@ -22,6 +22,7 @@ Phase 4 Orchestrator/Grok autonomy reached report-queue operation, but direct Gr
   - `JasonOS_Prime_GrokInstructionBridge`
   - `JasonOS_Prime_CodexInstructionConsumer`
 - Core tasks preserved: Sentinel, Watchdog, rclone keepalive.
+- Final post-reduction check found `JasonOS_Prime_PublicMirrorPublisher` re-enabled once. Patched remaining Sentinel/Watchdog/FastTrack recovery paths and re-applied reduction. Final state: all migrated tasks are `Disabled`.
 
 **What I have already tried:**  
 - Patched `JasonOS_Prime_WorkerMesh.js` to read the Orchestrator ownership manifest and skip create/enable/run for Orchestrator-owned tasks.
@@ -45,11 +46,13 @@ Phase 4 Orchestrator/Grok autonomy reached report-queue operation, but direct Gr
   - Grok bridge/consumer cycle
   - Grok cycle report generation
 - Confirmed reports are written to `ORCHESTRATOR_GROK_CYCLE_REPORT.json/.md` and queued in `D:\PlexTools\state\jasonos_prime\grok_report_outbox.jsonl`.
+- Found and patched one remaining re-enable leak for `JasonOS_Prime_PublicMirrorPublisher` in Sentinel/Watchdog/FastTrack recovery paths.
 
 **My hypothesis on root cause:**  
 - Previous task re-enablement was caused by split ownership: WorkerMesh and QuietTasks still treated short-lived scheduled tasks as their responsibility. The new manifest fixes this for the first migration set.
 - Grok direct API mode is not active because `C:\Users\jason\OneDrive\Public\TOKENS\GROK_API_KEY.txt` exists but is empty. The bridge therefore remains `LOCAL_FALLBACK`.
 - ScarFLIX expansion remains blocked by materialized Plex decision QA regression/timeout pattern, not by task ownership.
+- Task ownership is now clean for the first migration set, but it should be observed across the next scheduled Sentinel/Watchdog cycles to confirm there are no additional legacy paths.
 
 **Proposed next steps:**  
 1. Keep `PAUSE_PUBLICATION` in place until materialized QA returns to PASS.
@@ -57,6 +60,7 @@ Phase 4 Orchestrator/Grok autonomy reached report-queue operation, but direct Gr
 3. Once a usable Grok/xAI token is present, rerun the Orchestrator Grok bridge/consumer cycle and confirm `REAL_API`.
 4. Expand Orchestrator ownership to remaining high-churn tasks only after the first migration set stays disabled across at least two WorkerMesh/QuietTasks cycles.
 5. Only resume ScarFLIX controlled work after materialized QA and concurrent QA gates are clean.
+6. Treat direct Grok API as blocked until `GROK_API_KEY.txt` contains a usable token.
 
 **Data/files to review:**  
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.json`
@@ -69,3 +73,5 @@ Phase 4 Orchestrator/Grok autonomy reached report-queue operation, but direct Gr
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_task_reduction_status.json`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_grok_instruction_bridge_status.json`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_codex_instruction_consumer_status.json`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_Sentinel.js`
+- `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_Watchdog_StallDetector.ps1`
