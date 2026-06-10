@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-10T16:15:02.777Z
+Updated UTC: 2026-06-10T16:25:02.633Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -17,7 +17,7 @@ Will progress without Codex: true
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh PASS; plugins=11. | 65% | 1 day | Low |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
 | Swarm Intelligence | Parallel local workers for simulations, status, planning and future missions. | 2026-06-06T08:25:00Z - watchdog swarm escalation marker added | Short scheduled workers active; broader worker swarm pending. | 28% | 2-4 days | Medium |
-| Phone/Multi-Device Federation | Stable remote status/control through public mirror plus tunnel/federation layer. | 2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated | Public mirror REVIEW; raw status base available. | 38% | 1-3 days | Medium |
+| Phone/Multi-Device Federation | Stable remote status/control through public mirror plus tunnel/federation layer. | 2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated | Public mirror REVIEW; raw status base available. | 35% | 1-3 days | Medium |
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | High |
 
 Recent Achievements:
@@ -30,8 +30,8 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 27 min ago
-- Platform child progress: 65 min ago
+- Controller updated: 37 min ago
+- Platform child progress: 75 min ago
 - Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
