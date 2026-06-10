@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T11:50:03.111Z",
+  "updated_utc": "2026-06-10T11:55:03.348Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-10T11:37:49Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-10T11:53:35Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 35,
-    "mirror_updated_age_minutes": 0,
+    "controller_updated_age_minutes": 7,
+    "platform_child_progress_age_minutes": 40,
+    "mirror_updated_age_minutes": 4,
     "next_check_utc": "2026-06-10T11:53:03Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 2,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260610.log",
     "last_progress_utc": "2026-06-10T11:14:58.217Z",
-    "age_minutes": 35,
+    "age_minutes": 40,
     "last_line": "[2026-06-10T11:14:58Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 4,
@@ -147,9 +147,9 @@
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-10T11:50:01Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-10T11:55:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-10T11:45:05Z",
+    "updated_utc": "2026-06-10T11:50:05Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -276,11 +276,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-10T11:37:49Z",
-    "last_successful_grok_instruction_utc": "2026-06-10T11:37:49Z",
+    "bridge_updated_utc": "2026-06-10T11:53:35Z",
+    "last_successful_grok_instruction_utc": "2026-06-10T11:53:35Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-10T11:37:55Z",
+    "consumer_updated_utc": "2026-06-10T11:53:44Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -373,7 +373,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-10T11:37:55Z - structured instruction loop",
+      "last_change": "2026-06-10T11:53:44Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
