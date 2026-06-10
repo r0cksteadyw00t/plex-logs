@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T12:15:03.211Z",
+  "updated_utc": "2026-06-10T12:20:03.054Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -122,11 +122,11 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 13,
-    "platform_child_progress_age_minutes": 60,
+    "controller_updated_age_minutes": 18,
+    "platform_child_progress_age_minutes": 65,
     "mirror_updated_age_minutes": 3,
     "next_check_utc": "2026-06-10T12:16:09Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 4,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260610.log",
     "last_progress_utc": "2026-06-10T11:14:58.217Z",
-    "age_minutes": 60,
+    "age_minutes": 65,
     "last_line": "[2026-06-10T11:14:58Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 4,
@@ -142,15 +142,15 @@
   },
   "watchdog_status": {
     "status": "REVIEW",
-    "stall_risk": "Medium",
+    "stall_risk": "High",
     "updated_utc": "2026-06-10T12:12:37Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-10T12:15:01Z",
-    "codex_action_required": false,
+    "status": "ALERT",
+    "alert_level": "HIGH",
+    "updated_utc": "2026-06-10T12:20:01Z",
+    "codex_action_required": true,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-10T12:10:05Z",
+    "updated_utc": "2026-06-10T12:15:05Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -386,7 +386,7 @@
       "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=1, total=1. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=4/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=PASS, checked=1, passed_visible=1, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 28,
       "eta": "after all-visible materialized QA passes",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     },
     {
       "outcome": "Fast-Track Accelerator",
@@ -449,7 +449,7 @@
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 18,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     }
   ],
   "files": {
