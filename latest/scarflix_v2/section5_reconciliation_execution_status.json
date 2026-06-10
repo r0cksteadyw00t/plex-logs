@@ -1,11 +1,11 @@
 {
   "component": "section5_hybrid_reconcile_then_verify",
   "schema_version": "jasonos.section5_reconcile.v1",
-  "status": "REVIEW_NEEDED",
+  "status": "REVIEW_NEEDED_INDEXING_DIAGNOSTIC_COMPLETE",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
   "job_name": "section5_hybrid_reconcile_then_verify",
   "started_utc": "2026-06-10T09:55:11.299Z",
-  "updated_utc": "2026-06-10T09:56:52.632Z",
+  "updated_utc": "2026-06-10T22:16:54.500Z",
   "max_concurrency": 1,
   "read_only_verification": true,
   "no_publication_started": true,
@@ -8500,5 +8500,24 @@
     "expansion_allowed": false,
     "pause_publication_must_remain_active": true
   },
-  "summary": "Section 5 gate did not pass. Escalate via Grok handoff with exact residual patterns."
+  "summary": "Section 5 gate did not pass. Escalate via Grok handoff with exact residual patterns.",
+  "github_push": {
+    "status": "PASS_PUSHED",
+    "pushed": [
+      "latest/scarflix_v2/section5_reconciliation_execution_status.json",
+      "latest/scarflix_v2/section5_reconciliation_execution_status.md",
+      "latest/scarflix_v2/CODEX_STATUS_FOR_GROK.md",
+      "latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md",
+      "latest/scarflix_v2/materialized_qa_incident_hypothesis_ledger.json",
+      "latest/scarflix_v2/materialized_qa_incident_hypothesis_ledger.md"
+    ],
+    "errors": []
+  },
+  "indexing_diagnostic": {
+    "status": "REVIEW_DIAGNOSTIC_COMPLETE",
+    "diagnostic_json": "D:\\PlexTools\\public\\latest\\scarflix_v2\\section5_indexing_diagnostic_status.json",
+    "diagnostic_md": "D:\\PlexTools\\public\\latest\\scarflix_v2\\section5_indexing_diagnostic_status.md",
+    "key_finding": "The previous Section 5 verification result is not a reliable proof that Plex only exposes 16/105 expected paths because the verifier's section index parser capped parsed Video rows at 40, and the artifact hit exactly video_count=40.",
+    "next_safe_action": "Run one read-only, uncapped Section 5 index snapshot job that records MediaContainer total size and all Part file hashes without refresh, cache clear, deletion, or publication. Then recompute strict matches against the 105 affected expected hashes."
+  }
 }
