@@ -1,8 +1,17 @@
 # Materialized QA Incident Hypothesis Ledger
 
-- Updated UTC: 2026-06-10T22:16:54.500Z
-- Latest event: `section5_indexing_diagnostic`
-- Key finding: The previous Section 5 verification result is not a reliable proof that Plex only exposes 16/105 expected paths because the verifier's section index parser capped parsed Video rows at 40, and the artifact hit exactly video_count=40.
-- Leading hypothesis: Current evidence supports a diagnostic measurement flaw plus possible Plex scanner/indexing behavior issue. The strongest immediate finding is that the 16/105 result is under-instrumented because the verifier capped parsed Section 5 rows at 40; the next step must establish true Section 5 index cardinality before deciding whether Plex is ignoring most ScarFLIX_part paths.
-- Next safe action: Run one read-only, uncapped Section 5 index snapshot job that records MediaContainer total size and all Part file hashes without refresh, cache clear, deletion, or publication. Then recompute strict matches against the 105 affected expected hashes.
-- Expansion remains blocked.
+- Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
+- Updated UTC: 2026-06-10T22:26:45.659Z
+- Current status: `REVIEW_PLEX_INDEX_QUERY_FAILED`
+- Current hypothesis: The uncapped snapshot did not find more expected hashes than the capped verifier. The Section 5 visibility gap appears real for the missing 105 affected hashes.
+- Next safe action: Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
+
+## Latest Uncapped Section 5 Snapshot
+
+- Plex reported Section 5 total size: unknown
+- Parsed Section 5 Video rows: 0
+- Unique indexed ScarFLIX_part hashes: 0
+- Expected affected hashes present: 0/105
+- Expected affected hashes missing: 105
+
+No publication, expansion, cleanup, deletion, source mutation, path rewrite, refresh, or cache clear was performed.
