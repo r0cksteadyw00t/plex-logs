@@ -1,4 +1,14 @@
-## PENDING GROK PEER REVIEW -- RECONCILIATION PLAN (DO NOT EXECUTE ANY ACTIONS YET)
+## GROK REVIEW URL (COPY THIS)
+
+Raw URL for current handoff (contains full reconciliation plan):
+https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+Example of correct format (replace with actual values):
+https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+If the file is in a different path or branch, use the correct raw URL.
+
+## PENDING GROK PEER REVIEW — RECONCILIATION PLAN (DO NOT EXECUTE ANY ACTIONS YET)
 
 **Plan File:** plex_metadata_reconciliation_plan_8path_sample.md  
 **Created:** 2026-06-10T18:15:38+10:00  
