@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_hold_peer_review_status_20260610",
-      "created_at": "2026-06-10T08:26:08Z",
-      "expires_at": "2026-06-11T08:26:08Z",
+      "instruction_id": "phase0_maintain_hold_peer_review_status_20260610_v2",
+      "created_at": "2026-06-10T08:41:38Z",
+      "expires_at": "2026-06-11T08:41:38Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Phase 0 hold maintained. PAUSE_PUBLICATION active. Reconciliation plan for 8-path sample is PENDING GROK PEER REVIEW and must not be executed. Materialized QA remains REVIEW. No publication, expansion, resolver, or scan actions permitted. Status-only record complete."
+            "summary": "Phase 0 hold maintained: PAUSE_PUBLICATION active. Materialized QA REVIEW (119/229). Reconciliation plan for 8-path sample pending Grok peer review. No publication, expansion, or resolver actions. Status-only operations only.",
+            "source_instruction_id": "phase0_maintain_hold_peer_review_status_20260610_v2"
           }
         }
       ],
@@ -28,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T08:26:08Z",
+  "updated_utc": "2026-06-10T08:41:38Z",
   "source": "grok_api"
 }
