@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_hold_record_strategy_20260610_v10",
-      "created_at": "2026-06-10T11:21:04Z",
-      "expires_at": "2026-06-11T11:21:04Z",
+      "instruction_id": "phase0_maintain_hold_record_stabilization_20260610_v11",
+      "created_at": "2026-06-10T11:37:49Z",
+      "expires_at": "2026-06-11T11:37:49Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,19 +14,15 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Phase 0 hold maintained. PAUSE_PUBLICATION active. Re-attempt stabilization gate only after local command health recovery. No section reconciliation, publishing, expansion, or QA expansion permitted."
-          }
-        },
-        {
-          "action_type": "write_strategy_note",
-          "parameters": {
-            "note": "Continue hands_off_operator_cycle. Focus exclusively on local stabilization gate recovery before any further reconciliation attempts. All safety constraints remain enforced."
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_maintain_hold_record_stabilization_20260610_v11",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -34,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T11:21:04Z",
+  "updated_utc": "2026-06-10T11:37:49Z",
   "source": "grok_api"
 }
