@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T15:25:02Z",
+  "updated_utc": "2026-06-10T15:30:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -120,14 +120,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 15,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 10,
+    "platform_child_progress_age_minutes": 20,
+    "mirror_updated_age_minutes": 3,
     "next_check_utc": "2026-06-10T15:25:10Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 5,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -135,7 +135,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260611.log",
     "last_progress_utc": "2026-06-10T15:10:15.646Z",
-    "age_minutes": 15,
+    "age_minutes": 20,
     "last_line": "[2026-06-10T15:10:15Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 0,
     "review_lines": 1,
@@ -150,7 +150,7 @@
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-10T15:20:02Z",
+    "updated_utc": "2026-06-10T15:25:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -165,7 +165,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-10T15:20:04Z",
+    "updated_utc": "2026-06-10T15:25:04Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -462,7 +462,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-10T15:25:02Z",
+    "updated_utc": "2026-06-10T15:30:02Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
