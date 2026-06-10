@@ -1,1 +1,1 @@
-{"code":"invalid-argument","error":"Incorrect API key provided: xa***yz. You can obtain an API key from https://console.x.ai."}
+{"code":"permission-denied","error":"Your newly created team doesn't have any credits or licenses yet. You can purchase those on https://console.x.ai/team/3ec7d91f-279c-4685-93f1-eadbd5f1c578."}
