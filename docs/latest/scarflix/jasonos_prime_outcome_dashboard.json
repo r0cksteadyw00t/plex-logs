@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T17:00:03Z",
+  "updated_utc": "2026-06-10T17:05:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -73,8 +73,8 @@
     "plex_playback_sample_status": "REVIEW",
     "plex_playback_sample_source_mode": "materialized_webdav_visible_rows",
     "plex_playback_sample_target_concurrency": 5,
-    "plex_playback_sample_range_passed": 4,
-    "plex_playback_sample_range_failed": 1,
+    "plex_playback_sample_range_passed": 5,
+    "plex_playback_sample_range_failed": 0,
     "plex_playback_sample_decision_passed": 0,
     "plex_playback_sample_decision_failed": 5,
     "plex_playback_verified_sample_count": 0,
@@ -125,9 +125,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 110,
+    "platform_child_progress_age_minutes": 5,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-10T17:00:08Z",
+    "next_check_utc": "2026-06-10T17:05:11Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -135,23 +135,23 @@
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260611.log",
-    "last_progress_utc": "2026-06-10T15:10:15.646Z",
-    "age_minutes": 110,
-    "last_line": "[2026-06-10T15:10:15Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
+    "last_progress_utc": "2026-06-10T17:00:20.210Z",
+    "age_minutes": 5,
+    "last_line": "[2026-06-10T17:00:20Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=Unable to connect to the remote server",
     "pass_lines": 0,
-    "review_lines": 1,
-    "info_lines": 2
+    "review_lines": 2,
+    "info_lines": 4
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-10T16:55:05Z",
+    "updated_utc": "2026-06-10T17:00:08Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-10T16:55:02Z",
+    "updated_utc": "2026-06-10T17:00:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-10T17:00:01Z",
-    "updated_utc": "2026-06-10T17:00:06Z",
-    "ended_utc": "2026-06-10T17:00:06Z",
+    "started_utc": "2026-06-10T17:05:02Z",
+    "updated_utc": "2026-06-10T17:05:05Z",
+    "ended_utc": "2026-06-10T17:05:05Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -370,19 +370,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-10T16:55:13.676Z",
+      "utc": "2026-06-10T17:00:20.210Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-10T17:00:20Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=Unable to connect to the remote server"
+    },
+    {
+      "utc": "2026-06-10T17:00:17.287Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-10T16:55:06Z",
+      "utc": "2026-06-10T17:00:09Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
-    },
-    {
-      "utc": "2026-06-10T15:10:15.646Z",
-      "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-10T15:10:15Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out."
     },
     {
       "utc": "2026-06-10T13:27:41Z",
@@ -463,7 +463,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-09T16:11:20Z - materialized canary Plex decision QA",
-      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=1, total=1. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=4/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=PASS, checked=1, passed_visible=1, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
+      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=1, total=1. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=PASS, checked=1, passed_visible=1, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 28,
       "eta": "after all-visible materialized QA passes",
       "stall_risk": "Medium"
@@ -541,7 +541,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-10T17:00:03Z",
+    "updated_utc": "2026-06-10T17:05:02Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -550,7 +550,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T17:00:03Z",
+    "updated_utc": "2026-06-10T17:05:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -613,9 +613,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-10T17:00:01Z",
-      "updated_utc": "2026-06-10T17:00:06Z",
-      "ended_utc": "2026-06-10T17:00:06Z",
+      "started_utc": "2026-06-10T17:05:02Z",
+      "updated_utc": "2026-06-10T17:05:05Z",
+      "ended_utc": "2026-06-10T17:05:05Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -757,7 +757,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-10T17:00:01Z",
+      "updated_utc": "2026-06-10T17:05:01Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -790,12 +790,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 11160
+              "pid": 27372
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 33716
+              "pid": 32044
             }
           ]
         }
@@ -803,8 +803,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 217319,
-    "safe_pipeline_log_age_seconds": 274203,
+    "canary_status_age_seconds": 217617,
+    "safe_pipeline_log_age_seconds": 274501,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -821,7 +821,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=12680"
+        "detail": "pid=28228"
       }
     ],
     "blockers": []
@@ -877,7 +877,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-10T17:00:01Z",
+    "updated_utc": "2026-06-10T17:05:01Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -910,12 +910,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 11160
+            "pid": 27372
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 33716
+            "pid": 32044
           }
         ]
       }
