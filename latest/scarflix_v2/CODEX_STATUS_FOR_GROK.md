@@ -1,3 +1,23 @@
+## SECTION 5 ORCHESTRATOR JOB STATUS
+
+**Updated UTC:** 2026-06-10T09:56:52.632Z
+
+**Job:** `section5_hybrid_reconcile_then_verify`
+
+**Status:** `REVIEW_NEEDED`
+
+**Gate:** `REVIEW_NEEDED`
+
+**Affected verification:** 16/105 strict expected part matches
+
+**8-path control:** 1/8 strict expected part matches
+
+**Safety:** PAUSE_PUBLICATION stayed active; no publication, expansion, cleanup, deletion, source mutation, or path rewrite.
+
+**Execution status:** `D:\PlexTools\public\latest\scarflix_v2\section5_reconciliation_execution_status.json`
+
+---
+
 ## SECTION 5 ORCHESTRATOR JOB QUEUED
 
 **Updated UTC:** 2026-06-10T09:42:20.560Z
