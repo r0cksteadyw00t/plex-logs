@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T22:40:01Z",
+  "updated_utc": "2026-06-10T22:45:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -125,9 +125,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 100,
-    "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-10T22:40:17Z",
+    "platform_child_progress_age_minutes": 105,
+    "mirror_updated_age_minutes": 4,
+    "next_check_utc": "2026-06-10T22:45:14Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260611.log",
     "last_progress_utc": "2026-06-10T21:00:18.479Z",
-    "age_minutes": 100,
+    "age_minutes": 105,
     "last_line": "[2026-06-10T21:00:18Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=Unable to connect to the remote server",
     "pass_lines": 0,
     "review_lines": 4,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-10T22:35:11Z",
+    "updated_utc": "2026-06-10T22:40:05Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-10T22:40:01Z",
+    "updated_utc": "2026-06-10T22:45:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-10T22:40:03Z",
-    "updated_utc": "2026-06-10T22:40:09Z",
-    "ended_utc": "2026-06-10T22:40:09Z",
+    "started_utc": "2026-06-10T22:45:03Z",
+    "updated_utc": "2026-06-10T22:45:09Z",
+    "ended_utc": "2026-06-10T22:45:09Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -370,12 +370,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-10T22:35:24.111Z",
+      "utc": "2026-06-10T22:40:22.156Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-10T22:35:14Z",
+      "utc": "2026-06-10T22:40:08Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -542,7 +542,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T22:40:01Z",
+    "updated_utc": "2026-06-10T22:45:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -605,9 +605,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-10T22:40:03Z",
-      "updated_utc": "2026-06-10T22:40:09Z",
-      "ended_utc": "2026-06-10T22:40:09Z",
+      "started_utc": "2026-06-10T22:45:03Z",
+      "updated_utc": "2026-06-10T22:45:09Z",
+      "ended_utc": "2026-06-10T22:45:09Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -749,7 +749,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-10T22:40:02Z",
+      "updated_utc": "2026-06-10T22:45:03Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -782,12 +782,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 39476
+              "pid": 29604
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 11688
+              "pid": 29860
             }
           ]
         }
@@ -795,8 +795,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 237721,
-    "safe_pipeline_log_age_seconds": 294608,
+    "canary_status_age_seconds": 238018,
+    "safe_pipeline_log_age_seconds": 294902,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -807,13 +807,13 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=19648"
+        "detail": "pid=35216"
       }
     ],
     "blockers": []
@@ -869,7 +869,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-10T22:40:02Z",
+    "updated_utc": "2026-06-10T22:45:03Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -902,12 +902,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 39476
+            "pid": 29604
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 11688
+            "pid": 29860
           }
         ]
       }
