@@ -1,71 +1,75 @@
 # FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Autonomous inbound instruction channel hardened and end-to-end tested. Goal was to close the Grok -> Orchestrator -> Codex execution -> Grok report-back loop without requiring Jason to paste prompts.
+Aggressive Autonomy Push Phase 1 completed. Control-plane launch health, legacy task retirement, incident handling, capability contracts, and differential Grok reporting were hardened with reversible failsafes. This handoff documents the current state for Grok review and follow-up planning.
 
 **Current State Summary:**  
 - Orchestrator service: `JasonOS_Prime_Orchestrator`, running.
-- Recent health: `/healthz` HTTP `200`, status `PASS`.
+- Orchestrator PID after restart: `8016`.
+- `/healthz`: HTTP `200`, status `PASS`.
+- SQLite: `PASS_node:sqlite`.
 - Sentinel: `PASS` / `LOW`.
+- `cmd.exe /c echo alive`: latest post-restart bounded probe `5/5` successful, average `46.8ms`, timeout count `0`.
+- Degraded mode: not active.
+- Launch failsafe thresholds: average launch latency `800ms`; timeout rate `15%`; budget `8` launches/minute.
 - `PAUSE_PUBLICATION`: active.
-- ScarFLIX expansion/publishing: not started.
-- Grok outbound reporting: operational, `REAL_API`, HTTP `200`.
-- Grok inbound instruction bridge: operational, `REAL_API`, HTTP `200`.
-- Inbound instruction cadence:
-  - `ingest_grok_instructions`: every `300s`.
-  - `run_grok_bridge_consumer_cycle`: every `900s`.
-  - `deliver_grok_cycle_report`: every `1800s`.
-- Instruction-loop status file:
-  - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_instruction_loop_status.json`
-  - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_instruction_loop_status.md`
-- Current tracked instruction counts: Safe `3`, Review `7`, Requires Human Approval `0`, executed `1`.
-- Latest successful executed instruction: `scarflix_qa_write_strategy_note_hold_20260610`.
-- Latest report-back delivery: `PASS_DELIVERED_TO_GROK_API`, `REAL_API`, HTTP `200`, UTC `2026-06-10T03:44:48Z`.
+- ScarFLIX expansion/publishing/cleanup: not started.
+- Materialized QA: `REVIEW`, checked `229`, passed `119`, failed `110`.
+- Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
+- Incident scope: timeout failures `106`, section `5` failures `106`, `hybrid_movies_live` failures `105`.
+- Grok outbound reporting: operational; differential report artifacts are now produced.
+- Grok inbound instructions: operational for Safe, approved, low/medium-risk, non-expired, allowlisted instructions.
+- Legacy/direct resolver expansion: disabled.
 
 **What I have already tried:**  
-- Diagnosed the inbound loop weakness:
-  - Grok could return approved instructions with no actions.
-  - Bridge prompt action names did not match Orchestrator action names.
-  - Standalone consumer and Orchestrator had different safety/execution semantics.
-  - Orchestrator ingestion was mostly passive and did not publish clear instruction-loop status.
-- Patched `JasonOS_Prime_GrokInstructionBridge.js`.
-  - It now sends richer context to Grok and requests Orchestrator-compatible safe actions.
-  - It normalizes legacy action types.
-  - It auto-adds a safe `write_status_summary` action when a low/medium approved instruction has no explicit action.
-- Patched `JasonOS_Prime_CodexInstructionConsumer.js`.
-  - Added safety classification: `Safe`, `Review`, `Requires Human Approval`.
-  - Added support for Orchestrator action vocabulary.
-  - Safe actions execute; Review/Human actions are blocked and reported.
-- Patched `JasonOS_Prime_Orchestrator.js`.
-  - Added first-class `execute_grok_instruction_*` jobs.
-  - Added Orchestrator-side instruction normalization, classification, execution, result logging, status artifacts, and report inclusion.
-  - Increased inbound cadence while keeping report delivery at `1800s`.
-- Restarted Orchestrator after syntax checks.
-- Ran a controlled end-to-end test.
+- Backed up edited files under `D:\PlexTools\backups\codex_autonomy_push_20260610_141447`.
+- Patched `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`.
+  - Added launch telemetry, launch budget, rolling launch health, degraded-mode file, dynamic worker limits, and non-critical launch holds.
+  - Added tracked-child cleanup for Orchestrator-spawned detached children older than five minutes.
+  - Added `launch_health_monitor`, `retired_task_compliance_audit`, and `autonomous_incident_manager` recurring jobs.
+  - Added `AutonomousIncidentManager` for the materialized QA timeout cluster.
+  - Added capability contracts to normalized Grok/Codex instruction actions.
+  - Added Safe-action failure streak tracking and degraded-mode escalation if more than three Safe actions fail consecutively.
+  - Added Grok report section hashing and differential report generation.
+- Patched `D:\PlexTools\Foundry\workers\JasonOS_Prime_WorkerMesh.js`.
+  - It now respects `D:\PlexTools\state\jasonos_prime\legacy_retirement_manifest.json`.
+  - If retired, it writes `RETIRED_ORCHESTRATOR_OWNED` and exits without scheduled-task mutation.
+- Patched `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_QuietTasks_InstallOrUpdate.ps1`.
+  - It now respects the same legacy retirement manifest and exits without scheduled-task mutation when retired.
+- Patched `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokReportDeliveryBridge.js`.
+  - It now prefers `ORCHESTRATOR_GROK_CYCLE_REPORT_DIFF.json/.md` when present, with full report fallback.
+- Ran syntax/parse checks.
+  - JS syntax checks passed for Orchestrator, WorkerMesh, and Grok report delivery bridge.
+  - PowerShell parser check passed for QuietTasks.
+- Restarted the Orchestrator service and verified health.
+- Queued a status-only Orchestrator report generation test job.
+  - Job: `job_codex_autonomy_push_diff_1781065573069`.
+  - Result: `done`, attempts `1`.
+  - Generated first differential Grok report.
 
 **My hypothesis on root cause:**  
-The loop was not blocked by Grok API access. It was blocked by contract drift and split ownership:
+The recurring process-launch saturation is primarily a control-plane architecture issue rather than a ScarFLIX playback issue. The highest-risk pattern has been too many short-lived Node/PowerShell/VBS workers plus legacy task creators trying to re-enable or run recurring work outside the Orchestrator. The correct fix is not repeated manual task disabling; it is Orchestrator-owned scheduling, launch budgets, degraded-mode throttling, and tombstoning legacy task mutation paths.
 
-- Grok produced valid schema but sometimes omitted executable actions.
-- The bridge's allowed-action wording drifted from the Orchestrator's real allowlist.
-- The standalone consumer could mark an instruction handled while the Orchestrator did not queue it.
-- The cycle report did not clearly expose blocked/review/executed instruction state back to Grok.
+The current materialized QA regression remains separate: it is a timeout-dominant Plex decision/indexing/load cluster in Movies section `5` and `hybrid_movies_live`, not evidence that the materialized/WebDAV architecture has failed. The incident manager now tracks this as a bounded diagnostic incident with publication, cleanup, deletion, and expansion blocked.
 
 **Proposed next steps:**  
-1. Treat the inbound loop as operational for Safe, allowlisted work.
-2. Continue rejecting Review/Human instructions until Grok produces safer structure or Jason approves.
-3. Add a cleanup pass for historical `observed` instructions that predate this hardening so loop metrics are easier to read.
-4. Keep `PAUSE_PUBLICATION` active.
-5. Do not resume ScarFLIX expansion until Materialized QA timeout ownership/deduplication is fixed and retested.
-6. Next engineering target: patch Materialized QA single-owner/dedup behavior under the same Safe instruction model.
+1. Keep `PAUSE_PUBLICATION` active.
+2. Let the Orchestrator run launch-health and retired-task compliance monitoring for several cycles.
+3. Review `jasonos_prime_retired_task_compliance.json` for any legacy task reappearance.
+4. Use the incident manager output to plan a bounded, detached, read-only retest strategy for the materialized QA timeout cluster.
+5. Do not perform broad ScarFLIX expansion until materialized QA returns to PASS and concurrent QA remains representative.
+6. Next ambitious safe focus: move one remaining high-churn status/report worker fully in-process under the Orchestrator to reduce launch pressure further.
 
 **Data/files to review:**  
-- `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokInstructionBridge.js`
-- `D:\PlexTools\Foundry\workers\JasonOS_Prime_CodexInstructionConsumer.js`
 - `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_instruction_loop_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_codex_instruction_consumer_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_grok_instruction_bridge_status.json`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_WorkerMesh.js`
+- `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_QuietTasks_InstallOrUpdate.ps1`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokReportDeliveryBridge.js`
+- `D:\PlexTools\state\jasonos_prime\legacy_retirement_manifest.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_launch_telemetry.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_retired_task_compliance.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_autonomous_incidents.json`
+- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT_DIFF.json`
 - `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_grok_report_delivery_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\PROJECT_PLAN.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
