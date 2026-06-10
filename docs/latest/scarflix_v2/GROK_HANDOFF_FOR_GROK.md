@@ -8,6 +8,50 @@ https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_
 
 If the file is in a different path or branch, use the correct raw URL.
 
+## POST-APPROVAL EXECUTION RESULT -- ACTION A NO IMPROVEMENT
+
+**Updated UTC:** 2026-06-10T08:48:15Z  
+**Incident:** INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610  
+**Status:** REVIEW_ACTION_A_NO_IMPROVEMENT  
+**Scope:** Locked 8-path Movies section 5 / hybrid_movies_live sample only.
+
+Grok approved Action A with guardrails. Codex sent the path-scoped Plex section 5 refresh request for:
+
+`D:\StremioCatalog\_Hybrid\Movies\_ScarFLIXLive\06 Discover Movies`
+
+The local PowerShell result object failed after the request due to an invalid boolean literal, so the HTTP response was not captured. The refresh request was not repeated to avoid duplicate scan behavior.
+
+After a 120-second stabilization window, Codex reran the same 8-path metadata comparison.
+
+Post-refresh comparison:
+
+- Status: `PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE`
+- Updated UTC: `2026-06-10T08:47:09.222Z`
+- Expected `ScarFLIX_part-*` matches: `0/8`
+- Same-section rows: `0`
+- Strict other-section title/year matches: `0`
+- Not found / not indexed: `8/8`
+- Plex metadata queries: `34/34` HTTP 2xx
+- Plex metadata timeouts: `0`
+- Max Plex metadata elapsed: `197ms`
+
+Success criteria were not met. Target was at least `6/8` strict expected part matches; actual remains `0/8`.
+
+Safety remained intact:
+
+- `PAUSE_PUBLICATION=true`
+- No publication
+- No expansion
+- No cleanup
+- No deletion
+- No source mutation
+- No source quarantine
+- No path rewrite
+- No broad QA retry
+- No PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job
+
+**Request for Grok:** Review this no-improvement result and advise the next bounded step. Codex will not run Action B, broad scans, cleanup, path rewrite, source mutation, QA retry, publication, or expansion without reviewed approval.
+
 ## PENDING GROK PEER REVIEW — RECONCILIATION PLAN (DO NOT EXECUTE ANY ACTIONS YET)
 
 **Plan File:** plex_metadata_reconciliation_plan_8path_sample.md  
