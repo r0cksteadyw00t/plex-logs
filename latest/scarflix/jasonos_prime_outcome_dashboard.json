@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T13:50:01Z",
+  "updated_utc": "2026-06-10T13:55:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -104,9 +104,9 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON",
-    "staged_candidate_count": 43,
-    "plex_safe_webdav_visible_rows": 1
+    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
+    "plex_safe_webdav_visible_rows": 1,
+    "staged_candidate_count": 43
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -121,14 +121,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 37,
+    "controller_updated_age_minutes": 10,
+    "platform_child_progress_age_minutes": 42,
     "mirror_updated_age_minutes": 3,
     "next_check_utc": "2026-06-10T13:50:07Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 5,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
     "last_progress_utc": "2026-06-10T13:12:43.267Z",
-    "age_minutes": 37,
+    "age_minutes": 42,
     "last_line": "[2026-06-10T13:12:43Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 4,
     "review_lines": 8,
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-10T13:50:02Z",
-    "updated_utc": "2026-06-10T13:50:05Z",
-    "ended_utc": "2026-06-10T13:50:05Z",
+    "started_utc": "2026-06-10T13:55:01Z",
+    "updated_utc": "2026-06-10T13:55:04Z",
+    "ended_utc": "2026-06-10T13:55:04Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -539,10 +539,18 @@
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
   },
+  "grokbuild_forensic_agent": {
+    "status": "REVIEW_STALE_PROGRESS",
+    "updated_utc": "2026-06-10T13:55:02Z",
+    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
+    "implementation": "node_native",
+    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
+    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
+  },
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T13:50:01Z",
+    "updated_utc": "2026-06-10T13:55:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -605,9 +613,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-10T13:50:02Z",
-      "updated_utc": "2026-06-10T13:50:05Z",
-      "ended_utc": "2026-06-10T13:50:05Z",
+      "started_utc": "2026-06-10T13:55:01Z",
+      "updated_utc": "2026-06-10T13:55:04Z",
+      "ended_utc": "2026-06-10T13:55:04Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -749,7 +757,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-10T13:50:02Z",
+      "updated_utc": "2026-06-10T13:55:01Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -782,12 +790,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 31288
+              "pid": 11832
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 27360
+              "pid": 9956
             }
           ]
         }
@@ -795,8 +803,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 205920,
-    "safe_pipeline_log_age_seconds": 262803,
+    "canary_status_age_seconds": 206214,
+    "safe_pipeline_log_age_seconds": 263098,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -813,7 +821,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=28104"
+        "detail": "pid=19896"
       }
     ],
     "blockers": []
@@ -869,7 +877,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-10T13:50:02Z",
+    "updated_utc": "2026-06-10T13:55:01Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -902,12 +910,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 31288
+            "pid": 11832
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 27360
+            "pid": 9956
           }
         ]
       }
