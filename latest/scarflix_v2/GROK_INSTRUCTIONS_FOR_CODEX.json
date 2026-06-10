@@ -1,46 +1,48 @@
 {
   "schema_version": "grok_codex_instruction.v1",
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T02:18:49Z",
-  "source": "local_status_fallback",
-  "human_summary": "Grok/xAI API call failed; bridge wrote non-executable fallback.",
+  "updated_utc": "2026-06-10T02:24:49Z",
+  "source": "grok_api",
+  "human_summary": "Grok response normalized into instruction envelope.",
   "instructions": [
     {
-      "instruction_id": "local-only-no-token-20260610021849",
-      "created_at": "2026-06-10T02:18:49Z",
-      "expires_at": "2026-06-10T03:18:50Z",
-      "target_component": "grok_codex_bridge",
-      "risk_level": "low",
-      "requires_user_decision": false,
-      "approved_for_codex_execution": false,
-      "title": "Local-only Grok bridge fallback",
-      "summary": "No Grok/xAI token is available. Codex must not execute this as a Grok-approved instruction.",
-      "actions": [
+      "id": "4c53463e-eb16-9858-b7cb-0a128e992a67",
+      "object": "chat.completion",
+      "created": 1781058292,
+      "model": "grok-4.3",
+      "choices": [
         {
-          "action_type": "status_only",
-          "reason": "Credential missing; keep local ScarFLIX workers authoritative."
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"schema_version\": \"grok_codex_instruction.v1\",\n  \"instructions\": [\n    {\n      \"instruction_id\": \"scarflix_qa_monitor_20260610\",\n      \"created_at\": \"2026-06-10T02:24:49Z\",\n      \"expires_at\": \"2026-06-11T02:24:49Z\",\n      \"target_component\": \"scarflix_qa\",\n      \"risk_level\": \"low\",\n      \"requires_user_decision\": false,\n      \"approved_for_codex_execution\": true,\n      \"success_criteria\": \"Capture and report current materialized QA status, failure counts, and gate state via status_only without triggering inline validation or expansion\",\n      \"retry_policy\": {\n        \"max_retries\": 2,\n        \"backoff\": \"fixed\"\n      }\n    }\n  ]\n}",
+            "reasoning_content": "The task is to create a v1 structured instruction envelope for Codex. It must be one JSON object only, an envelope with schema_version \"grok_codex_instruction.v1\" and an instructions array.\nFirst, the required JSON fields for each instruction: instruction_id, created_at, expires_at, target_component, risk_level, requires_user_decision, approved_for_codex_execution, success_criteria, retry_policy.\n\nThe envelope is one JSON object with schema_version \"grok_codex_instruction.v1\" and an instructions array (so probably an array with one or more instruction objects).\n\nKey rules:\n- Only set approved_for_codex_execution=true for low or medium risk actions that Codex may safely execute autonomously.\n- Never approve legacy/direct resolver expansion.\n- Never ask Jason to run routine commands.",
+            "refusal": null
+          },
+          "finish_reason": "stop"
         }
       ],
-      "success_criteria": [
-        "Instruction file is schema-valid.",
-        "Codex consumer records that no autonomous Grok-approved action was executed."
-      ],
-      "retry_policy": {
-        "max_attempts": 1,
-        "backoff_seconds": 900,
-        "escalate_after_attempts": 1,
-        "escalation_target": "grok_handoff"
+      "usage": {
+        "prompt_tokens": 4345,
+        "completion_tokens": 176,
+        "total_tokens": 5349,
+        "prompt_tokens_details": {
+          "text_tokens": 4345,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 828,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 78068500
       },
-      "evidence_required": [
-        "jasonos_prime_grok_instruction_bridge_status.json",
-        "jasonos_prime_codex_instruction_consumer_status.json"
-      ],
-      "blocked_actions": [
-        "Do not re-enable legacy/direct resolver expansion.",
-        "Do not run long ScarFLIX validation inline from Codex."
-      ],
-      "source_handoff_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_HANDOFF_FOR_GROK.md",
-      "notes": "Local fallback is intentional and non-destructive."
+      "system_fingerprint": "fp_eb3c003fc66c14ed",
+      "service_tier": "default"
     }
   ]
 }
