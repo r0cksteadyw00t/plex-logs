@@ -1,8 +1,17 @@
 # Materialized QA Incident Hypothesis Ledger
 
-- Updated UTC: 2026-06-10T23:05:10.271Z
-- Current status: `PASS_TINY_PLEX_FORENSIC_COMPLETE`
-- Current hypothesis: The tiny targeted Plex metadata check was inconclusive; use the detailed probe rows and logs for the next bounded diagnostic.
-- Recommendation: Hold controlled expansion until the targeted probe ambiguity is resolved. Continue with a tiny database/log correlation check before any expansion decision.
+- Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
+- Updated UTC: 2026-06-10T23:09:27.980Z
+- Current status: `PASS_UNCAPPED_BASELINE_CAPTURED`
+- Current hypothesis: The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 95/105 expected affected hashes currently present in Plex Section 5.
+- Next safe action: Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
 
-No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+## Latest Uncapped Section 5 Snapshot
+
+- Plex reported Section 5 total size: 257
+- Parsed Section 5 Video rows: 257
+- Unique indexed ScarFLIX_part hashes: 207
+- Expected affected hashes present: 95/105
+- Expected affected hashes missing: 10
+
+No publication, expansion, cleanup, deletion, source mutation, path rewrite, refresh, or cache clear was performed.
