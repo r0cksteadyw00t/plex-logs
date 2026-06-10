@@ -64,7 +64,7 @@ These steps are safe to run before any mitigation, but this plan does not execut
 
 ```powershell
 $PlexBase = 'http://192.168.1.184:32400'
-$PlexToken = '<secure token loader; do not print>'
+$PlexToken = 'SECURE_TOKEN_LOADER_DO_NOT_PRINT'
 Invoke-WebRequest -UseBasicParsing -Method Get -Uri "$PlexBase/library/sections/5?X-Plex-Token=$PlexToken" -TimeoutSec 15
 ```
 
@@ -101,7 +101,7 @@ Future command, review required before execution:
 
 ```powershell
 $PlexBase = 'http://192.168.1.184:32400'
-$PlexToken = '<secure token loader; do not print>'
+$PlexToken = 'SECURE_TOKEN_LOADER_DO_NOT_PRINT'
 $RefreshPath = 'D:\StremioCatalog\_Hybrid\Movies\_ScarFLIXLive\06 Discover Movies'
 $EncodedPath = [System.Uri]::EscapeDataString($RefreshPath)
 Invoke-WebRequest -UseBasicParsing -Method Get -Uri "$PlexBase/library/sections/5/refresh?path=$EncodedPath&X-Plex-Token=$PlexToken" -TimeoutSec 15
@@ -134,7 +134,7 @@ Future command, review required before execution:
 
 ```powershell
 $PlexBase = 'http://192.168.1.184:32400'
-$PlexToken = '<secure token loader; do not print>'
+$PlexToken = 'SECURE_TOKEN_LOADER_DO_NOT_PRINT'
 Invoke-WebRequest -UseBasicParsing -Method Get -Uri "$PlexBase/library/sections/5/refresh?X-Plex-Token=$PlexToken" -TimeoutSec 15
 ```
 
@@ -162,8 +162,8 @@ Future command template, review required before execution:
 
 ```powershell
 $PlexBase = 'http://192.168.1.184:32400'
-$PlexToken = '<secure token loader; do not print>'
-$RatingKey = '<rating key from strict title/year metadata match>'
+$PlexToken = 'SECURE_TOKEN_LOADER_DO_NOT_PRINT'
+$RatingKey = 'RATING_KEY_FROM_STRICT_TITLE_YEAR_METADATA_MATCH'
 Invoke-WebRequest -UseBasicParsing -Method Get -Uri "$PlexBase/library/metadata/$RatingKey/refresh?X-Plex-Token=$PlexToken" -TimeoutSec 15
 ```
 
@@ -238,4 +238,3 @@ Please review whether the proposed sequence is safe and technically coherent:
 5. Escalate before any broader mitigation.
 
 No execution should occur until Grok approves or revises this plan.
-
