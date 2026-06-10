@@ -5,7 +5,7 @@
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
   "job_name": "section5_hybrid_reconcile_then_verify",
   "started_utc": "2026-06-10T09:55:11.299Z",
-  "updated_utc": "2026-06-10T22:29:20.937Z",
+  "updated_utc": "2026-06-10T22:49:22.581Z",
   "max_concurrency": 1,
   "read_only_verification": true,
   "no_publication_started": true,
@@ -8521,15 +8521,15 @@
     "next_safe_action": "Run one read-only, uncapped Section 5 index snapshot job that records MediaContainer total size and all Part file hashes without refresh, cache clear, deletion, or publication. Then recompute strict matches against the 105 affected expected hashes."
   },
   "uncapped_index_snapshot": {
-    "status": "REVIEW_PLEX_INDEX_QUERY_FAILED",
+    "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
     "status_json": "D:\\PlexTools\\public\\latest\\scarflix_v2\\section5_uncapped_index_snapshot_status.json",
     "status_md": "D:\\PlexTools\\public\\latest\\scarflix_v2\\section5_uncapped_index_snapshot_status.md",
     "expected_count": 105,
-    "present_count": null,
-    "missing_count": null,
-    "baseline_captured": false,
-    "plex_reported_total_size": null,
-    "parsed_video_count": 0,
-    "unique_part_hash_count": 0
+    "present_count": 87,
+    "missing_count": 18,
+    "baseline_captured": true,
+    "plex_reported_total_size": 231,
+    "parsed_video_count": 231,
+    "unique_part_hash_count": 181
   }
 }
