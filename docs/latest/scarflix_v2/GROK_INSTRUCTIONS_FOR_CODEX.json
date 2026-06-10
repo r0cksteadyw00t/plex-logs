@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_hold_record_stabilization_20260610_v12",
-      "created_at": "2026-06-10T11:53:35Z",
-      "expires_at": "2026-06-11T11:53:35Z",
+      "instruction_id": "phase0_record_stabilization_hold_20260610_v13",
+      "created_at": "2026-06-10T12:10:05Z",
+      "expires_at": "2026-06-11T12:10:05Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Maintaining full hold per INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610. Stabilization gate recovery required before any reconciliation. All safety constraints (PAUSE_PUBLICATION, no expansion/publishing/QA) remain active. No actions beyond status recording.",
-            "source_instruction_id": "phase0_maintain_hold_record_stabilization_20260610_v12"
+            "summary": "Current phase remains Phase 0 Stabilisation. PAUSE_PUBLICATION active. Focus on local stabilization gate recovery before any reconciliation. Materialized QA REVIEW. No legacy expansion, publishing, or source changes permitted.",
+            "source_instruction_id": "phase0_record_stabilization_hold_20260610_v13"
           }
         }
       ],
@@ -29,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T11:53:35Z",
+  "updated_utc": "2026-06-10T12:10:05Z",
   "source": "grok_api"
 }
