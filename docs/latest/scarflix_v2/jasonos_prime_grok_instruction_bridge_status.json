@@ -1,14 +1,26 @@
 {
   "component": "jasonos_prime_grok_instruction_bridge",
-  "status": "LOCAL_FALLBACK",
-  "updated_utc": "2026-06-10T02:18:49Z",
-  "bridge_mode": "LOCAL_FALLBACK",
-  "api_mode": "LOCAL_FALLBACK",
-  "source": "local_status_fallback",
-  "local_only_mode": true,
+  "status": "REVIEW_SCHEMA",
+  "updated_utc": "2026-06-10T02:24:49Z",
+  "bridge_mode": "REAL_API",
+  "api_mode": "REAL_API",
+  "source": "grok_api",
+  "local_only_mode": false,
   "token_file_present": true,
-  "token_file_used": "GROK_MANAGEMENT_KEY.txt",
+  "token_file_used": "GROK_API_KEY.txt",
   "fallback_reason": "Grok/xAI API call failed; bridge wrote non-executable fallback.",
+  "provider_attempts": [
+    {
+      "token_file": "GROK_MANAGEMENT_KEY.txt",
+      "ok": false,
+      "status": 400
+    },
+    {
+      "token_file": "GROK_API_KEY.txt",
+      "ok": true,
+      "status": 200
+    }
+  ],
   "prompt_context": {
     "public_contract_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_FORENSIC_PARTNER.md",
     "public_contract_loaded": true,
@@ -27,13 +39,13 @@
     "dashboard": {
       "exists": true,
       "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_outcome_dashboard.json",
-      "mtime_utc": "2026-06-10T02:15:13.178Z",
+      "mtime_utc": "2026-06-10T02:20:17.923Z",
       "bytes": 39049
     }
   },
   "provider": {
-    "ok": false,
-    "status": 400,
+    "ok": true,
+    "status": 200,
     "endpoint": "https://api.x.ai/v1/chat/completions",
     "model": "grok-4",
     "parse_status": "PASS",
@@ -43,7 +55,19 @@
   "instructions_md_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.md",
   "instruction_count": 1,
   "executable_instruction_count": 0,
-  "last_successful_grok_instruction_utc": "",
-  "validation_errors": [],
+  "last_successful_grok_instruction_utc": "2026-06-10T02:24:49Z",
+  "validation_errors": [
+    "instructions[0].instruction_id is required.",
+    "instructions[0].created_at is required.",
+    "instructions[0].expires_at is required.",
+    "instructions[0].target_component is required.",
+    "instructions[0].risk_level is required.",
+    "instructions[0].requires_user_decision is required.",
+    "instructions[0].approved_for_codex_execution is required.",
+    "instructions[0].success_criteria is required.",
+    "instructions[0].retry_policy is required.",
+    "instructions[0].success_criteria must have at least one item.",
+    "instructions[0].retry_policy is required."
+  ],
   "jason_action_required": false
 }
