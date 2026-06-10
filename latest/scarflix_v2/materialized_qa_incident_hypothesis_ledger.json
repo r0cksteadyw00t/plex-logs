@@ -2,8 +2,8 @@
   "component": "scarflix_v2_materialized_qa_incident_hypothesis_ledger",
   "schema_version": "scarflix.materialized_qa_incident_ledger.v1",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "status": "REVIEW_ACTION_A_NO_IMPROVEMENT",
-  "updated_utc": "2026-06-10T08:48:15Z",
+  "status": "PASS_FORMALISED_P0_INCIDENT",
+  "updated_utc": "2026-06-10T09:56:52.632Z",
   "p0": true,
   "qa_summary": {
     "status": "REVIEW",
@@ -25,7 +25,7 @@
       "id": "H5_PLEX_SECTION_CACHE_OR_METADATA_BEHAVIOR",
       "confidence": "HIGH",
       "confidence_score": 0.86,
-      "next_bounded_test": "Escalate the no-improvement Action A result to Grok before any Action B, broad scan, cleanup, path rewrite, source mutation, QA retry, publication, or expansion."
+      "next_bounded_test": "Plan targeted QA-only mitigation/reconciliation for Plex metadata/path visibility; escalate before cleanup or mutation."
     }
   ],
   "hypotheses": [
@@ -142,15 +142,14 @@
         "Failures are heavily concentrated in Movies section 5.",
         "Playback QA controller previously triggered Plex scans for sections 5 and 6.",
         "Smaller TV section 6 involvement suggests section/path cache behavior still needs control comparison.",
-        "Plex metadata vs webdav_map comparison expected ScarFLIX_part matches=0/8, same-section mismatches=0, same-section rows without parts=0, rows with part files=0.",
-        "After approved Action A path-scoped section 5 refresh attempt and 120-second wait, repeat comparison still showed expected matches=0/8 and not-found/not-indexed=8/8."
+        "Plex metadata vs webdav_map comparison expected ScarFLIX_part matches=0/8, same-section mismatches=0, same-section rows without parts=0, rows with part files=0."
       ],
       "evidence_against": [
         "Path family concentration may be stronger than section behavior.",
         "Timing probe Plex path matching result: matching ScarFLIX_part paths=0/8.",
         "No evidence yet contradicts the Plex metadata/path mapping mismatch hypothesis."
       ],
-      "next_bounded_test": "Escalate the no-improvement Action A result to Grok before any Action B, broad scan, cleanup, path rewrite, source mutation, QA retry, publication, or expansion.",
+      "next_bounded_test": "Plan targeted QA-only mitigation/reconciliation for Plex metadata/path visibility; escalate before cleanup or mutation.",
       "allowed_actions": [
         "plex_metadata_path_read",
         "status_only_path_compare"
@@ -169,26 +168,7 @@
     "user_context_probe": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_materialized_qa_user_context_probe.json",
     "timing_plan": "D:\\PlexTools\\public\\latest\\scarflix_v2\\materialized_qa_decision_timing_probe_plan.json",
     "timing_results": "D:\\PlexTools\\public\\latest\\scarflix_v2\\materialized_qa_timing_probe_results.json",
-    "plex_metadata_vs_webdav_map_comparison": "D:\\PlexTools\\public\\latest\\scarflix_v2\\plex_metadata_vs_webdav_map_comparison_results.json",
-    "plex_metadata_reconciliation_execution_status": "D:\\PlexTools\\public\\latest\\scarflix_v2\\plex_metadata_reconciliation_execution_status.json"
-  },
-  "reconciliation_execution": {
-    "status": "REVIEW_ACTION_A_NO_IMPROVEMENT",
-    "updated_utc": "2026-06-10T08:48:15Z",
-    "action": "ACTION_A_PATH_SCOPED_SECTION_5_REFRESH",
-    "scope": "locked_8_path_movies_section_5_hybrid_movies_live_sample",
-    "request_sent": true,
-    "duplicate_refresh_sent": false,
-    "stabilization_wait_seconds": 120,
-    "post_refresh_comparison_updated_utc": "2026-06-10T08:47:09.222Z",
-    "expected_part_match_count": 0,
-    "target_expected_part_match_count": 6,
-    "title_not_found_or_not_indexed_count": 8,
-    "plex_query_count": 34,
-    "plex_query_http_2xx": 34,
-    "plex_query_timeouts": 0,
-    "success_criteria_met": false,
-    "next_required_step": "Grok review of no-improvement result before any further reconciliation action."
+    "plex_metadata_vs_webdav_map_comparison": "D:\\PlexTools\\public\\latest\\scarflix_v2\\plex_metadata_vs_webdav_map_comparison_results.json"
   },
   "safety_rules": {
     "pause_publication_must_remain_active": true,
@@ -200,8 +180,108 @@
     "max_bounded_paths_per_round": 30,
     "max_diagnostic_concurrency": 2
   },
-  "next_required_step": "Grok review of no-improvement Action A result before any further reconciliation action.",
+  "next_required_step": "Execute Step 4.2 diagnostic round only through bounded, low-concurrency, read-only/status-only jobs.",
   "no_publication_started": true,
   "no_cleanup_performed": true,
-  "no_source_mutation_performed": true
+  "no_source_mutation_performed": true,
+  "history": [
+    {
+      "updated_utc": "2026-06-10T09:56:52.632Z",
+      "event": "section5_hybrid_reconcile_then_verify",
+      "status": "REVIEW_NEEDED",
+      "gate": {
+        "status": "REVIEW_NEEDED",
+        "affected_majority_improved": false,
+        "affected_strict_match_target": "16/105",
+        "control_target_6_of_8": "1/8",
+        "no_webdav_timeout_regression": false,
+        "residual_patterns": [
+          {
+            "key": "plex_title_not_found_or_not_indexed",
+            "count": 89
+          }
+        ],
+        "expansion_allowed": false,
+        "pause_publication_must_remain_active": true
+      },
+      "affected_summary": {
+        "selected_count": 105,
+        "strict_match_count": 16,
+        "webdav_ok_count": 13,
+        "classifications": [
+          {
+            "key": "plex_title_not_found_or_not_indexed",
+            "count": 89
+          },
+          {
+            "key": "strict_expected_part_match",
+            "count": 16
+          }
+        ]
+      },
+      "control_summary": {
+        "selected_count": 8,
+        "strict_match_count": 1,
+        "classifications": [
+          {
+            "key": "plex_title_not_found_or_not_indexed",
+            "count": 7
+          },
+          {
+            "key": "strict_expected_part_match",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ],
+  "latest_section5_reconciliation_job": {
+    "updated_utc": "2026-06-10T09:56:52.632Z",
+    "event": "section5_hybrid_reconcile_then_verify",
+    "status": "REVIEW_NEEDED",
+    "gate": {
+      "status": "REVIEW_NEEDED",
+      "affected_majority_improved": false,
+      "affected_strict_match_target": "16/105",
+      "control_target_6_of_8": "1/8",
+      "no_webdav_timeout_regression": false,
+      "residual_patterns": [
+        {
+          "key": "plex_title_not_found_or_not_indexed",
+          "count": 89
+        }
+      ],
+      "expansion_allowed": false,
+      "pause_publication_must_remain_active": true
+    },
+    "affected_summary": {
+      "selected_count": 105,
+      "strict_match_count": 16,
+      "webdav_ok_count": 13,
+      "classifications": [
+        {
+          "key": "plex_title_not_found_or_not_indexed",
+          "count": 89
+        },
+        {
+          "key": "strict_expected_part_match",
+          "count": 16
+        }
+      ]
+    },
+    "control_summary": {
+      "selected_count": 8,
+      "strict_match_count": 1,
+      "classifications": [
+        {
+          "key": "plex_title_not_found_or_not_indexed",
+          "count": 7
+        },
+        {
+          "key": "strict_expected_part_match",
+          "count": 1
+        }
+      ]
+    }
+  }
 }
