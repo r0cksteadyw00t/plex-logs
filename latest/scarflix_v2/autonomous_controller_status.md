@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: FAIL_ENGINEERING
-Milestone state: BLOCKED_DECISION
+Status: PASS
+Milestone state: CANDIDATE_SOURCE_MODEL_PASS
 Milestone: PlatformGate and candidate-source retry/quarantine model complete
-Updated UTC: 2026-06-10T16:29:36Z
-Current step: controller_exception
+Updated UTC: 2026-06-10T16:30:55Z
+Current step: candidate_source_model_pass
 Jason action required: False
 
 ## PlatformGate
@@ -20,15 +20,14 @@ Jason action required: False
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: FAIL
+- rclone_mount_status: PASS
 - s_media_ready: True
 - s_catalog_ready: True
 - mount_selfheal_attempted: False
 
 ## Action
 - action_taken: PlatformGate PASS; candidate-source retry/quarantine model verified
-- next_check_utc: 2026-06-10T16:36:09Z
+- next_check_utc: 2026-06-10T16:36:42Z
 
 ## Blockers
-- Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
-Parameter name: chars"
+- none
