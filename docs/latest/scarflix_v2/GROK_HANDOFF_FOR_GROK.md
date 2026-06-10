@@ -1,59 +1,51 @@
-# FORENSIC HANDOFF FOR GROK
+### FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Aggressive Autonomy Push Phase 3 completed. The Orchestrator service-context path visibility blocker for materialized QA incident diagnostics has been diagnosed and a safe resolver workaround is active.
+End-to-end path visibility decision for Materialized QA incident `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
 
 **Current State Summary:**  
-- Orchestrator: `PASS`, degraded mode `false`.
-- Sentinel: `PASS` / `LOW` at latest checked state.
-- `PAUSE_PUBLICATION`: active.
-- ScarFLIX expansion/publication/cleanup: not started.
-- Materialized QA: `REVIEW`, checked `229`, passed `119`, failed `110`.
-- Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
-- Latest service-context probe job: `job_phase3_final_service_probe_mq7m1u4u_f070f6`, status `done`, attempts `1`.
-- Probe execution user: `MEDIASERVER$`.
-- Paths probed: `20`.
-- Layer result: `service_context_symlink_target_mount_inaccessible = 20`.
-- Resolver decision: `HOLD_SECOND_ITERATION_SERVICE_CONTEXT_PATH_ACCESS`.
+- Phase: Phase 5 controlled prep; publication held.
+- Orchestrator: PASS after restart; degraded mode false.
+- Sentinel: PASS/LOW at latest checked public status.
+- Publication safety: `PAUSE_PUBLICATION=true`; no expansion or publication started.
+- Materialized QA: REVIEW, checked 229, passed 119, failed 110, timeout failures 106.
+- Incident status: ACTIVE_DIAGNOSE.
+- Chosen path strategy: Strategy A - metadata-first Orchestrator service context plus tightly bounded user-context probe for high-value samples only.
 
 **What I have already tried:**  
-- Confirmed interactively that `D:\StremioCatalog` entries exist.
-- Confirmed materialized `ScarFLIX_part-*` directories are directory symlinks.
-- Confirmed symlink targets point to `S:\media\ScarFLIX_part-*`.
-- Confirmed `S:\media\...\stream.mkv` is visible in the interactive/user context.
-- Confirmed `ScarFLIX_v2_RcloneMountKeepalive` runs as user `jason`.
-- Confirmed the Orchestrator service runs in a service context (`LocalSystem` / Node reports `MEDIASERVER$`).
-- Added `D:\PlexTools\Foundry\lib\JasonOS_Prime_PathResolver.js`.
-- Patched `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaIncidentProbe.js` to:
-  - resolve symlinks via `lstat` / `readlink`;
-  - use `D:\PlexTools\state\scarflix_v2\webdav_map.json` as metadata fallback;
-  - disable target following by default;
-  - disable WebDAV media read-head by default;
-  - record execution context and resolver status counts.
-- Registered on-demand user-context metadata fallback task `JasonOS_Prime_UserContextMaterializedQaIncidentProbe` under user `jason` with no recurring trigger.
-- Queued and completed final service-context validation through the Orchestrator.
-- Refreshed AutonomousIncidentManager and the Grok cycle report.
+- Confirmed service-context root cause: `D:\StremioCatalog` materialized `ScarFLIX_part-*` entries are directory symlinks into `S:\media\ScarFLIX_part-*`.
+- Confirmed the Orchestrator service context reports as `MEDIASERVER$` / service namespace, while the rclone `S:` mount is maintained in user `jason` context.
+- Added metadata-first path resolver and hardened the service-context incident probe so it uses `lstat`, `readlink`, and `webdav_map.json` before target following.
+- Ran service-context validation: 20/20 paths classified as `service_context_symlink_target_mount_inaccessible`, not as bad catalogue rows.
+- Added `D:\PlexTools\Foundry\workers\JasonOS_Prime_UserContextMaterializedQaTinyProbe.js`.
+- Added hidden launcher `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_UserContextMaterializedQaTinyProbe.vbs`.
+- Registered on-demand task `JasonOS_Prime_UserContextMaterializedQaTinyProbe` under user `jason` with no recurring trigger.
+- Ran one tiny user-context diagnostic sample only: 8 paths, max concurrency 1, no read-head, no cleanup, no publication, no source mutation.
 
 **My hypothesis on root cause:**  
-The `D:` catalogue paths are valid, but they are symlinks into the `S:` rclone mount. `S:` is maintained in the logged-in `jason` user session, not the Orchestrator service namespace. Service-context diagnostics therefore see valid `D:` symlink metadata but cannot safely follow the target path to `S:\media\...`. The previous generic `ENOENT` result was a resolver/classification defect, not evidence that the materialized rows themselves are missing or bad.
+The original Materialized QA timeout cluster is no longer plausibly explained by missing files for the sampled rows. The user-context probe successfully followed the materialized symlinks and statted `stream.mkv` for all 8 sampled hybrid movie live timeout rows. Remaining QA REVIEW is more likely Plex decision/indexing/load timing, or a Plex decision-layer timeout pattern, than missing materialized files.
+
+**Diagnostic Results:**  
+- Tiny probe status: `PASS_TINY_USER_CONTEXT_PROBE_COMPLETE`.
+- Sampled paths: 8.
+- Successful target stats: 8.
+- Timeout count: 0.
+- Layer count: `user_context_target_stat_ok=8`.
+- Sample titles: Nine 1/2 Weeks, Annabelle, Anna, Annihilation, Armageddon, Battleship, Crank, Creed.
 
 **Proposed next steps:**  
 1. Keep `PAUSE_PUBLICATION` active.
-2. Do not run a second content probe yet.
-3. Decide the long-term path strategy:
-   - keep Orchestrator service as-is and run only metadata diagnostics from service context, with tiny explicit user-context samples when needed; or
-   - move the Orchestrator/service probe execution to a context that shares `S:` visibility; or
-   - expose a service-visible canonical path for the rclone mount.
-4. After the path strategy is selected, run one tiny bounded target-follow sample before any materialized QA cleanup or retest.
-5. Keep broad ScarFLIX expansion blocked until materialized QA recovers.
+2. Keep Strategy A as the long-term path model for this incident.
+3. Do not attempt service/system rclone mount changes unless a separate approved infrastructure change is opened.
+4. Run only a tiny bounded Plex decision/indexing timing diagnostic against the already-confirmed sample, or wait for Grok to recommend a narrower timing probe.
+5. Do not resume controlled expansion until Materialized QA returns to PASS or a reviewed mitigation plan is accepted.
 
 **Data/files to review:**  
 - `D:\PlexTools\Foundry\lib\JasonOS_Prime_PathResolver.js`
 - `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaIncidentProbe.js`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_path_resolution_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_path_resolution_status.md`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_materialized_qa_incident_probe.json`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_UserContextMaterializedQaTinyProbe.js`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_materialized_qa_user_context_probe.json`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_autonomous_incidents.json`
-- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT.json`
+- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT_DIFF.json`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\PROJECT_PLAN.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
