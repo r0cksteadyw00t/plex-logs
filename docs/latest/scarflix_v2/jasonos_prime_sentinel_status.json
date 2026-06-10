@@ -1,27 +1,27 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "REVIEW",
-  "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-10T13:35:01Z",
+  "status": "ALERT",
+  "alert_level": "HIGH",
+  "updated_utc": "2026-06-10T13:40:01Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": false,
-  "repeat_count": 2,
+  "codex_action_required": true,
+  "repeat_count": 4,
   "signals": {
     "controller_status": "FAIL_ENGINEERING",
     "controller_milestone": "BLOCKED_DECISION",
-    "controller_age_minutes": 7,
+    "controller_age_minutes": 12,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 7,
+    "watchdog_age_minutes": 12,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 5,
     "mirror_status": "PASS",
     "mirror_age_minutes": 3,
     "checkpoint_status": "PASS",
     "checkpoint_step": "platform_gate_pass",
-    "checkpoint_age_minutes": 3616,
-    "durable_platform_gate_age_minutes": 3616,
+    "checkpoint_age_minutes": 3621,
+    "durable_platform_gate_age_minutes": 3621,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
@@ -29,16 +29,18 @@
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "watchdog_stale_or_failed",
       "result": "PASS",
-      "note": "enable pid=14256; run pid=17888"
+      "note": "enable pid=9608; run pid=33648"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "controller_stale_or_blocked",
       "result": "PASS",
-      "note": "enable pid=15200; run pid=32884"
+      "note": "enable pid=1128; run pid=15128"
     }
   ],
-  "notes": [],
+  "notes": [
+    "Same unresolved sentinel signature repeated for three cycles."
+  ],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
