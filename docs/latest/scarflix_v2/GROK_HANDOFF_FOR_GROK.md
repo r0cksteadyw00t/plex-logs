@@ -95,6 +95,46 @@ The sample files exist in user context and WebDAV/Plex endpoints are responsive,
 
 ---
 
+### UPDATE - 2026-06-10T07:53:14Z - Plex Metadata Reconciliation Plan Ready For Review
+
+**Trigger Reason:**  
+Planning gate for the active Materialized QA incident. No execution has been approved.
+
+**Current State Summary:**  
+- Orchestrator health: PASS.
+- Sentinel: PASS/LOW.
+- Publication: `PAUSE_PUBLICATION=true`.
+- Materialized QA: REVIEW 119/229, failed 110.
+- Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
+- Latest comparison: expected `ScarFLIX_part-*` matches `0/8`; same-section Plex rows `0/8`; strict title/year other-section matches `0/8`; not-found/not-indexed `8/8`.
+- New plan status: `REVIEW_READY_FOR_GROK_PEER_REVIEW`.
+- No publication, expansion, cleanup, deletion, path rewrite, source mutation, source quarantine, broad QA retry, Plex scan, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
+
+**What I have already tried:**  
+- Created plan artifact `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_reconciliation_plan_8path_sample.md`.
+- Created structured plan artifact `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_reconciliation_plan_8path_sample.json`.
+- Locked the plan to the same 8 Movies section 5 / `hybrid_movies_live` sample.
+- Defined read-only confirmation checks, a path-scoped section 5 refresh as the preferred future mitigation, one section 5 refresh as fallback only, and same-sample verification.
+- Explicitly blocked publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops, and system rclone/service-account changes.
+
+**My hypothesis on root cause:**  
+Plex metadata/indexing/cache visibility remains the leading actionable cause. Files are present from user context, WebDAV/Plex endpoints respond, but Plex does not surface strict metadata rows or expected `ScarFLIX_part-*` paths for the locked sample.
+
+**Proposed next steps:**  
+1. Grok should review the reconciliation plan.
+2. If approved, execute only the minimum approved action, preferably one path-scoped section 5 refresh.
+3. Rerun only the same-sample metadata comparison after the settle window.
+4. Escalate before any broader mitigation, cleanup, source quarantine, path rewrite, broad QA retry, or publication.
+
+**Data/files to review:**  
+- `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_reconciliation_plan_8path_sample.md`
+- `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_reconciliation_plan_8path_sample.json`
+- `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_vs_webdav_map_comparison_results.json`
+- `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_vs_webdav_map_comparison_results.md`
+- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_incident_hypothesis_ledger.json`
+
+---
+
 ### UPDATE - 2026-06-10T07:02:00Z - Corrected Materialized QA Timing Evidence
 
 **Trigger Reason:**  
