@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v37",
-      "created_at": "2026-06-10T21:12:52Z",
-      "expires_at": "2026-06-11T21:12:52Z",
+      "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v38",
+      "created_at": "2026-06-10T21:28:23Z",
+      "expires_at": "2026-06-11T21:28:23Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,15 +13,14 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 60
+        "max_retries": 0,
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok review complete. Maintain stabilization hold. PAUSE_PUBLICATION remains active. Re-attempt stabilization gate only after local command launch health recovers. No reconciliation, QA expansion, publishing, or legacy resolver actions permitted.",
-            "source_instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v37"
+            "summary": "Current state: stabilization hold active due to process launch degradation. Reconciliation plan remains under Grok peer review. No publication, expansion, or section-level actions permitted. Focus on local command health recovery only."
           }
         }
       ],
@@ -29,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T21:12:52Z",
+  "updated_utc": "2026-06-10T21:28:23Z",
   "source": "grok_api"
 }
