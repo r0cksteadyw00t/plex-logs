@@ -1,75 +1,63 @@
 # FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Aggressive Autonomy Push Phase 1 completed. Control-plane launch health, legacy task retirement, incident handling, capability contracts, and differential Grok reporting were hardened with reversible failsafes. This handoff documents the current state for Grok review and follow-up planning.
+Aggressive Autonomy Push Phase 2 completed. The Autonomous Incident Manager executed the first bounded diagnostic playbook iteration for `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610` and found a service-context path visibility issue that blocks useful second-pass content probing.
 
 **Current State Summary:**  
 - Orchestrator service: `JasonOS_Prime_Orchestrator`, running.
-- Orchestrator PID after restart: `8016`.
-- `/healthz`: HTTP `200`, status `PASS`.
-- SQLite: `PASS_node:sqlite`.
-- Sentinel: `PASS` / `LOW`.
-- `cmd.exe /c echo alive`: latest post-restart bounded probe `5/5` successful, average `46.8ms`, timeout count `0`.
-- Degraded mode: not active.
-- Launch failsafe thresholds: average launch latency `800ms`; timeout rate `15%`; budget `8` launches/minute.
+- `/healthz`: `PASS` after restart and post-probe telemetry correction.
+- Sentinel: `PASS` / `LOW` at latest checked state.
 - `PAUSE_PUBLICATION`: active.
 - ScarFLIX expansion/publishing/cleanup: not started.
+- Legacy/direct resolver expansion: disabled.
 - Materialized QA: `REVIEW`, checked `229`, passed `119`, failed `110`.
 - Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
-- Incident scope: timeout failures `106`, section `5` failures `106`, `hybrid_movies_live` failures `105`.
-- Grok outbound reporting: operational; differential report artifacts are now produced.
-- Grok inbound instructions: operational for Safe, approved, low/medium-risk, non-expired, allowlisted instructions.
-- Legacy/direct resolver expansion: disabled.
+- Incident probe job: `job_incident_probe_phase2_1781066308617`, status `done`, attempts `1`.
+- Probe scope: Movies section `5` / `hybrid_movies_live` timeout rows, plus small TV section `6` and non-live movie controls.
+- Probe constraints: max concurrency `1`, selected paths `20`, read-only, no publication, no cleanup, no source mutation.
+- Probe result: all `20/20` sampled primary/control paths returned `host_or_visibility_path_inaccessible` from the Orchestrator service context.
+- Interactive cross-check: representative paths that failed from the service context are visible from the interactive shell.
+- Orchestrator service account: `LocalSystem`, which is the suspected boundary causing `D:\StremioCatalog` visibility mismatch.
+- Current incident playbook decision: `HOLD_SECOND_ITERATION_SERVICE_CONTEXT_PATH_ACCESS`.
 
 **What I have already tried:**  
-- Backed up edited files under `D:\PlexTools\backups\codex_autonomy_push_20260610_141447`.
-- Patched `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`.
-  - Added launch telemetry, launch budget, rolling launch health, degraded-mode file, dynamic worker limits, and non-critical launch holds.
-  - Added tracked-child cleanup for Orchestrator-spawned detached children older than five minutes.
-  - Added `launch_health_monitor`, `retired_task_compliance_audit`, and `autonomous_incident_manager` recurring jobs.
-  - Added `AutonomousIncidentManager` for the materialized QA timeout cluster.
-  - Added capability contracts to normalized Grok/Codex instruction actions.
-  - Added Safe-action failure streak tracking and degraded-mode escalation if more than three Safe actions fail consecutively.
-  - Added Grok report section hashing and differential report generation.
-- Patched `D:\PlexTools\Foundry\workers\JasonOS_Prime_WorkerMesh.js`.
-  - It now respects `D:\PlexTools\state\jasonos_prime\legacy_retirement_manifest.json`.
-  - If retired, it writes `RETIRED_ORCHESTRATOR_OWNED` and exits without scheduled-task mutation.
-- Patched `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_QuietTasks_InstallOrUpdate.ps1`.
-  - It now respects the same legacy retirement manifest and exits without scheduled-task mutation when retired.
-- Patched `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokReportDeliveryBridge.js`.
-  - It now prefers `ORCHESTRATOR_GROK_CYCLE_REPORT_DIFF.json/.md` when present, with full report fallback.
-- Ran syntax/parse checks.
-  - JS syntax checks passed for Orchestrator, WorkerMesh, and Grok report delivery bridge.
-  - PowerShell parser check passed for QuietTasks.
-- Restarted the Orchestrator service and verified health.
-- Queued a status-only Orchestrator report generation test job.
-  - Job: `job_codex_autonomy_push_diff_1781065573069`.
-  - Result: `done`, attempts `1`.
-  - Generated first differential Grok report.
+- Created a bounded read-only worker: `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaIncidentProbe.js`.
+- Patched `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js` with a first-class job type: `run_materialized_qa_incident_probe_cycle`.
+- Wired the probe into `autonomousIncidentManager()` with strict gates:
+  - `PAUSE_PUBLICATION` required.
+  - Sentinel `ALERT/HIGH` blocks the job.
+  - degraded launch health blocks the job.
+  - no second iteration if all sampled paths are host-inaccessible.
+- Ran the first bounded probe iteration through the Orchestrator queue.
+- Confirmed no publishing, expansion, deletion, cleanup, broad QA, or source mutation occurred.
+- Corrected launch telemetry after a false degraded-mode signal:
+  - Old telemetry treated full worker runtime as spawn latency.
+  - New telemetry separates `launch_latency_ms` from `process_runtime_ms`.
+  - False degraded mode was cleared only after bounded external launch checks were healthy.
+- Updated the incident probe artifact interpretation to `SERVICE_CONTEXT_PATH_ACCESS_ISSUE`.
+- Regenerated the Grok differential cycle report so the incident finding is included.
 
 **My hypothesis on root cause:**  
-The recurring process-launch saturation is primarily a control-plane architecture issue rather than a ScarFLIX playback issue. The highest-risk pattern has been too many short-lived Node/PowerShell/VBS workers plus legacy task creators trying to re-enable or run recurring work outside the Orchestrator. The correct fix is not repeated manual task disabling; it is Orchestrator-owned scheduling, launch budgets, degraded-mode throttling, and tombstoning legacy task mutation paths.
+The current bounded probe did not reproduce a WebDAV/materializer/Plex timing failure because the Orchestrator service context could not see any sampled `D:\StremioCatalog` paths, including known passing non-live controls. Since the interactive shell can see representative paths, this is likely a service-account/path-namespace issue: the NSSM/Orchestrator process running as `LocalSystem` does not have the same filesystem view or mounted path visibility as the user context used by Plex/materialized tooling.
 
-The current materialized QA regression remains separate: it is a timeout-dominant Plex decision/indexing/load cluster in Movies section `5` and `hybrid_movies_live`, not evidence that the materialized/WebDAV architecture has failed. The incident manager now tracks this as a bounded diagnostic incident with publication, cleanup, deletion, and expansion blocked.
+This means a second content probe would not produce useful ScarFLIX QA evidence until the Orchestrator probe either runs in the same account/path namespace as the materialized workers or uses a service-visible canonical path.
 
 **Proposed next steps:**  
 1. Keep `PAUSE_PUBLICATION` active.
-2. Let the Orchestrator run launch-health and retired-task compliance monitoring for several cycles.
-3. Review `jasonos_prime_retired_task_compliance.json` for any legacy task reappearance.
-4. Use the incident manager output to plan a bounded, detached, read-only retest strategy for the materialized QA timeout cluster.
-5. Do not perform broad ScarFLIX expansion until materialized QA returns to PASS and concurrent QA remains representative.
-6. Next ambitious safe focus: move one remaining high-churn status/report worker fully in-process under the Orchestrator to reduce launch pressure further.
+2. Do not run a second materialized content probe yet.
+3. Diagnose and fix Orchestrator service-context access to `D:\StremioCatalog`:
+   - preferred: run the diagnostic worker through the same user context/path namespace as the existing materialized/Plex workers, or
+   - alternative: add a service-visible canonical path mapping for `D:\StremioCatalog`.
+4. After service-context path visibility is fixed, run one more bounded probe with the same constraints before any QA cleanup or retest.
+5. Keep broad ScarFLIX expansion blocked until materialized QA recovers and representative concurrent QA remains healthy.
 
 **Data/files to review:**  
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_MaterializedQaIncidentProbe.js`
 - `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
-- `D:\PlexTools\Foundry\workers\JasonOS_Prime_WorkerMesh.js`
-- `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_QuietTasks_InstallOrUpdate.ps1`
-- `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokReportDeliveryBridge.js`
-- `D:\PlexTools\state\jasonos_prime\legacy_retirement_manifest.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_launch_telemetry.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_retired_task_compliance.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_materialized_qa_incident_probe.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_materialized_qa_incident_probe.md`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_autonomous_incidents.json`
 - `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT_DIFF.json`
-- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_launch_telemetry.json`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\PROJECT_PLAN.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
