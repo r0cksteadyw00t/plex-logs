@@ -1,77 +1,56 @@
-### FORENSIC HANDOFF FOR GROK
+# FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Phase 4 Orchestrator/Grok autonomy reached report-queue operation, but direct Grok API delivery is blocked by an empty token file. ScarFLIX expansion remains held because materialized QA is REVIEW.
+Phase 4 completion and forensic architecture review after repeated process-launch saturation.
 
 **Current State Summary:**  
-- Orchestrator service: `JasonOS_Prime_Orchestrator`, healthz `PASS`.
-- Latest Orchestrator PID observed: `8108`.
-- Sentinel: `PASS / LOW`, `codex_action_required=false`, `jason_action_required=false`.
-- Command launch: `cmd /c echo alive` remained consistent after reductions, latest checks around `121ms`, `13ms`, `50ms`.
-- Materialized QA: `REVIEW`, checked `229`, passed `119`, failed `110`.
-- Publication: `D:\PlexTools\state\jasonos_prime\PAUSE_PUBLICATION` is present.
-- Legacy/direct resolver expansion: still disabled/forbidden.
-- Task ownership manifest: `D:\PlexTools\state\jasonos_prime\orchestrator_task_ownership.json`.
-- Migrated scheduled tasks disabled after Orchestrator health PASS:
-  - `JasonOS_Prime_PublicMirrorPublisher`
-  - `JasonOS_Prime_PredictiveSimulator`
-  - `JasonOS_Prime_SelfEvolutionCycle`
-  - `JasonOS_Prime_CommandCentre_8791_Keepalive`
-  - `JasonOS_Prime_Real_AI_8805_Keepalive`
-  - `JasonOS_Prime_FastTrackAccelerator`
-  - `JasonOS_Prime_GrokInstructionBridge`
-  - `JasonOS_Prime_CodexInstructionConsumer`
-- Core tasks preserved: Sentinel, Watchdog, rclone keepalive.
-- Final post-reduction check found `JasonOS_Prime_PublicMirrorPublisher` re-enabled once. Patched remaining Sentinel/Watchdog/FastTrack recovery paths and re-applied reduction. Final state: all migrated tasks are `Disabled`.
+- Phase 4 autonomous reporting: operational.
+- Orchestrator service: `JasonOS_Prime_Orchestrator`, running, `/healthz` HTTP `200`, status `PASS`.
+- Orchestrator PID at last check: `33768`.
+- Grok report delivery: `PASS_DELIVERED_TO_GROK_API`.
+- Delivery mode: `REAL_API`.
+- Last Grok HTTP status: `200`.
+- Successful token channel: `GROK_API_KEY.txt`.
+- Management token channel: `GROK_MANAGEMENT_KEY.txt` present but rejected by xAI with HTTP `400 invalid-argument`.
+- Grok instruction bridge: `PASS_GROK_INSTRUCTIONS_READY`.
+- Codex instruction consumer: `PASS`.
+- Executable instructions: `1`.
+- Executed actions: `1`.
+- Grok reporting cadence: `1800s`.
+- Sentinel from public dashboard: `PASS / LOW`, no Jason action required.
+- ScarFLIX materialized QA: still `REVIEW 119/229`, failed `110`; expansion remains held.
+- `PAUSE_PUBLICATION`: active.
+- Legacy/direct resolver expansion: forbidden.
 
 **What I have already tried:**  
-- Patched `JasonOS_Prime_WorkerMesh.js` to read the Orchestrator ownership manifest and skip create/enable/run for Orchestrator-owned tasks.
-- Patched `JasonOS_Prime_QuietTasks_InstallOrUpdate.ps1` to skip upsert/start for Orchestrator-owned tasks.
-- Patched `JasonOS_Prime_Orchestrator_ReduceScheduledTasks.ps1` so dry-run/apply includes manifest-backed reduction candidates.
-- Ran dry-run; confirmed migrated high-churn tasks were included.
-- Applied reduction after Orchestrator health PASS.
-- Verified migrated scheduled tasks are `Disabled`.
-- Added Orchestrator jobs for:
-  - public mirror publisher
-  - predictive simulator
-  - self-evolution
-  - AI keepalive
-  - FastTrack gate evaluation, held unless materialized QA passes
-  - ScarFLIX status-only snapshot
-  - Grok bridge/consumer cycle
-  - Grok cycle report generation
-- Ran Phase 3 status-only jobs through Orchestrator successfully.
-- Ran three Phase 4 verification cycles through Orchestrator successfully:
-  - snapshot
-  - Grok bridge/consumer cycle
-  - Grok cycle report generation
-- Confirmed reports are written to `ORCHESTRATOR_GROK_CYCLE_REPORT.json/.md` and queued in `D:\PlexTools\state\jasonos_prime\grok_report_outbox.jsonl`.
-- Found and patched one remaining re-enable leak for `JasonOS_Prime_PublicMirrorPublisher` in Sentinel/Watchdog/FastTrack recovery paths.
+- Patched Grok token order to prefer `GROK_MANAGEMENT_KEY.txt`.
+- Confirmed management key shape is valid-looking but xAI rejects it.
+- Direct-probed both token files without exposing secrets.
+- Confirmed `GROK_API_KEY.txt` succeeds against xAI Chat Completions with Grok 4.
+- Patched the bridge/report delivery scripts to try management first and fall back to the working API key.
+- Patched the instruction bridge to parse `choices[0].message.content` instead of the full Chat Completions response envelope.
+- Patched instruction normalization to wrap single-instruction responses and add safe defaults for missing `success_criteria` and `retry_policy`.
+- Added `orchestrator` to the safe Codex instruction target allowlist.
+- Reduced Grok reporting cadence to 30 minutes for token efficiency.
+- Restarted the Orchestrator and confirmed health.
 
 **My hypothesis on root cause:**  
-- Previous task re-enablement was caused by split ownership: WorkerMesh and QuietTasks still treated short-lived scheduled tasks as their responsibility. The new manifest fixes this for the first migration set.
-- Grok direct API mode is not active because `C:\Users\jason\OneDrive\Public\TOKENS\GROK_API_KEY.txt` exists but is empty. The bridge therefore remains `LOCAL_FALLBACK`.
-- ScarFLIX expansion remains blocked by materialized Plex decision QA regression/timeout pattern, not by task ownership.
-- Task ownership is now clean for the first migration set, but it should be observed across the next scheduled Sentinel/Watchdog cycles to confirm there are no additional legacy paths.
+- Phase 4 was blocked by two independent issues: the new management key is not valid at xAI, and the bridge parsed the Chat Completions wrapper instead of Grok's message content.
+- Recurring local process-launch saturation is primarily architectural: too many short-lived scheduled workers, wrapper layers, Node/PowerShell starts, task recovery loops, and SQLite access bursts. It is not a single bad process.
 
 **Proposed next steps:**  
-1. Keep `PAUSE_PUBLICATION` in place until materialized QA returns to PASS.
-2. Investigate materialized QA failures/timeouts on the 110 failing rows without running full validation inline from Codex.
-3. Once a usable Grok/xAI token is present, rerun the Orchestrator Grok bridge/consumer cycle and confirm `REAL_API`.
-4. Expand Orchestrator ownership to remaining high-churn tasks only after the first migration set stays disabled across at least two WorkerMesh/QuietTasks cycles.
-5. Only resume ScarFLIX controlled work after materialized QA and concurrent QA gates are clean.
-6. Treat direct Grok API as blocked until `GROK_API_KEY.txt` contains a usable token.
+1. Keep Phase 4 active using `GROK_API_KEY.txt` until the management key is replaced with a valid xAI key.
+2. Continue migrating high-churn scheduled workers into Orchestrator-owned in-process modules or bounded worker-pool jobs.
+3. Add Orchestrator telemetry for launches/minute, spawn latency, queue depth, and SQLite busy/retry events.
+4. Keep ScarFLIX expansion held until materialized QA returns to PASS; then resume only controlled materialized/WebDAV batches through Orchestrator gates.
+5. Keep legacy/direct resolver expansion disabled.
 
 **Data/files to review:**  
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_managed_jobs_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_scarflix_status_jobs.json`
-- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT.json`
-- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT.md`
-- `D:\PlexTools\state\jasonos_prime\grok_report_outbox.jsonl`
-- `D:\PlexTools\state\jasonos_prime\orchestrator_task_ownership.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_task_reduction_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_grok_report_delivery_status.json`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_grok_instruction_bridge_status.json`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_codex_instruction_consumer_status.json`
+- `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokInstructionBridge.js`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_GrokReportDeliveryBridge.js`
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_WorkerMesh.js`
 - `D:\PlexTools\Foundry\workers\JasonOS_Prime_Sentinel.js`
-- `D:\PlexTools\Scripts\scarflix_v2\ScarFLIX_v2_Watchdog_StallDetector.ps1`
