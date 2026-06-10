@@ -1,55 +1,60 @@
 # FORENSIC HANDOFF FOR GROK
 
 **Trigger Reason:**  
-Phase 5 controlled preparation: read-only Materialized QA failure triage completed under Orchestrator ownership. No cleanup, publication, expansion, source movement, or inline validation was executed.
+Phase 5 diagnostic update: timeout-pattern analysis of the current Materialized QA regression completed. No cleanup, publication, expansion, source movement, or inline validation was executed.
 
 **Current State Summary:**  
 - Phase 4 direct Orchestrator-to-Grok reporting: complete and operational.
 - Grok model-call credential: `GROK_API_KEY.txt` only.
-- Grok management key: `GROK_MANAGEMENT_KEY.txt` remains credential-awareness/account-management metadata only; not attempted for model calls.
 - Orchestrator service: `JasonOS_Prime_Orchestrator`, running.
 - Recent Orchestrator health: `/healthz` HTTP `200`, status `PASS`.
-- Read-only triage job: `triage_materialized_qa_failures`, status `PASS_READ_ONLY`.
-- Triage output:
-  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_failure_triage.json`
-  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_failure_triage.md`
-- Plan-only recovery output:
-  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_recovery_plan.json`
-  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_recovery_plan.md`
+- Sentinel: `PASS`, alert level `LOW`, updated `2026-06-10T03:25:01Z`.
+- Controlled materialized expansion hold: `ACTIVE`.
+- Legacy/direct resolver expansion: forbidden.
 - Materialized QA: `REVIEW`, checked `229`, passed `119`, failed `110`.
-- Failure reasons: timeout `106`, HTTP `400` `3`, socket hang-up `1`.
+- Failure reasons from triage: timeout `106`, HTTP `400` `3`, socket hang-up `1`.
 - Failed sections: movies section `5` failed `106`, TV section `6` failed `4`.
 - Failed path categories: `hybrid_movies_live` `105`, `hybrid_shows` `4`, `hybrid_movies_root_seed` `1`.
-- `PAUSE_PUBLICATION`: active.
-- ScarFLIX expansion: not started.
-- Cleanup/source changes: not started.
-- Legacy/direct resolver expansion: forbidden.
+- Timeout diagnostic outputs:
+  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.json`
+  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.md`
 
 **What I have already tried:**  
-- Added a read-only Orchestrator job type `triage_materialized_qa_failures`.
-- The job reads only the existing `materialized_canary_decision_qa_status.json`.
-- The job groups failed rows by reason, HTTP status, Plex section, path category, and repeated target hash.
-- The job writes triage JSON/MD plus a plan-only recovery document.
-- Updated `ORCHESTRATOR_GROK_CYCLE_REPORT.json/.md` generation so the next autonomous Grok report includes the triage summary.
-- Updated `PROJECT_PLAN.md` with Phase 5 prep findings.
+- Ran read-only analysis only against existing status/log data.
+- Read current materialized QA JSON, triage outputs, playback QA controller status, concurrent QA status, Sentinel status, publication hold status, and the materialized decision QA log.
+- Did not run PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, publisher, or expansion.
+- Did not move, hide, quarantine, edit, or publish any ScarFLIX source/content rows.
+- Wrote a diagnostic JSON/MD artifact for Grok/public review.
+- Updated `PROJECT_PLAN.md` with the current REVIEW state and recommended next safe action.
 
 **My hypothesis on root cause:**  
-The current Materialized QA regression is timeout-dominant. `106/110` failures are timeouts, concentrated in movie section `5` and live materialized movie paths. This looks more like timing/load/indexing sensitivity or a batch-scale Plex decision bottleneck than 110 independently bad titles. The small HTTP `400` subset is a stronger source/row-specific cleanup candidate.
+The `hybrid_movies_live` timeout concentration is most likely systemic transient/orchestration/Plex decision pressure, not 110 independently bad titles.
+
+Evidence:
+
+- The QA log has two materialized decision QA start lines inside the same run window: `2026-06-09T11:55:04Z` and `2026-06-09T11:55:05Z`.
+- The log has `458` result lines for `229` unique `ScarFLIX_part-*` hashes; every part appeared twice.
+- `55` parts had mixed PASS/FAIL outcomes. Examples include rows that passed Plex decision once and then timed out minutes later, or timed out first and passed later.
+- Timeout failures increased during the middle/later ordered portion of the run: Q1 fail rate `0.322`, Q2 `0.400`, Q3 `0.643`, Q4 `0.549`.
+- Later concurrent QA showed range/WebDAV reads mostly working (`4/5`) while Plex decision checks timed out (`0/5`) at about 90 seconds, pointing at Plex decision/indexing pressure rather than broad media-path failure.
+- Playback QA controller triggered Plex scans for sections `5` and `6`, so indexing lag remains plausible.
 
 **Proposed next steps:**  
 1. Keep `PAUSE_PUBLICATION` active and keep all expansion held.
-2. Generate a dry-run cleanup candidate list from the existing failed rows; do not move/hide/quarantine anything yet.
-3. Split candidates into timeout-dominant rows vs HTTP `400`/socket rows. Treat HTTP `400` rows as the lowest-risk cleanup review set.
-4. Preserve title retryability for every candidate.
-5. After any approved source-only cleanup, rerun targeted materialized QA via detached/local automation, not inline.
-6. Resume controlled materialized/WebDAV batches only after targeted QA returns PASS and concurrent QA remains representative/pass.
+2. Do not quarantine the 110 timeout rows yet.
+3. Patch/configure Materialized Plex Decision QA orchestration so only one owner can run per target set.
+4. Add deterministic same-hash de-duplication: mixed PASS/FAIL outcomes should be treated as unstable/retest-needed, not immediate source quarantine.
+5. Replace one large 229-row retest with a detached small retest of 12-20 rows after a quiet Plex scan window.
+6. Include rows from mixed PASS/FAIL timeouts, HTTP `400` rows, late-run timeout rows, and 1-2 TV rows.
+7. Resume controlled materialized/WebDAV batches only after the small retest clears the timeout pattern and representative concurrent QA is healthy.
 
 **Data/files to review:**  
+- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.json`
+- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_timeout_pattern_diagnostic.md`
 - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_failure_triage.json`
 - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_failure_triage.md`
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_recovery_plan.json`
-- `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_recovery_plan.md`
 - `D:\PlexTools\public\latest\scarflix_v2\materialized_canary_decision_qa_status.json`
-- `D:\PlexTools\public\latest\scarflix_v2\ORCHESTRATOR_GROK_CYCLE_REPORT.json`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_managed_jobs_status.json`
-- `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
+- `D:\PlexTools\Logs\scarflix_v2_materialized_plex_decision_qa_node_20260609.log`
+- `D:\PlexTools\public\latest\scarflix_v2\concurrent_stream_qa_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_playback_qa_controller_status.json`
+- `D:\PlexTools\public\latest\scarflix_v2\CONTROLLED_MATERIALIZED_EXPANSION_HOLD.json`
