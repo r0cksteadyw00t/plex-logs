@@ -3,8 +3,8 @@
   "instructions": [
     {
       "instruction_id": "scarflix_qa_write_strategy_note_dedup_20260610",
-      "created_at": "2026-06-10T03:50:37Z",
-      "expires_at": "2026-06-11T03:50:37Z",
+      "created_at": "2026-06-10T04:06:23Z",
+      "expires_at": "2026-06-11T04:06:23Z",
       "target_component": "scarflix_qa",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,18 +14,18 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
-          "note": "Phase 0 stabilization: enforce single-owner materialized decision QA + same-hash de-duplication before any detached retest. Keep PAUSE_PUBLICATION and expansion hold ACTIVE. No legacy resolver work."
+          "note": "Phase 0: enforce single-owner materialized decision QA + same-hash de-duplication before any detached retest. Keep PAUSE_PUBLICATION and expansion hold ACTIVE. No legacy resolver work."
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T03:50:37Z",
+  "updated_utc": "2026-06-10T04:06:23Z",
   "source": "grok_api"
 }
