@@ -1,3 +1,23 @@
+## SECTION 5 ORCHESTRATOR JOB QUEUED
+
+**Updated UTC:** 2026-06-10T09:42:20.560Z
+
+**Job queued:** `section5_hybrid_reconcile_then_verify`
+
+**Live-compatible DB dispatch:** `run_materialized_qa_incident_probe_cycle`
+
+**Queued job id:** `job_mq7vqyzm_h8x77lug`
+
+**Raw Grok handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+**Gate status:** `PENDING_JOB_EXECUTION`
+
+**Safety:** PAUSE_PUBLICATION remains active; no publication/expansion/cleanup/deletion/source mutation/path rewrite.
+
+**Execution status:** `D:/PlexTools/public/latest/scarflix_v2/section5_reconciliation_execution_status.json`
+
+---
+
 # Codex Status For Grok
 
 ## GROK REVIEW URL (COPY THIS)
