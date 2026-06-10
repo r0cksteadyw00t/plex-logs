@@ -1,0 +1,1553 @@
+{
+  "component": "jasonos_prime_plex_metadata_vs_webdav_map_comparison",
+  "schema_version": "jasonos.plex_metadata_vs_webdav_map.v1",
+  "status": "PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE",
+  "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
+  "started_utc": "2026-06-10T08:47:05.387Z",
+  "updated_utc": "2026-06-10T08:47:09.222Z",
+  "read_only": true,
+  "detached_orchestrator_owned": true,
+  "no_publication_started": true,
+  "no_expansion_started": true,
+  "no_cleanup_performed": true,
+  "no_source_mutation_performed": true,
+  "no_path_rewrite_performed": true,
+  "constraints": {
+    "max_paths": 8,
+    "sample_count": 8,
+    "max_concurrency": 1,
+    "plex_timeout_ms": 6000,
+    "broad_retest_allowed": false,
+    "publication_allowed": false,
+    "cleanup_allowed": false,
+    "source_mutation_allowed": false,
+    "path_rewrite_allowed": false
+  },
+  "safety": {
+    "pause_publication": true,
+    "sentinel_status": "PASS",
+    "sentinel_alert": "LOW",
+    "launch_health": {
+      "updated_utc": "2026-06-10T08:46:53.808Z",
+      "window_minutes": 10,
+      "sample_count": 5,
+      "latency_sample_count": 5,
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 4826,
+      "timeout_count": 0,
+      "timeout_rate": 0,
+      "launches_last_minute": 0,
+      "budget_per_minute": 8,
+      "degraded_required": false,
+      "active_child_count": 0,
+      "tracked_child_count": 0
+    },
+    "qa_status": "REVIEW",
+    "qa_checked": 229,
+    "qa_passed": 119,
+    "qa_failed": 110
+  },
+  "summary": {
+    "probed": 8,
+    "expected_part_match_count": 0,
+    "same_section_path_mismatch_count": 0,
+    "same_section_row_without_part_count": 0,
+    "title_found_other_section_count": 0,
+    "title_not_found_or_not_indexed_count": 8,
+    "rows_with_part_files_count": 0,
+    "stale_http_path_count": 0,
+    "scarflix_live_other_part_count": 0,
+    "classification_counts": [
+      {
+        "key": "plex_title_not_found_or_not_indexed",
+        "count": 8
+      }
+    ],
+    "assessment": [
+      "Plex metadata/search did not expose any matching ScarFLIX_part-* path for the confirmed 8-path sample.",
+      "At least one sample title was not found by same-section title lookup or global hub search, supporting a Plex indexing/cache gap."
+    ]
+  },
+  "hypothesis_update": {
+    "H1_SERVICE_CONTEXT_PATH_VISIBILITY": "HIGH_RECONFIRMED",
+    "H2_RESOLVER_INDEXING_TIMING_LOAD": "MEDIUM_HIGH",
+    "H3_WEBDAV_RCLONE_LATENCY_UNDER_LOAD": "LOW_MEDIUM",
+    "H4_QA_HARNESS_TIMEOUT_THRESHOLD_MISMATCH": "LOW_MEDIUM",
+    "H5_PLEX_SECTION_CACHE_OR_METADATA_BEHAVIOR": "HIGH"
+  },
+  "recommended_next_action": "Plan a QA-only, reversible Plex metadata/path reconciliation diagnostic before any cleanup or retest. Do not publish or mutate paths.",
+  "results": [
+    {
+      "title": "9½ Weeks",
+      "folder_title": "Nine 1 2 Weeks (1986)",
+      "section_id": 5,
+      "target_hash": "ScarFLIX_part-2248c141861c0a2c",
+      "prior_reason": "timeout",
+      "expected_webdav_map_entry": {
+        "title": "Nine 1 2 Weeks (1986)",
+        "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv",
+        "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c",
+        "rclone_path": "S:\\media\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv",
+        "rclone_dir": "S:\\media\\ScarFLIX_part-2248c141861c0a2c",
+        "webdav_path": "/media/ScarFLIX_part-2248c141861c0a2c/stream.mkv",
+        "size": 2392878132,
+        "content_type": "application/octet-stream"
+      },
+      "plex_query_summary": [
+        {
+          "kind": "section_title",
+          "term": "9½ Weeks",
+          "endpoint": "/library/sections/5/all?type=1&title=9%C2%BD+Weeks",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 3,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1821,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 15,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 3,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "9½ Weeks",
+          "endpoint": "/hubs/search?query=9%C2%BD+Weeks",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 66,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 66,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Nine 1 2 Weeks",
+          "endpoint": "/library/sections/5/all?type=1&title=Nine+1+2+Weeks",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 3,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 3,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Nine 1 2 Weeks",
+          "endpoint": "/hubs/search?query=Nine+1+2+Weeks",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 182,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 182,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Nine 1 2 Weeks (1986)",
+          "endpoint": "/library/sections/5/all?type=1&title=Nine+1+2+Weeks+%281986%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 2,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Nine 1 2 Weeks (1986)",
+          "endpoint": "/hubs/search?query=Nine+1+2+Weeks+%281986%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 197,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 197,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        }
+      ],
+      "plex_rows_considered": [],
+      "comparison": {
+        "classification": "plex_title_not_found_or_not_indexed",
+        "plex_video_count": 0,
+        "same_section_row_count": 0,
+        "other_section_row_count": 0,
+        "rows_with_part_files": 0,
+        "matching_expected_part_rows": 0,
+        "stale_http_part_rows": 0,
+        "scarflix_live_other_part_rows": 0,
+        "observed_part_files": []
+      }
+    },
+    {
+      "title": "Annabelle",
+      "folder_title": "Annabelle (2014)",
+      "section_id": 5,
+      "target_hash": "ScarFLIX_part-c08b683f68e4e49e",
+      "prior_reason": "timeout",
+      "expected_webdav_map_entry": {
+        "title": "Annabelle (2014)",
+        "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
+        "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e",
+        "rclone_path": "S:\\media\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
+        "rclone_dir": "S:\\media\\ScarFLIX_part-c08b683f68e4e49e",
+        "webdav_path": "/media/ScarFLIX_part-c08b683f68e4e49e/stream.mkv",
+        "size": 2022794810,
+        "content_type": "application/octet-stream"
+      },
+      "plex_query_summary": [
+        {
+          "kind": "section_title",
+          "term": "Annabelle",
+          "endpoint": "/library/sections/5/all?type=1&title=Annabelle",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 2,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Annabelle",
+          "endpoint": "/hubs/search?query=Annabelle",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 61,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 2,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 61,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Annabelle (2014)",
+          "endpoint": "/library/sections/5/all?type=1&title=Annabelle+%282014%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 1,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Annabelle (2014)",
+          "endpoint": "/hubs/search?query=Annabelle+%282014%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 94,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 94,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        }
+      ],
+      "plex_rows_considered": [],
+      "comparison": {
+        "classification": "plex_title_not_found_or_not_indexed",
+        "plex_video_count": 0,
+        "same_section_row_count": 0,
+        "other_section_row_count": 0,
+        "rows_with_part_files": 0,
+        "matching_expected_part_rows": 0,
+        "stale_http_part_rows": 0,
+        "scarflix_live_other_part_rows": 0,
+        "observed_part_files": []
+      }
+    },
+    {
+      "title": "Anna",
+      "folder_title": "Anna (2019)",
+      "section_id": 5,
+      "target_hash": "ScarFLIX_part-81107989d2e30cfb",
+      "prior_reason": "timeout",
+      "expected_webdav_map_entry": {
+        "title": "Anna (2019)",
+        "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+        "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb",
+        "rclone_path": "S:\\media\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+        "rclone_dir": "S:\\media\\ScarFLIX_part-81107989d2e30cfb",
+        "webdav_path": "/media/ScarFLIX_part-81107989d2e30cfb/stream.mkv",
+        "size": 1721714811,
+        "content_type": "application/octet-stream"
+      },
+      "plex_query_summary": [
+        {
+          "kind": "section_title",
+          "term": "Anna",
+          "endpoint": "/library/sections/5/all?type=1&title=Anna",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 1,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Anna",
+          "endpoint": "/hubs/search?query=Anna",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 70,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 3,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 70,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Anna (2019)",
+          "endpoint": "/library/sections/5/all?type=1&title=Anna+%282019%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 2,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Anna (2019)",
+          "endpoint": "/hubs/search?query=Anna+%282019%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 118,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 118,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        }
+      ],
+      "plex_rows_considered": [],
+      "comparison": {
+        "classification": "plex_title_not_found_or_not_indexed",
+        "plex_video_count": 0,
+        "same_section_row_count": 0,
+        "other_section_row_count": 0,
+        "rows_with_part_files": 0,
+        "matching_expected_part_rows": 0,
+        "stale_http_part_rows": 0,
+        "scarflix_live_other_part_rows": 0,
+        "observed_part_files": []
+      }
+    },
+    {
+      "title": "Annihilation",
+      "folder_title": "Annihilation (2018)",
+      "section_id": 5,
+      "target_hash": "ScarFLIX_part-d8b22fb3f498688e",
+      "prior_reason": "timeout",
+      "expected_webdav_map_entry": {
+        "title": "Annihilation (2018)",
+        "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
+        "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e",
+        "rclone_path": "S:\\media\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
+        "rclone_dir": "S:\\media\\ScarFLIX_part-d8b22fb3f498688e",
+        "webdav_path": "/media/ScarFLIX_part-d8b22fb3f498688e/stream.mkv",
+        "size": 2329772465,
+        "content_type": "application/octet-stream"
+      },
+      "plex_query_summary": [
+        {
+          "kind": "section_title",
+          "term": "Annihilation",
+          "endpoint": "/library/sections/5/all?type=1&title=Annihilation",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 2,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 3,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Annihilation",
+          "endpoint": "/hubs/search?query=Annihilation",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 119,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 119,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Annihilation (2018)",
+          "endpoint": "/library/sections/5/all?type=1&title=Annihilation+%282018%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 4,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 4,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Annihilation (2018)",
+          "endpoint": "/hubs/search?query=Annihilation+%282018%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 104,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 5,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 104,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        }
+      ],
+      "plex_rows_considered": [],
+      "comparison": {
+        "classification": "plex_title_not_found_or_not_indexed",
+        "plex_video_count": 0,
+        "same_section_row_count": 0,
+        "other_section_row_count": 0,
+        "rows_with_part_files": 0,
+        "matching_expected_part_rows": 0,
+        "stale_http_part_rows": 0,
+        "scarflix_live_other_part_rows": 0,
+        "observed_part_files": []
+      }
+    },
+    {
+      "title": "Armageddon",
+      "folder_title": "Armageddon (1998)",
+      "section_id": 5,
+      "target_hash": "ScarFLIX_part-2eaab8df357724dc",
+      "prior_reason": "timeout",
+      "expected_webdav_map_entry": {
+        "title": "Armageddon (1998)",
+        "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+        "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc",
+        "rclone_path": "S:\\media\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+        "rclone_dir": "S:\\media\\ScarFLIX_part-2eaab8df357724dc",
+        "webdav_path": "/media/ScarFLIX_part-2eaab8df357724dc/stream.mkv",
+        "size": 732649045,
+        "content_type": "application/octet-stream"
+      },
+      "plex_query_summary": [
+        {
+          "kind": "section_title",
+          "term": "Armageddon",
+          "endpoint": "/library/sections/5/all?type=1&title=Armageddon",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 2,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Armageddon",
+          "endpoint": "/hubs/search?query=Armageddon",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 57,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 1,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 57,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Armageddon (1998)",
+          "endpoint": "/library/sections/5/all?type=1&title=Armageddon+%281998%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 1,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Armageddon (1998)",
+          "endpoint": "/hubs/search?query=Armageddon+%281998%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 94,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 94,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        }
+      ],
+      "plex_rows_considered": [],
+      "comparison": {
+        "classification": "plex_title_not_found_or_not_indexed",
+        "plex_video_count": 0,
+        "same_section_row_count": 0,
+        "other_section_row_count": 0,
+        "rows_with_part_files": 0,
+        "matching_expected_part_rows": 0,
+        "stale_http_part_rows": 0,
+        "scarflix_live_other_part_rows": 0,
+        "observed_part_files": []
+      }
+    },
+    {
+      "title": "Battleship",
+      "folder_title": "Battleship (2012)",
+      "section_id": 5,
+      "target_hash": "ScarFLIX_part-8aa2235ef7c1e0f6",
+      "prior_reason": "timeout",
+      "expected_webdav_map_entry": {
+        "title": "Battleship (2012)",
+        "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6",
+        "rclone_path": "S:\\media\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "rclone_dir": "S:\\media\\ScarFLIX_part-8aa2235ef7c1e0f6",
+        "webdav_path": "/media/ScarFLIX_part-8aa2235ef7c1e0f6/stream.mkv",
+        "size": 892122616,
+        "content_type": "application/octet-stream"
+      },
+      "plex_query_summary": [
+        {
+          "kind": "section_title",
+          "term": "Battleship",
+          "endpoint": "/library/sections/5/all?type=1&title=Battleship",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 2,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Battleship",
+          "endpoint": "/hubs/search?query=Battleship",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 87,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 1,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 87,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Battleship (2012)",
+          "endpoint": "/library/sections/5/all?type=1&title=Battleship+%282012%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 3,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 3,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Battleship (2012)",
+          "endpoint": "/hubs/search?query=Battleship+%282012%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 129,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 129,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        }
+      ],
+      "plex_rows_considered": [],
+      "comparison": {
+        "classification": "plex_title_not_found_or_not_indexed",
+        "plex_video_count": 0,
+        "same_section_row_count": 0,
+        "other_section_row_count": 0,
+        "rows_with_part_files": 0,
+        "matching_expected_part_rows": 0,
+        "stale_http_part_rows": 0,
+        "scarflix_live_other_part_rows": 0,
+        "observed_part_files": []
+      }
+    },
+    {
+      "title": "Crank",
+      "folder_title": "Crank (2006)",
+      "section_id": 5,
+      "target_hash": "ScarFLIX_part-bd37929b54c7c1bf",
+      "prior_reason": "timeout",
+      "expected_webdav_map_entry": {
+        "title": "Crank (2006)",
+        "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
+        "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf",
+        "rclone_path": "S:\\media\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
+        "rclone_dir": "S:\\media\\ScarFLIX_part-bd37929b54c7c1bf",
+        "webdav_path": "/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
+        "size": 1413214272,
+        "content_type": "application/octet-stream"
+      },
+      "plex_query_summary": [
+        {
+          "kind": "section_title",
+          "term": "Crank",
+          "endpoint": "/library/sections/5/all?type=1&title=Crank",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 2,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 4,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Crank",
+          "endpoint": "/hubs/search?query=Crank",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 121,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 1,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 5,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 121,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Crank (2006)",
+          "endpoint": "/library/sections/5/all?type=1&title=Crank+%282006%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 3,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 3,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 3,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Crank (2006)",
+          "endpoint": "/hubs/search?query=Crank+%282006%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 169,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 169,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        }
+      ],
+      "plex_rows_considered": [],
+      "comparison": {
+        "classification": "plex_title_not_found_or_not_indexed",
+        "plex_video_count": 0,
+        "same_section_row_count": 0,
+        "other_section_row_count": 0,
+        "rows_with_part_files": 0,
+        "matching_expected_part_rows": 0,
+        "stale_http_part_rows": 0,
+        "scarflix_live_other_part_rows": 0,
+        "observed_part_files": []
+      }
+    },
+    {
+      "title": "Creed",
+      "folder_title": "Creed (2015)",
+      "section_id": 5,
+      "target_hash": "ScarFLIX_part-8312e4b6385fd16c",
+      "prior_reason": "timeout",
+      "expected_webdav_map_entry": {
+        "title": "Creed (2015)",
+        "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
+        "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c",
+        "rclone_path": "S:\\media\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
+        "rclone_dir": "S:\\media\\ScarFLIX_part-8312e4b6385fd16c",
+        "webdav_path": "/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
+        "size": 3602397082,
+        "content_type": "application/octet-stream"
+      },
+      "plex_query_summary": [
+        {
+          "kind": "section_title",
+          "term": "Creed",
+          "endpoint": "/library/sections/5/all?type=1&title=Creed",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 2,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 2,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Creed",
+          "endpoint": "/hubs/search?query=Creed",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 87,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 2,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 3,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 87,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "section_title",
+          "term": "Creed (2015)",
+          "endpoint": "/library/sections/5/all?type=1&title=Creed+%282015%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 4,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 1,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 4,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        },
+        {
+          "kind": "global_hubs_search",
+          "term": "Creed (2015)",
+          "endpoint": "/hubs/search?query=Creed+%282015%29",
+          "selected_base": "http://192.168.1.184:32400",
+          "http_status": 200,
+          "elapsed_ms": 112,
+          "timed_out": false,
+          "error_code": "",
+          "raw_video_count": 0,
+          "video_count": 0,
+          "part_count": 0,
+          "attempts": [
+            {
+              "base": "http://127.0.0.1:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://mediaserver:32400",
+              "http_status": 401,
+              "elapsed_ms": 0,
+              "timed_out": false,
+              "error_code": ""
+            },
+            {
+              "base": "http://192.168.1.184:32400",
+              "http_status": 200,
+              "elapsed_ms": 112,
+              "timed_out": false,
+              "error_code": ""
+            }
+          ]
+        }
+      ],
+      "plex_rows_considered": [],
+      "comparison": {
+        "classification": "plex_title_not_found_or_not_indexed",
+        "plex_video_count": 0,
+        "same_section_row_count": 0,
+        "other_section_row_count": 0,
+        "rows_with_part_files": 0,
+        "matching_expected_part_rows": 0,
+        "stale_http_part_rows": 0,
+        "scarflix_live_other_part_rows": 0,
+        "observed_part_files": []
+      }
+    }
+  ]
+}
