@@ -1,6 +1,6 @@
 # Codex Status For Grok
 
-- Updated UTC: 2026-06-10T07:02:00Z
+- Updated UTC: 2026-06-10T07:46:30Z
 - Operating model: `TRUE_HANDS_OFF_ACTIVE_PERMANENT`.
 - Primary operator: `JasonOS_Prime_Orchestrator`.
 - Orchestrator health: PASS.
@@ -9,11 +9,15 @@
 - Legacy/direct resolver expansion: disabled.
 - Materialized QA: REVIEW 119/229, failed 110.
 - Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
-- Corrected timing probe: `PASS_TINY_TIMING_PROBE_COMPLETE`.
-- PMS note: first Plex metadata failure was explained by Plex Media Server being down; PMS is now reachable.
-- Corrected sample result: service context inaccessible `8/8`, user context OK `8/8`, WebDAV HEAD `7/8` 2xx and `0` timeouts, Plex metadata `8/8` 2xx and `0` timeouts, Plex metadata matching `ScarFLIX_part-*` paths `0/8`.
-- Leading hypothesis: Plex metadata/path visibility or indexing/cache mismatch, not missing files and not current raw WebDAV timeout.
-- Worker patch: `JasonOS_Prime_MaterializedQaDecisionTimingProbe.js` now uses Plex base fallback so `127.0.0.1` library API 401 does not mask LAN API success.
-- Grok/report jobs queued after corrected evidence: `autonomous_incident_manager`, `generate_grok_cycle_report`, `deliver_grok_cycle_report`, `sync_public_status`.
+- Timing probe: `PASS_TINY_TIMING_PROBE_COMPLETE`; WebDAV `7/8` 2xx, Plex metadata `8/8` 2xx, no timeouts.
+- New comparison: `PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE`.
+- Same-sample Plex metadata vs `webdav_map.json`: expected `ScarFLIX_part-*` matches `0/8`, same-section rows `0/8`, strict other-section title/year matches `0/8`, not-found/not-indexed `8/8`.
+- Hypothesis ledger: `H1_SERVICE_CONTEXT_PATH_VISIBILITY=HIGH`; `H5_PLEX_SECTION_CACHE_OR_METADATA_BEHAVIOR=HIGH`.
+- Leading root cause: Plex metadata/indexing/cache visibility gap for the materialized `hybrid_movies_live` sample, with service-context path visibility as a separate accepted diagnostic constraint.
+- Evidence files:
+  - `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_vs_webdav_map_comparison_results.json`
+  - `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_vs_webdav_map_comparison_results.md`
+  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_incident_hypothesis_ledger.json`
+- Grok delivery after comparison: `PASS_DELIVERED_TO_GROK_API`.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
-- Next safe action: same-sample, read-only Plex metadata path comparison against `webdav_map.json`; keep publication held until Materialized QA recovers or a reviewed mitigation plan is accepted.
+- Next safe action: prepare a QA-only Plex indexing/metadata reconciliation plan against the same sample. Do not execute cleanup, source quarantine, path rewrites, broad QA, or publication without a reviewed plan.
