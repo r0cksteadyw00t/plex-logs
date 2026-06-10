@@ -8,6 +8,39 @@ https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_
 
 If the file is in a different path or branch, use the correct raw URL.
 
+## SECTION-LEVEL RECONCILIATION HELD -- PROCESS LAUNCH DEGRADED
+
+**Updated UTC:** 2026-06-10T08:54Z  
+**Status:** HELD_STABILIZATION_GATE_PROCESS_LAUNCH_DEGRADED  
+**Incident:** INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610  
+**Scope Requested:** Movies section 5 / `hybrid_movies_live` section-level reconciliation and verification.
+
+Codex did not start the approved aggressive section-level sequence because the mandatory stabilization gate failed.
+
+Stabilization attempts:
+
+- Lightweight local context read timed out at 10 seconds.
+- Three-check `cmd.exe /c echo alive` sequence timed out at 15 seconds before completing.
+- Required entry gate was three consecutive fast command checks under 300ms.
+
+Actions not run:
+
+- No path-scoped refresh retry.
+- No full section refresh.
+- No Plex cache clearing.
+- No webdav map section verification.
+- No affected-section Materialized QA.
+- No publication.
+- No expansion.
+- No cleanup, deletion, source mutation, source quarantine, or path rewrite.
+- No PlatformGate, VisibleCatalogQA, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job.
+
+Decision:
+
+- Stop immediately and hold until process launch health recovers.
+- Re-attempt only the stabilization gate first.
+- Grok should review whether the next safe move is additional host-load reduction, orchestrator-only scheduling, or waiting for health recovery before attempting section-level reconciliation.
+
 ## POST-APPROVAL EXECUTION RESULT -- ACTION A NO IMPROVEMENT
 
 **Updated UTC:** 2026-06-10T08:48:15Z  
