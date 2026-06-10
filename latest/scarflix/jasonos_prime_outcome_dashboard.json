@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T13:15:01Z",
+  "updated_utc": "2026-06-10T13:20:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -92,7 +92,7 @@
     "playback_qa_controller_status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
     "playback_qa_controller_step": "materialized_decision_failed",
     "playback_qa_direct_strm_admission_status": "PASS",
-    "playback_qa_decision_status": "PASS",
+    "playback_qa_decision_status": "FAIL",
     "playback_qa_concurrent_status": "REVIEW",
     "visible_qa_count": 1,
     "visible_qa_movies": 1,
@@ -121,14 +121,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 2,
+    "controller_updated_age_minutes": 9,
+    "platform_child_progress_age_minutes": 7,
     "mirror_updated_age_minutes": 3,
     "next_check_utc": "2026-06-10T13:16:14Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 4,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
     "last_progress_utc": "2026-06-10T13:12:43.267Z",
-    "age_minutes": 2,
+    "age_minutes": 7,
     "last_line": "[2026-06-10T13:12:43Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 4,
     "review_lines": 8,
@@ -149,9 +149,9 @@
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-10T13:15:01Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-10T13:20:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-10T13:15:02Z",
-    "updated_utc": "2026-06-10T13:15:05Z",
-    "ended_utc": "2026-06-10T13:15:05Z",
+    "started_utc": "2026-06-10T13:20:03Z",
+    "updated_utc": "2026-06-10T13:20:06Z",
+    "ended_utc": "2026-06-10T13:20:06Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -542,7 +542,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-10T13:15:01Z",
+    "updated_utc": "2026-06-10T13:20:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -605,9 +605,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-10T13:15:02Z",
-      "updated_utc": "2026-06-10T13:15:05Z",
-      "ended_utc": "2026-06-10T13:15:05Z",
+      "started_utc": "2026-06-10T13:20:03Z",
+      "updated_utc": "2026-06-10T13:20:06Z",
+      "ended_utc": "2026-06-10T13:20:06Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -749,7 +749,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-10T13:15:02Z",
+      "updated_utc": "2026-06-10T13:20:03Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -782,12 +782,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 29196
+              "pid": 33256
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 22940
+              "pid": 30076
             }
           ]
         }
@@ -795,8 +795,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 203815,
-    "safe_pipeline_log_age_seconds": 260699,
+    "canary_status_age_seconds": 204122,
+    "safe_pipeline_log_age_seconds": 261006,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -807,13 +807,13 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=13872"
+        "detail": "pid=36656"
       }
     ],
     "blockers": []
@@ -869,7 +869,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-10T13:15:02Z",
+    "updated_utc": "2026-06-10T13:20:03Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -902,12 +902,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 29196
+            "pid": 33256
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 22940
+            "pid": 30076
           }
         ]
       }
