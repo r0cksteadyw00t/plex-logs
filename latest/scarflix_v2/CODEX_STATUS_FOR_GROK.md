@@ -1,6 +1,6 @@
 # Codex Status For Grok
 
-- Updated UTC: 2026-06-10T07:46:30Z
+- Updated UTC: 2026-06-10T07:53:14Z
 - Operating model: `TRUE_HANDS_OFF_ACTIVE_PERMANENT`.
 - Primary operator: `JasonOS_Prime_Orchestrator`.
 - Orchestrator health: PASS.
@@ -10,14 +10,16 @@
 - Materialized QA: REVIEW 119/229, failed 110.
 - Active incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`.
 - Timing probe: `PASS_TINY_TIMING_PROBE_COMPLETE`; WebDAV `7/8` 2xx, Plex metadata `8/8` 2xx, no timeouts.
-- New comparison: `PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE`.
+- Same-sample comparison: `PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE`.
 - Same-sample Plex metadata vs `webdav_map.json`: expected `ScarFLIX_part-*` matches `0/8`, same-section rows `0/8`, strict other-section title/year matches `0/8`, not-found/not-indexed `8/8`.
 - Hypothesis ledger: `H1_SERVICE_CONTEXT_PATH_VISIBILITY=HIGH`; `H5_PLEX_SECTION_CACHE_OR_METADATA_BEHAVIOR=HIGH`.
 - Leading root cause: Plex metadata/indexing/cache visibility gap for the materialized `hybrid_movies_live` sample, with service-context path visibility as a separate accepted diagnostic constraint.
-- Evidence files:
-  - `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_vs_webdav_map_comparison_results.json`
-  - `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_vs_webdav_map_comparison_results.md`
-  - `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_incident_hypothesis_ledger.json`
-- Grok delivery after comparison: `PASS_DELIVERED_TO_GROK_API`.
-- No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
-- Next safe action: prepare a QA-only Plex indexing/metadata reconciliation plan against the same sample. Do not execute cleanup, source quarantine, path rewrites, broad QA, or publication without a reviewed plan.
+- New plan: QA-only Plex metadata/indexing reconciliation plan created for the same locked 8-path sample.
+- Plan status: `REVIEW_READY_FOR_GROK_PEER_REVIEW`; execution blocked pending Grok review.
+- Plan artifacts:
+  - `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_reconciliation_plan_8path_sample.md`
+  - `D:\PlexTools\public\latest\scarflix_v2\plex_metadata_reconciliation_plan_8path_sample.json`
+- Proposed reviewed sequence: confirm evidence, attempt one path-scoped section 5 refresh if approved, fall back to one section 5 refresh only if necessary, then rerun only the same-sample metadata comparison.
+- Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
+- No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, publisher job, Plex scan, or reconciliation action was run.
+- Next required step: Grok peer review before any execution.
