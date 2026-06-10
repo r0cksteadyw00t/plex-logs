@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T09:00:03.507Z",
+  "updated_utc": "2026-06-10T09:05:02.868Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,37 +119,37 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 118,
-    "mirror_updated_age_minutes": 4,
+    "controller_updated_age_minutes": 7,
+    "platform_child_progress_age_minutes": 1,
+    "mirror_updated_age_minutes": 3,
     "next_check_utc": "2026-06-10T09:03:26Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 2,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
-    "last_progress_utc": "2026-06-10T07:01:46.543Z",
-    "age_minutes": 118,
-    "last_line": "[2026-06-10T07:01:46Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
+    "last_progress_utc": "2026-06-10T09:03:38.704Z",
+    "age_minutes": 1,
+    "last_line": "[2026-06-10T09:03:38Z] [INFO] Rows selected for Plex decision QA: 1",
     "pass_lines": 3,
     "review_lines": 6,
-    "info_lines": 18
+    "info_lines": 20
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-10T08:55:52Z",
+    "updated_utc": "2026-06-10T09:03:37Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-10T09:00:01Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-10T09:05:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-10T08:55:03Z",
+    "updated_utc": "2026-06-10T09:00:03Z",
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
@@ -294,6 +294,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-10T09:03:38.704Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-10T09:03:38Z] [INFO] Rows selected for Plex decision QA: 1"
+    },
+    {
       "utc": "2026-06-10T08:58:32.187Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
@@ -302,11 +307,6 @@
       "utc": "2026-06-10T08:58:21Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
-    },
-    {
-      "utc": "2026-06-10T07:01:46.543Z",
-      "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-10T07:01:46Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out."
     },
     {
       "utc": "2026-06-09T20:40:44Z",
