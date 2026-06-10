@@ -1,14 +1,14 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T12:55:03.154Z",
+  "updated_utc": "2026-06-10T13:00:03.320Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
     "Keep long ScarFLIX validation detached under local controller ownership."
   ],
   "overall_timeline_estimate": "First major milestone: 1-3 days depending on PlatformGate/provider result.",
-  "current_milestone": "BLOCKED_DECISION",
+  "current_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
   "jason_action_required": false,
   "truth_metrics": {
     "movie_strm_count": 0,
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 26,
-    "platform_child_progress_age_minutes": 100,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-10T12:45:18Z",
-    "next_check_age_minutes": 10,
+    "controller_updated_age_minutes": 2,
+    "platform_child_progress_age_minutes": 105,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-10T13:03:15Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260610.log",
     "last_progress_utc": "2026-06-10T11:14:58.217Z",
-    "age_minutes": 100,
+    "age_minutes": 105,
     "last_line": "[2026-06-10T11:14:58Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 4,
@@ -142,15 +142,15 @@
   },
   "watchdog_status": {
     "status": "REVIEW",
-    "stall_risk": "High",
-    "updated_utc": "2026-06-10T12:40:37Z",
+    "stall_risk": "Medium",
+    "updated_utc": "2026-06-10T12:56:50Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "ALERT",
-    "alert_level": "HIGH",
-    "updated_utc": "2026-06-10T12:55:01Z",
-    "codex_action_required": true,
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-10T13:00:01Z",
+    "codex_action_required": false,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-10T12:50:05Z",
+    "updated_utc": "2026-06-10T12:55:05Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -290,18 +290,18 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-10T12:40:29.197Z",
+      "utc": "2026-06-10T12:58:21.618Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-10T12:28:33Z",
-      "title": "Autonomous controller: controller_exception",
+      "utc": "2026-06-10T12:58:10Z",
+      "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
     {
-      "utc": "2026-06-10T12:22:40Z",
-      "title": "Autonomous controller: candidate_source_model_pass",
+      "utc": "2026-06-10T12:28:33Z",
+      "title": "Autonomous controller: controller_exception",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
     {
@@ -386,7 +386,7 @@
       "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=1, total=1. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=4/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=PASS, checked=1, passed_visible=1, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 28,
       "eta": "after all-visible materialized QA passes",
-      "stall_risk": "High"
+      "stall_risk": "Medium"
     },
     {
       "outcome": "Fast-Track Accelerator",
@@ -449,7 +449,7 @@
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 18,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
-      "stall_risk": "High"
+      "stall_risk": "Medium"
     }
   ],
   "files": {
