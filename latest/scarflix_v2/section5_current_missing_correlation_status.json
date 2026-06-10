@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_current_missing_correlation.v1",
   "status": "PASS_FRESH_BASELINE_CORRELATION_COMPLETE",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-10T23:16:12.210Z",
-  "updated_utc": "2026-06-10T23:16:15.710Z",
+  "started_utc": "2026-06-10T23:31:49.677Z",
+  "updated_utc": "2026-06-10T23:31:54.684Z",
   "read_only": true,
   "no_refresh": true,
   "no_cache_clear": true,
@@ -21,15 +21,15 @@
       "component": "jasonos_prime_sentinel_node",
       "status": "PASS",
       "alert_level": "LOW",
-      "updated_utc": "2026-06-10T23:15:04Z",
+      "updated_utc": "2026-06-10T23:30:08Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
-      "repeat_count": 147,
+      "repeat_count": 151,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 4,
+        "controller_age_minutes": 5,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
         "watchdog_age_minutes": 5,
@@ -39,8 +39,8 @@
         "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 4196,
-        "durable_platform_gate_age_minutes": 4196,
+        "checkpoint_age_minutes": 4211,
+        "durable_platform_gate_age_minutes": 4211,
         "platform_progress_fresh": false
       },
       "recovery_actions": [],
@@ -55,7 +55,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-10T23:16:12.156Z",
+      "updated_utc": "2026-06-10T23:31:49.619Z",
       "version": "0.1.0",
       "pid": 11104,
       "owner": "jasonos-orchestrator-11104",
@@ -63,14 +63,14 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-10T23:16:12.128Z",
+      "last_tick_utc": "2026-06-10T23:31:49.591Z",
       "last_error": "Unknown named parameter '@created_utc'",
       "active_jobs": [
         {
-          "id": "job_3311651de1f9247a",
+          "id": "job_1298552d5b59be19",
           "type": "run_materialized_qa_incident_probe_cycle",
           "queue": "control",
-          "started_utc": "2026-06-10T23:16:12.147Z"
+          "started_utc": "2026-06-10T23:31:49.611Z"
         }
       ],
       "pause": {
@@ -86,12 +86,12 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-10T23:16:12.156Z",
+        "updated_utc": "2026-06-10T23:31:49.619Z",
         "window_minutes": 10,
-        "sample_count": 3,
-        "latency_sample_count": 3,
+        "sample_count": 5,
+        "latency_sample_count": 5,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 8219,
+        "avg_process_runtime_ms": 5514,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 0,
@@ -119,7 +119,7 @@
         "schema_version": "jasonos.hands_off_operation.v1",
         "status": "REVIEW_ESCALATION_REQUIRED",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-10T23:13:12.054Z",
+        "updated_utc": "2026-06-10T23:30:19.589Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -133,7 +133,7 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-10T23:10:01Z",
+          "dashboard_updated_utc": "2026-06-10T23:30:09.513Z",
           "sentinel_status": "PASS",
           "sentinel_alert": "LOW",
           "codex_action_required": false,
@@ -146,12 +146,12 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-10T23:13:12.051Z",
+          "updated_utc": "2026-06-10T23:30:19.579Z",
           "window_minutes": 10,
-          "sample_count": 5,
-          "latency_sample_count": 5,
+          "sample_count": 4,
+          "latency_sample_count": 4,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 8888,
+          "avg_process_runtime_ms": 6045,
           "timeout_count": 0,
           "timeout_rate": 0,
           "launches_last_minute": 0,
@@ -195,20 +195,20 @@
         ],
         "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
         "progress_made_this_cycle": false,
-        "no_progress_cycles": 158,
+        "no_progress_cycles": 161,
         "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
         "queued_jobs": [
           {
             "type": "autonomous_incident_manager",
-            "id": "job_50288a63e089b1fb"
+            "id": "job_55b985ab801355f1"
           },
           {
             "type": "generate_grok_cycle_report",
-            "id": "job_fb3d3b400a190116"
+            "id": "job_9a703eff5488c440"
           },
           {
             "type": "deliver_grok_cycle_report",
-            "id": "job_c3301aaf545c3c82"
+            "id": "job_cd87dd7c434adffb"
           }
         ],
         "actions_taken": [
@@ -217,7 +217,7 @@
         ],
         "blockers": [],
         "escalation_required": true,
-        "escalation_reason": "No semantic progress for 158 hands-off cycles.",
+        "escalation_reason": "No semantic progress for 161 hands-off cycles.",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -227,7 +227,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-10T23:16:12.156Z",
+        "updated_utc": "2026-06-10T23:31:49.619Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 25,
@@ -242,11 +242,25 @@
           "review_action_failed": 0
         },
         "blocked_or_review_count": 25,
-        "last_instruction_id": "phase0_record_section5_forensic_hold_20260610_v44",
+        "last_instruction_id": "phase0_record_section5_forensic_hold_20260610_v45",
         "last_instruction_status": "executed",
         "last_ingest_utc": "",
         "last_execution_utc": "",
         "recent_instructions": [
+          {
+            "instruction_id": "phase0_record_section5_forensic_hold_20260610_v45",
+            "created_utc": "2026-06-10T23:21:48Z",
+            "expires_utc": "2026-06-11T23:21:48Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
           {
             "instruction_id": "phase0_record_section5_forensic_hold_20260610_v44",
             "created_utc": "2026-06-10T23:05:40Z",
@@ -933,26 +947,12 @@
             ],
             "action_count": 1,
             "summary": ""
-          },
-          {
-            "instruction_id": "phase0_hold_status_only_20260610",
-            "created_utc": "2026-06-10T06:16:26Z",
-            "expires_utc": "2026-06-11T06:16:26Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "executed",
-            "classification": "Safe",
-            "reasons": [
-              "approved_safe_instruction"
-            ],
-            "action_count": 1,
-            "summary": ""
           }
         ]
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-10T23:16:12.155Z",
+        "updated_utc": "2026-06-10T23:31:49.618Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1492,12 +1492,12 @@
       }
     },
     "health": {
-      "updated_utc": "2026-06-10T23:16:12.160Z",
+      "updated_utc": "2026-06-10T23:31:49.624Z",
       "window_minutes": 10,
-      "sample_count": 3,
-      "latency_sample_count": 3,
+      "sample_count": 5,
+      "latency_sample_count": 5,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 8219,
+      "avg_process_runtime_ms": 5514,
       "timeout_count": 0,
       "timeout_rate": 0,
       "launches_last_minute": 0,
@@ -1511,29 +1511,41 @@
   },
   "baseline": {
     "expected_count": 105,
-    "present_count": 95,
-    "missing_count": 10,
-    "present_percent": 90.5,
-    "section_total": 257,
-    "unique_part_hash_count": 207,
-    "updated_utc": "2026-06-10T23:09:27.980Z"
+    "present_count": 83,
+    "missing_count": 22,
+    "present_percent": 79,
+    "section_total": 176,
+    "unique_part_hash_count": 171,
+    "updated_utc": "2026-06-10T23:26:20.043Z"
   },
   "missing_hashes": [
-    "scarflix_part-7c4868fe7b1db021",
-    "scarflix_part-db3f532fdd48fe57",
-    "scarflix_part-942255f029875306",
-    "scarflix_part-bf8b8fcb4150df6b",
-    "scarflix_part-2248c141861c0a2c",
-    "scarflix_part-ea2489ddc0285b99",
-    "scarflix_part-3ac0e5bd2415a5fc",
-    "scarflix_part-d708c8b30a147319",
-    "scarflix_part-89731919b552c615",
-    "scarflix_part-491a4bfccb102f1e"
+    "scarflix_part-81107989d2e30cfb",
+    "scarflix_part-6bc868616f378edf",
+    "scarflix_part-d04bde274e598c57",
+    "scarflix_part-c017966a31451921",
+    "scarflix_part-61f18dcc8c34f579",
+    "scarflix_part-700e6d7fdb8236a0",
+    "scarflix_part-31696108f69a37b9",
+    "scarflix_part-5f2b46ebc01460e6",
+    "scarflix_part-73b16faf4582f6ed",
+    "scarflix_part-fb19346714d96cd7",
+    "scarflix_part-6a30d1aa558bac1f",
+    "scarflix_part-78ebe23593166235",
+    "scarflix_part-93599b6b163a4b72",
+    "scarflix_part-a0692a530078eae1",
+    "scarflix_part-ba7d61952f40f7bc",
+    "scarflix_part-5d08e120806b8ae9",
+    "scarflix_part-be2edbceddc0dd6f",
+    "scarflix_part-99fa62934c2d677c",
+    "scarflix_part-b6caef61efed54f1",
+    "scarflix_part-c2fa5a32a4d5e81c",
+    "scarflix_part-fe9eb00f9fe3c79f",
+    "scarflix_part-bd7eda1ae6bf343a"
   ],
   "present_sample_hashes": [
-    "scarflix_part-81107989d2e30cfb",
     "scarflix_part-c08b683f68e4e49e",
-    "scarflix_part-d8b22fb3f498688e"
+    "scarflix_part-d8b22fb3f498688e",
+    "scarflix_part-2eaab8df357724dc"
   ],
   "plex": {
     "token_present": true,
@@ -1545,41 +1557,10 @@
     ],
     "missing_probes": [
       {
-        "hash": "scarflix_part-7c4868fe7b1db021",
-        "title": "Dawn of the Dead",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021\\stream.mkv",
-        "query_title": "ScarFLIX Part 7c4868fe7b1db021",
-        "ok": true,
-        "selected_base": "http://192.168.1.184:32400",
-        "http_status": 200,
-        "elapsed_ms": 4,
-        "returned_video_count": 0,
-        "matching_part_count": 0,
-        "matching_rows": [],
-        "attempts": [
-          {
-            "base": "http://127.0.0.1:32400",
-            "http_status": 401,
-            "elapsed_ms": 1833,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          },
-          {
-            "base": "http://192.168.1.184:32400",
-            "http_status": 200,
-            "elapsed_ms": 4,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          }
-        ]
-      },
-      {
-        "hash": "scarflix_part-db3f532fdd48fe57",
-        "title": "Dolittle",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dolittle (2020)\\ScarFLIX_part-db3f532fdd48fe57\\stream.mkv",
-        "query_title": "ScarFLIX Part db3f532fdd48fe57",
+        "hash": "scarflix_part-81107989d2e30cfb",
+        "title": "Anna",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+        "query_title": "ScarFLIX Part 81107989d2e30cfb",
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
@@ -1591,7 +1572,7 @@
           {
             "base": "http://127.0.0.1:32400",
             "http_status": 401,
-            "elapsed_ms": 1,
+            "elapsed_ms": 1994,
             "timed_out": false,
             "error_code": "",
             "ok": true
@@ -1607,173 +1588,10 @@
         ]
       },
       {
-        "hash": "scarflix_part-942255f029875306",
-        "title": "Gremlins",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gremlins (1984)\\ScarFLIX_part-942255f029875306\\stream.mkv",
-        "query_title": "ScarFLIX Part 942255f029875306",
-        "ok": true,
-        "selected_base": "http://192.168.1.184:32400",
-        "http_status": 200,
-        "elapsed_ms": 3,
-        "returned_video_count": 1,
-        "matching_part_count": 1,
-        "matching_rows": [
-          {
-            "rating_key": "49326",
-            "title": "ScarFLIX Part 942255f029875306",
-            "year": "",
-            "guid": "local://49326",
-            "part_files": [
-              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gremlins (1984)\\ScarFLIX_part-942255f029875306\\stream.mkv"
-            ],
-            "part_hashes": [
-              "scarflix_part-942255f029875306"
-            ]
-          }
-        ],
-        "attempts": [
-          {
-            "base": "http://127.0.0.1:32400",
-            "http_status": 401,
-            "elapsed_ms": 1,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          },
-          {
-            "base": "http://192.168.1.184:32400",
-            "http_status": 200,
-            "elapsed_ms": 3,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          }
-        ]
-      },
-      {
-        "hash": "scarflix_part-bf8b8fcb4150df6b",
-        "title": "Man in the Mirror: The Michael Jackson Story",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Man in the Mirror The Michael Jackson Story (2004)\\ScarFLIX_part-bf8b8fcb4150df6b\\stream.mkv",
-        "query_title": "ScarFLIX Part bf8b8fcb4150df6b",
-        "ok": true,
-        "selected_base": "http://192.168.1.184:32400",
-        "http_status": 200,
-        "elapsed_ms": 3,
-        "returned_video_count": 0,
-        "matching_part_count": 0,
-        "matching_rows": [],
-        "attempts": [
-          {
-            "base": "http://127.0.0.1:32400",
-            "http_status": 401,
-            "elapsed_ms": 1,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          },
-          {
-            "base": "http://192.168.1.184:32400",
-            "http_status": 200,
-            "elapsed_ms": 3,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          }
-        ]
-      },
-      {
-        "hash": "scarflix_part-2248c141861c0a2c",
-        "title": "9½ Weeks",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv",
-        "query_title": "ScarFLIX Part 2248c141861c0a2c",
-        "ok": true,
-        "selected_base": "http://192.168.1.184:32400",
-        "http_status": 200,
-        "elapsed_ms": 3,
-        "returned_video_count": 1,
-        "matching_part_count": 1,
-        "matching_rows": [
-          {
-            "rating_key": "49327",
-            "title": "ScarFLIX Part 2248c141861c0a2c",
-            "year": "",
-            "guid": "local://49327",
-            "part_files": [
-              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv"
-            ],
-            "part_hashes": [
-              "scarflix_part-2248c141861c0a2c"
-            ]
-          }
-        ],
-        "attempts": [
-          {
-            "base": "http://127.0.0.1:32400",
-            "http_status": 401,
-            "elapsed_ms": 2,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          },
-          {
-            "base": "http://192.168.1.184:32400",
-            "http_status": 200,
-            "elapsed_ms": 3,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          }
-        ]
-      },
-      {
-        "hash": "scarflix_part-ea2489ddc0285b99",
-        "title": "Reservoir Dogs",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Reservoir Dogs (1992)\\ScarFLIX_part-ea2489ddc0285b99\\stream.mkv",
-        "query_title": "ScarFLIX Part ea2489ddc0285b99",
-        "ok": true,
-        "selected_base": "http://192.168.1.184:32400",
-        "http_status": 200,
-        "elapsed_ms": 3,
-        "returned_video_count": 1,
-        "matching_part_count": 1,
-        "matching_rows": [
-          {
-            "rating_key": "49328",
-            "title": "ScarFLIX Part Ea2489ddc0285b99",
-            "year": "",
-            "guid": "local://49328",
-            "part_files": [
-              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Reservoir Dogs (1992)\\ScarFLIX_part-ea2489ddc0285b99\\stream.mkv"
-            ],
-            "part_hashes": [
-              "scarflix_part-ea2489ddc0285b99"
-            ]
-          }
-        ],
-        "attempts": [
-          {
-            "base": "http://127.0.0.1:32400",
-            "http_status": 401,
-            "elapsed_ms": 1,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          },
-          {
-            "base": "http://192.168.1.184:32400",
-            "http_status": 200,
-            "elapsed_ms": 3,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          }
-        ]
-      },
-      {
-        "hash": "scarflix_part-3ac0e5bd2415a5fc",
-        "title": "Silent Hill",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Silent Hill (2006)\\ScarFLIX_part-3ac0e5bd2415a5fc\\stream.mkv",
-        "query_title": "ScarFLIX Part 3ac0e5bd2415a5fc",
+        "hash": "scarflix_part-6bc868616f378edf",
+        "title": "The Ballerina",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
+        "query_title": "ScarFLIX Part 6bc868616f378edf",
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
@@ -1801,72 +1619,10 @@
         ]
       },
       {
-        "hash": "scarflix_part-d708c8b30a147319",
-        "title": "Stand by Me",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Stand by Me (1986)\\ScarFLIX_part-d708c8b30a147319\\stream.mkv",
-        "query_title": "ScarFLIX Part d708c8b30a147319",
-        "ok": true,
-        "selected_base": "http://192.168.1.184:32400",
-        "http_status": 200,
-        "elapsed_ms": 4,
-        "returned_video_count": 0,
-        "matching_part_count": 0,
-        "matching_rows": [],
-        "attempts": [
-          {
-            "base": "http://127.0.0.1:32400",
-            "http_status": 401,
-            "elapsed_ms": 1,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          },
-          {
-            "base": "http://192.168.1.184:32400",
-            "http_status": 200,
-            "elapsed_ms": 4,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          }
-        ]
-      },
-      {
-        "hash": "scarflix_part-89731919b552c615",
-        "title": "Terminator Salvation",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Salvation (2009)\\ScarFLIX_part-89731919b552c615\\stream.mkv",
-        "query_title": "ScarFLIX Part 89731919b552c615",
-        "ok": true,
-        "selected_base": "http://192.168.1.184:32400",
-        "http_status": 200,
-        "elapsed_ms": 2,
-        "returned_video_count": 0,
-        "matching_part_count": 0,
-        "matching_rows": [],
-        "attempts": [
-          {
-            "base": "http://127.0.0.1:32400",
-            "http_status": 401,
-            "elapsed_ms": 1,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          },
-          {
-            "base": "http://192.168.1.184:32400",
-            "http_status": 200,
-            "elapsed_ms": 2,
-            "timed_out": false,
-            "error_code": "",
-            "ok": true
-          }
-        ]
-      },
-      {
-        "hash": "scarflix_part-491a4bfccb102f1e",
-        "title": "The Big Short",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Big Short (2015)\\ScarFLIX_part-491a4bfccb102f1e\\stream.mkv",
-        "query_title": "ScarFLIX Part 491a4bfccb102f1e",
+        "hash": "scarflix_part-d04bde274e598c57",
+        "title": "Despicable Me 3",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Despicable Me 3 (2017)\\ScarFLIX_part-d04bde274e598c57\\stream.mkv",
+        "query_title": "ScarFLIX Part d04bde274e598c57",
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
@@ -1892,34 +1648,81 @@
             "ok": true
           }
         ]
-      }
-    ],
-    "present_probes": [
+      },
       {
-        "hash": "scarflix_part-81107989d2e30cfb",
-        "title": "Anna",
-        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-        "query_title": "ScarFLIX Part 81107989d2e30cfb",
+        "hash": "scarflix_part-c017966a31451921",
+        "title": "Final Destination 5",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
+        "query_title": "ScarFLIX Part c017966a31451921",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-61f18dcc8c34f579",
+        "title": "Fracture",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
+        "query_title": "ScarFLIX Part 61f18dcc8c34f579",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-700e6d7fdb8236a0",
+        "title": "Friday",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
+        "query_title": "ScarFLIX Part 700e6d7fdb8236a0",
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
         "elapsed_ms": 3,
-        "returned_video_count": 1,
-        "matching_part_count": 1,
-        "matching_rows": [
-          {
-            "rating_key": "49305",
-            "title": "ScarFLIX Part 81107989d2e30cfb",
-            "year": "",
-            "guid": "local://49305",
-            "part_files": [
-              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv"
-            ],
-            "part_hashes": [
-              "scarflix_part-81107989d2e30cfb"
-            ]
-          }
-        ],
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
         "attempts": [
           {
             "base": "http://127.0.0.1:32400",
@@ -1939,6 +1742,504 @@
           }
         ]
       },
+      {
+        "hash": "scarflix_part-31696108f69a37b9",
+        "title": "Hulk",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hulk (2003)\\ScarFLIX_part-31696108f69a37b9\\stream.mkv",
+        "query_title": "ScarFLIX Part 31696108f69a37b9",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-5f2b46ebc01460e6",
+        "title": "My Hero Academia: You're Next",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv",
+        "query_title": "ScarFLIX Part 5f2b46ebc01460e6",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-73b16faf4582f6ed",
+        "title": "Nacho Libre",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nacho Libre (2006)\\ScarFLIX_part-73b16faf4582f6ed\\stream.mkv",
+        "query_title": "ScarFLIX Part 73b16faf4582f6ed",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "title": "Speed",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "query_title": "ScarFLIX Part fb19346714d96cd7",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-6a30d1aa558bac1f",
+        "title": "Terminator: Dark Fate",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Dark Fate (2019)\\ScarFLIX_part-6a30d1aa558bac1f\\stream.mkv",
+        "query_title": "ScarFLIX Part 6a30d1aa558bac1f",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-78ebe23593166235",
+        "title": "The Jungle Book",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235\\stream.mkv",
+        "query_title": "ScarFLIX Part 78ebe23593166235",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-93599b6b163a4b72",
+        "title": "The Mist",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
+        "query_title": "ScarFLIX Part 93599b6b163a4b72",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-a0692a530078eae1",
+        "title": "The Mitchells vs. the Machines",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1\\stream.mkv",
+        "query_title": "ScarFLIX Part a0692a530078eae1",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-ba7d61952f40f7bc",
+        "title": "The Transporter",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Transporter (2002)\\ScarFLIX_part-ba7d61952f40f7bc\\stream.mkv",
+        "query_title": "ScarFLIX Part ba7d61952f40f7bc",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 1,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-5d08e120806b8ae9",
+        "title": "The Whale",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Whale (2022)\\ScarFLIX_part-5d08e120806b8ae9\\stream.mkv",
+        "query_title": "ScarFLIX Part 5d08e120806b8ae9",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-be2edbceddc0dd6f",
+        "title": "They Call Me Trinity",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\They Call Me Trinity (1970)\\ScarFLIX_part-be2edbceddc0dd6f\\stream.mkv",
+        "query_title": "ScarFLIX Part be2edbceddc0dd6f",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-99fa62934c2d677c",
+        "title": "To Wong Foo, Thanks for Everything! Julie Newmar",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\To Wong Foo, Thanks for Everything! Julie Newmar (1995)\\ScarFLIX_part-99fa62934c2d677c\\stream.mkv",
+        "query_title": "ScarFLIX Part 99fa62934c2d677c",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-b6caef61efed54f1",
+        "title": "Twister",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv",
+        "query_title": "ScarFLIX Part b6caef61efed54f1",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-c2fa5a32a4d5e81c",
+        "title": "Watchmen",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Watchmen (2009)\\ScarFLIX_part-c2fa5a32a4d5e81c\\stream.mkv",
+        "query_title": "ScarFLIX Part c2fa5a32a4d5e81c",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-fe9eb00f9fe3c79f",
+        "title": "Wrong Turn 5: Bloodlines",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wrong Turn 5 Bloodlines (2012)\\ScarFLIX_part-fe9eb00f9fe3c79f\\stream.mkv",
+        "query_title": "ScarFLIX Part fe9eb00f9fe3c79f",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-bd7eda1ae6bf343a",
+        "title": "Zombieland",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Zombieland (2009)\\ScarFLIX_part-bd7eda1ae6bf343a\\stream.mkv",
+        "query_title": "ScarFLIX Part bd7eda1ae6bf343a",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "present_probes": [
       {
         "hash": "scarflix_part-c08b683f68e4e49e",
         "title": "Annabelle",
@@ -1991,7 +2292,7 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 3,
+        "elapsed_ms": 4,
         "returned_video_count": 1,
         "matching_part_count": 1,
         "matching_rows": [
@@ -2020,6 +2321,50 @@
           {
             "base": "http://192.168.1.184:32400",
             "http_status": 200,
+            "elapsed_ms": 4,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-2eaab8df357724dc",
+        "title": "Armageddon",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+        "query_title": "ScarFLIX Part 2eaab8df357724dc",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 1,
+        "matching_part_count": 1,
+        "matching_rows": [
+          {
+            "rating_key": "49061",
+            "title": "ScarFLIX Part 2eaab8df357724dc",
+            "year": "",
+            "guid": "local://49061",
+            "part_files": [
+              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv"
+            ],
+            "part_hashes": [
+              "scarflix_part-2eaab8df357724dc"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
             "elapsed_ms": 3,
             "timed_out": false,
             "error_code": "",
@@ -2035,92 +2380,134 @@
       "db_path": "C:/Users/jason/AppData/Local/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db",
       "probes": [
         {
-          "hash": "scarflix_part-7c4868fe7b1db021",
-          "title": "Dawn of the Dead",
+          "hash": "scarflix_part-81107989d2e30cfb",
+          "title": "Anna",
           "row_count": 0,
           "rows": []
         },
         {
-          "hash": "scarflix_part-db3f532fdd48fe57",
-          "title": "Dolittle",
+          "hash": "scarflix_part-6bc868616f378edf",
+          "title": "The Ballerina",
           "row_count": 0,
           "rows": []
         },
         {
-          "hash": "scarflix_part-942255f029875306",
-          "title": "Gremlins",
-          "row_count": 1,
-          "rows": [
-            {
-              "part_id": 126173,
-              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gremlins (1984)\\ScarFLIX_part-942255f029875306\\stream.mkv",
-              "metadata_id": 49326,
-              "title": "ScarFLIX Part 942255f029875306",
-              "year": null,
-              "guid": "local://49326",
-              "library_section_id": 5
-            }
-          ]
-        },
-        {
-          "hash": "scarflix_part-bf8b8fcb4150df6b",
-          "title": "Man in the Mirror: The Michael Jackson Story",
+          "hash": "scarflix_part-d04bde274e598c57",
+          "title": "Despicable Me 3",
           "row_count": 0,
           "rows": []
         },
         {
-          "hash": "scarflix_part-2248c141861c0a2c",
-          "title": "9½ Weeks",
-          "row_count": 1,
-          "rows": [
-            {
-              "part_id": 126174,
-              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv",
-              "metadata_id": 49327,
-              "title": "ScarFLIX Part 2248c141861c0a2c",
-              "year": null,
-              "guid": "local://49327",
-              "library_section_id": 5
-            }
-          ]
-        },
-        {
-          "hash": "scarflix_part-ea2489ddc0285b99",
-          "title": "Reservoir Dogs",
-          "row_count": 1,
-          "rows": [
-            {
-              "part_id": 126175,
-              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Reservoir Dogs (1992)\\ScarFLIX_part-ea2489ddc0285b99\\stream.mkv",
-              "metadata_id": 49328,
-              "title": "ScarFLIX Part Ea2489ddc0285b99",
-              "year": null,
-              "guid": "local://49328",
-              "library_section_id": 5
-            }
-          ]
-        },
-        {
-          "hash": "scarflix_part-3ac0e5bd2415a5fc",
-          "title": "Silent Hill",
+          "hash": "scarflix_part-c017966a31451921",
+          "title": "Final Destination 5",
           "row_count": 0,
           "rows": []
         },
         {
-          "hash": "scarflix_part-d708c8b30a147319",
-          "title": "Stand by Me",
+          "hash": "scarflix_part-61f18dcc8c34f579",
+          "title": "Fracture",
           "row_count": 0,
           "rows": []
         },
         {
-          "hash": "scarflix_part-89731919b552c615",
-          "title": "Terminator Salvation",
+          "hash": "scarflix_part-700e6d7fdb8236a0",
+          "title": "Friday",
           "row_count": 0,
           "rows": []
         },
         {
-          "hash": "scarflix_part-491a4bfccb102f1e",
-          "title": "The Big Short",
+          "hash": "scarflix_part-31696108f69a37b9",
+          "title": "Hulk",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-5f2b46ebc01460e6",
+          "title": "My Hero Academia: You're Next",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-73b16faf4582f6ed",
+          "title": "Nacho Libre",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-fb19346714d96cd7",
+          "title": "Speed",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-6a30d1aa558bac1f",
+          "title": "Terminator: Dark Fate",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-78ebe23593166235",
+          "title": "The Jungle Book",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-93599b6b163a4b72",
+          "title": "The Mist",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-a0692a530078eae1",
+          "title": "The Mitchells vs. the Machines",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-ba7d61952f40f7bc",
+          "title": "The Transporter",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-5d08e120806b8ae9",
+          "title": "The Whale",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-be2edbceddc0dd6f",
+          "title": "They Call Me Trinity",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-99fa62934c2d677c",
+          "title": "To Wong Foo, Thanks for Everything! Julie Newmar",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-b6caef61efed54f1",
+          "title": "Twister",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-c2fa5a32a4d5e81c",
+          "title": "Watchmen",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-fe9eb00f9fe3c79f",
+          "title": "Wrong Turn 5: Bloodlines",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-bd7eda1ae6bf343a",
+          "title": "Zombieland",
           "row_count": 0,
           "rows": []
         }
@@ -2130,22 +2517,6 @@
       "ok": true,
       "db_path": "C:/Users/jason/AppData/Local/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db",
       "probes": [
-        {
-          "hash": "scarflix_part-81107989d2e30cfb",
-          "title": "Anna",
-          "row_count": 1,
-          "rows": [
-            {
-              "part_id": 126152,
-              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-              "metadata_id": 49305,
-              "title": "ScarFLIX Part 81107989d2e30cfb",
-              "year": null,
-              "guid": "local://49305",
-              "library_section_id": 5
-            }
-          ]
-        },
         {
           "hash": "scarflix_part-c08b683f68e4e49e",
           "title": "Annabelle",
@@ -2177,6 +2548,22 @@
               "library_section_id": 5
             }
           ]
+        },
+        {
+          "hash": "scarflix_part-2eaab8df357724dc",
+          "title": "Armageddon",
+          "row_count": 1,
+          "rows": [
+            {
+              "part_id": 125852,
+              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+              "metadata_id": 49061,
+              "title": "ScarFLIX Part 2eaab8df357724dc",
+              "year": null,
+              "guid": "local://49061",
+              "library_section_id": 5
+            }
+          ]
         }
       ]
     }
@@ -2185,419 +2572,876 @@
     "files_scanned": [
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "size": 4923984,
-        "mtime_utc": "2026-06-10T23:16:14.622Z"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
-        "size": 69378,
-        "mtime_utc": "2026-06-10T23:16:13.998Z"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.5.log",
-        "size": 137098,
-        "mtime_utc": "2026-06-10T23:16:13.779Z"
+        "size": 7996743,
+        "mtime_utc": "2026-06-10T23:31:53.941Z"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.log",
-        "size": 4368,
-        "mtime_utc": "2026-06-10T23:15:49.173Z"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.1.log",
-        "size": 2822,
-        "mtime_utc": "2026-06-10T23:15:48.281Z"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Credits.log",
-        "size": 1930,
-        "mtime_utc": "2026-06-10T23:10:57.691Z"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Credits.1.log",
-        "size": 1866,
-        "mtime_utc": "2026-06-10T23:10:56.780Z"
+        "size": 4360,
+        "mtime_utc": "2026-06-10T23:31:49.512Z"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Chapter Thumbnails.log",
-        "size": 916,
-        "mtime_utc": "2026-06-10T23:10:55.778Z"
+        "size": 27593,
+        "mtime_utc": "2026-06-10T23:31:49.074Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.1.log",
+        "size": 11365,
+        "mtime_utc": "2026-06-10T23:31:45.707Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "size": 385513,
+        "mtime_utc": "2026-06-10T23:31:15.962Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Credits.log",
+        "size": 1854,
+        "mtime_utc": "2026-06-10T23:30:48.734Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Credits.1.log",
+        "size": 1930,
+        "mtime_utc": "2026-06-10T23:30:47.955Z"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Analysis.log",
-        "size": 2634,
-        "mtime_utc": "2026-06-10T23:10:55.560Z"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Chapter Thumbnails.1.log",
-        "size": 882,
-        "mtime_utc": "2026-06-10T23:10:55.537Z"
+        "size": 2493,
+        "mtime_utc": "2026-06-10T23:30:47.154Z"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Analysis.1.log",
-        "size": 2497,
-        "mtime_utc": "2026-06-10T23:10:55.316Z"
+        "size": 2634,
+        "mtime_utc": "2026-06-10T23:30:47.091Z"
       },
       {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.2.log",
-        "size": 4164,
-        "mtime_utc": "2026-06-10T23:10:45.979Z"
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Credits.2.log",
+        "size": 76208,
+        "mtime_utc": "2026-06-10T23:29:11.595Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Chapter Thumbnails.1.log",
+        "size": 898,
+        "mtime_utc": "2026-06-10T23:29:06.976Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Chapter Thumbnails.2.log",
+        "size": 86090,
+        "mtime_utc": "2026-06-10T23:29:06.735Z"
       }
     ],
-    "term_count": 39,
+    "term_count": 75,
     "matches": [
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-c08b683f68e4e49e",
-        "line": "Jun 11, 2026 09:11:13.476 [1640] DEBUG - Request: [127.0.0.1:53366 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-c08b683f68e4e49e (16 live) #8992 GZIP Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-c08b683f68e4e49e",
-        "line": "Jun 11, 2026 09:11:13.476 [29836] DEBUG - Completed: [127.0.0.1:53366] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-c08b683f68e4e49e (16 live) #8992 GZIP 0ms 416 bytes (pipelined: 3)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-942255f029875306",
-        "line": "Jun 11, 2026 09:13:09.566 [23512] DEBUG - Request: [127.0.0.1:59266 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-942255f029875306 (12 live) #8b7a GZIP Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-942255f029875306",
-        "line": "Jun 11, 2026 09:13:09.566 [17212] DEBUG - Completed: [127.0.0.1:59266] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-942255f029875306 (12 live) #8b7a GZIP 0ms 416 bytes (pipelined: 1)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-2248c141861c0a2c",
-        "line": "Jun 11, 2026 09:13:37.048 [23512] DEBUG - Request: [127.0.0.1:58567 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-2248c141861c0a2c (9 live) #8bb6 GZIP Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-2248c141861c0a2c",
-        "line": "Jun 11, 2026 09:13:37.049 [17212] DEBUG - Completed: [127.0.0.1:58567] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-2248c141861c0a2c (9 live) #8bb6 GZIP 0ms 416 bytes (pipelined: 1)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-ea2489ddc0285b99",
-        "line": "Jun 11, 2026 09:14:05.819 [23512] DEBUG - Request: [127.0.0.1:54185 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-ea2489ddc0285b99 (9 live) #8bcd GZIP Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-ea2489ddc0285b99",
-        "line": "Jun 11, 2026 09:14:05.819 [29836] DEBUG - Completed: [127.0.0.1:54185] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-ea2489ddc0285b99 (9 live) #8bcd GZIP 0ms 416 bytes (pipelined: 1)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-491a4bfccb102f1e",
-        "line": "Jun 11, 2026 09:16:03.494 [13212] DEBUG - Request: [127.0.0.1:54433 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-491a4bfccb102f1e (13 live) #9680 GZIP Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "scarflix_part-491a4bfccb102f1e",
-        "line": "Jun 11, 2026 09:16:03.495 [17212] DEBUG - Completed: [127.0.0.1:54433] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-491a4bfccb102f1e (13 live) #9680 GZIP 7ms 416 bytes (pipelined: 3)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "7c4868fe7b1db021",
-        "line": "Jun 11, 2026 09:16:14.057 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+7c4868fe7b1db021 (15 live) #a68f Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "7c4868fe7b1db021",
-        "line": "Jun 11, 2026 09:16:14.058 [17212] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+7c4868fe7b1db021 (15 live) #a68f Page 0-9 0ms 297 bytes (pipelined: 1)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "7c4868fe7b1db021",
-        "line": "Jun 11, 2026 09:16:14.062 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+7c4868fe7b1db021 (16 live) #b157 Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "7c4868fe7b1db021",
-        "line": "Jun 11, 2026 09:16:14.064 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+7c4868fe7b1db021 (16 live) #b157 Page 0-9 2ms 779 bytes (pipelined: 1)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "db3f532fdd48fe57",
-        "line": "Jun 11, 2026 09:16:14.066 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+db3f532fdd48fe57 (16 live) #b17e Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "db3f532fdd48fe57",
-        "line": "Jun 11, 2026 09:16:14.066 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+db3f532fdd48fe57 (16 live) #b17e Page 0-9 0ms 297 bytes (pipelined: 2)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "db3f532fdd48fe57",
-        "line": "Jun 11, 2026 09:16:14.067 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+db3f532fdd48fe57 (16 live) #b180 Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "db3f532fdd48fe57",
-        "line": "Jun 11, 2026 09:16:14.069 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+db3f532fdd48fe57 (16 live) #b180 Page 0-9 2ms 779 bytes (pipelined: 2)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "942255f029875306",
-        "line": "Jun 11, 2026 09:16:14.070 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+942255f029875306 (16 live) #b181 Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "942255f029875306",
-        "line": "Jun 11, 2026 09:16:14.070 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+942255f029875306 (16 live) #b181 Page 0-9 0ms 297 bytes (pipelined: 3)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "942255f029875306",
-        "line": "Jun 11, 2026 09:16:14.071 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+942255f029875306 (16 live) #b182 Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "942255f029875306",
-        "line": "Jun 11, 2026 09:16:14.073 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+942255f029875306 (16 live) #b182 Page 0-9 2ms 1217 bytes (pipelined: 3)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "bf8b8fcb4150df6b",
-        "line": "Jun 11, 2026 09:16:14.075 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bf8b8fcb4150df6b (16 live) #b183 Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "bf8b8fcb4150df6b",
-        "line": "Jun 11, 2026 09:16:14.075 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bf8b8fcb4150df6b (16 live) #b183 Page 0-9 0ms 297 bytes (pipelined: 4)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "bf8b8fcb4150df6b",
-        "line": "Jun 11, 2026 09:16:14.076 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bf8b8fcb4150df6b (16 live) #b184 Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "bf8b8fcb4150df6b",
-        "line": "Jun 11, 2026 09:16:14.078 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bf8b8fcb4150df6b (16 live) #b184 Page 0-9 2ms 779 bytes (pipelined: 4)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "2248c141861c0a2c",
-        "line": "Jun 11, 2026 09:16:14.080 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2248c141861c0a2c (16 live) #b185 Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "2248c141861c0a2c",
-        "line": "Jun 11, 2026 09:16:14.080 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2248c141861c0a2c (16 live) #b185 Page 0-9 0ms 297 bytes (pipelined: 5)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "2248c141861c0a2c",
-        "line": "Jun 11, 2026 09:16:14.081 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2248c141861c0a2c (16 live) #b186 Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "2248c141861c0a2c",
-        "line": "Jun 11, 2026 09:16:14.084 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2248c141861c0a2c (16 live) #b186 Page 0-9 2ms 1223 bytes (pipelined: 5)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "ea2489ddc0285b99",
-        "line": "Jun 11, 2026 09:16:14.085 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ea2489ddc0285b99 (16 live) #b187 Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "ea2489ddc0285b99",
-        "line": "Jun 11, 2026 09:16:14.085 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ea2489ddc0285b99 (16 live) #b187 Page 0-9 0ms 297 bytes (pipelined: 6)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "ea2489ddc0285b99",
-        "line": "Jun 11, 2026 09:16:14.086 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ea2489ddc0285b99 (16 live) #b188 Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "ea2489ddc0285b99",
-        "line": "Jun 11, 2026 09:16:14.088 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ea2489ddc0285b99 (16 live) #b188 Page 0-9 2ms 1223 bytes (pipelined: 6)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "3ac0e5bd2415a5fc",
-        "line": "Jun 11, 2026 09:16:14.089 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+3ac0e5bd2415a5fc (16 live) #b189 Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "3ac0e5bd2415a5fc",
-        "line": "Jun 11, 2026 09:16:14.089 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+3ac0e5bd2415a5fc (16 live) #b189 Page 0-9 0ms 297 bytes (pipelined: 7)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "3ac0e5bd2415a5fc",
-        "line": "Jun 11, 2026 09:16:14.090 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+3ac0e5bd2415a5fc (16 live) #b18a Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "3ac0e5bd2415a5fc",
-        "line": "Jun 11, 2026 09:16:14.092 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+3ac0e5bd2415a5fc (16 live) #b18a Page 0-9 2ms 779 bytes (pipelined: 7)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "d708c8b30a147319",
-        "line": "Jun 11, 2026 09:16:14.092 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d708c8b30a147319 (16 live) #b18b Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "d708c8b30a147319",
-        "line": "Jun 11, 2026 09:16:14.093 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d708c8b30a147319 (16 live) #b18b Page 0-9 0ms 297 bytes (pipelined: 8)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "d708c8b30a147319",
-        "line": "Jun 11, 2026 09:16:14.093 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d708c8b30a147319 (16 live) #b18c Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "d708c8b30a147319",
-        "line": "Jun 11, 2026 09:16:14.096 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d708c8b30a147319 (16 live) #b18c Page 0-9 3ms 779 bytes (pipelined: 8)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "89731919b552c615",
-        "line": "Jun 11, 2026 09:16:14.097 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+89731919b552c615 (16 live) #b18d Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "89731919b552c615",
-        "line": "Jun 11, 2026 09:16:14.097 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+89731919b552c615 (16 live) #b18d Page 0-9 0ms 297 bytes (pipelined: 9)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "89731919b552c615",
-        "line": "Jun 11, 2026 09:16:14.098 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+89731919b552c615 (16 live) #b18e Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "89731919b552c615",
-        "line": "Jun 11, 2026 09:16:14.100 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+89731919b552c615 (16 live) #b18e Page 0-9 2ms 779 bytes (pipelined: 9)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "491a4bfccb102f1e",
-        "line": "Jun 11, 2026 09:16:14.100 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+491a4bfccb102f1e (16 live) #b18f Page 0-9 Signed-in Token ()"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "491a4bfccb102f1e",
-        "line": "Jun 11, 2026 09:16:14.101 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+491a4bfccb102f1e (16 live) #b18f Page 0-9 0ms 297 bytes (pipelined: 10)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "491a4bfccb102f1e",
-        "line": "Jun 11, 2026 09:16:14.101 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+491a4bfccb102f1e (16 live) #b190 Page 0-9 Signed-in Token (r0cksteady)"
-      },
-      {
-        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "491a4bfccb102f1e",
-        "line": "Jun 11, 2026 09:16:14.104 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+491a4bfccb102f1e (16 live) #b190 Page 0-9 2ms 779 bytes (pipelined: 10)"
+        "term": "81107989d2e30cfb",
+        "line": "Jun 11, 2026 09:31:51.688 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (12 live) #11c04 Page 0-9 Signed-in Token ()"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "81107989d2e30cfb",
-        "line": "Jun 11, 2026 09:16:14.104 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (16 live) #b191 Page 0-9 Signed-in Token ()"
+        "line": "Jun 11, 2026 09:31:51.688 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (12 live) #11c04 Page 0-9 0ms 297 bytes (pipelined: 1)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "81107989d2e30cfb",
-        "line": "Jun 11, 2026 09:16:14.104 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (16 live) #b191 Page 0-9 0ms 297 bytes (pipelined: 11)"
+        "line": "Jun 11, 2026 09:31:51.692 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (13 live) #11c9d Page 0-9 Signed-in Token (r0cksteady)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "81107989d2e30cfb",
-        "line": "Jun 11, 2026 09:16:14.105 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (16 live) #b192 Page 0-9 Signed-in Token (r0cksteady)"
+        "line": "Jun 11, 2026 09:31:51.694 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (13 live) #11c9d Page 0-9 1ms 779 bytes (pipelined: 1)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
-        "term": "81107989d2e30cfb",
-        "line": "Jun 11, 2026 09:16:14.108 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (16 live) #b192 Page 0-9 2ms 1213 bytes (pipelined: 11)"
+        "term": "6bc868616f378edf",
+        "line": "Jun 11, 2026 09:31:51.696 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+6bc868616f378edf (13 live) #11c9e Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "6bc868616f378edf",
+        "line": "Jun 11, 2026 09:31:51.696 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+6bc868616f378edf (13 live) #11c9e Page 0-9 0ms 297 bytes (pipelined: 2)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "6bc868616f378edf",
+        "line": "Jun 11, 2026 09:31:51.697 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+6bc868616f378edf (13 live) #11ca0 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "6bc868616f378edf",
+        "line": "Jun 11, 2026 09:31:51.699 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+6bc868616f378edf (13 live) #11ca0 Page 0-9 2ms 779 bytes (pipelined: 2)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d04bde274e598c57",
+        "line": "Jun 11, 2026 09:31:51.700 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d04bde274e598c57 (13 live) #11ca1 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d04bde274e598c57",
+        "line": "Jun 11, 2026 09:31:51.700 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d04bde274e598c57 (13 live) #11ca1 Page 0-9 0ms 297 bytes (pipelined: 3)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d04bde274e598c57",
+        "line": "Jun 11, 2026 09:31:51.700 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d04bde274e598c57 (13 live) #11ca2 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d04bde274e598c57",
+        "line": "Jun 11, 2026 09:31:51.702 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d04bde274e598c57 (13 live) #11ca2 Page 0-9 1ms 779 bytes (pipelined: 3)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c017966a31451921",
+        "line": "Jun 11, 2026 09:31:51.703 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c017966a31451921 (13 live) #11ca3 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c017966a31451921",
+        "line": "Jun 11, 2026 09:31:51.703 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c017966a31451921 (13 live) #11ca3 Page 0-9 0ms 297 bytes (pipelined: 4)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c017966a31451921",
+        "line": "Jun 11, 2026 09:31:51.704 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c017966a31451921 (13 live) #11ca4 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c017966a31451921",
+        "line": "Jun 11, 2026 09:31:51.706 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c017966a31451921 (13 live) #11ca4 Page 0-9 1ms 779 bytes (pipelined: 4)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:31:51.706 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+61f18dcc8c34f579 (13 live) #11ca5 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:31:51.707 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+61f18dcc8c34f579 (13 live) #11ca5 Page 0-9 0ms 297 bytes (pipelined: 5)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:31:51.708 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+61f18dcc8c34f579 (13 live) #11ca6 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:31:51.710 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+61f18dcc8c34f579 (13 live) #11ca6 Page 0-9 1ms 779 bytes (pipelined: 5)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:31:51.710 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+700e6d7fdb8236a0 (13 live) #11ca7 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:31:51.710 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+700e6d7fdb8236a0 (13 live) #11ca7 Page 0-9 0ms 297 bytes (pipelined: 6)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:31:51.711 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+700e6d7fdb8236a0 (13 live) #11ca8 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:31:51.713 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+700e6d7fdb8236a0 (13 live) #11ca8 Page 0-9 2ms 779 bytes (pipelined: 6)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "31696108f69a37b9",
+        "line": "Jun 11, 2026 09:31:51.714 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+31696108f69a37b9 (13 live) #11ca9 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "31696108f69a37b9",
+        "line": "Jun 11, 2026 09:31:51.714 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+31696108f69a37b9 (13 live) #11ca9 Page 0-9 0ms 297 bytes (pipelined: 7)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "31696108f69a37b9",
+        "line": "Jun 11, 2026 09:31:51.715 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+31696108f69a37b9 (13 live) #11caa Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "31696108f69a37b9",
+        "line": "Jun 11, 2026 09:31:51.717 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+31696108f69a37b9 (13 live) #11caa Page 0-9 1ms 779 bytes (pipelined: 7)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:31:51.717 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+5f2b46ebc01460e6 (13 live) #11cab Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:31:51.717 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+5f2b46ebc01460e6 (13 live) #11cab Page 0-9 0ms 297 bytes (pipelined: 8)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:31:51.717 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+5f2b46ebc01460e6 (13 live) #11cac Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:31:51.719 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+5f2b46ebc01460e6 (13 live) #11cac Page 0-9 1ms 779 bytes (pipelined: 8)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "73b16faf4582f6ed",
+        "line": "Jun 11, 2026 09:31:51.720 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+73b16faf4582f6ed (13 live) #11cad Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "73b16faf4582f6ed",
+        "line": "Jun 11, 2026 09:31:51.720 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+73b16faf4582f6ed (13 live) #11cad Page 0-9 0ms 297 bytes (pipelined: 9)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "73b16faf4582f6ed",
+        "line": "Jun 11, 2026 09:31:51.720 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+73b16faf4582f6ed (13 live) #11cae Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "73b16faf4582f6ed",
+        "line": "Jun 11, 2026 09:31:51.722 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+73b16faf4582f6ed (13 live) #11cae Page 0-9 1ms 779 bytes (pipelined: 9)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "fb19346714d96cd7",
+        "line": "Jun 11, 2026 09:31:51.722 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+fb19346714d96cd7 (13 live) #11caf Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "fb19346714d96cd7",
+        "line": "Jun 11, 2026 09:31:51.722 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+fb19346714d96cd7 (13 live) #11caf Page 0-9 0ms 297 bytes (pipelined: 10)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "fb19346714d96cd7",
+        "line": "Jun 11, 2026 09:31:51.723 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+fb19346714d96cd7 (13 live) #11cb0 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "fb19346714d96cd7",
+        "line": "Jun 11, 2026 09:31:51.724 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+fb19346714d96cd7 (13 live) #11cb0 Page 0-9 1ms 779 bytes (pipelined: 10)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "6a30d1aa558bac1f",
+        "line": "Jun 11, 2026 09:31:51.725 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+6a30d1aa558bac1f (13 live) #11cb1 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "6a30d1aa558bac1f",
+        "line": "Jun 11, 2026 09:31:51.725 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+6a30d1aa558bac1f (13 live) #11cb1 Page 0-9 0ms 297 bytes (pipelined: 11)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "6a30d1aa558bac1f",
+        "line": "Jun 11, 2026 09:31:51.725 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+6a30d1aa558bac1f (13 live) #11cb2 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "6a30d1aa558bac1f",
+        "line": "Jun 11, 2026 09:31:51.727 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+6a30d1aa558bac1f (13 live) #11cb2 Page 0-9 1ms 779 bytes (pipelined: 11)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "78ebe23593166235",
+        "line": "Jun 11, 2026 09:31:51.727 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+78ebe23593166235 (13 live) #11cb3 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "78ebe23593166235",
+        "line": "Jun 11, 2026 09:31:51.727 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+78ebe23593166235 (13 live) #11cb3 Page 0-9 0ms 297 bytes (pipelined: 12)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "78ebe23593166235",
+        "line": "Jun 11, 2026 09:31:51.728 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+78ebe23593166235 (13 live) #11cb4 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "78ebe23593166235",
+        "line": "Jun 11, 2026 09:31:51.731 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+78ebe23593166235 (13 live) #11cb4 Page 0-9 3ms 779 bytes (pipelined: 12)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "93599b6b163a4b72",
+        "line": "Jun 11, 2026 09:31:51.731 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+93599b6b163a4b72 (13 live) #11cb5 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "93599b6b163a4b72",
+        "line": "Jun 11, 2026 09:31:51.732 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+93599b6b163a4b72 (13 live) #11cb5 Page 0-9 0ms 297 bytes (pipelined: 13)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "93599b6b163a4b72",
+        "line": "Jun 11, 2026 09:31:51.732 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+93599b6b163a4b72 (13 live) #11cb6 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "93599b6b163a4b72",
+        "line": "Jun 11, 2026 09:31:51.734 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+93599b6b163a4b72 (13 live) #11cb6 Page 0-9 1ms 779 bytes (pipelined: 13)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "a0692a530078eae1",
+        "line": "Jun 11, 2026 09:31:51.734 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+a0692a530078eae1 (13 live) #11cb7 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "a0692a530078eae1",
+        "line": "Jun 11, 2026 09:31:51.734 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+a0692a530078eae1 (13 live) #11cb7 Page 0-9 0ms 297 bytes (pipelined: 14)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "a0692a530078eae1",
+        "line": "Jun 11, 2026 09:31:51.734 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+a0692a530078eae1 (13 live) #11cb8 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "a0692a530078eae1",
+        "line": "Jun 11, 2026 09:31:51.736 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+a0692a530078eae1 (13 live) #11cb8 Page 0-9 1ms 779 bytes (pipelined: 14)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "ba7d61952f40f7bc",
+        "line": "Jun 11, 2026 09:31:51.736 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ba7d61952f40f7bc (13 live) #11cb9 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "ba7d61952f40f7bc",
+        "line": "Jun 11, 2026 09:31:51.736 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ba7d61952f40f7bc (13 live) #11cb9 Page 0-9 0ms 297 bytes (pipelined: 15)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "ba7d61952f40f7bc",
+        "line": "Jun 11, 2026 09:31:51.737 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ba7d61952f40f7bc (13 live) #11cba Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "ba7d61952f40f7bc",
+        "line": "Jun 11, 2026 09:31:51.738 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ba7d61952f40f7bc (13 live) #11cba Page 0-9 1ms 779 bytes (pipelined: 15)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "5d08e120806b8ae9",
+        "line": "Jun 11, 2026 09:31:51.739 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+5d08e120806b8ae9 (13 live) #11cbb Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "5d08e120806b8ae9",
+        "line": "Jun 11, 2026 09:31:51.739 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+5d08e120806b8ae9 (13 live) #11cbb Page 0-9 0ms 297 bytes (pipelined: 16)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "5d08e120806b8ae9",
+        "line": "Jun 11, 2026 09:31:51.739 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+5d08e120806b8ae9 (13 live) #11cbc Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "5d08e120806b8ae9",
+        "line": "Jun 11, 2026 09:31:51.741 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+5d08e120806b8ae9 (13 live) #11cbc Page 0-9 1ms 779 bytes (pipelined: 16)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "be2edbceddc0dd6f",
+        "line": "Jun 11, 2026 09:31:51.741 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+be2edbceddc0dd6f (13 live) #11cbd Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "be2edbceddc0dd6f",
+        "line": "Jun 11, 2026 09:31:51.741 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+be2edbceddc0dd6f (13 live) #11cbd Page 0-9 0ms 297 bytes (pipelined: 17)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "be2edbceddc0dd6f",
+        "line": "Jun 11, 2026 09:31:51.741 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+be2edbceddc0dd6f (13 live) #11cbe Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "be2edbceddc0dd6f",
+        "line": "Jun 11, 2026 09:31:51.743 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+be2edbceddc0dd6f (13 live) #11cbe Page 0-9 1ms 779 bytes (pipelined: 17)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:31:51.743 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+99fa62934c2d677c (13 live) #11cbf Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:31:51.743 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+99fa62934c2d677c (13 live) #11cbf Page 0-9 0ms 297 bytes (pipelined: 18)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:31:51.744 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+99fa62934c2d677c (13 live) #11cc0 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:31:51.746 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+99fa62934c2d677c (13 live) #11cc0 Page 0-9 2ms 779 bytes (pipelined: 18)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:31:51.746 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+b6caef61efed54f1 (13 live) #11cc1 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:31:51.746 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+b6caef61efed54f1 (13 live) #11cc1 Page 0-9 0ms 297 bytes (pipelined: 19)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:31:51.747 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+b6caef61efed54f1 (13 live) #11cc2 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:31:51.749 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+b6caef61efed54f1 (13 live) #11cc2 Page 0-9 1ms 779 bytes (pipelined: 19)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c2fa5a32a4d5e81c",
+        "line": "Jun 11, 2026 09:31:51.749 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c2fa5a32a4d5e81c (13 live) #11cc3 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c2fa5a32a4d5e81c",
+        "line": "Jun 11, 2026 09:31:51.750 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c2fa5a32a4d5e81c (13 live) #11cc3 Page 0-9 0ms 297 bytes (pipelined: 20)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c2fa5a32a4d5e81c",
+        "line": "Jun 11, 2026 09:31:51.750 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c2fa5a32a4d5e81c (13 live) #11cc4 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c2fa5a32a4d5e81c",
+        "line": "Jun 11, 2026 09:31:51.752 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c2fa5a32a4d5e81c (13 live) #11cc4 Page 0-9 1ms 779 bytes (pipelined: 20)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "fe9eb00f9fe3c79f",
+        "line": "Jun 11, 2026 09:31:51.752 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+fe9eb00f9fe3c79f (13 live) #11cc5 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "fe9eb00f9fe3c79f",
+        "line": "Jun 11, 2026 09:31:51.752 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+fe9eb00f9fe3c79f (13 live) #11cc5 Page 0-9 0ms 297 bytes (pipelined: 21)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "fe9eb00f9fe3c79f",
+        "line": "Jun 11, 2026 09:31:51.752 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+fe9eb00f9fe3c79f (13 live) #11cc6 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "fe9eb00f9fe3c79f",
+        "line": "Jun 11, 2026 09:31:51.754 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+fe9eb00f9fe3c79f (13 live) #11cc6 Page 0-9 1ms 779 bytes (pipelined: 21)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "bd7eda1ae6bf343a",
+        "line": "Jun 11, 2026 09:31:51.754 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bd7eda1ae6bf343a (13 live) #11cc7 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "bd7eda1ae6bf343a",
+        "line": "Jun 11, 2026 09:31:51.755 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bd7eda1ae6bf343a (13 live) #11cc7 Page 0-9 0ms 297 bytes (pipelined: 22)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "bd7eda1ae6bf343a",
+        "line": "Jun 11, 2026 09:31:51.755 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bd7eda1ae6bf343a (13 live) #11cc8 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "bd7eda1ae6bf343a",
+        "line": "Jun 11, 2026 09:31:51.757 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bd7eda1ae6bf343a (13 live) #11cc8 Page 0-9 1ms 779 bytes (pipelined: 22)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "c08b683f68e4e49e",
-        "line": "Jun 11, 2026 09:16:14.108 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (16 live) #b193 Page 0-9 Signed-in Token ()"
+        "line": "Jun 11, 2026 09:31:51.757 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (13 live) #11cc9 Page 0-9 Signed-in Token ()"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "c08b683f68e4e49e",
-        "line": "Jun 11, 2026 09:16:14.108 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (16 live) #b193 Page 0-9 0ms 297 bytes (pipelined: 12)"
+        "line": "Jun 11, 2026 09:31:51.757 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (13 live) #11cc9 Page 0-9 0ms 297 bytes (pipelined: 23)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "c08b683f68e4e49e",
-        "line": "Jun 11, 2026 09:16:14.109 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (16 live) #b194 Page 0-9 Signed-in Token (r0cksteady)"
+        "line": "Jun 11, 2026 09:31:51.758 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (13 live) #11cca Page 0-9 Signed-in Token (r0cksteady)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "c08b683f68e4e49e",
-        "line": "Jun 11, 2026 09:16:14.111 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (16 live) #b194 Page 0-9 2ms 1218 bytes (pipelined: 12)"
+        "line": "Jun 11, 2026 09:31:51.760 [29836] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (13 live) #11cca Page 0-9 2ms 1218 bytes (pipelined: 23)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "d8b22fb3f498688e",
-        "line": "Jun 11, 2026 09:16:14.112 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (16 live) #b195 Page 0-9 Signed-in Token ()"
+        "line": "Jun 11, 2026 09:31:51.761 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (13 live) #11ccb Page 0-9 Signed-in Token ()"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "d8b22fb3f498688e",
-        "line": "Jun 11, 2026 09:16:14.112 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (16 live) #b195 Page 0-9 0ms 297 bytes (pipelined: 13)"
+        "line": "Jun 11, 2026 09:31:51.762 [17212] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (13 live) #11ccb Page 0-9 0ms 297 bytes (pipelined: 24)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "d8b22fb3f498688e",
-        "line": "Jun 11, 2026 09:16:14.113 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (16 live) #b196 Page 0-9 Signed-in Token (r0cksteady)"
+        "line": "Jun 11, 2026 09:31:51.763 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (13 live) #11ccc Page 0-9 Signed-in Token (r0cksteady)"
       },
       {
         "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
         "term": "d8b22fb3f498688e",
-        "line": "Jun 11, 2026 09:16:14.115 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (16 live) #b196 Page 0-9 2ms 1221 bytes (pipelined: 13)"
+        "line": "Jun 11, 2026 09:31:51.765 [17212] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (13 live) #11ccc Page 0-9 2ms 1221 bytes (pipelined: 24)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "2eaab8df357724dc",
+        "line": "Jun 11, 2026 09:31:51.766 [29084] DEBUG - Request: [127.0.0.1:58848 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2eaab8df357724dc (13 live) #11ccd Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "2eaab8df357724dc",
+        "line": "Jun 11, 2026 09:31:51.766 [29836] DEBUG - Completed: [127.0.0.1:58848] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2eaab8df357724dc (13 live) #11ccd Page 0-9 0ms 297 bytes (pipelined: 25)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "2eaab8df357724dc",
+        "line": "Jun 11, 2026 09:31:51.766 [29084] DEBUG - Request: [192.168.1.184:58622 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2eaab8df357724dc (13 live) #11cce Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "2eaab8df357724dc",
+        "line": "Jun 11, 2026 09:31:51.769 [17212] DEBUG - Completed: [192.168.1.184:58622] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2eaab8df357724dc (13 live) #11cce Page 0-9 2ms 1218 bytes (pipelined: 25)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "Friday (1995)",
+        "line": "Jun 11, 2026 09:25:26.940 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995) (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "Friday (1995)",
+        "line": "Jun 11, 2026 09:25:26.941 [21392] DEBUG - Skipping over directory '_ScarFLIXLive\\06 Discover Movies\\Friday (1995)', as nothing has changed; removing 0 media items from map."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:25:26.942 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0 (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:25:27.001 [21392] DEBUG - File 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv' changed write time, can't skip."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:25:27.144 [21392] DEBUG - [HCl#37] HTTP requesting PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-700e6d7fdb8236a0"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:25:27.158 [38984] DEBUG - [HttpClient/HCl#37] HTTP/1.1 (0.0s) 200 response from PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-700e6d7fdb8236a0 (reused)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:25:28.154 [38292] DEBUG - Turbo analysis on modified item 125837 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-700e6d7fdb8236a0",
+        "line": "Jun 11, 2026 09:25:29.313 [38292] DEBUG - Updating part with ID=126087 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "To Wong Foo, Thanks for Everything! Julie Newmar (1995)",
+        "line": "Jun 11, 2026 09:25:31.875 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\To Wong Foo, Thanks for Everything! Julie Newmar (1995) (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "To Wong Foo, Thanks for Everything! Julie Newmar (1995)",
+        "line": "Jun 11, 2026 09:25:31.884 [21392] DEBUG - Skipping over directory '_ScarFLIXLive\\06 Discover Movies\\To Wong Foo, Thanks for Everything! Julie Newmar (1995)', as nothing has changed; removing 0 media items from map."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:25:31.895 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\To Wong Foo, Thanks for Everything! Julie Newmar (1995)\\ScarFLIX_part-99fa62934c2d677c (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:25:31.962 [21392] DEBUG - File 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\To Wong Foo, Thanks for Everything! Julie Newmar (1995)\\ScarFLIX_part-99fa62934c2d677c\\stream.mkv' changed write time, can't skip."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:25:31.966 [21392] DEBUG - [HCl#3f] HTTP requesting PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-99fa62934c2d677c"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:25:31.968 [38984] DEBUG - [HttpClient/HCl#3f] HTTP/1.1 (0.0s) 200 response from PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-99fa62934c2d677c (reused)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:25:32.178 [4696] DEBUG - Turbo analysis on modified item 125895 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\To Wong Foo, Thanks for Everything! Julie Newmar (1995)\\ScarFLIX_part-99fa62934c2d677c\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-99fa62934c2d677c",
+        "line": "Jun 11, 2026 09:25:32.182 [4696] DEBUG - Updating part with ID=126145 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\To Wong Foo, Thanks for Everything! Julie Newmar (1995)\\ScarFLIX_part-99fa62934c2d677c\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "Final Destination 5 (2011)",
+        "line": "Jun 11, 2026 09:25:32.267 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011) (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "Final Destination 5 (2011)",
+        "line": "Jun 11, 2026 09:25:32.271 [21392] DEBUG - Skipping over directory '_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)', as nothing has changed; removing 0 media items from map."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-c017966a31451921",
+        "line": "Jun 11, 2026 09:25:32.273 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921 (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-c017966a31451921",
+        "line": "Jun 11, 2026 09:25:32.336 [21392] DEBUG - File 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv' changed write time, can't skip."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-c017966a31451921",
+        "line": "Jun 11, 2026 09:25:32.342 [21392] DEBUG - [HCl#43] HTTP requesting PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-c017966a31451921"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-c017966a31451921",
+        "line": "Jun 11, 2026 09:25:32.343 [38984] DEBUG - [HttpClient/HCl#43] HTTP/1.1 (0.0s) 200 response from PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-c017966a31451921 (reused)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-c017966a31451921",
+        "line": "Jun 11, 2026 09:25:32.555 [4696] DEBUG - Turbo analysis on modified item 125795 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-c017966a31451921",
+        "line": "Jun 11, 2026 09:25:32.609 [4696] DEBUG - Updating part with ID=126045 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "My Hero Academia You're Next (2024)",
+        "line": "Jun 11, 2026 09:25:33.200 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024) (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "My Hero Academia You're Next (2024)",
+        "line": "Jun 11, 2026 09:25:33.200 [21392] DEBUG - Skipping over directory '_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)', as nothing has changed; removing 0 media items from map."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:25:33.258 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6 (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:25:33.361 [21392] DEBUG - File 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv' changed write time, can't skip."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:25:33.378 [21392] DEBUG - [HCl#49] HTTP requesting PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-5f2b46ebc01460e6"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:25:33.379 [38984] DEBUG - [HttpClient/HCl#49] HTTP/1.1 (0.0s) 200 response from PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-5f2b46ebc01460e6 (reused)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "Twister (1996)",
+        "line": "Jun 11, 2026 09:25:33.389 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996) (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "Twister (1996)",
+        "line": "Jun 11, 2026 09:25:33.390 [21392] DEBUG - Skipping over directory '_ScarFLIXLive\\06 Discover Movies\\Twister (1996)', as nothing has changed; removing 0 media items from map."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:25:33.395 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1 (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:25:33.533 [21392] DEBUG - File 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv' changed write time, can't skip."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:25:33.538 [37020] DEBUG - Turbo analysis on modified item 125816 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:25:33.546 [21392] DEBUG - [HCl#4b] HTTP requesting PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-b6caef61efed54f1"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:25:33.548 [38984] DEBUG - [HttpClient/HCl#4b] HTTP/1.1 (0.0s) 200 response from PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-b6caef61efed54f1 (reused)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-5f2b46ebc01460e6",
+        "line": "Jun 11, 2026 09:25:33.550 [37020] DEBUG - Updating part with ID=126066 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:25:33.557 [35756] DEBUG - Turbo analysis on modified item 125802 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-b6caef61efed54f1",
+        "line": "Jun 11, 2026 09:25:33.560 [35756] DEBUG - Updating part with ID=126052 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "Fracture (2007)",
+        "line": "Jun 11, 2026 09:25:33.613 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007) (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "Fracture (2007)",
+        "line": "Jun 11, 2026 09:25:33.615 [21392] DEBUG - Skipping over directory '_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)', as nothing has changed; removing 0 media items from map."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:25:33.616 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579 (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:25:33.699 [21392] DEBUG - File 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv' changed write time, can't skip."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:25:33.709 [21392] DEBUG - [HCl#4d] HTTP requesting PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-61f18dcc8c34f579"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:25:33.715 [38292] DEBUG - Turbo analysis on modified item 125848 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:25:33.717 [38984] DEBUG - [HttpClient/HCl#4d] HTTP/1.1 (0.0s) 200 response from PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-61f18dcc8c34f579 (reused)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-61f18dcc8c34f579",
+        "line": "Jun 11, 2026 09:25:33.718 [38292] DEBUG - Updating part with ID=126098 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "The Mitchells vs. the Machines (2021)",
+        "line": "Jun 11, 2026 09:25:33.766 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021) (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "The Mitchells vs. the Machines (2021)",
+        "line": "Jun 11, 2026 09:25:33.767 [21392] DEBUG - Skipping over directory '_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)', as nothing has changed; removing 0 media items from map."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-a0692a530078eae1",
+        "line": "Jun 11, 2026 09:25:33.768 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1 (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-a0692a530078eae1",
+        "line": "Jun 11, 2026 09:25:33.984 [21392] DEBUG - File 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1\\stream.mkv' changed write time, can't skip."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-a0692a530078eae1",
+        "line": "Jun 11, 2026 09:25:34.013 [21392] DEBUG - [HCl#4f] HTTP requesting PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-a0692a530078eae1"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-a0692a530078eae1",
+        "line": "Jun 11, 2026 09:25:34.017 [35756] DEBUG - Turbo analysis on modified item 125841 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-a0692a530078eae1",
+        "line": "Jun 11, 2026 09:25:34.023 [38984] DEBUG - [HttpClient/HCl#4f] HTTP/1.1 (0.0s) 200 response from PUT http://127.0.0.1:32400/activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-a0692a530078eae1 (reused)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-a0692a530078eae1",
+        "line": "Jun 11, 2026 09:25:34.035 [35756] DEBUG - Updating part with ID=126091 [D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1\\stream.mkv]"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "The Jungle Book (2016)",
+        "line": "Jun 11, 2026 09:25:34.299 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016) (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "The Jungle Book (2016)",
+        "line": "Jun 11, 2026 09:25:34.300 [21392] DEBUG - Skipping over directory '_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)', as nothing has changed; removing 0 media items from map."
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-78ebe23593166235",
+        "line": "Jun 11, 2026 09:25:34.301 [21392] DEBUG - Scanner: Processing directory D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235 (parent: yes)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "term": "scarflix_part-78ebe23593166235",
+        "line": "Jun 11, 2026 09:25:34.341 [21392] DEBUG - File 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235\\stream.mkv' changed write time, can't skip."
       }
     ]
   },
   "summary": {
-    "plex_missing_matches": 3,
+    "plex_missing_matches": 0,
     "plex_present_matches": 3,
-    "db_missing_rows": 3,
+    "db_missing_rows": 0,
     "db_present_rows": 3,
-    "log_match_count": 62
+    "log_match_count": 160
   },
-  "hypothesis": "The affected Section 5 set is still naturally converging: current visibility improved to 95/105. The remaining 10 items remain absent from exact Plex metadata/API rows in this bounded check, and Plex DB rows mirror that absence for the probed hash/title terms.",
-  "recommendation": "Controlled expansion of the currently visible 95 hashes is reasonable only behind a verification gate: rerun focused Section 5 QA against visible-only hashes, require high pass rate and zero publication side effects, keep the 10 missing hashes held/retryable, and leave PAUSE_PUBLICATION active until the gate is explicitly passed. Waiting one more natural drift cycle may reduce residual misses further and is lower risk; proceeding visible-only is moderate risk but bounded if the gate is enforced.",
-  "github_push": {
-    "status": "REVIEW_PUSH_ERRORS",
-    "pushed": [
-      "latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md",
-      "latest/scarflix_v2/CODEX_STATUS_FOR_GROK.md",
-      "latest/scarflix_v2/section5_current_missing_correlation_status.md",
-      "latest/scarflix_v2/materialized_qa_incident_hypothesis_ledger.json",
-      "latest/scarflix_v2/materialized_qa_incident_hypothesis_ledger.md",
-      "latest/scarflix_v2/section5_uncapped_index_snapshot_status.json",
-      "latest/scarflix_v2/section5_tiny_plex_forensic_check_status.json"
-    ],
-    "errors": [
-      {
-        "rel": "latest/scarflix_v2/PROJECT_PLAN.md",
-        "http_status": 409,
-        "error": ""
-      },
-      {
-        "rel": "latest/scarflix_v2/section5_current_missing_correlation_status.json",
-        "http_status": 409,
-        "error": ""
-      }
-    ]
-  },
-  "post_worker_github_conflict_resolution": {
-    "status": "PASS_RESOLVED_AFTER_FRESH_SHA_PUSH",
-    "resolved_at_utc": "2026-06-10T23:19:28.133Z",
-    "pushed": [
-      "latest/scarflix_v2/PROJECT_PLAN.md",
-      "latest/scarflix_v2/section5_current_missing_correlation_status.json"
-    ],
-    "note": "The worker initially hit GitHub Contents API 409 conflicts on these two files; Codex resolved them with fresh SHA pushes after job completion."
-  }
+  "hypothesis": "The affected Section 5 set is still naturally converging: current visibility improved to 83/105. The remaining 22 items remain absent from exact Plex metadata/API rows in this bounded check, and Plex DB rows mirror that absence for the probed hash/title terms.",
+  "recommendation": "Controlled expansion of the currently visible 83 hashes is reasonable only behind a verification gate: rerun focused Section 5 QA against visible-only hashes, require high pass rate and zero publication side effects, keep the 22 missing hashes held/retryable, and leave PAUSE_PUBLICATION active until the gate is explicitly passed. Waiting one more natural drift cycle may reduce residual misses further and is lower risk; proceeding visible-only is moderate risk but bounded if the gate is enforced."
 }
