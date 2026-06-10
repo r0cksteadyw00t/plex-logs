@@ -1,59 +1,28 @@
 # FORENSIC HANDOFF FOR GROK
 
-**Updated UTC:** 2026-06-09T23:54:00Z
+**Updated UTC:** 2026-06-10T00:08:00Z
 
 ## Trigger Reason
 
-Phase 2 initiation run completed after `JasonOS_Prime_Orchestrator` was installed and healthy. Codex performed controlled non-essential task reduction batches, verified Orchestrator queue execution, patched the Orchestrator recurring scheduler to reduce churn, and wired Command Centre data to Orchestrator status. Full autonomous decision making and ScarFLIX expansion were not enabled.
+Phase 2 task ownership cleanup diagnostic completed. The goal was to explain why Batch 1/2 task pauses did not persist, run the Orchestrator reduction script in dry-run mode only, and define the migration plan into Orchestrator-owned scheduling without disabling more tasks or starting ScarFLIX work.
 
 ## Current State Summary
 
-### Orchestrator
-
-- Service: `JasonOS_Prime_Orchestrator`
-- Service status: `Running`
-- Current Node PID: `37680`
-- `/healthz`: HTTP `200`, status `PASS`
-- Version: `0.1.0`
-- SQLite: `PASS_node:sqlite`
-- DB: `D:\PlexTools\state\jasonos_prime\jasonos.db`
-- Last tick UTC: `2026-06-09T23:53:16.690Z`
-- Last error: none
-- Active jobs at final check: `0`
-- Pause flags: `PAUSE_ALL=false`, `PAUSE_PUBLICATION=false`, `SAFE_MODE=false`
-- Safety flags: legacy/direct resolver expansion disabled; long validation inline disabled; consumer requires allowlisted low/medium approved non-expired instructions.
-
-### Safety Gate
-
-- Final `cmd /c echo alive`: `5/5` PASS, elapsed `119ms`, `42ms`, `58ms`, `124ms`, `127ms`
-- Final Sentinel: `REVIEW/MEDIUM`
+- Orchestrator service: `Running`
+- Orchestrator `/healthz`: HTTP `200`, status `PASS`
+- Echo safety check: `5/5` PASS, elapsed `69ms`, `33ms`, `13ms`, `14ms`, `14ms`
+- Sentinel: `PASS/LOW`
 - `codex_action_required=false`
 - `jason_action_required=false`
-- Materialized all-visible QA: `REVIEW 119/229`, failed `110`, playback decision `FAIL`
+- Materialized all-visible QA: `REVIEW 119/229`
+- Materialized failures: `110`
+- Playback decision QA: `FAIL`
 - ScarFLIX expansion eligibility: `false`
+- Legacy/direct resolver expansion: paused/blocked
 
-### Scheduled Task Reduction
+## Re-Enabled Task Findings
 
-Batch 1 applied and passed immediate safety checks:
-
-- `JasonOS_Prime_PredictiveSimulator`
-- `JasonOS_Prime_SelfEvolutionCycle`
-- `JasonOS_Prime_PublicMirrorPublisher`
-
-Batch 2 applied and passed immediate safety checks:
-
-- `JasonOS_Prime_CommandCentre_8791_Keepalive`
-- `JasonOS_Prime_Real_AI_8805_Keepalive`
-- `JasonOS_Prime_FastTrackAccelerator`
-- `JasonOS_Prime_Grok_PeerReviewBridge`
-- `JasonOS_Prime_GrokBuild_ForensicAgent`
-
-Backups:
-
-- `D:\PlexTools\backups\phase2_batch1_lowest_risk_20260610_093959`
-- `D:\PlexTools\backups\phase2_batch2_medium_risk_20260610_094416`
-
-Final task-state inspection showed several paused tasks had returned to `Ready`, likely due local task hygiene/recovery automation:
+The following Batch 1/2 tasks returned to `Ready`:
 
 - `JasonOS_Prime_PredictiveSimulator`
 - `JasonOS_Prime_SelfEvolutionCycle`
@@ -62,71 +31,105 @@ Final task-state inspection showed several paused tasks had returned to `Ready`,
 - `JasonOS_Prime_Real_AI_8805_Keepalive`
 - `JasonOS_Prime_FastTrackAccelerator`
 
-Still disabled at final check:
+The following stayed `Disabled`:
 
 - `JasonOS_Prime_GrokInstructionBridge`
 - `JasonOS_Prime_CodexInstructionConsumer`
 - `JasonOS_Prime_Grok_PeerReviewBridge`
 - `JasonOS_Prime_GrokBuild_ForensicAgent`
 
-Core tasks intentionally left active:
+## Root Cause
 
-- `JasonOS_Prime_Sentinel`
-- `ScarFLIX_v2_Watchdog_StallDetector`
-- `JasonOS_Prime_NodeWatchdog_5min`
-- `ScarFLIX_v2_AutonomousController`
-- `JasonOS_Prime_OutcomeDashboard`
-- `JasonOS_Prime_PlaybackQA_Controller`
-- `ScarFLIX_v2_RcloneMountKeepalive`
-- `ScarFLIX_v2_InfrastructureKeepalive`
-- `JasonOS_Prime_WorkerMesh`
+The re-enablement is caused by existing local recovery/hygiene automation:
 
-## What I Have Already Tried
+1. `D:\PlexTools\Foundry\workers\JasonOS_Prime_WorkerMesh.js`
+   - `ensureScheduledTasks()` re-creates/enables `JasonOS_Prime_PredictiveSimulator` and `JasonOS_Prime_SelfEvolutionCycle`.
+   - `ensureJasonOSPrimeTasks()` re-creates/enables `PredictiveSimulator`, `SelfEvolutionCycle`, `PublicMirrorPublisher`, `OutcomeDashboard`, `FastTrackAccelerator`, and `CommandCentre_8791_Keepalive`.
+   - `superviseScarflix()` runs predictive, self-evolution, outcome dashboard, and public mirror tasks.
 
-1. Verified Orchestrator service and `/healthz`.
-2. Verified Sentinel was not `ALERT/HIGH` before each escalation step.
-3. Applied Batch 1 task pauses with XML backups.
-4. Waited 2.5 minutes, then verified echo, Sentinel, materialized QA, and Orchestrator health.
-5. Updated `TASKS.md` and `PROJECT_PLAN.md`.
-6. Applied Batch 2 task pauses with XML backups.
-7. Waited 2.5 minutes, then verified echo, Sentinel, materialized QA, and Orchestrator health.
-8. Inserted queue test job `job_codex_phase2_test_6e42eed352174b3c` directly into `jasonos.db`; Orchestrator executed it as `done`.
-9. Patched Orchestrator recurrence cadence:
-   - `snapshot_status`: `60s`
-   - `ingest_grok_instructions`: `900s`
-   - `generate_command_center`: `900s`
-   - `sync_public_status`: `900s`
-10. Patched Command Centre generator to read `jasonos_prime_orchestrator_status.json`.
-11. Syntax-checked both patched files.
-12. Restarted Orchestrator service; `/healthz` returned `PASS`.
-13. Inserted Command Centre generation test job `job_codex_command_center_5c2c4fe165304f2b`; Orchestrator executed it as `done`; output JSON now includes Orchestrator status.
-14. Performed final safety/status verification.
+2. `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_QuietTasks_InstallOrUpdate.ps1`
+   - Defines/upserts FastTrack, PublicMirrorPublisher, 8805 keepalive, 8791 keepalive, PredictiveSimulator, SelfEvolutionCycle, Grok bridge/consumer, peer/build tasks, and other short workers.
+   - With `-StartShortWorkers`, explicitly starts many of those tasks.
 
-## My Hypothesis On Root Cause
+This means ad hoc task disabling is not durable until WorkerMesh/QuietTasks are patched to respect Orchestrator ownership.
 
-The main process-launch saturation was caused by too many short-lived scheduled tasks and overlapping control-plane workers. Orchestrator installation and the first migration step improved control by centralizing job execution, but local task hygiene/recovery automation is still re-enabling some non-essential workers. This means ad hoc disabling is not sufficient; the next step should be reviewed Orchestrator-owned task reduction and migration, not repeated manual disable loops.
+## Dry-Run Reduction Result
 
-The ScarFLIX blocker is separate: all-visible materialized QA remains `REVIEW 119/229`, likely due Plex scan/indexing lag, stale rows, malformed/old materialized rows, or source-specific failures in the broader visible set. Do not resume expansion until this gate is corrected.
+Ran:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_Orchestrator_ReduceScheduledTasks.ps1"
+```
+
+Result:
+
+- Exit code: `0`
+- Status: `DRY_RUN`
+- Apply: `false`
+- Orchestrator health URL: `http://127.0.0.1:8815/healthz`
+
+Rows:
+
+- `JasonOS_Prime_GrokInstructionBridge`: exists, state `Disabled`, action `WOULD_DISABLE`
+- `JasonOS_Prime_CodexInstructionConsumer`: exists, state `Disabled`, action `WOULD_DISABLE`
+- `JasonOS_Prime_CommandCenterDashboard`: missing, action `NOOP_MISSING`
+- `JasonOS_Prime_CommandCenterStaticServer`: missing, action `NOOP_MISSING`
+
+Gap:
+
+- The script does not currently include the six re-enabled workers.
+- It has `JasonOS_Prime_Real_AI_8805_Keepalive` in the `never_disable` list, so AI keepalive must be migrated to an Orchestrator status-only job before the standalone task can be retired.
+
+## Proposed Migration Plan
+
+1. `JasonOS_Prime_PublicMirrorPublisher`
+   - Replace with existing Orchestrator `sync_public_status`
+   - Queue: `io`
+   - Cadence: `900s`
+   - Migration first because mirror churn is non-core and already represented in Orchestrator
+
+2. `JasonOS_Prime_PredictiveSimulator`
+   - New Orchestrator job: `run_predictive_simulator`
+   - Queue: `control`
+   - Cadence: `3600s` or on-demand
+   - Guard: skip while Sentinel degraded or materialized QA unstable
+
+3. `JasonOS_Prime_SelfEvolutionCycle`
+   - New Orchestrator job: `run_self_evolution`
+   - Queue: `control`
+   - Cadence: `86400s`
+   - Guard: planner/report only, no task mutation
+
+4. `JasonOS_Prime_CommandCentre_8791_Keepalive` and `JasonOS_Prime_Real_AI_8805_Keepalive`
+   - New Orchestrator job: `ai_keepalive_check`
+   - Queue: `control`
+   - Cadence: `900s`
+   - Guard: status-only during Phase 2; no service churn without approval
+
+5. `JasonOS_Prime_FastTrackAccelerator`
+   - New Orchestrator job: `evaluate_fasttrack_gate`
+   - Queue: `control`
+   - Cadence: `900s`
+   - Guard: never starts expansion unless materialized QA and concurrent QA are PASS
+   - Migrate last because it can trigger ScarFLIX work
 
 ## Proposed Next Steps
 
-1. Dry-run `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_Orchestrator_ReduceScheduledTasks.ps1`.
-2. Review why local task hygiene re-enabled Batch 1/2 tasks, then make the Orchestrator the owner before disabling old tasks permanently.
-3. Keep only Orchestrator, Sentinel, Watchdog, controller, minimal dashboard, basic QA visibility, Rclone/infrastructure keepalive, and WorkerMesh active.
-4. Do not resume ScarFLIX expansion while materialized all-visible QA remains `REVIEW 119/229`.
-5. Next ScarFLIX diagnostic after control-plane stability: enumerate the 110 failed materialized decision rows and classify them before any quarantine or retry action.
-6. Keep full autonomous Orchestrator decision making disabled until scheduler/task ownership is stable.
+1. Patch WorkerMesh so it does not recreate/enable/run tasks that are marked as Orchestrator-owned.
+2. Patch QuietTasks install/update so Orchestrator-owned tasks are excluded or left disabled unless explicitly requested.
+3. Expand `JasonOS_Prime_Orchestrator_ReduceScheduledTasks.ps1` dry-run candidate list to include the six re-enabled workers with guards.
+4. Implement Orchestrator job handlers for mirror, predictive, self-evolution, AI keepalive status, and FastTrack gate evaluation.
+5. Rerun dry-run reduction only.
+6. Apply task reduction only after dry-run shows the correct target set and Orchestrator health remains PASS.
+7. Keep ScarFLIX expansion blocked until materialized all-visible QA recovers from `REVIEW 119/229`.
 
 ## Data/Files To Review
 
+- `D:\PlexTools\Foundry\workers\JasonOS_Prime_WorkerMesh.js`
+- `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_QuietTasks_InstallOrUpdate.ps1`
+- `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_Orchestrator_ReduceScheduledTasks.ps1`
+- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_task_reduction_status.json`
 - `D:\PlexTools\Foundry\orchestrator\JasonOS_Prime_Orchestrator.js`
-- `D:\PlexTools\Foundry\workers\JasonOS_Prime_CommandCenterDashboard_v1.js`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.json`
 - `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_status.md`
-- `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_command_center.json`
-- `D:\PlexTools\state\jasonos_prime\jasonos.db`
-- `D:\PlexTools\logs\jasonos_prime\orchestrator_events.jsonl`
-- `D:\PlexTools\backups\phase2_batch1_lowest_risk_20260610_093959`
-- `D:\PlexTools\backups\phase2_batch2_medium_risk_20260610_094416`
-- `C:\Users\jason\OneDrive\Documents\Plex Project\PROJECT_PLAN.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
+- `C:\Users\jason\OneDrive\Documents\Plex Project\PROJECT_PLAN.md`
