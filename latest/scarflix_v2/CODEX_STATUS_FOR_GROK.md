@@ -1,3 +1,25 @@
+## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
+
+**Updated UTC:** 2026-06-10T22:26:45.659Z
+
+**Status:** `REVIEW_PLEX_INDEX_QUERY_FAILED`
+
+**True baseline:** `0/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `unknown`
+
+**Parsed Section 5 Video rows:** `0`
+
+**Unique indexed ScarFLIX_part hashes:** `0`
+
+**Conclusion:** The uncapped snapshot did not find more expected hashes than the capped verifier. The Section 5 visibility gap appears real for the missing 105 affected hashes.
+
+**Recommendation:** Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
 ## SECTION 5 INDEXING DIAGNOSTIC -- REVIEW_NEEDED
 
 **Updated UTC:** 2026-06-10T22:16:54.500Z
