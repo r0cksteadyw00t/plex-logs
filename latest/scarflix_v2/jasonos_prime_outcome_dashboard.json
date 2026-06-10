@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-10T09:10:03.248Z",
+  "updated_utc": "2026-06-10T09:15:03.846Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -92,7 +92,7 @@
     "playback_qa_controller_status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
     "playback_qa_controller_step": "materialized_decision_failed",
     "playback_qa_direct_strm_admission_status": "REVIEW_RETRY_HELD",
-    "playback_qa_decision_status": "RUNNING",
+    "playback_qa_decision_status": "FAIL",
     "playback_qa_concurrent_status": "REVIEW",
     "visible_qa_count": 1,
     "visible_qa_movies": 1,
@@ -122,11 +122,11 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 12,
-    "platform_child_progress_age_minutes": 5,
-    "mirror_updated_age_minutes": 0,
+    "controller_updated_age_minutes": 17,
+    "platform_child_progress_age_minutes": 10,
+    "mirror_updated_age_minutes": 4,
     "next_check_utc": "2026-06-10T09:03:26Z",
-    "next_check_age_minutes": 7,
+    "next_check_age_minutes": 12,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260610.log",
     "last_progress_utc": "2026-06-10T09:05:10.854Z",
-    "age_minutes": 5,
+    "age_minutes": 10,
     "last_line": "[2026-06-10T09:05:10Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 3,
     "review_lines": 7,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "High",
-    "updated_utc": "2026-06-10T09:03:37Z",
+    "updated_utc": "2026-06-10T09:10:51Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "ALERT",
     "alert_level": "HIGH",
-    "updated_utc": "2026-06-10T09:10:01Z",
+    "updated_utc": "2026-06-10T09:15:01Z",
     "codex_action_required": true,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-10T09:05:02Z",
+    "updated_utc": "2026-06-10T09:10:02Z",
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
