@@ -1,57 +1,42 @@
 {
   "component": "jasonos_prime_grok_instruction_bridge",
   "status": "LOCAL_FALLBACK",
-  "updated_utc": "2026-06-09T15:32:01.416Z",
+  "updated_utc": "2026-06-10T00:39:34Z",
   "bridge_mode": "LOCAL_FALLBACK",
   "api_mode": "LOCAL_FALLBACK",
-  "token_file_present": false,
-  "token_file_used": null,
-  "last_grok_call_status": "NOT_ATTEMPTED",
-  "last_grok_failure_reason": "NO_USABLE_TOKEN",
-  "last_successful_grok_instruction_utc": null,
-  "instruction_count": 1,
-  "executable_instruction_count": 1,
-  "strategy_recommendation_count": 1,
-  "autonomy_suggestion_count": 1,
-  "risk_mitigation_count": 1,
-  "cycle_commentary": {
-    "summary": "Controlled expansion should remain bounded until QA gates are fully PASS.",
-    "health_assessment": "Degraded",
-    "quality_score": 58,
-    "batch_recommendation": {
-      "allowed": false,
-      "recommended_batch_size": "hold_or_10-20",
-      "reason": "One or more expansion gates is not PASS."
+  "source": "local_status_fallback",
+  "local_only_mode": true,
+  "token_file_present": true,
+  "token_file_used": "GROK_API_KEY.txt",
+  "fallback_reason": "Grok/xAI token file exists but is empty or invalid length; bridge wrote a non-executable local fallback.",
+  "prompt_context": {
+    "public_contract_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_FORENSIC_PARTNER.md",
+    "public_contract_loaded": true,
+    "handoff": {
+      "exists": true,
+      "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_HANDOFF_FOR_GROK.md",
+      "mtime_utc": "2026-06-10T00:09:30.002Z",
+      "bytes": 5965
+    },
+    "codex_status": {
+      "exists": true,
+      "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\CODEX_STATUS_FOR_GROK.md",
+      "mtime_utc": "2026-06-09T15:32:01.542Z",
+      "bytes": 560
+    },
+    "dashboard": {
+      "exists": true,
+      "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_outcome_dashboard.json",
+      "mtime_utc": "2026-06-10T00:35:03.427Z",
+      "bytes": 39085
     }
   },
-  "instruction_quality_score": 85,
+  "provider": null,
+  "instructions_json_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.json",
+  "instructions_md_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.md",
+  "instruction_count": 1,
+  "executable_instruction_count": 0,
+  "last_successful_grok_instruction_utc": "",
   "validation_errors": [],
-  "output_files": {
-    "instructions_json": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.json",
-    "instructions_md": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.md",
-    "strategy_md": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_STRATEGY_FOR_CODEX.md",
-    "quality_json": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grok_instruction_quality_status.json"
-  },
-  "scarflix_metrics": {
-    "dashboard_updated_utc": "2026-06-09T15:31:02.027Z",
-    "movie_strm_count": 0,
-    "tv_strm_count": 0,
-    "total_strm_count": 0,
-    "materialized_artifacts": 225,
-    "targeted_materialized_qa_status": "PASS",
-    "targeted_materialized_qa_checked": 124,
-    "targeted_materialized_qa_passed": 124,
-    "targeted_materialized_qa_failed": 0,
-    "concurrent_qa_status": "REVIEW",
-    "concurrent_range_passed": 4,
-    "concurrent_decision_passed": 5,
-    "materialized_publisher_status": "RUNNING",
-    "materialized_publisher_selected": 20,
-    "materialized_publisher_published": 1,
-    "staged_candidate_pending_count": 43,
-    "broad_legacy_resolver_expansion_paused": true,
-    "controlled_materialized_webdav_expansion_allowed": true,
-    "controlled_materialized_expansion_eligible": true
-  },
-  "process_launch_saturation_status": "CODEX_INLINE_LAUNCH_SATURATED"
+  "jason_action_required": false
 }
