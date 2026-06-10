@@ -2,10 +2,10 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "scarflix_qa_write_strategy_note_incident_review_20260610",
-      "created_at": "2026-06-10T04:38:54Z",
-      "expires_at": "2026-06-11T04:38:54Z",
-      "target_component": "scarflix_qa",
+      "instruction_id": "orchestrator_write_strategy_note_service_context_diagnosis_20260610",
+      "created_at": "2026-06-10T04:55:12Z",
+      "expires_at": "2026-06-11T04:55:12Z",
+      "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
       "approved_for_codex_execution": true,
@@ -14,15 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff_seconds": 0
       },
       "actions": [
         {
-          "action_type": "write_status_summary",
+          "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "scarflix_qa_write_strategy_note_incident_review_20260610",
-            "auto_added_by_bridge": true
+            "note": "Phase 0 hold: PAUSE_PUBLICATION remains active. Diagnose Orchestrator service account (LocalSystem) visibility for D:\\StremioCatalog before any further probes. Preferred: run diagnostic under same user context as materialized workers. Alternative: add canonical path mapping. No second content probe, no expansion, no cleanup until path access resolved and materialized QA recovers."
           }
         }
       ],
@@ -30,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-10T04:38:54Z",
+  "updated_utc": "2026-06-10T04:55:12Z",
   "source": "grok_api"
 }
