@@ -1,0 +1,2594 @@
+{
+  "component": "section5_current_missing_correlation",
+  "schema_version": "jasonos.section5_current_missing_correlation.v1",
+  "status": "PASS_FRESH_BASELINE_CORRELATION_COMPLETE",
+  "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
+  "started_utc": "2026-06-10T23:16:12.210Z",
+  "updated_utc": "2026-06-10T23:16:15.710Z",
+  "read_only": true,
+  "no_refresh": true,
+  "no_cache_clear": true,
+  "no_publication_started": true,
+  "no_expansion_started": true,
+  "no_cleanup_performed": true,
+  "no_deletion_performed": true,
+  "no_source_mutation_performed": true,
+  "no_path_rewrite_performed": true,
+  "phase_a": {
+    "ok": true,
+    "status": "PASS_LAUNCH_HEALTH_ACCEPTABLE",
+    "sentinel": {
+      "component": "jasonos_prime_sentinel_node",
+      "status": "PASS",
+      "alert_level": "LOW",
+      "updated_utc": "2026-06-10T23:15:04Z",
+      "duration_seconds": 0,
+      "jason_action_required": false,
+      "codex_action_required": false,
+      "repeat_count": 147,
+      "signals": {
+        "controller_status": "PASS",
+        "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
+        "controller_age_minutes": 4,
+        "watchdog_status": "REVIEW",
+        "watchdog_risk": "Medium",
+        "watchdog_age_minutes": 5,
+        "dashboard_status": "PASS",
+        "dashboard_age_minutes": 5,
+        "mirror_status": "PASS",
+        "mirror_age_minutes": 3,
+        "checkpoint_status": "PASS",
+        "checkpoint_step": "platform_gate_pass",
+        "checkpoint_age_minutes": 4196,
+        "durable_platform_gate_age_minutes": 4196,
+        "platform_progress_fresh": false
+      },
+      "recovery_actions": [],
+      "notes": [],
+      "files": {
+        "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
+        "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
+        "state_json": "D:/PlexTools/state/scarflix_v2/jasonos_prime_sentinel_state.json",
+        "log": "D:/PlexTools/logs/jasonos_prime_sentinel_node.log"
+      }
+    },
+    "orch": {
+      "component": "jasonos_prime_orchestrator",
+      "status": "PASS",
+      "updated_utc": "2026-06-10T23:16:12.156Z",
+      "version": "0.1.0",
+      "pid": 11104,
+      "owner": "jasonos-orchestrator-11104",
+      "started_utc": "2026-06-10T07:40:51.516Z",
+      "sqlite_status": "PASS_node:sqlite",
+      "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
+      "health_url": "http://127.0.0.1:8815/healthz",
+      "last_tick_utc": "2026-06-10T23:16:12.128Z",
+      "last_error": "Unknown named parameter '@created_utc'",
+      "active_jobs": [
+        {
+          "id": "job_3311651de1f9247a",
+          "type": "run_materialized_qa_incident_probe_cycle",
+          "queue": "control",
+          "started_utc": "2026-06-10T23:16:12.147Z"
+        }
+      ],
+      "pause": {
+        "pause_all": false,
+        "pause_publication": true,
+        "safe_mode": false,
+        "degraded_mode": false
+      },
+      "worker_limits": {
+        "control": 2,
+        "io": 1,
+        "cpu": 1,
+        "degraded": false
+      },
+      "launch_health": {
+        "updated_utc": "2026-06-10T23:16:12.156Z",
+        "window_minutes": 10,
+        "sample_count": 3,
+        "latency_sample_count": 3,
+        "avg_spawn_latency_ms": 0,
+        "avg_process_runtime_ms": 8219,
+        "timeout_count": 0,
+        "timeout_rate": 0,
+        "launches_last_minute": 0,
+        "budget_per_minute": 8,
+        "degraded_required": false,
+        "active_child_count": 0,
+        "tracked_child_count": 0
+      },
+      "degraded_mode": {
+        "active": false,
+        "reason": ""
+      },
+      "scheduling": {
+        "recurring_jitter_seconds": 90,
+        "retry_backoff_base_seconds": 60,
+        "max_retry_backoff_seconds": 900,
+        "grok_instruction_ingest_cadence_seconds": 300,
+        "grok_bridge_consumer_cadence_seconds": 900,
+        "hands_off_operator_cadence_seconds": 300,
+        "grok_report_delivery_cadence_seconds": 1800
+      },
+      "launch_telemetry_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_orchestrator_launch_telemetry.json",
+      "hands_off_operation": {
+        "component": "jasonos_prime_hands_off_operation",
+        "schema_version": "jasonos.hands_off_operation.v1",
+        "status": "REVIEW_ESCALATION_REQUIRED",
+        "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
+        "updated_utc": "2026-06-10T23:13:12.054Z",
+        "external_input_policy": "exception_only",
+        "primary_operator": "JasonOS_Prime_Orchestrator",
+        "grok_role": "occasional_high_level_strategy_and_periodic_review",
+        "jason_role": "exception_only_for_hard_blockers_permissions_credentials_major_decisions",
+        "standing_proactive_authority": true,
+        "hard_limits": {
+          "pause_publication_must_remain_active": true,
+          "no_broad_cleanup_deletion_path_rewrites_publication_or_large_retries": true,
+          "process_launch_avg_ms_threshold": 800,
+          "process_launch_timeout_rate_threshold": 0.15,
+          "destructive_or_high_blast_radius_actions_autonomous": false
+        },
+        "safety_snapshot": {
+          "dashboard_updated_utc": "2026-06-10T23:10:01Z",
+          "sentinel_status": "PASS",
+          "sentinel_alert": "LOW",
+          "codex_action_required": false,
+          "jason_action_required": false,
+          "materialized_qa_status": "REVIEW",
+          "materialized_qa_checked": 229,
+          "materialized_qa_passed": 119,
+          "materialized_qa_failed": 110,
+          "controlled_materialized_expansion_eligible": false,
+          "broad_legacy_resolver_expansion_paused": true
+        },
+        "launch_health": {
+          "updated_utc": "2026-06-10T23:13:12.051Z",
+          "window_minutes": 10,
+          "sample_count": 5,
+          "latency_sample_count": 5,
+          "avg_spawn_latency_ms": 0,
+          "avg_process_runtime_ms": 8888,
+          "timeout_count": 0,
+          "timeout_rate": 0,
+          "launches_last_minute": 0,
+          "budget_per_minute": 8,
+          "degraded_required": false,
+          "active_child_count": 0,
+          "tracked_child_count": 0
+        },
+        "degraded_mode": {
+          "active": false,
+          "reason": ""
+        },
+        "objectives": [
+          {
+            "id": "OBJ-MQA-RECOVERY",
+            "title": "Recover Materialized QA without publication or destructive changes",
+            "status": "ACTIVE",
+            "current_blocker": "Materialized QA REVIEW 119/229 failed=110",
+            "strategy": "Strategy A metadata-first service context plus controlled user-context probes",
+            "next_safe_action": "Evaluate tiny timing diagnostic results and plan only QA-only reversible mitigation.",
+            "progress_signal": "ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH"
+          },
+          {
+            "id": "OBJ-CONTROL-HEALTH",
+            "title": "Maintain stable control plane and launch health",
+            "status": "PASS",
+            "next_safe_action": "Continue launch health monitor cadence."
+          },
+          {
+            "id": "OBJ-GROK-LOOP",
+            "title": "Maintain autonomous Grok reporting and safe inbound instruction loop",
+            "status": "PASS_DELIVERED_TO_GROK_API",
+            "next_safe_action": "Continue differential reporting and execute only Safe allowlisted instructions."
+          },
+          {
+            "id": "OBJ-LEGACY-SAFETY",
+            "title": "Keep legacy/direct resolver expansion retired and blocked",
+            "status": "PASS",
+            "next_safe_action": "Escalate if any broad legacy/direct resolver expansion resumes."
+          }
+        ],
+        "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
+        "progress_made_this_cycle": false,
+        "no_progress_cycles": 158,
+        "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
+        "queued_jobs": [
+          {
+            "type": "autonomous_incident_manager",
+            "id": "job_50288a63e089b1fb"
+          },
+          {
+            "type": "generate_grok_cycle_report",
+            "id": "job_fb3d3b400a190116"
+          },
+          {
+            "type": "deliver_grok_cycle_report",
+            "id": "job_c3301aaf545c3c82"
+          }
+        ],
+        "actions_taken": [
+          "Queued safe bounded control-plane jobs: autonomous_incident_manager, generate_grok_cycle_report, deliver_grok_cycle_report",
+          "Maintaining Materialized QA recovery as a standing objective using Strategy A path model."
+        ],
+        "blockers": [],
+        "escalation_required": true,
+        "escalation_reason": "No semantic progress for 158 hands-off cycles.",
+        "no_publication_started": true,
+        "no_expansion_started": true,
+        "no_cleanup_performed": true,
+        "no_source_mutation_performed": true
+      },
+      "hands_off_operation_status_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_hands_off_operation_status.json",
+      "instruction_loop": {
+        "component": "jasonos_prime_instruction_loop",
+        "status": "PASS_TRACKING",
+        "updated_utc": "2026-06-10T23:16:12.156Z",
+        "instruction_count": 50,
+        "classification_counts": {
+          "Safe": 25,
+          "Review": 25,
+          "Requires Human Approval": 0
+        },
+        "status_counts": {
+          "executed": 25,
+          "safe_queued": 0,
+          "blocked_review": 25,
+          "requires_human_approval": 0,
+          "review_action_failed": 0
+        },
+        "blocked_or_review_count": 25,
+        "last_instruction_id": "phase0_record_section5_forensic_hold_20260610_v44",
+        "last_instruction_status": "executed",
+        "last_ingest_utc": "",
+        "last_execution_utc": "",
+        "recent_instructions": [
+          {
+            "instruction_id": "phase0_record_section5_forensic_hold_20260610_v44",
+            "created_utc": "2026-06-10T23:05:40Z",
+            "expires_utc": "2026-06-11T23:05:40Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_diagnostic_hold_20260610_v43",
+            "created_utc": "2026-06-10T22:48:50Z",
+            "expires_utc": "2026-06-11T22:48:50Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_diagnostic_hold_20260610_v42",
+            "created_utc": "2026-06-10T22:33:05Z",
+            "expires_utc": "2026-06-11T22:33:05Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_diagnostic_status_20260610_v41",
+            "created_utc": "2026-06-10T22:17:24Z",
+            "expires_utc": "2026-06-11T22:17:24Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v40",
+            "created_utc": "2026-06-10T22:01:08Z",
+            "expires_utc": "2026-06-11T22:01:08Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_stabilization_hold_status_20260610_v39",
+            "created_utc": "2026-06-10T21:44:38Z",
+            "expires_utc": "2026-06-11T21:44:38Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v38",
+            "created_utc": "2026-06-10T21:28:23Z",
+            "expires_utc": "2026-06-11T21:28:23Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v37",
+            "created_utc": "2026-06-10T21:12:52Z",
+            "expires_utc": "2026-06-11T21:12:52Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v36",
+            "created_utc": "2026-06-10T20:56:37Z",
+            "expires_utc": "2026-06-11T20:56:37Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v35",
+            "created_utc": "2026-06-10T20:40:06Z",
+            "expires_utc": "2026-06-11T20:40:06Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v34",
+            "created_utc": "2026-06-10T20:24:06Z",
+            "expires_utc": "2026-06-11T20:24:06Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v33",
+            "created_utc": "2026-06-10T20:08:35Z",
+            "expires_utc": "2026-06-11T20:08:35Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v32",
+            "created_utc": "2026-06-10T19:52:05Z",
+            "expires_utc": "2026-06-11T19:52:05Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v31",
+            "created_utc": "2026-06-10T19:36:19Z",
+            "expires_utc": "2026-06-11T19:36:19Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v30",
+            "created_utc": "2026-06-10T19:20:49Z",
+            "expires_utc": "2026-06-11T19:20:49Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v29",
+            "created_utc": "2026-06-10T19:05:18Z",
+            "expires_utc": "2026-06-11T19:05:18Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v28",
+            "created_utc": "2026-06-10T18:49:33Z",
+            "expires_utc": "2026-06-11T18:49:33Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v27",
+            "created_utc": "2026-06-10T18:33:02Z",
+            "expires_utc": "2026-06-11T18:33:02Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v26",
+            "created_utc": "2026-06-10T18:17:02Z",
+            "expires_utc": "2026-06-11T18:17:02Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v25",
+            "created_utc": "2026-06-10T18:00:16Z",
+            "expires_utc": "2026-06-11T18:00:16Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v24",
+            "created_utc": "2026-06-10T17:43:16Z",
+            "expires_utc": "2026-06-11T17:43:16Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_stabilization_hold_20260610_v23",
+            "created_utc": "2026-06-10T17:27:45Z",
+            "expires_utc": "2026-06-11T17:27:45Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v22",
+            "created_utc": "2026-06-10T17:12:00Z",
+            "expires_utc": "2026-06-11T17:12:00Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v21",
+            "created_utc": "2026-06-10T16:56:14Z",
+            "expires_utc": "2026-06-11T16:56:14Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v20",
+            "created_utc": "2026-06-10T16:40:44Z",
+            "expires_utc": "2026-06-11T16:40:44Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v19",
+            "created_utc": "2026-06-10T15:52:57Z",
+            "expires_utc": "2026-06-11T15:52:57Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v18",
+            "created_utc": "2026-06-10T15:36:42Z",
+            "expires_utc": "2026-06-11T15:36:42Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_stabilization_hold_20260610_v17",
+            "created_utc": "2026-06-10T15:20:11Z",
+            "expires_utc": "2026-06-11T15:20:11Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_stabilization_hold_20260610_v16",
+            "created_utc": "2026-06-10T15:03:56Z",
+            "expires_utc": "2026-06-11T15:03:56Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_stabilization_hold_20260610_v15",
+            "created_utc": "2026-06-10T14:00:39Z",
+            "expires_utc": "2026-06-11T14:00:39Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_stabilization_hold_20260610_v14",
+            "created_utc": "2026-06-10T13:45:08Z",
+            "expires_utc": "2026-06-11T13:45:08Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_stabilization_hold_20260610_v13",
+            "created_utc": "2026-06-10T12:10:05Z",
+            "expires_utc": "2026-06-11T12:10:05Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_record_stabilization_20260610_v12",
+            "created_utc": "2026-06-10T11:53:35Z",
+            "expires_utc": "2026-06-11T11:53:35Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_record_stabilization_20260610_v11",
+            "created_utc": "2026-06-10T11:37:49Z",
+            "expires_utc": "2026-06-11T11:37:49Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_record_strategy_20260610_v10",
+            "created_utc": "2026-06-10T11:21:04Z",
+            "expires_utc": "2026-06-11T11:21:04Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 2,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_status_only_20260610_v9",
+            "created_utc": "2026-06-10T11:05:18Z",
+            "expires_utc": "2026-06-11T11:05:18Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_hold_and_strategy_20260610_v2",
+            "created_utc": "2026-06-10T10:01:01Z",
+            "expires_utc": "2026-06-11T10:01:01Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_hold_and_strategy_20260610",
+            "created_utc": "2026-06-10T09:45:10Z",
+            "expires_utc": "2026-06-11T09:45:10Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_hold_and_review_status_20260610",
+            "created_utc": "2026-06-10T09:28:55Z",
+            "expires_utc": "2026-06-11T09:28:55Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary",
+              "capability_contract_requires_human:write_strategy_note"
+            ],
+            "action_count": 2,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_action_a_no_improvement_review_20260610",
+            "created_utc": "2026-06-10T08:57:54Z",
+            "expires_utc": "2026-06-11T08:57:54Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_peer_review_status_20260610_v2",
+            "created_utc": "2026-06-10T08:41:38Z",
+            "expires_utc": "2026-06-11T08:41:38Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_peer_review_status_20260610",
+            "created_utc": "2026-06-10T08:26:08Z",
+            "expires_utc": "2026-06-11T08:26:08Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_status_only_20260610_v7",
+            "created_utc": "2026-06-10T08:09:22Z",
+            "expires_utc": "2026-06-11T08:09:22Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_status_only_20260610_v6",
+            "created_utc": "2026-06-10T07:53:22Z",
+            "expires_utc": "2026-06-11T07:53:22Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_status_only_20260610_v5",
+            "created_utc": "2026-06-10T07:36:37Z",
+            "expires_utc": "2026-06-11T07:36:37Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_status_only_20260610_v4",
+            "created_utc": "2026-06-10T07:21:06Z",
+            "expires_utc": "2026-06-11T07:21:06Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_status_only_20260610_v3",
+            "created_utc": "2026-06-10T07:04:51Z",
+            "expires_utc": "2026-06-11T07:04:51Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_maintain_hold_status_only_20260610",
+            "created_utc": "2026-06-10T06:47:57Z",
+            "expires_utc": "2026-06-11T06:47:57Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_hold_status_only_20260610_v2",
+            "created_utc": "2026-06-10T06:32:26Z",
+            "expires_utc": "2026-06-11T06:32:26Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_hold_status_only_20260610",
+            "created_utc": "2026-06-10T06:16:26Z",
+            "expires_utc": "2026-06-11T06:16:26Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          }
+        ]
+      },
+      "credential_awareness": {
+        "component": "jasonos_prime_token_awareness",
+        "updated_utc": "2026-06-10T23:16:12.155Z",
+        "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
+        "full_secret_values_logged": false,
+        "normal_grok_communication_key": "GROK_API_KEY.txt",
+        "normal_grok_communication_status": "PASS: Grok model call returned HTTP 200.",
+        "management_key": "GROK_MANAGEMENT_KEY.txt",
+        "management_key_status": "Not valid for model calls; previous model-call test returned HTTP 400 invalid-argument.",
+        "management_key_note": "xAI management keys are for account-management operations and are not used for Grok model calls.",
+        "tokens": [
+          {
+            "filename": "_plex_fix_diag.txt",
+            "identifier_prefix": "ts: ...",
+            "chars": 23,
+            "last_write_utc": "2025-10-03T05:48:16.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "_VAULT_README.txt",
+            "identifier_prefix": "# TO...",
+            "chars": 21,
+            "last_write_utc": "2025-10-08T07:57:10.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "demo_url.txt",
+            "identifier_prefix": "https://comm",
+            "chars": 82,
+            "last_write_utc": "2025-10-17T11:29:51.000Z",
+            "type": "Endpoint/URL",
+            "purpose": "Configuration endpoint, not a secret key by itself.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "endpoints.txt",
+            "identifier_prefix": "HTTP200_VERI",
+            "chars": 42,
+            "last_write_utc": "2025-10-08T09:12:50.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "gist_id.txt",
+            "identifier_prefix": "5b621abce653",
+            "chars": 32,
+            "last_write_utc": "2025-10-06T05:30:00.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "gist_token..txt",
+            "identifier_prefix": "ghp_zBfEPEga",
+            "chars": 40,
+            "last_write_utc": "2025-10-03T07:11:12.000Z",
+            "type": "GitHub PAT",
+            "purpose": "Public mirror / GitHub status publication.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Duplicate/alternate GitHub token; not retested in this cycle."
+          },
+          {
+            "filename": "gist_token.txt",
+            "identifier_prefix": "ghp_zBfEPEga",
+            "chars": 40,
+            "last_write_utc": "2025-10-04T14:42:01.000Z",
+            "type": "GitHub PAT",
+            "purpose": "Public mirror / GitHub status publication.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Duplicate/alternate GitHub token; not retested in this cycle."
+          },
+          {
+            "filename": "github_pat.txt",
+            "identifier_prefix": "ghp_zBfEPEga",
+            "chars": 40,
+            "last_write_utc": "2025-10-09T02:43:03.000Z",
+            "type": "GitHub PAT",
+            "purpose": "Public mirror / GitHub status publication.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Known configured for public mirror; not retested in this cycle."
+          },
+          {
+            "filename": "github_repo_token.txt",
+            "identifier_prefix": "ghp_zBfEPEga",
+            "chars": 40,
+            "last_write_utc": "2025-10-04T14:42:01.000Z",
+            "type": "GitHub PAT",
+            "purpose": "Public mirror / GitHub status publication.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Duplicate/alternate GitHub token; not retested in this cycle."
+          },
+          {
+            "filename": "github.txt",
+            "identifier_prefix": "ghp_zBfEPEga",
+            "chars": 40,
+            "last_write_utc": "2025-10-03T03:58:00.000Z",
+            "type": "GitHub PAT",
+            "purpose": "Public mirror / GitHub status publication.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Duplicate/alternate GitHub token; not retested in this cycle."
+          },
+          {
+            "filename": "GROK_API_KEY.txt",
+            "identifier_prefix": "xai-x3wDrcpv",
+            "chars": 84,
+            "last_write_utc": "2026-06-10T00:59:44.197Z",
+            "type": "Grok API Key",
+            "purpose": "Normal Grok model calls for bridge instructions and cycle report delivery.",
+            "usable_for_grok_model_calls": true,
+            "usable_for_account_management": false,
+            "usability_status": "PASS: Grok model call returned HTTP 200."
+          },
+          {
+            "filename": "GROK_MANAGEMENT_KEY.txt",
+            "identifier_prefix": "xai-token-gG",
+            "chars": 90,
+            "last_write_utc": "2026-06-10T02:07:41.941Z",
+            "type": "xAI Management Key",
+            "purpose": "Future xAI account-management operations only.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": true,
+            "usability_status": "Not valid for model calls; previous model-call test returned HTTP 400 invalid-argument."
+          },
+          {
+            "filename": "jackett_api_key.txt",
+            "identifier_prefix": "s93c6x37hkbn",
+            "chars": 32,
+            "last_write_utc": "2025-10-18T08:17:51.000Z",
+            "type": "Indexer API Key",
+            "purpose": "Indexer API access.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "logs_public_url.txt",
+            "identifier_prefix": "https://raw.",
+            "chars": 70,
+            "last_write_utc": "2025-11-28T10:48:57.000Z",
+            "type": "Endpoint/URL",
+            "purpose": "Configuration endpoint, not a secret key by itself.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "mediaserver_host.txt",
+            "identifier_prefix": "medi...",
+            "chars": 11,
+            "last_write_utc": "2025-10-07T11:07:37.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "mediaserver_port.txt",
+            "identifier_prefix": "22...",
+            "chars": 2,
+            "last_write_utc": "2025-10-07T11:07:37.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "mediaserver_user.txt",
+            "identifier_prefix": "Medi...",
+            "chars": 8,
+            "last_write_utc": "2025-10-07T11:07:37.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "monday_api_token.txt.txt",
+            "identifier_prefix": "eyJhbGciOiJI",
+            "chars": 227,
+            "last_write_utc": "2026-03-05T02:54:42.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "plex_base_url.txt",
+            "identifier_prefix": "http...",
+            "chars": 22,
+            "last_write_utc": "2025-10-04T14:26:39.000Z",
+            "type": "Endpoint/URL",
+            "purpose": "Configuration endpoint, not a secret key by itself.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "plex_base.txt",
+            "identifier_prefix": "http...",
+            "chars": 22,
+            "last_write_utc": "2025-10-07T04:00:13.000Z",
+            "type": "Endpoint/URL",
+            "purpose": "Configuration endpoint, not a secret key by itself.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "plex_token.txt",
+            "identifier_prefix": "5wKt...",
+            "chars": 20,
+            "last_write_utc": "2025-10-07T10:36:21.000Z",
+            "type": "Plex Token",
+            "purpose": "Plex API access.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "plex_transcode_temp.txt",
+            "identifier_prefix": "C:\\Users\\jas",
+            "chars": 71,
+            "last_write_utc": "2025-10-04T14:12:19.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "prowlarr_api_key.txt",
+            "identifier_prefix": "8f7edfa5beef",
+            "chars": 32,
+            "last_write_utc": "2025-10-18T08:17:51.000Z",
+            "type": "Indexer API Key",
+            "purpose": "Indexer API access.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "rd_host_prefer.txt",
+            "identifier_prefix": "real...",
+            "chars": 11,
+            "last_write_utc": "2025-10-17T15:20:53.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "rd_token-Jason.txt",
+            "identifier_prefix": "N4FLTAWR4NTM",
+            "chars": 52,
+            "last_write_utc": "2025-10-04T15:04:26.000Z",
+            "type": "Real-Debrid Token",
+            "purpose": "Real-Debrid/debrid source access.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "rd_token.txt",
+            "identifier_prefix": "N4FLTAWR4NTM",
+            "chars": 52,
+            "last_write_utc": "2025-10-04T15:09:44.000Z",
+            "type": "Real-Debrid Token",
+            "purpose": "Real-Debrid/debrid source access.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "repo_zip_url.txt",
+            "identifier_prefix": "https://gith",
+            "chars": 71,
+            "last_write_utc": "2025-10-04T12:47:31.000Z",
+            "type": "Endpoint/URL",
+            "purpose": "Configuration endpoint, not a secret key by itself.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "scarflix_wishlist_seeds.txt",
+            "identifier_prefix": "tt0133093|mo",
+            "chars": 38,
+            "last_write_utc": "2025-10-04T02:29:59.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "stremio_streams_url.txt",
+            "identifier_prefix": "https://torr",
+            "chars": 100,
+            "last_write_utc": "2025-10-08T09:37:57.000Z",
+            "type": "Endpoint/URL",
+            "purpose": "Configuration endpoint, not a secret key by itself.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "tmdb_api_key.txt",
+            "identifier_prefix": "3a70e2d3239f",
+            "chars": 32,
+            "last_write_utc": "2025-10-07T10:36:21.000Z",
+            "type": "TMDB Credential",
+            "purpose": "TMDB metadata lookup.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "tmdb_read_access_token.txt",
+            "identifier_prefix": "eyJhbGciOiJI",
+            "chars": 239,
+            "last_write_utc": "2025-10-07T10:36:21.000Z",
+            "type": "TMDB Credential",
+            "purpose": "TMDB metadata lookup.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "tmdb_read_token.txt",
+            "identifier_prefix": "eyJhbGciOiJI",
+            "chars": 239,
+            "last_write_utc": "2025-10-06T10:42:10.000Z",
+            "type": "TMDB Credential",
+            "purpose": "TMDB metadata lookup.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "udm_hostkey.txt",
+            "identifier_prefix": "ssh-ed25519 ",
+            "chars": 66,
+            "last_write_utc": "2025-10-07T12:22:14.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "udm_hostname.txt",
+            "identifier_prefix": "192....",
+            "chars": 11,
+            "last_write_utc": "2025-10-06T10:09:03.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "udm_ip.txt",
+            "identifier_prefix": "192....",
+            "chars": 11,
+            "last_write_utc": "2025-12-04T12:53:44.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "udm_pass.txt",
+            "identifier_prefix": "W1ll...",
+            "chars": 14,
+            "last_write_utc": "2025-12-04T12:53:44.000Z",
+            "type": "Password/Passphrase",
+            "purpose": "Local device or UI authentication.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "udm_ssh_pass.txt",
+            "identifier_prefix": "W1ll...",
+            "chars": 14,
+            "last_write_utc": "2025-12-04T12:53:44.000Z",
+            "type": "Password/Passphrase",
+            "purpose": "Local device or UI authentication.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "udm_ssh_pub.txt",
+            "identifier_prefix": "ssh-ed25519 ",
+            "chars": 98,
+            "last_write_utc": "2025-10-09T10:39:13.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "udm_ssh_user_alt.txt",
+            "identifier_prefix": "root...",
+            "chars": 4,
+            "last_write_utc": "2025-10-09T10:39:13.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "udm_ssh_user.txt",
+            "identifier_prefix": "root...",
+            "chars": 4,
+            "last_write_utc": "2025-12-04T12:53:44.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "udm_token.txt",
+            "identifier_prefix": "wf2YGzkM__Re",
+            "chars": 32,
+            "last_write_utc": "2025-10-05T10:07:09.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "udm_user.txt",
+            "identifier_prefix": "udm_...",
+            "chars": 13,
+            "last_write_utc": "2025-12-04T12:53:44.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "ui_pass.txt",
+            "identifier_prefix": "0kLr...",
+            "chars": 9,
+            "last_write_utc": "2025-10-11T10:42:12.000Z",
+            "type": "Password/Passphrase",
+            "purpose": "Local device or UI authentication.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "ui_ro_key.txt",
+            "identifier_prefix": "9pW5DS3DDyze",
+            "chars": 32,
+            "last_write_utc": "2025-10-06T09:09:02.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "ui_user.txt",
+            "identifier_prefix": "dPve...",
+            "chars": 6,
+            "last_write_utc": "2025-10-11T10:42:12.000Z",
+            "type": "Connection Config",
+            "purpose": "Host/user/port configuration.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Configuration value; not tested as a credential."
+          },
+          {
+            "filename": "wpa_guest.txt",
+            "identifier_prefix": "Tk90...",
+            "chars": 16,
+            "last_write_utc": "2025-10-11T11:53:04.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          },
+          {
+            "filename": "wpa_iot.txt",
+            "identifier_prefix": "kxiy...",
+            "chars": 16,
+            "last_write_utc": "2025-10-11T11:53:04.000Z",
+            "type": "Unknown/Other Credential",
+            "purpose": "Token-folder value requiring component-specific handling.",
+            "usable_for_grok_model_calls": false,
+            "usable_for_account_management": false,
+            "usability_status": "Not retested in this cycle."
+          }
+        ]
+      },
+      "task_ownership_manifest": "D:\\PlexTools\\state\\jasonos_prime\\orchestrator_task_ownership.json",
+      "safety": {
+        "legacy_direct_resolver_expansion_allowed": false,
+        "long_validation_inline_allowed": false,
+        "consumer_requires_allowlisted_low_medium_approved_nonexpired": true,
+        "publication_pause_must_remain_active": true,
+        "hands_off_external_input_policy": "exception_only",
+        "launch_failsafe_avg_ms": 800,
+        "launch_failsafe_timeout_rate": 0.15
+      }
+    },
+    "health": {
+      "updated_utc": "2026-06-10T23:16:12.160Z",
+      "window_minutes": 10,
+      "sample_count": 3,
+      "latency_sample_count": 3,
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 8219,
+      "timeout_count": 0,
+      "timeout_rate": 0,
+      "launches_last_minute": 0,
+      "budget_per_minute": 8,
+      "degraded_required": false,
+      "active_child_count": 0,
+      "tracked_child_count": 0
+    },
+    "avg_spawn_latency_ms": 0,
+    "timeout_rate": 0
+  },
+  "baseline": {
+    "expected_count": 105,
+    "present_count": 95,
+    "missing_count": 10,
+    "present_percent": 90.5,
+    "section_total": 257,
+    "unique_part_hash_count": 207,
+    "updated_utc": "2026-06-10T23:09:27.980Z"
+  },
+  "missing_hashes": [
+    "scarflix_part-7c4868fe7b1db021",
+    "scarflix_part-db3f532fdd48fe57",
+    "scarflix_part-942255f029875306",
+    "scarflix_part-bf8b8fcb4150df6b",
+    "scarflix_part-2248c141861c0a2c",
+    "scarflix_part-ea2489ddc0285b99",
+    "scarflix_part-3ac0e5bd2415a5fc",
+    "scarflix_part-d708c8b30a147319",
+    "scarflix_part-89731919b552c615",
+    "scarflix_part-491a4bfccb102f1e"
+  ],
+  "present_sample_hashes": [
+    "scarflix_part-81107989d2e30cfb",
+    "scarflix_part-c08b683f68e4e49e",
+    "scarflix_part-d8b22fb3f498688e"
+  ],
+  "plex": {
+    "token_present": true,
+    "bases_tried": [
+      "http://127.0.0.1:32400",
+      "http://192.168.1.184:32400",
+      "http://localhost:32400",
+      "http://mediaserver:32400"
+    ],
+    "missing_probes": [
+      {
+        "hash": "scarflix_part-7c4868fe7b1db021",
+        "title": "Dawn of the Dead",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021\\stream.mkv",
+        "query_title": "ScarFLIX Part 7c4868fe7b1db021",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 4,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1833,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 4,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-db3f532fdd48fe57",
+        "title": "Dolittle",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dolittle (2020)\\ScarFLIX_part-db3f532fdd48fe57\\stream.mkv",
+        "query_title": "ScarFLIX Part db3f532fdd48fe57",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-942255f029875306",
+        "title": "Gremlins",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gremlins (1984)\\ScarFLIX_part-942255f029875306\\stream.mkv",
+        "query_title": "ScarFLIX Part 942255f029875306",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 1,
+        "matching_part_count": 1,
+        "matching_rows": [
+          {
+            "rating_key": "49326",
+            "title": "ScarFLIX Part 942255f029875306",
+            "year": "",
+            "guid": "local://49326",
+            "part_files": [
+              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gremlins (1984)\\ScarFLIX_part-942255f029875306\\stream.mkv"
+            ],
+            "part_hashes": [
+              "scarflix_part-942255f029875306"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-bf8b8fcb4150df6b",
+        "title": "Man in the Mirror: The Michael Jackson Story",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Man in the Mirror The Michael Jackson Story (2004)\\ScarFLIX_part-bf8b8fcb4150df6b\\stream.mkv",
+        "query_title": "ScarFLIX Part bf8b8fcb4150df6b",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-2248c141861c0a2c",
+        "title": "9½ Weeks",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv",
+        "query_title": "ScarFLIX Part 2248c141861c0a2c",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 1,
+        "matching_part_count": 1,
+        "matching_rows": [
+          {
+            "rating_key": "49327",
+            "title": "ScarFLIX Part 2248c141861c0a2c",
+            "year": "",
+            "guid": "local://49327",
+            "part_files": [
+              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv"
+            ],
+            "part_hashes": [
+              "scarflix_part-2248c141861c0a2c"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-ea2489ddc0285b99",
+        "title": "Reservoir Dogs",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Reservoir Dogs (1992)\\ScarFLIX_part-ea2489ddc0285b99\\stream.mkv",
+        "query_title": "ScarFLIX Part ea2489ddc0285b99",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 1,
+        "matching_part_count": 1,
+        "matching_rows": [
+          {
+            "rating_key": "49328",
+            "title": "ScarFLIX Part Ea2489ddc0285b99",
+            "year": "",
+            "guid": "local://49328",
+            "part_files": [
+              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Reservoir Dogs (1992)\\ScarFLIX_part-ea2489ddc0285b99\\stream.mkv"
+            ],
+            "part_hashes": [
+              "scarflix_part-ea2489ddc0285b99"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-3ac0e5bd2415a5fc",
+        "title": "Silent Hill",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Silent Hill (2006)\\ScarFLIX_part-3ac0e5bd2415a5fc\\stream.mkv",
+        "query_title": "ScarFLIX Part 3ac0e5bd2415a5fc",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-d708c8b30a147319",
+        "title": "Stand by Me",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Stand by Me (1986)\\ScarFLIX_part-d708c8b30a147319\\stream.mkv",
+        "query_title": "ScarFLIX Part d708c8b30a147319",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 4,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 4,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-89731919b552c615",
+        "title": "Terminator Salvation",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Salvation (2009)\\ScarFLIX_part-89731919b552c615\\stream.mkv",
+        "query_title": "ScarFLIX Part 89731919b552c615",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 2,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 2,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-491a4bfccb102f1e",
+        "title": "The Big Short",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Big Short (2015)\\ScarFLIX_part-491a4bfccb102f1e\\stream.mkv",
+        "query_title": "ScarFLIX Part 491a4bfccb102f1e",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 0,
+        "matching_part_count": 0,
+        "matching_rows": [],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 0,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "present_probes": [
+      {
+        "hash": "scarflix_part-81107989d2e30cfb",
+        "title": "Anna",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+        "query_title": "ScarFLIX Part 81107989d2e30cfb",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 1,
+        "matching_part_count": 1,
+        "matching_rows": [
+          {
+            "rating_key": "49305",
+            "title": "ScarFLIX Part 81107989d2e30cfb",
+            "year": "",
+            "guid": "local://49305",
+            "part_files": [
+              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv"
+            ],
+            "part_hashes": [
+              "scarflix_part-81107989d2e30cfb"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-c08b683f68e4e49e",
+        "title": "Annabelle",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
+        "query_title": "ScarFLIX Part c08b683f68e4e49e",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 1,
+        "matching_part_count": 1,
+        "matching_rows": [
+          {
+            "rating_key": "49211",
+            "title": "ScarFLIX Part C08b683f68e4e49e",
+            "year": "",
+            "guid": "local://49211",
+            "part_files": [
+              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv"
+            ],
+            "part_hashes": [
+              "scarflix_part-c08b683f68e4e49e"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "hash": "scarflix_part-d8b22fb3f498688e",
+        "title": "Annihilation",
+        "expected_file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
+        "query_title": "ScarFLIX Part d8b22fb3f498688e",
+        "ok": true,
+        "selected_base": "http://192.168.1.184:32400",
+        "http_status": 200,
+        "elapsed_ms": 3,
+        "returned_video_count": 1,
+        "matching_part_count": 1,
+        "matching_rows": [
+          {
+            "rating_key": "49060",
+            "title": "ScarFLIX Part D8b22fb3f498688e",
+            "year": "",
+            "guid": "local://49060",
+            "part_files": [
+              "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv"
+            ],
+            "part_hashes": [
+              "scarflix_part-d8b22fb3f498688e"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "base": "http://127.0.0.1:32400",
+            "http_status": 401,
+            "elapsed_ms": 1,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          },
+          {
+            "base": "http://192.168.1.184:32400",
+            "http_status": 200,
+            "elapsed_ms": 3,
+            "timed_out": false,
+            "error_code": "",
+            "ok": true
+          }
+        ]
+      }
+    ]
+  },
+  "db": {
+    "missing": {
+      "ok": true,
+      "db_path": "C:/Users/jason/AppData/Local/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db",
+      "probes": [
+        {
+          "hash": "scarflix_part-7c4868fe7b1db021",
+          "title": "Dawn of the Dead",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-db3f532fdd48fe57",
+          "title": "Dolittle",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-942255f029875306",
+          "title": "Gremlins",
+          "row_count": 1,
+          "rows": [
+            {
+              "part_id": 126173,
+              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gremlins (1984)\\ScarFLIX_part-942255f029875306\\stream.mkv",
+              "metadata_id": 49326,
+              "title": "ScarFLIX Part 942255f029875306",
+              "year": null,
+              "guid": "local://49326",
+              "library_section_id": 5
+            }
+          ]
+        },
+        {
+          "hash": "scarflix_part-bf8b8fcb4150df6b",
+          "title": "Man in the Mirror: The Michael Jackson Story",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-2248c141861c0a2c",
+          "title": "9½ Weeks",
+          "row_count": 1,
+          "rows": [
+            {
+              "part_id": 126174,
+              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv",
+              "metadata_id": 49327,
+              "title": "ScarFLIX Part 2248c141861c0a2c",
+              "year": null,
+              "guid": "local://49327",
+              "library_section_id": 5
+            }
+          ]
+        },
+        {
+          "hash": "scarflix_part-ea2489ddc0285b99",
+          "title": "Reservoir Dogs",
+          "row_count": 1,
+          "rows": [
+            {
+              "part_id": 126175,
+              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Reservoir Dogs (1992)\\ScarFLIX_part-ea2489ddc0285b99\\stream.mkv",
+              "metadata_id": 49328,
+              "title": "ScarFLIX Part Ea2489ddc0285b99",
+              "year": null,
+              "guid": "local://49328",
+              "library_section_id": 5
+            }
+          ]
+        },
+        {
+          "hash": "scarflix_part-3ac0e5bd2415a5fc",
+          "title": "Silent Hill",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-d708c8b30a147319",
+          "title": "Stand by Me",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-89731919b552c615",
+          "title": "Terminator Salvation",
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "hash": "scarflix_part-491a4bfccb102f1e",
+          "title": "The Big Short",
+          "row_count": 0,
+          "rows": []
+        }
+      ]
+    },
+    "present": {
+      "ok": true,
+      "db_path": "C:/Users/jason/AppData/Local/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db",
+      "probes": [
+        {
+          "hash": "scarflix_part-81107989d2e30cfb",
+          "title": "Anna",
+          "row_count": 1,
+          "rows": [
+            {
+              "part_id": 126152,
+              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+              "metadata_id": 49305,
+              "title": "ScarFLIX Part 81107989d2e30cfb",
+              "year": null,
+              "guid": "local://49305",
+              "library_section_id": 5
+            }
+          ]
+        },
+        {
+          "hash": "scarflix_part-c08b683f68e4e49e",
+          "title": "Annabelle",
+          "row_count": 1,
+          "rows": [
+            {
+              "part_id": 126044,
+              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
+              "metadata_id": 49211,
+              "title": "ScarFLIX Part C08b683f68e4e49e",
+              "year": null,
+              "guid": "local://49211",
+              "library_section_id": 5
+            }
+          ]
+        },
+        {
+          "hash": "scarflix_part-d8b22fb3f498688e",
+          "title": "Annihilation",
+          "row_count": 1,
+          "rows": [
+            {
+              "part_id": 125851,
+              "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
+              "metadata_id": 49060,
+              "title": "ScarFLIX Part D8b22fb3f498688e",
+              "year": null,
+              "guid": "local://49060",
+              "library_section_id": 5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "log_search": {
+    "files_scanned": [
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "size": 4923984,
+        "mtime_utc": "2026-06-10T23:16:14.622Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.3.log",
+        "size": 69378,
+        "mtime_utc": "2026-06-10T23:16:13.998Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.5.log",
+        "size": 137098,
+        "mtime_utc": "2026-06-10T23:16:13.779Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.log",
+        "size": 4368,
+        "mtime_utc": "2026-06-10T23:15:49.173Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.1.log",
+        "size": 2822,
+        "mtime_utc": "2026-06-10T23:15:48.281Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Credits.log",
+        "size": 1930,
+        "mtime_utc": "2026-06-10T23:10:57.691Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Credits.1.log",
+        "size": 1866,
+        "mtime_utc": "2026-06-10T23:10:56.780Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Chapter Thumbnails.log",
+        "size": 916,
+        "mtime_utc": "2026-06-10T23:10:55.778Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Analysis.log",
+        "size": 2634,
+        "mtime_utc": "2026-06-10T23:10:55.560Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Chapter Thumbnails.1.log",
+        "size": 882,
+        "mtime_utc": "2026-06-10T23:10:55.537Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner Analysis.1.log",
+        "size": 2497,
+        "mtime_utc": "2026-06-10T23:10:55.316Z"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Scanner.2.log",
+        "size": 4164,
+        "mtime_utc": "2026-06-10T23:10:45.979Z"
+      }
+    ],
+    "term_count": 39,
+    "matches": [
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-c08b683f68e4e49e",
+        "line": "Jun 11, 2026 09:11:13.476 [1640] DEBUG - Request: [127.0.0.1:53366 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-c08b683f68e4e49e (16 live) #8992 GZIP Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-c08b683f68e4e49e",
+        "line": "Jun 11, 2026 09:11:13.476 [29836] DEBUG - Completed: [127.0.0.1:53366] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-c08b683f68e4e49e (16 live) #8992 GZIP 0ms 416 bytes (pipelined: 3)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-942255f029875306",
+        "line": "Jun 11, 2026 09:13:09.566 [23512] DEBUG - Request: [127.0.0.1:59266 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-942255f029875306 (12 live) #8b7a GZIP Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-942255f029875306",
+        "line": "Jun 11, 2026 09:13:09.566 [17212] DEBUG - Completed: [127.0.0.1:59266] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-942255f029875306 (12 live) #8b7a GZIP 0ms 416 bytes (pipelined: 1)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-2248c141861c0a2c",
+        "line": "Jun 11, 2026 09:13:37.048 [23512] DEBUG - Request: [127.0.0.1:58567 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-2248c141861c0a2c (9 live) #8bb6 GZIP Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-2248c141861c0a2c",
+        "line": "Jun 11, 2026 09:13:37.049 [17212] DEBUG - Completed: [127.0.0.1:58567] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-2248c141861c0a2c (9 live) #8bb6 GZIP 0ms 416 bytes (pipelined: 1)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-ea2489ddc0285b99",
+        "line": "Jun 11, 2026 09:14:05.819 [23512] DEBUG - Request: [127.0.0.1:54185 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-ea2489ddc0285b99 (9 live) #8bcd GZIP Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-ea2489ddc0285b99",
+        "line": "Jun 11, 2026 09:14:05.819 [29836] DEBUG - Completed: [127.0.0.1:54185] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-ea2489ddc0285b99 (9 live) #8bcd GZIP 0ms 416 bytes (pipelined: 1)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-491a4bfccb102f1e",
+        "line": "Jun 11, 2026 09:16:03.494 [13212] DEBUG - Request: [127.0.0.1:54433 (Loopback)] PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-491a4bfccb102f1e (13 live) #9680 GZIP Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "scarflix_part-491a4bfccb102f1e",
+        "line": "Jun 11, 2026 09:16:03.495 [17212] DEBUG - Completed: [127.0.0.1:54433] 200 PUT /activities/?percentComplete=%2B0%2E000369499467&subtitle=ScarFLIX_part-491a4bfccb102f1e (13 live) #9680 GZIP 7ms 416 bytes (pipelined: 3)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "7c4868fe7b1db021",
+        "line": "Jun 11, 2026 09:16:14.057 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+7c4868fe7b1db021 (15 live) #a68f Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "7c4868fe7b1db021",
+        "line": "Jun 11, 2026 09:16:14.058 [17212] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+7c4868fe7b1db021 (15 live) #a68f Page 0-9 0ms 297 bytes (pipelined: 1)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "7c4868fe7b1db021",
+        "line": "Jun 11, 2026 09:16:14.062 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+7c4868fe7b1db021 (16 live) #b157 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "7c4868fe7b1db021",
+        "line": "Jun 11, 2026 09:16:14.064 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+7c4868fe7b1db021 (16 live) #b157 Page 0-9 2ms 779 bytes (pipelined: 1)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "db3f532fdd48fe57",
+        "line": "Jun 11, 2026 09:16:14.066 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+db3f532fdd48fe57 (16 live) #b17e Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "db3f532fdd48fe57",
+        "line": "Jun 11, 2026 09:16:14.066 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+db3f532fdd48fe57 (16 live) #b17e Page 0-9 0ms 297 bytes (pipelined: 2)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "db3f532fdd48fe57",
+        "line": "Jun 11, 2026 09:16:14.067 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+db3f532fdd48fe57 (16 live) #b180 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "db3f532fdd48fe57",
+        "line": "Jun 11, 2026 09:16:14.069 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+db3f532fdd48fe57 (16 live) #b180 Page 0-9 2ms 779 bytes (pipelined: 2)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "942255f029875306",
+        "line": "Jun 11, 2026 09:16:14.070 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+942255f029875306 (16 live) #b181 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "942255f029875306",
+        "line": "Jun 11, 2026 09:16:14.070 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+942255f029875306 (16 live) #b181 Page 0-9 0ms 297 bytes (pipelined: 3)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "942255f029875306",
+        "line": "Jun 11, 2026 09:16:14.071 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+942255f029875306 (16 live) #b182 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "942255f029875306",
+        "line": "Jun 11, 2026 09:16:14.073 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+942255f029875306 (16 live) #b182 Page 0-9 2ms 1217 bytes (pipelined: 3)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "bf8b8fcb4150df6b",
+        "line": "Jun 11, 2026 09:16:14.075 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bf8b8fcb4150df6b (16 live) #b183 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "bf8b8fcb4150df6b",
+        "line": "Jun 11, 2026 09:16:14.075 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bf8b8fcb4150df6b (16 live) #b183 Page 0-9 0ms 297 bytes (pipelined: 4)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "bf8b8fcb4150df6b",
+        "line": "Jun 11, 2026 09:16:14.076 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bf8b8fcb4150df6b (16 live) #b184 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "bf8b8fcb4150df6b",
+        "line": "Jun 11, 2026 09:16:14.078 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+bf8b8fcb4150df6b (16 live) #b184 Page 0-9 2ms 779 bytes (pipelined: 4)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "2248c141861c0a2c",
+        "line": "Jun 11, 2026 09:16:14.080 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2248c141861c0a2c (16 live) #b185 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "2248c141861c0a2c",
+        "line": "Jun 11, 2026 09:16:14.080 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2248c141861c0a2c (16 live) #b185 Page 0-9 0ms 297 bytes (pipelined: 5)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "2248c141861c0a2c",
+        "line": "Jun 11, 2026 09:16:14.081 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2248c141861c0a2c (16 live) #b186 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "2248c141861c0a2c",
+        "line": "Jun 11, 2026 09:16:14.084 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+2248c141861c0a2c (16 live) #b186 Page 0-9 2ms 1223 bytes (pipelined: 5)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "ea2489ddc0285b99",
+        "line": "Jun 11, 2026 09:16:14.085 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ea2489ddc0285b99 (16 live) #b187 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "ea2489ddc0285b99",
+        "line": "Jun 11, 2026 09:16:14.085 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ea2489ddc0285b99 (16 live) #b187 Page 0-9 0ms 297 bytes (pipelined: 6)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "ea2489ddc0285b99",
+        "line": "Jun 11, 2026 09:16:14.086 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ea2489ddc0285b99 (16 live) #b188 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "ea2489ddc0285b99",
+        "line": "Jun 11, 2026 09:16:14.088 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+ea2489ddc0285b99 (16 live) #b188 Page 0-9 2ms 1223 bytes (pipelined: 6)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "3ac0e5bd2415a5fc",
+        "line": "Jun 11, 2026 09:16:14.089 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+3ac0e5bd2415a5fc (16 live) #b189 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "3ac0e5bd2415a5fc",
+        "line": "Jun 11, 2026 09:16:14.089 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+3ac0e5bd2415a5fc (16 live) #b189 Page 0-9 0ms 297 bytes (pipelined: 7)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "3ac0e5bd2415a5fc",
+        "line": "Jun 11, 2026 09:16:14.090 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+3ac0e5bd2415a5fc (16 live) #b18a Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "3ac0e5bd2415a5fc",
+        "line": "Jun 11, 2026 09:16:14.092 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+3ac0e5bd2415a5fc (16 live) #b18a Page 0-9 2ms 779 bytes (pipelined: 7)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d708c8b30a147319",
+        "line": "Jun 11, 2026 09:16:14.092 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d708c8b30a147319 (16 live) #b18b Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d708c8b30a147319",
+        "line": "Jun 11, 2026 09:16:14.093 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d708c8b30a147319 (16 live) #b18b Page 0-9 0ms 297 bytes (pipelined: 8)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d708c8b30a147319",
+        "line": "Jun 11, 2026 09:16:14.093 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d708c8b30a147319 (16 live) #b18c Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d708c8b30a147319",
+        "line": "Jun 11, 2026 09:16:14.096 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d708c8b30a147319 (16 live) #b18c Page 0-9 3ms 779 bytes (pipelined: 8)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "89731919b552c615",
+        "line": "Jun 11, 2026 09:16:14.097 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+89731919b552c615 (16 live) #b18d Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "89731919b552c615",
+        "line": "Jun 11, 2026 09:16:14.097 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+89731919b552c615 (16 live) #b18d Page 0-9 0ms 297 bytes (pipelined: 9)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "89731919b552c615",
+        "line": "Jun 11, 2026 09:16:14.098 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+89731919b552c615 (16 live) #b18e Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "89731919b552c615",
+        "line": "Jun 11, 2026 09:16:14.100 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+89731919b552c615 (16 live) #b18e Page 0-9 2ms 779 bytes (pipelined: 9)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "491a4bfccb102f1e",
+        "line": "Jun 11, 2026 09:16:14.100 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+491a4bfccb102f1e (16 live) #b18f Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "491a4bfccb102f1e",
+        "line": "Jun 11, 2026 09:16:14.101 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+491a4bfccb102f1e (16 live) #b18f Page 0-9 0ms 297 bytes (pipelined: 10)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "491a4bfccb102f1e",
+        "line": "Jun 11, 2026 09:16:14.101 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+491a4bfccb102f1e (16 live) #b190 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "491a4bfccb102f1e",
+        "line": "Jun 11, 2026 09:16:14.104 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+491a4bfccb102f1e (16 live) #b190 Page 0-9 2ms 779 bytes (pipelined: 10)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "81107989d2e30cfb",
+        "line": "Jun 11, 2026 09:16:14.104 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (16 live) #b191 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "81107989d2e30cfb",
+        "line": "Jun 11, 2026 09:16:14.104 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (16 live) #b191 Page 0-9 0ms 297 bytes (pipelined: 11)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "81107989d2e30cfb",
+        "line": "Jun 11, 2026 09:16:14.105 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (16 live) #b192 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "81107989d2e30cfb",
+        "line": "Jun 11, 2026 09:16:14.108 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+81107989d2e30cfb (16 live) #b192 Page 0-9 2ms 1213 bytes (pipelined: 11)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c08b683f68e4e49e",
+        "line": "Jun 11, 2026 09:16:14.108 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (16 live) #b193 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c08b683f68e4e49e",
+        "line": "Jun 11, 2026 09:16:14.108 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (16 live) #b193 Page 0-9 0ms 297 bytes (pipelined: 12)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c08b683f68e4e49e",
+        "line": "Jun 11, 2026 09:16:14.109 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (16 live) #b194 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "c08b683f68e4e49e",
+        "line": "Jun 11, 2026 09:16:14.111 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+c08b683f68e4e49e (16 live) #b194 Page 0-9 2ms 1218 bytes (pipelined: 12)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d8b22fb3f498688e",
+        "line": "Jun 11, 2026 09:16:14.112 [13212] DEBUG - Request: [127.0.0.1:53742 (Loopback)] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (16 live) #b195 Page 0-9 Signed-in Token ()"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d8b22fb3f498688e",
+        "line": "Jun 11, 2026 09:16:14.112 [29836] DEBUG - Completed: [127.0.0.1:53742] 401 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (16 live) #b195 Page 0-9 0ms 297 bytes (pipelined: 13)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d8b22fb3f498688e",
+        "line": "Jun 11, 2026 09:16:14.113 [13212] DEBUG - Request: [192.168.1.184:53749 (Allowed Network (Subnet))] GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (16 live) #b196 Page 0-9 Signed-in Token (r0cksteady)"
+      },
+      {
+        "file": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Logs\\Plex Media Server.log",
+        "term": "d8b22fb3f498688e",
+        "line": "Jun 11, 2026 09:16:14.115 [17212] DEBUG - Completed: [192.168.1.184:53749] 200 GET /library/sections/5/all?type=1&title=ScarFLIX+Part+d8b22fb3f498688e (16 live) #b196 Page 0-9 2ms 1221 bytes (pipelined: 13)"
+      }
+    ]
+  },
+  "summary": {
+    "plex_missing_matches": 3,
+    "plex_present_matches": 3,
+    "db_missing_rows": 3,
+    "db_present_rows": 3,
+    "log_match_count": 62
+  },
+  "hypothesis": "The affected Section 5 set is still naturally converging: current visibility improved to 95/105. The remaining 10 items remain absent from exact Plex metadata/API rows in this bounded check, and Plex DB rows mirror that absence for the probed hash/title terms.",
+  "recommendation": "Controlled expansion of the currently visible 95 hashes is reasonable only behind a verification gate: rerun focused Section 5 QA against visible-only hashes, require high pass rate and zero publication side effects, keep the 10 missing hashes held/retryable, and leave PAUSE_PUBLICATION active until the gate is explicitly passed. Waiting one more natural drift cycle may reduce residual misses further and is lower risk; proceeding visible-only is moderate risk but bounded if the gate is enforced.",
+  "github_push": {
+    "status": "REVIEW_PUSH_ERRORS",
+    "pushed": [
+      "latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md",
+      "latest/scarflix_v2/CODEX_STATUS_FOR_GROK.md",
+      "latest/scarflix_v2/section5_current_missing_correlation_status.md",
+      "latest/scarflix_v2/materialized_qa_incident_hypothesis_ledger.json",
+      "latest/scarflix_v2/materialized_qa_incident_hypothesis_ledger.md",
+      "latest/scarflix_v2/section5_uncapped_index_snapshot_status.json",
+      "latest/scarflix_v2/section5_tiny_plex_forensic_check_status.json"
+    ],
+    "errors": [
+      {
+        "rel": "latest/scarflix_v2/PROJECT_PLAN.md",
+        "http_status": 409,
+        "error": ""
+      },
+      {
+        "rel": "latest/scarflix_v2/section5_current_missing_correlation_status.json",
+        "http_status": 409,
+        "error": ""
+      }
+    ]
+  }
+}
