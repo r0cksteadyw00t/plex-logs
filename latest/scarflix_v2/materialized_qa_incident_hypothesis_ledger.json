@@ -3,7 +3,7 @@
   "schema_version": "scarflix.materialized_qa_incident_ledger.v1",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
   "status": "PASS_FORMALISED_P0_INCIDENT",
-  "updated_utc": "2026-06-10T22:16:54.500Z",
+  "updated_utc": "2026-06-10T22:26:45.659Z",
   "p0": true,
   "qa_summary": {
     "status": "REVIEW",
@@ -186,36 +186,26 @@
   "no_source_mutation_performed": true,
   "history": [
     {
-      "updated_utc": "2026-06-10T22:16:54.500Z",
-      "event": "section5_indexing_diagnostic",
-      "status": "REVIEW_DIAGNOSTIC_COMPLETE",
-      "key_finding": "The previous Section 5 verification result is not a reliable proof that Plex only exposes 16/105 expected paths because the verifier's section index parser capped parsed Video rows at 40, and the artifact hit exactly video_count=40.",
-      "next_safe_action": "Run one read-only, uncapped Section 5 index snapshot job that records MediaContainer total size and all Part file hashes without refresh, cache clear, deletion, or publication. Then recompute strict matches against the 105 affected expected hashes."
+      "updated_utc": "2026-06-10T22:26:45.659Z",
+      "event": "section5_uncapped_index_snapshot",
+      "status": "REVIEW_PLEX_INDEX_QUERY_FAILED",
+      "expected_count": 105,
+      "present_count": 0,
+      "missing_count": 105,
+      "reported_total_size": null,
+      "conclusion": "The uncapped snapshot did not find more expected hashes than the capped verifier. The Section 5 visibility gap appears real for the missing 105 affected hashes."
     }
   ],
-  "latest_section5_indexing_diagnostic": {
-    "updated_utc": "2026-06-10T22:16:54.500Z",
-    "status": "REVIEW_DIAGNOSTIC_COMPLETE",
-    "key_finding": "The previous Section 5 verification result is not a reliable proof that Plex only exposes 16/105 expected paths because the verifier's section index parser capped parsed Video rows at 40, and the artifact hit exactly video_count=40.",
-    "leading_hypothesis": {
-      "statement": "Current evidence supports a diagnostic measurement flaw plus possible Plex scanner/indexing behavior issue. The strongest immediate finding is that the 16/105 result is under-instrumented because the verifier capped parsed Section 5 rows at 40; the next step must establish true Section 5 index cardinality before deciding whether Plex is ignoring most ScarFLIX_part paths.",
-      "confidence": "HIGH for measurement-cap issue; MEDIUM for Plex scanner/indexing mismatch until a full uncapped read-only index snapshot is captured.",
-      "not_supported_yet": [
-        "It is not yet proven that Plex truly exposes only 15% of expected paths.",
-        "It is not yet proven that library agent/scanner settings are wrong; those settings are not present in current artifacts.",
-        "It is not yet safe to accept residual failures or expand based on the 16/105 figure."
-      ]
-    },
-    "recommendation": {
-      "next_safe_action": "Run one read-only, uncapped Section 5 index snapshot job that records MediaContainer total size and all Part file hashes without refresh, cache clear, deletion, or publication. Then recompute strict matches against the 105 affected expected hashes.",
-      "priority": "P0",
-      "why": "This separates a diagnostic-tool cap from a real Plex indexing failure. It is lower blast radius than any new reconciliation or mitigation.",
-      "alternatives": [
-        "If full uncapped index shows most hashes present, rerun the Section 5 gate with corrected verifier.",
-        "If full uncapped index confirms only a small subset present, inspect Section 5 scanner/agent settings and Plex scanner logs for the affected path family.",
-        "Do not accept residual failures or expand until the true index cardinality is known."
-      ],
-      "expansion_recommendation": "BLOCKED"
-    }
+  "current_status": "REVIEW_PLEX_INDEX_QUERY_FAILED",
+  "current_hypothesis": {
+    "statement": "The uncapped snapshot did not find more expected hashes than the capped verifier. The Section 5 visibility gap appears real for the missing 105 affected hashes.",
+    "evidence_level": "high",
+    "measurement_artifact_confirmed": false,
+    "remaining_visibility_gap": true
+  },
+  "current_recommendation": {
+    "next_safe_action": "Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.",
+    "expansion_recommendation": "BLOCKED",
+    "reason": "A true visibility gap remains after removing the parser cap."
   }
 }
