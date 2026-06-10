@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-10T14:20:02.483Z
+Updated UTC: 2026-06-10T14:25:02.370Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: STALE_STATUS
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -29,9 +29,9 @@ Recent Achievements:
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 5 min ago
-- Platform child progress: 67 min ago
+- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
+- Controller updated: 10 min ago
+- Platform child progress: 72 min ago
 - Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
