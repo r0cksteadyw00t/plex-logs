@@ -1,14 +1,14 @@
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
-**Updated UTC:** 2026-06-11T07:11:57.623Z
+**Updated UTC:** 2026-06-11T07:19:31.828Z
 
 **Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
 
 **True baseline:** `100/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
 
-**Plex Section 5 reported total size:** `325`
+**Plex Section 5 reported total size:** `326`
 
-**Parsed Section 5 Video rows:** `325`
+**Parsed Section 5 Video rows:** `326`
 
 **Unique indexed ScarFLIX_part hashes:** `214`
 
