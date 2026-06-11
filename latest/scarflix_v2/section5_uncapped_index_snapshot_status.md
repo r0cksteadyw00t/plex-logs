@@ -1,6 +1,6 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T07:19:31.828Z
+- Updated UTC: 2026-06-11T07:28:46.188Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
