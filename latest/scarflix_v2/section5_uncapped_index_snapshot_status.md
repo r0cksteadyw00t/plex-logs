@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T02:55:29.478Z
+- Updated UTC: 2026-06-11T03:09:46.858Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 183
-- Parsed Section 5 Video rows: 183
+- Plex Section 5 reported total size: 185
+- Parsed Section 5 Video rows: 185
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 169
-- Expected affected hashes present: 87/105 (82.9%)
-- Expected affected hashes missing: 18
+- Unique indexed ScarFLIX_part hashes: 171
+- Expected affected hashes present: 88/105 (83.8%)
+- Expected affected hashes missing: 17
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 87/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 88/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -39,6 +39,6 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 - `scarflix_part-fb19346714d96cd7` Speed
 - `scarflix_part-0e360325f9b2603d` Teen Wolf: The Movie
 - `scarflix_part-6a30d1aa558bac1f` Terminator: Dark Fate
-- `scarflix_part-3150adb80410deb7` The Curse of La Llorona
+- `scarflix_part-f5edc313355fa64c` The Empty Man
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
