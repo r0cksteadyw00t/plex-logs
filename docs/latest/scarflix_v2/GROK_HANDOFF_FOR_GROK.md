@@ -1,6 +1,6 @@
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
-**Updated UTC:** 2026-06-11T06:40:24.244Z
+**Updated UTC:** 2026-06-11T06:49:39.648Z
 
 **Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
 
@@ -22,19 +22,41 @@
 
 ## PATH 2 PROTECTED PILOT MIGRATION STATUS
 
-**Updated UTC:** 2026-06-11T06:33:21.495Z
-**Status:** ROLLED_BACK_PILOT_ERROR
+**Updated UTC:** 2026-06-11T06:49:22.906Z
+**Status:** PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
 ### Summary
 - Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: 98/105 visible, 7 missing.
+- Baseline: 100/105 visible, 5 missing.
 - Pilot attempted: true
-- Created aliases: 0
-- Rollback performed: true
+- Created aliases: 10
+- Rollback performed: false
 
 ### Decision
-Pilot failed before completion; rollback was performed.
+Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.
+
+## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
+
+**Updated UTC:** 2026-06-11T06:48:11.396Z
+
+**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+
+**True baseline:** `100/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `323`
+
+**Parsed Section 5 Video rows:** `323`
+
+**Unique indexed ScarFLIX_part hashes:** `213`
+
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 100/105 expected affected hashes currently present in Plex Section 5.
+
+**Recommendation:** Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
