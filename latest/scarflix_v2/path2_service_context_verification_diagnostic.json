@@ -1,0 +1,271 @@
+{
+  "component": "path2_service_context_verification_diagnostic",
+  "schema_version": "jasonos.path2_service_context_verification_diagnostic.v1",
+  "status": "REVIEW_PATH2_VERIFICATION_STRATEGY_NEEDS_ADJUSTMENT",
+  "updated_utc": "2026-06-11T01:20:23.262Z",
+  "read_only": true,
+  "no_pilot_reattempted": true,
+  "no_structural_changes": true,
+  "pause_publication_respected": true,
+  "launch_health_gate": {
+    "checked_utc": "2026-06-11T01:18:20.321Z",
+    "results": [
+      {
+        "index": 1,
+        "ok": true,
+        "duration_ms": 28
+      },
+      {
+        "index": 2,
+        "ok": true,
+        "duration_ms": 22
+      },
+      {
+        "index": 3,
+        "ok": true,
+        "duration_ms": 23
+      }
+    ],
+    "avg_ms": 24,
+    "timeouts": 0
+  },
+  "sentinel": {
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-11T01:20:02Z",
+    "jason_action_required": false,
+    "codex_action_required": false
+  },
+  "orchestrator": {
+    "status": "PASS",
+    "pid": 11700,
+    "service_start_name": "LocalSystem",
+    "pause": {
+      "pause_all": false,
+      "pause_publication": true,
+      "safe_mode": false,
+      "degraded_mode": false
+    },
+    "launch_health": {
+      "updated_utc": "2026-06-11T01:20:22.039Z",
+      "window_minutes": 10,
+      "sample_count": 3,
+      "latency_sample_count": 3,
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 3471,
+      "timeout_count": 0,
+      "timeout_rate": 0,
+      "launches_last_minute": 0,
+      "budget_per_minute": 8,
+      "degraded_required": false,
+      "active_child_count": 0,
+      "tracked_child_count": 0
+    }
+  },
+  "baseline": {
+    "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+    "expected_count": 105,
+    "present_count": 74,
+    "missing_count": 31,
+    "updated_utc": "2026-06-11T00:57:36.821Z"
+  },
+  "pilot_reference": {
+    "status": "ROLLED_BACK_PILOT_VERIFICATION_FAILED",
+    "updated_utc": "2026-06-11T01:00:20.108Z",
+    "decision": "Pilot runner created aliases but verification failed; rollback was performed.",
+    "rollback": {
+      "performed": true,
+      "result": {
+        "rollback_reasons": [
+          "WebDAV HEAD failed for scarflix_part-d8b22fb3f498688e",
+          "WebDAV HEAD failed for scarflix_part-2eaab8df357724dc",
+          "WebDAV HEAD failed for scarflix_part-8aa2235ef7c1e0f6"
+        ],
+        "actions": [
+          {
+            "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\Battleship (2012).mkv",
+            "action": "removed_alias_symlink"
+          },
+          {
+            "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\Armageddon (1998).mkv",
+            "action": "removed_alias_symlink"
+          },
+          {
+            "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\Annihilation (2018).mkv",
+            "action": "removed_alias_symlink"
+          },
+          {
+            "path": "D:\\PlexTools\\state\\scarflix_v2\\webdav_map.json",
+            "action": "restored_webdav_map_backup"
+          }
+        ]
+      }
+    }
+  },
+  "selected_titles": [
+    {
+      "hash": "scarflix_part-d8b22fb3f498688e",
+      "title": "Annihilation (2018)",
+      "webdav_path": "/media/ScarFLIX_part-d8b22fb3f498688e/stream.mkv",
+      "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e",
+      "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
+      "rclone_dir": "S:\\media\\ScarFLIX_part-d8b22fb3f498688e",
+      "rclone_path": "S:\\media\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
+      "local_dir_symlink_object": {
+        "exists": true,
+        "is_symbolic_link": true,
+        "is_directory": false,
+        "is_file": false,
+        "size": 39,
+        "readlink": "S:\\media\\ScarFLIX_part-d8b22fb3f498688e"
+      },
+      "current_alias_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\Annihilation (2018).mkv",
+      "current_alias_lstat": {
+        "exists": false,
+        "code": "ENOENT",
+        "message": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\Annihilation (2018).mkv'"
+      },
+      "pilot_recorded_alias_lstat": {
+        "exists": true,
+        "is_symbolic_link": true,
+        "is_directory": false,
+        "is_file": false,
+        "size": 41,
+        "mtime_utc": "2026-06-11T01:00:06.528Z"
+      },
+      "pilot_recorded_legacy_lstat": {
+        "exists": false,
+        "error": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv'"
+      },
+      "pilot_recorded_webdav_head": {
+        "ok": false,
+        "error": "timeout",
+        "duration_ms": 5014
+      }
+    },
+    {
+      "hash": "scarflix_part-2eaab8df357724dc",
+      "title": "Armageddon (1998)",
+      "webdav_path": "/media/ScarFLIX_part-2eaab8df357724dc/stream.mkv",
+      "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc",
+      "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+      "rclone_dir": "S:\\media\\ScarFLIX_part-2eaab8df357724dc",
+      "rclone_path": "S:\\media\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+      "local_dir_symlink_object": {
+        "exists": true,
+        "is_symbolic_link": true,
+        "is_directory": false,
+        "is_file": false,
+        "size": 39,
+        "readlink": "S:\\media\\ScarFLIX_part-2eaab8df357724dc"
+      },
+      "current_alias_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\Armageddon (1998).mkv",
+      "current_alias_lstat": {
+        "exists": false,
+        "code": "ENOENT",
+        "message": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\Armageddon (1998).mkv'"
+      },
+      "pilot_recorded_alias_lstat": {
+        "exists": true,
+        "is_symbolic_link": true,
+        "is_directory": false,
+        "is_file": false,
+        "size": 41,
+        "mtime_utc": "2026-06-11T01:00:06.532Z"
+      },
+      "pilot_recorded_legacy_lstat": {
+        "exists": false,
+        "error": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv'"
+      },
+      "pilot_recorded_webdav_head": {
+        "ok": false,
+        "status_code": 503,
+        "duration_ms": 4506
+      }
+    },
+    {
+      "hash": "scarflix_part-8aa2235ef7c1e0f6",
+      "title": "Battleship (2012)",
+      "webdav_path": "/media/ScarFLIX_part-8aa2235ef7c1e0f6/stream.mkv",
+      "local_dir": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6",
+      "local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+      "rclone_dir": "S:\\media\\ScarFLIX_part-8aa2235ef7c1e0f6",
+      "rclone_path": "S:\\media\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+      "local_dir_symlink_object": {
+        "exists": true,
+        "is_symbolic_link": true,
+        "is_directory": false,
+        "is_file": false,
+        "size": 39,
+        "readlink": "S:\\media\\ScarFLIX_part-8aa2235ef7c1e0f6"
+      },
+      "current_alias_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\Battleship (2012).mkv",
+      "current_alias_lstat": {
+        "exists": false,
+        "code": "ENOENT",
+        "message": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\Battleship (2012).mkv'"
+      },
+      "pilot_recorded_alias_lstat": {
+        "exists": true,
+        "is_symbolic_link": true,
+        "is_directory": false,
+        "is_file": false,
+        "size": 41,
+        "mtime_utc": "2026-06-11T01:00:06.532Z"
+      },
+      "pilot_recorded_legacy_lstat": {
+        "exists": false,
+        "error": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv'"
+      },
+      "pilot_recorded_webdav_head": {
+        "ok": false,
+        "error": "timeout",
+        "duration_ms": 4011
+      }
+    }
+  ],
+  "webdav_recheck": {
+    "checked_utc": "2026-06-11T01:18:05.484Z",
+    "method": "bounded read-only HEAD from Codex context to http://127.0.0.1:18789 + webdav_path with 2500ms timeout",
+    "results": [
+      {
+        "hash": "scarflix_part-d8b22fb3f498688e",
+        "title": "Annihilation (2018)",
+        "webdav_path": "/media/ScarFLIX_part-d8b22fb3f498688e/stream.mkv",
+        "ok": true,
+        "status_code": 200,
+        "duration_ms": 1475
+      },
+      {
+        "hash": "scarflix_part-2eaab8df357724dc",
+        "title": "Armageddon (1998)",
+        "webdav_path": "/media/ScarFLIX_part-2eaab8df357724dc/stream.mkv",
+        "ok": false,
+        "error": "timeout",
+        "duration_ms": 2512
+      },
+      {
+        "hash": "scarflix_part-8aa2235ef7c1e0f6",
+        "title": "Battleship (2012)",
+        "webdav_path": "/media/ScarFLIX_part-8aa2235ef7c1e0f6/stream.mkv",
+        "ok": true,
+        "status_code": 200,
+        "duration_ms": 1392
+      }
+    ]
+  },
+  "findings": [
+    "The Orchestrator service runs as LocalSystem. The selected ScarFLIX_part directories are symlinks to S:\\media\\ScarFLIX_part-* targets.",
+    "Service-context verification failed on legacy_lstat for stream.mkv because dereferencing the ScarFLIX_part directory symlink depends on the S: rclone mount being visible to LocalSystem. The failure mode is ENOENT for all three pilot titles.",
+    "The created traditional aliases were only lstat-verified as symlink objects before rollback. That does not prove their targets can be dereferenced; their relative targets still traverse the same ScarFLIX_part directory symlinks and therefore inherit the same S: visibility risk.",
+    "The WebDAV HEAD checks in the pilot targeted the original /media/ScarFLIX_part-*/stream.mkv paths, not the new traditional aliases. Those failures are therefore not evidence that the alias naming itself is invalid.",
+    "A bounded read-only recheck later returned HTTP 200 for Annihilation and Battleship and a timeout for Armageddon. This points to transient WebDAV/backend/source latency for the HEAD layer, not a deterministic missing-path condition for all three."
+  ],
+  "root_cause_summary": "The pilot failed because the current verification strategy mixes two unreliable checks for this service context: LocalSystem dereferencing of S:-backed symlinks and single-attempt WebDAV HEAD. The local path failure is a known context-visibility issue; the WebDAV failure appears transient or source-latency-sensitive. The evidence does not prove Path 2 is structurally invalid, but it does prove the current verification gate is not fit for scaling.",
+  "recommendation": {
+    "path2_viability": "Potentially viable, but paused until verification strategy is changed.",
+    "next_action": "Do not reattempt migration. Patch the pilot runner verification design first: object-level symlink/readlink checks in service context, independent WebDAV preflight with retry/backoff before mutation, and user-context or Plex/API verification for any dereferenced media path checks.",
+    "future_pilot_gate": "One-title pilot only after preflight WebDAV succeeds for that exact hash and the runner no longer treats LocalSystem S: dereference ENOENT as a content failure.",
+    "scaling": "Do not scale Stage B or migrate the visible set yet."
+  }
+}
