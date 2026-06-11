@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_sentinel_hold_strategy_20260611_v57",
-      "created_at": "2026-06-11T03:54:19Z",
-      "expires_at": "2026-06-12T03:54:19Z",
+      "instruction_id": "phase0_record_sentinel_hold_forensic_baseline_20260611_v58",
+      "created_at": "2026-06-11T04:10:49Z",
+      "expires_at": "2026-06-12T04:10:49Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,15 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Sentinel remains REVIEW/MEDIUM with PAUSE_PUBLICATION active. No 10-title pilot queued. Maintain stabilization baseline at 88/105. Record only; no expansion or mutation.",
-            "source_instruction_id": "phase0_record_sentinel_hold_strategy_20260611_v57"
+            "summary": "Sentinel remains ALERT/HIGH blocking 10-title pilot. True baseline stable at 88/105 visible. PAUSE_PUBLICATION active. Perform read-only passing-vs-missing forensic diff on indexed paths, source depth, scanner titles, and logs for representative hashes. No refresh, mutation, publishing, or expansion. Await Sentinel PASS/LOW or REVIEW/MEDIUM before any further Path 2 steps.",
+            "source_instruction_id": "phase0_record_sentinel_hold_forensic_baseline_20260611_v58",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -29,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-11T03:54:19Z",
+  "updated_utc": "2026-06-11T04:10:49Z",
   "source": "grok_api"
 }
