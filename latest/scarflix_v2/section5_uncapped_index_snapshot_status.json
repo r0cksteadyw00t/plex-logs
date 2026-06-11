@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-11T11:29:25.224Z",
-  "updated_utc": "2026-06-11T11:29:27.208Z",
+  "started_utc": "2026-06-11T12:33:34.208Z",
+  "updated_utc": "2026-06-11T12:33:36.269Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -20,31 +20,44 @@
     "status": "PASS_LAUNCH_HEALTH_ACCEPTABLE",
     "sentinel": {
       "component": "jasonos_prime_sentinel_node",
-      "status": "PASS",
-      "alert_level": "LOW",
-      "updated_utc": "2026-06-11T11:25:02Z",
+      "status": "REVIEW",
+      "alert_level": "MEDIUM",
+      "updated_utc": "2026-06-11T12:30:04Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
-      "repeat_count": 3,
+      "repeat_count": 1,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 3,
+        "controller_age_minutes": 8,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
-        "watchdog_age_minutes": 3,
+        "watchdog_age_minutes": 9,
         "dashboard_status": "PASS",
         "dashboard_age_minutes": 5,
         "mirror_status": "PASS",
-        "mirror_age_minutes": 4,
+        "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 4926,
-        "durable_platform_gate_age_minutes": 4926,
+        "checkpoint_age_minutes": 4991,
+        "durable_platform_gate_age_minutes": 4991,
         "platform_progress_fresh": false
       },
-      "recovery_actions": [],
+      "recovery_actions": [
+        {
+          "task": "ScarFLIX_v2_Watchdog_StallDetector",
+          "reason": "watchdog_stale_or_failed",
+          "result": "PASS",
+          "note": "enable pid=9028; run pid=5108"
+        },
+        {
+          "task": "ScarFLIX_v2_AutonomousController",
+          "reason": "controller_stale_or_blocked",
+          "result": "PASS",
+          "note": "enable pid=20000; run pid=40548"
+        }
+      ],
       "notes": [],
       "files": {
         "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
@@ -56,7 +69,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-11T11:29:25.165Z",
+      "updated_utc": "2026-06-11T12:33:34.071Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -64,14 +77,14 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-11T11:29:25.121Z",
+      "last_tick_utc": "2026-06-11T12:33:33.966Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_a65cdb04a4e1cc66",
+          "id": "job_748acf8ddd93f485",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-11T11:29:25.157Z"
+          "started_utc": "2026-06-11T12:33:34.060Z"
         }
       ],
       "pause": {
@@ -87,12 +100,12 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-11T11:29:25.165Z",
+        "updated_utc": "2026-06-11T12:33:34.071Z",
         "window_minutes": 10,
-        "sample_count": 6,
-        "latency_sample_count": 6,
+        "sample_count": 2,
+        "latency_sample_count": 2,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 11198,
+        "avg_process_runtime_ms": 12295,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 1,
@@ -120,7 +133,7 @@
         "schema_version": "jasonos.hands_off_operation.v1",
         "status": "REVIEW_ESCALATION_REQUIRED",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-11T11:28:25.129Z",
+        "updated_utc": "2026-06-11T12:32:34.014Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -134,9 +147,9 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-11T11:25:02Z",
-          "sentinel_status": "PASS",
-          "sentinel_alert": "LOW",
+          "dashboard_updated_utc": "2026-06-11T12:30:04Z",
+          "sentinel_status": "REVIEW",
+          "sentinel_alert": "MEDIUM",
           "codex_action_required": false,
           "jason_action_required": false,
           "materialized_qa_status": "REVIEW",
@@ -147,12 +160,12 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-11T11:28:25.125Z",
+          "updated_utc": "2026-06-11T12:32:34.009Z",
           "window_minutes": 10,
-          "sample_count": 5,
-          "latency_sample_count": 5,
+          "sample_count": 1,
+          "latency_sample_count": 1,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 13015,
+          "avg_process_runtime_ms": 18467,
           "timeout_count": 0,
           "timeout_rate": 0,
           "launches_last_minute": 0,
@@ -196,20 +209,20 @@
         ],
         "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
         "progress_made_this_cycle": false,
-        "no_progress_cycles": 282,
+        "no_progress_cycles": 293,
         "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
         "queued_jobs": [
           {
             "type": "autonomous_incident_manager",
-            "id": "job_02b8269eb5019ec8"
+            "id": "job_ce963d877c63e7c0"
           },
           {
             "type": "generate_grok_cycle_report",
-            "id": "job_5bb7d8c43185427a"
+            "id": "job_6879318cf833fe55"
           },
           {
             "type": "deliver_grok_cycle_report",
-            "id": "job_bb6312d452ea226f"
+            "id": "job_e08231f37589f85b"
           }
         ],
         "actions_taken": [
@@ -218,7 +231,7 @@
         ],
         "blockers": [],
         "escalation_required": true,
-        "escalation_reason": "No semantic progress for 282 hands-off cycles.",
+        "escalation_reason": "No semantic progress for 293 hands-off cycles.",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -228,7 +241,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-11T11:29:25.165Z",
+        "updated_utc": "2026-06-11T12:33:34.071Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 17,
@@ -243,11 +256,25 @@
           "review_action_failed": 0
         },
         "blocked_or_review_count": 33,
-        "last_instruction_id": "phase0_record_section5_true_baseline_forensic_hold_20260611_v77",
+        "last_instruction_id": "phase0_record_section5_true_baseline_forensic_hold_20260611_v78",
         "last_instruction_status": "blocked_review",
         "last_ingest_utc": "",
         "last_execution_utc": "",
         "recent_instructions": [
+          {
+            "instruction_id": "phase0_record_section5_true_baseline_forensic_hold_20260611_v78",
+            "created_utc": "2026-06-11T11:37:43Z",
+            "expires_utc": "2026-06-12T11:37:43Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
           {
             "instruction_id": "phase0_record_section5_true_baseline_forensic_hold_20260611_v77",
             "created_utc": "2026-06-11T11:22:10Z",
@@ -933,26 +960,12 @@
             ],
             "action_count": 1,
             "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v28",
-            "created_utc": "2026-06-10T18:49:33Z",
-            "expires_utc": "2026-06-11T18:49:33Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
           }
         ]
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-11T11:29:25.164Z",
+        "updated_utc": "2026-06-11T12:33:34.069Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1493,190 +1506,11 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-11T11:29:25.170Z",
-      "process_launches_total": 191,
-      "spawn_sync_total": 145,
-      "spawn_detached_total": 46,
+      "updated_utc": "2026-06-11T12:33:34.077Z",
+      "process_launches_total": 204,
+      "spawn_sync_total": 153,
+      "spawn_detached_total": 51,
       "recent_launches": [
-        {
-          "ts_utc": "2026-06-11T07:21:55.159Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 58,
-          "process_runtime_ms": 58,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:29:01.166Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 16778,
-          "process_runtime_ms": 16778,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:30:03.258Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Path2PilotMigrationRunner.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Path2PilotMigrationRunner.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 300000,
-          "elapsed_ms": 47030,
-          "process_runtime_ms": 47030,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:30:08.533Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 5210,
-          "process_runtime_ms": 5210,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:30:50.781Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 17469,
-          "process_runtime_ms": 17469,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:32:20.893Z",
-          "kind": "spawn_detached",
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "pid": 16912,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T07:33:20.907Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 40668,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T07:42:10.983Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 4733,
-          "process_runtime_ms": 4733,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:45:24.474Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 18200,
-          "process_runtime_ms": 18200,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:46:23.618Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Path2PilotMigrationRunner.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Path2PilotMigrationRunner.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 300000,
-          "elapsed_ms": 44083,
-          "process_runtime_ms": 44083,
-          "launch_latency_ms": null,
-          "exit_code": 2,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:46:28.788Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 5106,
-          "process_runtime_ms": 5106,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T07:48:53.748Z",
-          "kind": "spawn_detached",
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "pid": 24876,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T07:49:08.754Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 29988,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
         {
           "ts_utc": "2026-06-11T07:53:57.155Z",
           "kind": "spawn_sync",
@@ -3173,6 +3007,181 @@
           "exit_code": 0,
           "timed_out": false,
           "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T11:29:43.452Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 18281,
+          "process_runtime_ms": 18281,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T11:32:58.627Z",
+          "kind": "spawn_detached",
+          "name": "command_center_generator",
+          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
+          "pid": 39364,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-11T11:35:05.614Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 6899,
+          "process_runtime_ms": 6899,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T11:35:13.729Z",
+          "kind": "spawn_detached",
+          "name": "public_mirror_publisher",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
+          "pid": 33248,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-11T11:37:55.520Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokInstructionBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
+          "parent_job_class": "control",
+          "critical": true,
+          "timeout_ms": 60000,
+          "elapsed_ms": 11737,
+          "process_runtime_ms": 11737,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T11:37:55.579Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
+          "parent_job_class": "control",
+          "critical": true,
+          "timeout_ms": 60000,
+          "elapsed_ms": 59,
+          "process_runtime_ms": 59,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T11:40:20.223Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 6338,
+          "process_runtime_ms": 6338,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T11:48:59.101Z",
+          "kind": "spawn_detached",
+          "name": "command_center_generator",
+          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
+          "pid": 40128,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-11T12:04:14.569Z",
+          "kind": "spawn_detached",
+          "name": "command_center_generator",
+          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
+          "pid": 16856,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-11T12:11:49.744Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 4928,
+          "process_runtime_ms": 4928,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T12:20:45.081Z",
+          "kind": "spawn_detached",
+          "name": "command_center_generator",
+          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
+          "pid": 25820,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-11T12:26:18.738Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 18467,
+          "process_runtime_ms": 18467,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T12:32:55.185Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 6122,
+          "process_runtime_ms": 6122,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
         }
       ],
       "tracked_children": [],
@@ -3185,12 +3194,12 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-11T11:29:25.170Z",
+        "updated_utc": "2026-06-11T12:33:34.077Z",
         "window_minutes": 10,
-        "sample_count": 6,
-        "latency_sample_count": 6,
+        "sample_count": 2,
+        "latency_sample_count": 2,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 11198,
+        "avg_process_runtime_ms": 12295,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 1,
@@ -3202,12 +3211,12 @@
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-11T11:29:25.170Z",
+      "updated_utc": "2026-06-11T12:33:34.077Z",
       "window_minutes": 10,
-      "sample_count": 6,
-      "latency_sample_count": 6,
+      "sample_count": 2,
+      "latency_sample_count": 2,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 11198,
+      "avg_process_runtime_ms": 12295,
       "timeout_count": 0,
       "timeout_rate": 0,
       "launches_last_minute": 1,
@@ -3227,9 +3236,9 @@
     "page_size": 500,
     "page_count": 1,
     "selected_base": "http://192.168.1.184:32400",
-    "reported_total_size": 160,
-    "parsed_video_count": 160,
-    "unique_part_hash_count": 159,
+    "reported_total_size": 173,
+    "parsed_video_count": 173,
+    "unique_part_hash_count": 169,
     "pages": [
       {
         "offset": 0,
@@ -3237,12 +3246,12 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 38,
-        "media_container_size": "160",
-        "media_container_total_size": "160",
+        "elapsed_ms": 72,
+        "media_container_size": "173",
+        "media_container_total_size": "173",
         "media_container_offset": "0",
-        "parsed_video_count": 160,
-        "body_bytes": 250351
+        "parsed_video_count": 173,
+        "body_bytes": 265910
       }
     ],
     "indexed_parts": [
@@ -3332,6 +3341,14 @@
         "title": "Annihilation",
         "year": "2018",
         "rating_key": "49060",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-2eaab8df357724dc",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+        "title": "Armageddon",
+        "year": "1998",
+        "rating_key": "49747",
         "library_section_id": ""
       },
       {
@@ -3847,6 +3864,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-0c6a9ce70714a3a2",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Escape Plan 2 Hades (2018)\\ScarFLIX_part-0c6a9ce70714a3a2\\stream.mkv",
+        "title": "Escape Plan 2: Hades",
+        "year": "2018",
+        "rating_key": "49735",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-4c539016fabe8738",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Face Off (1997)\\ScarFLIX_part-4c539016fabe8738\\stream.mkv",
         "title": "Face/Off",
@@ -4191,6 +4216,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-1ce460822ca1239a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\In the Mood for Love (2000)\\ScarFLIX_part-1ce460822ca1239a\\stream.mkv",
+        "title": "In the Mood for Love",
+        "year": "2000",
+        "rating_key": "49741",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-52c63b31fc203627",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Indecent Proposal (1993)\\ScarFLIX_part-52c63b31fc203627\\stream.mkv",
         "title": "Indecent Proposal",
@@ -4300,6 +4333,14 @@
         "title": "Legally Blonde",
         "year": "2001",
         "rating_key": "49122",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-0d465a7414c7c73a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Legends of the Fall (1994)\\ScarFLIX_part-0d465a7414c7c73a\\stream.mkv",
+        "title": "Legends of the Fall",
+        "year": "1994",
+        "rating_key": "49681",
         "library_section_id": ""
       },
       {
@@ -4751,19 +4792,43 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-0c6a9ce70714a3a2",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Escape Plan 2 Hades (2018)\\ScarFLIX_part-0c6a9ce70714a3a2\\stream.mkv",
-        "title": "ScarFLIX Part 0c6a9ce70714a3a2",
+        "hash": "scarflix_part-1ce460822ca1239a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\In the Mood for Love (2000)\\ScarFLIX_part-1ce460822ca1239a\\stream.mkv",
+        "title": "ScarFLIX Part 1ce460822ca1239a",
         "year": "",
-        "rating_key": "49735",
+        "rating_key": "49744",
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-0d465a7414c7c73a",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Legends of the Fall (1994)\\ScarFLIX_part-0d465a7414c7c73a\\stream.mkv",
-        "title": "ScarFLIX Part 0d465a7414c7c73a",
+        "hash": "scarflix_part-4a066b8b94606da9",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Tombstone (1993)\\ScarFLIX_part-4a066b8b94606da9\\stream.mkv",
+        "title": "ScarFLIX Part 4a066b8b94606da9",
         "year": "",
-        "rating_key": "49681",
+        "rating_key": "49737",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-4a066b8b94606da9",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Tombstone (1993)\\ScarFLIX_part-4a066b8b94606da9\\stream.mkv",
+        "title": "ScarFLIX Part 4a066b8b94606da9",
+        "year": "",
+        "rating_key": "49738",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-6bc868616f378edf",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
+        "title": "ScarFLIX Part 6bc868616f378edf",
+        "year": "",
+        "rating_key": "49755",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-8aa2235ef7c1e0f6",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "title": "ScarFLIX Part 8aa2235ef7c1e0f6",
+        "year": "",
+        "rating_key": "49752",
         "library_section_id": ""
       },
       {
@@ -4772,6 +4837,14 @@
         "title": "ScarFLIX Part 17c22fece3c579f9",
         "year": "",
         "rating_key": "49644",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-44ae6e942e074320",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Oblivion (2013)\\ScarFLIX_part-44ae6e942e074320\\stream.mkv",
+        "title": "ScarFLIX Part 44ae6e942e074320",
+        "year": "",
+        "rating_key": "49745",
         "library_section_id": ""
       },
       {
@@ -4796,6 +4869,46 @@
         "title": "ScarFLIX Part A7b67ffdd3c5808a",
         "year": "",
         "rating_key": "49680",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-a61d38731f010847",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Amadeus (1984)\\ScarFLIX_part-a61d38731f010847\\stream.mkv",
+        "title": "ScarFLIX Part A61d38731f010847",
+        "year": "",
+        "rating_key": "49748",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-b6caef61efed54f1",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv",
+        "title": "ScarFLIX Part B6caef61efed54f1",
+        "year": "",
+        "rating_key": "49736",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-b6f5180a4a7d0823",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ikiru (1952)\\ScarFLIX_part-b6f5180a4a7d0823\\stream.mkv",
+        "title": "ScarFLIX Part B6f5180a4a7d0823",
+        "year": "",
+        "rating_key": "49753",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-b6f5180a4a7d0823",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ikiru (1952)\\ScarFLIX_part-b6f5180a4a7d0823\\stream.mkv",
+        "title": "ScarFLIX Part B6f5180a4a7d0823",
+        "year": "",
+        "rating_key": "49754",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-bd37929b54c7c1bf",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
+        "title": "ScarFLIX Part Bd37929b54c7c1bf",
+        "year": "",
+        "rating_key": "49746",
         "library_section_id": ""
       },
       {
@@ -5242,9 +5355,9 @@
   },
   "comparison": {
     "expected_count": 105,
-    "present_count": 81,
-    "missing_count": 24,
-    "present_percent": 77.1,
+    "present_count": 88,
+    "missing_count": 17,
+    "present_percent": 83.8,
     "present": [
       {
         "hash": "scarflix_part-81107989d2e30cfb",
@@ -5294,6 +5407,110 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Annihilation (2018)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-2eaab8df357724dc",
+        "title": "Armageddon",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-2eaab8df357724dc",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+            "title": "Armageddon",
+            "year": "1998",
+            "rating_key": "49747",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Armageddon (1998)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-6bc868616f378edf",
+        "title": "The Ballerina",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-6bc868616f378edf",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
+            "title": "ScarFLIX Part 6bc868616f378edf",
+            "year": "",
+            "rating_key": "49755",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Ballerina (2016)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-8aa2235ef7c1e0f6",
+        "title": "Battleship",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-8aa2235ef7c1e0f6",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+            "title": "ScarFLIX Part 8aa2235ef7c1e0f6",
+            "year": "",
+            "rating_key": "49752",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Battleship (2012)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-bd37929b54c7c1bf",
+        "title": "Crank",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-bd37929b54c7c1bf",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
+            "title": "ScarFLIX Part Bd37929b54c7c1bf",
+            "year": "",
+            "rating_key": "49746",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Crank (2006)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -5773,6 +5990,74 @@
         }
       },
       {
+        "hash": "scarflix_part-b6f5180a4a7d0823",
+        "title": "Ikiru",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ikiru (1952)\\ScarFLIX_part-b6f5180a4a7d0823\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-b6f5180a4a7d0823",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ikiru (1952)\\ScarFLIX_part-b6f5180a4a7d0823\\stream.mkv",
+            "title": "ScarFLIX Part B6f5180a4a7d0823",
+            "year": "",
+            "rating_key": "49753",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-b6f5180a4a7d0823",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ikiru (1952)\\ScarFLIX_part-b6f5180a4a7d0823\\stream.mkv",
+            "title": "ScarFLIX Part B6f5180a4a7d0823",
+            "year": "",
+            "rating_key": "49754",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Ikiru (1952)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-1ce460822ca1239a",
+        "title": "In the Mood for Love",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\In the Mood for Love (2000)\\ScarFLIX_part-1ce460822ca1239a\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-1ce460822ca1239a",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\In the Mood for Love (2000)\\ScarFLIX_part-1ce460822ca1239a\\stream.mkv",
+            "title": "In the Mood for Love",
+            "year": "2000",
+            "rating_key": "49741",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-1ce460822ca1239a",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\In the Mood for Love (2000)\\ScarFLIX_part-1ce460822ca1239a\\stream.mkv",
+            "title": "ScarFLIX Part 1ce460822ca1239a",
+            "year": "",
+            "rating_key": "49744",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "In the Mood for Love (2000)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
         "hash": "scarflix_part-52c63b31fc203627",
         "title": "Indecent Proposal",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Indecent Proposal (1993)\\ScarFLIX_part-52c63b31fc203627\\stream.mkv",
@@ -5836,8 +6121,8 @@
           {
             "hash": "scarflix_part-0d465a7414c7c73a",
             "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Legends of the Fall (1994)\\ScarFLIX_part-0d465a7414c7c73a\\stream.mkv",
-            "title": "ScarFLIX Part 0d465a7414c7c73a",
-            "year": "",
+            "title": "Legends of the Fall",
+            "year": "1994",
             "rating_key": "49681",
             "library_section_id": ""
           }
@@ -7315,6 +7600,32 @@
         }
       },
       {
+        "hash": "scarflix_part-b6caef61efed54f1",
+        "title": "Twister",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-b6caef61efed54f1",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv",
+            "title": "ScarFLIX Part B6caef61efed54f1",
+            "year": "",
+            "rating_key": "49736",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Twister (1996)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
         "hash": "scarflix_part-64c1bfd3e5881850",
         "title": "Undisputed III: Redemption",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850\\stream.mkv",
@@ -7532,74 +7843,6 @@
         }
       },
       {
-        "hash": "scarflix_part-2eaab8df357724dc",
-        "title": "Armageddon",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Armageddon (1998)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-6bc868616f378edf",
-        "title": "The Ballerina",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Ballerina (2016)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-8aa2235ef7c1e0f6",
-        "title": "Battleship",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Battleship (2012)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-bd37929b54c7c1bf",
-        "title": "Crank",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Crank (2006)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-8312e4b6385fd16c",
         "title": "Creed",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
@@ -7697,40 +7940,6 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Friday (1995)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-b6f5180a4a7d0823",
-        "title": "Ikiru",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ikiru (1952)\\ScarFLIX_part-b6f5180a4a7d0823\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Ikiru (1952)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-1ce460822ca1239a",
-        "title": "In the Mood for Love",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\In the Mood for Love (2000)\\ScarFLIX_part-1ce460822ca1239a\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "In the Mood for Love (2000)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -7889,23 +8098,6 @@
         }
       },
       {
-        "hash": "scarflix_part-b6caef61efed54f1",
-        "title": "Twister",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Twister (1996)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-bd7eda1ae6bf343a",
         "title": "Zombieland",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Zombieland (2009)\\ScarFLIX_part-bd7eda1ae6bf343a\\stream.mkv",
@@ -7925,18 +8117,18 @@
     ],
     "present_patterns": {
       "by_grandparent_folder": {
-        "06 Discover Movies": 81
+        "06 Discover Movies": 88
       },
       "by_depth": {
-        "9": 81
+        "9": 88
       }
     },
     "missing_patterns": {
       "by_grandparent_folder": {
-        "06 Discover Movies": 24
+        "06 Discover Movies": 17
       },
       "by_depth": {
-        "9": 24
+        "9": 17
       }
     },
     "present_samples": [
@@ -7988,6 +8180,110 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Annihilation (2018)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-2eaab8df357724dc",
+        "title": "Armageddon",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-2eaab8df357724dc",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+            "title": "Armageddon",
+            "year": "1998",
+            "rating_key": "49747",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Armageddon (1998)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-6bc868616f378edf",
+        "title": "The Ballerina",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-6bc868616f378edf",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
+            "title": "ScarFLIX Part 6bc868616f378edf",
+            "year": "",
+            "rating_key": "49755",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Ballerina (2016)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-8aa2235ef7c1e0f6",
+        "title": "Battleship",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-8aa2235ef7c1e0f6",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+            "title": "ScarFLIX Part 8aa2235ef7c1e0f6",
+            "year": "",
+            "rating_key": "49752",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Battleship (2012)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-bd37929b54c7c1bf",
+        "title": "Crank",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-bd37929b54c7c1bf",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
+            "title": "ScarFLIX Part Bd37929b54c7c1bf",
+            "year": "",
+            "rating_key": "49746",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Crank (2006)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -8179,110 +8475,6 @@
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
-      },
-      {
-        "hash": "scarflix_part-f96ecae0bf043548",
-        "title": "Final Destination",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-f96ecae0bf043548",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-            "title": "Final Destination",
-            "year": "2000",
-            "rating_key": "49055",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Final Destination (2000)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-c017966a31451921",
-        "title": "Final Destination 5",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-c017966a31451921",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-            "title": "Final Destination 5",
-            "year": "2011",
-            "rating_key": "49390",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Final Destination 5 (2011)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-854736eb92c08f81",
-        "title": "Finding Dory",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-854736eb92c08f81",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-            "title": "Finding Dory",
-            "year": "2016",
-            "rating_key": "49036",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Finding Dory (2016)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-61f18dcc8c34f579",
-        "title": "Fracture",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-61f18dcc8c34f579",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-            "title": "Fracture",
-            "year": "2007",
-            "rating_key": "49401",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Fracture (2007)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
       }
     ],
     "missing_samples": [
@@ -8299,74 +8491,6 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Annabelle (2014)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-2eaab8df357724dc",
-        "title": "Armageddon",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Armageddon (1998)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-6bc868616f378edf",
-        "title": "The Ballerina",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Ballerina (2016)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-8aa2235ef7c1e0f6",
-        "title": "Battleship",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Battleship (2012)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-bd37929b54c7c1bf",
-        "title": "Crank",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Crank (2006)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -8474,9 +8598,9 @@
         }
       },
       {
-        "hash": "scarflix_part-b6f5180a4a7d0823",
-        "title": "Ikiru",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ikiru (1952)\\ScarFLIX_part-b6f5180a4a7d0823\\stream.mkv",
+        "hash": "scarflix_part-5f2b46ebc01460e6",
+        "title": "My Hero Academia: You're Next",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv",
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
@@ -8485,7 +8609,75 @@
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
-          "parent_folder": "Ikiru (1952)",
+          "parent_folder": "My Hero Academia You're Next (2024)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-3150adb80410deb7",
+        "title": "The Curse of La Llorona",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Curse of La Llorona (2019)\\ScarFLIX_part-3150adb80410deb7\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "The Curse of La Llorona (2019)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-d99a060ace386b52",
+        "title": "The Devil's Advocate",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Devil's Advocate (1997)\\ScarFLIX_part-d99a060ace386b52\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "The Devil's Advocate (1997)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-761f0288a98ecf2c",
+        "title": "The Equalizer 2",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Equalizer 2 (2018)\\ScarFLIX_part-761f0288a98ecf2c\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "The Equalizer 2 (2018)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-b9efe1904b5d339b",
+        "title": "The Human Centipede III (Final Sequence)",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Human Centipede 3 (Final Sequence) (2015)\\ScarFLIX_part-b9efe1904b5d339b\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "The Human Centipede 3 (Final Sequence) (2015)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -8493,7 +8685,7 @@
     ]
   },
   "hypothesis": {
-    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 81/105 expected affected hashes currently present in Plex Section 5.",
+    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 88/105 expected affected hashes currently present in Plex Section 5.",
     "evidence_level": "high",
     "measurement_artifact_confirmed": true,
     "remaining_visibility_gap": true
