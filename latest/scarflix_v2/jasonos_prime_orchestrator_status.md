@@ -1,0 +1,24 @@
+# JasonOS Prime Orchestrator Status
+
+- Updated UTC: 2026-06-11T02:58:43.889Z
+- Status: PASS
+- PID: 40460
+- SQLite: PASS_node:sqlite
+- Health URL: http://127.0.0.1:8815/healthz
+- PAUSE_PUBLICATION: true
+- Token files discovered: 47
+- Grok communication key: `GROK_API_KEY.txt`
+- Grok communication status: PASS: Grok model call returned HTTP 200.
+- Grok management key: `GROK_MANAGEMENT_KEY.txt`
+- Grok management status: Not valid for model calls; previous model-call test returned HTTP 400 invalid-argument.
+- Grok management note: xAI management keys are for account-management operations and are not used for Grok model calls.
+- Instruction loop status: PASS_TRACKING
+- Instruction cadence: ingest `300s`, bridge/consumer `900s`, report delivery `1800s`
+- Instruction classifications: Safe `24`, Review `26`, Requires Human Approval `0`
+- Instructions executed: `24`
+- Hands-off operation: REVIEW_ESCALATION_REQUIRED / TRUE_HANDS_OFF_ACTIVE_PERMANENT
+- Hands-off escalation required: true
+- Hands-off status file: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_hands_off_operation_status.md`
+- Instruction loop status file: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_instruction_loop_status.json`
+- Token awareness: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_token_awareness.md`
+- Launch telemetry: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_orchestrator_launch_telemetry.json`
