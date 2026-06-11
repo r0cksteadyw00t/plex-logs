@@ -1,5 +1,5 @@
 // JasonOS Prime Path 2 protected pilot migration runner.
-// Additive-only runner for a 3-5 title traditional-path pilot.
+// Additive-only runner for bounded traditional-path pilots.
 
 const fs = require("fs");
 const path = require("path");
@@ -26,7 +26,7 @@ const PROJECT_PLAN = path.join(REPO_ROOT, "PROJECT_PLAN.md");
 
 const INCIDENT_ID = "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610";
 const RAW_HANDOFF_URL = "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md";
-const MAX_TARGETS = 5;
+const MAX_TARGETS = 10;
 const MIN_TARGETS = 1;
 const WEBDAV_HEAD_TIMEOUT_MS = 5000;
 const WEBDAV_PREFLIGHT_ATTEMPTS = 3;
@@ -422,7 +422,7 @@ async function main() {
 
   const targets = chooseTargets(request, baseline);
   if (targets.length < MIN_TARGETS || targets.length > MAX_TARGETS) {
-    return failStatus("HELD_INVALID_TARGET_COUNT", "Target count must be between 1 and 5.", { request, baseline: baselineSummary, target_count: targets.length });
+    return failStatus("HELD_INVALID_TARGET_COUNT", "Target count must be between 1 and 10.", { request, baseline: baselineSummary, target_count: targets.length });
   }
 
   const targetHashes = targets.map((item) => normalizeHash(item.hash || item.file));
