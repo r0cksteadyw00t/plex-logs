@@ -1,3 +1,31 @@
+<!-- PATH2_SINGLE_TITLE_PILOT_PASS_SCALING_HELD:START -->
+## PATH 2 SINGLE-TITLE PILOT PASS -- SCALING HELD
+
+**Updated UTC:** 2026-06-11T02:34:53.678Z
+**Status:** `PASS_SINGLE_TITLE_ADDITIVE_PILOT_COMPLETE__POST_RUN_SENTINEL_ALERT_HOLD`
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Outcome
+The fixed Path2PilotMigrationRunner successfully completed the one-title additive pilot for **Annihilation (2018)** / `scarflix_part-d8b22fb3f498688e`. The new traditional alias symlink exists, `webdav_map.json` has one additive alias row while preserving the legacy row, Plex still sees the pilot hash in Section 5, and WebDAV HEAD returned HTTP 200.
+
+### Verification Numbers
+- Alias rows: `1`
+- Legacy rows retained: `1`
+- Alias readlink: `ScarFLIX_part-d8b22fb3f498688e\stream.mkv`
+- WebDAV HEAD: `PASS HTTP 200 in 1311ms`
+- Fresh Section 5 snapshot after pilot: `undefined/undefined` visible, `undefined` missing
+- Pilot hash present in Plex snapshot: `true`
+- Rollback performed: `false`
+- PAUSE_PUBLICATION: `true`
+
+### Hold / Blockers
+- Sentinel returned to `ALERT/HIGH` after the pilot; no scaling is authorized while this remains true.
+- `section5_uncapped_index_snapshot` is still not registered as an Orchestrator job type; the final read-only snapshot was run directly after the queue returned `Unknown job type`. This should be fixed before any larger pilot.
+
+### Recommendation
+Hold scaling while Sentinel is ALERT/HIGH. Fix/register the Orchestrator dispatch for section5_uncapped_index_snapshot, then run one quiet soak/recheck. If Sentinel is REVIEW/MEDIUM or PASS/LOW and the one-title alias remains stable, the next safe step is a 3-title additive pilot with the same verification model and rollback gate.
+<!-- PATH2_SINGLE_TITLE_PILOT_PASS_SCALING_HELD:END -->
+
 <!-- PATH2_VERIFICATION_MODEL_FIX_SINGLE_TITLE_HELD:START -->
 ## PATH 2 VERIFICATION MODEL FIX + SINGLE-TITLE PILOT HELD
 
