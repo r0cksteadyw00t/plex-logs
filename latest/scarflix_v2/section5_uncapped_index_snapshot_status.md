@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T17:02:02.090Z
+- Updated UTC: 2026-06-11T17:09:35.600Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 209
-- Parsed Section 5 Video rows: 209
+- Plex Section 5 reported total size: 211
+- Parsed Section 5 Video rows: 211
 - Pages read: 1
 - Unique indexed ScarFLIX_part hashes: 208
-- Expected affected hashes present: 99/105 (94.3%)
-- Expected affected hashes missing: 6
+- Expected affected hashes present: 98/105 (93.3%)
+- Expected affected hashes missing: 7
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 99/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 98/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -34,6 +34,7 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 
 - `scarflix_part-519e46c6da7cf797` Dumb and Dumber
 - `scarflix_part-700e6d7fdb8236a0` Friday
+- `scarflix_part-2248c141861c0a2c` 9½ Weeks
 - `scarflix_part-3150adb80410deb7` The Curse of La Llorona
 - `scarflix_part-b9efe1904b5d339b` The Human Centipede III (Final Sequence)
 - `scarflix_part-a0692a530078eae1` The Mitchells vs. the Machines
