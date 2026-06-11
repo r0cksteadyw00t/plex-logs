@@ -1,3 +1,19 @@
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-11T00:58:51.459Z
+**Status:** ROLLED_BACK_PILOT_ERROR
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: 74/105 visible, 31 missing.
+- Pilot attempted: true
+- Created aliases: 0
+- Rollback performed: true
+
+### Decision
+Pilot failed before completion; rollback was performed.
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-11T00:57:36.821Z
