@@ -1,3 +1,24 @@
+<!-- PATH2_VERIFICATION_MODEL_FIX_SINGLE_TITLE_HELD:START -->
+## PATH 2 VERIFICATION MODEL FIX + SINGLE-TITLE PILOT HELD
+
+**Updated:** 2026-06-11T01:36:46.412Z
+**Status:** HELD_SENTINEL_ALERT_AFTER_RUNNER_PATCH
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Verification Model Updated
+The protected Path2PilotMigrationRunner was patched to avoid LocalSystem dereference of S:-backed rclone symlinks. It now verifies service-context symlink objects/readlink metadata, runs WebDAV preflight with retry/backoff before mutation, and uses Plex baseline presence plus bounded WebDAV retry after alias creation.
+
+### Single-Title Pilot Gate
+A one-title pilot for Annihilation (scarflix_part-d8b22fb3f498688e) was queued, but Sentinel was ALERT/HIGH at execution time. The runner correctly stopped before mutation with HELD_SENTINEL_ALERT.
+
+### Safety Result
+No alias was created, no webdav_map alias row was added, PAUSE_PUBLICATION remained active, and no publication/expansion/cleanup/deletion/refresh/cache clear occurred.
+
+### Assessment
+The code change is complete, but the new verification model is not yet proven by a completed pilot because the safety gate held. Path 2 should remain paused until Sentinel clears, then the same one-title pilot can be retried. Do not scale beyond one title until that pilot passes.
+
+<!-- PATH2_VERIFICATION_MODEL_FIX_SINGLE_TITLE_HELD:END -->
+
 <!-- PATH2_SERVICE_CONTEXT_VERIFICATION_DIAGNOSTIC:START -->
 ## PATH 2 SERVICE CONTEXT VERIFICATION DIAGNOSTIC
 
