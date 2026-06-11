@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_section5_query_failure_status_hold_20260611_v111",
-      "created_at": "2026-06-11T22:41:50Z",
-      "expires_at": "2026-06-12T22:41:50Z",
+      "instruction_id": "phase0_record_section5_query_failure_status_hold_20260611_v112",
+      "created_at": "2026-06-11T22:57:16Z",
+      "expires_at": "2026-06-12T22:57:16Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,14 +13,14 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 2,
-        "backoff": "exponential"
+        "max_retries": 1,
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "note": "Section 5 uncapped index query failed at 2026-06-11T22:37:01Z; true baseline not captured. PAUSE_PUBLICATION remains active. Recommend verify Plex reachability then rerun read-only snapshot only."
+            "note": "Section 5 uncapped index query failed at 2026-06-11T22:52:16Z; true baseline not captured. PAUSE_PUBLICATION remains active. Recommend verify Plex reachability then rerun read-only snapshot only. No expansion, publishing, or mutation permitted."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-11T22:41:50Z",
+  "updated_utc": "2026-06-11T22:57:16Z",
   "source": "grok_api"
 }
