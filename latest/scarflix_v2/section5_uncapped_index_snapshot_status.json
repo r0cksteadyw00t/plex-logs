@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-11T07:11:56.005Z",
-  "updated_utc": "2026-06-11T07:11:57.623Z",
+  "started_utc": "2026-06-11T07:19:30.111Z",
+  "updated_utc": "2026-06-11T07:19:31.828Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -20,9 +20,9 @@
     "status": "PASS_LAUNCH_HEALTH_ACCEPTABLE",
     "sentinel": {
       "component": "jasonos_prime_sentinel_node",
-      "status": "PASS",
-      "alert_level": "LOW",
-      "updated_utc": "2026-06-11T07:10:01Z",
+      "status": "REVIEW",
+      "alert_level": "MEDIUM",
+      "updated_utc": "2026-06-11T07:15:02Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
@@ -30,21 +30,34 @@
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 1,
+        "controller_age_minutes": 6,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
-        "watchdog_age_minutes": 3,
+        "watchdog_age_minutes": 8,
         "dashboard_status": "PASS",
         "dashboard_age_minutes": 5,
         "mirror_status": "PASS",
-        "mirror_age_minutes": 4,
+        "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 4671,
-        "durable_platform_gate_age_minutes": 4671,
+        "checkpoint_age_minutes": 4676,
+        "durable_platform_gate_age_minutes": 4676,
         "platform_progress_fresh": false
       },
-      "recovery_actions": [],
+      "recovery_actions": [
+        {
+          "task": "ScarFLIX_v2_Watchdog_StallDetector",
+          "reason": "watchdog_stale_or_failed",
+          "result": "PASS",
+          "note": "enable pid=29884; run pid=20940"
+        },
+        {
+          "task": "ScarFLIX_v2_AutonomousController",
+          "reason": "controller_stale_or_blocked",
+          "result": "PASS",
+          "note": "enable pid=39088; run pid=24912"
+        }
+      ],
       "notes": [],
       "files": {
         "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
@@ -56,7 +69,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-11T07:11:55.940Z",
+      "updated_utc": "2026-06-11T07:19:30.055Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -64,14 +77,14 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-11T07:11:55.908Z",
+      "last_tick_utc": "2026-06-11T07:19:30.018Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_08e478ad09aa4ebd",
+          "id": "job_a259d61ab64e58e7",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-11T07:11:55.931Z"
+          "started_utc": "2026-06-11T07:19:30.046Z"
         }
       ],
       "pause": {
@@ -87,19 +100,19 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-11T07:11:55.940Z",
+        "updated_utc": "2026-06-11T07:19:30.055Z",
         "window_minutes": 10,
-        "sample_count": 1,
-        "latency_sample_count": 1,
+        "sample_count": 5,
+        "latency_sample_count": 5,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 16366,
+        "avg_process_runtime_ms": 13073,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 1,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 0,
-        "tracked_child_count": 0
+        "active_child_count": 2,
+        "tracked_child_count": 2
       },
       "degraded_mode": {
         "active": false,
@@ -120,7 +133,7 @@
         "schema_version": "jasonos.hands_off_operation.v1",
         "status": "REVIEW_ESCALATION_REQUIRED",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-11T07:07:24.403Z",
+        "updated_utc": "2026-06-11T07:18:30.027Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -134,10 +147,10 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-11T07:05:01Z",
-          "sentinel_status": "ALERT",
-          "sentinel_alert": "HIGH",
-          "codex_action_required": true,
+          "dashboard_updated_utc": "2026-06-11T07:15:01Z",
+          "sentinel_status": "PASS",
+          "sentinel_alert": "LOW",
+          "codex_action_required": false,
           "jason_action_required": false,
           "materialized_qa_status": "REVIEW",
           "materialized_qa_checked": 229,
@@ -147,19 +160,19 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-11T07:07:24.401Z",
+          "updated_utc": "2026-06-11T07:18:30.022Z",
           "window_minutes": 10,
-          "sample_count": 1,
-          "latency_sample_count": 1,
+          "sample_count": 4,
+          "latency_sample_count": 4,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 0,
+          "avg_process_runtime_ms": 17610,
           "timeout_count": 0,
           "timeout_rate": 0,
           "launches_last_minute": 0,
           "budget_per_minute": 8,
           "degraded_required": false,
-          "active_child_count": 0,
-          "tracked_child_count": 0
+          "active_child_count": 2,
+          "tracked_child_count": 2
         },
         "degraded_mode": {
           "active": false,
@@ -196,17 +209,29 @@
         ],
         "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
         "progress_made_this_cycle": false,
-        "no_progress_cycles": 238,
+        "no_progress_cycles": 240,
         "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
-        "queued_jobs": [],
+        "queued_jobs": [
+          {
+            "type": "autonomous_incident_manager",
+            "id": "job_ad0778829ee6d003"
+          },
+          {
+            "type": "generate_grok_cycle_report",
+            "id": "job_715026166d77aad2"
+          },
+          {
+            "type": "deliver_grok_cycle_report",
+            "id": "job_2fadc7cbcc538ec9"
+          }
+        ],
         "actions_taken": [
+          "Queued safe bounded control-plane jobs: autonomous_incident_manager, generate_grok_cycle_report, deliver_grok_cycle_report",
           "Maintaining Materialized QA recovery as a standing objective using Strategy A path model."
         ],
-        "blockers": [
-          "Sentinel ALERT/HIGH; autonomous work held."
-        ],
+        "blockers": [],
         "escalation_required": true,
-        "escalation_reason": "Sentinel ALERT/HIGH; autonomous work held.; No semantic progress for 238 hands-off cycles.",
+        "escalation_reason": "No semantic progress for 240 hands-off cycles.",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -216,7 +241,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-11T07:11:55.940Z",
+        "updated_utc": "2026-06-11T07:19:30.055Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 20,
@@ -940,7 +965,7 @@
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-11T07:11:55.938Z",
+        "updated_utc": "2026-06-11T07:19:30.053Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1481,10 +1506,10 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-11T07:11:55.944Z",
-      "process_launches_total": 63,
-      "spawn_sync_total": 50,
-      "spawn_detached_total": 13,
+      "updated_utc": "2026-06-11T07:19:30.060Z",
+      "process_launches_total": 67,
+      "spawn_sync_total": 52,
+      "spawn_detached_total": 15,
       "recent_launches": [
         {
           "ts_utc": "2026-06-11T05:09:40.507Z",
@@ -2378,9 +2403,76 @@
           "exit_code": 0,
           "timed_out": false,
           "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T07:12:14.800Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 18854,
+          "process_runtime_ms": 18854,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T07:16:29.958Z",
+          "kind": "spawn_detached",
+          "name": "public_mirror_publisher",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
+          "pid": 16188,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-11T07:16:44.954Z",
+          "kind": "spawn_detached",
+          "name": "command_center_generator",
+          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
+          "pid": 25200,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-11T07:18:49.040Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 3999,
+          "process_runtime_ms": 3999,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
         }
       ],
-      "tracked_children": [],
+      "tracked_children": [
+        {
+          "pid": 16188,
+          "name": "public_mirror_publisher",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
+          "started_utc": "2026-06-11T07:16:29.958Z",
+          "critical": false
+        },
+        {
+          "pid": 25200,
+          "name": "command_center_generator",
+          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
+          "started_utc": "2026-06-11T07:16:44.954Z",
+          "critical": false
+        }
+      ],
       "degraded_mode": false,
       "degraded_reason": "",
       "launch_budget": {
@@ -2390,36 +2482,36 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-11T07:11:55.944Z",
+        "updated_utc": "2026-06-11T07:19:30.060Z",
         "window_minutes": 10,
-        "sample_count": 1,
-        "latency_sample_count": 1,
+        "sample_count": 5,
+        "latency_sample_count": 5,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 16366,
+        "avg_process_runtime_ms": 13073,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 1,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 0,
-        "tracked_child_count": 0
+        "active_child_count": 2,
+        "tracked_child_count": 2
       },
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-11T07:11:55.944Z",
+      "updated_utc": "2026-06-11T07:19:30.060Z",
       "window_minutes": 10,
-      "sample_count": 1,
-      "latency_sample_count": 1,
+      "sample_count": 5,
+      "latency_sample_count": 5,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 16366,
+      "avg_process_runtime_ms": 13073,
       "timeout_count": 0,
       "timeout_rate": 0,
       "launches_last_minute": 1,
       "budget_per_minute": 8,
       "degraded_required": false,
-      "active_child_count": 0,
-      "tracked_child_count": 0
+      "active_child_count": 2,
+      "tracked_child_count": 2
     },
     "avg_spawn_latency_ms": 0,
     "timeout_rate": 0,
@@ -2432,8 +2524,8 @@
     "page_size": 500,
     "page_count": 1,
     "selected_base": "http://192.168.1.184:32400",
-    "reported_total_size": 325,
-    "parsed_video_count": 325,
+    "reported_total_size": 326,
+    "parsed_video_count": 326,
     "unique_part_hash_count": 214,
     "pages": [
       {
@@ -2442,12 +2534,12 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 47,
-        "media_container_size": "325",
-        "media_container_total_size": "325",
+        "elapsed_ms": 53,
+        "media_container_size": "326",
+        "media_container_total_size": "326",
         "media_container_offset": "0",
-        "parsed_video_count": 325,
-        "body_bytes": 247348
+        "parsed_video_count": 326,
+        "body_bytes": 247796
       }
     ],
     "indexed_parts": [
@@ -2961,6 +3053,14 @@
         "title": "ScarFLIX Part 4a066b8b94606da9",
         "year": "",
         "rating_key": "49387",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-4b145ffcf8fc8032",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\A Cinderella Story (2004)\\ScarFLIX_part-4b145ffcf8fc8032\\stream.mkv",
+        "title": "ScarFLIX Part 4b145ffcf8fc8032",
+        "year": "",
+        "rating_key": "49592",
         "library_section_id": ""
       },
       {
