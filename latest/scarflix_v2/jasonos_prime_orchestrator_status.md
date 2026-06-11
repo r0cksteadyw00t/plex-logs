@@ -1,8 +1,8 @@
 # JasonOS Prime Orchestrator Status
 
-- Updated UTC: 2026-06-11T03:26:02.977Z
+- Updated UTC: 2026-06-11T05:23:09.578Z
 - Status: PASS
-- PID: 40460
+- PID: 12716
 - SQLite: PASS_node:sqlite
 - Health URL: http://127.0.0.1:8815/healthz
 - PAUSE_PUBLICATION: true
@@ -14,8 +14,8 @@
 - Grok management note: xAI management keys are for account-management operations and are not used for Grok model calls.
 - Instruction loop status: PASS_TRACKING
 - Instruction cadence: ingest `300s`, bridge/consumer `900s`, report delivery `1800s`
-- Instruction classifications: Safe `23`, Review `27`, Requires Human Approval `0`
-- Instructions executed: `23`
+- Instruction classifications: Safe `21`, Review `29`, Requires Human Approval `0`
+- Instructions executed: `21`
 - Hands-off operation: REVIEW_ESCALATION_REQUIRED / TRUE_HANDS_OFF_ACTIVE_PERMANENT
 - Hands-off escalation required: true
 - Hands-off status file: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_hands_off_operation_status.md`
