@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T07:45:09.012Z
+- Updated UTC: 2026-06-11T07:53:40.668Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 328
-- Parsed Section 5 Video rows: 328
+- Plex Section 5 reported total size: 346
+- Parsed Section 5 Video rows: 346
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 215
-- Expected affected hashes present: 100/105 (95.2%)
-- Expected affected hashes missing: 5
+- Unique indexed ScarFLIX_part hashes: 217
+- Expected affected hashes present: 101/105 (96.2%)
+- Expected affected hashes missing: 4
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 100/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 101/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -36,6 +36,5 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 - `scarflix_part-6a30d1aa558bac1f` Terminator: Dark Fate
 - `scarflix_part-ba7d61952f40f7bc` The Transporter
 - `scarflix_part-5d08e120806b8ae9` The Whale
-- `scarflix_part-fe9eb00f9fe3c79f` Wrong Turn 5: Bloodlines
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
