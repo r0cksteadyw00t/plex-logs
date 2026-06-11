@@ -1,11 +1,11 @@
 # Section 5 Reconciliation Execution Status
 
-- Updated UTC: 2026-06-11T07:28:46.188Z
+- Updated UTC: 2026-06-11T07:45:09.012Z
 - Status: `REVIEW_NEEDED_UNCAPPED_INDEX_SNAPSHOT_COMPLETE`
 - Prior gate: `REVIEW_NEEDED`
 - Uncapped expected hashes present: 100/105
-- Plex reported Section 5 total size: 326
-- Parsed Section 5 Video rows: 326
-- Unique indexed ScarFLIX_part hashes: 214
+- Plex reported Section 5 total size: 328
+- Parsed Section 5 Video rows: 328
+- Unique indexed ScarFLIX_part hashes: 215
 
 No publication, expansion, cleanup, deletion, source mutation, path rewrite, refresh, or cache clear was performed.
