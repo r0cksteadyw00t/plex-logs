@@ -1,3 +1,21 @@
+## PATH 2 STAGE B HELD BEFORE STRUCTURAL MIGRATION
+
+**Updated UTC:** 2026-06-11T00:17:25.714Z
+
+**Status:** `HELD_BEFORE_STRUCTURAL_MIGRATION`
+
+**Stage A validation:** PASS. Backup root: `D:/PlexTools/Backups/path2_stage_a_20260610T235616Z`
+
+**Current locked baseline:** `83/105` visible (79%), `22` missing.
+
+**Decision:** Stage B design and phased migration plan are complete, but live migration was not executed. A bounded live symlink/path probe timed out during path-mechanics inspection, and direct migration would mutate live Plex-indexed path structure plus `webdav_map.json` semantics. Proceeding now would risk regression of the 83 visible titles.
+
+**Recommended next action:** run a dedicated Orchestrator-owned Stage B pilot: additive traditional aliases for 3-5 visible titles, legacy hash folders retained, additive `webdav_map.json` fields only, bounded WebDAV/Plex verification gate, then expand only if there is no visibility regression.
+
+**Safety:** No publication, expansion, refresh, cache clear, cleanup, deletion, source mutation, folder move, symlink change, mapping change, path rewrite, or Stage B live migration was performed. PAUSE_PUBLICATION remains required.
+
+**Stage B artifact:** `path2_stage_b_migration_design_and_plan.md/.json`
+
 ## PATH 2 STAGE A COMPLETE - BACKUP, PROTECTION, ROLLBACK READY
 
 **Updated UTC:** 2026-06-11T00:02:21.297Z
