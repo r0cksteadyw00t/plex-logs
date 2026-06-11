@@ -1,12 +1,12 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-11T16:20:06.406Z
+Updated UTC: 2026-06-11T16:25:09.009Z
 Source: live status merge
 
-- 2026-06-11T15:51:28.075Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T16:21:33.897Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T16:19:19Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T15:51:20Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T15:14:56.297Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-11T15:14:56Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.
-- 2026-06-11T13:57:31Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T11:03:44.170Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-11T11:03:44Z] [PASS] Final: PASS
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
 - 2026-06-09T06:20:29.274Z - Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:18: Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:16:06Z` Probe duration: `38ms`
