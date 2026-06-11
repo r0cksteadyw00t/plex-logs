@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T06:16:04.069Z
+- Updated UTC: 2026-06-11T06:23:36.947Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 244
-- Parsed Section 5 Video rows: 244
+- Plex Section 5 reported total size: 272
+- Parsed Section 5 Video rows: 272
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 203
-- Expected affected hashes present: 95/105 (90.5%)
-- Expected affected hashes missing: 10
+- Unique indexed ScarFLIX_part hashes: 206
+- Expected affected hashes present: 96/105 (91.4%)
+- Expected affected hashes missing: 9
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 95/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 96/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -32,7 +32,6 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 
 ## Missing Samples
 
-- `scarflix_part-d1ce9c47a23732b3` Fargo
 - `scarflix_part-31696108f69a37b9` Hulk
 - `scarflix_part-fb19346714d96cd7` Speed
 - `scarflix_part-0e360325f9b2603d` Teen Wolf: The Movie
@@ -40,5 +39,6 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 - `scarflix_part-f5edc313355fa64c` The Empty Man
 - `scarflix_part-ba7d61952f40f7bc` The Transporter
 - `scarflix_part-5d08e120806b8ae9` The Whale
+- `scarflix_part-ac22c691d6568126` Vertigo
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
