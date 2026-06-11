@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T08:03:09.443Z
+- Updated UTC: 2026-06-11T08:11:37.482Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 347
-- Parsed Section 5 Video rows: 347
+- Plex Section 5 reported total size: 351
+- Parsed Section 5 Video rows: 351
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 218
-- Expected affected hashes present: 102/105 (97.1%)
-- Expected affected hashes missing: 3
+- Unique indexed ScarFLIX_part hashes: 221
+- Expected affected hashes present: 104/105 (99%)
+- Expected affected hashes missing: 1
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 102/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 104/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -32,8 +32,6 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 
 ## Missing Samples
 
-- `scarflix_part-31696108f69a37b9` Hulk
-- `scarflix_part-6a30d1aa558bac1f` Terminator: Dark Fate
 - `scarflix_part-ba7d61952f40f7bc` The Transporter
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
