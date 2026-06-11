@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-11T08:11:27Z
-Instruction: phase0_record_section5_true_baseline_forensic_hold_20260611_v68
+Updated UTC: 2026-06-11T08:26:54Z
+Instruction: phase0_record_section5_true_baseline_forensic_hold_20260611_v69
 
-Section 5 uncapped snapshots confirm 100-102/105 expected hybrid_movies_live hashes present (latest 102/105 at 347 rows). PATH 2 pilot rolled back with 0 aliases created. PAUSE_PUBLICATION remains active. No refresh/mutation performed. Use for read-only forensic diff only.
+Section 5 uncapped index snapshots confirm 100-104/105 expected hybrid_movies_live hashes present across multiple captures. PAUSE_PUBLICATION remains active. No refresh, publication, expansion, or mutation performed. Recommend read-only forensic diff on indexed paths vs source folders.
