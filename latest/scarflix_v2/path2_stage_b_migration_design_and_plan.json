@@ -1,0 +1,47 @@
+{
+  "schema_version": "jasonos.path2_stage_b.v1",
+  "status": "HELD_BEFORE_STRUCTURAL_MIGRATION",
+  "created_utc": "2026-06-11T00:17:25.714Z",
+  "stage_a_backup_root": "D:/PlexTools/Backups/path2_stage_a_20260610T235616Z",
+  "stage_a_validation": "PASS",
+  "current_baseline": {
+    "expected_count": 105,
+    "present_count": 83,
+    "missing_count": 22,
+    "present_percent": 79,
+    "snapshot_updated_utc": "2026-06-10T23:26:20.043Z"
+  },
+  "affected_counts": {
+    "visible": 83,
+    "missing": 22,
+    "total": 105
+  },
+  "reason_held": [
+    "The requested full migration would mutate live Plex-indexed path structure and webdav_map semantics.",
+    "A bounded live symlink/file probe timed out while inspecting current path mechanics, so the live path layer is not safe enough for structural mutation in this run.",
+    "Post-migration verification would require Plex scanning/refresh/indexing behavior, but this run cannot safely guarantee no visibility regression without a dedicated pilot and explicit scan gate.",
+    "Proceeding directly would risk reducing the currently visible 83/105 baseline and would violate the user hard constraint to rollback on regression."
+  ],
+  "completed_phases": [
+    "Phase 1 Stage A backup validation",
+    "Phase 2 target structure design",
+    "Phase 3 phased migration plan"
+  ],
+  "not_executed_phases": [
+    "Phase 4 live structural migration",
+    "Phase 5 post-migration verification"
+  ],
+  "safety": {
+    "pause_publication_required": true,
+    "no_publication": true,
+    "no_expansion": true,
+    "no_refresh": true,
+    "no_cache_clear": true,
+    "no_cleanup": true,
+    "no_deletion": true,
+    "no_source_mutation": true,
+    "no_path_rewrite": true,
+    "no_stage_b_live_migration_started": true
+  },
+  "recommendation": "Run Stage B as a dedicated Orchestrator-owned pilot first: create additive traditional aliases for 3-5 visible titles, retain legacy ScarFLIX_part folders, update webdav_map additively with legacy_hash/path2_local_path fields, then run a bounded Plex scan/verification gate. Do not migrate all 83 visible titles until the pilot proves no visibility regression."
+}
