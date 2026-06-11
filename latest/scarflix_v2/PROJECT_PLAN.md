@@ -1,3 +1,26 @@
+## PATH 2 STAGE A COMPLETE - BACKUP, PROTECTION, ROLLBACK READY
+
+**Updated UTC:** 2026-06-11T00:02:21.297Z
+
+**Status:** `PASS_STAGE_A_COMPLETE`
+
+**Backup root:** `D:/PlexTools/Backups/path2_stage_a_20260610T235616Z`
+
+**Current baseline locked for Stage A:** `83/105` visible (79%), `22` missing.
+
+**Protection actions:**
+
+- Full `webdav_map.json`, Section 5 artifacts, ledgers, status files, PROJECT_PLAN, Orchestrator DB snapshot, request files, and known Section 5 workers were backed up.
+- Affected path manifest created with `105` entries.
+- Visible list captured: `83`. Missing list captured: `22`.
+- Queued conflicting jobs cancelled: `1`.
+- Rollback procedure created: `D:/PlexTools/Backups/path2_stage_a_20260610T235616Z/docs/rollback_procedure.md`.
+- PAUSE_PUBLICATION remains required and Stage B has not started.
+
+**Safety:** No publication, expansion, refresh, cache clear, cleanup, deletion, source mutation, folder move, symlink change, mapping change, path rewrite, or Stage B migration was performed.
+
+**Stage A artifact:** `path2_stage_a_backup_and_protection.md/.json`
+
 ## Phase 5 Fresh Section 5 Baseline + Current Missing Correlation
 
 **Updated UTC:** 2026-06-10T23:31:54.684Z
