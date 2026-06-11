@@ -1,0 +1,88 @@
+{
+  "schema_version": "jasonos.path2_stage_b_apply_fix.v1",
+  "status": "STOPPED_BEFORE_PILOT_BASELINE_REGRESSED_AND_NO_PROTECTED_MIGRATION_RUNNER",
+  "updated_utc": "2026-06-11T00:45:27.615Z",
+  "raw_handoff_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md",
+  "phase0_orchestrator_fix": {
+    "applied": true,
+    "service_restarted": true,
+    "healthz": "PASS_HTTP_200",
+    "service_name": "JasonOS_Prime_Orchestrator",
+    "restarted_pid": 32456,
+    "started_utc": "2026-06-11T00:40:56.167Z",
+    "patch_active_in_source": true,
+    "dispatch_hold_fix": "markMaterializedProbeRequestsHeld active after restart"
+  },
+  "phase1_fresh_baseline": {
+    "job_id": "job_7a3dd06c7990fdaf",
+    "request_status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+    "artifact_updated": true,
+    "artifact_status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+    "expected_count": 105,
+    "present_count": 74,
+    "missing_count": 31,
+    "present_percent": 70.5,
+    "artifact_updated_utc": "2026-06-11T00:42:13.259Z",
+    "previous_stage_a_present_count": 83,
+    "previous_stage_a_missing_count": 22,
+    "regression_vs_stage_a_present_delta": -9,
+    "regression_vs_stage_a_missing_delta": 9
+  },
+  "phase2_design_plan": {
+    "existing_plan": "D:/PlexTools/public/latest/scarflix_v2/path2_stage_b_migration_design_and_plan.md",
+    "target_layout": "D:/StremioCatalog/_Hybrid/Movies/_ScarFLIXLive/06 Discover Movies/Movie Name (Year)/Movie Name (Year).mkv",
+    "approach": "additive pilot alias only; preserve legacy ScarFLIX_part-* until verified",
+    "stage_a_backup_root": "D:/PlexTools/Backups/path2_stage_a_20260610T235616Z",
+    "stage_a_backup_validation": "PASS"
+  },
+  "phase3_pilot_gate": {
+    "attempted": false,
+    "reason": "Fresh locked baseline regressed from Stage A 83/105 visible to 74/105 visible before any structural mutation. Existing Stage B plan also records prior live symlink/file path mechanics timeout and no dedicated protected migration runner is present.",
+    "safety_decision": "Do not create aliases, edit webdav_map.json, move folders, create symlinks, or trigger Plex refresh until a protected pilot runner exists and current visibility stabilizes.",
+    "required_before_retry": [
+      "Create dedicated protected Path 2 pilot migration runner with backup, additive-only mutation, per-title rollback, and read-only pre/post verification.",
+      "Run two consecutive fresh uncapped baselines showing stable or improving visibility, or explicitly accept the lower 74/105 baseline as the migration reference after Grok/Jason architecture approval.",
+      "Use only 3-5 visible titles and no publication/expansion; keep PAUSE_PUBLICATION active."
+    ]
+  },
+  "safety": {
+    "pause_publication_active": true,
+    "no_publication_started": true,
+    "no_expansion_started": true,
+    "no_refresh_run_by_stage_b_apply_fix": true,
+    "no_cache_clear_run": true,
+    "no_cleanup_performed": true,
+    "no_deletion_performed": true,
+    "no_source_mutation_performed": true,
+    "no_folder_move_performed": true,
+    "no_symlink_change_performed": true,
+    "no_mapping_change_performed": true
+  },
+  "current_control_plane": {
+    "sentinel_status": "PASS",
+    "sentinel_alert_level": "LOW",
+    "codex_action_required": false,
+    "jason_action_required": false,
+    "orchestrator_status": "PASS",
+    "launch_health": {
+      "updated_utc": "2026-06-11T00:45:13.233Z",
+      "window_minutes": 10,
+      "sample_count": 4,
+      "latency_sample_count": 4,
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 6179,
+      "timeout_count": 0,
+      "timeout_rate": 0,
+      "launches_last_minute": 0,
+      "budget_per_minute": 8,
+      "degraded_required": false,
+      "active_child_count": 0,
+      "tracked_child_count": 0
+    }
+  },
+  "recommendation": {
+    "next_action": "Implement a dedicated protected Path 2 pilot migration runner, then retry only after a stable baseline gate. Do not manually mutate paths or webdav_map.json from Codex inline.",
+    "phase_b_status": "PARTIAL_PROGRESS_FIX_APPLIED_BASELINE_CAPTURED_MIGRATION_HELD",
+    "escalation": "Grok peer review recommended for accepting 74/105 as reference or authorizing protected pilot despite visibility drift."
+  }
+}
