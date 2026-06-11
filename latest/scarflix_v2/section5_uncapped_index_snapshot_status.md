@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T00:57:36.821Z
+- Updated UTC: 2026-06-11T02:29:28.466Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 152
-- Parsed Section 5 Video rows: 152
+- Plex Section 5 reported total size: 179
+- Parsed Section 5 Video rows: 179
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 146
-- Expected affected hashes present: 74/105 (70.5%)
-- Expected affected hashes missing: 31
+- Unique indexed ScarFLIX_part hashes: 166
+- Expected affected hashes present: 84/105 (80%)
+- Expected affected hashes missing: 21
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 74/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 84/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -35,10 +35,10 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 - `scarflix_part-81107989d2e30cfb` Anna
 - `scarflix_part-c08b683f68e4e49e` Annabelle
 - `scarflix_part-6bc868616f378edf` The Ballerina
-- `scarflix_part-d04bde274e598c57` Despicable Me 3
 - `scarflix_part-d1ce9c47a23732b3` Fargo
-- `scarflix_part-c017966a31451921` Final Destination 5
-- `scarflix_part-61f18dcc8c34f579` Fracture
-- `scarflix_part-700e6d7fdb8236a0` Friday
+- `scarflix_part-31696108f69a37b9` Hulk
+- `scarflix_part-5f2b46ebc01460e6` My Hero Academia: You're Next
+- `scarflix_part-fb19346714d96cd7` Speed
+- `scarflix_part-0e360325f9b2603d` Teen Wolf: The Movie
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
