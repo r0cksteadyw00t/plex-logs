@@ -1,3 +1,19 @@
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-11T06:24:42.606Z
+**Status:** ROLLED_BACK_PILOT_ERROR
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: 96/105 visible, 9 missing.
+- Pilot attempted: true
+- Created aliases: 0
+- Rollback performed: true
+
+### Decision
+Pilot failed before completion; rollback was performed.
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-11T06:23:36.947Z
@@ -19,22 +35,6 @@
 **Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
 
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-## PATH 2 PROTECTED PILOT MIGRATION STATUS
-
-**Updated UTC:** 2026-06-11T06:15:47.020Z
-**Status:** PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE
-**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Summary
-- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: 95/105 visible, 10 missing.
-- Pilot attempted: true
-- Created aliases: 10
-- Rollback performed: false
-
-### Decision
-Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.
 
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
