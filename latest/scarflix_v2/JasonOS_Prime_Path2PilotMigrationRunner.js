@@ -29,6 +29,8 @@ const RAW_HANDOFF_URL = "https://raw.githubusercontent.com/r0cksteadyw00t/plex-l
 const MAX_TARGETS = 5;
 const MIN_TARGETS = 1;
 const WEBDAV_HEAD_TIMEOUT_MS = 5000;
+const WEBDAV_PREFLIGHT_ATTEMPTS = 3;
+const WEBDAV_PREFLIGHT_BACKOFF_MS = 1000;
 
 function nowIso() {
   return new Date().toISOString();
@@ -101,13 +103,22 @@ function normalizeHash(value) {
 function statLight(file) {
   try {
     const stat = fs.lstatSync(file);
+    let readlink = "";
+    if (stat.isSymbolicLink()) {
+      try {
+        readlink = fs.readlinkSync(file);
+      } catch (_) {
+        readlink = "";
+      }
+    }
     return {
       exists: true,
       is_symbolic_link: stat.isSymbolicLink(),
       is_directory: stat.isDirectory(),
       is_file: stat.isFile(),
       size: stat.size,
-      mtime_utc: stat.mtime.toISOString()
+      mtime_utc: stat.mtime.toISOString(),
+      readlink
     };
   } catch (error) {
     return {
@@ -144,6 +155,60 @@ function webdavHead(webdavPath) {
     }));
     req.end();
   });
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function webdavHeadWithRetry(webdavPath, attempts, backoffMs) {
+  const tries = [];
+  const maxAttempts = Math.max(1, Number(attempts || WEBDAV_PREFLIGHT_ATTEMPTS));
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    const result = await webdavHead(webdavPath);
+    tries.push(Object.assign({ attempt }, result));
+    if (result.ok) {
+      return {
+        ok: true,
+        attempts: tries,
+        final: result
+      };
+    }
+    if (attempt < maxAttempts) {
+      await sleep(Math.max(0, Number(backoffMs || WEBDAV_PREFLIGHT_BACKOFF_MS)) * attempt);
+    }
+  }
+  return {
+    ok: false,
+    attempts: tries,
+    final: tries[tries.length - 1] || { ok: false, error: "not_attempted" }
+  };
+}
+
+function verifySymlinkObject(file, expectedReadlink) {
+  const stat = statLight(file);
+  const expected = String(expectedReadlink || "");
+  return {
+    ok: stat.exists === true && stat.is_symbolic_link === true && (!expected || String(stat.readlink || "").toLowerCase() === expected.toLowerCase()),
+    path: file,
+    expected_readlink: expected,
+    stat
+  };
+}
+
+function plexIndexCheck(hash, baseline, entry) {
+  const normalized = normalizeHash(hash);
+  const comparison = baseline.comparison || {};
+  const present = Array.isArray(comparison.present) ? comparison.present : [];
+  const matches = present.filter((item) => normalizeHash(item.hash || item.file) === normalized);
+  return {
+    ok: matches.length > 0,
+    source: "section5_uncapped_index_snapshot_status.json",
+    hash: normalized,
+    title: entry.title || "",
+    match_count: matches.length,
+    matches: matches.slice(0, 3)
+  };
 }
 
 function currentSafety() {
@@ -383,7 +448,9 @@ async function main() {
   const createdAliases = [];
   const verification = [];
   const rollbackReasons = [];
+  const preflight = [];
   try {
+    const preparedTargets = [];
     for (const target of targets) {
       const hash = normalizeHash(target.hash || target.file);
       const found = findMapEntry(webdavMap, hash);
@@ -401,9 +468,56 @@ async function main() {
       if (existing.exists) throw new Error("Alias already exists, refusing overwrite: " + aliasLocalPath);
       if (aliasEntryExists(webdavMap, aliasLocalPath)) throw new Error("Alias map entry already exists, refusing duplicate: " + aliasLocalPath);
 
+      const legacyDirObject = verifySymlinkObject(legacyLocalDir, entry.rclone_dir || "");
+      const plexCheck = plexIndexCheck(hash, baseline, entry);
+      const webdavPath = entry.webdav_path || "";
+      const webdavPreflight = webdavPath
+        ? await webdavHeadWithRetry(webdavPath, WEBDAV_PREFLIGHT_ATTEMPTS, WEBDAV_PREFLIGHT_BACKOFF_MS)
+        : { ok: false, attempts: [], final: { ok: false, error: "missing_webdav_path" } };
+      const preflightItem = {
+        hash,
+        title,
+        webdav_path: webdavPath,
+        legacy_local_dir_object: legacyDirObject,
+        legacy_local_path_dereference_skipped: true,
+        legacy_local_path_skip_reason: "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
+        plex_index_check: plexCheck,
+        webdav_preflight: webdavPreflight
+      };
+      preflight.push(preflightItem);
+      if (!legacyDirObject.ok) throw new Error("Legacy ScarFLIX_part symlink object/readlink verification failed for " + hash);
+      if (!plexCheck.ok) throw new Error("Plex index baseline does not contain target hash " + hash);
+      if (!webdavPreflight.ok) throw new Error("WebDAV preflight failed before alias creation for " + hash);
+
+      preparedTargets.push({
+        target,
+        hash,
+        found,
+        entry,
+        legacyLocalPath,
+        legacyLocalDir,
+        movieDir,
+        title,
+        aliasLocalPath,
+        relativeTarget,
+        plexCheck,
+        webdavPreflight
+      });
+    }
+
+    for (const prepared of preparedTargets) {
+      const hash = prepared.hash;
+      const found = prepared.found;
+      const entry = prepared.entry;
+      const legacyLocalPath = prepared.legacyLocalPath;
+      const legacyLocalDir = prepared.legacyLocalDir;
+      const movieDir = prepared.movieDir;
+      const title = prepared.title;
+      const aliasLocalPath = prepared.aliasLocalPath;
+      const relativeTarget = prepared.relativeTarget;
       fs.symlinkSync(relativeTarget, aliasLocalPath, "file");
-      const aliasStat = statLight(aliasLocalPath);
-      if (!aliasStat.exists || !aliasStat.is_symbolic_link) throw new Error("Alias symlink verification failed: " + aliasLocalPath);
+      const aliasObject = verifySymlinkObject(aliasLocalPath, relativeTarget);
+      if (!aliasObject.ok) throw new Error("Alias symlink object/readlink verification failed: " + aliasLocalPath);
 
       const aliasEntry = Object.assign({}, entry, {
         path2_alias: true,
@@ -435,7 +549,8 @@ async function main() {
         alias_local_path: aliasLocalPath,
         legacy_local_path: legacyLocalPath,
         relative_target: relativeTarget,
-        alias_stat: aliasStat
+        alias_stat: aliasObject.stat,
+        verification_model: "service_context_symlink_object_plus_webdav_preflight_v2"
       });
     }
 
@@ -444,13 +559,16 @@ async function main() {
     for (const item of createdAliases) {
       const entry = findMapEntry(webdavMap, item.hash);
       const webdavPath = entry && entry.entry ? entry.entry.webdav_path : "";
-      const head = webdavPath ? await webdavHead(webdavPath) : { ok: false, error: "missing_webdav_path" };
+      const head = webdavPath ? await webdavHeadWithRetry(webdavPath, 2, WEBDAV_PREFLIGHT_BACKOFF_MS) : { ok: false, attempts: [], final: { ok: false, error: "missing_webdav_path" } };
       verification.push({
         hash: item.hash,
         title: item.title,
         alias_local_path: item.alias_local_path,
-        alias_lstat: statLight(item.alias_local_path),
-        legacy_lstat: statLight(item.legacy_local_path),
+        verification_model: "service_context_symlink_object_plus_webdav_preflight_v2",
+        alias_symlink_object: verifySymlinkObject(item.alias_local_path, item.relative_target),
+        legacy_stream_dereference_skipped: true,
+        legacy_stream_skip_reason: "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
+        plex_index_check: plexIndexCheck(item.hash, baseline, entry && entry.entry ? entry.entry : {}),
         webdav_head: head
       });
       if (!head.ok) rollbackReasons.push("WebDAV HEAD failed for " + item.hash);
@@ -470,6 +588,7 @@ async function main() {
         stage_a_backup_root: stageABackupRoot,
         backup_root: backupRoot,
         pilot: { attempted: true, target_count: targets.length, target_hashes: targetHashes, created_aliases: createdAliases },
+        preflight,
         verification,
         rollback: { performed: true, result: rollbackResult },
         decision: "Pilot runner created aliases but verification failed; rollback was performed.",
@@ -499,6 +618,7 @@ async function main() {
       backup_root: backupRoot,
       map_backup: mapBackup,
       pilot: { attempted: true, target_count: targets.length, target_hashes: targetHashes, created_aliases: createdAliases },
+      preflight,
       verification,
       rollback: { performed: false, rollback_source: mapBackup, alias_paths: createdAliases.map((item) => item.alias_local_path) },
       decision: "Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.",
@@ -527,6 +647,7 @@ async function main() {
       stage_a_backup_root: stageABackupRoot,
       backup_root: backupRoot,
       pilot: { attempted: true, target_count: targets.length, target_hashes: targetHashes, created_aliases: createdAliases },
+      preflight,
       verification,
       rollback: { performed: true, result: rollbackResult },
       error: reason,
