@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-11T15:30:05Z",
+  "updated_utc": "2026-06-11T15:30:04Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -12,8 +12,8 @@
   "jason_action_required": false,
   "truth_metrics": {
     "movie_strm_count": 0,
-    "tv_strm_count": 1,
-    "total_strm_count": 1,
+    "tv_strm_count": 0,
+    "total_strm_count": 0,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-11T15:08:52Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-11T15:25:31Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -104,7 +104,7 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
+    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON",
     "staged_candidate_count": 43,
     "plex_safe_webdav_visible_rows": 1
   },
@@ -124,11 +124,11 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 7,
-    "platform_child_progress_age_minutes": 10,
-    "mirror_updated_age_minutes": 3,
+    "controller_updated_age_minutes": 12,
+    "platform_child_progress_age_minutes": 15,
+    "mirror_updated_age_minutes": 4,
     "next_check_utc": "2026-06-11T15:23:45Z",
-    "next_check_age_minutes": 1,
+    "next_check_age_minutes": 6,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260612.log",
     "last_progress_utc": "2026-06-11T15:14:56.297Z",
-    "age_minutes": 10,
+    "age_minutes": 15,
     "last_line": "[2026-06-11T15:14:56Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.",
     "pass_lines": 0,
     "review_lines": 1,
@@ -151,7 +151,7 @@
   "sentinel_status": {
     "status": "REVIEW",
     "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-11T15:25:02Z",
+    "updated_utc": "2026-06-11T15:30:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -166,10 +166,10 @@
   },
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
-    "status": "PASS",
-    "started_utc": "2026-06-11T15:25:02Z",
-    "updated_utc": "2026-06-11T15:25:13Z",
-    "ended_utc": "2026-06-11T15:25:13Z",
+    "status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+    "started_utc": "2026-06-11T15:30:03Z",
+    "updated_utc": "2026-06-11T15:30:25Z",
+    "ended_utc": "2026-06-11T15:30:25Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -184,36 +184,62 @@
     },
     "counts_after": {
       "movies": 0,
-      "tv": 1,
-      "total": 1
+      "tv": 0,
+      "total": 0
     },
     "checked_visible": 1,
-    "passed_visible": 1,
-    "failed_visible": 0,
-    "quarantined_this_run": 0,
+    "passed_visible": 0,
+    "failed_visible": 1,
+    "quarantined_this_run": 1,
     "restored_this_run": 0,
-    "retry_held_count": 0,
+    "retry_held_count": 1,
     "permanent_quarantine_count": 1,
     "raw_live_proxy_visible_count": 1,
     "direct_https_visible_count": 0,
     "top_reason_codes": [
       {
+        "code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "count": 2
+      },
+      {
         "code": "SOURCE_EXPIRED_OR_GONE",
         "count": 1
       }
     ],
-    "recent_quarantined": [],
-    "retry_queue_items": [],
-    "sample_passed": [
+    "recent_quarantined": [
       {
         "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD timed out",
+        "retryable": true,
+        "url_host": "192.168.1.184:18788",
         "is_local_live_proxy": true
       }
     ],
+    "retry_queue_items": [
+      {
+        "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "retry_after_utc": "2026-06-11T15:40:24Z",
+        "url_host": "192.168.1.184:18788",
+        "is_local_live_proxy": true
+      }
+    ],
+    "sample_passed": [],
     "plex_scan_triggered": {
       "ok": true,
-      "reason": "no visible changes"
+      "sections": [
+        {
+          "ok": true,
+          "section": "5",
+          "pid": 9272
+        },
+        {
+          "ok": true,
+          "section": "6",
+          "pid": 20688
+        }
+      ]
     },
     "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260611.log",
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
@@ -356,11 +382,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-11T15:08:52Z",
-    "last_successful_grok_instruction_utc": "2026-06-11T15:08:52Z",
+    "bridge_updated_utc": "2026-06-11T15:25:31Z",
+    "last_successful_grok_instruction_utc": "2026-06-11T15:25:31Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-11T15:08:57Z",
+    "consumer_updated_utc": "2026-06-11T15:25:38Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -453,7 +479,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-11T15:08:57Z - structured instruction loop",
+      "last_change": "2026-06-11T15:25:38Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
@@ -542,13 +568,13 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-11T15:25:01Z",
+    "updated_utc": "2026-06-11T15:30:04Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
       "legacy_movie_strm": 0,
-      "legacy_tv_strm": 1,
-      "legacy_total_strm": 1,
+      "legacy_tv_strm": 0,
+      "legacy_total_strm": 0,
       "plex_safe_webdav_visible_rows": 1
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
@@ -604,10 +630,10 @@
     },
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
-      "status": "PASS",
-      "started_utc": "2026-06-11T15:25:02Z",
-      "updated_utc": "2026-06-11T15:25:13Z",
-      "ended_utc": "2026-06-11T15:25:13Z",
+      "status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+      "started_utc": "2026-06-11T15:30:03Z",
+      "updated_utc": "2026-06-11T15:30:25Z",
+      "ended_utc": "2026-06-11T15:30:25Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -622,36 +648,62 @@
       },
       "counts_after": {
         "movies": 0,
-        "tv": 1,
-        "total": 1
+        "tv": 0,
+        "total": 0
       },
       "checked_visible": 1,
-      "passed_visible": 1,
-      "failed_visible": 0,
-      "quarantined_this_run": 0,
+      "passed_visible": 0,
+      "failed_visible": 1,
+      "quarantined_this_run": 1,
       "restored_this_run": 0,
-      "retry_held_count": 0,
+      "retry_held_count": 1,
       "permanent_quarantine_count": 1,
       "raw_live_proxy_visible_count": 1,
       "direct_https_visible_count": 0,
       "top_reason_codes": [
         {
+          "code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "count": 2
+        },
+        {
           "code": "SOURCE_EXPIRED_OR_GONE",
           "count": 1
         }
       ],
-      "recent_quarantined": [],
-      "retry_queue_items": [],
-      "sample_passed": [
+      "recent_quarantined": [
         {
           "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "reason": "HEAD timed out",
+          "retryable": true,
+          "url_host": "192.168.1.184:18788",
           "is_local_live_proxy": true
         }
       ],
+      "retry_queue_items": [
+        {
+          "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "retry_after_utc": "2026-06-11T15:40:24Z",
+          "url_host": "192.168.1.184:18788",
+          "is_local_live_proxy": true
+        }
+      ],
+      "sample_passed": [],
       "plex_scan_triggered": {
         "ok": true,
-        "reason": "no visible changes"
+        "sections": [
+          {
+            "ok": true,
+            "section": "5",
+            "pid": 9272
+          },
+          {
+            "ok": true,
+            "section": "6",
+            "pid": 20688
+          }
+        ]
       },
       "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260611.log",
       "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
@@ -795,8 +847,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 298023,
-    "safe_pipeline_log_age_seconds": 354906,
+    "canary_status_age_seconds": 298331,
+    "safe_pipeline_log_age_seconds": 355217,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -813,7 +865,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=20184"
+        "detail": "pid=17356"
       }
     ],
     "blockers": []
@@ -913,13 +965,5 @@
       }
     ],
     "next_action": "Quarantine failed materialized source/release and keep title retryable."
-  },
-  "grokbuild_forensic_agent": {
-    "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-11T15:30:05Z",
-    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
-    "implementation": "node_native",
-    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
-    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
   }
 }
