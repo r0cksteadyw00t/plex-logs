@@ -1,13 +1,13 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T13:48:07.971Z
+- Updated UTC: 2026-06-11T13:55:42.677Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 187
-- Parsed Section 5 Video rows: 187
+- Plex Section 5 reported total size: 188
+- Parsed Section 5 Video rows: 188
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 179
+- Unique indexed ScarFLIX_part hashes: 180
 - Expected affected hashes present: 94/105 (89.5%)
 - Expected affected hashes missing: 11
 
