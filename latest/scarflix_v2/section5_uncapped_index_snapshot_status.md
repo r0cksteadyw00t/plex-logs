@@ -1,23 +1,23 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T10:59:00.647Z
+- Updated UTC: 2026-06-11T11:06:33.172Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 214
-- Parsed Section 5 Video rows: 214
+- Plex Section 5 reported total size: 216
+- Parsed Section 5 Video rows: 216
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 213
-- Expected affected hashes present: 103/105 (98.1%)
-- Expected affected hashes missing: 2
+- Unique indexed ScarFLIX_part hashes: 215
+- Expected affected hashes present: 105/105 (100%)
+- Expected affected hashes missing: 0
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 103/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
-Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
+Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
 
 ## Present Samples
 
@@ -32,7 +32,5 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 
 ## Missing Samples
 
-- `scarflix_part-d00eaa269e0555aa` Donnie Darko
-- `scarflix_part-0d465a7414c7c73a` Legends of the Fall
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
