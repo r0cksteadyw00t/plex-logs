@@ -1,228 +1,10 @@
 {
   "component": "path2_pilot_migration_runner",
   "schema_version": "jasonos.path2_pilot_migration.v1",
-  "status": "ROLLED_BACK_PILOT_VERIFICATION_FAILED",
-  "started_utc": "2026-06-11T01:00:06.479Z",
-  "updated_utc": "2026-06-11T01:00:20.108Z",
+  "status": "HELD_SENTINEL_ALERT",
+  "updated_utc": "2026-06-11T01:35:37.604Z",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "request": {
-    "job_name": "path2_pilot_migration",
-    "status": "queued",
-    "queued_at": "2026-06-11T00:59:52.074Z",
-    "queued_by": "codex_path2_pilot_runner_retry_after_regex_fix",
-    "orchestrator_job_id": "job_395ddc90b433f59e",
-    "read_only": false,
-    "additive_only": true,
-    "max_concurrency": 1,
-    "target_hashes": [
-      "scarflix_part-d8b22fb3f498688e",
-      "scarflix_part-2eaab8df357724dc",
-      "scarflix_part-8aa2235ef7c1e0f6"
-    ],
-    "target_count": 3,
-    "minimum_present_count": 74,
-    "baseline_updated_utc": "2026-06-11T00:57:36.821Z",
-    "baseline_present_count": 74,
-    "baseline_missing_count": 31,
-    "selected_titles": [
-      {
-        "hash": "scarflix_part-d8b22fb3f498688e",
-        "alias_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\Annihilation (2018).mkv"
-      },
-      {
-        "hash": "scarflix_part-2eaab8df357724dc",
-        "alias_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\Armageddon (1998).mkv"
-      },
-      {
-        "hash": "scarflix_part-8aa2235ef7c1e0f6",
-        "alias_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\Battleship (2012).mkv"
-      }
-    ],
-    "allowed_actions": [
-      "create_traditional_file_symlink_alias_for_selected_hashes",
-      "append_path2_alias_metadata_to_webdav_map",
-      "local_alias_lstat_verification",
-      "bounded_webdav_head_verification",
-      "rollback_on_error"
-    ],
-    "forbidden_actions": [
-      "publication",
-      "expansion",
-      "refresh",
-      "cache_clear",
-      "cleanup",
-      "deletion",
-      "remove_legacy_scarflix_part",
-      "folder_move",
-      "path_rewrite",
-      "broad_scan"
-    ],
-    "purpose": "Protected additive 3-title Path 2 pilot retry after runner title regex fix."
-  },
-  "baseline": {
-    "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
-    "updated_utc": "2026-06-11T00:57:36.821Z",
-    "expected_count": 105,
-    "present_count": 74,
-    "missing_count": 31,
-    "present_percent": 70.5,
-    "minimum_required_present_count": 74
-  },
-  "stage_a_backup_root": "D:/PlexTools/Backups/path2_stage_a_20260610T235616Z",
-  "backup_root": "D:\\PlexTools\\Backups\\path2_pilot_2026-06-11T010006479Z",
-  "pilot": {
-    "attempted": true,
-    "target_count": 3,
-    "target_hashes": [
-      "scarflix_part-d8b22fb3f498688e",
-      "scarflix_part-2eaab8df357724dc",
-      "scarflix_part-8aa2235ef7c1e0f6"
-    ],
-    "created_aliases": [
-      {
-        "hash": "scarflix_part-d8b22fb3f498688e",
-        "title": "Annihilation (2018)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\Annihilation (2018).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
-        "relative_target": "ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T01:00:06.528Z"
-        }
-      },
-      {
-        "hash": "scarflix_part-2eaab8df357724dc",
-        "title": "Armageddon (1998)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\Armageddon (1998).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
-        "relative_target": "ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T01:00:06.532Z"
-        }
-      },
-      {
-        "hash": "scarflix_part-8aa2235ef7c1e0f6",
-        "title": "Battleship (2012)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\Battleship (2012).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
-        "relative_target": "ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T01:00:06.532Z"
-        }
-      }
-    ]
-  },
-  "verification": [
-    {
-      "hash": "scarflix_part-d8b22fb3f498688e",
-      "title": "Annihilation (2018)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\Annihilation (2018).mkv",
-      "alias_lstat": {
-        "exists": true,
-        "is_symbolic_link": true,
-        "is_directory": false,
-        "is_file": false,
-        "size": 41,
-        "mtime_utc": "2026-06-11T01:00:06.528Z"
-      },
-      "legacy_lstat": {
-        "exists": false,
-        "error": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv'"
-      },
-      "webdav_head": {
-        "ok": false,
-        "error": "timeout",
-        "duration_ms": 5014
-      }
-    },
-    {
-      "hash": "scarflix_part-2eaab8df357724dc",
-      "title": "Armageddon (1998)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\Armageddon (1998).mkv",
-      "alias_lstat": {
-        "exists": true,
-        "is_symbolic_link": true,
-        "is_directory": false,
-        "is_file": false,
-        "size": 41,
-        "mtime_utc": "2026-06-11T01:00:06.532Z"
-      },
-      "legacy_lstat": {
-        "exists": false,
-        "error": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv'"
-      },
-      "webdav_head": {
-        "ok": false,
-        "status_code": 503,
-        "duration_ms": 4506
-      }
-    },
-    {
-      "hash": "scarflix_part-8aa2235ef7c1e0f6",
-      "title": "Battleship (2012)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\Battleship (2012).mkv",
-      "alias_lstat": {
-        "exists": true,
-        "is_symbolic_link": true,
-        "is_directory": false,
-        "is_file": false,
-        "size": 41,
-        "mtime_utc": "2026-06-11T01:00:06.532Z"
-      },
-      "legacy_lstat": {
-        "exists": false,
-        "error": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv'"
-      },
-      "webdav_head": {
-        "ok": false,
-        "error": "timeout",
-        "duration_ms": 4011
-      }
-    }
-  ],
-  "rollback": {
-    "performed": true,
-    "result": {
-      "rollback_reasons": [
-        "WebDAV HEAD failed for scarflix_part-d8b22fb3f498688e",
-        "WebDAV HEAD failed for scarflix_part-2eaab8df357724dc",
-        "WebDAV HEAD failed for scarflix_part-8aa2235ef7c1e0f6"
-      ],
-      "actions": [
-        {
-          "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\Battleship (2012).mkv",
-          "action": "removed_alias_symlink"
-        },
-        {
-          "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\Armageddon (1998).mkv",
-          "action": "removed_alias_symlink"
-        },
-        {
-          "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\Annihilation (2018).mkv",
-          "action": "removed_alias_symlink"
-        },
-        {
-          "path": "D:\\PlexTools\\state\\scarflix_v2\\webdav_map.json",
-          "action": "restored_webdav_map_backup"
-        }
-      ]
-    }
-  },
-  "decision": "Pilot runner created aliases but verification failed; rollback was performed.",
+  "reason": "Sentinel is ALERT/HIGH; pilot mutation is not allowed.",
   "pause_publication_active": true,
   "no_publication_started": true,
   "no_expansion_started": true,
@@ -231,32 +13,41 @@
   "safety": {
     "sentinel": {
       "component": "jasonos_prime_sentinel_node",
-      "status": "PASS",
-      "alert_level": "LOW",
-      "updated_utc": "2026-06-11T01:00:03Z",
+      "status": "ALERT",
+      "alert_level": "HIGH",
+      "updated_utc": "2026-06-11T01:35:02Z",
       "duration_seconds": 0,
       "jason_action_required": false,
-      "codex_action_required": false,
-      "repeat_count": 8,
+      "codex_action_required": true,
+      "repeat_count": 4,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 2,
+        "controller_age_minutes": 10,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
-        "watchdog_age_minutes": 4,
+        "watchdog_age_minutes": 2,
         "dashboard_status": "PASS",
         "dashboard_age_minutes": 5,
         "mirror_status": "PASS",
-        "mirror_age_minutes": 4,
+        "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 4301,
-        "durable_platform_gate_age_minutes": 4301,
+        "checkpoint_age_minutes": 4336,
+        "durable_platform_gate_age_minutes": 4336,
         "platform_progress_fresh": false
       },
-      "recovery_actions": [],
-      "notes": [],
+      "recovery_actions": [
+        {
+          "task": "ScarFLIX_v2_AutonomousController",
+          "reason": "controller_stale_or_blocked",
+          "result": "PASS",
+          "note": "enable pid=26240; run pid=3240"
+        }
+      ],
+      "notes": [
+        "Same unresolved sentinel signature repeated for three cycles."
+      ],
       "files": {
         "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
         "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
@@ -267,7 +58,7 @@
     "orchestrator": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-11T01:00:06.428Z",
+      "updated_utc": "2026-06-11T01:35:37.560Z",
       "version": "0.1.0",
       "pid": 11700,
       "owner": "jasonos-orchestrator-11700",
@@ -275,20 +66,14 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-11T01:00:06.396Z",
-      "last_error": "",
+      "last_tick_utc": "2026-06-11T01:35:37.534Z",
+      "last_error": "Unknown named parameter '@created_utc'",
       "active_jobs": [
         {
-          "id": "job_0fe3f438c113eeff",
-          "type": "snapshot_status",
-          "queue": "control",
-          "started_utc": "2026-06-11T01:00:06.417Z"
-        },
-        {
-          "id": "job_395ddc90b433f59e",
+          "id": "job_831e1ddc0f2ff83f",
           "type": "path2_pilot_migration",
           "queue": "control",
-          "started_utc": "2026-06-11T01:00:06.418Z"
+          "started_utc": "2026-06-11T01:35:37.551Z"
         }
       ],
       "pause": {
@@ -304,15 +89,15 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-11T01:00:06.428Z",
+        "updated_utc": "2026-06-11T01:35:37.559Z",
         "window_minutes": 10,
-        "sample_count": 6,
-        "latency_sample_count": 6,
+        "sample_count": 4,
+        "latency_sample_count": 4,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 5114,
+        "avg_process_runtime_ms": 3169,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 1,
+        "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
         "active_child_count": 0,
@@ -337,7 +122,7 @@
         "schema_version": "jasonos.hands_off_operation.v1",
         "status": "REVIEW_ESCALATION_REQUIRED",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-11T00:58:06.358Z",
+        "updated_utc": "2026-06-11T01:32:37.461Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -351,7 +136,7 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-11T00:55:02Z",
+          "dashboard_updated_utc": "2026-06-11T01:30:03Z",
           "sentinel_status": "PASS",
           "sentinel_alert": "LOW",
           "codex_action_required": false,
@@ -364,15 +149,15 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-11T00:58:06.353Z",
+          "updated_utc": "2026-06-11T01:32:37.458Z",
           "window_minutes": 10,
-          "sample_count": 3,
-          "latency_sample_count": 3,
+          "sample_count": 5,
+          "latency_sample_count": 5,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 7745,
+          "avg_process_runtime_ms": 3169,
           "timeout_count": 0,
           "timeout_rate": 0,
-          "launches_last_minute": 3,
+          "launches_last_minute": 0,
           "budget_per_minute": 8,
           "degraded_required": false,
           "active_child_count": 0,
@@ -413,29 +198,21 @@
         ],
         "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
         "progress_made_this_cycle": false,
-        "no_progress_cycles": 176,
+        "no_progress_cycles": 182,
         "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
         "queued_jobs": [
           {
             "type": "autonomous_incident_manager",
-            "id": "job_c71fabd4869031fe"
-          },
-          {
-            "type": "generate_grok_cycle_report",
-            "id": "job_f9fe039301fb5913"
-          },
-          {
-            "type": "deliver_grok_cycle_report",
-            "id": "job_7fa6703f413f0db2"
+            "id": "job_9f6577fae60e9bcd"
           }
         ],
         "actions_taken": [
-          "Queued safe bounded control-plane jobs: autonomous_incident_manager, generate_grok_cycle_report, deliver_grok_cycle_report",
+          "Queued safe bounded control-plane jobs: autonomous_incident_manager",
           "Maintaining Materialized QA recovery as a standing objective using Strategy A path model."
         ],
         "blockers": [],
         "escalation_required": true,
-        "escalation_reason": "No semantic progress for 176 hands-off cycles.",
+        "escalation_reason": "No semantic progress for 182 hands-off cycles.",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -445,26 +222,68 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-11T01:00:06.428Z",
+        "updated_utc": "2026-06-11T01:35:37.559Z",
         "instruction_count": 50,
         "classification_counts": {
-          "Safe": 26,
-          "Review": 24,
+          "Safe": 24,
+          "Review": 26,
           "Requires Human Approval": 0
         },
         "status_counts": {
-          "executed": 26,
+          "executed": 24,
           "safe_queued": 0,
-          "blocked_review": 24,
+          "blocked_review": 26,
           "requires_human_approval": 0,
           "review_action_failed": 0
         },
-        "blocked_or_review_count": 24,
-        "last_instruction_id": "phase0_record_section5_stabilization_hold_20260611_v49",
-        "last_instruction_status": "executed",
+        "blocked_or_review_count": 26,
+        "last_instruction_id": "phase0_record_path2_verification_hold_20260611_v52",
+        "last_instruction_status": "blocked_review",
         "last_ingest_utc": "",
         "last_execution_utc": "",
         "recent_instructions": [
+          {
+            "instruction_id": "phase0_record_path2_verification_hold_20260611_v52",
+            "created_utc": "2026-06-11T01:29:22Z",
+            "expires_utc": "2026-06-12T01:29:22Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_pilot_rollback_diagnostic_hold_20260611_v51",
+            "created_utc": "2026-06-11T01:13:36Z",
+            "expires_utc": "2026-06-12T01:13:36Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_forensic_baseline_diff_20260611_v50",
+            "created_utc": "2026-06-11T00:57:51Z",
+            "expires_utc": "2026-06-12T00:57:51Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
           {
             "instruction_id": "phase0_record_section5_stabilization_hold_20260611_v49",
             "created_utc": "2026-06-11T00:41:11Z",
@@ -1123,54 +942,12 @@
             ],
             "action_count": 1,
             "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_hold_status_only_20260610_v7",
-            "created_utc": "2026-06-10T08:09:22Z",
-            "expires_utc": "2026-06-11T08:09:22Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_hold_status_only_20260610_v6",
-            "created_utc": "2026-06-10T07:53:22Z",
-            "expires_utc": "2026-06-11T07:53:22Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "executed",
-            "classification": "Safe",
-            "reasons": [
-              "approved_safe_instruction"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_hold_status_only_20260610_v5",
-            "created_utc": "2026-06-10T07:36:37Z",
-            "expires_utc": "2026-06-11T07:36:37Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "executed",
-            "classification": "Safe",
-            "reasons": [
-              "approved_safe_instruction"
-            ],
-            "action_count": 1,
-            "summary": ""
           }
         ]
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-11T01:00:06.427Z",
+        "updated_utc": "2026-06-11T01:35:37.558Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1710,22 +1487,69 @@
       }
     },
     "pause_publication_active": true,
-    "sentinel_allowed": true,
+    "sentinel_allowed": false,
     "launch_allowed": true,
     "launch_health": {
-      "updated_utc": "2026-06-11T01:00:06.428Z",
+      "updated_utc": "2026-06-11T01:35:37.559Z",
       "window_minutes": 10,
-      "sample_count": 6,
-      "latency_sample_count": 6,
+      "sample_count": 4,
+      "latency_sample_count": 4,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 5114,
+      "avg_process_runtime_ms": 3169,
       "timeout_count": 0,
       "timeout_rate": 0,
-      "launches_last_minute": 1,
+      "launches_last_minute": 0,
       "budget_per_minute": 8,
       "degraded_required": false,
       "active_child_count": 0,
       "tracked_child_count": 0
     }
+  },
+  "request": {
+    "job_name": "path2_pilot_migration",
+    "status": "queued",
+    "queued_at": "2026-06-11T01:35:28.335Z",
+    "queued_by": "codex_path2_single_title_pilot_after_verification_model_fix",
+    "read_only": false,
+    "additive_only": true,
+    "max_concurrency": 1,
+    "target_hashes": [
+      "scarflix_part-d8b22fb3f498688e"
+    ],
+    "target_count": 1,
+    "minimum_present_count": 74,
+    "baseline_updated_utc": "2026-06-11T00:57:36.821Z",
+    "baseline_present_count": 74,
+    "baseline_missing_count": 31,
+    "selected_titles": [
+      {
+        "hash": "scarflix_part-d8b22fb3f498688e",
+        "title": "Annihilation (2018)",
+        "alias_path": "D:/StremioCatalog/_Hybrid/Movies/_ScarFLIXLive/06 Discover Movies/Annihilation (2018)/Annihilation (2018).mkv"
+      }
+    ],
+    "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
+    "allowed_actions": [
+      "webdav_preflight_with_retry_before_mutation",
+      "create_single_traditional_file_symlink_alias",
+      "append_single_path2_alias_metadata_to_webdav_map",
+      "service_context_symlink_object_readlink_verification",
+      "plex_baseline_index_check",
+      "rollback_on_error"
+    ],
+    "forbidden_actions": [
+      "publication",
+      "expansion",
+      "refresh",
+      "cache_clear",
+      "cleanup",
+      "deletion",
+      "remove_legacy_scarflix_part",
+      "folder_move",
+      "path_rewrite",
+      "broad_scan"
+    ],
+    "purpose": "Single-title protected Path 2 pilot after verification model fix.",
+    "orchestrator_job_id": "job_831e1ddc0f2ff83f"
   }
 }
