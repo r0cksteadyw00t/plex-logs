@@ -1,3 +1,30 @@
+<!-- PATH2_SERVICE_CONTEXT_VERIFICATION_DIAGNOSTIC:START -->
+## PATH 2 SERVICE CONTEXT VERIFICATION DIAGNOSTIC
+
+**Updated:** 2026-06-11T01:20:23.262Z
+**Status:** REVIEW_PATH2_VERIFICATION_STRATEGY_NEEDS_ADJUSTMENT
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Diagnostic Result
+Read-only diagnostic completed. The protected Path 2 pilot rollback remains intact; no new migration, alias creation, map edit, refresh, cache clear, publication, expansion, cleanup, deletion, folder move, or path mutation was performed.
+
+### Root Cause
+The Orchestrator service runs as LocalSystem, while the affected ScarFLIX_part directories are symlinks to S:\media\ScarFLIX_part-* targets. LocalSystem does not reliably dereference the user-session rclone S: mount, so service-context checks of final stream.mkv paths return ENOENT. The traditional aliases created during the pilot would have traversed the same ScarFLIX_part directory symlinks, so alias object creation alone could not prove media readability.
+
+The WebDAV HEAD failures during the pilot are a separate verification weakness. The pilot HEAD checks used original /media/ScarFLIX_part-*/stream.mkv paths, not the new traditional aliases. A later bounded read-only recheck produced HTTP 200 for 2/3 titles and one timeout, so the WebDAV layer appears latency/source-sensitive rather than deterministically broken for all pilot paths.
+
+### Evidence
+- Launch health gate: 28ms, 22ms, 23ms; average 24ms; 0 timeouts.
+- Sentinel: REVIEW / MEDIUM.
+- Baseline remains: 74/105 visible.
+- Pilot rollback status: ROLLED_BACK_PILOT_VERIFICATION_FAILED.
+- Current bounded WebDAV recheck: Annihilation HTTP 200, Armageddon timeout, Battleship HTTP 200.
+
+### Recommendation
+Pause Path 2 mutation work. Path 2 is not disproven, but the verification design must be changed before another pilot. Next safe work is to patch the runner verification strategy only: service-context symlink/readlink checks, WebDAV preflight with retry/backoff before mutation, and user-context or Plex/API verification for dereferenced media/playability. If a future pilot is authorized, run one title only.
+
+<!-- PATH2_SERVICE_CONTEXT_VERIFICATION_DIAGNOSTIC:END -->
+
 <!-- PATH2_STAGE_B_PROTECTED_PILOT_RESULT:START -->
 ## PATH 2 STAGE B PROTECTED PILOT RESULT
 
