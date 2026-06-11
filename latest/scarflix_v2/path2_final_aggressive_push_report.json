@@ -1,0 +1,120 @@
+{
+  "component": "path2_final_aggressive_push_report",
+  "status": "RUNNER_ACTIVE_AFTER_20_TITLE_PROGRESS_AND_ONE_HELD_PREFLIGHT_FAILURE",
+  "updated_utc": "2026-06-11T05:22:29.359Z",
+  "campaign_id": "path2_final_push_20260611T045858Z",
+  "campaign_root": "D:/PlexTools/JasonOS_Campaigns/path2_final_push_20260611T045858Z",
+  "runner": {
+    "created": true,
+    "location": "D:/PlexTools/Foundry/workers/JasonOS_Prime_24hCampaignRunner.js",
+    "started": true,
+    "pid": 9460,
+    "running": true,
+    "intended_duration_hours": 24
+  },
+  "sentinel": {
+    "before": {
+      "status": "PASS",
+      "alert_level": "LOW",
+      "updated_utc": "2026-06-11T04:55:03Z"
+    },
+    "after": {
+      "status": "PASS",
+      "alert_level": "LOW",
+      "updated_utc": "2026-06-11T05:20:02Z",
+      "codex_action_required": false
+    },
+    "created_utc_fixed": true,
+    "notes": "Orchestrator restarted through NSSM and last_error is now clear."
+  },
+  "baseline": {
+    "start_visible": 88,
+    "start_missing": 17,
+    "end_visible": 94,
+    "end_missing": 11,
+    "net_visible_change": 6,
+    "regressions": "No completed-wave visible-set regressions recorded."
+  },
+  "path2": {
+    "ten_title_pilot_executed": true,
+    "completed_waves": [
+      {
+        "wave_id": "wave_20260611T050529510Z",
+        "target_count": 10,
+        "pre_visible_count": 90,
+        "post_visible_count": 90,
+        "utc": "2026-06-11T05:08:04.812Z"
+      },
+      {
+        "wave_id": "wave_20260611T051924871Z",
+        "target_count": 10,
+        "pre_visible_count": 94,
+        "post_visible_count": 94,
+        "utc": "2026-06-11T05:21:10.093Z"
+      }
+    ],
+    "failed_or_held_wave": {
+      "wave_id": "wave_20260611T051534933Z",
+      "status": "ROLLBACK_AFTER_RUNNER_FAILURE",
+      "held_hashes": [
+        {
+          "hash": "scarflix_part-942255f029875306",
+          "blocked_utc": "2026-06-11T05:19:13.128Z",
+          "reason": "WebDAV preflight failed before alias creation during wave_20260611T051534933Z",
+          "wave_id": "wave_20260611T051534933Z",
+          "status": "HELD_AFTER_WAVE_FAILURE"
+        }
+      ]
+    },
+    "largest_wave_size_executed": 10,
+    "total_titles_migrated_this_run": 20,
+    "current_state": "Movies Path 2 additive aliases scaling; TV held for audit only."
+  },
+  "whole_catalogue": {
+    "read_only_audit_performed": true,
+    "held_waves": [
+      {
+        "id": "movies_visible_next_25",
+        "status": "HELD",
+        "max_size": 25,
+        "candidates": 25,
+        "reason": "Requires successful 10-title wave and explicit stable baseline."
+      },
+      {
+        "id": "movies_visible_next_50",
+        "status": "HELD",
+        "max_size": 50,
+        "candidates": 50,
+        "reason": "Requires successful 25-title wave and clean regression monitor."
+      },
+      {
+        "id": "movies_missing_retryable",
+        "status": "HELD",
+        "max_size": 12,
+        "candidates": 12,
+        "reason": "Missing hashes are not eligible for additive mutation until a separate proof gate exists."
+      },
+      {
+        "id": "tv_audit_seed",
+        "status": "HELD",
+        "max_size": 0,
+        "candidates": 0,
+        "reason": "TV work requires separate audit and low-risk pilot selection."
+      }
+    ],
+    "largest_held_wave_size": 50
+  },
+  "blockers": [
+    "One 10-title wave rolled back before alias creation because a single hash failed bounded WebDAV preflight; that hash is now held out of future waves.",
+    "Runner remains limited to additive movie aliases with max wave size 10 until larger waves are separately proven.",
+    "TV execution is prepared as held audit/manifest work only; no TV mutation started."
+  ],
+  "files": {
+    "campaign_summary": "D:/PlexTools/JasonOS_Campaigns/path2_final_push_20260611T045858Z/campaign_summary.md",
+    "final_handoff": "D:/PlexTools/JasonOS_Campaigns/path2_final_push_20260611T045858Z/final_handoff.md",
+    "runner": "D:/PlexTools/Foundry/workers/JasonOS_Prime_24hCampaignRunner.js",
+    "orchestrator_backup": "D:/PlexTools/Backups/final_push_orchestrator_created_utc_fix_20260611T045858Z/JasonOS_Prime_Orchestrator.js.bak",
+    "runner_cap_backup": "D:/PlexTools/Backups/path2_runner_10title_cap_20260611T031949Z/JasonOS_Prime_Path2PilotMigrationRunner.js.bak"
+  },
+  "raw_handoff_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md"
+}
