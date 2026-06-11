@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T16:01:16.361Z
+- Updated UTC: 2026-06-11T16:31:45.682Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 199
-- Parsed Section 5 Video rows: 199
+- Plex Section 5 reported total size: 202
+- Parsed Section 5 Video rows: 202
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 198
-- Expected affected hashes present: 96/105 (91.4%)
-- Expected affected hashes missing: 9
+- Unique indexed ScarFLIX_part hashes: 201
+- Expected affected hashes present: 99/105 (94.3%)
+- Expected affected hashes missing: 6
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 96/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 99/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -35,10 +35,8 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 - `scarflix_part-519e46c6da7cf797` Dumb and Dumber
 - `scarflix_part-700e6d7fdb8236a0` Friday
 - `scarflix_part-3150adb80410deb7` The Curse of La Llorona
-- `scarflix_part-d99a060ace386b52` The Devil's Advocate
 - `scarflix_part-b9efe1904b5d339b` The Human Centipede III (Final Sequence)
 - `scarflix_part-a0692a530078eae1` The Mitchells vs. the Machines
-- `scarflix_part-94fc82206168aa0b` Witch!
-- `scarflix_part-df980ff53f4cea5d` There Will Be Blood
+- `scarflix_part-bd7eda1ae6bf343a` Zombieland
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
