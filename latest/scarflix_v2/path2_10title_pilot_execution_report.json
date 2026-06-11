@@ -1,0 +1,75 @@
+{
+  "component": "path2_10title_pilot_execution_report",
+  "status": "HELD_SENTINEL_ALERT_HIGH_NO_10TITLE_MUTATION",
+  "updated_utc": "2026-06-11T03:24:31.927Z",
+  "requested_action": "Execute bounded 10-title additive Path 2 pilot and verify against current baseline.",
+  "outcome": "Not executed. Safety gate closed after fresh pre-pilot baseline because Sentinel returned ALERT/HIGH with codex_action_required=true.",
+  "pre_pilot_baseline": {
+    "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+    "updated_utc": "2026-06-11T03:19:17.566Z",
+    "expected_count": 105,
+    "present_count": 88,
+    "missing_count": 17,
+    "present_percent": 83.8
+  },
+  "gates": {
+    "sentinel": {
+      "status": "ALERT",
+      "alert_level": "HIGH",
+      "updated_utc": "2026-06-11T03:20:02Z",
+      "codex_action_required": true,
+      "jason_action_required": false,
+      "allowed": false
+    },
+    "orchestrator": {
+      "status": "PASS",
+      "updated_utc": "2026-06-11T03:24:17.915Z",
+      "pause_publication": true,
+      "last_error": "Unknown named parameter '@created_utc'",
+      "allowed": true
+    },
+    "launch_health": {
+      "updated_utc": "2026-06-11T03:24:17.915Z",
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 11093,
+      "timeout_rate": 0,
+      "active_child_count": 0,
+      "degraded_required": false,
+      "allowed": true
+    },
+    "baseline": {
+      "stable_or_improving_vs_88": true,
+      "allowed": true
+    }
+  },
+  "actions_taken": [
+    "Captured fresh pre-pilot uncapped Section 5 baseline: 88/105 visible, 17 missing.",
+    "Patched Path2PilotMigrationRunner maximum target count from 5 to 10 so a bounded 10-title pilot can run once gates reopen.",
+    "Backed up runner before patch at D:/PlexTools/Backups/path2_runner_10title_cap_20260611T031949Z/JasonOS_Prime_Path2PilotMigrationRunner.js.bak.",
+    "Verified no 10-title path2_pilot_migration job was queued after Sentinel returned ALERT/HIGH.",
+    "Mirrored patched runner source to public status artifacts for review."
+  ],
+  "actions_not_taken": [
+    "No 10-title pilot request was activated.",
+    "No path2_pilot_migration job was queued for the 10-title batch.",
+    "No traditional aliases were created for the 10-title batch.",
+    "No webdav_map.json changes were made for the 10-title batch.",
+    "No publication, expansion, cleanup, deletion, refresh, cache clear, or path rewrite was performed."
+  ],
+  "mutation_state": {
+    "structural_mutation_performed": false,
+    "rollback_required": false,
+    "pause_publication_remained_active": true,
+    "latest_completed_pilot_runner_status": "PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE",
+    "latest_completed_pilot_runner_updated_utc": "2026-06-11T03:09:07.622Z"
+  },
+  "runner_readiness": {
+    "source_path": "D:/PlexTools/Foundry/workers/JasonOS_Prime_Path2PilotMigrationRunner.js",
+    "public_mirror_path": "D:/PlexTools/public/latest/scarflix_v2/JasonOS_Prime_Path2PilotMigrationRunner.js",
+    "max_targets_detected": 10,
+    "source_sha256": "ec8ddea4dc4dd50762f21d0651aeac8c55958e1fc1a892f08543ba761227dfed",
+    "public_sha256": "ec8ddea4dc4dd50762f21d0651aeac8c55958e1fc1a892f08543ba761227dfed"
+  },
+  "recommendation": "Do not execute the 10-title pilot while Sentinel is ALERT/HIGH. First resolve or allow clearance of the Sentinel condition, especially the Orchestrator last_error Unknown named parameter @created_utc if it persists. Once Sentinel returns to PASS/LOW or REVIEW/MEDIUM and a fresh baseline remains at least 88/105, queue the prepared 10-title pilot under the same additive-only runner with rollback enabled.",
+  "raw_handoff_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md"
+}
