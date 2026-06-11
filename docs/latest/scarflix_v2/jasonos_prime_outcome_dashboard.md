@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-11T07:50:03.141Z
+Updated UTC: 2026-06-11T07:55:03.000Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,8 +21,8 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-11T07:46:58.639Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
-- 2026-06-11T07:46:49Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-11T07:50:25.572Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T07:50:15Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T07:08:29.409Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-11T07:08:29Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.
 - 2026-06-11T05:09:09.645Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-11T05:09:09Z] [REVIEW] Final: REVIEW
 - 2026-06-11T04:04:03Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
@@ -30,8 +30,8 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 3 min ago
-- Platform child progress: 42 min ago
+- Controller updated: 5 min ago
+- Platform child progress: 47 min ago
 - Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
