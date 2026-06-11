@@ -1,12 +1,12 @@
 # Path 2 Protected Pilot Migration
 
-- Updated UTC: 2026-06-11T03:09:07.622Z
+- Updated UTC: 2026-06-11T05:20:38.136Z
 - Status: `PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE`
 - Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
-- Baseline: 87/105 visible, missing=18
+- Baseline: 94/105 visible, missing=11
 - Pilot attempted: true
-- Target count: 3
-- Created aliases: 3
+- Target count: 10
+- Created aliases: 10
 - Rolled back: false
 
 ## Decision
