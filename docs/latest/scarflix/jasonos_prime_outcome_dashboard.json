@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-11T11:50:02Z",
+  "updated_utc": "2026-06-11T11:55:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,10 +124,10 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 12,
-    "platform_child_progress_age_minutes": 46,
-    "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-11T11:51:23Z",
+    "controller_updated_age_minutes": 9,
+    "platform_child_progress_age_minutes": 51,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-11T11:58:22Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260611.log",
     "last_progress_utc": "2026-06-11T11:03:44.170Z",
-    "age_minutes": 46,
+    "age_minutes": 51,
     "last_line": "[2026-06-11T11:03:44Z] [PASS] Final: PASS",
     "pass_lines": 1,
     "review_lines": 3,
@@ -145,7 +145,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "High",
-    "updated_utc": "2026-06-11T11:46:02Z",
+    "updated_utc": "2026-06-11T11:53:24Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-11T11:50:02Z",
-    "updated_utc": "2026-06-11T11:50:05Z",
-    "ended_utc": "2026-06-11T11:50:05Z",
+    "started_utc": "2026-06-11T11:55:02Z",
+    "updated_utc": "2026-06-11T11:55:05Z",
+    "ended_utc": "2026-06-11T11:55:05Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -370,12 +370,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-11T11:46:29.018Z",
+      "utc": "2026-06-11T11:53:28.624Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-11T11:38:08Z",
+      "utc": "2026-06-11T11:46:04Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -518,7 +518,7 @@
       "target": "Stable remote status/control through public mirror plus tunnel/federation layer.",
       "last_change": "2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated",
       "current": "Public mirror PASS; raw status base available.",
-      "progress": 47,
+      "progress": 50,
       "eta": "1-3 days",
       "stall_risk": "Low"
     },
@@ -542,7 +542,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-11T11:50:02Z",
+    "updated_utc": "2026-06-11T11:55:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -605,9 +605,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-11T11:50:02Z",
-      "updated_utc": "2026-06-11T11:50:05Z",
-      "ended_utc": "2026-06-11T11:50:05Z",
+      "started_utc": "2026-06-11T11:55:02Z",
+      "updated_utc": "2026-06-11T11:55:05Z",
+      "ended_utc": "2026-06-11T11:55:05Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -749,7 +749,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-11T11:50:02Z",
+      "updated_utc": "2026-06-11T11:55:02Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -782,12 +782,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 39872
+              "pid": 32896
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 30624
+              "pid": 14948
             }
           ]
         }
@@ -795,8 +795,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 285120,
-    "safe_pipeline_log_age_seconds": 342004,
+    "canary_status_age_seconds": 285415,
+    "safe_pipeline_log_age_seconds": 342299,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -813,7 +813,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=28248"
+        "detail": "pid=20312"
       }
     ],
     "blockers": []
@@ -869,7 +869,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-11T11:50:02Z",
+    "updated_utc": "2026-06-11T11:55:02Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -902,12 +902,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 39872
+            "pid": 32896
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 30624
+            "pid": 14948
           }
         ]
       }
