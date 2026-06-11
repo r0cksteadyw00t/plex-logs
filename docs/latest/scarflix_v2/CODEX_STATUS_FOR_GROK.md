@@ -1,3 +1,41 @@
+## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
+
+**Updated UTC:** 2026-06-11T03:09:46.858Z
+
+**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+
+**True baseline:** `88/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `185`
+
+**Parsed Section 5 Video rows:** `185`
+
+**Unique indexed ScarFLIX_part hashes:** `171`
+
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 88/105 expected affected hashes currently present in Plex Section 5.
+
+**Recommendation:** Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-11T03:09:07.622Z
+**Status:** PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: 87/105 visible, 18 missing.
+- Pilot attempted: true
+- Created aliases: 3
+- Rollback performed: false
+
+### Decision
+Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.
+
 <!-- PATH2_STAGEB_DISPATCH_FIX_3TITLE_PREP:START -->
 ## PATH 2 STAGE B -- SNAPSHOT DISPATCH FIXED + 3-TITLE PILOT PREPARED
 
@@ -44,23 +82,6 @@ The next execution may run the prepared 3-title additive pilot only after a fres
 
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
-## PATH 2 PROTECTED PILOT MIGRATION STATUS
-
-**Updated UTC:** 2026-06-11T02:25:50.435Z
-**Status:** PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE
-**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Summary
-- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: 74/105 visible, 31 missing.
-- Pilot attempted: true
-- Created aliases: 1
-- Rollback performed: false
-
-### Decision
-Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.
-
-<!-- PATH2_VERIFICATION_MODEL_FIX_SINGLE_TITLE_HELD:START -->
 ## PATH 2 VERIFICATION MODEL FIX + SINGLE-TITLE PILOT HELD
 
 **Updated:** 2026-06-11T01:36:46.412Z
