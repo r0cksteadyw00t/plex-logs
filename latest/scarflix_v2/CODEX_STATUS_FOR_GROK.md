@@ -1,3 +1,40 @@
+<!-- PATH2_VERIFICATION_MODEL_FIX_SINGLE_TITLE_HELD:START -->
+## PATH 2 VERIFICATION MODEL FIX + SINGLE-TITLE PILOT HELD
+
+**Updated:** 2026-06-11T01:36:46.412Z
+**Status:** HELD_SENTINEL_ALERT_AFTER_RUNNER_PATCH
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Verification Model Updated
+The protected Path2PilotMigrationRunner was patched to avoid LocalSystem dereference of S:-backed rclone symlinks. It now verifies service-context symlink objects/readlink metadata, runs WebDAV preflight with retry/backoff before mutation, and uses Plex baseline presence plus bounded WebDAV retry after alias creation.
+
+### Single-Title Pilot Gate
+A one-title pilot for Annihilation (scarflix_part-d8b22fb3f498688e) was queued, but Sentinel was ALERT/HIGH at execution time. The runner correctly stopped before mutation with HELD_SENTINEL_ALERT.
+
+### Safety Result
+No alias was created, no webdav_map alias row was added, PAUSE_PUBLICATION remained active, and no publication/expansion/cleanup/deletion/refresh/cache clear occurred.
+
+### Assessment
+The code change is complete, but the new verification model is not yet proven by a completed pilot because the safety gate held. Path 2 should remain paused until Sentinel clears, then the same one-title pilot can be retried. Do not scale beyond one title until that pilot passes.
+
+<!-- PATH2_VERIFICATION_MODEL_FIX_SINGLE_TITLE_HELD:END -->
+
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-11T01:35:37.604Z
+**Status:** HELD_SENTINEL_ALERT
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: -/- visible, - missing.
+- Pilot attempted: false
+- Created aliases: 0
+- Rollback performed: undefined
+
+### Decision
+Sentinel is ALERT/HIGH; pilot mutation is not allowed.
+
 <!-- PATH2_SERVICE_CONTEXT_VERIFICATION_DIAGNOSTIC:START -->
 ## PATH 2 SERVICE CONTEXT VERIFICATION DIAGNOSTIC
 
@@ -61,22 +98,6 @@ The failure is not a content-migration success. It indicates that the additive a
 Do not scale Stage B. Next safe focus: diagnose why Orchestrator service-context verification reports legacy path ENOENT/WebDAV HEAD failures for titles that remain represented in webdav_map.json, using read-only checks only. If a future retry is considered, use one title only and require a preflight WebDAV HEAD PASS before creating any alias.
 
 <!-- PATH2_STAGE_B_PROTECTED_PILOT_RESULT:END -->
-
-## PATH 2 PROTECTED PILOT MIGRATION STATUS
-
-**Updated UTC:** 2026-06-11T01:00:20.108Z
-**Status:** ROLLED_BACK_PILOT_VERIFICATION_FAILED
-**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Summary
-- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: 74/105 visible, 31 missing.
-- Pilot attempted: true
-- Created aliases: 3
-- Rollback performed: true
-
-### Decision
-Pilot runner created aliases but verification failed; rollback was performed.
 
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
