@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_true_baseline_forensic_hold_20260611_v61",
-      "created_at": "2026-06-11T05:31:36Z",
-      "expires_at": "2026-06-12T05:31:36Z",
+      "instruction_id": "phase0_record_true_baseline_forensic_hold_20260611_v62",
+      "created_at": "2026-06-11T06:02:49Z",
+      "expires_at": "2026-06-12T06:02:49Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,15 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 60
+        "max_retries": 2,
+        "backoff": "fixed"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "True baseline captured at 94/105 visible in uncapped Section 5 snapshot. PAUSE_PUBLICATION active. No refresh/mutation performed. Recommend read-only forensic diff only.",
-            "source_instruction_id": "phase0_record_true_baseline_forensic_hold_20260611_v61"
+            "summary": "Section 5 uncapped snapshot captured 95/105 baseline with 244 rows; PAUSE_PUBLICATION active; no expansion or mutation permitted; forensic diff recommended next.",
+            "source_instruction_id": "phase0_record_true_baseline_forensic_hold_20260611_v62"
           }
         }
       ],
@@ -29,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-11T05:31:36Z",
+  "updated_utc": "2026-06-11T06:02:49Z",
   "source": "grok_api"
 }
