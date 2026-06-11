@@ -1,0 +1,100 @@
+{
+  "component": "path2_stageb_dispatch_and_3title_preparation",
+  "status": "PASS_DISPATCH_FIXED_BASELINE_STABLE_3TITLE_PREPARED_NOT_QUEUED",
+  "updated_utc": "2026-06-11T02:58:01.889Z",
+  "dispatch_fix": {
+    "source": "D:/PlexTools/Foundry/orchestrator/JasonOS_Prime_Orchestrator.js",
+    "backup": "D:/PlexTools/Backups/path2_stageb_snapshot_dispatch_20260611T025036Z/JasonOS_Prime_Orchestrator.js.bak",
+    "syntax": "PASS",
+    "service_restarted": true,
+    "healthz": "PASS_HTTP_200",
+    "job_type": "section5_uncapped_index_snapshot",
+    "test_job_before_sentinel_clear": "DONE_HELD_SENTINEL_ALERT_HIGH_EXPECTED",
+    "post_clear_job": "DONE_PASS_UNCAPPED_BASELINE_CAPTURED"
+  },
+  "sentinel": {
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-11T02:55:03Z",
+    "codex_action_required": false,
+    "jason_action_required": false
+  },
+  "orchestrator": {
+    "status": "PASS",
+    "updated_utc": "2026-06-11T02:57:58.862Z",
+    "pid": 40460,
+    "pause": {
+      "pause_all": false,
+      "pause_publication": true,
+      "safe_mode": false,
+      "degraded_mode": false
+    },
+    "launch_health": {
+      "updated_utc": "2026-06-11T02:57:58.862Z",
+      "window_minutes": 10,
+      "sample_count": 3,
+      "latency_sample_count": 3,
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 8427,
+      "timeout_count": 0,
+      "timeout_rate": 0,
+      "launches_last_minute": 1,
+      "budget_per_minute": 8,
+      "degraded_required": false,
+      "active_child_count": 0,
+      "tracked_child_count": 0
+    },
+    "last_error": "Unknown named parameter '@created_utc'"
+  },
+  "baseline": {
+    "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+    "updated_utc": "2026-06-11T02:55:29.478Z",
+    "expected_count": 105,
+    "present_count": 87,
+    "missing_count": 18,
+    "present_percent": 82.9,
+    "stable_or_improving_vs_84": true
+  },
+  "pilot_preparation": {
+    "status": "READY_NOT_QUEUED",
+    "execution_authorized_now": false,
+    "prepared_request_file": "D:/PlexTools/state/jasonos_prime/path2_pilot_migration_request.prepared_3title.json",
+    "selected_targets": [
+      {
+        "hash": "scarflix_part-c08b683f68e4e49e",
+        "title": "Annabelle",
+        "expected_parent_folder": "Annabelle (2014)",
+        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
+        "webdav_path": "/media/ScarFLIX_part-c08b683f68e4e49e/stream.mkv",
+        "selected_reason": "currently_visible_preferred_same_family_no_existing_path2_alias"
+      },
+      {
+        "hash": "scarflix_part-2eaab8df357724dc",
+        "title": "Armageddon",
+        "expected_parent_folder": "Armageddon (1998)",
+        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+        "webdav_path": "/media/ScarFLIX_part-2eaab8df357724dc/stream.mkv",
+        "selected_reason": "currently_visible_preferred_same_family_no_existing_path2_alias"
+      },
+      {
+        "hash": "scarflix_part-8aa2235ef7c1e0f6",
+        "title": "Battleship",
+        "expected_parent_folder": "Battleship (2012)",
+        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "webdav_path": "/media/ScarFLIX_part-8aa2235ef7c1e0f6/stream.mkv",
+        "selected_reason": "currently_visible_preferred_same_family_no_existing_path2_alias"
+      }
+    ],
+    "minimum_present_count": 87
+  },
+  "safety": {
+    "pause_publication_active": true,
+    "no_3title_pilot_executed": true,
+    "no_structural_changes_beyond_orchestrator_dispatch_patch": true,
+    "no_publication": true,
+    "no_expansion": true,
+    "no_cleanup": true,
+    "no_deletion": true
+  },
+  "recommendation": "The next execution may run the prepared 3-title additive pilot only after a fresh snapshot remains >=87/105, Sentinel remains PASS/LOW or REVIEW/MEDIUM, launch health is not degraded, and PAUSE_PUBLICATION remains active."
+}
