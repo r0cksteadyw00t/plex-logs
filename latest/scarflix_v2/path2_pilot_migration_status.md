@@ -1,17 +1,17 @@
 # Path 2 Protected Pilot Migration
 
-- Updated UTC: 2026-06-11T01:00:20.108Z
-- Status: `ROLLED_BACK_PILOT_VERIFICATION_FAILED`
+- Updated UTC: 2026-06-11T01:35:37.604Z
+- Status: `HELD_SENTINEL_ALERT`
 - Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
-- Baseline: 74/105 visible, missing=31
-- Pilot attempted: true
-- Target count: 3
-- Created aliases: 3
-- Rolled back: true
+- Baseline: -/- visible, missing=-
+- Pilot attempted: false
+- Target count: 0
+- Created aliases: 0
+- Rolled back: undefined
 
 ## Decision
 
-Pilot runner created aliases but verification failed; rollback was performed.
+Sentinel is ALERT/HIGH; pilot mutation is not allowed.
 
 ## Raw Handoff URL
 
