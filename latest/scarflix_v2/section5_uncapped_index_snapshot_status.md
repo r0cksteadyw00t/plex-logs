@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T17:32:33.816Z
+- Updated UTC: 2026-06-11T17:40:05.961Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 225
-- Parsed Section 5 Video rows: 225
+- Plex Section 5 reported total size: 217
+- Parsed Section 5 Video rows: 217
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 211
-- Expected affected hashes present: 98/105 (93.3%)
-- Expected affected hashes missing: 7
+- Unique indexed ScarFLIX_part hashes: 216
+- Expected affected hashes present: 99/105 (94.3%)
+- Expected affected hashes missing: 6
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 98/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 99/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -32,7 +32,6 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 
 ## Missing Samples
 
-- `scarflix_part-519e46c6da7cf797` Dumb and Dumber
 - `scarflix_part-700e6d7fdb8236a0` Friday
 - `scarflix_part-2248c141861c0a2c` 9½ Weeks
 - `scarflix_part-3150adb80410deb7` The Curse of La Llorona
