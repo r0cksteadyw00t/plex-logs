@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-11T05:07:47.418Z",
-  "updated_utc": "2026-06-11T05:07:49.517Z",
+  "started_utc": "2026-06-11T05:15:17.263Z",
+  "updated_utc": "2026-06-11T05:15:19.007Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -20,50 +20,31 @@
     "status": "PASS_LAUNCH_HEALTH_ACCEPTABLE",
     "sentinel": {
       "component": "jasonos_prime_sentinel_node",
-      "status": "REVIEW",
-      "alert_level": "MEDIUM",
-      "updated_utc": "2026-06-11T05:05:02Z",
+      "status": "PASS",
+      "alert_level": "LOW",
+      "updated_utc": "2026-06-11T05:15:03Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
-      "repeat_count": 2,
+      "repeat_count": 3,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 12,
+        "controller_age_minutes": 4,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
-        "watchdog_age_minutes": 9,
+        "watchdog_age_minutes": 5,
         "dashboard_status": "PASS",
-        "dashboard_age_minutes": 5,
+        "dashboard_age_minutes": 0,
         "mirror_status": "PASS",
         "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 4546,
-        "durable_platform_gate_age_minutes": 4546,
+        "checkpoint_age_minutes": 4556,
+        "durable_platform_gate_age_minutes": 4556,
         "platform_progress_fresh": false
       },
-      "recovery_actions": [
-        {
-          "task": "autonomous_controller.lock",
-          "reason": "stale_lock",
-          "result": "PASS",
-          "note": "removed age_min=9 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260611050502.bak"
-        },
-        {
-          "task": "ScarFLIX_v2_Watchdog_StallDetector",
-          "reason": "watchdog_stale_or_failed",
-          "result": "PASS",
-          "note": "enable pid=20452; run pid=39512"
-        },
-        {
-          "task": "ScarFLIX_v2_AutonomousController",
-          "reason": "controller_stale_or_blocked",
-          "result": "PASS",
-          "note": "enable pid=36716; run pid=8980"
-        }
-      ],
+      "recovery_actions": [],
       "notes": [],
       "files": {
         "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
@@ -75,28 +56,28 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-11T05:07:47.344Z",
+      "updated_utc": "2026-06-11T05:15:10.687Z",
       "version": "0.1.0",
-      "pid": 40460,
-      "owner": "jasonos-orchestrator-40460",
-      "started_utc": "2026-06-11T02:51:42.119Z",
+      "pid": 12716,
+      "owner": "jasonos-orchestrator-12716",
+      "started_utc": "2026-06-11T05:08:55.374Z",
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-11T05:07:47.311Z",
-      "last_error": "Unknown named parameter '@created_utc'",
+      "last_tick_utc": "2026-06-11T05:15:10.650Z",
+      "last_error": "",
       "active_jobs": [
         {
-          "id": "job_7d8e6c882c2736a9",
-          "type": "snapshot_status",
+          "id": "job_85c6c4cec0a5e363",
+          "type": "run_grok_bridge_consumer_cycle",
           "queue": "control",
-          "started_utc": "2026-06-11T05:07:47.334Z"
+          "started_utc": "2026-06-11T05:15:10.675Z"
         },
         {
-          "id": "job_44394a07b3f0d9eb",
+          "id": "job_4cfb19e2cf6ecc0c",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-11T05:07:47.335Z"
+          "started_utc": "2026-06-11T05:15:10.676Z"
         }
       ],
       "pause": {
@@ -112,15 +93,15 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-11T05:07:47.344Z",
+        "updated_utc": "2026-06-11T05:15:10.687Z",
         "window_minutes": 10,
-        "sample_count": 6,
-        "latency_sample_count": 6,
+        "sample_count": 1,
+        "latency_sample_count": 1,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 23964,
+        "avg_process_runtime_ms": 0,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 2,
+        "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
         "active_child_count": 0,
@@ -145,7 +126,7 @@
         "schema_version": "jasonos.hands_off_operation.v1",
         "status": "REVIEW_ESCALATION_REQUIRED",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-11T05:02:51.356Z",
+        "updated_utc": "2026-06-11T05:14:40.680Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -159,10 +140,10 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-11T05:00:05Z",
-          "sentinel_status": "REVIEW",
-          "sentinel_alert": "MEDIUM",
-          "codex_action_required": false,
+          "dashboard_updated_utc": "2026-06-11T05:10:02Z",
+          "sentinel_status": "ALERT",
+          "sentinel_alert": "HIGH",
+          "codex_action_required": true,
           "jason_action_required": false,
           "materialized_qa_status": "REVIEW",
           "materialized_qa_checked": 229,
@@ -172,12 +153,12 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-11T05:02:51.351Z",
+          "updated_utc": "2026-06-11T05:14:40.676Z",
           "window_minutes": 10,
-          "sample_count": 4,
-          "latency_sample_count": 4,
+          "sample_count": 1,
+          "latency_sample_count": 1,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 3154,
+          "avg_process_runtime_ms": 0,
           "timeout_count": 0,
           "timeout_rate": 0,
           "launches_last_minute": 0,
@@ -221,29 +202,17 @@
         ],
         "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
         "progress_made_this_cycle": false,
-        "no_progress_cycles": 217,
+        "no_progress_cycles": 219,
         "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
-        "queued_jobs": [
-          {
-            "type": "autonomous_incident_manager",
-            "id": "job_ad79560fb07eab78"
-          },
-          {
-            "type": "generate_grok_cycle_report",
-            "id": "job_fed376447c860897"
-          },
-          {
-            "type": "deliver_grok_cycle_report",
-            "id": "job_953f4e2add04ece1"
-          }
-        ],
+        "queued_jobs": [],
         "actions_taken": [
-          "Queued safe bounded control-plane jobs: autonomous_incident_manager, generate_grok_cycle_report, deliver_grok_cycle_report",
           "Maintaining Materialized QA recovery as a standing objective using Strategy A path model."
         ],
-        "blockers": [],
+        "blockers": [
+          "Sentinel ALERT/HIGH; autonomous work held."
+        ],
         "escalation_required": true,
-        "escalation_reason": "No semantic progress for 217 hands-off cycles.",
+        "escalation_reason": "Sentinel ALERT/HIGH; autonomous work held.; No semantic progress for 219 hands-off cycles.",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -253,7 +222,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-11T05:07:47.344Z",
+        "updated_utc": "2026-06-11T05:15:10.687Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 21,
@@ -977,7 +946,7 @@
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-11T05:07:47.342Z",
+        "updated_utc": "2026-06-11T05:15:10.686Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1518,603 +1487,21 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-11T05:07:47.349Z",
-      "process_launches_total": 43,
-      "spawn_sync_total": 30,
-      "spawn_detached_total": 13,
+      "updated_utc": "2026-06-11T05:15:10.691Z",
+      "process_launches_total": 1,
+      "spawn_sync_total": 0,
+      "spawn_detached_total": 1,
       "recent_launches": [
         {
-          "ts_utc": "2026-06-11T02:52:12.316Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 114,
-          "process_runtime_ms": 114,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T02:55:43.733Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 16364,
-          "process_runtime_ms": 16364,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T02:57:07.646Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 8802,
-          "process_runtime_ms": 8802,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T02:59:58.918Z",
-          "kind": "spawn_detached",
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "pid": 27364,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T03:01:28.991Z",
+          "ts_utc": "2026-06-11T05:09:40.507Z",
           "kind": "spawn_detached",
           "name": "command_center_generator",
           "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 7776,
+          "pid": 35384,
           "parent_job_class": "detached",
           "critical": false,
           "launch_latency_ms": 0,
           "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T03:03:19.561Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 5495,
-          "process_runtime_ms": 5495,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:06:43.045Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokInstructionBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 13853,
-          "process_runtime_ms": 13853,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:06:43.114Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 69,
-          "process_runtime_ms": 69,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:09:07.642Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Path2PilotMigrationRunner.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Path2PilotMigrationRunner.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 300000,
-          "elapsed_ms": 8372,
-          "process_runtime_ms": 8372,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:09:19.807Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 5511,
-          "process_runtime_ms": 5511,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:10:00.269Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 15974,
-          "process_runtime_ms": 15974,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:15:50.577Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 5047,
-          "process_runtime_ms": 5047,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:16:00.490Z",
-          "kind": "spawn_detached",
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "pid": 18660,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T03:18:00.560Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 20748,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T03:19:32.734Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 17138,
-          "process_runtime_ms": 17138,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:34:33.309Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 2332,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T03:38:56.919Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokInstructionBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 8471,
-          "process_runtime_ms": 8471,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:38:56.983Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 63,
-          "process_runtime_ms": 63,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:40:39.965Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 6420,
-          "process_runtime_ms": 6420,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:46:08.354Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 4661,
-          "process_runtime_ms": 4661,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:46:48.687Z",
-          "kind": "spawn_detached",
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "pid": 39424,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T03:50:03.804Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 20864,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T03:51:56.422Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 7522,
-          "process_runtime_ms": 7522,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:52:03.880Z",
-          "kind": "spawn_detached",
-          "name": "predictive_simulator",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PredictiveSimulator.js",
-          "pid": 7656,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T03:54:29.713Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokInstructionBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 10740,
-          "process_runtime_ms": 10740,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T03:54:29.774Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 60,
-          "process_runtime_ms": 60,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T04:06:19.386Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 30280,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T04:09:09.738Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 5251,
-          "process_runtime_ms": 5251,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T04:11:01.404Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokInstructionBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 11858,
-          "process_runtime_ms": 11858,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T04:11:01.464Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 59,
-          "process_runtime_ms": 59,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T04:14:24.897Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 5199,
-          "process_runtime_ms": 5199,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T04:19:19.871Z",
-          "kind": "spawn_detached",
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "pid": 6092,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T04:21:49.955Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 33012,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T04:38:20.492Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 17584,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T04:45:54.778Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 4027,
-          "process_runtime_ms": 4027,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T04:53:36.021Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 25448,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-11T04:57:23.802Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 2636,
-          "process_runtime_ms": 2636,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T04:59:12.995Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokInstructionBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 6768,
-          "process_runtime_ms": 6768,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T04:59:13.054Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 58,
-          "process_runtime_ms": 58,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T05:03:09.309Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 2929,
-          "process_runtime_ms": 2929,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T05:05:24.609Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 18160,
-          "process_runtime_ms": 18160,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T05:07:32.295Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Path2PilotMigrationRunner.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Path2PilotMigrationRunner.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 300000,
-          "elapsed_ms": 112627,
-          "process_runtime_ms": 112627,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T05:07:35.613Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 3239,
-          "process_runtime_ms": 3239,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
         }
       ],
       "tracked_children": [],
@@ -2127,15 +1514,15 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-11T05:07:47.349Z",
+        "updated_utc": "2026-06-11T05:15:10.691Z",
         "window_minutes": 10,
-        "sample_count": 6,
-        "latency_sample_count": 6,
+        "sample_count": 1,
+        "latency_sample_count": 1,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 23964,
+        "avg_process_runtime_ms": 0,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 2,
+        "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
         "active_child_count": 0,
@@ -2144,15 +1531,15 @@
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-11T05:07:47.349Z",
+      "updated_utc": "2026-06-11T05:15:10.691Z",
       "window_minutes": 10,
-      "sample_count": 6,
-      "latency_sample_count": 6,
+      "sample_count": 1,
+      "latency_sample_count": 1,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 23964,
+      "avg_process_runtime_ms": 0,
       "timeout_count": 0,
       "timeout_rate": 0,
-      "launches_last_minute": 2,
+      "launches_last_minute": 0,
       "budget_per_minute": 8,
       "degraded_required": false,
       "active_child_count": 0,
@@ -2160,7 +1547,7 @@
     },
     "avg_spawn_latency_ms": 0,
     "timeout_rate": 0,
-    "launches_last_minute": 2
+    "launches_last_minute": 0
   },
   "section_index": {
     "status": "PASS_UNCAPPED_SNAPSHOT_COMPLETE",
@@ -2169,9 +1556,9 @@
     "page_size": 500,
     "page_count": 1,
     "selected_base": "http://192.168.1.184:32400",
-    "reported_total_size": 221,
-    "parsed_video_count": 221,
-    "unique_part_hash_count": 189,
+    "reported_total_size": 229,
+    "parsed_video_count": 229,
+    "unique_part_hash_count": 196,
     "pages": [
       {
         "offset": 0,
@@ -2179,12 +1566,12 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 40,
-        "media_container_size": "221",
-        "media_container_total_size": "221",
+        "elapsed_ms": 35,
+        "media_container_size": "229",
+        "media_container_total_size": "229",
         "media_container_offset": "0",
-        "parsed_video_count": 221,
-        "body_bytes": 164887
+        "parsed_video_count": 229,
+        "body_bytes": 179036
       }
     ],
     "indexed_parts": [
@@ -2213,6 +1600,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-4e9571fb14dbaf20",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Cabin in the Woods (2012)\\ScarFLIX_part-4e9571fb14dbaf20\\stream.mkv",
+        "title": "The Cabin in the Woods",
+        "year": "2012",
+        "rating_key": "49473",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-38d431559df51b80",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Call Me by Your Name (2017)\\ScarFLIX_part-38d431559df51b80\\stream.mkv",
         "title": "Call Me by Your Name",
@@ -2226,6 +1621,14 @@
         "title": "The Curse of La Llorona",
         "year": "2019",
         "rating_key": "49416",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-fe8bc55cabbdf41b",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b\\stream.mkv",
+        "title": "Dune",
+        "year": "1984",
+        "rating_key": "49477",
         "library_section_id": ""
       },
       {
@@ -2309,6 +1712,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-5ad766484803d39e",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Italian Job (2003)\\ScarFLIX_part-5ad766484803d39e\\stream.mkv",
+        "title": "The Italian Job",
+        "year": "2003",
+        "rating_key": "49472",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-f7bdc40438a461c5",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Legally Blonde (2001)\\ScarFLIX_part-f7bdc40438a461c5\\stream.mkv",
         "title": "Legally Blonde",
@@ -2341,6 +1752,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-93599b6b163a4b72",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
+        "title": "The Mist",
+        "year": "2007",
+        "rating_key": "49484",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-5e6de7f21f05908e",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Mr. & Mrs. Smith (2005)\\ScarFLIX_part-5e6de7f21f05908e\\stream.mkv",
         "title": "Mr. & Mrs. Smith",
@@ -2359,8 +1778,8 @@
       {
         "hash": "scarflix_part-cba26c04e97c0343",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Nice Guys (2016)\\ScarFLIX_part-cba26c04e97c0343\\stream.mkv",
-        "title": "The Nice Guys",
-        "year": "2016",
+        "title": "ScarFLIX Part Cba26c04e97c0343",
+        "year": "",
         "rating_key": "49434",
         "library_section_id": ""
       },
@@ -2909,6 +2328,22 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-056b613c36104e31",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31\\stream.mkv",
+        "title": "ScarFLIX Part 056b613c36104e31",
+        "year": "",
+        "rating_key": "49471",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-056b613c36104e31",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31\\stream.mkv",
+        "title": "ScarFLIX Part 056b613c36104e31",
+        "year": "",
+        "rating_key": "49474",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-61f18dcc8c34f579",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
         "title": "ScarFLIX Part 61f18dcc8c34f579",
@@ -3330,6 +2765,14 @@
         "title": "ScarFLIX Part A5f5f717cb4537ea",
         "year": "",
         "rating_key": "49067",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-a06e197b4faec2c9",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Rush (2013)\\ScarFLIX_part-a06e197b4faec2c9\\stream.mkv",
+        "title": "ScarFLIX Part A06e197b4faec2c9",
+        "year": "",
+        "rating_key": "49476",
         "library_section_id": ""
       },
       {
@@ -3933,6 +3376,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-c2fa5a32a4d5e81c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Watchmen (2009)\\ScarFLIX_part-c2fa5a32a4d5e81c\\stream.mkv",
+        "title": "Watchmen",
+        "year": "2009",
+        "rating_key": "49475",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-76f35a894c119454",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wicked For Good (2025)\\ScarFLIX_part-76f35a894c119454\\stream.mkv",
         "title": "Wicked: For Good",
@@ -3952,9 +3403,9 @@
   },
   "comparison": {
     "expected_count": 105,
-    "present_count": 90,
-    "missing_count": 15,
-    "present_percent": 85.7,
+    "present_count": 92,
+    "missing_count": 13,
+    "present_percent": 87.6,
     "present": [
       {
         "hash": "scarflix_part-c08b683f68e4e49e",
@@ -6007,6 +5458,32 @@
         }
       },
       {
+        "hash": "scarflix_part-93599b6b163a4b72",
+        "title": "The Mist",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-93599b6b163a4b72",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
+            "title": "The Mist",
+            "year": "2007",
+            "rating_key": "49484",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "The Mist (2007)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
         "hash": "scarflix_part-a0692a530078eae1",
         "title": "The Mitchells vs. the Machines",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1\\stream.mkv",
@@ -6301,6 +5778,32 @@
         }
       },
       {
+        "hash": "scarflix_part-c2fa5a32a4d5e81c",
+        "title": "Watchmen",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Watchmen (2009)\\ScarFLIX_part-c2fa5a32a4d5e81c\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-c2fa5a32a4d5e81c",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Watchmen (2009)\\ScarFLIX_part-c2fa5a32a4d5e81c\\stream.mkv",
+            "title": "Watchmen",
+            "year": "2009",
+            "rating_key": "49475",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Watchmen (2009)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
         "hash": "scarflix_part-76f35a894c119454",
         "title": "Wicked: For Good",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wicked For Good (2025)\\ScarFLIX_part-76f35a894c119454\\stream.mkv",
@@ -6508,23 +6011,6 @@
         }
       },
       {
-        "hash": "scarflix_part-93599b6b163a4b72",
-        "title": "The Mist",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "The Mist (2007)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-ba7d61952f40f7bc",
         "title": "The Transporter",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Transporter (2002)\\ScarFLIX_part-ba7d61952f40f7bc\\stream.mkv",
@@ -6576,23 +6062,6 @@
         }
       },
       {
-        "hash": "scarflix_part-c2fa5a32a4d5e81c",
-        "title": "Watchmen",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Watchmen (2009)\\ScarFLIX_part-c2fa5a32a4d5e81c\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Watchmen (2009)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-fe9eb00f9fe3c79f",
         "title": "Wrong Turn 5: Bloodlines",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wrong Turn 5 Bloodlines (2012)\\ScarFLIX_part-fe9eb00f9fe3c79f\\stream.mkv",
@@ -6612,18 +6081,18 @@
     ],
     "present_patterns": {
       "by_grandparent_folder": {
-        "06 Discover Movies": 90
+        "06 Discover Movies": 92
       },
       "by_depth": {
-        "9": 90
+        "9": 92
       }
     },
     "missing_patterns": {
       "by_grandparent_folder": {
-        "06 Discover Movies": 15
+        "06 Discover Movies": 13
       },
       "by_depth": {
-        "9": 15
+        "9": 13
       }
     },
     "present_samples": [
@@ -7095,23 +6564,6 @@
         }
       },
       {
-        "hash": "scarflix_part-93599b6b163a4b72",
-        "title": "The Mist",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "The Mist (2007)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-ba7d61952f40f7bc",
         "title": "The Transporter",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Transporter (2002)\\ScarFLIX_part-ba7d61952f40f7bc\\stream.mkv",
@@ -7144,11 +6596,28 @@
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
+      },
+      {
+        "hash": "scarflix_part-ac22c691d6568126",
+        "title": "Vertigo",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Vertigo (1958)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
       }
     ]
   },
   "hypothesis": {
-    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 90/105 expected affected hashes currently present in Plex Section 5.",
+    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 92/105 expected affected hashes currently present in Plex Section 5.",
     "evidence_level": "high",
     "measurement_artifact_confirmed": true,
     "remaining_visibility_gap": true
