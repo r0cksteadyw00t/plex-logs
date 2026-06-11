@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_true_baseline_forensic_hold_20260611_v62",
-      "created_at": "2026-06-11T06:02:49Z",
-      "expires_at": "2026-06-12T06:02:49Z",
+      "instruction_id": "phase0_record_true_baseline_forensic_diff_hold_20260611_v63",
+      "created_at": "2026-06-11T06:18:19Z",
+      "expires_at": "2026-06-12T06:18:19Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,15 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 2,
-        "backoff": "fixed"
+        "max_retries": 1,
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Section 5 uncapped snapshot captured 95/105 baseline with 244 rows; PAUSE_PUBLICATION active; no expansion or mutation permitted; forensic diff recommended next.",
-            "source_instruction_id": "phase0_record_true_baseline_forensic_hold_20260611_v62"
+            "summary": "True baseline captured at 95/105. Recommendation: perform smaller read-only passing-vs-missing forensic diff on Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present/missing hashes. No refresh/mutation. PAUSE_PUBLICATION remains active.",
+            "source_instruction_id": "phase0_record_true_baseline_forensic_diff_hold_20260611_v63"
           }
         }
       ],
@@ -29,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-11T06:02:49Z",
+  "updated_utc": "2026-06-11T06:18:19Z",
   "source": "grok_api"
 }
