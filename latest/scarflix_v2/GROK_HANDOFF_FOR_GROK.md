@@ -1,3 +1,31 @@
+<!-- FINAL_AGGRESSIVE_PUSH_24H_RUNNER:START -->
+## JASONOS PRIME FINAL AGGRESSIVE PUSH -- ACTIVE 24H RUNNER
+
+**Updated UTC:** 2026-06-11T05:22:29.359Z
+**Status:** `RUNNER_ACTIVE_AFTER_20_TITLE_PROGRESS_AND_ONE_HELD_PREFLIGHT_FAILURE`
+**Campaign root:** `D:/PlexTools/JasonOS_Campaigns/path2_final_push_20260611T045858Z`
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Current Result
+- Baseline moved from `88/105` visible, `17` missing to `94/105` visible, `11` missing.
+- Completed protected additive Path 2 waves this run: `2`.
+- Total titles migrated this run: `20`.
+- Largest completed wave: `10`.
+- 24h runner active: `true` (PID `9460`).
+- PAUSE_PUBLICATION remains active.
+
+### Sentinel / Orchestrator
+- Sentinel before: `PASS/LOW`.
+- Sentinel now: `PASS/LOW`.
+- Orchestrator `@created_utc` patch applied and service restarted through NSSM; current `last_error`: `clear`.
+
+### Runner Behaviour
+The runner continues every 5-10 minutes. It captures a fresh Section 5 baseline, executes at most one additive 10-title movie wave when gates allow, rolls back on regression, and generates held manifests while blocked. One WebDAV preflight failure was rolled back before alias creation and the failed hash is held out of future waves.
+
+### Held Expansion Prep
+Held manifests now include visible movie candidates, missing retryable movie hashes, and TV audit placeholders. TV execution remains held; no TV mutation was started.
+<!-- FINAL_AGGRESSIVE_PUSH_24H_RUNNER:END -->
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-11T05:20:55.032Z
