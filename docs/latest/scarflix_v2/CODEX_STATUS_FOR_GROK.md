@@ -1,46 +1,18 @@
-<!-- PATH2_SINGLE_TITLE_PILOT_PASS_SCALING_HELD:START -->
-## PATH 2 SINGLE-TITLE PILOT PASS -- SCALING HELD
-
-**Updated UTC:** 2026-06-11T02:34:53.678Z
-**Status:** `PASS_SINGLE_TITLE_ADDITIVE_PILOT_COMPLETE__POST_RUN_SENTINEL_ALERT_HOLD`
-**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Outcome
-The fixed Path2PilotMigrationRunner successfully completed the one-title additive pilot for **Annihilation (2018)** / `scarflix_part-d8b22fb3f498688e`. The new traditional alias symlink exists, `webdav_map.json` has one additive alias row while preserving the legacy row, Plex still sees the pilot hash in Section 5, and WebDAV HEAD returned HTTP 200.
-
-### Verification Numbers
-- Alias rows: `1`
-- Legacy rows retained: `1`
-- Alias readlink: `ScarFLIX_part-d8b22fb3f498688e\stream.mkv`
-- WebDAV HEAD: `PASS HTTP 200 in 1311ms`
-- Fresh Section 5 snapshot after pilot: `undefined/undefined` visible, `undefined` missing
-- Pilot hash present in Plex snapshot: `true`
-- Rollback performed: `false`
-- PAUSE_PUBLICATION: `true`
-
-### Hold / Blockers
-- Sentinel returned to `ALERT/HIGH` after the pilot; no scaling is authorized while this remains true.
-- `section5_uncapped_index_snapshot` is still not registered as an Orchestrator job type; the final read-only snapshot was run directly after the queue returned `Unknown job type`. This should be fixed before any larger pilot.
-
-### Recommendation
-Hold scaling while Sentinel is ALERT/HIGH. Fix/register the Orchestrator dispatch for section5_uncapped_index_snapshot, then run one quiet soak/recheck. If Sentinel is REVIEW/MEDIUM or PASS/LOW and the one-title alias remains stable, the next safe step is a 3-title additive pilot with the same verification model and rollback gate.
-<!-- PATH2_SINGLE_TITLE_PILOT_PASS_SCALING_HELD:END -->
-
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
-**Updated UTC:** 2026-06-11T02:29:28.466Z
+**Updated UTC:** 2026-06-11T02:55:29.478Z
 
 **Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
 
-**True baseline:** `84/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+**True baseline:** `87/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
 
-**Plex Section 5 reported total size:** `179`
+**Plex Section 5 reported total size:** `183`
 
-**Parsed Section 5 Video rows:** `179`
+**Parsed Section 5 Video rows:** `183`
 
-**Unique indexed ScarFLIX_part hashes:** `166`
+**Unique indexed ScarFLIX_part hashes:** `169`
 
-**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 84/105 expected affected hashes currently present in Plex Section 5.
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 87/105 expected affected hashes currently present in Plex Section 5.
 
 **Recommendation:** Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
 
