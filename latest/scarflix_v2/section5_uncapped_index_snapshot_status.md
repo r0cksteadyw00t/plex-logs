@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T13:17:37.275Z
+- Updated UTC: 2026-06-11T13:25:11.473Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 176
-- Parsed Section 5 Video rows: 176
+- Plex Section 5 reported total size: 181
+- Parsed Section 5 Video rows: 181
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 171
-- Expected affected hashes present: 89/105 (84.8%)
-- Expected affected hashes missing: 16
+- Unique indexed ScarFLIX_part hashes: 175
+- Expected affected hashes present: 92/105 (87.6%)
+- Expected affected hashes missing: 13
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 89/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 92/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -28,17 +28,17 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 - `scarflix_part-6bc868616f378edf` The Ballerina -> ScarFLIX Part 6bc868616f378edf
 - `scarflix_part-8aa2235ef7c1e0f6` Battleship -> ScarFLIX Part 8aa2235ef7c1e0f6
 - `scarflix_part-bd37929b54c7c1bf` Crank -> ScarFLIX Part Bd37929b54c7c1bf
-- `scarflix_part-7c4868fe7b1db021` Dawn of the Dead -> Dawn of the Dead
+- `scarflix_part-8312e4b6385fd16c` Creed -> ScarFLIX Part 8312e4b6385fd16c
 
 ## Missing Samples
 
-- `scarflix_part-8312e4b6385fd16c` Creed
-- `scarflix_part-b9dbad7c5a4378f1` Dances with Wolves
 - `scarflix_part-8ce42f7e275d1e85` Daredevil
 - `scarflix_part-d04bde274e598c57` Despicable Me 3
-- `scarflix_part-00effd68c382bc07` Dr. No
 - `scarflix_part-700e6d7fdb8236a0` Friday
 - `scarflix_part-5f2b46ebc01460e6` My Hero Academia: You're Next
 - `scarflix_part-3150adb80410deb7` The Curse of La Llorona
+- `scarflix_part-d99a060ace386b52` The Devil's Advocate
+- `scarflix_part-761f0288a98ecf2c` The Equalizer 2
+- `scarflix_part-b9efe1904b5d339b` The Human Centipede III (Final Sequence)
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
