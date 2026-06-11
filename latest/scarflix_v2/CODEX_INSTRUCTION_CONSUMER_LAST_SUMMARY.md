@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-11T06:02:55Z
-Instruction: phase0_record_true_baseline_forensic_hold_20260611_v62
+Updated UTC: 2026-06-11T06:18:24Z
+Instruction: phase0_record_true_baseline_forensic_diff_hold_20260611_v63
 
-Section 5 uncapped snapshot captured 95/105 baseline with 244 rows; PAUSE_PUBLICATION active; no expansion or mutation permitted; forensic diff recommended next.
+True baseline captured at 95/105. Recommendation: perform smaller read-only passing-vs-missing forensic diff on Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present/missing hashes. No refresh/mutation. PAUSE_PUBLICATION remains active.
