@@ -1,3 +1,34 @@
+<!-- PATH2_STAGEB_3TITLE_PILOT_PASS:START -->
+## PATH 2 STAGE B -- 3-TITLE ADDITIVE PILOT PASS
+
+**Updated UTC:** 2026-06-11T03:12:07.771Z
+**Status:** `PASS_3TITLE_ADDITIVE_PILOT_COMPLETE_NO_REGRESSION`
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Outcome
+The prepared 3-title additive pilot completed successfully for Annabelle (2014), Armageddon (1998), and Battleship (2012). The runner created exactly three traditional alias symlinks, preserved all legacy ScarFLIX_part-* paths, added alias rows to `webdav_map.json`, and completed preflight + post-verification for all three titles.
+
+### Verification
+- Runner status: `PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE`
+- Runner preflight count: `3`
+- Runner verification count: `3`
+- Independent WebDAV retry: PASS for all 3 titles
+- Plex Section 5 visibility for pilot hashes: PASS for all 3 titles
+- Pre-pilot visible baseline: `87/105`
+- Post-pilot visible baseline: `88/105` visible, `17` missing
+- Pre-pilot visible hashes lost: `0`
+- Non-pilot visible hashes lost: `0`
+- Newly visible hashes: `1`
+- Rollback performed: `false`
+- Rollback source retained: `D:\PlexTools\Backups\path2_pilot_2026-06-11T030859315Z\webdav_map.json.bak`
+
+### Safety
+PAUSE_PUBLICATION remained active. No publication, expansion, cleanup, deletion, broad scan, or source mutation occurred. The migration remained strictly additive.
+
+### Recommendation
+Safe to consider a larger bounded pilot next, but not full visible-set migration yet. Suggested next step: 10-title additive pilot after one more fresh baseline and Sentinel PASS/LOW or REVIEW/MEDIUM.
+<!-- PATH2_STAGEB_3TITLE_PILOT_PASS:END -->
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-11T03:09:46.858Z
