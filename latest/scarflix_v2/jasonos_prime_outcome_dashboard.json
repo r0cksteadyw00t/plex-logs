@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-11T05:50:03.997Z",
+  "updated_utc": "2026-06-11T05:55:03Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,7 +14,7 @@
     "movie_strm_count": 0,
     "tv_strm_count": 1,
     "total_strm_count": 1,
-    "primary_delivery_metric": "materialized_or_webdav_backed_plex_playback_success",
+    "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
     "legacy_resolver_default_allowed": false,
@@ -104,7 +104,8 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON"
+    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
+    "plex_safe_webdav_visible_rows": 1
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -122,10 +123,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 41,
-    "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-11T05:54:29Z",
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 46,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-11T05:55:43Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -134,7 +135,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260611.log",
     "last_progress_utc": "2026-06-11T05:09:09.645Z",
-    "age_minutes": 41,
+    "age_minutes": 46,
     "last_line": "[2026-06-11T05:09:09Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 3,
@@ -143,7 +144,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-11T05:49:08Z",
+    "updated_utc": "2026-06-11T05:50:22Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -164,7 +165,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-11T05:45:06Z",
+    "updated_utc": "2026-06-11T05:50:07Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -290,12 +291,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-11T05:49:34.896Z",
+      "utc": "2026-06-11T05:50:49.782Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-11T05:49:24Z",
+      "utc": "2026-06-11T05:50:23Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -458,5 +459,13 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
+  },
+  "grokbuild_forensic_agent": {
+    "status": "REVIEW_STALE_PROGRESS",
+    "updated_utc": "2026-06-11T05:55:03Z",
+    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
+    "implementation": "node_native",
+    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
+    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
   }
 }
