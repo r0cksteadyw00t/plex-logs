@@ -1,16 +1,16 @@
 # Materialized QA Incident Hypothesis Ledger
 
 - Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
-- Updated UTC: 2026-06-11T11:21:54.444Z
+- Updated UTC: 2026-06-11T11:29:27.208Z
 - Current status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Current hypothesis: The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 81/105 expected affected hashes currently present in Plex Section 5.
 - Next safe action: Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.
 
 ## Latest Uncapped Section 5 Snapshot
 
-- Plex reported Section 5 total size: 159
-- Parsed Section 5 Video rows: 159
-- Unique indexed ScarFLIX_part hashes: 158
+- Plex reported Section 5 total size: 160
+- Parsed Section 5 Video rows: 160
+- Unique indexed ScarFLIX_part hashes: 159
 - Expected affected hashes present: 81/105
 - Expected affected hashes missing: 24
 
