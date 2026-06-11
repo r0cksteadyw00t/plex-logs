@@ -1,7 +1,7 @@
 # ScarFLIX v2 Candidate Source Model
 
 Status: PASS
-Updated UTC: 2026-06-11T15:18:23Z
+Updated UTC: 2026-06-11T15:18:39Z
 PlatformGate status: PASS
 Primary playback architecture: materialized_webdav_symlink
 Controlled materialized/WebDAV expansion allowed: True
