@@ -1,0 +1,82 @@
+{
+  "component": "path2_3title_pilot_preparation",
+  "status": "READY_NOT_QUEUED",
+  "updated_utc": "2026-06-11T02:57:13.529Z",
+  "purpose": "Prepared configuration for next-run 3-title additive Path 2 pilot. This file is not the active runner request and must not execute by itself.",
+  "execution_authorized_now": false,
+  "do_not_execute_in_this_run": true,
+  "job_type": "path2_pilot_migration",
+  "runner": "D:/PlexTools/Foundry/workers/JasonOS_Prime_Path2PilotMigrationRunner.js",
+  "active_request_file_to_use_only_when_authorized": "D:/PlexTools/state/jasonos_prime/path2_pilot_migration_request.json",
+  "prepared_request_file": "D:/PlexTools/state/jasonos_prime/path2_pilot_migration_request.prepared_3title.json",
+  "baseline_gate": {
+    "source": "section5_uncapped_index_snapshot_status.json",
+    "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+    "updated_utc": "2026-06-11T02:55:29.478Z",
+    "previous_reference_present_count": 84,
+    "current_present_count": 87,
+    "current_missing_count": 18,
+    "current_expected_count": 105,
+    "current_present_percent": 82.9,
+    "stable_or_improving_vs_previous": true,
+    "next_run_minimum_present_count": 87
+  },
+  "safety_gates": {
+    "pause_publication_must_be_active": true,
+    "sentinel_must_not_be_alert_high": true,
+    "launch_health_must_not_be_degraded": true,
+    "additive_only": true,
+    "max_targets": 3,
+    "no_publication": true,
+    "no_expansion": true,
+    "no_cleanup": true,
+    "no_deletion": true,
+    "no_source_mutation_except_protected_additive_alias_and_webdav_map_alias_rows": true,
+    "rollback_required": true
+  },
+  "prepared_runner_request": {
+    "status": "queued",
+    "requested_utc": "2026-06-11T02:57:13.529Z",
+    "source": "codex_path2_stageb_3title_preparation",
+    "mode": "protected_additive_pilot",
+    "additive_only": true,
+    "target_count": 3,
+    "target_hashes": [
+      "scarflix_part-c08b683f68e4e49e",
+      "scarflix_part-2eaab8df357724dc",
+      "scarflix_part-8aa2235ef7c1e0f6"
+    ],
+    "minimum_present_count": 87,
+    "require_pause_publication": true,
+    "require_sentinel_clear": true,
+    "max_targets": 3,
+    "note": "Prepared only. Copy/write this object to path2_pilot_migration_request.json and queue path2_pilot_migration only in the next execution after Sentinel/baseline gates pass."
+  },
+  "selected_targets": [
+    {
+      "hash": "scarflix_part-c08b683f68e4e49e",
+      "title": "Annabelle",
+      "expected_parent_folder": "Annabelle (2014)",
+      "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
+      "webdav_path": "/media/ScarFLIX_part-c08b683f68e4e49e/stream.mkv",
+      "selected_reason": "currently_visible_preferred_same_family_no_existing_path2_alias"
+    },
+    {
+      "hash": "scarflix_part-2eaab8df357724dc",
+      "title": "Armageddon",
+      "expected_parent_folder": "Armageddon (1998)",
+      "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+      "webdav_path": "/media/ScarFLIX_part-2eaab8df357724dc/stream.mkv",
+      "selected_reason": "currently_visible_preferred_same_family_no_existing_path2_alias"
+    },
+    {
+      "hash": "scarflix_part-8aa2235ef7c1e0f6",
+      "title": "Battleship",
+      "expected_parent_folder": "Battleship (2012)",
+      "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+      "webdav_path": "/media/ScarFLIX_part-8aa2235ef7c1e0f6/stream.mkv",
+      "selected_reason": "currently_visible_preferred_same_family_no_existing_path2_alias"
+    }
+  ],
+  "recommendation": "Ready for next-run execution only if Sentinel remains PASS/LOW or REVIEW/MEDIUM and a fresh queued section5_uncapped_index_snapshot baseline is >= 87/105. Do not execute during this run."
+}
