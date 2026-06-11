@@ -1,17 +1,17 @@
 # Path 2 Protected Pilot Migration
 
-- Updated UTC: 2026-06-11T01:35:37.604Z
-- Status: `HELD_SENTINEL_ALERT`
+- Updated UTC: 2026-06-11T02:25:50.435Z
+- Status: `PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE`
 - Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
-- Baseline: -/- visible, missing=-
-- Pilot attempted: false
-- Target count: 0
-- Created aliases: 0
-- Rolled back: undefined
+- Baseline: 74/105 visible, missing=31
+- Pilot attempted: true
+- Target count: 1
+- Created aliases: 1
+- Rolled back: false
 
 ## Decision
 
-Sentinel is ALERT/HIGH; pilot mutation is not allowed.
+Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.
 
 ## Raw Handoff URL
 
