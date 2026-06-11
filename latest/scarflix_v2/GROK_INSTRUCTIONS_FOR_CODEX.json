@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_section5_true_baseline_forensic_hold_20260611_v72",
-      "created_at": "2026-06-11T09:13:40Z",
-      "expires_at": "2026-06-12T09:13:40Z",
+      "instruction_id": "phase0_record_latest_section5_baseline_hold_20260611_v73",
+      "created_at": "2026-06-11T09:29:43Z",
+      "expires_at": "2026-06-12T09:29:43Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,24 +13,19 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_attempts": 2,
-        "backoff_seconds": 300,
-        "escalate_after_attempts": 2,
-        "escalation_target": "grok_handoff"
+        "max_retries": 1,
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Section 5 uncapped snapshot confirms 105/105 hybrid_movies_live hashes present. PAUSE_PUBLICATION remains active. Materialized QA REVIEW. No expansion or resolver actions permitted.",
-            "source_instruction_id": "phase0_record_section5_true_baseline_forensic_hold_20260611_v72"
-          }
+          "summary": "Latest Section 5 uncapped snapshot: 100/105 expected hashes present. PAUSE_PUBLICATION remains active. No expansion, publishing, or mutation instructed. Forensic diff recommended next."
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-11T09:13:40Z",
+  "updated_utc": "2026-06-11T09:29:43Z",
   "source": "grok_api"
 }
