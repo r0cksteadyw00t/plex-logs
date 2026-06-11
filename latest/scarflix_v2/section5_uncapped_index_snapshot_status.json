@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-11T05:15:17.263Z",
-  "updated_utc": "2026-06-11T05:15:19.007Z",
+  "started_utc": "2026-06-11T05:19:05.011Z",
+  "updated_utc": "2026-06-11T05:19:06.819Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -56,7 +56,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-11T05:15:10.687Z",
+      "updated_utc": "2026-06-11T05:19:04.947Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -64,20 +64,14 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-11T05:15:10.650Z",
+      "last_tick_utc": "2026-06-11T05:19:04.912Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_85c6c4cec0a5e363",
-          "type": "run_grok_bridge_consumer_cycle",
-          "queue": "control",
-          "started_utc": "2026-06-11T05:15:10.675Z"
-        },
-        {
-          "id": "job_4cfb19e2cf6ecc0c",
+          "id": "job_5b53ae71f95684b3",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-11T05:15:10.676Z"
+          "started_utc": "2026-06-11T05:19:04.937Z"
         }
       ],
       "pause": {
@@ -93,12 +87,12 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-11T05:15:10.687Z",
+        "updated_utc": "2026-06-11T05:19:04.947Z",
         "window_minutes": 10,
-        "sample_count": 1,
-        "latency_sample_count": 1,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 0,
+        "avg_process_runtime_ms": 14340,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 0,
@@ -222,7 +216,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-11T05:15:10.687Z",
+        "updated_utc": "2026-06-11T05:19:04.947Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 21,
@@ -237,11 +231,25 @@
           "review_action_failed": 0
         },
         "blocked_or_review_count": 29,
-        "last_instruction_id": "phase0_record_sentinel_low_baseline_hold_20260611_v59",
-        "last_instruction_status": "executed",
+        "last_instruction_id": "phase0_record_sentinel_baseline_hold_20260611_v60",
+        "last_instruction_status": "blocked_review",
         "last_ingest_utc": "",
         "last_execution_utc": "",
         "recent_instructions": [
+          {
+            "instruction_id": "phase0_record_sentinel_baseline_hold_20260611_v60",
+            "created_utc": "2026-06-11T05:15:10Z",
+            "expires_utc": "2026-06-12T05:15:10Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
           {
             "instruction_id": "phase0_record_sentinel_low_baseline_hold_20260611_v59",
             "created_utc": "2026-06-11T04:59:06Z",
@@ -927,26 +935,12 @@
             ],
             "action_count": 1,
             "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_hold_record_strategy_20260610_v10",
-            "created_utc": "2026-06-10T11:21:04Z",
-            "expires_utc": "2026-06-11T11:21:04Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 2,
-            "summary": ""
           }
         ]
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-11T05:15:10.686Z",
+        "updated_utc": "2026-06-11T05:19:04.945Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1487,9 +1481,9 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-11T05:15:10.691Z",
-      "process_launches_total": 1,
-      "spawn_sync_total": 0,
+      "updated_utc": "2026-06-11T05:19:04.951Z",
+      "process_launches_total": 6,
+      "spawn_sync_total": 5,
       "spawn_detached_total": 1,
       "recent_launches": [
         {
@@ -1502,6 +1496,81 @@
           "critical": false,
           "launch_latency_ms": 0,
           "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-11T05:15:17.155Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokInstructionBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
+          "parent_job_class": "control",
+          "critical": true,
+          "timeout_ms": 60000,
+          "elapsed_ms": 6462,
+          "process_runtime_ms": 6462,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T05:15:17.214Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
+          "parent_job_class": "control",
+          "critical": true,
+          "timeout_ms": 60000,
+          "elapsed_ms": 59,
+          "process_runtime_ms": 59,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T05:15:33.698Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 16481,
+          "process_runtime_ms": 16481,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T05:16:34.805Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Path2PilotMigrationRunner.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Path2PilotMigrationRunner.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 300000,
+          "elapsed_ms": 46039,
+          "process_runtime_ms": 46039,
+          "launch_latency_ms": null,
+          "exit_code": 2,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T05:16:37.535Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 2657,
+          "process_runtime_ms": 2657,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
         }
       ],
       "tracked_children": [],
@@ -1514,12 +1583,12 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-11T05:15:10.691Z",
+        "updated_utc": "2026-06-11T05:19:04.951Z",
         "window_minutes": 10,
-        "sample_count": 1,
-        "latency_sample_count": 1,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 0,
+        "avg_process_runtime_ms": 14340,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 0,
@@ -1531,12 +1600,12 @@
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-11T05:15:10.691Z",
+      "updated_utc": "2026-06-11T05:19:04.951Z",
       "window_minutes": 10,
-      "sample_count": 1,
-      "latency_sample_count": 1,
+      "sample_count": 6,
+      "latency_sample_count": 6,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 0,
+      "avg_process_runtime_ms": 14340,
       "timeout_count": 0,
       "timeout_rate": 0,
       "launches_last_minute": 0,
@@ -1556,9 +1625,9 @@
     "page_size": 500,
     "page_count": 1,
     "selected_base": "http://192.168.1.184:32400",
-    "reported_total_size": 229,
-    "parsed_video_count": 229,
-    "unique_part_hash_count": 196,
+    "reported_total_size": 232,
+    "parsed_video_count": 232,
+    "unique_part_hash_count": 199,
     "pages": [
       {
         "offset": 0,
@@ -1566,12 +1635,12 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 35,
-        "media_container_size": "229",
-        "media_container_total_size": "229",
+        "elapsed_ms": 40,
+        "media_container_size": "232",
+        "media_container_total_size": "232",
         "media_container_offset": "0",
-        "parsed_video_count": 229,
-        "body_bytes": 179036
+        "parsed_video_count": 232,
+        "body_bytes": 187463
       }
     ],
     "indexed_parts": [
@@ -1581,6 +1650,14 @@
         "title": "Adventures in Babysitting",
         "year": "2016",
         "rating_key": "49443",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-81107989d2e30cfb",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+        "title": "Anna",
+        "year": "2019",
+        "rating_key": "49485",
         "library_section_id": ""
       },
       {
@@ -1728,6 +1805,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-cfe52e744ff27d3c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c\\stream.mkv",
+        "title": "The Lord of the Rings: The War of the Rohirrim",
+        "year": "2024",
+        "rating_key": "49491",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-68e1e99370505860",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Man on Fire (2004)\\ScarFLIX_part-68e1e99370505860\\stream.mkv",
         "title": "Man on Fire",
@@ -1789,6 +1874,14 @@
         "title": "Oblivion",
         "year": "2013",
         "rating_key": "49425",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-c9fbe9904ebf4733",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ocean&#39;s Twelve (2004)\\ScarFLIX_part-c9fbe9904ebf4733\\stream.mkv",
+        "title": "Ocean&#39;s Twelve",
+        "year": "2004",
+        "rating_key": "49488",
         "library_section_id": ""
       },
       {
@@ -3403,10 +3496,36 @@
   },
   "comparison": {
     "expected_count": 105,
-    "present_count": 92,
-    "missing_count": 13,
-    "present_percent": 87.6,
+    "present_count": 94,
+    "missing_count": 11,
+    "present_percent": 89.5,
     "present": [
+      {
+        "hash": "scarflix_part-81107989d2e30cfb",
+        "title": "Anna",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-81107989d2e30cfb",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+            "title": "Anna",
+            "year": "2019",
+            "rating_key": "49485",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Anna (2019)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
       {
         "hash": "scarflix_part-c08b683f68e4e49e",
         "title": "Annabelle",
@@ -5406,6 +5525,32 @@
         }
       },
       {
+        "hash": "scarflix_part-cfe52e744ff27d3c",
+        "title": "The Lord of the Rings: The War of the Rohirrim",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-cfe52e744ff27d3c",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c\\stream.mkv",
+            "title": "The Lord of the Rings: The War of the Rohirrim",
+            "year": "2024",
+            "rating_key": "49491",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "The Lord of the Rings The War of the Rohirrim (2024)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
         "hash": "scarflix_part-479e0ebd60d6e6ff",
         "title": "The Magic Faraway Tree",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff\\stream.mkv",
@@ -5858,23 +6003,6 @@
     ],
     "missing": [
       {
-        "hash": "scarflix_part-81107989d2e30cfb",
-        "title": "Anna",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Anna (2019)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-6bc868616f378edf",
         "title": "The Ballerina",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
@@ -5994,23 +6122,6 @@
         }
       },
       {
-        "hash": "scarflix_part-cfe52e744ff27d3c",
-        "title": "The Lord of the Rings: The War of the Rohirrim",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "The Lord of the Rings The War of the Rohirrim (2024)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-ba7d61952f40f7bc",
         "title": "The Transporter",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Transporter (2002)\\ScarFLIX_part-ba7d61952f40f7bc\\stream.mkv",
@@ -6081,21 +6192,47 @@
     ],
     "present_patterns": {
       "by_grandparent_folder": {
-        "06 Discover Movies": 92
+        "06 Discover Movies": 94
       },
       "by_depth": {
-        "9": 92
+        "9": 94
       }
     },
     "missing_patterns": {
       "by_grandparent_folder": {
-        "06 Discover Movies": 13
+        "06 Discover Movies": 11
       },
       "by_depth": {
-        "9": 13
+        "9": 11
       }
     },
     "present_samples": [
+      {
+        "hash": "scarflix_part-81107989d2e30cfb",
+        "title": "Anna",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-81107989d2e30cfb",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+            "title": "Anna",
+            "year": "2019",
+            "rating_key": "49485",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Anna (2019)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
       {
         "hash": "scarflix_part-c08b683f68e4e49e",
         "title": "Annabelle",
@@ -6381,52 +6518,9 @@
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
-      },
-      {
-        "hash": "scarflix_part-d00eaa269e0555aa",
-        "title": "Donnie Darko",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Donnie Darko (2001)\\ScarFLIX_part-d00eaa269e0555aa\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-d00eaa269e0555aa",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Donnie Darko (2001)\\ScarFLIX_part-d00eaa269e0555aa\\stream.mkv",
-            "title": "ScarFLIX Part D00eaa269e0555aa",
-            "year": "",
-            "rating_key": "49318",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Donnie Darko (2001)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
       }
     ],
     "missing_samples": [
-      {
-        "hash": "scarflix_part-81107989d2e30cfb",
-        "title": "Anna",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Anna (2019)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
       {
         "hash": "scarflix_part-6bc868616f378edf",
         "title": "The Ballerina",
@@ -6547,23 +6641,6 @@
         }
       },
       {
-        "hash": "scarflix_part-cfe52e744ff27d3c",
-        "title": "The Lord of the Rings: The War of the Rohirrim",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "The Lord of the Rings The War of the Rohirrim (2024)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-ba7d61952f40f7bc",
         "title": "The Transporter",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Transporter (2002)\\ScarFLIX_part-ba7d61952f40f7bc\\stream.mkv",
@@ -6613,11 +6690,28 @@
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
+      },
+      {
+        "hash": "scarflix_part-fe9eb00f9fe3c79f",
+        "title": "Wrong Turn 5: Bloodlines",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wrong Turn 5 Bloodlines (2012)\\ScarFLIX_part-fe9eb00f9fe3c79f\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Wrong Turn 5 Bloodlines (2012)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
       }
     ]
   },
   "hypothesis": {
-    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 92/105 expected affected hashes currently present in Plex Section 5.",
+    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 94/105 expected affected hashes currently present in Plex Section 5.",
     "evidence_level": "high",
     "measurement_artifact_confirmed": true,
     "remaining_visibility_gap": true
