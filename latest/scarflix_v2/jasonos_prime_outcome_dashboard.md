@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-11T03:20:06.925Z
+Updated UTC: 2026-06-11T03:25:04.833Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,18 +21,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | High |
 
 Recent Achievements:
-- 2026-06-11T03:16:35.321Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T03:21:34.218Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T03:06:25Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T03:06:11.268Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-11T03:06:11Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
-- 2026-06-11T03:05:37Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T02:00:01Z - Autonomous controller: controller_exception: none
 - 2026-06-10T23:01:37.603Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-10T23:01:37Z] [REVIEW] Final: REVIEW
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
 
 Heartbeat / Stall Check:
 - Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 14 min ago
-- Platform child progress: 14 min ago
-- Mirror updated: 4 min ago
+- Controller updated: 19 min ago
+- Platform child progress: 19 min ago
+- Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
 
