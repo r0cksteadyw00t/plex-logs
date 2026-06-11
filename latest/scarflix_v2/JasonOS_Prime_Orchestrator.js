@@ -219,14 +219,30 @@ class Db {
     return this.db.prepare(sql);
   }
 
-  bindParams(params) {
+  bindParams(params, sql) {
     if (!params || this.driver.kind !== "node:sqlite" || Array.isArray(params)) return params || {};
+    const placeholders = new Set();
+    String(sql || "").replace(/[@:$][A-Za-z_][A-Za-z0-9_]*/g, (match) => {
+      placeholders.add(match);
+      return match;
+    });
     const out = {};
     Object.keys(params).forEach((key) => {
       if (/^[@:$]/.test(key)) {
-        out[key] = params[key];
+        if (placeholders.has(key)) {
+          out[key] = params[key];
+        }
       } else {
-        out["@" + key] = params[key];
+        const atKey = "@" + key;
+        const colonKey = ":" + key;
+        const dollarKey = "$" + key;
+        if (placeholders.has(atKey)) {
+          out[atKey] = params[key];
+        } else if (placeholders.has(colonKey)) {
+          out[colonKey] = params[key];
+        } else if (placeholders.has(dollarKey)) {
+          out[dollarKey] = params[key];
+        }
       }
     });
     return out;
@@ -234,17 +250,17 @@ class Db {
 
   run(sql, params) {
     const stmt = this.prepare(sql);
-    return stmt.run(this.bindParams(params || {}));
+    return stmt.run(this.bindParams(params || {}, sql));
   }
 
   get(sql, params) {
     const stmt = this.prepare(sql);
-    return stmt.get(this.bindParams(params || {}));
+    return stmt.get(this.bindParams(params || {}, sql));
   }
 
   all(sql, params) {
     const stmt = this.prepare(sql);
-    return stmt.all(this.bindParams(params || {}));
+    return stmt.all(this.bindParams(params || {}, sql));
   }
 
   migrate() {
