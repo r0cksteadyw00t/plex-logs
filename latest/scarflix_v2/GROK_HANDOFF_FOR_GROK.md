@@ -1,3 +1,27 @@
+<!-- PATH2_STAGEB_DISPATCH_FIX_3TITLE_PREP:START -->
+## PATH 2 STAGE B -- SNAPSHOT DISPATCH FIXED + 3-TITLE PILOT PREPARED
+
+**Updated UTC:** 2026-06-11T02:58:01.889Z
+**Status:** `PASS_DISPATCH_FIXED_BASELINE_STABLE_3TITLE_PREPARED_NOT_QUEUED`
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Dispatch Fix
+`section5_uncapped_index_snapshot` is now registered in `JasonOS_Prime_Orchestrator.js` and the Orchestrator service was restarted successfully. The old `Unknown job type section5_uncapped_index_snapshot` failure is resolved. A pre-clear test job completed with an expected `HELD_SENTINEL_ALERT_HIGH` artifact; after Sentinel cleared, a queued snapshot job completed with `PASS_UNCAPPED_BASELINE_CAPTURED`.
+
+### Current Gates
+- Sentinel: `PASS/LOW` at 2026-06-11T02:55:03Z
+- PAUSE_PUBLICATION: `true`
+- Launch health degraded: `false`
+- Fresh baseline: `87/105` visible, `18` missing (`82.9%`)
+- Baseline comparison: stable/improving versus prior 84/105
+
+### 3-Title Pilot Preparation
+Prepared but not queued: Annabelle (2014), Armageddon (1998), Battleship (2012). The prepared request is stored separately at `D:/PlexTools/state/jasonos_prime/path2_pilot_migration_request.prepared_3title.json`; the active runner request was not overwritten and no 3-title pilot was executed.
+
+### Recommendation
+The next execution may run the prepared 3-title additive pilot only after a fresh snapshot remains >=87/105, Sentinel remains PASS/LOW or REVIEW/MEDIUM, launch health is not degraded, and PAUSE_PUBLICATION remains active.
+<!-- PATH2_STAGEB_DISPATCH_FIX_3TITLE_PREP:END -->
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-11T02:55:29.478Z
