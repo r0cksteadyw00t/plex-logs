@@ -1,3 +1,25 @@
+## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
+
+**Updated UTC:** 2026-06-11T02:52:12.287Z
+
+**Status:** `HELD_SENTINEL_ALERT_HIGH`
+
+**True baseline:** `unknown/unknown` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `undefined`
+
+**Parsed Section 5 Video rows:** `0`
+
+**Unique indexed ScarFLIX_part hashes:** `0`
+
+**Conclusion:** No new Section 5 index baseline was captured because the safety gate held execution.
+
+**Recommendation:** Retry this read-only uncapped snapshot when Sentinel is PASS/LOW, PAUSE_PUBLICATION is active, and launch health is acceptable.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
 <!-- PATH2_SINGLE_TITLE_PILOT_PASS_SCALING_HELD:START -->
 ## PATH 2 SINGLE-TITLE PILOT PASS -- SCALING HELD
 
