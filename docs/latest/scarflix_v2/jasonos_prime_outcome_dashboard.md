@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-11T09:40:03.319Z
+Updated UTC: 2026-06-11T09:45:03.409Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,8 +21,8 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | High |
 
 Recent Achievements:
-- 2026-06-11T09:29:36.203Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
-- 2026-06-11T09:21:49Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-11T09:42:28.893Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T09:29:26Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T09:01:58.714Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-11T09:01:58Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
 - 2026-06-11T05:09:09.645Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-11T05:09:09Z] [REVIEW] Final: REVIEW
 - 2026-06-11T04:04:03Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
@@ -30,8 +30,8 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 18 min ago
-- Platform child progress: 38 min ago
+- Controller updated: 16 min ago
+- Platform child progress: 43 min ago
 - Mirror updated: 4 min ago
 - Platform runner running: false
 - Platform child active: true
