@@ -1,19 +1,19 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-11T09:18:12.750Z
+- Updated UTC: 2026-06-11T10:00:46.775Z
 - Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: 211
-- Parsed Section 5 Video rows: 211
+- Plex Section 5 reported total size: 212
+- Parsed Section 5 Video rows: 212
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 210
-- Expected affected hashes present: 100/105 (95.2%)
-- Expected affected hashes missing: 5
+- Unique indexed ScarFLIX_part hashes: 211
+- Expected affected hashes present: 101/105 (96.2%)
+- Expected affected hashes missing: 4
 
 ## Conclusion
 
-The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 100/105 expected affected hashes currently present in Plex Section 5.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 101/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
@@ -35,7 +35,6 @@ Use this true baseline to perform a smaller read-only passing-vs-missing forensi
 - `scarflix_part-d00eaa269e0555aa` Donnie Darko
 - `scarflix_part-0d465a7414c7c73a` Legends of the Fall
 - `scarflix_part-a7b67ffdd3c5808a` Life of Pi
-- `scarflix_part-17c22fece3c579f9` Sense and Sensibility
 - `scarflix_part-ea09f142010b00aa` The Magnificent Seven
 
 No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
