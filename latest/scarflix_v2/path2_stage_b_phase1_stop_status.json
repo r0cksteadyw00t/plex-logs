@@ -1,0 +1,35 @@
+{
+  "schema_version": "jasonos.path2_stage_b.v1",
+  "status": "STOPPED_PHASE1_CURRENT_STATE_LOCK_FAILED",
+  "updated_utc": "2026-06-11T00:25:44.115Z",
+  "stage_a_backup_root": "D:/PlexTools/Backups/path2_stage_a_20260610T235616Z",
+  "stage_a_validation": "PASS",
+  "current_state_lock": "FAIL_ARTIFACT_NOT_REFRESHED",
+  "attempted_job_id": "job_77739bc4a9af745c",
+  "observed_job_status": "done",
+  "stale_artifact_updated_utc": "2026-06-10T23:26:20.043Z",
+  "request_file_action": "cancelled_stage_b_phase1_gate_failed",
+  "reason": "Phase 1 requires a fresh current baseline before any pilot. The queued Orchestrator job completed but did not update section5_uncapped_index_snapshot_status.json, so proceeding would violate the gate.",
+  "phases_completed": [
+    "Phase 1 Stage A backup validation"
+  ],
+  "phases_not_started": [
+    "Phase 2 new planning update",
+    "Phase 3 pilot migration",
+    "Phase 4 full migration",
+    "Phase 5 post-migration verification"
+  ],
+  "safety": {
+    "pause_publication_required": true,
+    "no_publication": true,
+    "no_expansion": true,
+    "no_refresh": true,
+    "no_cache_clear": true,
+    "no_cleanup": true,
+    "no_deletion": true,
+    "no_source_mutation": true,
+    "no_path_rewrite": true,
+    "no_stage_b_live_migration_started": true
+  },
+  "recommendation": "Do not migrate until the uncapped snapshot dispatch path is fixed or explicitly run through a verified Orchestrator job that refreshes the artifact. Then re-run Stage B Phase 1 and proceed only to the additive 3-5 title pilot."
+}
