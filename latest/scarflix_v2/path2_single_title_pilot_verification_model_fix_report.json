@@ -1,0 +1,70 @@
+{
+  "component": "path2_single_title_pilot_verification_model_fix",
+  "status": "HELD_SENTINEL_ALERT_AFTER_RUNNER_PATCH",
+  "updated_utc": "2026-06-11T01:36:46.412Z",
+  "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
+  "runner_source": "D:/PlexTools/Foundry/workers/JasonOS_Prime_Path2PilotMigrationRunner.js",
+  "backup_root": "D:/PlexTools/Backups/path2_runner_verification_fix_2026-06-11T013332754Z",
+  "runner_changes": [
+    "Service-context verification now checks symlink objects/readlink metadata only.",
+    "LocalSystem dereference of S:-backed stream.mkv paths is explicitly skipped.",
+    "WebDAV preflight with retry/backoff runs before alias creation.",
+    "Post-mutation verification uses alias symlink object/readlink checks, Plex baseline index presence, and bounded WebDAV retry.",
+    "Rollback path remains intact."
+  ],
+  "queued_single_title": {
+    "hash": "scarflix_part-d8b22fb3f498688e",
+    "title": "Annihilation (2018)",
+    "job_id": "job_831e1ddc0f2ff83f"
+  },
+  "pilot_result": {
+    "status": "HELD_SENTINEL_ALERT",
+    "reason": "Sentinel is ALERT/HIGH; pilot mutation is not allowed.",
+    "updated_utc": "2026-06-11T01:35:37.604Z"
+  },
+  "sentinel": {
+    "status": "ALERT",
+    "alert_level": "HIGH",
+    "updated_utc": "2026-06-11T01:35:02Z",
+    "codex_action_required": true,
+    "jason_action_required": false
+  },
+  "orchestrator": {
+    "status": "PASS",
+    "pause": {
+      "pause_all": false,
+      "pause_publication": true,
+      "safe_mode": false,
+      "degraded_mode": false
+    },
+    "launch_health": {
+      "updated_utc": "2026-06-11T01:36:43.703Z",
+      "window_minutes": 10,
+      "sample_count": 5,
+      "latency_sample_count": 5,
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 9131,
+      "timeout_count": 0,
+      "timeout_rate": 0,
+      "launches_last_minute": 1,
+      "budget_per_minute": 8,
+      "degraded_required": false,
+      "active_child_count": 0,
+      "tracked_child_count": 0
+    }
+  },
+  "mutation_check": {
+    "alias_lstat": {
+      "exists": false,
+      "error": "ENOENT"
+    },
+    "alias_rows": 0
+  },
+  "safety": {
+    "pause_publication_active": true,
+    "no_publication": true,
+    "no_expansion": true,
+    "no_alias_created": true
+  },
+  "recommendation": "Do not retry while Sentinel is ALERT/HIGH. Once Sentinel is REVIEW/MEDIUM or PASS/LOW and launch health remains stable, rerun the same one-title job. Do not scale until one-title pilot passes."
+}
