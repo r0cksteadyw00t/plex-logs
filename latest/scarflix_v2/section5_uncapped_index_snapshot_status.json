@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-11T05:05:06.504Z",
-  "updated_utc": "2026-06-11T05:05:09.296Z",
+  "started_utc": "2026-06-11T05:07:47.418Z",
+  "updated_utc": "2026-06-11T05:07:49.517Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -75,7 +75,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-11T05:05:06.442Z",
+      "updated_utc": "2026-06-11T05:07:47.344Z",
       "version": "0.1.0",
       "pid": 40460,
       "owner": "jasonos-orchestrator-40460",
@@ -83,20 +83,20 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-11T05:05:06.405Z",
+      "last_tick_utc": "2026-06-11T05:07:47.311Z",
       "last_error": "Unknown named parameter '@created_utc'",
       "active_jobs": [
         {
-          "id": "job_5d4d8c804f9e5db1",
+          "id": "job_7d8e6c882c2736a9",
           "type": "snapshot_status",
           "queue": "control",
-          "started_utc": "2026-06-11T05:05:06.430Z"
+          "started_utc": "2026-06-11T05:07:47.334Z"
         },
         {
-          "id": "job_e0125235573c4886",
+          "id": "job_44394a07b3f0d9eb",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-11T05:05:06.432Z"
+          "started_utc": "2026-06-11T05:07:47.335Z"
         }
       ],
       "pause": {
@@ -112,15 +112,15 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-11T05:05:06.442Z",
+        "updated_utc": "2026-06-11T05:07:47.344Z",
         "window_minutes": 10,
-        "sample_count": 4,
-        "latency_sample_count": 4,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 3098,
+        "avg_process_runtime_ms": 23964,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 0,
+        "launches_last_minute": 2,
         "budget_per_minute": 8,
         "degraded_required": false,
         "active_child_count": 0,
@@ -253,7 +253,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-11T05:05:06.442Z",
+        "updated_utc": "2026-06-11T05:07:47.344Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 21,
@@ -977,7 +977,7 @@
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-11T05:05:06.439Z",
+        "updated_utc": "2026-06-11T05:07:47.342Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1518,9 +1518,9 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-11T05:05:06.446Z",
-      "process_launches_total": 40,
-      "spawn_sync_total": 27,
+      "updated_utc": "2026-06-11T05:07:47.349Z",
+      "process_launches_total": 43,
+      "spawn_sync_total": 30,
       "spawn_detached_total": 13,
       "recent_launches": [
         {
@@ -2070,6 +2070,51 @@
           "exit_code": 0,
           "timed_out": false,
           "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T05:05:24.609Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 18160,
+          "process_runtime_ms": 18160,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T05:07:32.295Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Path2PilotMigrationRunner.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Path2PilotMigrationRunner.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 300000,
+          "elapsed_ms": 112627,
+          "process_runtime_ms": 112627,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T05:07:35.613Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 3239,
+          "process_runtime_ms": 3239,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
         }
       ],
       "tracked_children": [],
@@ -2082,15 +2127,15 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-11T05:05:06.446Z",
+        "updated_utc": "2026-06-11T05:07:47.349Z",
         "window_minutes": 10,
-        "sample_count": 4,
-        "latency_sample_count": 4,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 3098,
+        "avg_process_runtime_ms": 23964,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 0,
+        "launches_last_minute": 2,
         "budget_per_minute": 8,
         "degraded_required": false,
         "active_child_count": 0,
@@ -2099,15 +2144,15 @@
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-11T05:05:06.446Z",
+      "updated_utc": "2026-06-11T05:07:47.349Z",
       "window_minutes": 10,
-      "sample_count": 4,
-      "latency_sample_count": 4,
+      "sample_count": 6,
+      "latency_sample_count": 6,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 3098,
+      "avg_process_runtime_ms": 23964,
       "timeout_count": 0,
       "timeout_rate": 0,
-      "launches_last_minute": 0,
+      "launches_last_minute": 2,
       "budget_per_minute": 8,
       "degraded_required": false,
       "active_child_count": 0,
@@ -2115,7 +2160,7 @@
     },
     "avg_spawn_latency_ms": 0,
     "timeout_rate": 0,
-    "launches_last_minute": 0
+    "launches_last_minute": 2
   },
   "section_index": {
     "status": "PASS_UNCAPPED_SNAPSHOT_COMPLETE",
@@ -2124,9 +2169,9 @@
     "page_size": 500,
     "page_count": 1,
     "selected_base": "http://192.168.1.184:32400",
-    "reported_total_size": 218,
-    "parsed_video_count": 218,
-    "unique_part_hash_count": 187,
+    "reported_total_size": 221,
+    "parsed_video_count": 221,
+    "unique_part_hash_count": 189,
     "pages": [
       {
         "offset": 0,
@@ -2135,11 +2180,11 @@
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
         "elapsed_ms": 40,
-        "media_container_size": "218",
-        "media_container_total_size": "218",
+        "media_container_size": "221",
+        "media_container_total_size": "221",
         "media_container_offset": "0",
-        "parsed_video_count": 218,
-        "body_bytes": 162037
+        "parsed_video_count": 221,
+        "body_bytes": 164887
       }
     ],
     "indexed_parts": [
@@ -2253,6 +2298,14 @@
         "title": "Home",
         "year": "2015",
         "rating_key": "49419",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-a49002788c06a279",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Island (2005)\\ScarFLIX_part-a49002788c06a279\\stream.mkv",
+        "title": "The Island",
+        "year": "2005",
+        "rating_key": "49469",
         "library_section_id": ""
       },
       {
@@ -3456,6 +3509,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-bf8a62cf46526b11",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11\\stream.mkv",
+        "title": "ScarFLIX Part Bf8a62cf46526b11",
+        "year": "",
+        "rating_key": "49467",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-bf8b8fcb4150df6b",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Man in the Mirror The Michael Jackson Story (2004)\\ScarFLIX_part-bf8b8fcb4150df6b\\stream.mkv",
         "title": "ScarFLIX Part Bf8b8fcb4150df6b",
@@ -3693,6 +3754,14 @@
         "title": "ScarFLIX Part E9c1718338c9d187",
         "year": "",
         "rating_key": "49084",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-e37fbdce67a07b58",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58\\stream.mkv",
+        "title": "ScarFLIX Part E37fbdce67a07b58",
+        "year": "",
+        "rating_key": "49470",
         "library_section_id": ""
       },
       {
