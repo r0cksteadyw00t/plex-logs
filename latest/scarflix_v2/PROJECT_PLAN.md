@@ -1,3 +1,19 @@
+## PATH 2 STAGE B RESTART STOPPED AT PHASE 0 - FIX STAGED, SERVICE RELOAD HELD
+
+**Updated UTC:** 2026-06-11T00:32:29.872Z
+
+**Status:** `STOPPED_PHASE0_FIX_STAGED_SERVICE_RELOAD_HELD_SENTINEL_ALERT`
+
+**Diagnosis:** The snapshot worker was not the root failure. The Orchestrator safety gate held `run_materialized_qa_incident_probe_cycle` before spawning the bridge/worker because the control plane was not eligible. The queue job reached `done`, but the request file remained `queued`, so the snapshot artifact stayed stale.
+
+**Fix staged:** Patched `D:/PlexTools/Foundry/orchestrator/JasonOS_Prime_Orchestrator.js` so held materialized/Section 5 request files are marked `HELD_*` when pause, Sentinel, or launch-health gates block execution. Syntax check PASS.
+
+**Why execution stopped:** Current Sentinel/control-plane status is `ALERT/HIGH`. I did not restart the Orchestrator service or run migration while that gate is active.
+
+**Safety:** No publication, expansion, refresh, cache clear, cleanup, deletion, source mutation, folder move, symlink change, mapping change, path rewrite, Orchestrator restart, pilot migration, or full migration was performed. PAUSE_PUBLICATION remains required.
+
+**Next action:** Once Sentinel clears, reload/restart the Orchestrator to activate the patch, then re-run `section5_uncapped_index_snapshot` and proceed only if the artifact updates with a current timestamp.
+
 ## PATH 2 STAGE B STOPPED AT PHASE 1 - CURRENT STATE LOCK FAILED
 
 **Updated UTC:** 2026-06-11T00:25:44.115Z
