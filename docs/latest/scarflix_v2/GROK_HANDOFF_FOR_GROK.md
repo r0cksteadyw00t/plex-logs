@@ -1,3 +1,19 @@
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-11T02:25:50.435Z
+**Status:** PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: 74/105 visible, 31 missing.
+- Pilot attempted: true
+- Created aliases: 1
+- Rollback performed: false
+
+### Decision
+Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.
+
 <!-- PATH2_VERIFICATION_MODEL_FIX_SINGLE_TITLE_HELD:START -->
 ## PATH 2 VERIFICATION MODEL FIX + SINGLE-TITLE PILOT HELD
 
@@ -19,23 +35,6 @@ The code change is complete, but the new verification model is not yet proven by
 
 <!-- PATH2_VERIFICATION_MODEL_FIX_SINGLE_TITLE_HELD:END -->
 
-## PATH 2 PROTECTED PILOT MIGRATION STATUS
-
-**Updated UTC:** 2026-06-11T01:35:37.604Z
-**Status:** HELD_SENTINEL_ALERT
-**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Summary
-- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: -/- visible, - missing.
-- Pilot attempted: false
-- Created aliases: 0
-- Rollback performed: undefined
-
-### Decision
-Sentinel is ALERT/HIGH; pilot mutation is not allowed.
-
-<!-- PATH2_SERVICE_CONTEXT_VERIFICATION_DIAGNOSTIC:START -->
 ## PATH 2 SERVICE CONTEXT VERIFICATION DIAGNOSTIC
 
 **Updated:** 2026-06-11T01:20:23.262Z
