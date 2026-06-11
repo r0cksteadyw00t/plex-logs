@@ -1,3 +1,19 @@
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-11T01:35:37.604Z
+**Status:** HELD_SENTINEL_ALERT
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: -/- visible, - missing.
+- Pilot attempted: false
+- Created aliases: 0
+- Rollback performed: undefined
+
+### Decision
+Sentinel is ALERT/HIGH; pilot mutation is not allowed.
+
 <!-- PATH2_SERVICE_CONTEXT_VERIFICATION_DIAGNOSTIC:START -->
 ## PATH 2 SERVICE CONTEXT VERIFICATION DIAGNOSTIC
 
@@ -61,22 +77,6 @@ The failure is not a content-migration success. It indicates that the additive a
 Do not scale Stage B. Next safe focus: diagnose why Orchestrator service-context verification reports legacy path ENOENT/WebDAV HEAD failures for titles that remain represented in webdav_map.json, using read-only checks only. If a future retry is considered, use one title only and require a preflight WebDAV HEAD PASS before creating any alias.
 
 <!-- PATH2_STAGE_B_PROTECTED_PILOT_RESULT:END -->
-
-## PATH 2 PROTECTED PILOT MIGRATION STATUS
-
-**Updated UTC:** 2026-06-11T01:00:20.108Z
-**Status:** ROLLED_BACK_PILOT_VERIFICATION_FAILED
-**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Summary
-- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: 74/105 visible, 31 missing.
-- Pilot attempted: true
-- Created aliases: 3
-- Rollback performed: true
-
-### Decision
-Pilot runner created aliases but verification failed; rollback was performed.
 
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
