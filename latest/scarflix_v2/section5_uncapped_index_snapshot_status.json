@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-11T06:31:57.952Z",
-  "updated_utc": "2026-06-11T06:31:59.770Z",
+  "started_utc": "2026-06-11T06:40:21.842Z",
+  "updated_utc": "2026-06-11T06:40:24.244Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -20,9 +20,9 @@
     "status": "PASS_LAUNCH_HEALTH_ACCEPTABLE",
     "sentinel": {
       "component": "jasonos_prime_sentinel_node",
-      "status": "REVIEW",
-      "alert_level": "MEDIUM",
-      "updated_utc": "2026-06-11T06:30:02Z",
+      "status": "PASS",
+      "alert_level": "LOW",
+      "updated_utc": "2026-06-11T06:40:01Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
@@ -30,28 +30,21 @@
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 7,
+        "controller_age_minutes": 1,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
-        "watchdog_age_minutes": 5,
+        "watchdog_age_minutes": 2,
         "dashboard_status": "PASS",
         "dashboard_age_minutes": 5,
         "mirror_status": "PASS",
         "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 4631,
-        "durable_platform_gate_age_minutes": 4631,
+        "checkpoint_age_minutes": 4641,
+        "durable_platform_gate_age_minutes": 4641,
         "platform_progress_fresh": false
       },
-      "recovery_actions": [
-        {
-          "task": "ScarFLIX_v2_AutonomousController",
-          "reason": "controller_stale_or_blocked",
-          "result": "PASS",
-          "note": "enable pid=27184; run pid=23372"
-        }
-      ],
+      "recovery_actions": [],
       "notes": [],
       "files": {
         "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
@@ -63,7 +56,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-11T06:31:57.904Z",
+      "updated_utc": "2026-06-11T06:40:21.782Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -71,14 +64,20 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-11T06:31:57.872Z",
+      "last_tick_utc": "2026-06-11T06:40:21.752Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_76c56ef9867b8fc8",
+          "id": "job_11d91e1f960588af",
+          "type": "snapshot_status",
+          "queue": "control",
+          "started_utc": "2026-06-11T06:40:21.772Z"
+        },
+        {
+          "id": "job_ab4dadfdb082276d",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-11T06:31:57.895Z"
+          "started_utc": "2026-06-11T06:40:21.774Z"
         }
       ],
       "pause": {
@@ -94,19 +93,19 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-11T06:31:57.904Z",
+        "updated_utc": "2026-06-11T06:40:21.782Z",
         "window_minutes": 10,
-        "sample_count": 5,
-        "latency_sample_count": 5,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 18598,
+        "avg_process_runtime_ms": 13718,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 0,
+        "launches_last_minute": 1,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 2,
-        "tracked_child_count": 2
+        "active_child_count": 0,
+        "tracked_child_count": 0
       },
       "degraded_mode": {
         "active": false,
@@ -127,7 +126,7 @@
         "schema_version": "jasonos.hands_off_operation.v1",
         "status": "REVIEW_ESCALATION_REQUIRED",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-11T06:26:57.743Z",
+        "updated_utc": "2026-06-11T06:39:36.761Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -141,7 +140,7 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-11T06:25:02Z",
+          "dashboard_updated_utc": "2026-06-11T06:35:02Z",
           "sentinel_status": "REVIEW",
           "sentinel_alert": "MEDIUM",
           "codex_action_required": false,
@@ -154,12 +153,12 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-11T06:26:57.741Z",
+          "updated_utc": "2026-06-11T06:39:36.756Z",
           "window_minutes": 10,
-          "sample_count": 6,
-          "latency_sample_count": 6,
+          "sample_count": 5,
+          "latency_sample_count": 5,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 10709,
+          "avg_process_runtime_ms": 15504,
           "timeout_count": 0,
           "timeout_rate": 0,
           "launches_last_minute": 0,
@@ -203,21 +202,29 @@
         ],
         "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
         "progress_made_this_cycle": false,
-        "no_progress_cycles": 231,
+        "no_progress_cycles": 233,
         "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
         "queued_jobs": [
           {
             "type": "autonomous_incident_manager",
-            "id": "job_7696bf6bffd34a97"
+            "id": "job_7ff24b4d1f5cb93c"
+          },
+          {
+            "type": "generate_grok_cycle_report",
+            "id": "job_a4662e7d3163c88a"
+          },
+          {
+            "type": "deliver_grok_cycle_report",
+            "id": "job_9ed1cfb87e670538"
           }
         ],
         "actions_taken": [
-          "Queued safe bounded control-plane jobs: autonomous_incident_manager",
+          "Queued safe bounded control-plane jobs: autonomous_incident_manager, generate_grok_cycle_report, deliver_grok_cycle_report",
           "Maintaining Materialized QA recovery as a standing objective using Strategy A path model."
         ],
         "blockers": [],
         "escalation_required": true,
-        "escalation_reason": "No semantic progress for 231 hands-off cycles.",
+        "escalation_reason": "No semantic progress for 233 hands-off cycles.",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -227,26 +234,40 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-11T06:31:57.904Z",
+        "updated_utc": "2026-06-11T06:40:21.782Z",
         "instruction_count": 50,
         "classification_counts": {
-          "Safe": 20,
-          "Review": 30,
+          "Safe": 21,
+          "Review": 29,
           "Requires Human Approval": 0
         },
         "status_counts": {
-          "executed": 20,
+          "executed": 21,
           "safe_queued": 0,
-          "blocked_review": 30,
+          "blocked_review": 29,
           "requires_human_approval": 0,
           "review_action_failed": 0
         },
-        "blocked_or_review_count": 30,
-        "last_instruction_id": "phase0_record_true_baseline_forensic_diff_hold_20260611_v63",
-        "last_instruction_status": "blocked_review",
+        "blocked_or_review_count": 29,
+        "last_instruction_id": "phase0_record_true_baseline_forensic_diff_hold_20260611_v64",
+        "last_instruction_status": "executed",
         "last_ingest_utc": "",
         "last_execution_utc": "",
         "recent_instructions": [
+          {
+            "instruction_id": "phase0_record_true_baseline_forensic_diff_hold_20260611_v64",
+            "created_utc": "2026-06-11T06:35:06Z",
+            "expires_utc": "2026-06-12T06:35:06Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "executed",
+            "classification": "Safe",
+            "reasons": [
+              "approved_safe_instruction"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
           {
             "instruction_id": "phase0_record_true_baseline_forensic_diff_hold_20260611_v63",
             "created_utc": "2026-06-11T06:18:19Z",
@@ -932,26 +953,12 @@
             ],
             "action_count": 1,
             "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_stabilization_hold_20260610_v14",
-            "created_utc": "2026-06-10T13:45:08Z",
-            "expires_utc": "2026-06-11T13:45:08Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
           }
         ]
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-11T06:31:57.902Z",
+        "updated_utc": "2026-06-11T06:40:21.781Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1492,9 +1499,9 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-11T06:31:57.909Z",
-      "process_launches_total": 45,
-      "spawn_sync_total": 35,
+      "updated_utc": "2026-06-11T06:40:21.787Z",
+      "process_launches_total": 51,
+      "spawn_sync_total": 41,
       "spawn_detached_total": 10,
       "recent_launches": [
         {
@@ -2131,24 +2138,99 @@
           "critical": false,
           "launch_latency_ms": 0,
           "process_runtime_ms": null
-        }
-      ],
-      "tracked_children": [
-        {
-          "pid": 4408,
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "started_utc": "2026-06-11T06:28:57.813Z",
-          "critical": false
         },
         {
-          "pid": 40724,
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "started_utc": "2026-06-11T06:29:12.815Z",
-          "critical": false
+          "ts_utc": "2026-06-11T06:32:14.766Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 16856,
+          "process_runtime_ms": 16856,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T06:33:21.507Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Path2PilotMigrationRunner.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Path2PilotMigrationRunner.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 300000,
+          "elapsed_ms": 51692,
+          "process_runtime_ms": 51692,
+          "launch_latency_ms": null,
+          "exit_code": 2,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T06:33:24.464Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 2906,
+          "process_runtime_ms": 2906,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T06:35:12.629Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokInstructionBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
+          "parent_job_class": "control",
+          "critical": true,
+          "timeout_ms": 60000,
+          "elapsed_ms": 6010,
+          "process_runtime_ms": 6010,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T06:35:12.687Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
+          "parent_job_class": "control",
+          "critical": true,
+          "timeout_ms": 60000,
+          "elapsed_ms": 57,
+          "process_runtime_ms": 57,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-11T06:39:56.574Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 4789,
+          "process_runtime_ms": 4789,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
         }
       ],
+      "tracked_children": [],
       "degraded_mode": false,
       "degraded_reason": "",
       "launch_budget": {
@@ -2158,40 +2240,40 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-11T06:31:57.909Z",
+        "updated_utc": "2026-06-11T06:40:21.787Z",
         "window_minutes": 10,
-        "sample_count": 5,
-        "latency_sample_count": 5,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 18598,
+        "avg_process_runtime_ms": 13718,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 0,
+        "launches_last_minute": 1,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 2,
-        "tracked_child_count": 2
+        "active_child_count": 0,
+        "tracked_child_count": 0
       },
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-11T06:31:57.909Z",
+      "updated_utc": "2026-06-11T06:40:21.787Z",
       "window_minutes": 10,
-      "sample_count": 5,
-      "latency_sample_count": 5,
+      "sample_count": 6,
+      "latency_sample_count": 6,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 18598,
+      "avg_process_runtime_ms": 13718,
       "timeout_count": 0,
       "timeout_rate": 0,
-      "launches_last_minute": 0,
+      "launches_last_minute": 1,
       "budget_per_minute": 8,
       "degraded_required": false,
-      "active_child_count": 2,
-      "tracked_child_count": 2
+      "active_child_count": 0,
+      "tracked_child_count": 0
     },
     "avg_spawn_latency_ms": 0,
     "timeout_rate": 0,
-    "launches_last_minute": 0
+    "launches_last_minute": 1
   },
   "section_index": {
     "status": "PASS_UNCAPPED_SNAPSHOT_COMPLETE",
@@ -2200,9 +2282,9 @@
     "page_size": 500,
     "page_count": 1,
     "selected_base": "http://192.168.1.184:32400",
-    "reported_total_size": 278,
-    "parsed_video_count": 278,
-    "unique_part_hash_count": 208,
+    "reported_total_size": 323,
+    "parsed_video_count": 323,
+    "unique_part_hash_count": 213,
     "pages": [
       {
         "offset": 0,
@@ -2210,12 +2292,12 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 37,
-        "media_container_size": "278",
-        "media_container_total_size": "278",
+        "elapsed_ms": 43,
+        "media_container_size": "323",
+        "media_container_total_size": "323",
         "media_container_offset": "0",
-        "parsed_video_count": 278,
-        "body_bytes": 219979
+        "parsed_video_count": 323,
+        "body_bytes": 245869
       }
     ],
     "indexed_parts": [
@@ -2292,6 +2374,14 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "The Empty Man",
+        "year": "2020",
+        "rating_key": "49543",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-761f0288a98ecf2c",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Equalizer 2 (2018)\\ScarFLIX_part-761f0288a98ecf2c\\stream.mkv",
         "title": "The Equalizer 2",
@@ -2361,6 +2451,14 @@
         "title": "Home",
         "year": "2015",
         "rating_key": "49419",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "Homefront",
+        "year": "2013",
+        "rating_key": "49566",
         "library_section_id": ""
       },
       {
@@ -3492,6 +3590,94 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "Casino",
+        "year": "1995",
+        "rating_key": "49554",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49555",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49556",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49557",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49567",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49569",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49570",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49572",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49574",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49575",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-15435a4ab8d58746",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+        "title": "ScarFLIX Part 15435a4ab8d58746",
+        "year": "",
+        "rating_key": "49576",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-059885f26b12b915",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Spartacus (1960)\\ScarFLIX_part-059885f26b12b915\\stream.mkv",
         "title": "ScarFLIX Part 059885f26b12b915",
@@ -3857,6 +4043,22 @@
         "title": "ScarFLIX Part C606557aefb014ab",
         "year": "",
         "rating_key": "49406",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-c624488ce1ac323e",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\L.E.T.H.A.L. Ladies Return to Savage Beach (1998)\\ScarFLIX_part-c624488ce1ac323e\\stream.mkv",
+        "title": "ScarFLIX Part C624488ce1ac323e",
+        "year": "",
+        "rating_key": "49541",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-c624488ce1ac323e",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\L.E.T.H.A.L. Ladies Return to Savage Beach (1998)\\ScarFLIX_part-c624488ce1ac323e\\stream.mkv",
+        "title": "ScarFLIX Part C624488ce1ac323e",
+        "year": "",
+        "rating_key": "49542",
         "library_section_id": ""
       },
       {
@@ -4324,6 +4526,190 @@
         "library_section_id": ""
       },
       {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49558",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49559",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49560",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49561",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49562",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49563",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49564",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49565",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49568",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49571",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49573",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49577",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49579",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5c5e50cc68c7a6a",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv",
+        "title": "ScarFLIX Part F5c5e50cc68c7a6a",
+        "year": "",
+        "rating_key": "49580",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49544",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49545",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49546",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49547",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49548",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49549",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49550",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49551",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "title": "ScarFLIX Part F5edc313355fa64c",
+        "year": "",
+        "rating_key": "49552",
+        "library_section_id": ""
+      },
+      {
         "hash": "scarflix_part-f6f047a41becc4ce",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce\\stream.mkv",
         "title": "ScarFLIX Part F6f047a41becc4ce",
@@ -4337,6 +4723,54 @@
         "title": "ScarFLIX Part F96ecae0bf043548",
         "year": "",
         "rating_key": "49055",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "title": "ScarFLIX Part Fb19346714d96cd7",
+        "year": "",
+        "rating_key": "49581",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "title": "ScarFLIX Part Fb19346714d96cd7",
+        "year": "",
+        "rating_key": "49583",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "title": "ScarFLIX Part Fb19346714d96cd7",
+        "year": "",
+        "rating_key": "49584",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "title": "ScarFLIX Part Fb19346714d96cd7",
+        "year": "",
+        "rating_key": "49585",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "title": "ScarFLIX Part Fb19346714d96cd7",
+        "year": "",
+        "rating_key": "49586",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "title": "ScarFLIX Part Fb19346714d96cd7",
+        "year": "",
+        "rating_key": "49589",
         "library_section_id": ""
       },
       {
@@ -4369,6 +4803,14 @@
         "title": "Sing",
         "year": "2016",
         "rating_key": "49204",
+        "library_section_id": ""
+      },
+      {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "title": "Speed",
+        "year": "1994",
+        "rating_key": "49582",
         "library_section_id": ""
       },
       {
@@ -4439,9 +4881,9 @@
   },
   "comparison": {
     "expected_count": 105,
-    "present_count": 98,
-    "missing_count": 7,
-    "present_percent": 93.3,
+    "present_count": 100,
+    "missing_count": 5,
+    "present_percent": 95.2,
     "present": [
       {
         "hash": "scarflix_part-81107989d2e30cfb",
@@ -6076,6 +6518,64 @@
         }
       },
       {
+        "hash": "scarflix_part-fb19346714d96cd7",
+        "title": "Speed",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-fb19346714d96cd7",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+            "title": "ScarFLIX Part Fb19346714d96cd7",
+            "year": "",
+            "rating_key": "49581",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-fb19346714d96cd7",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+            "title": "ScarFLIX Part Fb19346714d96cd7",
+            "year": "",
+            "rating_key": "49583",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-fb19346714d96cd7",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+            "title": "ScarFLIX Part Fb19346714d96cd7",
+            "year": "",
+            "rating_key": "49584",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-fb19346714d96cd7",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+            "title": "ScarFLIX Part Fb19346714d96cd7",
+            "year": "",
+            "rating_key": "49585",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-fb19346714d96cd7",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
+            "title": "ScarFLIX Part Fb19346714d96cd7",
+            "year": "",
+            "rating_key": "49586",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Speed (1994)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
         "hash": "scarflix_part-9f1e4252bdcbf864",
         "title": "Split",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Split (2017)\\ScarFLIX_part-9f1e4252bdcbf864\\stream.mkv",
@@ -6501,6 +7001,64 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "The Devil's Advocate (1997)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-f5edc313355fa64c",
+        "title": "The Empty Man",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-f5edc313355fa64c",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+            "title": "The Empty Man",
+            "year": "2020",
+            "rating_key": "49543",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-f5edc313355fa64c",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+            "title": "ScarFLIX Part F5edc313355fa64c",
+            "year": "",
+            "rating_key": "49544",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-f5edc313355fa64c",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+            "title": "ScarFLIX Part F5edc313355fa64c",
+            "year": "",
+            "rating_key": "49545",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-f5edc313355fa64c",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+            "title": "ScarFLIX Part F5edc313355fa64c",
+            "year": "",
+            "rating_key": "49546",
+            "library_section_id": ""
+          },
+          {
+            "hash": "scarflix_part-f5edc313355fa64c",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
+            "title": "ScarFLIX Part F5edc313355fa64c",
+            "year": "",
+            "rating_key": "49547",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "The Empty Man (2020)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -7131,23 +7689,6 @@
         }
       },
       {
-        "hash": "scarflix_part-fb19346714d96cd7",
-        "title": "Speed",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Speed (1994)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-6a30d1aa558bac1f",
         "title": "Terminator: Dark Fate",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Dark Fate (2019)\\ScarFLIX_part-6a30d1aa558bac1f\\stream.mkv",
@@ -7160,23 +7701,6 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Terminator Dark Fate (2019)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-f5edc313355fa64c",
-        "title": "The Empty Man",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "The Empty Man (2020)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -7235,18 +7759,18 @@
     ],
     "present_patterns": {
       "by_grandparent_folder": {
-        "06 Discover Movies": 98
+        "06 Discover Movies": 100
       },
       "by_depth": {
-        "9": 98
+        "9": 100
       }
     },
     "missing_patterns": {
       "by_grandparent_folder": {
-        "06 Discover Movies": 7
+        "06 Discover Movies": 5
       },
       "by_depth": {
-        "9": 7
+        "9": 5
       }
     },
     "present_samples": [
@@ -7582,23 +8106,6 @@
         }
       },
       {
-        "hash": "scarflix_part-fb19346714d96cd7",
-        "title": "Speed",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Speed (1994)\\ScarFLIX_part-fb19346714d96cd7\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Speed (1994)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
         "hash": "scarflix_part-6a30d1aa558bac1f",
         "title": "Terminator: Dark Fate",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Dark Fate (2019)\\ScarFLIX_part-6a30d1aa558bac1f\\stream.mkv",
@@ -7611,23 +8118,6 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Terminator Dark Fate (2019)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-f5edc313355fa64c",
-        "title": "The Empty Man",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Empty Man (2020)\\ScarFLIX_part-f5edc313355fa64c\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": false,
-        "plex_matches": [],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "The Empty Man (2020)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -7686,7 +8176,7 @@
     ]
   },
   "hypothesis": {
-    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 98/105 expected affected hashes currently present in Plex Section 5.",
+    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 100/105 expected affected hashes currently present in Plex Section 5.",
     "evidence_level": "high",
     "measurement_artifact_confirmed": true,
     "remaining_visibility_gap": true
