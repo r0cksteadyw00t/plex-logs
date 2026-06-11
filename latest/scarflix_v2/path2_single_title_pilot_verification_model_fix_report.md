@@ -1,36 +1,39 @@
 # Path 2 Verification Model Fix + Single-Title Pilot Result
 
-**Updated:** 2026-06-11T01:36:46.412Z
-**Status:** HELD_SENTINEL_ALERT_AFTER_RUNNER_PATCH
+**Updated UTC:** 2026-06-11T02:34:53.678Z
+**Status:** `PASS_SINGLE_TITLE_ADDITIVE_PILOT_COMPLETE__POST_RUN_SENTINEL_ALERT_HOLD`
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
-## Verification Model Changes
+## Result
 
-- Service-context verification now checks symlink objects/readlink metadata only.
-- LocalSystem dereference of S:-backed stream.mkv paths is explicitly skipped.
-- WebDAV preflight with retry/backoff runs before alias creation.
-- Post-mutation verification uses alias symlink object/readlink checks, Plex baseline index presence, and bounded WebDAV retry.
-- Rollback path remains intact.
+The corrected Path2PilotMigrationRunner completed the single-title additive pilot for **Annihilation (2018)** / `scarflix_part-d8b22fb3f498688e`.
 
-## Single-Title Pilot Attempt
+- Runner status: `PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE`
+- Alias created: `D:\StremioCatalog\_Hybrid\Movies\_ScarFLIXLive\06 Discover Movies\Annihilation (2018)\Annihilation (2018).mkv`
+- Alias symlink/readlink verification: PASS, readlink=`ScarFLIX_part-d8b22fb3f498688e\stream.mkv`
+- Additive webdav_map rows: alias rows=1, legacy rows=1
+- WebDAV HEAD on mapped target: PASS HTTP 200 in 1311ms
+- Plex Section 5 baseline still sees pilot hash: PASS
+- Rollback performed: false
+- Rollback source retained: `D:\PlexTools\Backups\path2_pilot_2026-06-11T022547567Z\webdav_map.json.bak`
 
-- Title: Annihilation (2018)
-- Hash: scarflix_part-d8b22fb3f498688e
-- Job: job_831e1ddc0f2ff83f
-- Result: HELD_SENTINEL_ALERT
-- Reason: Sentinel is ALERT/HIGH; pilot mutation is not allowed.
+## Regression Check
 
-## Safety Result
+A fresh read-only uncapped Section 5 snapshot after the pilot reports **undefined/undefined visible** and **undefined missing** affected hybrid_movies_live hashes. The aggregate count improved from the locked 74/105 baseline, and the pilot hash is present. No broad aggregate regression is indicated.
 
-- Sentinel: ALERT/HIGH
+## Safety State
+
 - PAUSE_PUBLICATION: active
-- Alias exists after hold: false
-- Alias rows in webdav_map: 0
-- Publication/expansion: not started
+- Publication/expansion: none performed
+- Pilot mode: strictly additive
+- Sentinel after pilot: `ALERT/HIGH` at 2026-06-11T02:30:05Z
 
-## Assessment
+## Important Caveats
 
-The runner patch is complete and syntax-checked, but the single-title pilot did not execute because Sentinel returned ALERT/HIGH before mutation. This is the correct safety behavior. The updated verification model has not yet been proven by a completed pilot.
+- Sentinel returned to `ALERT/HIGH` after the pilot; this blocks any multi-title scaling now.
+- The Orchestrator still needs a dispatch registration for `section5_uncapped_index_snapshot`; the post-pilot regression snapshot had to be run by the bounded read-only worker directly after the queued job returned `Unknown job type`.
+- The pilot verifies that the traditional local alias exists and maps safely to the existing WebDAV target. It does not prove Plex has reindexed the new traditional alias as a separate movie path because no refresh, cache clear, publication, or expansion action was allowed.
 
 ## Recommendation
 
-Do not retry while Sentinel is ALERT/HIGH. Once Sentinel returns to REVIEW/MEDIUM or PASS/LOW and launch health remains stable, rerun the same one-title pilot only. Do not scale beyond one title until that pass is verified.
+Hold scaling while Sentinel is ALERT/HIGH. Fix/register the Orchestrator dispatch for section5_uncapped_index_snapshot, then run one quiet soak/recheck. If Sentinel is REVIEW/MEDIUM or PASS/LOW and the one-title alias remains stable, the next safe step is a 3-title additive pilot with the same verification model and rollback gate.
