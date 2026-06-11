@@ -1,3 +1,19 @@
+## PATH 2 STAGE B STOPPED AT PHASE 1 - CURRENT STATE LOCK FAILED
+
+**Updated UTC:** 2026-06-11T00:25:44.115Z
+
+**Status:** `STOPPED_PHASE1_CURRENT_STATE_LOCK_FAILED`
+
+**Stage A validation:** PASS. Backup root: `D:/PlexTools/Backups/path2_stage_a_20260610T235616Z`
+
+**Gate failure:** The mandatory fresh baseline recapture did not complete cleanly. Orchestrator job `job_77739bc4a9af745c` reached `done`, but `section5_uncapped_index_snapshot_status.json` did not update beyond `2026-06-10T23:26:20.043Z`. The request file remained queued and was cancelled as `cancelled_stage_b_phase1_gate_failed`.
+
+**Decision:** No pilot migration and no full migration were executed. Proceeding without a fresh locked baseline would violate the Stage B gate and risk regression of the current visible set.
+
+**Safety:** No publication, expansion, refresh, cache clear, cleanup, deletion, source mutation, folder move, symlink change, mapping change, path rewrite, pilot migration, or full migration was performed. PAUSE_PUBLICATION remains required.
+
+**Next action:** Fix/verify the Orchestrator dispatch path for `section5_uncapped_index_snapshot`, then restart Stage B Phase 1.
+
 ## PATH 2 STAGE B HELD BEFORE STRUCTURAL MIGRATION
 
 **Updated UTC:** 2026-06-11T00:17:25.714Z
