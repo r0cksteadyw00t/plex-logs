@@ -1,7 +1,7 @@
 # Materialized QA Incident Hypothesis Ledger
 
 - Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
-- Updated UTC: 2026-06-11T18:49:31.705Z
+- Updated UTC: 2026-06-11T18:57:24.264Z
 - Current status: `REVIEW_PLEX_INDEX_QUERY_FAILED`
 - Current hypothesis: No trustworthy Section 5 visibility baseline was captured because the read-only Plex Section 5 index query failed before any rows were returned.
 - Next safe action: Verify Plex Media Server is running and reachable from the Orchestrator context, then rerun this same read-only uncapped snapshot. Do not refresh, mutate, publish, or expand before a successful baseline is captured.
