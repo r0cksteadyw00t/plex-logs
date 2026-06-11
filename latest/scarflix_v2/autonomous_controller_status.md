@@ -3,7 +3,7 @@
 Status: FAIL_ENGINEERING
 Milestone state: BLOCKED_DECISION
 Milestone: PlatformGate and candidate-source retry/quarantine model complete
-Updated UTC: 2026-06-11T16:19:19Z
+Updated UTC: 2026-06-11T16:21:13Z
 Current step: controller_exception
 Jason action required: False
 
@@ -27,8 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: PlatformGate PASS; candidate-source retry/quarantine model verified
-- next_check_utc: 2026-06-11T16:26:24Z
+- next_check_utc: 2026-06-11T16:35:17Z
 
 ## Blockers
-- Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
-Parameter name: chars"
+- Controller exception: Exception calling "WriteAllText" with "3" argument(s): "The process cannot access the file 'D:\PlexTools\public\latest\scarflix_v2\autonomous_controller_status.json' because it is being used by another process."
