@@ -9,20 +9,20 @@ Jason action required: False
 
 ## PlatformGate
 - runner_running: False
-- status: UNKNOWN
-- stage: 
-- visible: unknown
+- status: PASS
+- stage: platform_gate_pass
+- visible: 1
 - transient_failures: 0
 - prunable_failures: 0
 
 ## Candidate Source Model
-- status: PENDING_PLATFORM_GATE
+- status: PASS
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: UNKNOWN
-- s_media_ready: False
-- s_catalog_ready: False
+- rclone_mount_status: PASS
+- s_media_ready: True
+- s_catalog_ready: True
 - mount_selfheal_attempted: False
 
 ## Action
@@ -30,4 +30,4 @@ Jason action required: False
 - next_check_utc: 
 
 ## Blockers
-- Controller exception: The process cannot access the file 'D:\PlexTools\state\scarflix_v2\autonomous_controller.lock' because it is being used by another process.
+- Controller exception: Exception calling "WriteAllText" with "3" argument(s): "The process cannot access the file 'D:\PlexTools\state\scarflix_v2\autonomous_controller_retry_state.json' because it is being used by another process."
