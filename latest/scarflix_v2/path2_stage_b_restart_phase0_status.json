@@ -1,0 +1,55 @@
+{
+  "schema_version": "jasonos.path2_stage_b_restart.v1",
+  "status": "STOPPED_PHASE0_FIX_STAGED_SERVICE_RELOAD_HELD_SENTINEL_ALERT",
+  "updated_utc": "2026-06-11T00:32:29.872Z",
+  "phase0_diagnosis": {
+    "root_cause": "Orchestrator safety gate returned before spawning JasonOS_Prime_MaterializedQaIncidentProbe because Sentinel/control-plane state was not eligible; the queue job was marked done but request file stayed queued, so section5_uncapped_index_snapshot_status.json remained stale.",
+    "not_a_snapshot_worker_write_bug": true,
+    "stale_artifact_updated_utc": "2026-06-10T23:26:20.043Z",
+    "failed_job_id": "job_77739bc4a9af745c"
+  },
+  "fix_staged": {
+    "file": "D:/PlexTools/Foundry/orchestrator/JasonOS_Prime_Orchestrator.js",
+    "backup": "D:/PlexTools/Backups/20260611_stage_b_snapshot_dispatch_fix/JasonOS_Prime_Orchestrator.js.bak",
+    "syntax_check": "PASS",
+    "sha256": "7551f9fc69872a5ff911cae91096d4f6e36fd80564b0093d6a950b4a08953e10",
+    "change": "Added markMaterializedProbeRequestsHeld() and call sites so queued Section 5/materialized request files are marked HELD_* when pause, Sentinel, or launch-health gates hold the worker."
+  },
+  "service_reload": {
+    "attempted": false,
+    "reason": "Not restarted while Sentinel/control-plane status is ALERT/HIGH; restarting core control plane during alert would increase risk."
+  },
+  "sentinel": {
+    "status": "ALERT",
+    "alert_level": "HIGH",
+    "updated_utc": "2026-06-11T00:30:05Z",
+    "codex_action_required": true,
+    "jason_action_required": false
+  },
+  "orchestrator": {
+    "status": "PASS",
+    "updated_utc": "2026-06-11T00:32:25.537Z",
+    "pid": 11104,
+    "last_error": "Unknown named parameter '@created_utc'"
+  },
+  "stage_b": {
+    "phase0": "FIX_STAGED_NOT_LIVE",
+    "phase1": "NOT_STARTED_NO_FRESH_BASELINE",
+    "phase3_pilot": "NOT_STARTED",
+    "phase4_full_migration": "NOT_STARTED"
+  },
+  "safety": {
+    "pause_publication_required": true,
+    "no_publication": true,
+    "no_expansion": true,
+    "no_refresh": true,
+    "no_cache_clear": true,
+    "no_cleanup": true,
+    "no_deletion": true,
+    "no_source_mutation": true,
+    "no_path_rewrite": true,
+    "no_service_restart": true,
+    "no_stage_b_live_migration_started": true
+  },
+  "next_required_action": "When Sentinel is PASS/LOW or REVIEW/MEDIUM and core launch health is stable, restart or reload JasonOS_Prime_Orchestrator so the source patch becomes active, then re-run section5_uncapped_index_snapshot and verify the request file becomes HELD_* if the safety gate blocks or PASS_* with a current artifact if it runs."
+}
