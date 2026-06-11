@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-11T05:15:17Z
-Instruction: phase0_record_sentinel_baseline_hold_20260611_v60
+Updated UTC: 2026-06-11T05:31:42Z
+Instruction: phase0_record_true_baseline_forensic_hold_20260611_v61
 
-Section 5 uncapped baseline stable at 90/105 visible. Sentinel PASS/LOW. PAUSE_PUBLICATION active. No expansion or mutation authorized.
+True baseline captured at 94/105 visible in uncapped Section 5 snapshot. PAUSE_PUBLICATION active. No refresh/mutation performed. Recommend read-only forensic diff only.
