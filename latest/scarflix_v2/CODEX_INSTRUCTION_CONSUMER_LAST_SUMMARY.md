@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-11T00:57:58Z
-Instruction: phase0_record_section5_forensic_baseline_diff_20260611_v50
+Updated UTC: 2026-06-11T01:13:44Z
+Instruction: phase0_record_pilot_rollback_diagnostic_hold_20260611_v51
 
-True baseline captured: 74/105 expected hashes present in uncapped Section 5 snapshot (152 total rows, 146 unique hashes). PAUSE_PUBLICATION remains active. Recommendation: perform smaller read-only passing-vs-missing forensic diff on Plex indexed paths, source folder depth, scanner title, and logs for representative present/missing hashes. No refresh, mutation, or publication permitted.
+Path 2 Stage B protected pilot rolled back after WebDAV HEAD verification failures. PAUSE_PUBLICATION remains active. Next safe action: read-only forensic diff of present vs missing hashes using Plex index snapshot, source paths, and scanner logs only. No alias creation, publishing, or expansion.
