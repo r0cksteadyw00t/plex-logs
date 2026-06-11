@@ -2,23 +2,23 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-11T14:29:50Z",
-    "started_utc":  "2026-06-11T14:29:47Z",
-    "duration_seconds":  2,
+    "updated_utc":  "2026-06-11T14:35:15Z",
+    "started_utc":  "2026-06-11T14:35:03Z",
+    "duration_seconds":  13,
     "will_progress_without_codex":  true,
     "current_milestone":  "CANDIDATE_SOURCE_MODEL_PASS",
     "signals":  {
-                    "controller_age_minutes":  24,
-                    "platform_checkpoint_age_minutes":  5111,
-                    "durable_platform_gate_age_minutes":  5111,
+                    "controller_age_minutes":  0,
+                    "platform_checkpoint_age_minutes":  5116,
+                    "durable_platform_gate_age_minutes":  5116,
                     "platform_progress_fresh":  false,
                     "dashboard_age_minutes":  5,
                     "mirror_age_minutes":  3,
                     "movie_strm_count":  0,
                     "tv_strm_count":  0,
                     "total_strm_count":  0,
-                    "previous_total_strm_count":  1,
-                    "catalogue_no_growth":  false,
+                    "previous_total_strm_count":  0,
+                    "catalogue_no_growth":  true,
                     "platform_checkpoint_step":  "platform_gate_pass"
                 },
     "tasks":  {
@@ -26,8 +26,8 @@
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "12/06/2026 12:25:01 AM",
-                                     "next_run_time":  "12/06/2026 12:30:00 AM",
+                                     "last_run_time":  "12/06/2026 12:35:01 AM",
+                                     "next_run_time":  "12/06/2026 12:40:00 AM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
@@ -42,8 +42,8 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "12/06/2026 12:25:01 AM",
-                                    "next_run_time":  "12/06/2026 12:30:00 AM",
+                                    "last_run_time":  "12/06/2026 12:35:01 AM",
+                                    "next_run_time":  "12/06/2026 12:40:00 AM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
@@ -57,29 +57,21 @@
               },
     "actions":  [
                     {
-                        "task":  "autonomous_controller.lock",
-                        "changed":  true,
+                        "task":  "JasonOS_Prime_PublicMirrorPublisher",
+                        "changed":  false,
                         "ran":  false,
-                        "note":  "removed_stale_lock_age_7_min_backup_D:\\PlexTools\\state\\scarflix_v2\\autonomous_controller.lock.stale_20260612_002949.bak"
+                        "note":  "skipped_orchestrator_owned"
                     },
                     {
                         "task":  "ScarFLIX_v2_AutonomousController",
                         "changed":  false,
                         "ran":  true,
                         "note":  "run_triggered"
-                    },
-                    {
-                        "task":  "JasonOS_Prime_PublicMirrorPublisher",
-                        "changed":  false,
-                        "ran":  false,
-                        "note":  "skipped_orchestrator_owned"
                     }
                 ],
     "notes":  [
-                  "Stale lock recovered: removed_stale_lock_age_7_min_backup_D:\\PlexTools\\state\\scarflix_v2\\autonomous_controller.lock.stale_20260612_002949.bak",
-                  "Controller status is stale or missing; watchdog triggered controller task.",
                   "Public mirror status was disabled or stale; watchdog triggered mirror task.",
-                  "Swarm escalation requested: multiple recovery actions were needed in one watchdog cycle."
+                  "Catalogue count has not changed during expansion/candidate milestone; watchdog triggered controller."
               ],
     "files":  {
                   "log":  "D:\\PlexTools\\logs\\scarflix_v2_watchdog_stall_20260612.log",
