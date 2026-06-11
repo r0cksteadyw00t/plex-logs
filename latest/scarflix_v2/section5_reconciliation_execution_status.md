@@ -1,6 +1,6 @@
 # Section 5 Reconciliation Execution Status
 
-- Updated UTC: 2026-06-11T22:06:36.502Z
+- Updated UTC: 2026-06-11T22:14:13.646Z
 - Status: `REVIEW_NEEDED_UNCAPPED_INDEX_SNAPSHOT_COMPLETE`
 - Prior gate: `REVIEW_NEEDED`
 - Uncapped expected hashes present: unknown/105
