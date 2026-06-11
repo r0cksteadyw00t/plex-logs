@@ -1,6 +1,6 @@
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
-**Updated UTC:** 2026-06-11T17:56:13.049Z
+**Updated UTC:** 2026-06-11T18:03:50.890Z
 
 **Status:** `REVIEW_PLEX_INDEX_QUERY_FAILED`
 
