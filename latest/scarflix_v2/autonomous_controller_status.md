@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: PlatformGate PASS; candidate-source retry/quarantine model verified
-- next_check_utc: 2026-06-11T04:44:05Z
+- next_check_utc: 2026-06-11T04:44:11Z
 
 ## Blockers
 - none
