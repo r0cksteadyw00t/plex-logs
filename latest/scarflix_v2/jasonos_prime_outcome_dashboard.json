@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-11T06:35:03.759Z",
+  "updated_utc": "2026-06-11T06:40:02.547Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-11T06:18:19Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-11T06:35:06Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 12,
-    "platform_child_progress_age_minutes": 86,
-    "mirror_updated_age_minutes": 5,
-    "next_check_utc": "2026-06-11T06:28:19Z",
-    "next_check_age_minutes": 7,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 91,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-11T06:43:56Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260611.log",
     "last_progress_utc": "2026-06-11T05:09:09.645Z",
-    "age_minutes": 86,
+    "age_minutes": 91,
     "last_line": "[2026-06-11T05:09:09Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 3,
@@ -142,15 +142,15 @@
   },
   "watchdog_status": {
     "status": "REVIEW",
-    "stall_risk": "Medium",
-    "updated_utc": "2026-06-11T06:31:36Z",
+    "stall_risk": "High",
+    "updated_utc": "2026-06-11T06:37:39Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-11T06:30:02Z",
-    "codex_action_required": false,
+    "status": "ALERT",
+    "alert_level": "HIGH",
+    "updated_utc": "2026-06-11T06:35:02Z",
+    "codex_action_required": true,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-11T06:30:08Z",
+    "updated_utc": "2026-06-11T06:35:06Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -276,11 +276,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-11T06:18:19Z",
-    "last_successful_grok_instruction_utc": "2026-06-11T06:18:19Z",
+    "bridge_updated_utc": "2026-06-11T06:35:06Z",
+    "last_successful_grok_instruction_utc": "2026-06-11T06:35:06Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-11T06:18:24Z",
+    "consumer_updated_utc": "2026-06-11T06:35:12Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -290,12 +290,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-11T06:23:26.724Z",
+      "utc": "2026-06-11T06:39:01.746Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-11T06:22:52Z",
+      "utc": "2026-06-11T06:38:51Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -373,7 +373,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-11T06:18:24Z - structured instruction loop",
+      "last_change": "2026-06-11T06:35:12Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
@@ -386,7 +386,7 @@
       "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=229, rows_found=229, checked=229, decision=119/229, failed=110, success_rate=52%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=1, total=1. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=3/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=PASS, checked=1, passed_visible=1, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 28,
       "eta": "after all-visible materialized QA passes",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     },
     {
       "outcome": "Fast-Track Accelerator",
@@ -449,7 +449,7 @@
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 18,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
-      "stall_risk": "Medium"
+      "stall_risk": "High"
     }
   ],
   "files": {
