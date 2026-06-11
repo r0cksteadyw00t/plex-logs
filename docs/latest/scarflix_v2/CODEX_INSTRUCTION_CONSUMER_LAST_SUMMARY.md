@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-11T08:26:54Z
-Instruction: phase0_record_section5_true_baseline_forensic_hold_20260611_v69
+Updated UTC: 2026-06-11T08:42:28Z
+Instruction: phase0_record_section5_true_baseline_forensic_hold_20260611_v70
 
-Section 5 uncapped index snapshots confirm 100-104/105 expected hybrid_movies_live hashes present across multiple captures. PAUSE_PUBLICATION remains active. No refresh, publication, expansion, or mutation performed. Recommend read-only forensic diff on indexed paths vs source folders.
+Section 5 uncapped index snapshot confirms 105/105 expected hybrid_movies_live hashes present. PAUSE_PUBLICATION remains active. No expansion or mutation performed. Recommendation: maintain forensic hold and rerun focused verification gate with corrected verifier logic.
