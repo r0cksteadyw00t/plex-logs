@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_orchestrator",
   "status": "PASS",
-  "updated_utc": "2026-06-11T03:12:45.411Z",
+  "updated_utc": "2026-06-11T03:25:02.940Z",
   "version": "0.1.0",
   "pid": 40460,
   "owner": "jasonos-orchestrator-40460",
@@ -9,9 +9,16 @@
   "sqlite_status": "PASS_node:sqlite",
   "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
   "health_url": "http://127.0.0.1:8815/healthz",
-  "last_tick_utc": "2026-06-11T03:12:45.386Z",
+  "last_tick_utc": "2026-06-11T03:25:02.910Z",
   "last_error": "Unknown named parameter '@created_utc'",
-  "active_jobs": [],
+  "active_jobs": [
+    {
+      "id": "job_5956bd576830b6fe",
+      "type": "ingest_grok_instructions",
+      "queue": "control",
+      "started_utc": "2026-06-11T03:25:02.932Z"
+    }
+  ],
   "pause": {
     "pause_all": false,
     "pause_publication": true,
@@ -25,12 +32,12 @@
     "degraded": false
   },
   "launch_health": {
-    "updated_utc": "2026-06-11T03:12:45.411Z",
+    "updated_utc": "2026-06-11T03:25:02.940Z",
     "window_minutes": 10,
-    "sample_count": 6,
-    "latency_sample_count": 6,
+    "sample_count": 4,
+    "latency_sample_count": 4,
     "avg_spawn_latency_ms": 0,
-    "avg_process_runtime_ms": 8212,
+    "avg_process_runtime_ms": 11093,
     "timeout_count": 0,
     "timeout_rate": 0,
     "launches_last_minute": 0,
@@ -58,7 +65,7 @@
     "schema_version": "jasonos.hands_off_operation.v1",
     "status": "REVIEW_ESCALATION_REQUIRED",
     "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-    "updated_utc": "2026-06-11T03:09:29.283Z",
+    "updated_utc": "2026-06-11T03:21:47.835Z",
     "external_input_policy": "exception_only",
     "primary_operator": "JasonOS_Prime_Orchestrator",
     "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -72,10 +79,10 @@
       "destructive_or_high_blast_radius_actions_autonomous": false
     },
     "safety_snapshot": {
-      "dashboard_updated_utc": "2026-06-11T03:05:02Z",
-      "sentinel_status": "REVIEW",
-      "sentinel_alert": "MEDIUM",
-      "codex_action_required": false,
+      "dashboard_updated_utc": "2026-06-11T03:20:07Z",
+      "sentinel_status": "ALERT",
+      "sentinel_alert": "HIGH",
+      "codex_action_required": true,
       "jason_action_required": false,
       "materialized_qa_status": "REVIEW",
       "materialized_qa_checked": 229,
@@ -85,19 +92,19 @@
       "broad_legacy_resolver_expansion_paused": true
     },
     "launch_health": {
-      "updated_utc": "2026-06-11T03:09:29.280Z",
+      "updated_utc": "2026-06-11T03:21:47.832Z",
       "window_minutes": 10,
-      "sample_count": 7,
-      "latency_sample_count": 7,
+      "sample_count": 4,
+      "latency_sample_count": 4,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 6660,
+      "avg_process_runtime_ms": 11093,
       "timeout_count": 0,
       "timeout_rate": 0,
-      "launches_last_minute": 2,
+      "launches_last_minute": 0,
       "budget_per_minute": 8,
       "degraded_required": false,
-      "active_child_count": 0,
-      "tracked_child_count": 0
+      "active_child_count": 1,
+      "tracked_child_count": 1
     },
     "degraded_mode": {
       "active": false,
@@ -134,21 +141,17 @@
     ],
     "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
     "progress_made_this_cycle": false,
-    "no_progress_cycles": 198,
+    "no_progress_cycles": 200,
     "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
-    "queued_jobs": [
-      {
-        "type": "autonomous_incident_manager",
-        "id": "job_2bc2f3fa411e401e"
-      }
-    ],
+    "queued_jobs": [],
     "actions_taken": [
-      "Queued safe bounded control-plane jobs: autonomous_incident_manager",
       "Maintaining Materialized QA recovery as a standing objective using Strategy A path model."
     ],
-    "blockers": [],
+    "blockers": [
+      "Sentinel ALERT/HIGH; autonomous work held."
+    ],
     "escalation_required": true,
-    "escalation_reason": "No semantic progress for 198 hands-off cycles.",
+    "escalation_reason": "Sentinel ALERT/HIGH; autonomous work held.; No semantic progress for 200 hands-off cycles.",
     "no_publication_started": true,
     "no_expansion_started": true,
     "no_cleanup_performed": true,
@@ -158,7 +161,7 @@
   "instruction_loop": {
     "component": "jasonos_prime_instruction_loop",
     "status": "PASS_TRACKING",
-    "updated_utc": "2026-06-11T03:12:45.411Z",
+    "updated_utc": "2026-06-11T03:25:02.940Z",
     "instruction_count": 50,
     "classification_counts": {
       "Safe": 23,
@@ -883,7 +886,7 @@
   },
   "credential_awareness": {
     "component": "jasonos_prime_token_awareness",
-    "updated_utc": "2026-06-11T03:12:45.410Z",
+    "updated_utc": "2026-06-11T03:25:02.939Z",
     "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
     "full_secret_values_logged": false,
     "normal_grok_communication_key": "GROK_API_KEY.txt",
