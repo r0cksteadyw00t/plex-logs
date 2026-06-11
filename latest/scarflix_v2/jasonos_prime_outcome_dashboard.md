@@ -1,8 +1,8 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-11T16:30:13.280Z
+Updated UTC: 2026-06-11T16:35:11.847Z
 Status: PASS
-Current milestone: BLOCKED_DECISION
+Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
 Automation state: STALE_STATUS
 Will progress without Codex: true
@@ -21,17 +21,17 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-11T16:21:33.897Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T16:30:45.882Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T16:21:23Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T16:19:19Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
-- 2026-06-11T15:51:20Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T15:14:56.297Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-11T15:14:56Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.
 - 2026-06-11T11:03:44.170Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-11T11:03:44Z] [PASS] Final: PASS
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
 
 Heartbeat / Stall Check:
 - Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 11 min ago
-- Platform child progress: 75 min ago
+- Controller updated: 14 min ago
+- Platform child progress: 80 min ago
 - Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
