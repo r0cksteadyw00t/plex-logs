@@ -1,3 +1,24 @@
+<!-- PATH2_STAGEB_10TITLE_PILOT_HELD:START -->
+## PATH 2 STAGE B -- 10-TITLE PILOT HELD BY SENTINEL GATE
+
+**Updated UTC:** 2026-06-11T03:24:31.927Z
+**Status:** `HELD_SENTINEL_ALERT_HIGH_NO_10TITLE_MUTATION`
+**Raw Handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+The requested 10-title additive pilot did not run. The fresh uncapped Section 5 baseline was stable at `88/105` visible, but Sentinel is `ALERT/HIGH` with `codex_action_required=true`, so the safety gate correctly blocked queue activation before any Path 2 mutation.
+
+### Current Gate State
+- PAUSE_PUBLICATION: `true`
+- Orchestrator: `PASS`
+- Sentinel: `ALERT/HIGH` updated `2026-06-11T03:20:02Z`
+- Launch degraded: `false`; timeout_rate: `0`; avg_spawn_latency_ms: `0`
+- Fresh baseline: `88/105` visible, `17` missing
+- Runner readiness: max target cap is now `10`; no 10-title job was queued
+
+### Recommendation
+Do not retry the 10-title pilot until Sentinel clears to `PASS/LOW` or `REVIEW/MEDIUM`. If the Orchestrator `last_error` persists as `Unknown named parameter '@created_utc'`, treat that as the immediate control-plane fix before reattempting the pilot.
+<!-- PATH2_STAGEB_10TITLE_PILOT_HELD:END -->
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-11T03:19:17.566Z
