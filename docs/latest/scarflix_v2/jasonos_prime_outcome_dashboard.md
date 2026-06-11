@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-11T01:15:02.392Z
+Updated UTC: 2026-06-11T01:20:03.612Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: STALE_STATUS
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -21,18 +21,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-11T01:11:47.695Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
-- 2026-06-11T01:11:33Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-11T01:15:56.491Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-11T01:11:36Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-11T01:00:52.393Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-11T01:00:52Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
 - 2026-06-10T23:01:37.603Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-10T23:01:37Z] [REVIEW] Final: REVIEW
 - 2026-06-10T13:27:41Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 3 min ago
-- Platform child progress: 14 min ago
-- Mirror updated: 4 min ago
+- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
+- Controller updated: 8 min ago
+- Platform child progress: 19 min ago
+- Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
 
