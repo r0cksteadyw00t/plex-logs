@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "REVIEW_PLEX_INDEX_QUERY_FAILED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-12T04:13:58.294Z",
-  "updated_utc": "2026-06-12T04:14:04.982Z",
+  "started_utc": "2026-06-12T04:29:16.577Z",
+  "updated_utc": "2026-06-12T04:29:23.132Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -22,26 +22,26 @@
       "component": "jasonos_prime_sentinel_node",
       "status": "PASS",
       "alert_level": "LOW",
-      "updated_utc": "2026-06-12T04:10:02Z",
+      "updated_utc": "2026-06-12T04:25:03Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
-      "repeat_count": 7,
+      "repeat_count": 12,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 2,
+        "controller_age_minutes": 5,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
-        "watchdog_age_minutes": 4,
+        "watchdog_age_minutes": 5,
         "dashboard_status": "PASS",
         "dashboard_age_minutes": 5,
         "mirror_status": "PASS",
-        "mirror_age_minutes": 1,
+        "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 5931,
-        "durable_platform_gate_age_minutes": 5931,
+        "checkpoint_age_minutes": 5946,
+        "durable_platform_gate_age_minutes": 5946,
         "platform_progress_fresh": false
       },
       "recovery_actions": [],
@@ -56,7 +56,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-12T04:13:58.189Z",
+      "updated_utc": "2026-06-12T04:29:16.497Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -64,20 +64,14 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-12T04:13:57.872Z",
+      "last_tick_utc": "2026-06-12T04:29:16.139Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_0fc0a09b643cddd7",
-          "type": "snapshot_status",
-          "queue": "control",
-          "started_utc": "2026-06-12T04:13:58.177Z"
-        },
-        {
-          "id": "job_9a6c5a9a55a540a8",
+          "id": "job_5734bacd3db391a8",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-12T04:13:58.179Z"
+          "started_utc": "2026-06-12T04:29:16.486Z"
         }
       ],
       "pause": {
@@ -93,19 +87,19 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-12T04:13:58.189Z",
+        "updated_utc": "2026-06-12T04:29:16.497Z",
         "window_minutes": 10,
-        "sample_count": 4,
-        "latency_sample_count": 4,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 12412,
+        "avg_process_runtime_ms": 9248,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 0,
-        "tracked_child_count": 0
+        "active_child_count": 1,
+        "tracked_child_count": 1
       },
       "degraded_mode": {
         "active": false,
@@ -124,9 +118,9 @@
       "hands_off_operation": {
         "component": "jasonos_prime_hands_off_operation",
         "schema_version": "jasonos.hands_off_operation.v1",
-        "status": "REVIEW_ESCALATION_REQUIRED",
+        "status": "PASS_ACTIVE_TRUE_HANDS_OFF",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-12T04:09:58.108Z",
+        "updated_utc": "2026-06-12T04:27:46.457Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -140,7 +134,7 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-12T04:05:02Z",
+          "dashboard_updated_utc": "2026-06-12T04:25:03Z",
           "sentinel_status": "PASS",
           "sentinel_alert": "LOW",
           "codex_action_required": false,
@@ -153,19 +147,19 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-12T04:09:58.104Z",
+          "updated_utc": "2026-06-12T04:27:46.452Z",
           "window_minutes": 10,
-          "sample_count": 6,
-          "latency_sample_count": 6,
+          "sample_count": 7,
+          "latency_sample_count": 7,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 9084,
+          "avg_process_runtime_ms": 8360,
           "timeout_count": 0,
           "timeout_rate": 0,
           "launches_last_minute": 0,
           "budget_per_minute": 8,
           "degraded_required": false,
-          "active_child_count": 2,
-          "tracked_child_count": 2
+          "active_child_count": 1,
+          "tracked_child_count": 1
         },
         "degraded_mode": {
           "active": false,
@@ -190,7 +184,7 @@
           {
             "id": "OBJ-GROK-LOOP",
             "title": "Maintain autonomous Grok reporting and safe inbound instruction loop",
-            "status": "PASS_DELIVERED_TO_GROK_API",
+            "status": "REVIEW_GROK_API_FAILED_QUEUED",
             "next_safe_action": "Continue differential reporting and execute only Safe allowlisted instructions."
           },
           {
@@ -200,22 +194,22 @@
             "next_safe_action": "Escalate if any broad legacy/direct resolver expansion resumes."
           }
         ],
-        "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
-        "progress_made_this_cycle": false,
-        "no_progress_cycles": 449,
-        "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
+        "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=REVIEW_GROK_API_FAILED_QUEUED:REAL_API|instruction_loop=PASS_TRACKING",
+        "progress_made_this_cycle": true,
+        "no_progress_cycles": 0,
+        "last_meaningful_progress_utc": "2026-06-12T04:27:46.457Z",
         "queued_jobs": [
           {
             "type": "autonomous_incident_manager",
-            "id": "job_e37f0d9d82519c17"
+            "id": "job_a381a45d4b823425"
           },
           {
             "type": "generate_grok_cycle_report",
-            "id": "job_d3194c5e51f95e9e"
+            "id": "job_af1bd4f955a76920"
           },
           {
             "type": "deliver_grok_cycle_report",
-            "id": "job_86d13b90ab56abb7"
+            "id": "job_bb4c3df00cd72d89"
           }
         ],
         "actions_taken": [
@@ -223,8 +217,8 @@
           "Maintaining Materialized QA recovery as a standing objective using Strategy A path model."
         ],
         "blockers": [],
-        "escalation_required": true,
-        "escalation_reason": "No semantic progress for 449 hands-off cycles.",
+        "escalation_required": false,
+        "escalation_reason": "",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -234,26 +228,40 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-12T04:13:58.189Z",
+        "updated_utc": "2026-06-12T04:29:16.497Z",
         "instruction_count": 50,
         "classification_counts": {
-          "Safe": 21,
-          "Review": 29,
+          "Safe": 20,
+          "Review": 30,
           "Requires Human Approval": 0
         },
         "status_counts": {
-          "executed": 21,
+          "executed": 20,
           "safe_queued": 0,
-          "blocked_review": 29,
+          "blocked_review": 30,
           "requires_human_approval": 0,
           "review_action_failed": 0
         },
-        "blocked_or_review_count": 29,
-        "last_instruction_id": "phase0_record_latest_section5_baseline_status_20260612_v11",
+        "blocked_or_review_count": 30,
+        "last_instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v12",
         "last_instruction_status": "blocked_review",
         "last_ingest_utc": "",
         "last_execution_utc": "",
         "recent_instructions": [
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v12",
+            "created_utc": "2026-06-12T04:17:51Z",
+            "expires_utc": "2026-06-13T04:17:51Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
           {
             "instruction_id": "phase0_record_latest_section5_baseline_status_20260612_v11",
             "created_utc": "2026-06-12T04:01:53Z",
@@ -939,26 +947,12 @@
             ],
             "action_count": 1,
             "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_section5_true_baseline_forensic_diff_hold_20260611_v81",
-            "created_utc": "2026-06-11T13:31:28Z",
-            "expires_utc": "2026-06-12T13:31:28Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "executed",
-            "classification": "Safe",
-            "reasons": [
-              "approved_safe_instruction"
-            ],
-            "action_count": 1,
-            "summary": ""
           }
         ]
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-12T04:13:58.187Z",
+        "updated_utc": "2026-06-12T04:29:16.495Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1499,149 +1493,11 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-12T04:13:58.194Z",
-      "process_launches_total": 685,
-      "spawn_sync_total": 507,
-      "spawn_detached_total": 178,
+      "updated_utc": "2026-06-12T04:29:16.502Z",
+      "process_launches_total": 695,
+      "spawn_sync_total": 514,
+      "spawn_detached_total": 181,
       "recent_launches": [
-        {
-          "ts_utc": "2026-06-12T00:20:01.077Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 2741,
-          "process_runtime_ms": 2741,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-12T00:23:31.358Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 17837,
-          "process_runtime_ms": 17837,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-12T00:23:31.365Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 29120,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-12T00:23:31.370Z",
-          "kind": "spawn_detached",
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "pid": 39532,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-12T00:25:50.254Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 3325,
-          "process_runtime_ms": 3325,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-12T00:27:46.954Z",
-          "kind": "spawn_detached",
-          "name": "self_evolution_cycle",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_SelfEvolutionCycle.js",
-          "pid": 11440,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-12T00:31:02.339Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 15321,
-          "process_runtime_ms": 15321,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-12T00:32:22.505Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokInstructionBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 4752,
-          "process_runtime_ms": 4752,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-12T00:32:22.569Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 64,
-          "process_runtime_ms": 64,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-12T00:32:35.216Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 2453,
-          "process_runtime_ms": 2453,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
         {
           "ts_utc": "2026-06-12T00:38:34.647Z",
           "kind": "spawn_sync",
@@ -3175,9 +3031,155 @@
           "exit_code": 0,
           "timed_out": false,
           "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T04:14:21.358Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 23161,
+          "process_runtime_ms": 23161,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T04:16:12.531Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 5699,
+          "process_runtime_ms": 5699,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T04:18:01.199Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokInstructionBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokInstructionBridge.js",
+          "parent_job_class": "control",
+          "critical": true,
+          "timeout_ms": 60000,
+          "elapsed_ms": 9369,
+          "process_runtime_ms": 9369,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T04:18:01.308Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
+          "parent_job_class": "control",
+          "critical": true,
+          "timeout_ms": 60000,
+          "elapsed_ms": 109,
+          "process_runtime_ms": 109,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T04:19:21.930Z",
+          "kind": "spawn_detached",
+          "name": "predictive_simulator",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PredictiveSimulator.js",
+          "pid": 9160,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-12T04:22:00.312Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 23389,
+          "process_runtime_ms": 23389,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T04:22:00.896Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 573,
+          "process_runtime_ms": 573,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T04:22:16.327Z",
+          "kind": "spawn_detached",
+          "name": "command_center_generator",
+          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
+          "pid": 32172,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-12T04:24:16.309Z",
+          "kind": "spawn_detached",
+          "name": "public_mirror_publisher",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
+          "pid": 9552,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
+        },
+        {
+          "ts_utc": "2026-06-12T04:28:05.225Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 3781,
+          "process_runtime_ms": 3781,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
         }
       ],
-      "tracked_children": [],
+      "tracked_children": [
+        {
+          "pid": 9552,
+          "name": "public_mirror_publisher",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
+          "started_utc": "2026-06-12T04:24:16.309Z",
+          "critical": false
+        }
+      ],
       "degraded_mode": false,
       "degraded_reason": "",
       "launch_budget": {
@@ -3187,36 +3189,36 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-12T04:13:58.194Z",
+        "updated_utc": "2026-06-12T04:29:16.502Z",
         "window_minutes": 10,
-        "sample_count": 4,
-        "latency_sample_count": 4,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 12412,
+        "avg_process_runtime_ms": 9248,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 0,
-        "tracked_child_count": 0
+        "active_child_count": 1,
+        "tracked_child_count": 1
       },
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-12T04:13:58.194Z",
+      "updated_utc": "2026-06-12T04:29:16.502Z",
       "window_minutes": 10,
-      "sample_count": 4,
-      "latency_sample_count": 4,
+      "sample_count": 6,
+      "latency_sample_count": 6,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 12412,
+      "avg_process_runtime_ms": 9248,
       "timeout_count": 0,
       "timeout_rate": 0,
       "launches_last_minute": 0,
       "budget_per_minute": 8,
       "degraded_required": false,
-      "active_child_count": 0,
-      "tracked_child_count": 0
+      "active_child_count": 1,
+      "tracked_child_count": 1
     },
     "avg_spawn_latency_ms": 0,
     "timeout_rate": 0,
@@ -3241,7 +3243,7 @@
           {
             "base": "http://127.0.0.1:32400",
             "http_status": 0,
-            "elapsed_ms": 12,
+            "elapsed_ms": 10,
             "timed_out": false,
             "error_code": "ECONNREFUSED",
             "ok": false,
@@ -3251,7 +3253,7 @@
           {
             "base": "http://mediaserver:32400",
             "http_status": 0,
-            "elapsed_ms": 4192,
+            "elapsed_ms": 4176,
             "timed_out": false,
             "error_code": "ETIMEDOUT",
             "ok": false,
@@ -3261,7 +3263,7 @@
           {
             "base": "http://localhost:32400",
             "http_status": 0,
-            "elapsed_ms": 5,
+            "elapsed_ms": 4,
             "timed_out": false,
             "error_code": "ECONNREFUSED",
             "ok": false,
@@ -3271,7 +3273,7 @@
           {
             "base": "http://192.168.1.184:32400",
             "http_status": 0,
-            "elapsed_ms": 2463,
+            "elapsed_ms": 2354,
             "timed_out": false,
             "error_code": "ECONNREFUSED",
             "ok": false,
