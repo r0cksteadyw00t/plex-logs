@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-11T23:59:45Z
-Instruction: phase0_record_section5_true_baseline_status_20260611_v3
+Updated UTC: 2026-06-12T00:15:39Z
+Instruction: phase0_record_section5_baseline_status_20260612_v1
 
-Section 5 uncapped index snapshot confirms 105/105 expected hybrid_movies_live hashes present (latest capture 2026-06-11T23:52:53Z). PAUSE_PUBLICATION remains active. No expansion, publishing, mutation, or cleanup permitted. Materialized QA status REVIEW. Recommend continued read-only verification only.
+Section 5 uncapped index snapshot confirms 105/105 baseline captured. PAUSE_PUBLICATION remains active. No refresh, publication, expansion or mutation performed. Materialized QA in REVIEW state. Recommend continued read-only verification only.
