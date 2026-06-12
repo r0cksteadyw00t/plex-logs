@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_verify_plex_reachability_rerun_section5_snapshot_20260612_v44",
-      "created_at": "2026-06-12T13:25:53Z",
-      "expires_at": "2026-06-13T13:25:53Z",
+      "instruction_id": "phase0_record_section5_query_failure_verify_plex_20260612_v45",
+      "created_at": "2026-06-12T13:42:09Z",
+      "expires_at": "2026-06-13T13:42:09Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,16 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 2,
-        "backoff_seconds": 300
+        "max_retries": 1,
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_verify_plex_reachability_rerun_section5_snapshot_20260612_v44",
-            "auto_added_by_bridge": true
+            "summary": "Latest Section 5 uncapped index snapshot failed with status REVIEW_PLEX_INDEX_QUERY_FAILED (0 rows). PAUSE_PUBLICATION remains active. Recommend verifying Plex Media Server reachability from orchestrator context then rerunning the read-only snapshot. No refresh, publish, expand, or mutate actions permitted.",
+            "source_instruction_id": "phase0_record_section5_query_failure_verify_plex_20260612_v45"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-12T13:25:53Z",
+  "updated_utc": "2026-06-12T13:42:09Z",
   "source": "grok_api"
 }
