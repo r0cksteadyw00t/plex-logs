@@ -1,20 +1,20 @@
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
-**Updated UTC:** 2026-06-12T04:06:29.047Z
+**Updated UTC:** 2026-06-12T04:14:04.982Z
 
-**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+**Status:** `REVIEW_PLEX_INDEX_QUERY_FAILED`
 
-**True baseline:** `105/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+**True baseline:** not captured because the read-only Plex Section 5 index query failed.
 
-**Plex Section 5 reported total size:** `247`
+**Plex Section 5 reported total size:** `unknown`
 
-**Parsed Section 5 Video rows:** `247`
+**Parsed Section 5 Video rows:** `0`
 
-**Unique indexed ScarFLIX_part hashes:** `216`
+**Unique indexed ScarFLIX_part hashes:** `0`
 
-**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
+**Conclusion:** No trustworthy Section 5 visibility baseline was captured because the read-only Plex Section 5 index query failed before any rows were returned.
 
-**Recommendation:** Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
+**Recommendation:** Verify Plex Media Server is running and reachable from the Orchestrator context, then rerun this same read-only uncapped snapshot. Do not refresh, mutate, publish, or expand before a successful baseline is captured.
 
 **Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
 
