@@ -3,7 +3,7 @@
   "schema_version": "scarflix.materialized_qa_incident_ledger.v1",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
   "status": "PASS_FORMALISED_P0_INCIDENT",
-  "updated_utc": "2026-06-12T00:08:01.671Z",
+  "updated_utc": "2026-06-12T00:15:41.875Z",
   "p0": true,
   "qa_summary": {
     "status": "REVIEW",
@@ -186,26 +186,26 @@
   "no_source_mutation_performed": true,
   "history": [
     {
-      "updated_utc": "2026-06-12T00:08:01.671Z",
+      "updated_utc": "2026-06-12T00:15:41.875Z",
       "event": "section5_uncapped_index_snapshot",
       "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
       "expected_count": 105,
-      "present_count": 105,
-      "missing_count": 0,
-      "reported_total_size": 223,
-      "conclusion": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5."
+      "present_count": 87,
+      "missing_count": 18,
+      "reported_total_size": 186,
+      "conclusion": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 87/105 expected affected hashes currently present in Plex Section 5."
     }
   ],
   "current_status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "current_hypothesis": {
-    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.",
+    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 87/105 expected affected hashes currently present in Plex Section 5.",
     "evidence_level": "high",
     "measurement_artifact_confirmed": true,
-    "remaining_visibility_gap": false
+    "remaining_visibility_gap": true
   },
   "current_recommendation": {
-    "next_safe_action": "Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.",
+    "next_safe_action": "Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.",
     "expansion_recommendation": "BLOCKED",
-    "reason": "The affected hashes appear visible in Plex, but the QA gate must be rerun with corrected measurement before changing publication posture."
+    "reason": "A true visibility gap remains after removing the parser cap."
   }
 }
