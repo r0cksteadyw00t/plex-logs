@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-12T17:00:02Z",
+  "updated_utc": "2026-06-12T17:05:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -125,9 +125,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 0,
+    "platform_child_progress_age_minutes": 5,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-12T17:00:12Z",
+    "next_check_utc": "2026-06-12T17:05:17Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -135,23 +135,23 @@
   "child_qa_progress": {
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260613.log",
-    "last_progress_utc": "2026-06-12T17:00:03.467Z",
-    "age_minutes": 0,
-    "last_line": "﻿[2026-06-12T17:00:03Z] [INFO] Concurrent QA start, concurrency=5, decision_limit=0, read_megabytes=4",
+    "last_progress_utc": "2026-06-12T17:00:32.077Z",
+    "age_minutes": 5,
+    "last_line": "[2026-06-12T17:00:32Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
-    "review_lines": 0,
-    "info_lines": 1
+    "review_lines": 1,
+    "info_lines": 3
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-12T16:55:07Z",
+    "updated_utc": "2026-06-12T17:00:09Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-12T17:00:02Z",
+    "updated_utc": "2026-06-12T17:05:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-12T17:00:03Z",
-    "updated_utc": "2026-06-12T17:00:03Z",
-    "ended_utc": "2026-06-12T17:00:03Z",
+    "started_utc": "2026-06-12T17:05:03Z",
+    "updated_utc": "2026-06-12T17:05:05Z",
+    "ended_utc": "2026-06-12T17:05:05Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -376,17 +376,17 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-12T17:00:03.467Z",
+      "utc": "2026-06-12T17:00:32.077Z",
       "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-12T17:00:03Z] [INFO] Concurrent QA start, concurrency=5, decision_limit=0, read_megabytes=4"
+      "detail": "Latest child QA line: [2026-06-12T17:00:32Z] [REVIEW] Final: REVIEW"
     },
     {
-      "utc": "2026-06-12T16:55:18.414Z",
+      "utc": "2026-06-12T17:00:24.845Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-12T16:55:09Z",
+      "utc": "2026-06-12T17:00:12Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-12T17:00:02Z",
+    "updated_utc": "2026-06-12T17:05:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -611,9 +611,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-12T17:00:03Z",
-      "updated_utc": "2026-06-12T17:00:03Z",
-      "ended_utc": "2026-06-12T17:00:03Z",
+      "started_utc": "2026-06-12T17:05:03Z",
+      "updated_utc": "2026-06-12T17:05:05Z",
+      "ended_utc": "2026-06-12T17:05:05Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -761,7 +761,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-12T17:00:03Z",
+      "updated_utc": "2026-06-12T17:05:03Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -794,12 +794,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 12912
+              "pid": 40612
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 36360
+              "pid": 20012
             }
           ]
         }
@@ -807,8 +807,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 390123,
-    "safe_pipeline_log_age_seconds": 447007,
+    "canary_status_age_seconds": 390425,
+    "safe_pipeline_log_age_seconds": 447309,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -819,13 +819,13 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=26468"
+        "detail": "pid=39372"
       }
     ],
     "blockers": []
@@ -881,7 +881,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-12T17:00:03Z",
+    "updated_utc": "2026-06-12T17:05:03Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -914,12 +914,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 12912
+            "pid": 40612
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 36360
+            "pid": 20012
           }
         ]
       }
