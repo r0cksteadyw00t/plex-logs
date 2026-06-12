@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-12T13:00:13.547Z",
+  "updated_utc": "2026-06-12T13:05:05Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,7 +14,7 @@
     "movie_strm_count": 0,
     "tv_strm_count": 0,
     "total_strm_count": 0,
-    "primary_delivery_metric": "materialized_or_webdav_backed_plex_playback_success",
+    "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
     "legacy_resolver_default_allowed": false,
@@ -104,7 +104,8 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON"
+    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
+    "plex_safe_webdav_visible_rows": 1
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -122,10 +123,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 0,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 5,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-12T13:03:26Z",
+    "next_check_utc": "2026-06-12T13:05:59Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -133,23 +134,23 @@
   "child_qa_progress": {
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260612.log",
-    "last_progress_utc": "2026-06-12T13:00:09.280Z",
-    "age_minutes": 0,
-    "last_line": "[2026-06-12T13:00:08Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1",
+    "last_progress_utc": "2026-06-12T13:00:25.532Z",
+    "age_minutes": 5,
+    "last_line": "[2026-06-12T13:00:25Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=Unable to connect to the remote server",
     "pass_lines": 4,
-    "review_lines": 7,
-    "info_lines": 23
+    "review_lines": 8,
+    "info_lines": 24
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-12T12:57:54Z",
+    "updated_utc": "2026-06-12T13:00:46Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-12T13:00:05Z",
+    "updated_utc": "2026-06-12T13:05:04Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +165,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "REVIEW_RETRY_HELD",
-    "updated_utc": "2026-06-12T12:55:20Z",
+    "updated_utc": "2026-06-12T13:00:09Z",
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
@@ -294,19 +295,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-12T13:00:09.280Z",
-      "title": "PlatformGate child QA active: Plex client decision QA",
-      "detail": "Latest child QA line: [2026-06-12T13:00:08Z] [INFO] Plex client decision QA starting MaxItems=0 TimeoutSeconds=45 Retries=1"
-    },
-    {
-      "utc": "2026-06-12T12:58:32.020Z",
+      "utc": "2026-06-12T13:01:05.544Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-12T12:58:19Z",
+      "utc": "2026-06-12T13:00:49Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
+    },
+    {
+      "utc": "2026-06-12T13:00:25.532Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-12T13:00:25Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=Unable to connect to the remote server"
     },
     {
       "utc": "2026-06-12T11:02:35.786Z",
@@ -462,5 +463,13 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
+  },
+  "grokbuild_forensic_agent": {
+    "status": "REVIEW_STALE_PROGRESS",
+    "updated_utc": "2026-06-12T13:05:05Z",
+    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
+    "implementation": "node_native",
+    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
+    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
   }
 }
