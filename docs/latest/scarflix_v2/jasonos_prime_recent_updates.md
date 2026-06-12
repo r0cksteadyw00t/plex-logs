@@ -1,11 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-12T15:00:03.452Z
+Updated UTC: 2026-06-12T15:10:03.718Z
 Source: live status merge
 
-- 2026-06-12T14:55:23.741Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
-- 2026-06-12T14:55:13Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
-- 2026-06-12T13:00:25.532Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-12T13:00:25Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=Unable to connect to the remote server
+- 2026-06-12T15:05:21.490Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
+- 2026-06-12T15:05:10Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-12T15:00:23.441Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-12T15:00:23Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=Unable to connect to the remote server
 - 2026-06-12T11:02:35.786Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-12T11:02:35Z] [REVIEW] Final: REVIEW
 - 2026-06-12T09:38:14Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
