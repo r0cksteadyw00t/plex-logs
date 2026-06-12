@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-12T00:32:17Z
+Updated UTC: 2026-06-12T00:48:26Z
 Source: grok_api
 
 ## Summary
@@ -14,10 +14,10 @@ PASS
 
 ## Instructions
 
-### phase0_record_section5_baseline_status_20260612_v2
+### phase0_record_section5_baseline_status_20260612_v3
 
 - Target: `orchestrator`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-13T00:32:17Z`
+- Expires: `2026-06-13T00:48:26Z`
