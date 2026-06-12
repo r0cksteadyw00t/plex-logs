@@ -1,32 +1,31 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-12T08:23:12Z
-Status: REVIEW
-Alert level: MEDIUM
+Updated UTC: 2026-06-12T08:25:03Z
+Status: ALERT
+Alert level: HIGH
 Jason action required: false
-Codex action required: false
+Codex action required: true
 
 ## Signals
 - controller_status: PASS
 - controller_milestone: CANDIDATE_SOURCE_MODEL_PASS
-- controller_age_minutes: 10
+- controller_age_minutes: 11
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 6
+- watchdog_age_minutes: 8
 - dashboard_status: PASS
-- dashboard_age_minutes: 3
+- dashboard_age_minutes: 5
 - mirror_status: PASS
-- mirror_age_minutes: 2
+- mirror_age_minutes: 1
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 6184
-- durable_platform_gate_age_minutes: 6184
+- checkpoint_age_minutes: 6186
+- durable_platform_gate_age_minutes: 6186
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- autonomous_controller.lock: stale_lock (PASS) removed age_min=6 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260612082312.bak
-- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=29640; run pid=32168
-- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=34780; run pid=30704
+- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=14108; run pid=7848
+- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=38888; run pid=37940
 
 ## Notes
-- None.
+- Same unresolved sentinel signature repeated for three cycles.
