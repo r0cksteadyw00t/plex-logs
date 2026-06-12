@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-12T00:07:59.877Z",
-  "updated_utc": "2026-06-12T00:08:01.671Z",
+  "started_utc": "2026-06-12T00:15:39.937Z",
+  "updated_utc": "2026-06-12T00:15:41.875Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -22,26 +22,26 @@
       "component": "jasonos_prime_sentinel_node",
       "status": "PASS",
       "alert_level": "LOW",
-      "updated_utc": "2026-06-12T00:05:02Z",
+      "updated_utc": "2026-06-12T00:15:02Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
-      "repeat_count": 2,
+      "repeat_count": 4,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
         "controller_age_minutes": 4,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
-        "watchdog_age_minutes": 4,
+        "watchdog_age_minutes": 5,
         "dashboard_status": "PASS",
         "dashboard_age_minutes": 5,
         "mirror_status": "PASS",
         "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 5686,
-        "durable_platform_gate_age_minutes": 5686,
+        "checkpoint_age_minutes": 5696,
+        "durable_platform_gate_age_minutes": 5696,
         "platform_progress_fresh": false
       },
       "recovery_actions": [],
@@ -56,7 +56,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-12T00:07:59.798Z",
+      "updated_utc": "2026-06-12T00:15:32.528Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -64,20 +64,20 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-12T00:07:59.520Z",
+      "last_tick_utc": "2026-06-12T00:15:31.996Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_535962ad4ff4e034",
-          "type": "snapshot_status",
+          "id": "job_c823e6b8a763550a",
+          "type": "run_grok_bridge_consumer_cycle",
           "queue": "control",
-          "started_utc": "2026-06-12T00:07:59.786Z"
+          "started_utc": "2026-06-12T00:15:32.467Z"
         },
         {
-          "id": "job_40f4e404f1e7e0d3",
+          "id": "job_7fcec0dd4a25fc28",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-12T00:07:59.788Z"
+          "started_utc": "2026-06-12T00:15:32.482Z"
         }
       ],
       "pause": {
@@ -93,19 +93,19 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-12T00:07:59.797Z",
+        "updated_utc": "2026-06-12T00:15:32.528Z",
         "window_minutes": 10,
-        "sample_count": 7,
-        "latency_sample_count": 7,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 6387,
+        "avg_process_runtime_ms": 7472,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 2,
+        "launches_last_minute": 1,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 2,
-        "tracked_child_count": 2
+        "active_child_count": 1,
+        "tracked_child_count": 1
       },
       "degraded_mode": {
         "active": false,
@@ -126,7 +126,7 @@
         "schema_version": "jasonos.hands_off_operation.v1",
         "status": "REVIEW_ESCALATION_REQUIRED",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-12T00:07:29.820Z",
+        "updated_utc": "2026-06-12T00:13:17.191Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -140,7 +140,7 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-12T00:05:02Z",
+          "dashboard_updated_utc": "2026-06-12T00:10:02Z",
           "sentinel_status": "PASS",
           "sentinel_alert": "LOW",
           "codex_action_required": false,
@@ -153,19 +153,19 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-12T00:07:29.811Z",
+          "updated_utc": "2026-06-12T00:13:17.186Z",
           "window_minutes": 10,
-          "sample_count": 5,
-          "latency_sample_count": 5,
+          "sample_count": 4,
+          "latency_sample_count": 4,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 7241,
+          "avg_process_runtime_ms": 9953,
           "timeout_count": 0,
           "timeout_rate": 0,
-          "launches_last_minute": 1,
+          "launches_last_minute": 0,
           "budget_per_minute": 8,
           "degraded_required": false,
-          "active_child_count": 1,
-          "tracked_child_count": 1
+          "active_child_count": 0,
+          "tracked_child_count": 0
         },
         "degraded_mode": {
           "active": false,
@@ -202,20 +202,20 @@
         ],
         "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
         "progress_made_this_cycle": false,
-        "no_progress_cycles": 408,
+        "no_progress_cycles": 409,
         "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
         "queued_jobs": [
           {
             "type": "autonomous_incident_manager",
-            "id": "job_e7f14c2174ac932c"
+            "id": "job_7a14d8397a49990d"
           },
           {
             "type": "generate_grok_cycle_report",
-            "id": "job_7cd9396fad0c3e80"
+            "id": "job_843ff3c24d2631bc"
           },
           {
             "type": "deliver_grok_cycle_report",
-            "id": "job_5135bcc828560c10"
+            "id": "job_ff1d2fb79784c63b"
           }
         ],
         "actions_taken": [
@@ -224,7 +224,7 @@
         ],
         "blockers": [],
         "escalation_required": true,
-        "escalation_reason": "No semantic progress for 408 hands-off cycles.",
+        "escalation_reason": "No semantic progress for 409 hands-off cycles.",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -234,7 +234,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-12T00:07:59.797Z",
+        "updated_utc": "2026-06-12T00:15:32.528Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 18,
@@ -958,7 +958,7 @@
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-12T00:07:59.796Z",
+        "updated_utc": "2026-06-12T00:15:32.526Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1499,56 +1499,11 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-12T00:07:59.814Z",
-      "process_launches_total": 559,
-      "spawn_sync_total": 414,
-      "spawn_detached_total": 145,
+      "updated_utc": "2026-06-12T00:15:32.979Z",
+      "process_launches_total": 562,
+      "spawn_sync_total": 416,
+      "spawn_detached_total": 146,
       "recent_launches": [
-        {
-          "ts_utc": "2026-06-11T20:32:31.496Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_CodexInstructionConsumer.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_CodexInstructionConsumer.js",
-          "parent_job_class": "control",
-          "critical": true,
-          "timeout_ms": 60000,
-          "elapsed_ms": 57,
-          "process_runtime_ms": 57,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T20:34:45.421Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 3744,
-          "process_runtime_ms": 3744,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-11T20:36:18.944Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
-          "parent_job_class": "control",
-          "critical": false,
-          "timeout_ms": 180000,
-          "elapsed_ms": 22205,
-          "process_runtime_ms": 22205,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
         {
           "ts_utc": "2026-06-11T20:36:34.183Z",
           "kind": "spawn_detached",
@@ -3179,21 +3134,55 @@
           "exit_code": 0,
           "timed_out": false,
           "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T00:08:16.751Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 16933,
+          "process_runtime_ms": 16933,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T00:13:34.662Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 2510,
+          "process_runtime_ms": 2510,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-12T00:15:17.364Z",
+          "kind": "spawn_detached",
+          "name": "predictive_simulator",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PredictiveSimulator.js",
+          "pid": 33120,
+          "parent_job_class": "detached",
+          "critical": false,
+          "launch_latency_ms": 0,
+          "process_runtime_ms": null
         }
       ],
       "tracked_children": [
         {
-          "pid": 2728,
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "started_utc": "2026-06-12T00:06:44.814Z",
-          "critical": false
-        },
-        {
-          "pid": 7804,
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "started_utc": "2026-06-12T00:07:29.829Z",
+          "pid": 33120,
+          "name": "predictive_simulator",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PredictiveSimulator.js",
+          "started_utc": "2026-06-12T00:15:17.364Z",
           "critical": false
         }
       ],
@@ -3206,40 +3195,40 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-12T00:07:59.814Z",
+        "updated_utc": "2026-06-12T00:15:32.979Z",
         "window_minutes": 10,
-        "sample_count": 7,
-        "latency_sample_count": 7,
+        "sample_count": 6,
+        "latency_sample_count": 6,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 6387,
+        "avg_process_runtime_ms": 7472,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 2,
+        "launches_last_minute": 1,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 2,
-        "tracked_child_count": 2
+        "active_child_count": 1,
+        "tracked_child_count": 1
       },
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-12T00:07:59.814Z",
+      "updated_utc": "2026-06-12T00:15:32.979Z",
       "window_minutes": 10,
-      "sample_count": 7,
-      "latency_sample_count": 7,
+      "sample_count": 6,
+      "latency_sample_count": 6,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 6387,
+      "avg_process_runtime_ms": 7472,
       "timeout_count": 0,
       "timeout_rate": 0,
-      "launches_last_minute": 2,
+      "launches_last_minute": 1,
       "budget_per_minute": 8,
       "degraded_required": false,
-      "active_child_count": 2,
-      "tracked_child_count": 2
+      "active_child_count": 1,
+      "tracked_child_count": 1
     },
     "avg_spawn_latency_ms": 0,
     "timeout_rate": 0,
-    "launches_last_minute": 2
+    "launches_last_minute": 1
   },
   "section_index": {
     "status": "PASS_UNCAPPED_SNAPSHOT_COMPLETE",
@@ -3248,9 +3237,9 @@
     "page_size": 500,
     "page_count": 1,
     "selected_base": "http://192.168.1.184:32400",
-    "reported_total_size": 223,
-    "parsed_video_count": 223,
-    "unique_part_hash_count": 220,
+    "reported_total_size": 186,
+    "parsed_video_count": 186,
+    "unique_part_hash_count": 183,
     "pages": [
       {
         "offset": 0,
@@ -3258,12 +3247,12 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 45,
-        "media_container_size": "223",
-        "media_container_total_size": "223",
+        "elapsed_ms": 38,
+        "media_container_size": "186",
+        "media_container_total_size": "186",
         "media_container_offset": "0",
-        "parsed_video_count": 223,
-        "body_bytes": 305466
+        "parsed_video_count": 186,
+        "body_bytes": 266252
       }
     ],
     "indexed_parts": [
@@ -3273,22 +3262,6 @@
         "title": "28 Weeks Later",
         "year": "2007",
         "rating_key": "49016",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-7f98f28eb101181a",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\50 First Dates (2004)\\ScarFLIX_part-7f98f28eb101181a\\stream.mkv",
-        "title": "50 First Dates",
-        "year": "2004",
-        "rating_key": "49342",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-c13e668001d0d577",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Adventures in Babysitting (2016)\\ScarFLIX_part-c13e668001d0d577\\stream.mkv",
-        "title": "Adventures in Babysitting",
-        "year": "2016",
-        "rating_key": "49443",
         "library_section_id": ""
       },
       {
@@ -3316,27 +3289,11 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-a61d38731f010847",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Amadeus (1984)\\ScarFLIX_part-a61d38731f010847\\stream.mkv",
-        "title": "Amadeus",
-        "year": "1984",
-        "rating_key": "49748",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-a7cff08fdfa8cd6f",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\American Pie 2 (2001)\\ScarFLIX_part-a7cff08fdfa8cd6f\\stream.mkv",
         "title": "American Pie 2",
         "year": "2001",
         "rating_key": "49812",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-636c5357a0359a77",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\American Reunion (2012)\\ScarFLIX_part-636c5357a0359a77\\stream.mkv",
-        "title": "American Pie: Reunion",
-        "year": "2012",
-        "rating_key": "49758",
         "library_section_id": ""
       },
       {
@@ -3356,59 +3313,11 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-81107989d2e30cfb",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-        "title": "Anna",
-        "year": "2019",
-        "rating_key": "49485",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-c08b683f68e4e49e",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
-        "title": "Annabelle",
-        "year": "2014",
-        "rating_key": "49756",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-d8b22fb3f498688e",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
-        "title": "Annihilation",
-        "year": "2018",
-        "rating_key": "49060",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-2eaab8df357724dc",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
-        "title": "Armageddon",
-        "year": "1998",
-        "rating_key": "49747",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-141663efa544da92",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Aliens vs Predator Requiem (2007)\\ScarFLIX_part-141663efa544da92\\stream.mkv",
-        "title": "AVPR: Aliens vs Predator - Requiem",
-        "year": "2007",
-        "rating_key": "48768",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-6bc868616f378edf",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ballerina (2016)\\ScarFLIX_part-6bc868616f378edf\\stream.mkv",
         "title": "The Ballerina",
         "year": "2016",
         "rating_key": "49755",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-8aa2235ef7c1e0f6",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
-        "title": "Battleship",
-        "year": "2012",
-        "rating_key": "49752",
         "library_section_id": ""
       },
       {
@@ -3556,14 +3465,6 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-9d12ffa4bdee7b47",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47\\stream.mkv",
-        "title": "Commando",
-        "year": "1985",
-        "rating_key": "49771",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-c3efcf56267ebb30",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\A Complete Unknown (2024)\\ScarFLIX_part-c3efcf56267ebb30\\stream.mkv",
         "title": "A Complete Unknown",
@@ -3588,51 +3489,11 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-bd37929b54c7c1bf",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
-        "title": "Crank",
-        "year": "2006",
-        "rating_key": "49746",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-1bbb5a07bba0ecb0",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Creator (2023)\\ScarFLIX_part-1bbb5a07bba0ecb0\\stream.mkv",
         "title": "The Creator",
         "year": "2023",
         "rating_key": "49043",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-8312e4b6385fd16c",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
-        "title": "Creed",
-        "year": "2015",
-        "rating_key": "49763",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-b9dbad7c5a4378f1",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1\\stream.mkv",
-        "title": "Dances with Wolves",
-        "year": "1990",
-        "rating_key": "49764",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-8ce42f7e275d1e85",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Daredevil (2003)\\ScarFLIX_part-8ce42f7e275d1e85\\stream.mkv",
-        "title": "Daredevil",
-        "year": "2003",
-        "rating_key": "49767",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-7c4868fe7b1db021",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021\\stream.mkv",
-        "title": "Dawn of the Dead",
-        "year": "2004",
-        "rating_key": "49337",
         "library_section_id": ""
       },
       {
@@ -3676,59 +3537,11 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-d04bde274e598c57",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Despicable Me 3 (2017)\\ScarFLIX_part-d04bde274e598c57\\stream.mkv",
-        "title": "Despicable Me 3",
-        "year": "2017",
-        "rating_key": "49765",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-d99a060ace386b52",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Devil&#39;s Advocate (1997)\\ScarFLIX_part-d99a060ace386b52\\stream.mkv",
         "title": "The Devil&#39;s Advocate",
         "year": "1997",
         "rating_key": "49801",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-db3f532fdd48fe57",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dolittle (2020)\\ScarFLIX_part-db3f532fdd48fe57\\stream.mkv",
-        "title": "Dolittle",
-        "year": "2020",
-        "rating_key": "49347",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-d00eaa269e0555aa",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Donnie Darko (2001)\\ScarFLIX_part-d00eaa269e0555aa\\stream.mkv",
-        "title": "Donnie Darko",
-        "year": "2001",
-        "rating_key": "49713",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-00effd68c382bc07",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dr. No (1962)\\ScarFLIX_part-00effd68c382bc07\\stream.mkv",
-        "title": "Dr. No",
-        "year": "1962",
-        "rating_key": "49760",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-f6f047a41becc4ce",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce\\stream.mkv",
-        "title": "Drive",
-        "year": "2011",
-        "rating_key": "49056",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-519e46c6da7cf797",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-        "title": "Dumb and Dumber",
-        "year": "1994",
-        "rating_key": "49847",
         "library_section_id": ""
       },
       {
@@ -3756,27 +3569,11 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-0c6a9ce70714a3a2",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Escape Plan 2 Hades (2018)\\ScarFLIX_part-0c6a9ce70714a3a2\\stream.mkv",
-        "title": "Escape Plan 2: Hades",
-        "year": "2018",
-        "rating_key": "49735",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-260dcb783b5b69c9",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9\\stream.mkv",
         "title": "EuroTrip",
         "year": "2004",
         "rating_key": "49779",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-c606557aefb014ab",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab\\stream.mkv",
-        "title": "Ex Machina",
-        "year": "2014",
-        "rating_key": "49773",
         "library_section_id": ""
       },
       {
@@ -3817,14 +3614,6 @@
         "title": "Final Destination 5",
         "year": "2011",
         "rating_key": "49390",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-854736eb92c08f81",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-        "title": "Finding Dory",
-        "year": "2016",
-        "rating_key": "49036",
         "library_section_id": ""
       },
       {
@@ -3961,14 +3750,6 @@
         "title": "Hive",
         "year": "2026",
         "rating_key": "49053",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-3b5ee15376316a02",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Home (2015)\\ScarFLIX_part-3b5ee15376316a02\\stream.mkv",
-        "title": "Home",
-        "year": "2015",
-        "rating_key": "49770",
         "library_section_id": ""
       },
       {
@@ -4196,14 +3977,6 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-a6694a54be2d1ec9",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Legend (2015)\\ScarFLIX_part-a6694a54be2d1ec9\\stream.mkv",
-        "title": "Legend",
-        "year": "2015",
-        "rating_key": "49769",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-0d465a7414c7c73a",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Legends of the Fall (1994)\\ScarFLIX_part-0d465a7414c7c73a\\stream.mkv",
         "title": "Legends of the Fall",
@@ -4364,14 +4137,6 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-5f2b46ebc01460e6",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You&#39;re Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv",
-        "title": "My Hero Academia: You&#39;re Next",
-        "year": "2024",
-        "rating_key": "49789",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-73b16faf4582f6ed",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nacho Libre (2006)\\ScarFLIX_part-73b16faf4582f6ed\\stream.mkv",
         "title": "Nacho Libre",
@@ -4385,14 +4150,6 @@
         "title": "New Moon",
         "year": "2009",
         "rating_key": "49162",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-cba26c04e97c0343",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Nice Guys (2016)\\ScarFLIX_part-cba26c04e97c0343\\stream.mkv",
-        "title": "The Nice Guys",
-        "year": "2016",
-        "rating_key": "49434",
         "library_section_id": ""
       },
       {
@@ -4468,14 +4225,6 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-e8e703109144873c",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Predator 2 (1990)\\ScarFLIX_part-e8e703109144873c\\stream.mkv",
-        "title": "Predator 2",
-        "year": "1990",
-        "rating_key": "49759",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-130e93283e17cca0",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Pretty Woman (1990)\\ScarFLIX_part-130e93283e17cca0\\stream.mkv",
         "title": "Pretty Woman",
@@ -4500,14 +4249,6 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-773c89fbdc43eb83",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Rambo III (1988)\\ScarFLIX_part-773c89fbdc43eb83\\stream.mkv",
-        "title": "Rambo III",
-        "year": "1988",
-        "rating_key": "49854",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-65332ae6a08e3599",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Rambo Last Blood (2019)\\ScarFLIX_part-65332ae6a08e3599\\stream.mkv",
         "title": "Rambo: Last Blood",
@@ -4521,14 +4262,6 @@
         "title": "Raya and the Last Dragon",
         "year": "2021",
         "rating_key": "49113",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-cbb3019bd5a233a2",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Reader (2008)\\ScarFLIX_part-cbb3019bd5a233a2\\stream.mkv",
-        "title": "The Reader",
-        "year": "2008",
-        "rating_key": "49433",
         "library_section_id": ""
       },
       {
@@ -4569,22 +4302,6 @@
         "title": "Rush",
         "year": "2013",
         "rating_key": "49791",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-ea2f9bd880ad510e",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Saving Bikini Bottom The Sandy Cheeks Movie (2024)\\ScarFLIX_part-ea2f9bd880ad510e\\stream.mkv",
-        "title": "Saving Bikini Bottom: The Sandy Cheeks Movie",
-        "year": "2024",
-        "rating_key": "49772",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-3c033820a05a30f2",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Texas Chain Saw Massacre (1974)\\ScarFLIX_part-3c033820a05a30f2\\stream.mkv",
-        "title": "ScarFLIX Part 3c033820a05a30f2",
-        "year": "",
-        "rating_key": "49855",
         "library_section_id": ""
       },
       {
@@ -4697,14 +4414,6 @@
         "title": "Scream 4",
         "year": "2011",
         "rating_key": "49111",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-d210252fd88190b1",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Secret World of Arrietty (2010)\\ScarFLIX_part-d210252fd88190b1\\stream.mkv",
-        "title": "The Secret World of Arrietty",
-        "year": "2010",
-        "rating_key": "49776",
         "library_section_id": ""
       },
       {
@@ -4892,22 +4601,6 @@
         "library_section_id": ""
       },
       {
-        "hash": "scarflix_part-4a066b8b94606da9",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Tombstone (1993)\\ScarFLIX_part-4a066b8b94606da9\\stream.mkv",
-        "title": "Tombstone",
-        "year": "1993",
-        "rating_key": "49737",
-        "library_section_id": ""
-      },
-      {
-        "hash": "scarflix_part-c975dcdec66f1ec1",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Tomorrowland (2015)\\ScarFLIX_part-c975dcdec66f1ec1\\stream.mkv",
-        "title": "Tomorrowland: A World Beyond",
-        "year": "2015",
-        "rating_key": "49729",
-        "library_section_id": ""
-      },
-      {
         "hash": "scarflix_part-732cab280ba31621",
         "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Trainspotting (1996)\\ScarFLIX_part-732cab280ba31621\\stream.mkv",
         "title": "Trainspotting",
@@ -5047,114 +4740,10 @@
   },
   "comparison": {
     "expected_count": 105,
-    "present_count": 105,
-    "missing_count": 0,
-    "present_percent": 100,
+    "present_count": 87,
+    "missing_count": 18,
+    "present_percent": 82.9,
     "present": [
-      {
-        "hash": "scarflix_part-81107989d2e30cfb",
-        "title": "Anna",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-81107989d2e30cfb",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-            "title": "Anna",
-            "year": "2019",
-            "rating_key": "49485",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Anna (2019)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-c08b683f68e4e49e",
-        "title": "Annabelle",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-c08b683f68e4e49e",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
-            "title": "Annabelle",
-            "year": "2014",
-            "rating_key": "49756",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Annabelle (2014)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-d8b22fb3f498688e",
-        "title": "Annihilation",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-d8b22fb3f498688e",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
-            "title": "Annihilation",
-            "year": "2018",
-            "rating_key": "49060",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Annihilation (2018)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-2eaab8df357724dc",
-        "title": "Armageddon",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-2eaab8df357724dc",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
-            "title": "Armageddon",
-            "year": "1998",
-            "rating_key": "49747",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Armageddon (1998)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
       {
         "hash": "scarflix_part-6bc868616f378edf",
         "title": "The Ballerina",
@@ -5177,318 +4766,6 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Ballerina (2016)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-8aa2235ef7c1e0f6",
-        "title": "Battleship",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-8aa2235ef7c1e0f6",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
-            "title": "Battleship",
-            "year": "2012",
-            "rating_key": "49752",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Battleship (2012)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-bd37929b54c7c1bf",
-        "title": "Crank",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-bd37929b54c7c1bf",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
-            "title": "Crank",
-            "year": "2006",
-            "rating_key": "49746",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Crank (2006)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-8312e4b6385fd16c",
-        "title": "Creed",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-8312e4b6385fd16c",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
-            "title": "Creed",
-            "year": "2015",
-            "rating_key": "49763",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Creed (2015)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-b9dbad7c5a4378f1",
-        "title": "Dances with Wolves",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-b9dbad7c5a4378f1",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1\\stream.mkv",
-            "title": "Dances with Wolves",
-            "year": "1990",
-            "rating_key": "49764",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Dances with Wolves (1990)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-8ce42f7e275d1e85",
-        "title": "Daredevil",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Daredevil (2003)\\ScarFLIX_part-8ce42f7e275d1e85\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-8ce42f7e275d1e85",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Daredevil (2003)\\ScarFLIX_part-8ce42f7e275d1e85\\stream.mkv",
-            "title": "Daredevil",
-            "year": "2003",
-            "rating_key": "49767",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Daredevil (2003)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-7c4868fe7b1db021",
-        "title": "Dawn of the Dead",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-7c4868fe7b1db021",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021\\stream.mkv",
-            "title": "Dawn of the Dead",
-            "year": "2004",
-            "rating_key": "49337",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Dawn of the Dead (2004)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-d04bde274e598c57",
-        "title": "Despicable Me 3",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Despicable Me 3 (2017)\\ScarFLIX_part-d04bde274e598c57\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-d04bde274e598c57",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Despicable Me 3 (2017)\\ScarFLIX_part-d04bde274e598c57\\stream.mkv",
-            "title": "Despicable Me 3",
-            "year": "2017",
-            "rating_key": "49765",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Despicable Me 3 (2017)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-db3f532fdd48fe57",
-        "title": "Dolittle",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dolittle (2020)\\ScarFLIX_part-db3f532fdd48fe57\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-db3f532fdd48fe57",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dolittle (2020)\\ScarFLIX_part-db3f532fdd48fe57\\stream.mkv",
-            "title": "Dolittle",
-            "year": "2020",
-            "rating_key": "49347",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Dolittle (2020)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-d00eaa269e0555aa",
-        "title": "Donnie Darko",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Donnie Darko (2001)\\ScarFLIX_part-d00eaa269e0555aa\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-d00eaa269e0555aa",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Donnie Darko (2001)\\ScarFLIX_part-d00eaa269e0555aa\\stream.mkv",
-            "title": "Donnie Darko",
-            "year": "2001",
-            "rating_key": "49713",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Donnie Darko (2001)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-00effd68c382bc07",
-        "title": "Dr. No",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dr. No (1962)\\ScarFLIX_part-00effd68c382bc07\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-00effd68c382bc07",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dr. No (1962)\\ScarFLIX_part-00effd68c382bc07\\stream.mkv",
-            "title": "Dr. No",
-            "year": "1962",
-            "rating_key": "49760",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Dr. No (1962)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-f6f047a41becc4ce",
-        "title": "Drive",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-f6f047a41becc4ce",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce\\stream.mkv",
-            "title": "Drive",
-            "year": "2011",
-            "rating_key": "49056",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Drive (2011)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-519e46c6da7cf797",
-        "title": "Dumb and Dumber",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-519e46c6da7cf797",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-            "title": "Dumb and Dumber",
-            "year": "1994",
-            "rating_key": "49847",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Dumb and Dumber (1994)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -5567,32 +4844,6 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Final Destination 5 (2011)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-854736eb92c08f81",
-        "title": "Finding Dory",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-854736eb92c08f81",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-            "title": "Finding Dory",
-            "year": "2016",
-            "rating_key": "49036",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "Finding Dory (2016)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -6139,32 +5390,6 @@
           "depth": 9,
           "scarflix_part_index": 7,
           "parent_folder": "Mulholland Drive (2001)",
-          "grandparent_folder": "06 Discover Movies",
-          "under_hybrid_movies_live": true
-        }
-      },
-      {
-        "hash": "scarflix_part-5f2b46ebc01460e6",
-        "title": "My Hero Academia: You're Next",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv",
-        "prior_status": "FAIL",
-        "prior_reason": "timeout",
-        "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-5f2b46ebc01460e6",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You&#39;re Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv",
-            "title": "My Hero Academia: You&#39;re Next",
-            "year": "2024",
-            "rating_key": "49789",
-            "library_section_id": ""
-          }
-        ],
-        "path_pattern": {
-          "depth": 9,
-          "scarflix_part_index": 7,
-          "parent_folder": "My Hero Academia You're Next (2024)",
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
@@ -7790,20 +7015,7 @@
         }
       }
     ],
-    "missing": [],
-    "present_patterns": {
-      "by_grandparent_folder": {
-        "06 Discover Movies": 105
-      },
-      "by_depth": {
-        "9": 105
-      }
-    },
-    "missing_patterns": {
-      "by_grandparent_folder": {},
-      "by_depth": {}
-    },
-    "present_samples": [
+    "missing": [
       {
         "hash": "scarflix_part-81107989d2e30cfb",
         "title": "Anna",
@@ -7811,17 +7023,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-81107989d2e30cfb",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-            "title": "Anna",
-            "year": "2019",
-            "rating_key": "49485",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -7837,17 +7040,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-c08b683f68e4e49e",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
-            "title": "Annabelle",
-            "year": "2014",
-            "rating_key": "49756",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -7863,17 +7057,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-d8b22fb3f498688e",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
-            "title": "Annihilation",
-            "year": "2018",
-            "rating_key": "49060",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -7889,17 +7074,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-2eaab8df357724dc",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
-            "title": "Armageddon",
-            "year": "1998",
-            "rating_key": "49747",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -7908,6 +7084,262 @@
           "under_hybrid_movies_live": true
         }
       },
+      {
+        "hash": "scarflix_part-8aa2235ef7c1e0f6",
+        "title": "Battleship",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Battleship (2012)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-bd37929b54c7c1bf",
+        "title": "Crank",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Crank (2006)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-8312e4b6385fd16c",
+        "title": "Creed",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Creed (2015)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-b9dbad7c5a4378f1",
+        "title": "Dances with Wolves",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Dances with Wolves (1990)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-8ce42f7e275d1e85",
+        "title": "Daredevil",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Daredevil (2003)\\ScarFLIX_part-8ce42f7e275d1e85\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Daredevil (2003)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-7c4868fe7b1db021",
+        "title": "Dawn of the Dead",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Dawn of the Dead (2004)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-d04bde274e598c57",
+        "title": "Despicable Me 3",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Despicable Me 3 (2017)\\ScarFLIX_part-d04bde274e598c57\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Despicable Me 3 (2017)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-db3f532fdd48fe57",
+        "title": "Dolittle",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dolittle (2020)\\ScarFLIX_part-db3f532fdd48fe57\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Dolittle (2020)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-d00eaa269e0555aa",
+        "title": "Donnie Darko",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Donnie Darko (2001)\\ScarFLIX_part-d00eaa269e0555aa\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Donnie Darko (2001)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-00effd68c382bc07",
+        "title": "Dr. No",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dr. No (1962)\\ScarFLIX_part-00effd68c382bc07\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Dr. No (1962)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-f6f047a41becc4ce",
+        "title": "Drive",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Drive (2011)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-519e46c6da7cf797",
+        "title": "Dumb and Dumber",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Dumb and Dumber (1994)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-854736eb92c08f81",
+        "title": "Finding Dory",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Finding Dory (2016)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-5f2b46ebc01460e6",
+        "title": "My Hero Academia: You're Next",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\My Hero Academia You're Next (2024)\\ScarFLIX_part-5f2b46ebc01460e6\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "My Hero Academia You're Next (2024)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      }
+    ],
+    "present_patterns": {
+      "by_grandparent_folder": {
+        "06 Discover Movies": 87
+      },
+      "by_depth": {
+        "9": 87
+      }
+    },
+    "missing_patterns": {
+      "by_grandparent_folder": {
+        "06 Discover Movies": 18
+      },
+      "by_depth": {
+        "9": 18
+      }
+    },
+    "present_samples": [
       {
         "hash": "scarflix_part-6bc868616f378edf",
         "title": "The Ballerina",
@@ -7935,23 +7367,370 @@
         }
       },
       {
-        "hash": "scarflix_part-8aa2235ef7c1e0f6",
-        "title": "Battleship",
-        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "hash": "scarflix_part-d1ce9c47a23732b3",
+        "title": "Fargo",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3\\stream.mkv",
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
         "plex_present": true,
         "plex_matches": [
           {
-            "hash": "scarflix_part-8aa2235ef7c1e0f6",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
-            "title": "Battleship",
-            "year": "2012",
-            "rating_key": "49752",
+            "hash": "scarflix_part-d1ce9c47a23732b3",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3\\stream.mkv",
+            "title": "Fargo",
+            "year": "1996",
+            "rating_key": "49512",
             "library_section_id": ""
           }
         ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Fargo (1996)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-f96ecae0bf043548",
+        "title": "Final Destination",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-f96ecae0bf043548",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
+            "title": "Final Destination",
+            "year": "2000",
+            "rating_key": "49055",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Final Destination (2000)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-c017966a31451921",
+        "title": "Final Destination 5",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-c017966a31451921",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
+            "title": "Final Destination 5",
+            "year": "2011",
+            "rating_key": "49390",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Final Destination 5 (2011)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-61f18dcc8c34f579",
+        "title": "Fracture",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-61f18dcc8c34f579",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
+            "title": "Fracture",
+            "year": "2007",
+            "rating_key": "49401",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Fracture (2007)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-700e6d7fdb8236a0",
+        "title": "Friday",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-700e6d7fdb8236a0",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
+            "title": "ScarFLIX Part 700e6d7fdb8236a0",
+            "year": "",
+            "rating_key": "49861",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Friday (1995)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-942255f029875306",
+        "title": "Gremlins",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gremlins (1984)\\ScarFLIX_part-942255f029875306\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-942255f029875306",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gremlins (1984)\\ScarFLIX_part-942255f029875306\\stream.mkv",
+            "title": "Gremlins",
+            "year": "1984",
+            "rating_key": "49326",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Gremlins (1984)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-e9c1718338c9d187",
+        "title": "Hachi: A Dog's Tale",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-e9c1718338c9d187",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog&#39;s Tale (2009)\\ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
+            "title": "Hachi: A Dog&#39;s Tale",
+            "year": "2009",
+            "rating_key": "49084",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Hachi A Dog's Tale (2009)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-6c8723c088689b1a",
+        "title": "Harakiri",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-6c8723c088689b1a",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
+            "title": "Harakiri",
+            "year": "1962",
+            "rating_key": "49138",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Harakiri (1962)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-ebdde087ccdf789d",
+        "title": "Her",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-ebdde087ccdf789d",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
+            "title": "Her",
+            "year": "2013",
+            "rating_key": "49089",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Her (2013)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-ec10430fcf0b3b3a",
+        "title": "Hidden Figures",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hidden Figures (2016)\\ScarFLIX_part-ec10430fcf0b3b3a\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-ec10430fcf0b3b3a",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hidden Figures (2016)\\ScarFLIX_part-ec10430fcf0b3b3a\\stream.mkv",
+            "title": "Hidden Figures",
+            "year": "2016",
+            "rating_key": "49068",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Hidden Figures (2016)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-31696108f69a37b9",
+        "title": "Hulk",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hulk (2003)\\ScarFLIX_part-31696108f69a37b9\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": true,
+        "plex_matches": [
+          {
+            "hash": "scarflix_part-31696108f69a37b9",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hulk (2003)\\ScarFLIX_part-31696108f69a37b9\\stream.mkv",
+            "title": "Hulk",
+            "year": "2003",
+            "rating_key": "49617",
+            "library_section_id": ""
+          }
+        ],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Hulk (2003)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      }
+    ],
+    "missing_samples": [
+      {
+        "hash": "scarflix_part-81107989d2e30cfb",
+        "title": "Anna",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Anna (2019)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-c08b683f68e4e49e",
+        "title": "Annabelle",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annabelle (2014)\\ScarFLIX_part-c08b683f68e4e49e\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Annabelle (2014)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-d8b22fb3f498688e",
+        "title": "Annihilation",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Annihilation (2018)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-2eaab8df357724dc",
+        "title": "Armageddon",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Armageddon (1998)\\ScarFLIX_part-2eaab8df357724dc\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Armageddon (1998)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
+      },
+      {
+        "hash": "scarflix_part-8aa2235ef7c1e0f6",
+        "title": "Battleship",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Battleship (2012)\\ScarFLIX_part-8aa2235ef7c1e0f6\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -7967,17 +7746,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-bd37929b54c7c1bf",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
-            "title": "Crank",
-            "year": "2006",
-            "rating_key": "49746",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -7993,17 +7763,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-8312e4b6385fd16c",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
-            "title": "Creed",
-            "year": "2015",
-            "rating_key": "49763",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -8019,17 +7780,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-b9dbad7c5a4378f1",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1\\stream.mkv",
-            "title": "Dances with Wolves",
-            "year": "1990",
-            "rating_key": "49764",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -8045,17 +7797,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-8ce42f7e275d1e85",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Daredevil (2003)\\ScarFLIX_part-8ce42f7e275d1e85\\stream.mkv",
-            "title": "Daredevil",
-            "year": "2003",
-            "rating_key": "49767",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -8071,17 +7814,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-7c4868fe7b1db021",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021\\stream.mkv",
-            "title": "Dawn of the Dead",
-            "year": "2004",
-            "rating_key": "49337",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -8097,17 +7831,8 @@
         "prior_status": "FAIL",
         "prior_reason": "timeout",
         "webdav_map_entry_present": true,
-        "plex_present": true,
-        "plex_matches": [
-          {
-            "hash": "scarflix_part-d04bde274e598c57",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Despicable Me 3 (2017)\\ScarFLIX_part-d04bde274e598c57\\stream.mkv",
-            "title": "Despicable Me 3",
-            "year": "2017",
-            "rating_key": "49765",
-            "library_section_id": ""
-          }
-        ],
+        "plex_present": false,
+        "plex_matches": [],
         "path_pattern": {
           "depth": 9,
           "scarflix_part_index": 7,
@@ -8115,19 +7840,35 @@
           "grandparent_folder": "06 Discover Movies",
           "under_hybrid_movies_live": true
         }
+      },
+      {
+        "hash": "scarflix_part-db3f532fdd48fe57",
+        "title": "Dolittle",
+        "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dolittle (2020)\\ScarFLIX_part-db3f532fdd48fe57\\stream.mkv",
+        "prior_status": "FAIL",
+        "prior_reason": "timeout",
+        "webdav_map_entry_present": true,
+        "plex_present": false,
+        "plex_matches": [],
+        "path_pattern": {
+          "depth": 9,
+          "scarflix_part_index": 7,
+          "parent_folder": "Dolittle (2020)",
+          "grandparent_folder": "06 Discover Movies",
+          "under_hybrid_movies_live": true
+        }
       }
-    ],
-    "missing_samples": []
+    ]
   },
   "hypothesis": {
-    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.",
+    "statement": "The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 87/105 expected affected hashes currently present in Plex Section 5.",
     "evidence_level": "high",
     "measurement_artifact_confirmed": true,
-    "remaining_visibility_gap": false
+    "remaining_visibility_gap": true
   },
   "recommendation": {
-    "next_safe_action": "Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.",
+    "next_safe_action": "Use this true baseline to perform a smaller read-only passing-vs-missing forensic diff: compare Plex indexed paths, source folder depth, scanner title, and Plex scanner logs for representative present and missing hashes. Do not refresh or mutate yet.",
     "expansion_recommendation": "BLOCKED",
-    "reason": "The affected hashes appear visible in Plex, but the QA gate must be rerun with corrected measurement before changing publication posture."
+    "reason": "A true visibility gap remains after removing the parser cap."
   }
 }
