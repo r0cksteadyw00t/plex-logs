@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v40",
-      "created_at": "2026-06-12T12:21:51Z",
-      "expires_at": "2026-06-13T12:21:51Z",
+      "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v41",
+      "created_at": "2026-06-12T12:37:36Z",
+      "expires_at": "2026-06-13T12:37:36Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -19,14 +19,15 @@
       "actions": [
         {
           "action_type": "write_status_summary",
-          "summary": "Section 5 uncapped index snapshot failed with REVIEW_PLEX_INDEX_QUERY_FAILED. No baseline captured. PAUSE_PUBLICATION remains active. No expansion or mutation performed. Recommend verify Plex reachability before next snapshot.",
-          "source_instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v40"
+          "parameters": {
+            "note": "Section 5 uncapped index snapshot failed with REVIEW_PLEX_INDEX_QUERY_FAILED. No trustworthy baseline captured. PAUSE_PUBLICATION remains active. Recommend verify Plex Media Server reachability then rerun read-only snapshot."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-12T12:21:51Z",
+  "updated_utc": "2026-06-12T12:37:36Z",
   "source": "grok_api"
 }
