@@ -1,6 +1,6 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-12T04:21:43.697Z
+- Updated UTC: 2026-06-12T04:29:23.132Z
 - Status: `REVIEW_PLEX_INDEX_QUERY_FAILED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
