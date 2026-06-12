@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-12T04:55:06.473Z",
+  "updated_utc": "2026-06-12T05:00:12.822Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -123,33 +123,33 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 115,
+    "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-12T04:55:27Z",
+    "next_check_utc": "2026-06-12T05:00:16Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex client decision QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260612.log",
-    "last_progress_utc": "2026-06-12T03:00:27.615Z",
-    "age_minutes": 115,
-    "last_line": "[2026-06-12T03:00:27Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
-    "pass_lines": 3,
-    "review_lines": 4,
-    "info_lines": 14
+    "stage": "5-concurrent stream QA",
+    "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_node.log",
+    "last_progress_utc": "2026-06-12T05:00:10.378Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-12T05:00:10.360Z] start materialized target_concurrency=5",
+    "pass_lines": 0,
+    "review_lines": 0,
+    "info_lines": 0
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-12T04:50:18Z",
+    "updated_utc": "2026-06-12T04:55:11Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-12T04:50:04Z",
+    "updated_utc": "2026-06-12T05:00:04Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-12T04:50:15Z",
+    "updated_utc": "2026-06-12T04:55:12Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
@@ -290,12 +290,17 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-12T04:50:33.198Z",
+      "utc": "2026-06-12T05:00:10.378Z",
+      "title": "PlatformGate child QA active: 5-concurrent stream QA",
+      "detail": "Latest child QA line: [2026-06-12T05:00:10.360Z] start materialized target_concurrency=5"
+    },
+    {
+      "utc": "2026-06-12T04:55:25.486Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-12T04:50:21Z",
+      "utc": "2026-06-12T04:55:13Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -303,11 +308,6 @@
       "utc": "2026-06-12T03:00:27.615Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-12T03:00:27Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity"
-    },
-    {
-      "utc": "2026-06-11T23:00:33.107Z",
-      "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-11T23:00:33Z] [REVIEW] Final: REVIEW"
     },
     {
       "utc": "2026-06-11T16:19:19Z",
