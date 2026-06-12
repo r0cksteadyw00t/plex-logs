@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-12T14:51:38.656Z",
+  "status": "REVIEW_RECOVERABLE",
+  "updated_utc": "2026-06-12T14:56:54.097Z",
   "last_success_utc": "2026-06-12T14:51:38.656Z",
   "pat_present": true,
   "pushed": [
@@ -51,10 +51,6 @@
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.md",
-      "status": 200
-    },
-    {
-      "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
       "status": 200
     },
     {
@@ -187,11 +183,11 @@
     },
     {
       "file": "latest/scarflix_v2/autonomous_controller_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/autonomous_controller_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/platform_gate_checkpoint.json",
@@ -607,13 +603,20 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
+      "status": 409
+    }
+  ],
   "failure_summary": {
-    "recoverable": 0,
+    "recoverable": 1,
     "hard": 0,
-    "by_status": {}
+    "by_status": {
+      "409": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
