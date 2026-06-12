@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-12T06:50:05.211Z",
+  "updated_utc": "2026-06-12T06:55:05.392Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 110,
-    "mirror_updated_age_minutes": 2,
+    "controller_updated_age_minutes": 9,
+    "platform_child_progress_age_minutes": 115,
+    "mirror_updated_age_minutes": 4,
     "next_check_utc": "2026-06-12T06:50:51Z",
-    "next_check_age_minutes": 0,
+    "next_check_age_minutes": 4,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260612.log",
     "last_progress_utc": "2026-06-12T05:00:29.505Z",
-    "age_minutes": 110,
+    "age_minutes": 115,
     "last_line": "[2026-06-12T05:00:29Z] [REVIEW] Final: REVIEW",
     "pass_lines": 1,
     "review_lines": 2,
@@ -164,7 +164,7 @@
   },
   "direct_strm_admission_gate": {
     "status": "PASS",
-    "updated_utc": "2026-06-12T06:45:09Z",
+    "updated_utc": "2026-06-12T06:50:06Z",
     "checked_visible": 1,
     "passed_visible": 1,
     "failed_visible": 0,
