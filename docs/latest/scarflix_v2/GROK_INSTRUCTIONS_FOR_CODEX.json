@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v68",
-      "created_at": "2026-06-12T19:55:35Z",
-      "expires_at": "2026-06-13T19:55:35Z",
+      "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v69",
+      "created_at": "2026-06-12T20:11:20Z",
+      "expires_at": "2026-06-13T20:11:20Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -20,8 +20,9 @@
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Section 5 uncapped index snapshot failed with REVIEW_PLEX_INDEX_QUERY_FAILED. No baseline captured. PAUSE_PUBLICATION remains active. Verify Plex Media Server reachability then rerun read-only snapshot. No refresh, publish, expand, or mutate.",
-            "source_instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v68"
+            "summary": "Section 5 uncapped index snapshot failed with REVIEW_PLEX_INDEX_QUERY_FAILED. True baseline not captured (0 rows). Recommendation: verify Plex Media Server running and reachable from Orchestrator context, then rerun read-only uncapped snapshot. PAUSE_PUBLICATION remains active. No refresh, mutate, publish, expand, or cleanup performed.",
+            "source_instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v69",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -29,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-12T19:55:35Z",
+  "updated_utc": "2026-06-12T20:11:20Z",
   "source": "grok_api"
 }
