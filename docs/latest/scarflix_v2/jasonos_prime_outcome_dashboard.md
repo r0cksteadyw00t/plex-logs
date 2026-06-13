@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T12:10:02.050Z
+Updated UTC: 2026-06-13T12:15:02.119Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,8 +21,8 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-13T12:05:26.657Z - Playback-Safe Planning Progress While Stream Is Active - 2026-06-13 21:04: Current verified state: Production Plex still has active playback, so no live Plex, Threadfin, Docker, catalogue, scan, refresh, QA, publication, expansion, cleanup, deletion, or path mutation work was started. Added held quiet-window queue: `jasonos/control/QUIET_WINDOW_EXECUTION_QUEUE.md`
-- 2026-06-13T12:05:05Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T12:10:21.841Z - Playback-Safe Planning Progress While Stream Is Active - 2026-06-13 21:04: Current verified state: Production Plex still has active playback, so no live Plex, Threadfin, Docker, catalogue, scan, refresh, QA, publication, expansion, cleanup, deletion, or path mutation work was started. Added held quiet-window queue: `jasonos/control/QUIET_WINDOW_EXECUTION_QUEUE.md`
+- 2026-06-13T12:10:07Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T11:00:34.572Z - Playback-Only Hold Reinstated - 2026-06-13 20:54: Current verified state: Jason reported the viewer had stopped, but a direct Plex session check still reports `1` active session. Current active Plex title: `The Magic Faraway Tree`, state `playing`. Plex server was not stopped, restarted, or modified.
 - 2026-06-13T10:50:20.104Z - Go-Live Readiness Ledger Installed - 2026-06-13 20:09: Current verified state: New live go-live audit: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_GoLiveReadinessAudit.ps1`. New hidden scheduled task: `JasonOS_Prime_GoLiveReadinessAudit`, every 5 minutes, LastTaskResult `0`. Public status: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_readiness_statu...
 - 2026-06-13T10:06:37.091Z - Non-Disruptive Project Progress While Plex Is Active - 2026-06-13 19:58: Current verified state: Active Plex sessions: `2`. Sentinel: `PASS / LOW`. Plex watchdog: `PASS`.
@@ -31,7 +31,7 @@ Recent Achievements:
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 5 min ago
-- Platform child progress: 301 min ago
+- Platform child progress: 306 min ago
 - Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
