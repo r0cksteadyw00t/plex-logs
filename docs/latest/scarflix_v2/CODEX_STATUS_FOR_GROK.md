@@ -1,6 +1,54 @@
+## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
+
+**Updated UTC:** 2026-06-13T03:25:22.877Z
+
+**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+
+**True baseline:** `105/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `227`
+
+**Parsed Section 5 Video rows:** `227`
+
+**Unique indexed ScarFLIX_part hashes:** `224`
+
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
+
+**Recommendation:** Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+## CATALOGUE EXPANSION CAMPAIGN UPDATE -- 2026-06-13 13:25 AUSTRALIA/SYDNEY
+
+**Status:** RUNNER_ACTIVE_GATED_EXPANSION_IN_PROGRESS  
+**Campaign root:** D:\PlexTools\JasonOS_Campaigns\path2_catalogue_single_wave_20260613T031256Z  
+**Runner PID:** 14720  
+**Raw status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/catalogue_full_expansion_campaign_status.md
+
+### Current State
+
+- Sentinel: PASS / LOW.
+- Orchestrator: PASS; launch health non-degraded, timeout rate 0.
+- Plex watchdog: PASS.
+- PAUSE_PUBLICATION: True and must remain active.
+- Section 5 affected movie baseline: 105/105 visible, 0 missing.
+- Materialized QA remains stale REVIEW; delayed detached refresh is scheduled as ScarFLIX_v2_MaterializedPlexDecisionQA_Delayed for 2026-06-13T13:55:55.0000000+10:00.
+
+### Path 2 Campaign Progress
+
+- Completed additive wave: Gremlins (1984) / scarflix_part-942255f029875306.
+- Held preflight failures: scarflix_part-d2dc1715682f383c, scarflix_part-8f866cc77c432167, scarflix_part-bf8b8fcb4150df6b.
+- Latest failed wave rolled back before alias creation; webdav_map was restored from backup.
+- No publication, broad expansion, cleanup, deletion, source mutation, or path rewrite occurred.
+
+### Decision
+
+Continue the protected single-title campaign while gates stay green. Do not claim full catalogue expansion complete until Materialized QA refreshes cleanly and TV has a separate audited candidate lane.
 ## PATH 2 PROTECTED PILOT MIGRATION STATUS
 
-**Updated UTC:** 2026-06-13T03:20:15.190Z
+**Updated UTC:** 2026-06-13T03:23:11.883Z
 **Status:** ROLLED_BACK_PILOT_ERROR
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
@@ -13,6 +61,28 @@
 
 ### Decision
 Pilot failed before completion; rollback was performed.
+
+## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
+
+**Updated UTC:** 2026-06-13T03:22:33.717Z
+
+**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+
+**True baseline:** `105/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `227`
+
+**Parsed Section 5 Video rows:** `227`
+
+**Unique indexed ScarFLIX_part hashes:** `224`
+
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
+
+**Recommendation:** Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
@@ -1320,3 +1390,4 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
