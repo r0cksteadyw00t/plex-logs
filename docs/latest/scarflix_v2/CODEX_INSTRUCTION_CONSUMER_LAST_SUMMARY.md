@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-13T09:41:08Z
-Instruction: phase0_sustain_recovery_monitoring_20260613_v15
+Updated UTC: 2026-06-13T09:57:36Z
+Instruction: phase0_mission002_iptv_held_status_record_20260613_v1
 
-Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.
+Mission 002 IPTV-only cutover package remains HELD due to active Plex playback (2 sessions). All apply/verify/rollback paths correctly blocked. PAUSE_PUBLICATION active. No physical tuner or ScarFLIX changes. Next safe step is automatic quiet-window execution of held Threadfin adapter only after playback drains. Playback priority guard and legacy tiproxy cleanup confirmed complete.
