@@ -7,7 +7,7 @@
   "ends_epoch_ms": 1781414520131,
   "duration_hours": 16,
   "exclusive_plex_window": true,
-  "cycle_count": 35,
+  "cycle_count": 36,
   "qa_cursor": 102,
   "qa_batch_size": 3,
   "pause_publication_required": true,
@@ -20,7 +20,7 @@
     "campaign_log": "D:\\PlexTools\\state\\jasonos_prime\\go_live_16h_campaign\\campaign_log.ndjson",
     "log": "D:\\PlexTools\\logs\\jasonos_prime\\jasonos_prime_go_live_16h_campaign.log"
   },
-  "updated_utc": "2026-06-13T16:53:31Z",
+  "updated_utc": "2026-06-13T16:58:34Z",
   "noncritical_tasks_suppressed": [
     "JasonOS_Prime_FastTrackAccelerator",
     "JasonOS_Prime_PublicMirrorPublisher",
@@ -70,10 +70,10 @@
     "blocker_count": 3
   },
   "last_cycle": {
-    "updated_utc": "2026-06-13T16:53:31Z",
+    "updated_utc": "2026-06-13T16:58:34Z",
     "launch_health": {
       "ok": true,
-      "elapsed_ms": 19,
+      "elapsed_ms": 24,
       "status": 0,
       "error": ""
     },
@@ -85,21 +85,22 @@
       "ok": true,
       "active_sessions": 0,
       "endpoint": "http://192.168.1.184:32400/status/sessions",
-      "elapsed_ms": 1905
+      "elapsed_ms": 2158
     },
     "plex_identity": {
       "ok": true,
       "endpoint": "http://127.0.0.1:32400/identity",
       "status_code": 200,
-      "elapsed_ms": 3
+      "elapsed_ms": 4
     },
     "actions": [
+      "suppressed_noncritical_tasks",
       "held_qa_due_sentinel"
     ],
     "blockers": [
       "sentinel_alert_or_high"
     ]
   },
-  "last_action": "held_qa_due_sentinel",
+  "last_action": "suppressed_noncritical_tasks, held_qa_due_sentinel",
   "last_blocker": "sentinel_alert_or_high"
 }
