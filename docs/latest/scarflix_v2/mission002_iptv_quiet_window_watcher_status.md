@@ -1,6 +1,6 @@
 ﻿# Mission 002 IPTV Quiet Window Cutover Watcher
 
-**Updated UTC:** 2026-06-13T10:28:04Z  
+**Updated UTC:** 2026-06-13T10:37:39Z  
 **Status:** HELD_ACTIVE_PLEX_PLAYBACK
 
 ## Safety
@@ -17,7 +17,7 @@
 
 - Readiness: PASS_CUTOVER_PACKAGE_READY_HELD
 - Preflight: HELD_ACTIVE_PLEX_PLAYBACK
-- Verify before: HELD_THREADFIN_NOT_RUNNING
+- Verify before: PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE
 
 ## Actions
 
