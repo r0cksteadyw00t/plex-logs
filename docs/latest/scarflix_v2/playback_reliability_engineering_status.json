@@ -1,0 +1,25 @@
+{
+  "component": "jasonos_prime_playback_reliability_engineering",
+  "status": "ACTIVE_PLAYBACK_RELIABILITY_PUSH",
+  "updated_utc": "2026-06-13T21:03:55Z",
+  "publication_allowed": false,
+  "broad_expansion_allowed": false,
+  "pause_publication_required": true,
+  "changes_applied": [
+    {
+      "file": "D:/PlexTools/Scripts/scarflix_v2/ScarFLIX_v2_RcloneMountKeepalive.ps1",
+      "change": "bounded S: path readiness probes with timeout telemetry"
+    },
+    {
+      "file": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js",
+      "change": "loopback-first Plex decision probing, keep-alive HTTP agent, transient retry/fallback"
+    },
+    {
+      "file": "D:/PlexTools/Foundry/workers/JasonOS_Prime_GoLive16hCampaignRunner.js",
+      "change": "playback path PASS required before bounded Materialized QA runs"
+    }
+  ],
+  "current_go_live_ready": false,
+  "current_primary_blocker": "playback path and Plex decision reliability",
+  "next_expected_signal": "bounded QA pass rate and decision_attempts after loopback-first retry patch"
+}
