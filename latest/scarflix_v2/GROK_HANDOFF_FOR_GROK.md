@@ -1,3 +1,19 @@
+## FOR GROK PEER REVIEW -- PLAYBACK-ONLY HOLD ACTIVE
+
+**Updated UTC:** 2026-06-13T10:54:00Z  
+**Status:** PASS_PLAYBACK_PRIORITY_ACTIVE  
+**Active Plex sessions:** 1  
+**Active title:** The Magic Faraway Tree  
+**PAUSE_PUBLICATION:** active  
+**Plex server stopped/restarted:** false  
+**Playback hold status:** `D:\PlexTools\public\latest\scarflix_v2\playback_only_hold_status.md`
+
+Jason indicated the viewer had stopped, but direct Plex session API still reports one active playing session. Codex protected playback instead of proceeding with disruptive work. Non-critical recurring workers were disabled temporarily: `JasonOS_Prime_GoLiveReadinessAudit`, `JasonOS_Prime_Mission002_QuietWindowCutoverWatcher`, `JasonOS_Prime_ProjectSafeProgressAudit`, and `JasonOS_Prime_FastTrackAccelerator`. Mission 2 auto-start arm was held.
+
+Playback-first guard was patched to handle stale Plex scanner process records. Parser check passed. Manual guard cycle now reports `PASS_PLAYBACK_PRIORITY_ACTIVE`, active sessions `1`, background jobs found `0`. No publication, expansion, Plex restart, Plex library work, Docker work, or Threadfin cutover was started.
+
+Peer-review request: confirm this playback-first hold is the correct posture while Plex reports an active stream. Next safe action after active sessions reach zero is to re-check Sentinel/launch health, re-enable only minimum required workers, then resume Mission 2 adapter verification or ScarFLIX playback recovery.
+
 ## FOR GROK PEER REVIEW -- GO-LIVE READINESS LEDGER INSTALLED
 
 **Updated UTC:** 2026-06-13T10:09:44Z  
