@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-13T04:03:10.650Z",
-  "updated_utc": "2026-06-13T04:03:12.792Z",
+  "started_utc": "2026-06-13T04:05:44.131Z",
+  "updated_utc": "2026-06-13T04:05:46.119Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -20,31 +20,38 @@
     "status": "PASS_LAUNCH_HEALTH_ACCEPTABLE",
     "sentinel": {
       "component": "jasonos_prime_sentinel_node",
-      "status": "PASS",
-      "alert_level": "LOW",
-      "updated_utc": "2026-06-13T04:02:40Z",
+      "status": "REVIEW",
+      "alert_level": "MEDIUM",
+      "updated_utc": "2026-06-13T04:05:02Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
-      "repeat_count": 5,
+      "repeat_count": 1,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 5,
+        "controller_age_minutes": 7,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
-        "watchdog_age_minutes": 1,
+        "watchdog_age_minutes": 3,
         "dashboard_status": "PASS",
-        "dashboard_age_minutes": 3,
+        "dashboard_age_minutes": 5,
         "mirror_status": "PASS",
         "mirror_age_minutes": 1,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 7364,
-        "durable_platform_gate_age_minutes": 7364,
+        "checkpoint_age_minutes": 7366,
+        "durable_platform_gate_age_minutes": 7366,
         "platform_progress_fresh": false
       },
-      "recovery_actions": [],
+      "recovery_actions": [
+        {
+          "task": "ScarFLIX_v2_AutonomousController",
+          "reason": "controller_stale_or_blocked",
+          "result": "PASS",
+          "note": "enable pid=26792; run pid=24052"
+        }
+      ],
       "notes": [],
       "files": {
         "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
@@ -56,7 +63,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-13T04:03:10.595Z",
+      "updated_utc": "2026-06-13T04:05:44.067Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -64,20 +71,20 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-13T04:03:10.061Z",
+      "last_tick_utc": "2026-06-13T04:05:43.403Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_70077b87e2632fa8",
-          "type": "section5_uncapped_index_snapshot",
+          "id": "job_bbc63b8555627975",
+          "type": "ingest_grok_instructions",
           "queue": "control",
-          "started_utc": "2026-06-13T04:03:10.583Z"
+          "started_utc": "2026-06-13T04:05:44.055Z"
         },
         {
-          "id": "job_44b39f1a7c0a6f31",
-          "type": "generate_grok_cycle_report",
+          "id": "job_87d2f09bbc1f7a66",
+          "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-13T04:03:10.584Z"
+          "started_utc": "2026-06-13T04:05:44.056Z"
         }
       ],
       "pause": {
@@ -93,15 +100,15 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-13T04:03:10.595Z",
+        "updated_utc": "2026-06-13T04:05:44.067Z",
         "window_minutes": 10,
         "sample_count": 10,
         "latency_sample_count": 10,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 11922,
+        "avg_process_runtime_ms": 12033,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 2,
+        "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
         "active_child_count": 1,
@@ -234,7 +241,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-13T04:03:10.594Z",
+        "updated_utc": "2026-06-13T04:05:44.067Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 17,
@@ -958,7 +965,7 @@
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-13T04:03:10.592Z",
+        "updated_utc": "2026-06-13T04:05:44.064Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1499,22 +1506,11 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-13T04:03:10.598Z",
-      "process_launches_total": 1334,
-      "spawn_sync_total": 952,
+      "updated_utc": "2026-06-13T04:05:44.071Z",
+      "process_launches_total": 1335,
+      "spawn_sync_total": 953,
       "spawn_detached_total": 382,
       "recent_launches": [
-        {
-          "ts_utc": "2026-06-13T00:46:31.349Z",
-          "kind": "spawn_detached",
-          "name": "command_center_generator",
-          "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_CommandCenterDashboard_v1.js",
-          "pid": 18536,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
         {
           "ts_utc": "2026-06-13T00:49:31.460Z",
           "kind": "spawn_detached",
@@ -3187,6 +3183,21 @@
           "exit_code": 0,
           "timed_out": false,
           "error": ""
+        },
+        {
+          "ts_utc": "2026-06-13T04:03:28.303Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 17703,
+          "process_runtime_ms": 17703,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
         }
       ],
       "tracked_children": [
@@ -3207,15 +3218,15 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-13T04:03:10.598Z",
+        "updated_utc": "2026-06-13T04:05:44.071Z",
         "window_minutes": 10,
         "sample_count": 10,
         "latency_sample_count": 10,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 11922,
+        "avg_process_runtime_ms": 12033,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 2,
+        "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
         "active_child_count": 1,
@@ -3224,15 +3235,15 @@
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-13T04:03:10.598Z",
+      "updated_utc": "2026-06-13T04:05:44.071Z",
       "window_minutes": 10,
       "sample_count": 10,
       "latency_sample_count": 10,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 11922,
+      "avg_process_runtime_ms": 12033,
       "timeout_count": 0,
       "timeout_rate": 0,
-      "launches_last_minute": 2,
+      "launches_last_minute": 0,
       "budget_per_minute": 8,
       "degraded_required": false,
       "active_child_count": 1,
@@ -3240,7 +3251,7 @@
     },
     "avg_spawn_latency_ms": 0,
     "timeout_rate": 0,
-    "launches_last_minute": 2
+    "launches_last_minute": 0
   },
   "section_index": {
     "status": "PASS_UNCAPPED_SNAPSHOT_COMPLETE",
@@ -3259,7 +3270,7 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 51,
+        "elapsed_ms": 54,
         "media_container_size": "226",
         "media_container_total_size": "226",
         "media_container_offset": "0",
