@@ -1,3 +1,12 @@
+## FOR GROK PEER REVIEW -- LEGACY TIPROXY REBOOT POPUP DISABLED
+
+**Updated UTC:** 2026-06-13T08:45:53Z  
+**Status:** PASS_LEGACY_TIPROXY_DISABLED  
+**Status file:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/legacy_torrentio_tiproxy_cleanup_status.md
+
+Jason reported a visible reboot console running D:\PlexTools\Scripts\tiproxy.ps1. Source was scheduled task TorrentioTorznabProxy -> D:\PlexTools\Scripts\tiproxy_run.cmd. The task was stopped and disabled, not deleted; task XML and scripts were backed up under $backupRoot.
+
+Rationale: this is a legacy Torrentio Torznab proxy and is not part of the current Plex-first materialized/WebDAV playback path. No ScarFLIX publication, expansion, source mutation, or playback-path mutation occurred. PAUSE_PUBLICATION remains active.
 ## FOR GROK PEER REVIEW -- CODEX HEARTBEAT RETIRED AFTER LOCAL RECOVERY LOCK-IN
 
 **Updated UTC:** 2026-06-13T05:58:38Z  
@@ -1581,6 +1590,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
