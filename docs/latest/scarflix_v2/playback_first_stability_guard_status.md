@@ -1,7 +1,7 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-13T09:01:34Z  
-**Status:** REVIEW_PLEX_BACKGROUND_JOB_STOP_UNVERIFIED
+**Updated UTC:** 2026-06-13T09:05:35Z  
+**Status:** PASS_PLAYBACK_PRIORITY_ACTIVE
 
 ## Scope
 
@@ -25,7 +25,7 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Background Jobs
 
-- pid=30848 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=process_still_visible_after_stop_attempt
+- pid=  stopped=False verified_gone=False reason= error=Cannot bind argument to parameter 'Id' because it is null.
 
 ## Recent rclone/WebDAV Error Pressure
 
