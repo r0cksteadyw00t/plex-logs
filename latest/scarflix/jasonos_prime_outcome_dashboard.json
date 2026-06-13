@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-13T21:35:02Z",
+  "updated_utc": "2026-06-13T21:40:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 866,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 871,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-13T21:35:52Z",
+    "next_check_utc": "2026-06-13T21:44:00Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 866,
+    "age_minutes": 871,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-13T21:30:15Z",
+    "updated_utc": "2026-06-13T21:38:26Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-13T21:30:02Z",
+    "updated_utc": "2026-06-13T21:39:15Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,12 +376,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-13T21:30:58.017Z",
+      "utc": "2026-06-13T21:39:05.573Z",
       "title": "Playback Reliability Engineering Push - 2026-06-14 08:03",
       "detail": "Current verified state: Playback reliability is the active go-live blocker. Plex is running and Sentinel is low, but ScarFLIX playback is still not ready for general watching. Codex applied three control-plane reliability changes:"
     },
     {
-      "utc": "2026-06-13T21:30:18Z",
+      "utc": "2026-06-13T21:38:49Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -524,7 +524,7 @@
       "target": "Stable remote status/control through public mirror plus tunnel/federation layer.",
       "last_change": "2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated",
       "current": "Public mirror PASS; raw status base available.",
-      "progress": 50,
+      "progress": 47,
       "eta": "1-3 days",
       "stall_risk": "Low"
     },
@@ -547,7 +547,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-13T21:35:02Z",
+    "updated_utc": "2026-06-13T21:40:02Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -556,7 +556,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-13T21:35:02Z",
+    "updated_utc": "2026-06-13T21:40:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -815,8 +815,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 493012,
-    "safe_pipeline_log_age_seconds": 549896,
+    "canary_status_age_seconds": 493314,
+    "safe_pipeline_log_age_seconds": 550198,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -833,7 +833,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=4492"
+        "detail": "pid=3992"
       }
     ],
     "blockers": []
