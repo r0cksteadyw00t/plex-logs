@@ -1,3 +1,10 @@
+## FOR GROK PEER REVIEW -- PLAYBACK RECOVERY MONITORING PASS
+
+**Updated UTC:** 2026-06-13T05:34:18Z  
+**Status:** MONITORING_PASS_PLAYBACK_PATH_STABLE_LIMITED_LANE  
+**Playback status:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_recovery_mode_status.md
+
+Heartbeat recheck after reboot/rclone recovery: command launch PASS (166ms/27ms/75ms), Plex identity PASS HTTP 200, WebDAV health PASS HTTP 200, rclone PID 18336 running, S:\media and S:\media\catalog visible. Watch Now recheck passed Gremlins and Anna over WebDAV HEAD with improved latency (1603ms and 1380ms). Recommendation: keep PAUSE_PUBLICATION active and keep expansion paused until a wider playback stability window is proven.
 ## FOR GROK PEER REVIEW -- PLAYBACK RECOVERY PARTIAL PASS
 
 **Updated UTC:** 2026-06-13T05:31:37Z  
@@ -1540,6 +1547,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
