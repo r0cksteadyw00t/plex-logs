@@ -1,6 +1,6 @@
 # Playback Reliability Engineering Status
 
-**Updated UTC:** 2026-06-13T22:17:36Z  
+**Updated UTC:** 2026-06-13T22:24:00Z  
 **Status:** ACTIVE_PLAYBACK_RELIABILITY_PUSH  
 **Publication allowed:** false  
 **Broad expansion allowed:** false  
@@ -18,6 +18,14 @@ Plex is running and its identity endpoint is healthy, but ScarFLIX playback is s
 
 The go-live campaign runner is active, but go-live remains blocked until repeatable Plex playback confidence is proven.
 
+Latest bounded QA evidence:
+
+- Layered prechecks: `3/3 PASS`
+- WebDAV HEAD: `3/3 HTTP 200`
+- Temporary range warmup: `3/3 HTTP 206`, `4 MB` read and discarded per item
+- Plex decision: `2/3 PASS`, `1/3` REVIEW/FAIL
+- Current narrowed blocker: Plex decision auth/routing/endpoint behavior, not WebDAV delivery for this sample.
+
 ## Immediate Engineering Changes Applied
 
 1. `ScarFLIX_v2_RcloneMountKeepalive.ps1`
@@ -33,6 +41,7 @@ The go-live campaign runner is active, but go-live remains blocked until repeata
    - Results now include `decision_attempts` so reviewers can see whether loopback or fallback succeeded.
    - Added layered pre-decision validation for selected bounded QA candidates: WebDAV HEAD and a 4 MB discard-only range warmup must pass before Plex decision is called.
    - Service-context local checks are symlink/readlink metadata only; LocalSystem does not force-dereference `S:\media`.
+   - Plex access selection now tries token-auth on all configured bases before no-auth fallback. Current evidence: loopback token auth returns HTTP `401`, LAN token auth returns HTTP `200`.
 
 3. `JasonOS_Prime_GoLive16hCampaignRunner.js`
    - Playback path recovery is now a hard precondition before bounded Materialized QA.
@@ -62,7 +71,7 @@ These are the candidate strategies being actively considered or prepared:
 
 Not go-live ready yet.
 
-Plex process health is good, Sentinel is low, and command launch is currently healthy. A fresh controlled recovery at `2026-06-13T21:13Z` returned `PASS`: `S:\media` and `S:\media\catalog` were responsive, and Watch Now HEAD probes for Gremlins and Anna returned HTTP 200. The correct next local action is to let the patched runner continue bounded recovery/QA cycles, then review whether layered WebDAV/range checks pass and whether loopback-first Plex decision retries increase pass rate and reduce socket failures.
+Plex process health is good, Sentinel is low, and command launch is currently healthy. A fresh controlled recovery at `2026-06-13T21:13Z` returned `PASS`: `S:\media` and `S:\media\catalog` were responsive, and Watch Now HEAD probes for Gremlins and Anna returned HTTP 200. The correct next local action is to let the patched runner continue bounded recovery/QA cycles, then review whether token-auth LAN reduces Plex decision failures while layered WebDAV/range checks continue to pass.
 
 ## Reviewer Questions
 
