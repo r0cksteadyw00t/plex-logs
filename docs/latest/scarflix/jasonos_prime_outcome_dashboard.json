@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-13T05:00:03Z",
+  "updated_utc": "2026-06-13T05:05:03Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-13T04:00:20Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-13T05:02:26Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -121,37 +121,37 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 11,
-    "platform_child_progress_age_minutes": 119,
+    "controller_updated_age_minutes": 2,
+    "platform_child_progress_age_minutes": 0,
     "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-13T05:04:22Z",
+    "next_check_utc": "2026-06-13T05:08:33Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
-    "stage": "Plex client decision QA",
-    "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
-    "last_progress_utc": "2026-06-13T03:01:31.991Z",
-    "age_minutes": 119,
-    "last_line": "[2026-06-13T03:01:31Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
-    "pass_lines": 1,
-    "review_lines": 6,
-    "info_lines": 14
+    "stage": "5-concurrent stream QA",
+    "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260613.log",
+    "last_progress_utc": "2026-06-13T05:05:18.990Z",
+    "age_minutes": 0,
+    "last_line": "[2026-06-13T05:05:18Z] [REVIEW] Final: REVIEW",
+    "pass_lines": 0,
+    "review_lines": 3,
+    "info_lines": 9
   },
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-13T04:51:21Z",
+    "updated_utc": "2026-06-13T05:03:39Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-13T05:00:03Z",
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-13T05:05:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-13T05:00:03Z",
-    "updated_utc": "2026-06-13T05:00:04Z",
-    "ended_utc": "2026-06-13T05:00:04Z",
+    "started_utc": "2026-06-13T05:05:03Z",
+    "updated_utc": "2026-06-13T05:05:19Z",
+    "ended_utc": "2026-06-13T05:05:19Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -198,7 +198,7 @@
     "direct_https_visible_count": 0,
     "top_reason_codes": [
       {
-        "code": "PROVIDER_503_RETRYABLE",
+        "code": "PROVIDER_TIMEOUT_RETRYABLE",
         "count": 1
       },
       {
@@ -210,8 +210,8 @@
     "retry_queue_items": [
       {
         "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-13T05:00:29Z",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "retry_after_utc": "2026-06-13T05:15:18Z",
         "url_host": "192.168.1.184:18788",
         "is_local_live_proxy": true
       }
@@ -362,11 +362,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-13T04:00:20Z",
-    "last_successful_grok_instruction_utc": "2026-06-13T04:00:20Z",
+    "bridge_updated_utc": "2026-06-13T05:02:26Z",
+    "last_successful_grok_instruction_utc": "2026-06-13T05:02:26Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-13T04:00:33Z",
+    "consumer_updated_utc": "2026-06-13T05:02:31Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -376,12 +376,17 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-13T04:59:27.882Z",
+      "utc": "2026-06-13T05:05:18.990Z",
+      "title": "PlatformGate child QA active: 5-concurrent stream QA",
+      "detail": "Latest child QA line: [2026-06-13T05:05:18Z] [REVIEW] Final: REVIEW"
+    },
+    {
+      "utc": "2026-06-13T05:03:40.765Z",
       "title": "Catalogue Expansion Campaign - 2026-06-13 13:25",
       "detail": "Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing."
     },
     {
-      "utc": "2026-06-13T04:49:24Z",
+      "utc": "2026-06-13T05:02:56Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -399,11 +404,6 @@
       "utc": "2026-06-13T02:40:35.310Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
-    },
-    {
-      "utc": "2026-06-12T23:00:26.569Z",
-      "title": "PlatformGate child QA active: 5-concurrent stream QA",
-      "detail": "Latest child QA line: [2026-06-12T23:00:26Z] [REVIEW] Final: REVIEW"
     },
     {
       "utc": "2026-06-12T09:38:14Z",
@@ -459,9 +459,9 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-13T04:00:33Z - structured instruction loop",
+      "last_change": "2026-06-13T05:02:31Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
-      "progress": 75,
+      "progress": 70,
       "eta": "active every 15 minutes with Grok API",
       "stall_risk": "Low"
     },
@@ -479,7 +479,7 @@
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
       "last_change": "2026-06-10T00:27:02Z - CONTROLLED_MATERIALIZED_QA_HOLD",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=0.",
-      "progress": 30,
+      "progress": 25,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
     },
@@ -515,25 +515,25 @@
       "target": "Parallel local workers for simulations, status, planning and future missions.",
       "last_change": "2026-06-06T08:25:00Z - watchdog swarm escalation marker added",
       "current": "Short scheduled workers active; broader worker swarm pending.",
-      "progress": 32,
+      "progress": 28,
       "eta": "2-4 days",
-      "stall_risk": "Low"
+      "stall_risk": "Medium"
     },
     {
       "outcome": "Phone/Multi-Device Federation",
       "target": "Stable remote status/control through public mirror plus tunnel/federation layer.",
       "last_change": "2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated",
-      "current": "Public mirror PASS; raw status base available.",
-      "progress": 50,
+      "current": "Public mirror REVIEW; raw status base available.",
+      "progress": 38,
       "eta": "1-3 days",
-      "stall_risk": "Low"
+      "stall_risk": "Medium"
     },
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
       "last_change": "2026-06-08T01:18:52Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
-      "progress": 18,
+      "progress": 15,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
       "stall_risk": "Medium"
     }
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-13T05:00:03Z",
+    "updated_utc": "2026-06-13T05:05:03Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -611,9 +611,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-13T05:00:03Z",
-      "updated_utc": "2026-06-13T05:00:04Z",
-      "ended_utc": "2026-06-13T05:00:04Z",
+      "started_utc": "2026-06-13T05:05:03Z",
+      "updated_utc": "2026-06-13T05:05:19Z",
+      "ended_utc": "2026-06-13T05:05:19Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -642,7 +642,7 @@
       "direct_https_visible_count": 0,
       "top_reason_codes": [
         {
-          "code": "PROVIDER_503_RETRYABLE",
+          "code": "PROVIDER_TIMEOUT_RETRYABLE",
           "count": 1
         },
         {
@@ -654,8 +654,8 @@
       "retry_queue_items": [
         {
           "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-13T05:00:29Z",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "retry_after_utc": "2026-06-13T05:15:18Z",
           "url_host": "192.168.1.184:18788",
           "is_local_live_proxy": true
         }
@@ -761,7 +761,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-13T05:00:03Z",
+      "updated_utc": "2026-06-13T05:05:03Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -783,7 +783,7 @@
       "materialized_decision_qa_target_count": 229,
       "materialized_decision_qa_passed": 119,
       "materialized_decision_qa_failed": 110,
-      "decision_qa_status": "PASS",
+      "decision_qa_status": "RUNNING",
       "concurrent_stream_qa_status": "REVIEW",
       "ignored_overlap": [],
       "overlap_running": [],
@@ -794,12 +794,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 33108
+              "pid": 36004
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 29264
+              "pid": 18824
             }
           ]
         }
@@ -807,15 +807,15 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 433318,
-    "safe_pipeline_log_age_seconds": 490201,
+    "canary_status_age_seconds": 433632,
+    "safe_pipeline_log_age_seconds": 490516,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
       {
         "action": "refresh_grokbuild",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_GrokBuild_Agent.js\n"
       },
       {
         "action": "refresh_grok_peer_bridge",
@@ -825,7 +825,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=29368"
+        "detail": "pid=5660"
       }
     ],
     "blockers": []
@@ -881,7 +881,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-13T05:00:03Z",
+    "updated_utc": "2026-06-13T05:05:03Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -903,7 +903,7 @@
     "materialized_decision_qa_target_count": 229,
     "materialized_decision_qa_passed": 119,
     "materialized_decision_qa_failed": 110,
-    "decision_qa_status": "PASS",
+    "decision_qa_status": "RUNNING",
     "concurrent_stream_qa_status": "REVIEW",
     "ignored_overlap": [],
     "overlap_running": [],
@@ -914,12 +914,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 33108
+            "pid": 36004
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 29264
+            "pid": 18824
           }
         ]
       }
