@@ -1,3 +1,49 @@
+## Go-Live Readiness Ledger Installed - 2026-06-13T10:09:44Z
+
+- Added status-only go-live audit worker: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_GoLiveReadinessAudit.ps1`.
+- Added hidden 5-minute scheduled task: `JasonOS_Prime_GoLiveReadinessAudit`.
+- Current go-live status: `HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY`.
+- Active Plex sessions: `1`.
+- Sentinel: `PASS / LOW`.
+- `PAUSE_PUBLICATION` remains active.
+- Public readiness status:
+  - `https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.md`
+  - `https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.json`
+- Outcome gates now tracked explicitly:
+  - Reliable Plex playback first: `HELD_ACTIVE_PLEX_PLAYBACK`.
+  - ScarFLIX movies and TV playable in Plex: `REVIEW_NOT_GO_LIVE_READY`.
+  - IPTV-only Live TV ready for cutover: `HELD_READY_FOR_QUIET_WINDOW`.
+  - Daily AI and Command Centre usable: `REVIEW_NOT_GO_LIVE_READY`.
+  - Truthful public dashboard and Grok peer-review loop: `PASS_OPERATIONAL`.
+  - Autonomous operation and stall recovery: `REVIEW_NOT_GO_LIVE_READY`.
+  - Formal go-live control across all outcomes: `PASS_READINESS_LEDGER_INSTALLED`.
+- Current hard blockers: active Plex playback, Plex scanner/analyzer pressure, Materialized QA `REVIEW 119/229 failed=110`, Threadfin adapter not yet verified running, Command Centre `DEGRADED`, and hands-off operation `REVIEW_ESCALATION_REQUIRED`.
+- Project management decision: treat `jasonos_prime_go_live_readiness_status.*` as the live source of truth for go-live readiness. Older `TASKS.md` / `OUTCOMES.md` rows are stale until reconciled from this ledger.
+
+## Non-Disruptive Project Progress While Plex Is Active - 2026-06-13T09:58:08Z
+
+- Active Plex sessions: `2`; production Plex remains untouched.
+- Added hidden safe-progress audit task: `JasonOS_Prime_ProjectSafeProgressAudit`, every 5 minutes.
+- Added hidden Mission 2 quiet-window watcher task: `JasonOS_Prime_Mission002_QuietWindowCutoverWatcher`, every 5 minutes.
+- Armed Mission 2 watcher for `start_threadfin_virtual_adapter_only`.
+- Current safe-progress status: `HELD_ACTIVE_PLEX_PLAYBACK_NON_DISRUPTIVE_WORK_ONLY`.
+- Current watcher status: `HELD_ACTIVE_PLEX_PLAYBACK`.
+- Watcher will not attach Plex Live TV/DVR, will not touch Plex, and will not use physical tuner hardware.
+- Next safe action: when active sessions clear, watcher may start Threadfin virtual IPTV adapter and write verification status.
+
+## Mission 002 IPTV-Only Cutover Engineering Ready - 2026-06-13T09:49:07Z
+
+- Mission 002 is explicitly IPTV-only. No physical tuner, antenna, DVB/OTA device, coax input, or hardware HDHomeRun will be used.
+- Threadfin is only a virtual Plex-compatible adapter layer over M3U/XMLTV.
+- Added architecture: `jasonos/iptv/cutover/MISSION_002_IPTV_ONLY_CUTOVER_ARCHITECTURE.md`.
+- Added guarded apply script: `jasonos/iptv/scripts/Invoke-Mission002ThreadfinApply.ps1`.
+- Added verifier: `jasonos/iptv/scripts/Invoke-Mission002ThreadfinVerify.ps1`.
+- Added rollback: `jasonos/iptv/scripts/Invoke-Mission002ThreadfinRollback.ps1`.
+- Current apply result: `HELD_ACTIVE_PLEX_PLAYBACK`, active sessions `2`, Plex touched false, physical tuner used false.
+- Current verify result: `HELD_THREADFIN_NOT_RUNNING`.
+- Current rollback result: `HELD_ACTIVE_PLEX_PLAYBACK_ROLLBACK_NOT_ATTEMPTED`.
+- Next safe action: when sessions clear, run guarded apply, verify Threadfin endpoints, then attach Plex Live TV/DVR to the virtual IPTV adapter.
+
 ## Mission 002 IPTV Cutover-Ready Held State - 2026-06-13T09:39:56Z
 
 - Jason correction applied: AFL IP streaming is 7plus-primary; antenna/linear reference is channel 70.
