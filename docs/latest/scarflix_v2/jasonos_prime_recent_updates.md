@@ -1,10 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T03:20:04.583Z
+Updated UTC: 2026-06-13T03:25:03.800Z
 Source: live status merge
 
+- 2026-06-13T03:22:33.460Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
+- 2026-06-13T03:20:28Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T03:15:21.971Z - JasonOS Prime / ScarFLIX Status - 2026-06-13 12:46: Current verified local state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`, running as `JasonOS_Prime_Orchestrator`, PID `12716`. Orchestrator launch health: non-degraded, timeout rate `0`, budget active.
-- 2026-06-13T03:15:09Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T03:01:31.991Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T03:01:31Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
 - 2026-06-13T02:40:35.310Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
 - 2026-06-12T23:00:26.569Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-12T23:00:26Z] [REVIEW] Final: REVIEW
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-09T05:55:11.392Z - Codex-Side Probe Channel Blocked Again - 2026-06-09 14:45: Last verified lightweight probe snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T04:42:47Z` Probe duration: `93ms` after Node launched
 - 2026-06-09T04:52:21.528Z - Public Mirror Recovered; Lightweight Probe Hardening Started - 2026-06-09 14:20: Latest successful live snapshot before the local execution channel degraded again: Direct/legacy `.strm` counts in Plex Streaming libraries: movies `0`, TV `1`, total `1`. Primary delivery metric remains materialized/WebDAV-backed Plex playback success, not direct `.strm` count. Primary playback architecture remains...
 - 2026-06-09T04:36:09.832Z - Controlled Materialized Expansion Held After Next Batch Index Lag - 2026-06-09 13:43: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
-- 2026-06-09T03:42:30.189Z - Controlled Materialized Expansion Resumed After Plex Index Catch-Up - 2026-06-09 13:36: Grok-directed architecture update is implemented: Primary delivery metric: materialized/WebDAV-backed playback success through Plex. Primary playback architecture: `materialized_webdav_symlink`. Legacy/direct resolver remains fallback-only and broad legacy expansion remains paused.
