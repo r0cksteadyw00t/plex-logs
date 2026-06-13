@@ -1,22 +1,22 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "status": "REVIEW_PARTIAL_BATCH_PASS",
-  "started_utc": "2026-06-13T21:53:58Z",
-  "ended_utc": "2026-06-13T21:54:38Z",
-  "updated_utc": "2026-06-13T21:54:38Z",
+  "status": "REVIEW",
+  "started_utc": "2026-06-13T21:59:48Z",
+  "ended_utc": "2026-06-13T22:01:11Z",
+  "updated_utc": "2026-06-13T22:01:11Z",
   "target_count": 229,
   "rows_found": 146,
-  "checked": 3,
+  "checked": 4,
   "passed": 3,
-  "failed": 0,
+  "failed": 1,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
   "decision_retry_count": 1,
-  "decision_probe_skip": 108,
-  "decision_probe_limit": 3,
+  "decision_probe_skip": 111,
+  "decision_probe_limit": 4,
   "decision_probe_total_candidates": 141,
-  "selected_decision_candidates": 3,
+  "selected_decision_candidates": 4,
   "stopped_early": false,
   "stopped_reason": "",
   "targets": [
@@ -4398,11 +4398,77 @@
   ],
   "results": [
     {
-      "metadata_id": 50635,
-      "part_id": 128274,
+      "metadata_id": 50354,
+      "part_id": 127713,
       "section_id": 5,
-      "title": "The Italian Job",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Italian Job (2003)\\ScarFLIX_part-5ad766484803d39e\\stream.mkv",
+      "title": "The Lord of the Rings: The War of the Rohirrim",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c\\stream.mkv",
+      "status": "FAIL",
+      "http_status": 401,
+      "access_mode": "allowed_networks",
+      "base_url": "http://127.0.0.1:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "HTTP 401",
+      "attempt": 1,
+      "decision_attempts": [
+        {
+          "attempt": 1,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "FAIL",
+          "http_status": 0,
+          "reason": "socket hang up"
+        },
+        {
+          "attempt": 2,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "FAIL",
+          "http_status": 0,
+          "reason": "timeout"
+        },
+        {
+          "attempt": 1,
+          "base_url": "http://127.0.0.1:32400",
+          "status": "FAIL",
+          "http_status": 401,
+          "reason": "HTTP 401"
+        }
+      ],
+      "target_hash": "ScarFLIX_part-cfe52e744ff27d3c",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c"
+    },
+    {
+      "metadata_id": 50350,
+      "part_id": 127703,
+      "section_id": 5,
+      "title": "The Magic Faraway Tree",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff\\stream.mkv",
+      "status": "PASS",
+      "http_status": 200,
+      "access_mode": "allowed_networks",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
+      "attempt": 1,
+      "decision_attempts": [
+        {
+          "attempt": 1,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "PASS",
+          "http_status": 200,
+          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
+        }
+      ],
+      "target_hash": "ScarFLIX_part-479e0ebd60d6e6ff",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff"
+    },
+    {
+      "metadata_id": 50349,
+      "part_id": 127702,
+      "section_id": 5,
+      "title": "The Magnificent Seven",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "allowed_networks",
@@ -4417,7 +4483,7 @@
           "base_url": "http://192.168.1.184:32400",
           "status": "FAIL",
           "http_status": 0,
-          "reason": "socket hang up"
+          "reason": "timeout"
         },
         {
           "attempt": 2,
@@ -4427,15 +4493,15 @@
           "reason": "Plex client-style decision returned HTTP 200 for materialized path"
         }
       ],
-      "target_hash": "ScarFLIX_part-5ad766484803d39e",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Italian Job (2003)\\ScarFLIX_part-5ad766484803d39e"
+      "target_hash": "ScarFLIX_part-ea09f142010b00aa",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa"
     },
     {
-      "metadata_id": 50358,
-      "part_id": 127721,
+      "metadata_id": 50347,
+      "part_id": 127698,
       "section_id": 5,
-      "title": "The Jungle Book",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235\\stream.mkv",
+      "title": "The Mist",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "allowed_networks",
@@ -4443,45 +4509,26 @@
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
       "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 1,
+      "attempt": 2,
       "decision_attempts": [
         {
           "attempt": 1,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "FAIL",
+          "http_status": 0,
+          "reason": "timeout"
+        },
+        {
+          "attempt": 2,
           "base_url": "http://192.168.1.184:32400",
           "status": "PASS",
           "http_status": 200,
           "reason": "Plex client-style decision returned HTTP 200 for materialized path"
         }
       ],
-      "target_hash": "ScarFLIX_part-78ebe23593166235",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235"
-    },
-    {
-      "metadata_id": 50355,
-      "part_id": 127714,
-      "section_id": 5,
-      "title": "The Last Samurai",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 1,
-      "decision_attempts": [
-        {
-          "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "PASS",
-          "http_status": 200,
-          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
-        }
-      ],
-      "target_hash": "ScarFLIX_part-7a2e0f853be1ef51",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51"
+      "target_hash": "ScarFLIX_part-93599b6b163a4b72",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72"
     }
   ],
-  "next_action": "This bounded Materialized QA batch passed; continue the next batch before go-live."
+  "next_action": "Quarantine failed materialized source/release and keep title retryable."
 }
