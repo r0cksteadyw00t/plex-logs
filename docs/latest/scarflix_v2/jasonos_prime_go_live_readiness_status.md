@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-13T10:39:32Z
+Updated UTC: 2026-06-13T10:44:10Z
 
 Overall status: `HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY`
 
@@ -18,7 +18,7 @@ PAUSE_PUBLICATION active: `True`
 |---|---:|---:|---|---|
 | Reliable Plex playback first | `REVIEW_NOT_GO_LIVE_READY` | 65% | Plex remains the playback front end; current priority is no scanner/indexer contention during viewing. | Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet. |
 | ScarFLIX movies and TV playable in Plex | `REVIEW_NOT_GO_LIVE_READY` | 45% | Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover. | Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable. |
-| IPTV-only Live TV ready for cutover | `PASS_VIRTUAL_ADAPTER_READY_PLEX_ATTACH_HELD_ACTIVE_PLAYBACK` | 90% | IPTV-only package is ready and guarded; no physical tuner path is allowed. | Threadfin virtual adapter is ready. Hold Plex Live TV/DVR attach until there are no active sessions, then verify guide/playback and rollback if unstable. |
+| IPTV-only Live TV ready for cutover | `HELD_READY_FOR_QUIET_WINDOW` | 80% | IPTV-only package is ready and guarded; no physical tuner path is allowed. | Threadfin virtual adapter is ready. Hold Plex Live TV/DVR attach until there are no active sessions, then verify guide/playback and rollback if unstable. |
 | Daily AI and Command Centre usable | `REVIEW_NOT_GO_LIVE_READY` | 55% | Core AI/reporting exists, but Command Centre usability is degraded and needs a fresh end-user pass. | Stabilize Command Centre and run a lightweight usability proof when playback-sensitive work is quiet. |
 | Truthful public dashboard and Grok peer-review loop | `PASS_OPERATIONAL` | 90% | Public mirror and Grok report delivery are operational; this audit adds the missing go-live verdict layer. | Publish this readiness audit and keep top-of-file handoffs current after each material change. |
 | Autonomous operation and stall recovery | `REVIEW_NOT_GO_LIVE_READY` | 70% | Orchestrator is active, but hands-off status is still escalating no-progress cycles. | Keep orchestration alive, reduce high-churn work during playback, and treat repeated no-progress cycles as Grok review triggers. |
@@ -30,6 +30,8 @@ PAUSE_PUBLICATION active: `True`
 - `O-PLAYBACK`: Playback path recovery is not PASS: REVIEW.
 - `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: REVIEW 119/229 failed=110.
 - `O-SCARFLIX-CATALOGUE`: Active Plex playback prevents safe focused QA/expansion work.
+- `O-MISSION-002-IPTV`: Threadfin virtual adapter is not verified running yet: REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY.
+- `O-MISSION-002-IPTV`: Active Plex sessions hold Threadfin start and all Plex Live TV/DVR attach work.
 - `O-DAILY-AI-COMMAND`: Command Centre is not PASS: DEGRADED.
 - `O-AUTONOMY-STABILITY`: Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED.
 
