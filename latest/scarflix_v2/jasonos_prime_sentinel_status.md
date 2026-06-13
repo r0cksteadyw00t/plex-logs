@@ -1,32 +1,30 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-13T05:25:42Z
+Updated UTC: 2026-06-13T05:27:22Z
 Status: REVIEW
 Alert level: MEDIUM
 Jason action required: false
 Codex action required: false
 
 ## Signals
-- controller_status: REVIEW_TRANSIENT
-- controller_milestone: CANDIDATE_SOURCE_MODEL_PENDING
-- controller_age_minutes: 15
+- controller_status: PASS
+- controller_milestone: CANDIDATE_SOURCE_MODEL_PASS
+- controller_age_minutes: 1
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 10
+- watchdog_age_minutes: 0
 - dashboard_status: PASS
-- dashboard_age_minutes: 6
+- dashboard_age_minutes: 0
 - mirror_status: PASS
-- mirror_age_minutes: 9
+- mirror_age_minutes: 11
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 7447
-- durable_platform_gate_age_minutes: 7447
+- checkpoint_age_minutes: 7449
+- durable_platform_gate_age_minutes: 7449
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=29016; run pid=2012
-- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=28152; run pid=16864
-- JasonOS_Prime_OutcomeDashboard: dashboard_stale (PASS) enable pid=30176; run pid=4832
+- JasonOS_Prime_PublicMirrorPublisher: mirror_stale (PASS) skipped_orchestrator_owned job=run_public_mirror_publisher
 
 ## Notes
 - None.
