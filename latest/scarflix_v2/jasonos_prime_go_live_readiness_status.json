@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T12:35:07Z",
-    "updated_utc":  "2026-06-13T12:35:14Z",
+    "started_utc":  "2026-06-13T12:39:01Z",
+    "updated_utc":  "2026-06-13T12:39:08Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -61,7 +61,7 @@
                          "progress_percent":  90,
                          "summary":  "IPTV-only package is ready and guarded; no physical tuner path is allowed.",
                          "evidence":  [
-                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=REVIEW_THREADFIN_STARTED_OR_HELD_VERIFY_NOT_PASS PhysicalTuner=false"
+                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=PASS_THREADFIN_ALREADY_READY_PLEX_ATTACH_HELD PhysicalTuner=false"
                                       ],
                          "blockers":  [
 
@@ -77,10 +77,10 @@
                          "progress_percent":  55,
                          "summary":  "Core AI/reporting exists, but Command Centre usability is degraded and needs a fresh end-user pass.",
                          "evidence":  [
-                                          "CommandCentre=DEGRADED DailyAI=PASS"
+                                          "CommandCentre=REVIEW DailyAI=PASS"
                                       ],
                          "blockers":  [
-                                          "Command Centre is not PASS: DEGRADED."
+                                          "Command Centre is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Stabilize Command Centre and run a lightweight usability proof when playback-sensitive work is quiet.",
                          "requires_quiet_window":  false,
@@ -109,10 +109,10 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Ready"
+                                          "Orchestrator=PASS HandsOff=PASS SafeAuditTask=Ready QuietWatcherTask=Ready"
                                       ],
                          "blockers":  [
-                                          "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
+
                                       ],
                          "next_safe_action":  "Keep orchestration alive, reduce high-churn work during playback, and treat repeated no-progress cycles as Grok review triggers.",
                          "requires_quiet_window":  false,
@@ -143,11 +143,7 @@
                      },
                      {
                          "outcome_id":  "O-DAILY-AI-COMMAND",
-                         "blocker":  "Command Centre is not PASS: DEGRADED."
-                     },
-                     {
-                         "outcome_id":  "O-AUTONOMY-STABILITY",
-                         "blocker":  "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
+                         "blocker":  "Command Centre is not PASS: REVIEW."
                      }
                  ],
     "monitored_tasks":  [
