@@ -1,3 +1,16 @@
+## Layered Materialized QA Playback Reliability Push - 2026-06-13T22:17:36Z
+
+- Status: IMPLEMENTED_PENDING_NEXT_BOUNDED_QA_BATCH.
+- Added `ScarFLIX_v2_StreamingLayeredValidator.js`.
+- Patched `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so bounded QA candidates run WebDAV HEAD and a 4 MB discard-only byte-range warmup before Plex decision probing.
+- Service-context local checks are symlink/readlink metadata only; they do not fail the batch by forcing LocalSystem to dereference `S:\media`.
+- Added public status files:
+  - `materialized_qa_layered_status.json`
+  - `materialized_qa_layered_status.md`
+- Updated QuickPush and full mirror allowlists so Grok can review the new layered status.
+- Publication and broad catalogue expansion remain blocked. `PAUSE_PUBLICATION` remains active.
+- Next milestone: let the existing bounded go-live runner exercise the new layer during the next safe QA batch and classify failures as WebDAV/path/range versus Plex decision endpoint.
+
 ## Playback Reliability Engineering Push - 2026-06-13T21:03:55Z
 
 - Playback reliability is now the primary go-live track.
