@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_playback_hold_strategy_update_20260613_v1",
-      "created_at": "2026-06-13T11:33:25Z",
-      "expires_at": "2026-06-14T11:33:25Z",
+      "instruction_id": "phase0_maintain_playback_hold_status_update_20260613_v1",
+      "created_at": "2026-06-13T11:50:11Z",
+      "expires_at": "2026-06-14T11:50:11Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -20,9 +20,8 @@
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_record_playback_hold_strategy_update_20260613_v1",
-            "auto_added_by_bridge": true
+            "summary": "Playback-first hold remains active with 1+ Plex sessions. PAUSE_PUBLICATION enforced. No publication, expansion, or Plex mutations. Quiet-window queue and playback-safe architecture artifacts prepared for next idle period. Materialized QA recovery and Mission 2 adapter verification deferred until sessions clear and stability confirmed.",
+            "source_instruction_id": "phase0_maintain_playback_hold_status_update_20260613_v1"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-13T11:33:25Z",
+  "updated_utc": "2026-06-13T11:50:11Z",
   "source": "grok_api"
 }
