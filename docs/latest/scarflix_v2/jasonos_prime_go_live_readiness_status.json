@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T18:49:39Z",
-    "updated_utc":  "2026-06-13T18:49:45Z",
+    "started_utc":  "2026-06-13T18:56:26Z",
+    "updated_utc":  "2026-06-13T18:56:32Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -29,10 +29,11 @@
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
-                                          "Guard=PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=PASS"
+                                          "Guard=PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
-                                          "Plex background scanner/analyzer pressure still detected: 1."
+                                          "Plex background scanner/analyzer pressure still detected: 2.",
+                                          "Playback path recovery is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
                          "requires_quiet_window":  false,
@@ -139,7 +140,11 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex background scanner/analyzer pressure still detected: 1."
+                         "blocker":  "Plex background scanner/analyzer pressure still detected: 2."
+                     },
+                     {
+                         "outcome_id":  "O-PLAYBACK",
+                         "blocker":  "Playback path recovery is not PASS: REVIEW."
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
@@ -151,7 +156,7 @@
                                 "task_name":  "JasonOS_Prime_PlaybackFirstStabilityGuard",
                                 "exists":  true,
                                 "state":  "Ready",
-                                "last_result":  0
+                                "last_result":  267009
                             },
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackPathRecovery",
