@@ -1,10 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T22:20:02.346Z
+Updated UTC: 2026-06-13T22:25:03.034Z
 Source: live status merge
 
+- 2026-06-13T22:23:59.143Z - Layered Streaming QA First Batch Complete - 2026-06-14 08:24: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
+- 2026-06-13T22:20:07Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T22:18:40.069Z - Layered Streaming QA Implemented - 2026-06-14 08:17: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
-- 2026-06-13T22:15:08Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T22:10:11.918Z - Playback Reliability Engineering Push - 2026-06-14 08:03: Current verified state: Playback reliability is the active go-live blocker. Plex is running and Sentinel is low, but ScarFLIX playback is still not ready for general watching. Codex applied three control-plane reliability changes:
 - 2026-06-13T21:00:16.373Z - 16-Hour Go-Live Campaign Runner Active - 2026-06-13 23:27: Current verified state: Jason granted an exclusive Plex maintenance window. A singleton 16-hour local runner is active: `D:\PlexTools\Foundry\workers\JasonOS_Prime_GoLive16hCampaignRunner.js`
 - 2026-06-13T13:20:15.189Z - Playback-Safe Planning Progress While Stream Is Active - 2026-06-13 21:04: Current verified state: Production Plex still has active playback, so no live Plex, Threadfin, Docker, catalogue, scan, refresh, QA, publication, expansion, cleanup, deletion, or path mutation work was started. Added held quiet-window queue: `jasonos/control/QUIET_WINDOW_EXECUTION_QUEUE.md`
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-13T09:39:13.801Z - Mission 002 IPTV Cutover Package Ready But Held - 2026-06-13 19:33: Current verified state: Jason correction applied after the first package: AFL IP streaming is `7plus` primary; antenna/linear reference is channel `70`. Mission 002 mapping now prefers the public `mjh-7afl-fast` / `7AFL` candidate for the held AFL IP lane and treats Seven/7mate regional channels as fallback/linear r...
 - 2026-06-13T09:25:53.489Z - Mission 002 IPTV Phase 0 Held Dry Run - 2026-06-13 19:10: Current verified state: Active Plex playback is being protected; one active Plex session was detected by the playback-first guard. No Plex scan, ScarFLIX QA, publication, expansion, source mutation, or path rewrite was started. Mission 002 IPTV Live Phase 0 dry-run generator was added at `jasonos/iptv/scripts/Invoke...
 - 2026-06-13T09:05:33.821Z - Playback Priority Guard - 2026-06-13 19:00: Current verified state: Sentinel: `PASS / LOW`. Plex watchdog: `PASS`; Plex Media Server is running. Playback path recovery: `PASS`; WebDAV and `S:\media\catalog` were healthy in the latest recovery cycle.
-- 2026-06-13T08:50:57.076Z - Playback-First Recovery Lock-In - 2026-06-13 15:54: Current verified state: Sentinel: `PASS / LOW`. Command launch: healthy after recovery; latest five `cmd /c echo alive` checks were `32ms`, `12ms`, `25ms`, `29ms`, and `11ms`. Plex Media Server: running and protected by `JasonOS_Prime_PlexWatchdog` plus logon task.
