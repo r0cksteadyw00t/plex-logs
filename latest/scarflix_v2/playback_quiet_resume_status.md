@@ -1,14 +1,14 @@
 ﻿# Playback Quiet Resume
 
-**Updated UTC:** 2026-06-13T11:54:04Z  
-**Status:** HELD_ACTIVE_PLEX_PLAYBACK
+**Updated UTC:** 2026-06-13T12:00:14Z  
+**Status:** HELD_SESSION_DETECTION_UNAVAILABLE
 
 ## Gate
 
-- Session detection OK: True
-- Active Plex sessions: 1
-- Plex base used: http://192.168.1.184:32400
-- Plex background process count: 2
+- Session detection OK: False
+- Active Plex sessions: -1
+- Plex base used: 
+- Plex background process count: 1
 - Plex server stopped: false
 - Publication or expansion started: false
 - PAUSE_PUBLICATION preserved: true
