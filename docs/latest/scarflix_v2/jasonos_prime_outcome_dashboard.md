@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T09:16:13.661Z
+Updated UTC: 2026-06-13T09:20:20.976Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,8 +21,8 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-13T09:15:40.799Z - Mission 002 IPTV Phase 0 Held Dry Run - 2026-06-13 19:10: Current verified state: Active Plex playback is being protected; one active Plex session was detected by the playback-first guard. No Plex scan, ScarFLIX QA, publication, expansion, source mutation, or path rewrite was started. Mission 002 IPTV Live Phase 0 dry-run generator was added at `jasonos/iptv/scripts/Invoke...
-- 2026-06-13T09:10:36Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T09:16:57.811Z - Mission 002 IPTV Phase 0 Held Dry Run - 2026-06-13 19:10: Current verified state: Active Plex playback is being protected; one active Plex session was detected by the playback-first guard. No Plex scan, ScarFLIX QA, publication, expansion, source mutation, or path rewrite was started. Mission 002 IPTV Live Phase 0 dry-run generator was added at `jasonos/iptv/scripts/Invoke...
+- 2026-06-13T09:16:21Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T09:05:33.821Z - Playback Priority Guard - 2026-06-13 19:00: Current verified state: Sentinel: `PASS / LOW`. Plex watchdog: `PASS`; Plex Media Server is running. Playback path recovery: `PASS`; WebDAV and `S:\media\catalog` were healthy in the latest recovery cycle.
 - 2026-06-13T08:50:57.076Z - Playback-First Recovery Lock-In - 2026-06-13 15:54: Current verified state: Sentinel: `PASS / LOW`. Command launch: healthy after recovery; latest five `cmd /c echo alive` checks were `32ms`, `12ms`, `25ms`, `29ms`, and `11ms`. Plex Media Server: running and protected by `JasonOS_Prime_PlexWatchdog` plus logon task.
 - 2026-06-13T07:08:43.775Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
@@ -30,9 +30,9 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 5 min ago
-- Platform child progress: 127 min ago
-- Mirror updated: 4 min ago
+- Controller updated: 4 min ago
+- Platform child progress: 132 min ago
+- Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
 
