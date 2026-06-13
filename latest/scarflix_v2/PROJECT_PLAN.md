@@ -1,6 +1,6 @@
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
-**Updated UTC:** 2026-06-13T04:03:12.792Z
+**Updated UTC:** 2026-06-13T04:05:46.119Z
 
 **Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
 
