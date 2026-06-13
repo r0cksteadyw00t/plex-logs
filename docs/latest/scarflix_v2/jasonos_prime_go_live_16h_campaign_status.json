@@ -1,15 +1,15 @@
 {
   "component": "jasonos_prime_go_live_16h_campaign_runner",
   "schema_version": "jasonos.go_live_16h_campaign.v1",
-  "status": "RUNNING",
+  "status": "HELD_DUPLICATE_RUNNER_LOCK",
   "started_utc": "2026-06-13T13:22:00Z",
   "ends_utc": "2026-06-14T05:22:00Z",
   "ends_epoch_ms": 1781414520131,
   "duration_hours": 16,
   "exclusive_plex_window": true,
-  "cycle_count": 71,
-  "qa_cursor": 95,
-  "qa_batch_size": 3,
+  "cycle_count": 72,
+  "qa_cursor": 98,
+  "qa_batch_size": 4,
   "pause_publication_required": true,
   "publication_allowed": false,
   "broad_expansion_allowed": false,
@@ -20,7 +20,7 @@
     "campaign_log": "D:\\PlexTools\\state\\jasonos_prime\\go_live_16h_campaign\\campaign_log.ndjson",
     "log": "D:\\PlexTools\\logs\\jasonos_prime\\jasonos_prime_go_live_16h_campaign.log"
   },
-  "updated_utc": "2026-06-13T20:59:01Z",
+  "updated_utc": "2026-06-13T21:06:44Z",
   "noncritical_tasks_suppressed": [
     "JasonOS_Prime_FastTrackAccelerator",
     "JasonOS_Prime_PublicMirrorPublisher",
@@ -38,42 +38,42 @@
     "ScarFLIX_v2_PlexClientDecisionQA"
   ],
   "last_qa_batch": {
-    "skip": 92,
+    "skip": 95,
     "batch_size": 3,
-    "elapsed_ms": 44162,
+    "elapsed_ms": 89681,
     "exit_status": 0,
-    "qa_status": "REVIEW",
+    "qa_status": "REVIEW_PARTIAL_BATCH_PASS",
     "checked": 3,
-    "passed": 1,
-    "failed": 2,
-    "total_candidates": 145
+    "passed": 3,
+    "failed": 0,
+    "total_candidates": 149
   },
   "last_launch_after_qa": {
     "ok": true,
-    "elapsed_ms": 21,
+    "elapsed_ms": 20,
     "status": 0,
     "error": ""
   },
   "materialized_qa": {
-    "status": "REVIEW",
+    "status": "REVIEW_PARTIAL_BATCH_PASS",
     "target_count": 229,
-    "rows_found": 150,
+    "rows_found": 154,
     "checked": 3,
-    "passed": 1,
+    "passed": 3,
     "failed": 2,
     "query_errors": 0,
-    "decision_probe_total_candidates": 145
+    "decision_probe_total_candidates": 149
   },
   "go_live_readiness": {
     "status": "REVIEW_NOT_GO_LIVE_READY",
     "go_live_ready": false,
-    "blocker_count": 1
+    "blocker_count": 3
   },
   "last_cycle": {
-    "updated_utc": "2026-06-13T20:59:01Z",
+    "updated_utc": "2026-06-13T21:05:59Z",
     "launch_health": {
       "ok": true,
-      "elapsed_ms": 41,
+      "elapsed_ms": 31,
       "status": 0,
       "error": ""
     },
@@ -85,15 +85,16 @@
       "ok": true,
       "active_sessions": 0,
       "endpoint": "http://192.168.1.184:32400/status/sessions",
-      "elapsed_ms": 1165
+      "elapsed_ms": 1634
     },
     "plex_identity": {
       "ok": true,
       "endpoint": "http://127.0.0.1:32400/identity",
       "status_code": 200,
-      "elapsed_ms": 4
+      "elapsed_ms": 5
     },
     "actions": [
+      "suppressed_noncritical_tasks",
       "ran_playback_path_recovery_once",
       "ran_mission2_threadfin_apply",
       "ran_mission2_threadfin_verify",
@@ -102,6 +103,11 @@
     ],
     "blockers": []
   },
-  "last_action": "ran_playback_path_recovery_once, ran_mission2_threadfin_apply, ran_mission2_threadfin_verify, ran_bounded_materialized_qa_batch, ran_go_live_readiness_audit_once",
-  "last_blocker": ""
+  "last_action": "suppressed_noncritical_tasks, ran_playback_path_recovery_once, ran_mission2_threadfin_apply, ran_mission2_threadfin_verify, ran_bounded_materialized_qa_batch, ran_go_live_readiness_audit_once",
+  "last_blocker": "",
+  "duplicate_runner": {
+    "current_pid": 24752,
+    "owner_pid": 33100,
+    "owner_started_utc": "2026-06-13T13:25:01Z"
+  }
 }
