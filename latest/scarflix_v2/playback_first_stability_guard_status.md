@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-13T09:34:38Z  
+**Updated UTC:** 2026-06-13T09:39:45Z  
 **Status:** PASS_PLAYBACK_PRIORITY_ACTIVE
 
 ## Scope
@@ -15,7 +15,7 @@ Playback quality and stability only. No publication, no expansion, no source mut
 ## Plex Playback Priority
 
 - Session detection OK: True
-- Active Plex sessions: 1
+- Active Plex sessions: 2
 - Plex base used: http://192.168.1.184:32400
 - Token source used: plex_token.txt
 - Off-peak window: 2:00-6:00
