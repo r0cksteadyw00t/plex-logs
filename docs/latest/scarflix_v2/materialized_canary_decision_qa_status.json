@@ -1,16 +1,20 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "status": "RUNNING_DISCOVERING_PLEX_ROWS",
-  "started_utc": "2026-06-13T23:07:38Z",
-  "updated_utc": "2026-06-13T23:07:39Z",
+  "status": "RUNNING_PLEX_DECISION_PROBES",
+  "started_utc": "2026-06-13T23:25:37Z",
+  "updated_utc": "2026-06-13T23:26:09Z",
   "target_count": 229,
-  "rows_found": 0,
+  "rows_found": 146,
   "checked": 0,
   "passed": 0,
   "failed": 0,
   "query_errors": 0,
+  "query_error_details": [],
+  "decision_timeout_ms": 15000,
+  "decision_retry_count": 1,
   "layered_validation_enabled": true,
-  "retry_held_file": "D:/PlexTools/state/jasonos_prime/go_live_16h_campaign/materialized_qa_retry_held.json",
+  "layered_range_bytes": 4194304,
+  "retry_held_file": "D:\\PlexTools\\state\\jasonos_prime\\go_live_16h_campaign\\materialized_qa_retry_held.json",
   "retry_held_candidates": 0,
   "layered_validation_summary": {
     "total": 0,
@@ -18,5 +22,7 @@
     "review": 0,
     "reasons": {}
   },
-  "next_action": "Materialized Plex decision QA is discovering Plex DB rows."
+  "decision_probe_skip": 4,
+  "decision_probe_limit": 3,
+  "next_action": "Materialized Plex decision QA is running bounded client-style decision probes."
 }
