@@ -1,8 +1,8 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T05:20:04.254Z
+Updated UTC: 2026-06-13T05:27:01.969Z
 Status: PASS
-Current milestone: CANDIDATE_SOURCE_MODEL_PASS
+Current milestone: CANDIDATE_SOURCE_MODEL_PENDING
 Jason action required: false
 Automation state: STALE_STATUS
 Will progress without Codex: true
@@ -21,18 +21,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-13T05:15:32.154Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
+- 2026-06-13T05:21:24.749Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
+- 2026-06-13T05:10:57Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-13T05:10:15Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T05:05:20.781Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T05:05:20Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.
 - 2026-06-13T05:05:18.990Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-13T05:05:18Z] [REVIEW] Final: REVIEW
 - 2026-06-13T03:15:21.971Z - JasonOS Prime / ScarFLIX Status - 2026-06-13 12:46: Current verified local state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`, running as `JasonOS_Prime_Orchestrator`, PID `12716`. Orchestrator launch health: non-degraded, timeout rate `0`, budget active.
-- 2026-06-13T02:40:35.310Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
 
 Heartbeat / Stall Check:
 - Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 10 min ago
-- Platform child progress: 15 min ago
-- Mirror updated: 3 min ago
+- Controller updated: 16 min ago
+- Platform child progress: 22 min ago
+- Mirror updated: 10 min ago
 - Platform runner running: false
 - Platform child active: true
 
