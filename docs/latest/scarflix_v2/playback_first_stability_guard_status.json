@@ -1,0 +1,110 @@
+﻿{
+    "component":  "jasonos_prime_playback_first_stability_guard",
+    "status":  "REVIEW_PLEX_BACKGROUND_JOB_STOP_UNVERIFIED",
+    "started_utc":  "2026-06-13T09:01:30Z",
+    "ended_utc":  "2026-06-13T09:01:34Z",
+    "duration_seconds":  4,
+    "report_only":  false,
+    "no_publication_started":  true,
+    "no_expansion_started":  true,
+    "no_source_mutation":  true,
+    "no_path_rewrite":  true,
+    "cmd_health_skipped":  true,
+    "cmd_health_skip_reason":  "guard default path avoids spawning cmd.exe during playback contention",
+    "cmd_avg_ms":  0,
+    "plex_session_state":  {
+                               "ok":  true,
+                               "active_count":  1,
+                               "base_used":  "http://192.168.1.184:32400",
+                               "token_source":  "plex_token.txt",
+                               "attempts":  [
+                                                {
+                                                    "base":  "http://127.0.0.1:32400",
+                                                    "token_source":  "plex_token.txt",
+                                                    "ok":  false,
+                                                    "status_code":  401,
+                                                    "active_count":  -1,
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
+                                                },
+                                                {
+                                                    "base":  "http://127.0.0.1:32400",
+                                                    "token_source":  "Plex Preferences.xml",
+                                                    "ok":  false,
+                                                    "status_code":  401,
+                                                    "active_count":  -1,
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
+                                                },
+                                                {
+                                                    "base":  "http://localhost:32400",
+                                                    "token_source":  "plex_token.txt",
+                                                    "ok":  false,
+                                                    "status_code":  401,
+                                                    "active_count":  -1,
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
+                                                },
+                                                {
+                                                    "base":  "http://localhost:32400",
+                                                    "token_source":  "Plex Preferences.xml",
+                                                    "ok":  false,
+                                                    "status_code":  401,
+                                                    "active_count":  -1,
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
+                                                },
+                                                {
+                                                    "base":  "http://192.168.1.184:32400",
+                                                    "token_source":  "plex_token.txt",
+                                                    "ok":  true,
+                                                    "status_code":  200,
+                                                    "active_count":  1,
+                                                    "error":  ""
+                                                }
+                                            ],
+                               "error":  ""
+                           },
+    "off_peak_policy":  {
+                            "local_time":  "2026-06-13T19:01:33+10:00",
+                            "hour":  19,
+                            "off_peak_start_hour":  2,
+                            "off_peak_end_hour":  6,
+                            "in_off_peak_window":  false,
+                            "off_peak_maintenance_allowed":  false
+                        },
+    "suppress_background_work":  true,
+    "quiet_reason":  "active_plex_stream_detected",
+    "plex_background_jobs_found":  1,
+    "plex_background_jobs":  {
+                                 "pid":  30848,
+                                 "name":  "Plex Media Scanner",
+                                 "reason":  "plex_background_scanner_or_analyzer",
+                                 "command_line":  "not_collected_to_keep_guard_lightweight"
+                             },
+    "stopped_jobs":  {
+                         "pid":  30848,
+                         "name":  "Plex Media Scanner",
+                         "reason":  "plex_background_scanner_or_analyzer",
+                         "stopped":  true,
+                         "verified_gone":  false,
+                         "error":  "process_still_visible_after_stop_attempt"
+                     },
+    "playback_error_pressure":  {
+                                    "recent_error_count":  0,
+                                    "top_hashes":  [
+
+                                                   ],
+                                    "rclone_log":  "D:\\PlexTools\\logs\\scarflix_v2_rclone_webdav_mount.log",
+                                    "webdav_log":  "D:\\PlexTools\\logs\\scarflix_v2_webdav_file_bridge_node.log",
+                                    "skipped":  true,
+                                    "reason":  "default_guard_path_keeps_log_analysis_off_to_avoid_contention"
+                                },
+    "reasons":  [
+                    "Active Plex stream detected; production Plex background scanning/indexing is suppressed.",
+                    "Plex background scanner/analyzer work was active during playback-first mode.",
+                    "A Plex background scanner/analyzer stop attempt did not verify process exit."
+                ],
+    "next_action":  "Keep QA/expansion held; verify Plex-client playback only after rclone/WebDAV error pressure falls and background scanner/analyzer load is quiet.",
+    "files":  {
+                  "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\playback_first_stability_guard_status.json",
+                  "status_md":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\playback_first_stability_guard_status.md",
+                  "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_first_stability_guard_20260613.log"
+              }
+}
