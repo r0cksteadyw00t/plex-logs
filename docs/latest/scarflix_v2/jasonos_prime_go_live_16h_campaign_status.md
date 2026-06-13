@@ -1,16 +1,16 @@
 # JasonOS Prime Go-Live 16h Campaign Status
 
 - Status: HELD_SENTINEL
-- Updated UTC: 2026-06-13T16:53:31Z
+- Updated UTC: 2026-06-13T16:58:34Z
 - Started UTC: 2026-06-13T13:22:00Z
 - Ends UTC: 2026-06-14T05:22:00Z
-- Cycle: 35
-- Launch health: 19 ms
+- Cycle: 36
+- Launch health: 24 ms
 - Sentinel: ALERT / HIGH
 - Active Plex sessions: 0
 - Materialized QA: REVIEW checked=2 passed=0 failed=2
 - QA cursor: 102
-- Last action: held_qa_due_sentinel
+- Last action: suppressed_noncritical_tasks, held_qa_due_sentinel
 - Last blocker: sentinel_alert_or_high
 
 Safety:
