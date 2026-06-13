@@ -8,7 +8,7 @@
   "changes_applied": [
     {
       "file": "D:/PlexTools/Scripts/scarflix_v2/ScarFLIX_v2_RcloneMountKeepalive.ps1",
-      "change": "bounded S: path readiness probes with timeout telemetry"
+      "change": "bounded S: path readiness probes with timeout telemetry plus opt-in stalled mount restart"
     },
     {
       "file": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js",
@@ -16,9 +16,25 @@
     },
     {
       "file": "D:/PlexTools/Foundry/workers/JasonOS_Prime_GoLive16hCampaignRunner.js",
-      "change": "playback path PASS required before bounded Materialized QA runs"
+      "change": "playback path PASS required before bounded Materialized QA runs, explicit QA hold status writer"
     }
   ],
+  "latest_controlled_recovery": {
+    "utc": "2026-06-13T21:13:02Z",
+    "status": "PASS",
+    "s_media_after": "PASS",
+    "s_catalog_after": "PASS",
+    "watch_now": [
+      {
+        "title": "Gremlins",
+        "http_status": 200
+      },
+      {
+        "title": "Anna",
+        "http_status": 200
+      }
+    ]
+  },
   "current_go_live_ready": false,
   "current_primary_blocker": "playback path and Plex decision reliability",
   "next_expected_signal": "bounded QA pass rate and decision_attempts after loopback-first retry patch"
