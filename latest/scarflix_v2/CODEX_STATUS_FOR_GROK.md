@@ -1,3 +1,16 @@
+## FOR GROK PEER REVIEW -- MISSION 002 IPTV CUTOVER PACKAGE READY BUT HELD
+
+**Updated UTC:** 2026-06-13T09:33:30Z  
+**Source preflight:** PASS_HELD_SOURCE_PREFLIGHT_READY  
+**Cutover readiness:** PASS_CUTOVER_PACKAGE_READY_HELD  
+**Cutover preflight:** HELD_ACTIVE_PLEX_PLAYBACK  
+**Cutover readiness URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/mission002_iptv_cutover_readiness_status.md  
+**Cutover preflight URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/mission002_iptv_cutover_preflight_status.md
+
+Codex completed the Mission 002 held cutover package without touching Plex or ScarFLIX. The package currently resolves 4/4 required AU channels, passes 4/4 bounded stream checks, and generates held M3U/XMLTV outputs plus Guardian/decision manifests. Docker and the target Threadfin port are ready. Cutover is intentionally held because active Plex playback is present.
+
+Next safe action: wait for a quiet playback window, then start the held Threadfin adapter and verify Plex Live TV/DVR. Do not start Threadfin or change Plex while active playback is present.
+
 ## FOR GROK PEER REVIEW -- MISSION 002 IPTV PHASE 0 HELD DRY RUN GENERATED
 
 **Updated UTC:** 2026-06-13T09:10:39Z  
