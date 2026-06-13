@@ -2,14 +2,14 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T16:46:05Z",
-    "updated_utc":  "2026-06-13T16:46:12Z",
+    "started_utc":  "2026-06-13T16:54:34Z",
+    "updated_utc":  "2026-06-13T16:54:47Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
     "sentinel":  {
-                     "status":  "REVIEW",
-                     "alert_level":  "MEDIUM"
+                     "status":  "ALERT",
+                     "alert_level":  "HIGH"
                  },
     "safety":  {
                    "pause_publication_active":  true,
@@ -32,7 +32,7 @@
                                           "Guard=PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
-                                          "Plex background scanner/analyzer pressure still detected: 3.",
+                                          "Plex background scanner/analyzer pressure still detected: 5.",
                                           "Playback path recovery is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
@@ -46,10 +46,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=REVIEW 1/3 Section5Visible=105 Section5Missing=0 PausePublication=True"
+                                          "MaterializedQA=REVIEW 0/2 Section5Visible=105 Section5Missing=0 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not PASS: REVIEW 1/3 failed=2."
+                                          "Materialized QA is not PASS: REVIEW 0/2 failed=2."
                                       ],
                          "next_safe_action":  "Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable.",
                          "requires_quiet_window":  true,
@@ -62,7 +62,7 @@
                          "progress_percent":  90,
                          "summary":  "IPTV-only package is ready and guarded; no physical tuner path is allowed.",
                          "evidence":  [
-                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=FAIL_THREADFIN_COMPOSE_MISSING Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=PASS_THREADFIN_ALREADY_READY_PLEX_ATTACH_HELD PhysicalTuner=false"
+                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=FAIL_THREADFIN_COMPOSE_MISSING Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=UNKNOWN PhysicalTuner=false"
                                       ],
                          "blockers":  [
 
@@ -140,7 +140,7 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex background scanner/analyzer pressure still detected: 3."
+                         "blocker":  "Plex background scanner/analyzer pressure still detected: 5."
                      },
                      {
                          "outcome_id":  "O-PLAYBACK",
@@ -148,7 +148,7 @@
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not PASS: REVIEW 1/3 failed=2."
+                         "blocker":  "Materialized QA is not PASS: REVIEW 0/2 failed=2."
                      }
                  ],
     "monitored_tasks":  [
