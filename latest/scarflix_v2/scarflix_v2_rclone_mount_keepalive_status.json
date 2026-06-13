@@ -1,37 +1,43 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-13T05:26:25Z",
-    "ended_utc":  "2026-06-13T05:27:32Z",
+    "status":  "PASS",
+    "started_utc":  "2026-06-13T05:30:03Z",
+    "ended_utc":  "2026-06-13T05:30:04Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
-                          "ok":  false,
-                          "status":  "",
-                          "error":  "Unable to connect to the remote server"
+                          "ok":  true,
+                          "status":  "200",
+                          "error":  ""
                       },
     "rclone_exe_present":  true,
     "rclone_config_present":  true,
-    "drive_s_present":  false,
-    "media_path_ready":  false,
-    "catalog_path_ready":  false,
-    "mount_ready":  false,
+    "drive_s_present":  true,
+    "media_path_ready":  true,
+    "catalog_path_ready":  true,
+    "mount_ready":  true,
     "start":  {
                   "started":  false,
                   "pid":  0,
                   "error":  ""
               },
     "processes_before":  [
-
+                             {
+                                 "process_id":  18336,
+                                 "command_line_present":  true
+                             }
                          ],
     "processes_after":  [
-
+                            {
+                                "process_id":  18336,
+                                "command_line_present":  true
+                            }
                         ],
     "actions":  [
 
                 ],
     "failures":  [
-                     "WebDAV node bridge health failed"
+
                  ],
     "status_file":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
     "log":  "D:\\PlexTools\\logs\\scarflix_v2_rclone_mount_keepalive_20260613.log",
