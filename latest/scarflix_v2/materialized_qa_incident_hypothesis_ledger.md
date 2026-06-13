@@ -1,7 +1,7 @@
 # Materialized QA Incident Hypothesis Ledger
 
 - Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
-- Updated UTC: 2026-06-13T03:25:22.877Z
+- Updated UTC: 2026-06-13T03:28:24.896Z
 - Current status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Current hypothesis: The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
 - Next safe action: Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
