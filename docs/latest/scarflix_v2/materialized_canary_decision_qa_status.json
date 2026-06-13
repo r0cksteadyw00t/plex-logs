@@ -1,22 +1,22 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "REVIEW",
-  "started_utc": "2026-06-13T21:09:28Z",
-  "ended_utc": "2026-06-13T21:11:33Z",
-  "updated_utc": "2026-06-13T21:11:33Z",
+  "started_utc": "2026-06-13T21:16:51Z",
+  "ended_utc": "2026-06-13T21:18:18Z",
+  "updated_utc": "2026-06-13T21:18:18Z",
   "target_count": 229,
   "rows_found": 154,
-  "checked": 4,
-  "passed": 3,
-  "failed": 1,
+  "checked": 3,
+  "passed": 1,
+  "failed": 2,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
   "decision_retry_count": 1,
-  "decision_probe_skip": 98,
-  "decision_probe_limit": 4,
+  "decision_probe_skip": 102,
+  "decision_probe_limit": 3,
   "decision_probe_total_candidates": 149,
-  "selected_decision_candidates": 4,
+  "selected_decision_candidates": 3,
   "stopped_early": false,
   "stopped_reason": "",
   "targets": [
@@ -4462,19 +4462,19 @@
   ],
   "results": [
     {
-      "metadata_id": 50391,
-      "part_id": 127790,
+      "metadata_id": 50385,
+      "part_id": 127779,
       "section_id": 5,
-      "title": "The Big Short",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Big Short (2015)\\ScarFLIX_part-491a4bfccb102f1e\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
+      "title": "The Count of Monte Cristo",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Count of Monte Cristo (2002)\\ScarFLIX_part-1a32188f5276f482\\stream.mkv",
+      "status": "FAIL",
+      "http_status": 401,
       "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
+      "base_url": "http://127.0.0.1:32400",
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 2,
+      "reason": "HTTP 401",
+      "attempt": 1,
       "decision_attempts": [
         {
           "attempt": 1,
@@ -4486,20 +4486,27 @@
         {
           "attempt": 2,
           "base_url": "http://192.168.1.184:32400",
-          "status": "PASS",
-          "http_status": 200,
-          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
+          "status": "FAIL",
+          "http_status": 0,
+          "reason": "timeout"
+        },
+        {
+          "attempt": 1,
+          "base_url": "http://127.0.0.1:32400",
+          "status": "FAIL",
+          "http_status": 401,
+          "reason": "HTTP 401"
         }
       ],
-      "target_hash": "ScarFLIX_part-491a4bfccb102f1e",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Big Short (2015)\\ScarFLIX_part-491a4bfccb102f1e"
+      "target_hash": "ScarFLIX_part-1a32188f5276f482",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Count of Monte Cristo (2002)\\ScarFLIX_part-1a32188f5276f482"
     },
     {
-      "metadata_id": 50390,
-      "part_id": 127789,
+      "metadata_id": 50384,
+      "part_id": 127778,
       "section_id": 5,
-      "title": "The Boy and the Heron",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Boy and the Heron (2023)\\ScarFLIX_part-e88bc8bc09b28631\\stream.mkv",
+      "title": "The Count of Monte Cristo",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Count of Monte Cristo (2024)\\ScarFLIX_part-fe1550d7876cebb7\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "allowed_networks",
@@ -4507,65 +4514,25 @@
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
       "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 2,
+      "attempt": 1,
       "decision_attempts": [
         {
           "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "FAIL",
-          "http_status": 0,
-          "reason": "timeout"
-        },
-        {
-          "attempt": 2,
           "base_url": "http://192.168.1.184:32400",
           "status": "PASS",
           "http_status": 200,
           "reason": "Plex client-style decision returned HTTP 200 for materialized path"
         }
       ],
-      "target_hash": "ScarFLIX_part-e88bc8bc09b28631",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Boy and the Heron (2023)\\ScarFLIX_part-e88bc8bc09b28631"
+      "target_hash": "ScarFLIX_part-fe1550d7876cebb7",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Count of Monte Cristo (2024)\\ScarFLIX_part-fe1550d7876cebb7"
     },
     {
-      "metadata_id": 50387,
-      "part_id": 127783,
+      "metadata_id": 50373,
+      "part_id": 127751,
       "section_id": 5,
-      "title": "The Boy in the Striped Pyjamas",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Boy in the Striped Pyjamas (2008)\\ScarFLIX_part-6d4172141ef2dd2a\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 2,
-      "decision_attempts": [
-        {
-          "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "FAIL",
-          "http_status": 0,
-          "reason": "timeout"
-        },
-        {
-          "attempt": 2,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "PASS",
-          "http_status": 200,
-          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
-        }
-      ],
-      "target_hash": "ScarFLIX_part-6d4172141ef2dd2a",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Boy in the Striped Pyjamas (2008)\\ScarFLIX_part-6d4172141ef2dd2a"
-    },
-    {
-      "metadata_id": 50639,
-      "part_id": 128283,
-      "section_id": 5,
-      "title": "The Cabin in the Woods",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Cabin in the Woods (2012)\\ScarFLIX_part-4e9571fb14dbaf20\\stream.mkv",
+      "title": "The Creator",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Creator (2023)\\ScarFLIX_part-1bbb5a07bba0ecb0\\stream.mkv",
       "status": "FAIL",
       "http_status": 401,
       "access_mode": "allowed_networks",
@@ -4597,8 +4564,8 @@
           "reason": "HTTP 401"
         }
       ],
-      "target_hash": "ScarFLIX_part-4e9571fb14dbaf20",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Cabin in the Woods (2012)\\ScarFLIX_part-4e9571fb14dbaf20"
+      "target_hash": "ScarFLIX_part-1bbb5a07bba0ecb0",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Creator (2023)\\ScarFLIX_part-1bbb5a07bba0ecb0"
     }
   ],
   "next_action": "Quarantine failed materialized source/release and keep title retryable."
