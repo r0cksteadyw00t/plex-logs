@@ -1,3 +1,10 @@
+## Codex Heartbeat Retired After Local Recovery Lock-In - 2026-06-13T05:58:38Z
+
+- Deleted Codex app heartbeat playback-recovery-retry to avoid token drain.
+- Local ownership now handles playback failback: JasonOS_Prime_PlaybackPathRecovery, JasonOS_Prime_PlaybackPathRecovery_Logon, JasonOS_Prime_PlexWatchdog, and JasonOS_Prime_PlexWatchdog_Logon.
+- Public/Grok status remains available through the pushed raw files.
+- Next gate remains playback stability first, then bounded verification, then Path 2 scaling.
+
 ## Playback-First Recovery Lock-In - 2026-06-13 15:56:44 Australia/Sydney
 
 - Status: PASS_PLAYBACK_PATH_RECOVERY_LOCKED_IN.
@@ -3012,4 +3019,5 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
