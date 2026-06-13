@@ -1,23 +1,23 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "REVIEW",
-  "started_utc": "2026-06-13T16:34:55Z",
-  "ended_utc": "2026-06-13T16:35:52Z",
-  "updated_utc": "2026-06-13T16:35:52Z",
+  "started_utc": "2026-06-13T16:46:36Z",
+  "ended_utc": "2026-06-13T16:47:14Z",
+  "updated_utc": "2026-06-13T16:47:14Z",
   "target_count": 229,
-  "rows_found": 113,
-  "checked": 3,
-  "passed": 1,
+  "rows_found": 114,
+  "checked": 2,
+  "passed": 0,
   "failed": 2,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
-  "decision_probe_skip": 96,
+  "decision_probe_skip": 99,
   "decision_probe_limit": 3,
-  "decision_probe_total_candidates": 108,
+  "decision_probe_total_candidates": 109,
   "selected_decision_candidates": 3,
-  "stopped_early": false,
-  "stopped_reason": "",
+  "stopped_early": true,
+  "stopped_reason": "Stopped after 2 consecutive Plex decision failures.",
   "targets": [
     {
       "hash": "ScarFLIX_part-5efdbdcf716997a3",
@@ -2781,7 +2781,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Rambo III (1988)\\ScarFLIX_part-773c89fbdc43eb83",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50553,
+          "part_id": 128111,
+          "section_id": 5,
+          "title": "Rambo III",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Rambo III (1988)\\ScarFLIX_part-773c89fbdc43eb83\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -4133,38 +4141,6 @@
   ],
   "results": [
     {
-      "metadata_id": 50168,
-      "part_id": 127508,
-      "section_id": 5,
-      "title": "ScarFLIX Part 64c1bfd3e5881850",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850\\stream.mkv",
-      "status": "FAIL",
-      "http_status": 0,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "socket hang up",
-      "target_hash": "ScarFLIX_part-64c1bfd3e5881850",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850"
-    },
-    {
-      "metadata_id": 50167,
-      "part_id": 127507,
-      "section_id": 5,
-      "title": "ScarFLIX Part 68c43fa40f40a5e5",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "target_hash": "ScarFLIX_part-68c43fa40f40a5e5",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5"
-    },
-    {
       "metadata_id": 50324,
       "part_id": 127662,
       "section_id": 5,
@@ -4176,9 +4152,25 @@
       "base_url": "http://192.168.1.184:32400",
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "timeout",
+      "reason": "socket hang up",
       "target_hash": "ScarFLIX_part-ac22c691d6568126",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126"
+    },
+    {
+      "metadata_id": 50163,
+      "part_id": 127505,
+      "section_id": 5,
+      "title": "ScarFLIX Part Ac3865f01b2e1ab8",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Warcraft (2016)\\ScarFLIX_part-ac3865f01b2e1ab8\\stream.mkv",
+      "status": "FAIL",
+      "http_status": 0,
+      "access_mode": "allowed_networks",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "timeout",
+      "target_hash": "ScarFLIX_part-ac3865f01b2e1ab8",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Warcraft (2016)\\ScarFLIX_part-ac3865f01b2e1ab8"
     }
   ],
   "next_action": "Quarantine failed materialized source/release and keep title retryable."
