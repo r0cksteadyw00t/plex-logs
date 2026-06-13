@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T22:25:03.034Z
+Updated UTC: 2026-06-13T22:30:01.701Z
 Source: live status merge
 
-- 2026-06-13T22:23:59.143Z - Layered Streaming QA First Batch Complete - 2026-06-14 08:24: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
-- 2026-06-13T22:20:07Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T22:25:16.007Z - Layered Streaming QA First Batch Complete - 2026-06-14 08:24: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
+- 2026-06-13T22:25:08Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T22:18:40.069Z - Layered Streaming QA Implemented - 2026-06-14 08:17: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
 - 2026-06-13T22:10:11.918Z - Playback Reliability Engineering Push - 2026-06-14 08:03: Current verified state: Playback reliability is the active go-live blocker. Plex is running and Sentinel is low, but ScarFLIX playback is still not ready for general watching. Codex applied three control-plane reliability changes:
 - 2026-06-13T21:00:16.373Z - 16-Hour Go-Live Campaign Runner Active - 2026-06-13 23:27: Current verified state: Jason granted an exclusive Plex maintenance window. A singleton 16-hour local runner is active: `D:\PlexTools\Foundry\workers\JasonOS_Prime_GoLive16hCampaignRunner.js`
