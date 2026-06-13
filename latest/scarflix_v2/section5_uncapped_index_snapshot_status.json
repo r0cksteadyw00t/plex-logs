@@ -3,8 +3,8 @@
   "schema_version": "jasonos.section5_uncapped_index_snapshot.v1",
   "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
-  "started_utc": "2026-06-13T03:34:36.662Z",
-  "updated_utc": "2026-06-13T03:34:38.397Z",
+  "started_utc": "2026-06-13T03:37:42.294Z",
+  "updated_utc": "2026-06-13T03:37:44.167Z",
   "read_only": true,
   "no_plex_refresh_run": true,
   "no_plex_cache_clear_run": true,
@@ -22,11 +22,11 @@
       "component": "jasonos_prime_sentinel_node",
       "status": "PASS",
       "alert_level": "LOW",
-      "updated_utc": "2026-06-13T03:30:04Z",
+      "updated_utc": "2026-06-13T03:35:03Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
-      "repeat_count": 282,
+      "repeat_count": 284,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
@@ -40,8 +40,8 @@
         "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 7331,
-        "durable_platform_gate_age_minutes": 7331,
+        "checkpoint_age_minutes": 7336,
+        "durable_platform_gate_age_minutes": 7336,
         "platform_progress_fresh": false
       },
       "recovery_actions": [],
@@ -56,7 +56,7 @@
     "orch": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-13T03:34:36.540Z",
+      "updated_utc": "2026-06-13T03:37:42.221Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -64,20 +64,14 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-13T03:34:35.909Z",
+      "last_tick_utc": "2026-06-13T03:37:41.609Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_ba65eb4e7837f89c",
-          "type": "launch_health_monitor",
-          "queue": "control",
-          "started_utc": "2026-06-13T03:34:36.528Z"
-        },
-        {
-          "id": "job_a69fdbb3d221fcd7",
+          "id": "job_2d998a145807630d",
           "type": "section5_uncapped_index_snapshot",
           "queue": "control",
-          "started_utc": "2026-06-13T03:34:36.530Z"
+          "started_utc": "2026-06-13T03:37:42.211Z"
         }
       ],
       "pause": {
@@ -93,19 +87,19 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-13T03:34:36.540Z",
+        "updated_utc": "2026-06-13T03:37:42.220Z",
         "window_minutes": 10,
-        "sample_count": 13,
-        "latency_sample_count": 13,
+        "sample_count": 10,
+        "latency_sample_count": 10,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 11335,
+        "avg_process_runtime_ms": 13493,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 1,
-        "tracked_child_count": 1
+        "active_child_count": 0,
+        "tracked_child_count": 0
       },
       "degraded_mode": {
         "active": false,
@@ -226,7 +220,7 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-13T03:34:36.540Z",
+        "updated_utc": "2026-06-13T03:37:42.220Z",
         "instruction_count": 50,
         "classification_counts": {
           "Safe": 17,
@@ -950,7 +944,7 @@
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-13T03:34:36.538Z",
+        "updated_utc": "2026-06-13T03:37:42.218Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -1491,52 +1485,11 @@
     },
     "launch": {
       "component": "jasonos_prime_orchestrator_launch_telemetry",
-      "updated_utc": "2026-06-13T03:34:36.559Z",
-      "process_launches_total": 1306,
-      "spawn_sync_total": 929,
+      "updated_utc": "2026-06-13T03:37:42.224Z",
+      "process_launches_total": 1309,
+      "spawn_sync_total": 932,
       "spawn_detached_total": 377,
       "recent_launches": [
-        {
-          "ts_utc": "2026-06-12T23:44:15.265Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 2859,
-          "process_runtime_ms": 2859,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
-        {
-          "ts_utc": "2026-06-12T23:46:12.536Z",
-          "kind": "spawn_detached",
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "pid": 19452,
-          "parent_job_class": "detached",
-          "critical": false,
-          "launch_latency_ms": 0,
-          "process_runtime_ms": null
-        },
-        {
-          "ts_utc": "2026-06-12T23:51:00.299Z",
-          "kind": "spawn_sync",
-          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
-          "parent_job_class": "io",
-          "critical": true,
-          "timeout_ms": 90000,
-          "elapsed_ms": 2654,
-          "process_runtime_ms": 2654,
-          "launch_latency_ms": null,
-          "exit_code": 0,
-          "timed_out": false,
-          "error": ""
-        },
         {
           "ts_utc": "2026-06-12T23:56:34.258Z",
           "kind": "spawn_sync",
@@ -3163,17 +3116,54 @@
           "exit_code": 0,
           "timed_out": false,
           "error": ""
-        }
-      ],
-      "tracked_children": [
+        },
         {
-          "pid": 23540,
-          "name": "public_mirror_publisher",
-          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_PublicMirrorPublisher.js",
-          "started_utc": "2026-06-13T03:30:29.989Z",
-          "critical": false
+          "ts_utc": "2026-06-13T03:34:52.683Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Section5UncappedIndexSnapshot.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 180000,
+          "elapsed_ms": 16121,
+          "process_runtime_ms": 16121,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-13T03:35:26.554Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_Path2PilotMigrationRunner.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_Path2PilotMigrationRunner.js",
+          "parent_job_class": "control",
+          "critical": false,
+          "timeout_ms": 300000,
+          "elapsed_ms": 18212,
+          "process_runtime_ms": 18212,
+          "launch_latency_ms": null,
+          "exit_code": 2,
+          "timed_out": false,
+          "error": ""
+        },
+        {
+          "ts_utc": "2026-06-13T03:35:33.463Z",
+          "kind": "spawn_sync",
+          "name": "JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "script": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_GrokReportDeliveryBridge.js",
+          "parent_job_class": "io",
+          "critical": true,
+          "timeout_ms": 90000,
+          "elapsed_ms": 6176,
+          "process_runtime_ms": 6176,
+          "launch_latency_ms": null,
+          "exit_code": 0,
+          "timed_out": false,
+          "error": ""
         }
       ],
+      "tracked_children": [],
       "degraded_mode": false,
       "degraded_reason": "",
       "launch_budget": {
@@ -3183,36 +3173,36 @@
         "window_minutes": 10
       },
       "health": {
-        "updated_utc": "2026-06-13T03:34:36.559Z",
+        "updated_utc": "2026-06-13T03:37:42.224Z",
         "window_minutes": 10,
-        "sample_count": 13,
-        "latency_sample_count": 13,
+        "sample_count": 10,
+        "latency_sample_count": 10,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 11335,
+        "avg_process_runtime_ms": 13493,
         "timeout_count": 0,
         "timeout_rate": 0,
         "launches_last_minute": 0,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 1,
-        "tracked_child_count": 1
+        "active_child_count": 0,
+        "tracked_child_count": 0
       },
       "failsafe_events": []
     },
     "health": {
-      "updated_utc": "2026-06-13T03:34:36.559Z",
+      "updated_utc": "2026-06-13T03:37:42.224Z",
       "window_minutes": 10,
-      "sample_count": 13,
-      "latency_sample_count": 13,
+      "sample_count": 10,
+      "latency_sample_count": 10,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 11335,
+      "avg_process_runtime_ms": 13493,
       "timeout_count": 0,
       "timeout_rate": 0,
       "launches_last_minute": 0,
       "budget_per_minute": 8,
       "degraded_required": false,
-      "active_child_count": 1,
-      "tracked_child_count": 1
+      "active_child_count": 0,
+      "tracked_child_count": 0
     },
     "avg_spawn_latency_ms": 0,
     "timeout_rate": 0,
@@ -3235,7 +3225,7 @@
         "ok": true,
         "selected_base": "http://192.168.1.184:32400",
         "http_status": 200,
-        "elapsed_ms": 53,
+        "elapsed_ms": 61,
         "media_container_size": "226",
         "media_container_total_size": "226",
         "media_container_offset": "0",
