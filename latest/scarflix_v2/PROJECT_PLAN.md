@@ -1,6 +1,6 @@
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
-**Updated UTC:** 2026-06-13T03:16:43.995Z
+**Updated UTC:** 2026-06-13T03:19:32.266Z
 
 **Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
 
@@ -22,19 +22,41 @@
 
 ## PATH 2 PROTECTED PILOT MIGRATION STATUS
 
-**Updated UTC:** 2026-06-13T03:13:41.558Z
-**Status:** PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE
+**Updated UTC:** 2026-06-13T03:17:22.827Z
+**Status:** ROLLED_BACK_PILOT_ERROR
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
 ### Summary
 - Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
 - Baseline: 105/105 visible, - missing.
 - Pilot attempted: true
-- Created aliases: 1
-- Rollback performed: false
+- Created aliases: 0
+- Rollback performed: true
 
 ### Decision
-Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.
+Pilot failed before completion; rollback was performed.
+
+## Phase 5 Section 5 Uncapped Index Snapshot
+
+**Updated UTC:** 2026-06-13T03:16:43.995Z
+
+**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+
+**True baseline:** `105/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `227`
+
+**Parsed Section 5 Video rows:** `227`
+
+**Unique indexed ScarFLIX_part hashes:** `224`
+
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
+
+**Recommendation:** Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
