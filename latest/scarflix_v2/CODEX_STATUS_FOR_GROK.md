@@ -1,3 +1,12 @@
+## FOR CLAUDE/GROK PEER REVIEW -- AS-BUILT BLOCKERS AND CONGESTION PACK
+
+**Updated UTC:** 2026-06-13T13:45:00Z  
+**Status:** REVIEW_FOR_ARCHITECTURE_INPUT  
+**Raw document URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/as_built_blockers_congestion_handoff_20260613.md  
+**Raw JSON URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/as_built_blockers_congestion_handoff_20260613.json
+
+Created a full as-built / blocker / congestion handoff for Claude or Grok review. Current core blocker: Materialized QA is now stable enough to produce bounded evidence, but Plex decision probes still show socket-hangup/timeout failures and Plex DB row coverage is incomplete. Publication and broad expansion remain held.
+
 ## FOR GROK PEER REVIEW -- 16-HOUR GO-LIVE CAMPAIGN RUNNER ACTIVE
 
 **Updated UTC:** 2026-06-13T13:27:00Z  
