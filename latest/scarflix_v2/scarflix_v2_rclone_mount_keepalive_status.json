@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
     "status":  "PASS",
-    "started_utc":  "2026-06-13T21:00:02Z",
-    "ended_utc":  "2026-06-13T21:00:07Z",
+    "started_utc":  "2026-06-13T21:10:02Z",
+    "ended_utc":  "2026-06-13T21:10:12Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -13,8 +13,44 @@
     "rclone_exe_present":  true,
     "rclone_config_present":  true,
     "drive_s_present":  true,
+    "initial_mount_probe":  {
+                                "ready":  true,
+                                "media":  {
+                                              "path":  "S:\\media",
+                                              "ok":  true,
+                                              "timed_out":  false,
+                                              "ms":  4095,
+                                              "error":  ""
+                                          },
+                                "catalog":  {
+                                                "path":  "S:\\media\\catalog",
+                                                "ok":  true,
+                                                "timed_out":  false,
+                                                "ms":  3451,
+                                                "error":  ""
+                                            }
+                            },
+    "final_mount_probe":  {
+                              "ready":  true,
+                              "media":  {
+                                            "path":  "S:\\media",
+                                            "ok":  true,
+                                            "timed_out":  false,
+                                            "ms":  993,
+                                            "error":  ""
+                                        },
+                              "catalog":  {
+                                              "path":  "S:\\media\\catalog",
+                                              "ok":  true,
+                                              "timed_out":  false,
+                                              "ms":  768,
+                                              "error":  ""
+                                          }
+                          },
     "media_path_ready":  true,
     "catalog_path_ready":  true,
+    "media_path_timed_out":  false,
+    "catalog_path_timed_out":  false,
     "mount_ready":  true,
     "start":  {
                   "started":  false,
