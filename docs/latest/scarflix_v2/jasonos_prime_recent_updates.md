@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T05:40:03.476Z
+Updated UTC: 2026-06-13T05:45:02.949Z
 Source: live status merge
 
-- 2026-06-13T05:37:11.179Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
-- 2026-06-13T05:36:56Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T05:40:43.545Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
+- 2026-06-13T05:40:18Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T05:10:57Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-13T05:05:20.781Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T05:05:20Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.
 - 2026-06-13T05:05:18.990Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-13T05:05:18Z] [REVIEW] Final: REVIEW
