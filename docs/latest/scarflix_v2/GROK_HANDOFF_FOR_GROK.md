@@ -1,3 +1,68 @@
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-13T03:29:14.226Z
+**Status:** ROLLED_BACK_PILOT_ERROR
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: 105/105 visible, - missing.
+- Pilot attempted: true
+- Created aliases: 0
+- Rollback performed: true
+
+### Decision
+Pilot failed before completion; rollback was performed.
+
+## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
+
+**Updated UTC:** 2026-06-13T03:28:24.896Z
+
+**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+
+**True baseline:** `105/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `227`
+
+**Parsed Section 5 Video rows:** `227`
+
+**Unique indexed ScarFLIX_part hashes:** `224`
+
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
+
+**Recommendation:** Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+## CATALOGUE EXPANSION CAMPAIGN UPDATE -- 2026-06-13 13:30 AUSTRALIA/SYDNEY
+
+**Status:** RUNNER_ACTIVE_GATED_EXPANSION_IN_PROGRESS  
+**Campaign root:** D:\PlexTools\JasonOS_Campaigns\path2_catalogue_single_wave_20260613T031256Z  
+**Runner PID:** 14720  
+**Raw status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/catalogue_full_expansion_campaign_status.md
+
+### Current State
+
+- Sentinel: PASS / LOW.
+- Orchestrator: PASS; launch health non-degraded, timeout rate 0.
+- Plex watchdog: PASS.
+- PAUSE_PUBLICATION: True and must remain active.
+- Section 5 affected movie baseline: 105/105 visible, 0 missing.
+- Materialized QA remains stale REVIEW; delayed detached refresh is scheduled for 2026-06-13T13:55:55.0000000+10:00.
+
+### Path 2 Campaign Progress
+
+- Completed additive wave: Gremlins (1984) / scarflix_part-942255f029875306.
+- Held WebDAV preflight failures: scarflix_part-d2dc1715682f383c, scarflix_part-8f866cc77c432167, scarflix_part-bf8b8fcb4150df6b, scarflix_part-5f2b46ebc01460e6, scarflix_part-f075d703d4a5b5aa.
+- Latest failed waves rolled back before alias creation; webdav_map backups are preserved.
+- No publication, broad expansion, cleanup, deletion, source mutation, or path rewrite occurred.
+
+### Decision
+
+Continue the protected single-title campaign while gates stay green. Do not claim full catalogue expansion complete until Materialized QA refreshes cleanly and TV has a separate audited candidate lane.
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-13T03:25:22.877Z
@@ -46,21 +111,6 @@
 ### Decision
 
 Continue the protected single-title campaign while gates stay green. Do not claim full catalogue expansion complete until Materialized QA refreshes cleanly and TV has a separate audited candidate lane.
-## PATH 2 PROTECTED PILOT MIGRATION STATUS
-
-**Updated UTC:** 2026-06-13T03:23:11.883Z
-**Status:** ROLLED_BACK_PILOT_ERROR
-**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Summary
-- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: 105/105 visible, - missing.
-- Pilot attempted: true
-- Created aliases: 0
-- Rollback performed: true
-
-### Decision
-Pilot failed before completion; rollback was performed.
 
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
@@ -1857,6 +1907,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
