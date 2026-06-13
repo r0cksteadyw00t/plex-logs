@@ -1,26 +1,34 @@
 # Section 5 Uncapped Index Snapshot
 
-- Updated UTC: 2026-06-12T05:14:50.128Z
-- Status: `REVIEW_PLEX_INDEX_QUERY_FAILED`
+- Updated UTC: 2026-06-13T02:43:34.291Z
+- Status: `PASS_UNCAPPED_BASELINE_CAPTURED`
 - Read-only: true
 - PAUSE_PUBLICATION active: true
-- Plex Section 5 reported total size: unknown
-- Parsed Section 5 Video rows: 0
+- Plex Section 5 reported total size: 227
+- Parsed Section 5 Video rows: 227
 - Pages read: 1
-- Unique indexed ScarFLIX_part hashes: 0
-- Expected affected hashes present: unknown/105 (unknown%)
-- Expected affected hashes missing: unknown
+- Unique indexed ScarFLIX_part hashes: 224
+- Expected affected hashes present: 105/105 (100%)
+- Expected affected hashes missing: 0
 
 ## Conclusion
 
-No trustworthy Section 5 visibility baseline was captured because the read-only Plex Section 5 index query failed before any rows were returned.
+The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
 
 ## Next Safe Action
 
-Verify Plex Media Server is running and reachable from the Orchestrator context, then rerun this same read-only uncapped snapshot. Do not refresh, mutate, publish, or expand before a successful baseline is captured.
+Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
 
 ## Present Samples
 
+- `scarflix_part-81107989d2e30cfb` Anna -> Anna
+- `scarflix_part-c08b683f68e4e49e` Annabelle -> Annabelle
+- `scarflix_part-d8b22fb3f498688e` Annihilation -> Annihilation
+- `scarflix_part-2eaab8df357724dc` Armageddon -> Armageddon
+- `scarflix_part-6bc868616f378edf` The Ballerina -> The Ballerina
+- `scarflix_part-8aa2235ef7c1e0f6` Battleship -> Battleship
+- `scarflix_part-bd37929b54c7c1bf` Crank -> Crank
+- `scarflix_part-8312e4b6385fd16c` Creed -> Creed
 
 ## Missing Samples
 
