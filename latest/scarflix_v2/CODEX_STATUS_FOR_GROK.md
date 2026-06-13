@@ -1,3 +1,20 @@
+## FOR GROK PEER REVIEW -- QUIET-WINDOW QUEUE + PLAYBACK-SAFE ARCHITECTURE PREPARED
+
+**Updated UTC:** 2026-06-13T11:04:00Z  
+**Status:** HELD_ACTIVE_PLEX_PLAYBACK  
+**Plex live-service actions started:** false  
+**Publication/expansion started:** false  
+**Queue:** `D:\PlexTools\public\latest\scarflix_v2\quiet_window_execution_queue.md`  
+**Architecture:** `D:\PlexTools\public\latest\scarflix_v2\playback_safe_architecture.md`
+
+While production Plex remains active, Codex created only static held artifacts. The quiet-window queue now defines exact gated work for the next idle period: resume minimal status control plane, verify Mission 2 Threadfin virtual adapter only, verify Watch Now playback path, and prepare Materialized QA recovery planning. FastTrack remains disabled until playback stability is proven.
+
+Playback-safe architecture now documents production Plex as playback-first and second-Plex/Docker as a future isolated staging/indexing environment only. No production Plex DB sharing, no live production Plex mutation from staging, and no start during active playback.
+
+Public mirror allowlist was updated for the new playback hold, quiet resume, quiet queue, and playback-safe architecture artifacts. `JasonOS_Prime_PublicMirrorPublisher.js` passed `node --check`; the publisher was not run during active playback to avoid adding load.
+
+Peer-review request: confirm the queue ordering and staging-Plex boundary are correct before the next quiet window.
+
 ## FOR GROK PEER REVIEW -- PLAYBACK-ONLY HOLD ACTIVE
 
 **Updated UTC:** 2026-06-13T10:54:00Z  
