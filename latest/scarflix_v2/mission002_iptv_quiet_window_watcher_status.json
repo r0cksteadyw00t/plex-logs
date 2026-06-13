@@ -1,12 +1,12 @@
 ﻿{
     "component":  "jasonos_mission002_quiet_window_cutover_watcher",
     "schema_version":  "jasonos.iptv.quiet_window_watcher.v1",
-    "status":  "HELD_ACTIVE_PLEX_PLAYBACK",
-    "started_utc":  "2026-06-13T10:38:25Z",
-    "updated_utc":  "2026-06-13T10:38:29Z",
+    "status":  "REVIEW_THREADFIN_STARTED_OR_HELD_VERIFY_NOT_PASS",
+    "started_utc":  "2026-06-13T10:43:15Z",
+    "updated_utc":  "2026-06-13T10:44:00Z",
     "armed":  true,
     "arm_file":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\mission002_threadfin_auto_start.armed",
-    "active_plex_sessions":  1,
+    "active_plex_sessions":  0,
     "iptv_only":  true,
     "physical_tuner_used":  false,
     "plex_live_attach_attempted":  false,
@@ -14,17 +14,17 @@
     "scarflix_modified":  false,
     "readiness_status":  "PASS_CUTOVER_PACKAGE_READY_HELD",
     "preflight_status":  "HELD_ACTIVE_PLEX_PLAYBACK",
-    "verify_status_before":  "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE",
+    "verify_status_before":  "REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY",
     "actions":  [
-
+                    "quiet_window_detected_starting_threadfin_virtual_adapter"
                 ],
     "warnings":  [
-                     "active_plex_playback:1"
+                     "verify_after:REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY"
                  ],
     "errors":  [
 
                ],
-    "apply_output":  "",
-    "verify_output":  "",
+    "apply_output":  "STATUS=FAIL_THREADFIN_DOCKER_START_FAILED\r\nActivePlexSessions=0\r\nPlexTouched=False\r\nPhysicalTunerUsed=False",
+    "verify_output":  "STATUS=REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY\r\nContainerRunning=True\r\nM3uChannels=4",
     "next_safe_action":  "Watcher may start Threadfin virtual adapter when armed and Plex sessions are zero. Plex Live TV/DVR attach remains a separate quiet-window step after adapter verification."
 }
