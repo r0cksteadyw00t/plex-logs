@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T10:39:06Z",
-    "updated_utc":  "2026-06-13T10:39:32Z",
+    "started_utc":  "2026-06-13T10:44:01Z",
+    "updated_utc":  "2026-06-13T10:44:10Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  1,
@@ -59,13 +59,14 @@
                      {
                          "outcome_id":  "O-MISSION-002-IPTV",
                          "name":  "IPTV-only Live TV ready for cutover",
-                         "go_live_status":  "PASS_VIRTUAL_ADAPTER_READY_PLEX_ATTACH_HELD_ACTIVE_PLAYBACK",
-                         "progress_percent":  90,
+                         "go_live_status":  "HELD_READY_FOR_QUIET_WINDOW",
+                         "progress_percent":  80,
                          "summary":  "IPTV-only package is ready and guarded; no physical tuner path is allowed.",
                          "evidence":  [
-                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=FAIL_THREADFIN_DOCKER_START_FAILED Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=HELD_ACTIVE_PLEX_PLAYBACK PhysicalTuner=false"
+                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=FAIL_THREADFIN_DOCKER_START_FAILED Verify=REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY Watcher=REVIEW_THREADFIN_STARTED_OR_HELD_VERIFY_NOT_PASS PhysicalTuner=false"
                                       ],
                          "blockers":  [
+                                          "Threadfin virtual adapter is not verified running yet: REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY.",
                                           "Active Plex sessions hold Threadfin start and all Plex Live TV/DVR attach work."
                                       ],
                          "next_safe_action":  "Threadfin virtual adapter is ready. Hold Plex Live TV/DVR attach until there are no active sessions, then verify guide/playback and rollback if unstable.",
@@ -154,6 +155,14 @@
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "blocker":  "Active Plex playback prevents safe focused QA/expansion work."
+                     },
+                     {
+                         "outcome_id":  "O-MISSION-002-IPTV",
+                         "blocker":  "Threadfin virtual adapter is not verified running yet: REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY."
+                     },
+                     {
+                         "outcome_id":  "O-MISSION-002-IPTV",
+                         "blocker":  "Active Plex sessions hold Threadfin start and all Plex Live TV/DVR attach work."
                      },
                      {
                          "outcome_id":  "O-DAILY-AI-COMMAND",
