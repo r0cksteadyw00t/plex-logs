@@ -1,0 +1,138 @@
+{
+  "component": "scarflix_catalogue_full_expansion_campaign",
+  "schema_version": "scarflix.catalogue_expansion_campaign.v1",
+  "updated_utc": "2026-06-13T03:27:20Z",
+  "updated_local": "2026-06-13 13:27:20 +10:00",
+  "status": "RUNNER_ACTIVE_GATED_EXPANSION_IN_PROGRESS",
+  "campaign_root": "D:\\PlexTools\\JasonOS_Campaigns\\path2_catalogue_single_wave_20260613T031256Z",
+  "runner": {
+    "pid": 14720,
+    "process_alive": true,
+    "intended_duration_hours": 12,
+    "max_wave_size": 1,
+    "minimum_visible_count": 105
+  },
+  "safety": {
+    "pause_publication_active": true,
+    "sentinel_status": "PASS",
+    "sentinel_alert_level": "LOW",
+    "orchestrator_status": "PASS",
+    "launch_timeout_rate": 0,
+    "launch_degraded_required": false,
+    "no_publication_started": true,
+    "no_broad_expansion_started": true,
+    "no_cleanup_deletion_source_mutation_or_path_rewrite": true
+  },
+  "section5_baseline": {
+    "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+    "updated_utc": "2026-06-13T03:25:22.877Z",
+    "expected_count": 105,
+    "present_count": 105,
+    "missing_count": 0,
+    "present_percent": 100,
+    "plex_total_size": 227,
+    "parsed_video_rows": 227,
+    "unique_scarflix_part_hashes": 224
+  },
+  "materialized_qa": {
+    "status": "REVIEW",
+    "updated_utc": "2026-06-09T16:11:20Z",
+    "checked": 229,
+    "passed": 119,
+    "failed": 110,
+    "delayed_refresh_task": "ScarFLIX_v2_MaterializedPlexDecisionQA_Delayed",
+    "delayed_refresh_next_run_time": "2026-06-13T13:55:55.0000000+10:00"
+  },
+  "plex_watchdog": {
+    "status": "PASS",
+    "updated_utc": "2026-06-13T03:27:01.616Z",
+    "identity_http_status": null
+  },
+  "path2_execution": {
+    "active_campaign_status": "RUNNING_WITH_HELD_WAVE_FAILURE",
+    "completed_wave_count": 1,
+    "completed_titles": [
+      {
+        "title": "Gremlins",
+        "hash": "scarflix_part-942255f029875306",
+        "wave_id": "wave_20260613T031327165Z"
+      }
+    ],
+    "blocked_hashes": [
+      {
+        "hash": "scarflix_part-d2dc1715682f383c",
+        "reason": "Prior 10-title wave WebDAV preflight returned 503 for Influencers",
+        "status": "HELD_BEFORE_SINGLE_TITLE_CAMPAIGN",
+        "wave_id": null
+      },
+      {
+        "hash": "scarflix_part-8f866cc77c432167",
+        "reason": "WebDAV preflight failed before alias creation for scarflix_part-8f866cc77c432167",
+        "status": "HELD_AFTER_WAVE_FAILURE",
+        "wave_id": "wave_20260613T031702463Z"
+      },
+      {
+        "hash": "scarflix_part-bf8b8fcb4150df6b",
+        "reason": "WebDAV preflight failed before alias creation for scarflix_part-bf8b8fcb4150df6b",
+        "status": "HELD_AFTER_WAVE_FAILURE",
+        "wave_id": "wave_20260613T031947587Z"
+      },
+      {
+        "hash": "scarflix_part-5f2b46ebc01460e6",
+        "reason": "WebDAV preflight failed before alias creation for scarflix_part-5f2b46ebc01460e6",
+        "status": "HELD_AFTER_WAVE_FAILURE",
+        "wave_id": "wave_20260613T032252872Z"
+      },
+      {
+        "hash": "scarflix_part-f075d703d4a5b5aa",
+        "reason": "WebDAV preflight failed before alias creation for scarflix_part-f075d703d4a5b5aa",
+        "status": "HELD_AFTER_WAVE_FAILURE",
+        "wave_id": "wave_20260613T032538101Z"
+      }
+    ],
+    "blocked_count": 5,
+    "last_wave_status": "ROLLBACK_AFTER_RUNNER_FAILURE",
+    "last_runner_status": "ROLLED_BACK_PILOT_ERROR",
+    "last_error": "WebDAV preflight failed before alias creation for scarflix_part-f075d703d4a5b5aa",
+    "rollback_performed_on_last_failure": true
+  },
+  "held_waves": [
+    {
+      "id": "movies_visible_next_25",
+      "status": "HELD",
+      "reason": "Requires successful 10-title wave and explicit stable baseline.",
+      "max_size": 25,
+      "candidate_count": 9
+    },
+    {
+      "id": "movies_visible_next_50",
+      "status": "HELD",
+      "reason": "Requires successful 25-title wave and clean regression monitor.",
+      "max_size": 50,
+      "candidate_count": 9
+    },
+    {
+      "id": "movies_missing_retryable",
+      "status": "HELD",
+      "reason": "Missing hashes are not eligible for additive mutation until a separate proof gate exists.",
+      "max_size": 0,
+      "candidate_count": 0
+    },
+    {
+      "id": "tv_audit_seed",
+      "status": "HELD",
+      "reason": "TV work requires separate audit and low-risk pilot selection.",
+      "max_size": 0,
+      "candidate_count": 0
+    }
+  ],
+  "tv_status": {
+    "candidate_count": 0,
+    "status": "PENDING_SEPARATE_AUDIT_LANE",
+    "note": "Current Path 2 movie runner has not identified TV candidates; TV expansion must use a separate read-only discovery/audit manifest before mutation."
+  },
+  "decision": {
+    "full_catalogue_expanded": false,
+    "reason": "Protected campaign is active, but Materialized QA is stale REVIEW and TV candidate audit is not complete."
+  }
+}
