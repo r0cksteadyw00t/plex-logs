@@ -1,267 +1,68 @@
 {
   "component": "path2_pilot_migration_runner",
   "schema_version": "jasonos.path2_pilot_migration.v1",
-  "status": "PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE",
-  "started_utc": "2026-06-11T05:19:36.842Z",
-  "updated_utc": "2026-06-11T05:20:38.136Z",
+  "status": "ROLLED_BACK_PILOT_ERROR",
+  "started_utc": "2026-06-13T03:25:53.614Z",
+  "updated_utc": "2026-06-13T03:26:03.434Z",
   "incident_id": "INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610",
   "request": {
     "status": "queued",
     "source": "jasonos_prime_24h_campaign_runner",
-    "campaign_root": "D:/PlexTools/JasonOS_Campaigns/path2_final_push_20260611T045858Z",
-    "wave_id": "wave_20260611T051924871Z",
+    "campaign_root": "D:\\PlexTools\\JasonOS_Campaigns\\path2_catalogue_single_wave_20260613T031256Z",
+    "wave_id": "wave_20260613T032538101Z",
     "mode": "protected_additive_pilot",
     "additive_only": true,
-    "target_count": 10,
+    "target_count": 1,
     "target_hashes": [
-      "scarflix_part-81107989d2e30cfb",
-      "scarflix_part-519e46c6da7cf797",
-      "scarflix_part-f96ecae0bf043548",
-      "scarflix_part-c017966a31451921",
-      "scarflix_part-854736eb92c08f81",
-      "scarflix_part-61f18dcc8c34f579",
-      "scarflix_part-700e6d7fdb8236a0",
-      "scarflix_part-e9c1718338c9d187",
-      "scarflix_part-6c8723c088689b1a",
-      "scarflix_part-ebdde087ccdf789d"
+      "scarflix_part-f075d703d4a5b5aa"
     ],
     "target_titles": [
-      "Anna",
-      "Dumb and Dumber",
-      "Final Destination",
-      "Final Destination 5",
-      "Finding Dory",
-      "Fracture",
-      "Friday",
-      "Hachi: A Dog's Tale",
-      "Harakiri",
-      "Her"
+      "Raya and the Last Dragon"
     ],
     "require_pause_publication": true,
     "require_sentinel_clear": true,
-    "max_targets": 10,
-    "activation_backup_root": "D:\\PlexTools\\JasonOS_Campaigns\\path2_final_push_20260611T045858Z\\backups\\wave_20260611T051924871Z",
-    "request_backup": "D:\\PlexTools\\JasonOS_Campaigns\\path2_final_push_20260611T045858Z\\backups\\wave_20260611T051924871Z\\path2_pilot_migration_request.previous.json.bak",
-    "map_backup": "D:\\PlexTools\\JasonOS_Campaigns\\path2_final_push_20260611T045858Z\\backups\\wave_20260611T051924871Z\\webdav_map.before_wave.json.bak",
-    "requested_utc": "2026-06-11T05:19:24.895Z"
+    "max_targets": 1,
+    "activation_backup_root": "D:\\PlexTools\\JasonOS_Campaigns\\path2_catalogue_single_wave_20260613T031256Z\\backups\\wave_20260613T032538101Z",
+    "request_backup": "D:\\PlexTools\\JasonOS_Campaigns\\path2_catalogue_single_wave_20260613T031256Z\\backups\\wave_20260613T032538101Z\\path2_pilot_migration_request.previous.json.bak",
+    "map_backup": "D:\\PlexTools\\JasonOS_Campaigns\\path2_catalogue_single_wave_20260613T031256Z\\backups\\wave_20260613T032538101Z\\webdav_map.before_wave.json.bak",
+    "requested_utc": "2026-06-13T03:25:38.132Z"
   },
   "baseline": {
     "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
-    "updated_utc": "2026-06-11T05:19:06.819Z",
+    "updated_utc": "2026-06-13T03:25:22.877Z",
     "expected_count": 105,
-    "present_count": 94,
-    "missing_count": 11,
-    "present_percent": 89.5,
+    "present_count": 105,
+    "missing_count": 0,
+    "present_percent": 100,
     "minimum_required_present_count": 74
   },
   "stage_a_backup_root": "D:/PlexTools/Backups/path2_stage_a_20260610T235616Z",
-  "backup_root": "D:\\PlexTools\\Backups\\path2_pilot_2026-06-11T051936842Z",
-  "map_backup": "D:\\PlexTools\\Backups\\path2_pilot_2026-06-11T051936842Z\\webdav_map.json.bak",
+  "backup_root": "D:\\PlexTools\\Backups\\path2_pilot_2026-06-13T032553614Z",
   "pilot": {
     "attempted": true,
-    "target_count": 10,
+    "target_count": 1,
     "target_hashes": [
-      "scarflix_part-81107989d2e30cfb",
-      "scarflix_part-519e46c6da7cf797",
-      "scarflix_part-f96ecae0bf043548",
-      "scarflix_part-c017966a31451921",
-      "scarflix_part-854736eb92c08f81",
-      "scarflix_part-61f18dcc8c34f579",
-      "scarflix_part-700e6d7fdb8236a0",
-      "scarflix_part-e9c1718338c9d187",
-      "scarflix_part-6c8723c088689b1a",
-      "scarflix_part-ebdde087ccdf789d"
+      "scarflix_part-f075d703d4a5b5aa"
     ],
-    "created_aliases": [
-      {
-        "hash": "scarflix_part-81107989d2e30cfb",
-        "title": "Anna (2019)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\Anna (2019).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-        "relative_target": "ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.779Z",
-          "readlink": "ScarFLIX_part-81107989d2e30cfb\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-519e46c6da7cf797",
-        "title": "Dumb and Dumber (1994)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\Dumb and Dumber (1994).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-        "relative_target": "ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.779Z",
-          "readlink": "ScarFLIX_part-519e46c6da7cf797\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-f96ecae0bf043548",
-        "title": "Final Destination (2000)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\Final Destination (2000).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-        "relative_target": "ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.779Z",
-          "readlink": "ScarFLIX_part-f96ecae0bf043548\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-c017966a31451921",
-        "title": "Final Destination 5 (2011)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\Final Destination 5 (2011).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-        "relative_target": "ScarFLIX_part-c017966a31451921\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-c017966a31451921\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-854736eb92c08f81",
-        "title": "Finding Dory (2016)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\Finding Dory (2016).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-        "relative_target": "ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-854736eb92c08f81\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-61f18dcc8c34f579",
-        "title": "Fracture (2007)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\Fracture (2007).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-        "relative_target": "ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-61f18dcc8c34f579\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-700e6d7fdb8236a0",
-        "title": "Friday (1995)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\Friday (1995).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-        "relative_target": "ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-e9c1718338c9d187",
-        "title": "Hachi A Dog's Tale (2009)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\Hachi A Dog's Tale (2009).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
-        "relative_target": "ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-e9c1718338c9d187\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-6c8723c088689b1a",
-        "title": "Harakiri (1962)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\Harakiri (1962).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
-        "relative_target": "ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-6c8723c088689b1a\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      },
-      {
-        "hash": "scarflix_part-ebdde087ccdf789d",
-        "title": "Her (2013)",
-        "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\Her (2013).mkv",
-        "legacy_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
-        "relative_target": "ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
-        "alias_stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-ebdde087ccdf789d\\stream.mkv"
-        },
-        "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2"
-      }
-    ]
+    "created_aliases": []
   },
   "preflight": [
     {
-      "hash": "scarflix_part-81107989d2e30cfb",
-      "title": "Anna (2019)",
-      "webdav_path": "/media/ScarFLIX_part-81107989d2e30cfb/stream.mkv",
+      "hash": "scarflix_part-f075d703d4a5b5aa",
+      "title": "Raya and the Last Dragon (2021)",
+      "webdav_path": "/media/ScarFLIX_part-f075d703d4a5b5aa/stream.mkv",
       "legacy_local_dir_object": {
         "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-81107989d2e30cfb",
+        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Raya and the Last Dragon (2021)\\ScarFLIX_part-f075d703d4a5b5aa",
+        "expected_readlink": "S:\\media\\ScarFLIX_part-f075d703d4a5b5aa",
         "stat": {
           "exists": true,
           "is_symbolic_link": true,
           "is_directory": false,
           "is_file": false,
           "size": 39,
-          "mtime_utc": "2026-06-09T09:39:44.268Z",
-          "readlink": "S:\\media\\ScarFLIX_part-81107989d2e30cfb"
+          "mtime_utc": "2026-06-09T05:28:48.671Z",
+          "readlink": "S:\\media\\ScarFLIX_part-f075d703d4a5b5aa"
         }
       },
       "legacy_local_path_dereference_skipped": true,
@@ -269,32 +70,32 @@
       "plex_index_check": {
         "ok": true,
         "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-81107989d2e30cfb",
-        "title": "Anna (2019)",
+        "hash": "scarflix_part-f075d703d4a5b5aa",
+        "title": "Raya and the Last Dragon (2021)",
         "match_count": 1,
         "matches": [
           {
-            "hash": "scarflix_part-81107989d2e30cfb",
-            "title": "Anna",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
+            "hash": "scarflix_part-f075d703d4a5b5aa",
+            "title": "Raya and the Last Dragon",
+            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Raya and the Last Dragon (2021)\\ScarFLIX_part-f075d703d4a5b5aa\\stream.mkv",
             "prior_status": "FAIL",
             "prior_reason": "timeout",
             "webdav_map_entry_present": true,
             "plex_present": true,
             "plex_matches": [
               {
-                "hash": "scarflix_part-81107989d2e30cfb",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-                "title": "Anna",
-                "year": "2019",
-                "rating_key": "49485",
+                "hash": "scarflix_part-f075d703d4a5b5aa",
+                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Raya and the Last Dragon (2021)\\ScarFLIX_part-f075d703d4a5b5aa\\stream.mkv",
+                "title": "Raya and the Last Dragon",
+                "year": "2021",
+                "rating_key": "49113",
                 "library_section_id": ""
               }
             ],
             "path_pattern": {
               "depth": 9,
               "scarflix_part_index": 7,
-              "parent_folder": "Anna (2019)",
+              "parent_folder": "Raya and the Last Dragon (2021)",
               "grandparent_folder": "06 Discover Movies",
               "under_hybrid_movies_live": true
             }
@@ -302,1560 +103,81 @@
         ]
       },
       "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1388
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1388
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-519e46c6da7cf797",
-      "title": "Dumb and Dumber (1994)",
-      "webdav_path": "/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-519e46c6da7cf797",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T06:10:37.000Z",
-          "readlink": "S:\\media\\ScarFLIX_part-519e46c6da7cf797"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-519e46c6da7cf797",
-        "title": "Dumb and Dumber (1994)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-519e46c6da7cf797",
-            "title": "Dumb and Dumber",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-519e46c6da7cf797",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-                "title": "ScarFLIX Part 519e46c6da7cf797",
-                "year": "",
-                "rating_key": "49057",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Dumb and Dumber (1994)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1327
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1327
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-f96ecae0bf043548",
-      "title": "Final Destination (2000)",
-      "webdav_path": "/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-f96ecae0bf043548",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T06:13:42.339Z",
-          "readlink": "S:\\media\\ScarFLIX_part-f96ecae0bf043548"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-f96ecae0bf043548",
-        "title": "Final Destination (2000)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-f96ecae0bf043548",
-            "title": "Final Destination",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-f96ecae0bf043548",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-                "title": "ScarFLIX Part F96ecae0bf043548",
-                "year": "",
-                "rating_key": "49055",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Final Destination (2000)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1348
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1348
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-c017966a31451921",
-      "title": "Final Destination 5 (2011)",
-      "webdav_path": "/media/ScarFLIX_part-c017966a31451921/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-c017966a31451921",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T10:11:11.371Z",
-          "readlink": "S:\\media\\ScarFLIX_part-c017966a31451921"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-c017966a31451921",
-        "title": "Final Destination 5 (2011)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-c017966a31451921",
-            "title": "Final Destination 5",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-c017966a31451921",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-                "title": "Final Destination 5",
-                "year": "2011",
-                "rating_key": "49390",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-c017966a31451921",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-                "title": "ScarFLIX Part C017966a31451921",
-                "year": "",
-                "rating_key": "49389",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-c017966a31451921",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-                "title": "ScarFLIX Part C017966a31451921",
-                "year": "",
-                "rating_key": "49391",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Final Destination 5 (2011)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1451
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1451
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-854736eb92c08f81",
-      "title": "Finding Dory (2016)",
-      "webdav_path": "/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-854736eb92c08f81",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T06:31:54.082Z",
-          "readlink": "S:\\media\\ScarFLIX_part-854736eb92c08f81"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-854736eb92c08f81",
-        "title": "Finding Dory (2016)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-854736eb92c08f81",
-            "title": "Finding Dory",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-854736eb92c08f81",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-                "title": "ScarFLIX Part 854736eb92c08f81",
-                "year": "",
-                "rating_key": "49036",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Finding Dory (2016)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1513
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1513
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-61f18dcc8c34f579",
-      "title": "Fracture (2007)",
-      "webdav_path": "/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-61f18dcc8c34f579",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T10:07:50.237Z",
-          "readlink": "S:\\media\\ScarFLIX_part-61f18dcc8c34f579"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-61f18dcc8c34f579",
-        "title": "Fracture (2007)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-61f18dcc8c34f579",
-            "title": "Fracture",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-61f18dcc8c34f579",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-                "title": "ScarFLIX Part 61f18dcc8c34f579",
-                "year": "",
-                "rating_key": "49401",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Fracture (2007)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1445
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1445
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-700e6d7fdb8236a0",
-      "title": "Friday (1995)",
-      "webdav_path": "/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-700e6d7fdb8236a0",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T10:17:53.668Z",
-          "readlink": "S:\\media\\ScarFLIX_part-700e6d7fdb8236a0"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-700e6d7fdb8236a0",
-        "title": "Friday (1995)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-700e6d7fdb8236a0",
-            "title": "Friday",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-700e6d7fdb8236a0",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-                "title": "Friday",
-                "year": "1995",
-                "rating_key": "49377",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-700e6d7fdb8236a0",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-                "title": "ScarFLIX Part 700e6d7fdb8236a0",
-                "year": "",
-                "rating_key": "49378",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-700e6d7fdb8236a0",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-                "title": "ScarFLIX Part 700e6d7fdb8236a0",
-                "year": "",
-                "rating_key": "49379",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-700e6d7fdb8236a0",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-                "title": "ScarFLIX Part 700e6d7fdb8236a0",
-                "year": "",
-                "rating_key": "49380",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Friday (1995)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1676
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1676
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-e9c1718338c9d187",
-      "title": "Hachi A Dog's Tale (2009)",
-      "webdav_path": "/media/ScarFLIX_part-e9c1718338c9d187/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\ScarFLIX_part-e9c1718338c9d187",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-e9c1718338c9d187",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T05:57:24.840Z",
-          "readlink": "S:\\media\\ScarFLIX_part-e9c1718338c9d187"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-e9c1718338c9d187",
-        "title": "Hachi A Dog's Tale (2009)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-e9c1718338c9d187",
-            "title": "Hachi: A Dog's Tale",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-e9c1718338c9d187",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog&#39;s Tale (2009)\\ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
-                "title": "ScarFLIX Part E9c1718338c9d187",
-                "year": "",
-                "rating_key": "49084",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Hachi A Dog's Tale (2009)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
+        "ok": false,
         "attempts": [
           {
             "attempt": 1,
             "ok": false,
             "error": "timeout",
-            "duration_ms": 4010
+            "duration_ms": 5012
           },
           {
             "attempt": 2,
             "ok": false,
-            "error": "timeout",
-            "duration_ms": 5016
+            "status_code": 503,
+            "duration_ms": 911
           },
           {
             "attempt": 3,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1372
+            "ok": false,
+            "status_code": 503,
+            "duration_ms": 840
           }
         ],
         "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1372
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-6c8723c088689b1a",
-      "title": "Harakiri (1962)",
-      "webdav_path": "/media/ScarFLIX_part-6c8723c088689b1a/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\ScarFLIX_part-6c8723c088689b1a",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-6c8723c088689b1a",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T03:54:24.978Z",
-          "readlink": "S:\\media\\ScarFLIX_part-6c8723c088689b1a"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-6c8723c088689b1a",
-        "title": "Harakiri (1962)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-6c8723c088689b1a",
-            "title": "Harakiri",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-6c8723c088689b1a",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
-                "title": "ScarFLIX Part 6c8723c088689b1a",
-                "year": "",
-                "rating_key": "49138",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Harakiri (1962)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": false,
-            "error": "timeout",
-            "duration_ms": 4011
-          },
-          {
-            "attempt": 2,
-            "ok": false,
-            "error": "timeout",
-            "duration_ms": 5002
-          },
-          {
-            "attempt": 3,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1376
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1376
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-ebdde087ccdf789d",
-      "title": "Her (2013)",
-      "webdav_path": "/media/ScarFLIX_part-ebdde087ccdf789d/stream.mkv",
-      "legacy_local_dir_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\ScarFLIX_part-ebdde087ccdf789d",
-        "expected_readlink": "S:\\media\\ScarFLIX_part-ebdde087ccdf789d",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 39,
-          "mtime_utc": "2026-06-09T05:50:23.300Z",
-          "readlink": "S:\\media\\ScarFLIX_part-ebdde087ccdf789d"
-        }
-      },
-      "legacy_local_path_dereference_skipped": true,
-      "legacy_local_path_skip_reason": "LocalSystem cannot reliably dereference S:-backed rclone symlink targets; verifying symlink object/readlink only.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-ebdde087ccdf789d",
-        "title": "Her (2013)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-ebdde087ccdf789d",
-            "title": "Her",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-ebdde087ccdf789d",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
-                "title": "ScarFLIX Part Ebdde087ccdf789d",
-                "year": "",
-                "rating_key": "49089",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Her (2013)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_preflight": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": false,
-            "error": "timeout",
-            "duration_ms": 4002
-          },
-          {
-            "attempt": 2,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 4935
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 4935
+          "attempt": 3,
+          "ok": false,
+          "status_code": 503,
+          "duration_ms": 840
         }
       }
     }
   ],
-  "verification": [
-    {
-      "hash": "scarflix_part-81107989d2e30cfb",
-      "title": "Anna (2019)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\Anna (2019).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\Anna (2019).mkv",
-        "expected_readlink": "ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.779Z",
-          "readlink": "ScarFLIX_part-81107989d2e30cfb\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-81107989d2e30cfb",
-        "title": "Anna (2019)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-81107989d2e30cfb",
-            "title": "Anna",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-81107989d2e30cfb",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb\\stream.mkv",
-                "title": "Anna",
-                "year": "2019",
-                "rating_key": "49485",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Anna (2019)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1400
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1400
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-519e46c6da7cf797",
-      "title": "Dumb and Dumber (1994)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\Dumb and Dumber (1994).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\Dumb and Dumber (1994).mkv",
-        "expected_readlink": "ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.779Z",
-          "readlink": "ScarFLIX_part-519e46c6da7cf797\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-519e46c6da7cf797",
-        "title": "Dumb and Dumber (1994)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-519e46c6da7cf797",
-            "title": "Dumb and Dumber",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-519e46c6da7cf797",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
-                "title": "ScarFLIX Part 519e46c6da7cf797",
-                "year": "",
-                "rating_key": "49057",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Dumb and Dumber (1994)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1335
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1335
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-f96ecae0bf043548",
-      "title": "Final Destination (2000)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\Final Destination (2000).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\Final Destination (2000).mkv",
-        "expected_readlink": "ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.779Z",
-          "readlink": "ScarFLIX_part-f96ecae0bf043548\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-f96ecae0bf043548",
-        "title": "Final Destination (2000)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-f96ecae0bf043548",
-            "title": "Final Destination",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-f96ecae0bf043548",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
-                "title": "ScarFLIX Part F96ecae0bf043548",
-                "year": "",
-                "rating_key": "49055",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Final Destination (2000)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1837
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1837
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-c017966a31451921",
-      "title": "Final Destination 5 (2011)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\Final Destination 5 (2011).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\Final Destination 5 (2011).mkv",
-        "expected_readlink": "ScarFLIX_part-c017966a31451921\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-c017966a31451921\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-c017966a31451921",
-        "title": "Final Destination 5 (2011)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-c017966a31451921",
-            "title": "Final Destination 5",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-c017966a31451921",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-                "title": "Final Destination 5",
-                "year": "2011",
-                "rating_key": "49390",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-c017966a31451921",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-                "title": "ScarFLIX Part C017966a31451921",
-                "year": "",
-                "rating_key": "49389",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-c017966a31451921",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
-                "title": "ScarFLIX Part C017966a31451921",
-                "year": "",
-                "rating_key": "49391",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Final Destination 5 (2011)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1399
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1399
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-854736eb92c08f81",
-      "title": "Finding Dory (2016)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\Finding Dory (2016).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\Finding Dory (2016).mkv",
-        "expected_readlink": "ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-854736eb92c08f81\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-854736eb92c08f81",
-        "title": "Finding Dory (2016)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-854736eb92c08f81",
-            "title": "Finding Dory",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-854736eb92c08f81",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
-                "title": "ScarFLIX Part 854736eb92c08f81",
-                "year": "",
-                "rating_key": "49036",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Finding Dory (2016)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1425
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1425
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-61f18dcc8c34f579",
-      "title": "Fracture (2007)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\Fracture (2007).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\Fracture (2007).mkv",
-        "expected_readlink": "ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-61f18dcc8c34f579\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-61f18dcc8c34f579",
-        "title": "Fracture (2007)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-61f18dcc8c34f579",
-            "title": "Fracture",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-61f18dcc8c34f579",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
-                "title": "ScarFLIX Part 61f18dcc8c34f579",
-                "year": "",
-                "rating_key": "49401",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Fracture (2007)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1409
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1409
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-700e6d7fdb8236a0",
-      "title": "Friday (1995)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\Friday (1995).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\Friday (1995).mkv",
-        "expected_readlink": "ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-700e6d7fdb8236a0",
-        "title": "Friday (1995)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-700e6d7fdb8236a0",
-            "title": "Friday",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-700e6d7fdb8236a0",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-                "title": "Friday",
-                "year": "1995",
-                "rating_key": "49377",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-700e6d7fdb8236a0",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-                "title": "ScarFLIX Part 700e6d7fdb8236a0",
-                "year": "",
-                "rating_key": "49378",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-700e6d7fdb8236a0",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-                "title": "ScarFLIX Part 700e6d7fdb8236a0",
-                "year": "",
-                "rating_key": "49379",
-                "library_section_id": ""
-              },
-              {
-                "hash": "scarflix_part-700e6d7fdb8236a0",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
-                "title": "ScarFLIX Part 700e6d7fdb8236a0",
-                "year": "",
-                "rating_key": "49380",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Friday (1995)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1286
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1286
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-e9c1718338c9d187",
-      "title": "Hachi A Dog's Tale (2009)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\Hachi A Dog's Tale (2009).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\Hachi A Dog's Tale (2009).mkv",
-        "expected_readlink": "ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-e9c1718338c9d187\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-e9c1718338c9d187",
-        "title": "Hachi A Dog's Tale (2009)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-e9c1718338c9d187",
-            "title": "Hachi: A Dog's Tale",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-e9c1718338c9d187",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog&#39;s Tale (2009)\\ScarFLIX_part-e9c1718338c9d187\\stream.mkv",
-                "title": "ScarFLIX Part E9c1718338c9d187",
-                "year": "",
-                "rating_key": "49084",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Hachi A Dog's Tale (2009)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1608
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1608
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-6c8723c088689b1a",
-      "title": "Harakiri (1962)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\Harakiri (1962).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\Harakiri (1962).mkv",
-        "expected_readlink": "ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-6c8723c088689b1a\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-6c8723c088689b1a",
-        "title": "Harakiri (1962)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-6c8723c088689b1a",
-            "title": "Harakiri",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-6c8723c088689b1a",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\ScarFLIX_part-6c8723c088689b1a\\stream.mkv",
-                "title": "ScarFLIX Part 6c8723c088689b1a",
-                "year": "",
-                "rating_key": "49138",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Harakiri (1962)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1294
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1294
-        }
-      }
-    },
-    {
-      "hash": "scarflix_part-ebdde087ccdf789d",
-      "title": "Her (2013)",
-      "alias_local_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\Her (2013).mkv",
-      "verification_model": "service_context_symlink_object_plus_webdav_preflight_v2",
-      "alias_symlink_object": {
-        "ok": true,
-        "path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\Her (2013).mkv",
-        "expected_readlink": "ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
-        "stat": {
-          "exists": true,
-          "is_symbolic_link": true,
-          "is_directory": false,
-          "is_file": false,
-          "size": 41,
-          "mtime_utc": "2026-06-11T05:20:23.794Z",
-          "readlink": "ScarFLIX_part-ebdde087ccdf789d\\stream.mkv"
-        }
-      },
-      "legacy_stream_dereference_skipped": true,
-      "legacy_stream_skip_reason": "LocalSystem service context must not dereference S:-backed rclone symlink targets.",
-      "plex_index_check": {
-        "ok": true,
-        "source": "section5_uncapped_index_snapshot_status.json",
-        "hash": "scarflix_part-ebdde087ccdf789d",
-        "title": "Her (2013)",
-        "match_count": 1,
-        "matches": [
-          {
-            "hash": "scarflix_part-ebdde087ccdf789d",
-            "title": "Her",
-            "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
-            "prior_status": "FAIL",
-            "prior_reason": "timeout",
-            "webdav_map_entry_present": true,
-            "plex_present": true,
-            "plex_matches": [
-              {
-                "hash": "scarflix_part-ebdde087ccdf789d",
-                "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\ScarFLIX_part-ebdde087ccdf789d\\stream.mkv",
-                "title": "ScarFLIX Part Ebdde087ccdf789d",
-                "year": "",
-                "rating_key": "49089",
-                "library_section_id": ""
-              }
-            ],
-            "path_pattern": {
-              "depth": 9,
-              "scarflix_part_index": 7,
-              "parent_folder": "Her (2013)",
-              "grandparent_folder": "06 Discover Movies",
-              "under_hybrid_movies_live": true
-            }
-          }
-        ]
-      },
-      "webdav_head": {
-        "ok": true,
-        "attempts": [
-          {
-            "attempt": 1,
-            "ok": true,
-            "status_code": 200,
-            "duration_ms": 1329
-          }
-        ],
-        "final": {
-          "ok": true,
-          "status_code": 200,
-          "duration_ms": 1329
-        }
-      }
-    }
-  ],
+  "verification": [],
   "rollback": {
-    "performed": false,
-    "rollback_source": "D:\\PlexTools\\Backups\\path2_pilot_2026-06-11T051936842Z\\webdav_map.json.bak",
-    "alias_paths": [
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\Anna (2019).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\Dumb and Dumber (1994).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\Final Destination (2000).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\Final Destination 5 (2011).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\Finding Dory (2016).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\Fracture (2007).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\Friday (1995).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Hachi A Dog's Tale (2009)\\Hachi A Dog's Tale (2009).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Harakiri (1962)\\Harakiri (1962).mkv",
-      "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Her (2013)\\Her (2013).mkv"
-    ]
+    "performed": true,
+    "result": {
+      "rollback_reasons": [
+        "WebDAV preflight failed before alias creation for scarflix_part-f075d703d4a5b5aa"
+      ],
+      "actions": [
+        {
+          "path": "D:\\PlexTools\\state\\scarflix_v2\\webdav_map.json",
+          "action": "restored_webdav_map_backup"
+        }
+      ]
+    }
   },
-  "decision": "Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.",
+  "error": "WebDAV preflight failed before alias creation for scarflix_part-f075d703d4a5b5aa",
+  "decision": "Pilot failed before completion; rollback was performed.",
   "pause_publication_active": true,
   "no_publication_started": true,
   "no_expansion_started": true,
-  "no_cleanup_performed": true,
-  "no_deletion_performed": true,
   "safety": {
     "sentinel": {
       "component": "jasonos_prime_sentinel_node",
       "status": "PASS",
       "alert_level": "LOW",
-      "updated_utc": "2026-06-11T05:15:03Z",
+      "updated_utc": "2026-06-13T03:25:03Z",
       "duration_seconds": 0,
       "jason_action_required": false,
       "codex_action_required": false,
-      "repeat_count": 3,
+      "repeat_count": 280,
       "signals": {
         "controller_status": "PASS",
         "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-        "controller_age_minutes": 4,
+        "controller_age_minutes": 5,
         "watchdog_status": "REVIEW",
         "watchdog_risk": "Medium",
         "watchdog_age_minutes": 5,
         "dashboard_status": "PASS",
-        "dashboard_age_minutes": 0,
+        "dashboard_age_minutes": 5,
         "mirror_status": "PASS",
         "mirror_age_minutes": 3,
         "checkpoint_status": "PASS",
         "checkpoint_step": "platform_gate_pass",
-        "checkpoint_age_minutes": 4556,
-        "durable_platform_gate_age_minutes": 4556,
+        "checkpoint_age_minutes": 7326,
+        "durable_platform_gate_age_minutes": 7326,
         "platform_progress_fresh": false
       },
       "recovery_actions": [],
@@ -1870,7 +192,7 @@
     "orchestrator": {
       "component": "jasonos_prime_orchestrator",
       "status": "PASS",
-      "updated_utc": "2026-06-11T05:19:36.779Z",
+      "updated_utc": "2026-06-13T03:25:53.450Z",
       "version": "0.1.0",
       "pid": 12716,
       "owner": "jasonos-orchestrator-12716",
@@ -1878,14 +200,20 @@
       "sqlite_status": "PASS_node:sqlite",
       "db_path": "D:\\PlexTools\\state\\jasonos_prime\\jasonos.db",
       "health_url": "http://127.0.0.1:8815/healthz",
-      "last_tick_utc": "2026-06-11T05:19:36.744Z",
+      "last_tick_utc": "2026-06-13T03:25:52.392Z",
       "last_error": "",
       "active_jobs": [
         {
-          "id": "job_aa7f7ca51e6893a5",
+          "id": "job_ec88e3989d93adef",
+          "type": "launch_health_monitor",
+          "queue": "control",
+          "started_utc": "2026-06-13T03:25:53.433Z"
+        },
+        {
+          "id": "job_9b2662a856477103",
           "type": "path2_pilot_migration",
           "queue": "control",
-          "started_utc": "2026-06-11T05:19:36.769Z"
+          "started_utc": "2026-06-13T03:25:53.436Z"
         }
       ],
       "pause": {
@@ -1901,19 +229,19 @@
         "degraded": false
       },
       "launch_health": {
-        "updated_utc": "2026-06-11T05:19:36.779Z",
+        "updated_utc": "2026-06-13T03:25:53.450Z",
         "window_minutes": 10,
-        "sample_count": 7,
-        "latency_sample_count": 7,
+        "sample_count": 11,
+        "latency_sample_count": 11,
         "avg_spawn_latency_ms": 0,
-        "avg_process_runtime_ms": 14746,
+        "avg_process_runtime_ms": 11248,
         "timeout_count": 0,
         "timeout_rate": 0,
-        "launches_last_minute": 1,
+        "launches_last_minute": 2,
         "budget_per_minute": 8,
         "degraded_required": false,
-        "active_child_count": 0,
-        "tracked_child_count": 0
+        "active_child_count": 1,
+        "tracked_child_count": 1
       },
       "degraded_mode": {
         "active": false,
@@ -1934,7 +262,7 @@
         "schema_version": "jasonos.hands_off_operation.v1",
         "status": "REVIEW_ESCALATION_REQUIRED",
         "operating_model": "TRUE_HANDS_OFF_ACTIVE_PERMANENT",
-        "updated_utc": "2026-06-11T05:14:40.680Z",
+        "updated_utc": "2026-06-13T03:19:30.310Z",
         "external_input_policy": "exception_only",
         "primary_operator": "JasonOS_Prime_Orchestrator",
         "grok_role": "occasional_high_level_strategy_and_periodic_review",
@@ -1948,10 +276,10 @@
           "destructive_or_high_blast_radius_actions_autonomous": false
         },
         "safety_snapshot": {
-          "dashboard_updated_utc": "2026-06-11T05:10:02Z",
-          "sentinel_status": "ALERT",
-          "sentinel_alert": "HIGH",
-          "codex_action_required": true,
+          "dashboard_updated_utc": "2026-06-13T03:15:02Z",
+          "sentinel_status": "PASS",
+          "sentinel_alert": "LOW",
+          "codex_action_required": false,
           "jason_action_required": false,
           "materialized_qa_status": "REVIEW",
           "materialized_qa_checked": 229,
@@ -1961,19 +289,19 @@
           "broad_legacy_resolver_expansion_paused": true
         },
         "launch_health": {
-          "updated_utc": "2026-06-11T05:14:40.676Z",
+          "updated_utc": "2026-06-13T03:19:30.307Z",
           "window_minutes": 10,
-          "sample_count": 1,
-          "latency_sample_count": 1,
+          "sample_count": 14,
+          "latency_sample_count": 14,
           "avg_spawn_latency_ms": 0,
-          "avg_process_runtime_ms": 0,
+          "avg_process_runtime_ms": 11157,
           "timeout_count": 0,
           "timeout_rate": 0,
           "launches_last_minute": 0,
           "budget_per_minute": 8,
           "degraded_required": false,
-          "active_child_count": 0,
-          "tracked_child_count": 0
+          "active_child_count": 1,
+          "tracked_child_count": 1
         },
         "degraded_mode": {
           "active": false,
@@ -2010,17 +338,21 @@
         ],
         "progress_signature": "qa=REVIEW:119/229:110|incident=ACTIVE_DIAGNOSE:ACTIVE_DIAGNOSE_PLEX_METADATA_PATH_MAPPING_MISMATCH|user_probe=PASS_TINY_USER_CONTEXT_PROBE_COMPLETE:8/8:0|timing_plan=PASS_PLAN_READY_STATUS_ONLY:8|timing_results=PASS_TINY_TIMING_PROBE_COMPLETE:8:0|plex_map_comparison=PASS_SAME_SAMPLE_METADATA_COMPARISON_COMPLETE:0|delivery=PASS_DELIVERED_TO_GROK_API:REAL_API|instruction_loop=PASS_TRACKING",
         "progress_made_this_cycle": false,
-        "no_progress_cycles": 219,
-        "last_meaningful_progress_utc": "2026-06-10T07:49:36.846Z",
-        "queued_jobs": [],
+        "no_progress_cycles": 224,
+        "last_meaningful_progress_utc": "2026-06-12T04:34:08.950Z",
+        "queued_jobs": [
+          {
+            "type": "autonomous_incident_manager",
+            "id": "job_9f19af16e88e4cac"
+          }
+        ],
         "actions_taken": [
+          "Queued safe bounded control-plane jobs: autonomous_incident_manager",
           "Maintaining Materialized QA recovery as a standing objective using Strategy A path model."
         ],
-        "blockers": [
-          "Sentinel ALERT/HIGH; autonomous work held."
-        ],
+        "blockers": [],
         "escalation_required": true,
-        "escalation_reason": "Sentinel ALERT/HIGH; autonomous work held.; No semantic progress for 219 hands-off cycles.",
+        "escalation_reason": "No semantic progress for 224 hands-off cycles.",
         "no_publication_started": true,
         "no_expansion_started": true,
         "no_cleanup_performed": true,
@@ -2030,58 +362,30 @@
       "instruction_loop": {
         "component": "jasonos_prime_instruction_loop",
         "status": "PASS_TRACKING",
-        "updated_utc": "2026-06-11T05:19:36.779Z",
+        "updated_utc": "2026-06-13T03:25:53.449Z",
         "instruction_count": 50,
         "classification_counts": {
-          "Safe": 21,
-          "Review": 29,
+          "Safe": 17,
+          "Review": 33,
           "Requires Human Approval": 0
         },
         "status_counts": {
-          "executed": 21,
+          "executed": 17,
           "safe_queued": 0,
-          "blocked_review": 29,
+          "blocked_review": 33,
           "requires_human_approval": 0,
           "review_action_failed": 0
         },
-        "blocked_or_review_count": 29,
-        "last_instruction_id": "phase0_record_sentinel_baseline_hold_20260611_v60",
+        "blocked_or_review_count": 33,
+        "last_instruction_id": "phase0_record_protected_qa_recovery_strategy_20260613_v2",
         "last_instruction_status": "blocked_review",
         "last_ingest_utc": "",
         "last_execution_utc": "",
         "recent_instructions": [
           {
-            "instruction_id": "phase0_record_sentinel_baseline_hold_20260611_v60",
-            "created_utc": "2026-06-11T05:15:10Z",
-            "expires_utc": "2026-06-12T05:15:10Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_sentinel_low_baseline_hold_20260611_v59",
-            "created_utc": "2026-06-11T04:59:06Z",
-            "expires_utc": "2026-06-12T04:59:06Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "executed",
-            "classification": "Safe",
-            "reasons": [
-              "approved_safe_instruction"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_sentinel_hold_forensic_baseline_20260611_v58",
-            "created_utc": "2026-06-11T04:10:49Z",
-            "expires_utc": "2026-06-12T04:10:49Z",
+            "instruction_id": "phase0_record_protected_qa_recovery_strategy_20260613_v2",
+            "created_utc": "2026-06-13T03:10:36Z",
+            "expires_utc": "2026-06-14T03:10:36Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2093,9 +397,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_sentinel_hold_strategy_20260611_v57",
-            "created_utc": "2026-06-11T03:54:19Z",
-            "expires_utc": "2026-06-12T03:54:19Z",
+            "instruction_id": "phase0_record_protected_qa_recovery_strategy_20260613_v1",
+            "created_utc": "2026-06-13T02:54:05Z",
+            "expires_utc": "2026-06-14T02:54:05Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2107,107 +411,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_sentinel_hold_strategy_20260611_v56",
-            "created_utc": "2026-06-11T03:38:48Z",
-            "expires_utc": "2026-06-12T03:38:48Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_strategy_note"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_section5_baseline_strategy_hold_20260611_v55",
-            "created_utc": "2026-06-11T03:06:29Z",
-            "expires_utc": "2026-06-12T03:06:29Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_strategy_note"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_section5_forensic_baseline_hold_20260611_v54",
-            "created_utc": "2026-06-11T02:34:47Z",
-            "expires_utc": "2026-06-12T02:34:47Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_path2_verification_hold_20260611_v53",
-            "created_utc": "2026-06-11T01:45:31Z",
-            "expires_utc": "2026-06-12T01:45:31Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_path2_verification_hold_20260611_v52",
-            "created_utc": "2026-06-11T01:29:22Z",
-            "expires_utc": "2026-06-12T01:29:22Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_pilot_rollback_diagnostic_hold_20260611_v51",
-            "created_utc": "2026-06-11T01:13:36Z",
-            "expires_utc": "2026-06-12T01:13:36Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_section5_forensic_baseline_diff_20260611_v50",
-            "created_utc": "2026-06-11T00:57:51Z",
-            "expires_utc": "2026-06-12T00:57:51Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_section5_stabilization_hold_20260611_v49",
-            "created_utc": "2026-06-11T00:41:11Z",
-            "expires_utc": "2026-06-12T00:41:11Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260613_v93",
+            "created_utc": "2026-06-13T02:38:19Z",
+            "expires_utc": "2026-06-14T02:38:19Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2219,9 +425,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_section5_stabilization_hold_20260611_v48",
-            "created_utc": "2026-06-11T00:09:39Z",
-            "expires_utc": "2026-06-12T00:09:39Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260613_v92",
+            "created_utc": "2026-06-13T02:22:05Z",
+            "expires_utc": "2026-06-14T02:22:05Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2233,9 +439,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_section5_hold_record_20260610_v47",
-            "created_utc": "2026-06-10T23:53:09Z",
-            "expires_utc": "2026-06-11T23:53:09Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260613_v91",
+            "created_utc": "2026-06-13T02:05:19Z",
+            "expires_utc": "2026-06-14T02:05:19Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2247,9 +453,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_section5_forensic_hold_20260610_v46",
-            "created_utc": "2026-06-10T23:36:53Z",
-            "expires_utc": "2026-06-11T23:36:53Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260613_v90",
+            "created_utc": "2026-06-13T01:48:33Z",
+            "expires_utc": "2026-06-14T01:48:33Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2261,9 +467,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_section5_forensic_hold_20260610_v45",
-            "created_utc": "2026-06-10T23:21:48Z",
-            "expires_utc": "2026-06-11T23:21:48Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260613_v89",
+            "created_utc": "2026-06-13T01:31:47Z",
+            "expires_utc": "2026-06-14T01:31:47Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2275,9 +481,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_section5_forensic_hold_20260610_v44",
-            "created_utc": "2026-06-10T23:05:40Z",
-            "expires_utc": "2026-06-11T23:05:40Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260613_v88",
+            "created_utc": "2026-06-13T01:16:02Z",
+            "expires_utc": "2026-06-14T01:16:02Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2289,9 +495,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_section5_diagnostic_hold_20260610_v43",
-            "created_utc": "2026-06-10T22:48:50Z",
-            "expires_utc": "2026-06-11T22:48:50Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260613_v87",
+            "created_utc": "2026-06-13T00:59:31Z",
+            "expires_utc": "2026-06-14T00:59:31Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2303,9 +509,23 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_section5_diagnostic_hold_20260610_v42",
-            "created_utc": "2026-06-10T22:33:05Z",
-            "expires_utc": "2026-06-11T22:33:05Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260613_v86",
+            "created_utc": "2026-06-13T00:43:46Z",
+            "expires_utc": "2026-06-14T00:43:46Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260613_v85",
+            "created_utc": "2026-06-13T00:27:30Z",
+            "expires_utc": "2026-06-14T00:27:30Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2317,37 +537,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_section5_diagnostic_status_20260610_v41",
-            "created_utc": "2026-06-10T22:17:24Z",
-            "expires_utc": "2026-06-11T22:17:24Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v40",
-            "created_utc": "2026-06-10T22:01:08Z",
-            "expires_utc": "2026-06-11T22:01:08Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_stabilization_hold_status_20260610_v39",
-            "created_utc": "2026-06-10T21:44:38Z",
-            "expires_utc": "2026-06-11T21:44:38Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260613_v84",
+            "created_utc": "2026-06-13T00:11:58Z",
+            "expires_utc": "2026-06-14T00:11:58Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2359,9 +551,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v38",
-            "created_utc": "2026-06-10T21:28:23Z",
-            "expires_utc": "2026-06-11T21:28:23Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v83",
+            "created_utc": "2026-06-12T23:56:27Z",
+            "expires_utc": "2026-06-13T23:56:27Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2373,9 +565,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v37",
-            "created_utc": "2026-06-10T21:12:52Z",
-            "expires_utc": "2026-06-11T21:12:52Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v82",
+            "created_utc": "2026-06-12T23:40:27Z",
+            "expires_utc": "2026-06-13T23:40:27Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2387,9 +579,107 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v36",
-            "created_utc": "2026-06-10T20:56:37Z",
-            "expires_utc": "2026-06-11T20:56:37Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v81",
+            "created_utc": "2026-06-12T23:24:41Z",
+            "expires_utc": "2026-06-13T23:24:41Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v80",
+            "created_utc": "2026-06-12T23:09:11Z",
+            "expires_utc": "2026-06-13T23:09:11Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v79",
+            "created_utc": "2026-06-12T22:53:10Z",
+            "expires_utc": "2026-06-13T22:53:10Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v78",
+            "created_utc": "2026-06-12T22:36:40Z",
+            "expires_utc": "2026-06-13T22:36:40Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v77",
+            "created_utc": "2026-06-12T22:20:24Z",
+            "expires_utc": "2026-06-13T22:20:24Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v76",
+            "created_utc": "2026-06-12T22:04:39Z",
+            "expires_utc": "2026-06-13T22:04:39Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v75",
+            "created_utc": "2026-06-12T21:48:08Z",
+            "expires_utc": "2026-06-13T21:48:08Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v74",
+            "created_utc": "2026-06-12T21:31:23Z",
+            "expires_utc": "2026-06-13T21:31:23Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2401,9 +691,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v35",
-            "created_utc": "2026-06-10T20:40:06Z",
-            "expires_utc": "2026-06-11T20:40:06Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v73",
+            "created_utc": "2026-06-12T21:15:37Z",
+            "expires_utc": "2026-06-13T21:15:37Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2415,9 +705,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v34",
-            "created_utc": "2026-06-10T20:24:06Z",
-            "expires_utc": "2026-06-11T20:24:06Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v72",
+            "created_utc": "2026-06-12T20:59:37Z",
+            "expires_utc": "2026-06-13T20:59:37Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2429,9 +719,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v33",
-            "created_utc": "2026-06-10T20:08:35Z",
-            "expires_utc": "2026-06-11T20:08:35Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v71",
+            "created_utc": "2026-06-12T20:43:36Z",
+            "expires_utc": "2026-06-13T20:43:36Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2443,9 +733,51 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v32",
-            "created_utc": "2026-06-10T19:52:05Z",
-            "expires_utc": "2026-06-11T19:52:05Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v70",
+            "created_utc": "2026-06-12T20:26:51Z",
+            "expires_utc": "2026-06-13T20:26:51Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v69",
+            "created_utc": "2026-06-12T20:11:20Z",
+            "expires_utc": "2026-06-13T20:11:20Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v68",
+            "created_utc": "2026-06-12T19:55:35Z",
+            "expires_utc": "2026-06-13T19:55:35Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v67",
+            "created_utc": "2026-06-12T19:38:34Z",
+            "expires_utc": "2026-06-13T19:38:34Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2457,23 +789,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v31",
-            "created_utc": "2026-06-10T19:36:19Z",
-            "expires_utc": "2026-06-11T19:36:19Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v30",
-            "created_utc": "2026-06-10T19:20:49Z",
-            "expires_utc": "2026-06-11T19:20:49Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v66",
+            "created_utc": "2026-06-12T19:22:34Z",
+            "expires_utc": "2026-06-13T19:22:34Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2485,9 +803,23 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v29",
-            "created_utc": "2026-06-10T19:05:18Z",
-            "expires_utc": "2026-06-11T19:05:18Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v65",
+            "created_utc": "2026-06-12T19:06:49Z",
+            "expires_utc": "2026-06-13T19:06:49Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v64",
+            "created_utc": "2026-06-12T18:50:03Z",
+            "expires_utc": "2026-06-13T18:50:03Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2499,9 +831,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v28",
-            "created_utc": "2026-06-10T18:49:33Z",
-            "expires_utc": "2026-06-11T18:49:33Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v63",
+            "created_utc": "2026-06-12T18:33:33Z",
+            "expires_utc": "2026-06-13T18:33:33Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2513,9 +845,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v27",
-            "created_utc": "2026-06-10T18:33:02Z",
-            "expires_utc": "2026-06-11T18:33:02Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v62",
+            "created_utc": "2026-06-12T18:17:32Z",
+            "expires_utc": "2026-06-13T18:17:32Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2527,9 +859,37 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v26",
-            "created_utc": "2026-06-10T18:17:02Z",
-            "expires_utc": "2026-06-11T18:17:02Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v61",
+            "created_utc": "2026-06-12T18:01:02Z",
+            "expires_utc": "2026-06-13T18:01:02Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v60",
+            "created_utc": "2026-06-12T17:44:46Z",
+            "expires_utc": "2026-06-13T17:44:46Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v59",
+            "created_utc": "2026-06-12T17:28:30Z",
+            "expires_utc": "2026-06-13T17:28:30Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2541,9 +901,93 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v25",
-            "created_utc": "2026-06-10T18:00:16Z",
-            "expires_utc": "2026-06-11T18:00:16Z",
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v58",
+            "created_utc": "2026-06-12T17:12:45Z",
+            "expires_utc": "2026-06-13T17:12:45Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v57",
+            "created_utc": "2026-06-12T16:56:15Z",
+            "expires_utc": "2026-06-13T16:56:15Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v56",
+            "created_utc": "2026-06-12T16:39:29Z",
+            "expires_utc": "2026-06-13T16:39:29Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_status_hold_20260612_v55",
+            "created_utc": "2026-06-12T16:23:29Z",
+            "expires_utc": "2026-06-13T16:23:29Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v54",
+            "created_utc": "2026-06-12T16:07:58Z",
+            "expires_utc": "2026-06-13T16:07:58Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v53",
+            "created_utc": "2026-06-12T15:52:13Z",
+            "expires_utc": "2026-06-13T15:52:13Z",
+            "source": "grok_api",
+            "risk_level": "low",
+            "status": "blocked_review",
+            "classification": "Review",
+            "reasons": [
+              "capability_contract_requires_human:write_status_summary"
+            ],
+            "action_count": 1,
+            "summary": ""
+          },
+          {
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_reachability_20260612_v52",
+            "created_utc": "2026-06-12T15:35:42Z",
+            "expires_utc": "2026-06-13T15:35:42Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2555,9 +999,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v24",
-            "created_utc": "2026-06-10T17:43:16Z",
-            "expires_utc": "2026-06-11T17:43:16Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_20260612_v51",
+            "created_utc": "2026-06-12T15:19:57Z",
+            "expires_utc": "2026-06-13T15:19:57Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2569,9 +1013,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_stabilization_hold_20260610_v23",
-            "created_utc": "2026-06-10T17:27:45Z",
-            "expires_utc": "2026-06-11T17:27:45Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_20260612_v50",
+            "created_utc": "2026-06-12T15:03:11Z",
+            "expires_utc": "2026-06-13T15:03:11Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2583,51 +1027,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v22",
-            "created_utc": "2026-06-10T17:12:00Z",
-            "expires_utc": "2026-06-11T17:12:00Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v21",
-            "created_utc": "2026-06-10T16:56:14Z",
-            "expires_utc": "2026-06-11T16:56:14Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v20",
-            "created_utc": "2026-06-10T16:40:44Z",
-            "expires_utc": "2026-06-11T16:40:44Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v19",
-            "created_utc": "2026-06-10T15:52:57Z",
-            "expires_utc": "2026-06-11T15:52:57Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_20260612_v49",
+            "created_utc": "2026-06-12T14:47:11Z",
+            "expires_utc": "2026-06-13T14:47:11Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2639,37 +1041,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_maintain_stabilization_hold_record_20260610_v18",
-            "created_utc": "2026-06-10T15:36:42Z",
-            "expires_utc": "2026-06-11T15:36:42Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "executed",
-            "classification": "Safe",
-            "reasons": [
-              "approved_safe_instruction"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_stabilization_hold_20260610_v17",
-            "created_utc": "2026-06-10T15:20:11Z",
-            "expires_utc": "2026-06-11T15:20:11Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "executed",
-            "classification": "Safe",
-            "reasons": [
-              "approved_safe_instruction"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_stabilization_hold_20260610_v16",
-            "created_utc": "2026-06-10T15:03:56Z",
-            "expires_utc": "2026-06-11T15:03:56Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_20260612_v48",
+            "created_utc": "2026-06-12T14:30:40Z",
+            "expires_utc": "2026-06-13T14:30:40Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2681,23 +1055,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_stabilization_hold_20260610_v15",
-            "created_utc": "2026-06-10T14:00:39Z",
-            "expires_utc": "2026-06-11T14:00:39Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "executed",
-            "classification": "Safe",
-            "reasons": [
-              "approved_safe_instruction"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_record_stabilization_hold_20260610_v14",
-            "created_utc": "2026-06-10T13:45:08Z",
-            "expires_utc": "2026-06-11T13:45:08Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_20260612_v47",
+            "created_utc": "2026-06-12T14:14:55Z",
+            "expires_utc": "2026-06-13T14:14:55Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "blocked_review",
@@ -2709,37 +1069,9 @@
             "summary": ""
           },
           {
-            "instruction_id": "phase0_record_stabilization_hold_20260610_v13",
-            "created_utc": "2026-06-10T12:10:05Z",
-            "expires_utc": "2026-06-11T12:10:05Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_hold_record_stabilization_20260610_v12",
-            "created_utc": "2026-06-10T11:53:35Z",
-            "expires_utc": "2026-06-11T11:53:35Z",
-            "source": "grok_api",
-            "risk_level": "low",
-            "status": "blocked_review",
-            "classification": "Review",
-            "reasons": [
-              "capability_contract_requires_human:write_status_summary"
-            ],
-            "action_count": 1,
-            "summary": ""
-          },
-          {
-            "instruction_id": "phase0_maintain_hold_record_stabilization_20260610_v11",
-            "created_utc": "2026-06-10T11:37:49Z",
-            "expires_utc": "2026-06-11T11:37:49Z",
+            "instruction_id": "phase0_record_section5_query_failure_verify_plex_20260612_v46",
+            "created_utc": "2026-06-12T13:58:54Z",
+            "expires_utc": "2026-06-13T13:58:54Z",
             "source": "grok_api",
             "risk_level": "low",
             "status": "executed",
@@ -2754,7 +1086,7 @@
       },
       "credential_awareness": {
         "component": "jasonos_prime_token_awareness",
-        "updated_utc": "2026-06-11T05:19:36.778Z",
+        "updated_utc": "2026-06-13T03:25:53.446Z",
         "token_dir": "C:/Users/jason/OneDrive/Public/TOKENS",
         "full_secret_values_logged": false,
         "normal_grok_communication_key": "GROK_API_KEY.txt",
@@ -3297,19 +1629,19 @@
     "sentinel_allowed": true,
     "launch_allowed": true,
     "launch_health": {
-      "updated_utc": "2026-06-11T05:19:36.779Z",
+      "updated_utc": "2026-06-13T03:25:53.450Z",
       "window_minutes": 10,
-      "sample_count": 7,
-      "latency_sample_count": 7,
+      "sample_count": 11,
+      "latency_sample_count": 11,
       "avg_spawn_latency_ms": 0,
-      "avg_process_runtime_ms": 14746,
+      "avg_process_runtime_ms": 11248,
       "timeout_count": 0,
       "timeout_rate": 0,
-      "launches_last_minute": 1,
+      "launches_last_minute": 2,
       "budget_per_minute": 8,
       "degraded_required": false,
-      "active_child_count": 0,
-      "tracked_child_count": 0
+      "active_child_count": 1,
+      "tracked_child_count": 1
     }
   }
 }
