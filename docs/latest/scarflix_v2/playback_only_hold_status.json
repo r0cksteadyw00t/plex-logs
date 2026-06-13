@@ -1,0 +1,77 @@
+{
+  "component": "jasonos_prime_playback_only_hold",
+  "status": "PLAYBACK_ONLY_HOLD_ACTIVE",
+  "updated_utc": "2026-06-13T10:51:50.6139964Z",
+  "reason": "Plex API still reports active session; protect playback before project work.",
+  "active_session_source": "Plex /status/sessions direct check",
+  "plex_server_stopped": false,
+  "publication_or_expansion_started": false,
+  "pause_publication_preserved": true,
+  "backup": "D:\\PlexTools\\Backups\\playback_only_hold_20260613T105149Z",
+  "actions": [
+    {
+      "type": "process",
+      "name": "Plex Media Scanner",
+      "id": 13192,
+      "action": "stop_non_playback_background_child",
+      "ok": false,
+      "error": "Cannot find a process with the process identifier 13192."
+    },
+    {
+      "type": "scheduled_task",
+      "name": "JasonOS_Prime_GoLiveReadinessAudit",
+      "action": "disable_non_critical_during_playback",
+      "backup": "D:\\PlexTools\\Backups\\playback_only_hold_20260613T105149Z\\JasonOS_Prime_GoLiveReadinessAudit.xml",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "type": "scheduled_task",
+      "name": "JasonOS_Prime_Mission002_QuietWindowCutoverWatcher",
+      "action": "disable_non_critical_during_playback",
+      "backup": "D:\\PlexTools\\Backups\\playback_only_hold_20260613T105149Z\\JasonOS_Prime_Mission002_QuietWindowCutoverWatcher.xml",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "type": "scheduled_task",
+      "name": "JasonOS_Prime_ProjectSafeProgressAudit",
+      "action": "disable_non_critical_during_playback",
+      "backup": "D:\\PlexTools\\Backups\\playback_only_hold_20260613T105149Z\\JasonOS_Prime_ProjectSafeProgressAudit.xml",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "type": "scheduled_task",
+      "name": "JasonOS_Prime_CommandCenterDashboard",
+      "action": "not_found",
+      "backup": "",
+      "ok": false,
+      "error": "not_found"
+    },
+    {
+      "type": "scheduled_task",
+      "name": "JasonOS_Prime_FastTrackAccelerator",
+      "action": "disable_non_critical_during_playback",
+      "backup": "D:\\PlexTools\\Backups\\playback_only_hold_20260613T105149Z\\JasonOS_Prime_FastTrackAccelerator.xml",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "type": "arm_file",
+      "name": "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\mission002_threadfin_auto_start.armed",
+      "action": "held",
+      "backup": "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\mission002_threadfin_auto_start.armed.held_by_playback_only_20260613T105149Z.bak",
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "core_services_preserved": [
+    "Plex Media Server",
+    "rclone mount keepalive",
+    "Sentinel",
+    "PlexWatchdog",
+    "Orchestrator",
+    "PlaybackPathRecovery"
+  ]
+}
