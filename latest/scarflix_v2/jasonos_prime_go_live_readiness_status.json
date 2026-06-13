@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T16:14:09Z",
-    "updated_utc":  "2026-06-13T16:14:15Z",
+    "started_utc":  "2026-06-13T16:19:08Z",
+    "updated_utc":  "2026-06-13T16:19:14Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -46,10 +46,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=RUNNING_PLEX_DECISION_PROBES 1/2 Section5Visible=105 Section5Missing=0 PausePublication=True"
+                                          "MaterializedQA=REVIEW 1/3 Section5Visible=105 Section5Missing=0 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not PASS: RUNNING_PLEX_DECISION_PROBES 1/2 failed=1."
+                                          "Materialized QA is not PASS: REVIEW 1/3 failed=2."
                                       ],
                          "next_safe_action":  "Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable.",
                          "requires_quiet_window":  true,
@@ -148,7 +148,7 @@
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not PASS: RUNNING_PLEX_DECISION_PROBES 1/2 failed=1."
+                         "blocker":  "Materialized QA is not PASS: REVIEW 1/3 failed=2."
                      }
                  ],
     "monitored_tasks":  [
