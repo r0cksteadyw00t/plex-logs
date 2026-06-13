@@ -1,14 +1,7 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: REVIEW
-Updated UTC: 2026-06-13T23:32:34Z
-Targets: 229
-Rows found: 146
-Checked: 2
-Passed: 0
-Failed: 2
-Layered streaming checked: 2
-Layered streaming passed: 1
-Layered streaming review: 1
-Query errors: 0
-Next action: Quarantine failed materialized source/release and keep title retryable.
+Status: HELD_PLAYBACK_PATH_RECOVERY
+Updated UTC: 2026-06-13T23:38:23Z
+Held reason: playback_path_recovery_not_pass
+Playback recovery: UNKNOWN
+Next action: Hold Materialized QA until playback path recovery returns PASS.
