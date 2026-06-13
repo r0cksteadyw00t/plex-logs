@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T17:29:30Z",
-    "updated_utc":  "2026-06-13T17:29:35Z",
+    "started_utc":  "2026-06-13T17:34:11Z",
+    "updated_utc":  "2026-06-13T17:34:16Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -32,7 +32,7 @@
                                           "Guard=PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
-                                          "Plex background scanner/analyzer pressure still detected: 1.",
+                                          "Plex background scanner/analyzer pressure still detected: 2.",
                                           "Playback path recovery is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
@@ -46,10 +46,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=REVIEW 0/2 Section5Visible=105 Section5Missing=0 PausePublication=True"
+                                          "MaterializedQA=REVIEW 0/1 Section5Visible=105 Section5Missing=0 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not PASS: REVIEW 0/2 failed=2."
+                                          "Materialized QA is not PASS: REVIEW 0/1 failed=1."
                                       ],
                          "next_safe_action":  "Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable.",
                          "requires_quiet_window":  true,
@@ -110,10 +110,10 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Ready"
+                                          "Orchestrator=PASS HandsOff=PASS_ACTIVE_TRUE_HANDS_OFF SafeAuditTask=Ready QuietWatcherTask=Ready"
                                       ],
                          "blockers":  [
-                                          "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
+
                                       ],
                          "next_safe_action":  "Keep orchestration alive, reduce high-churn work during playback, and treat repeated no-progress cycles as Grok review triggers.",
                          "requires_quiet_window":  false,
@@ -140,7 +140,7 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex background scanner/analyzer pressure still detected: 1."
+                         "blocker":  "Plex background scanner/analyzer pressure still detected: 2."
                      },
                      {
                          "outcome_id":  "O-PLAYBACK",
@@ -148,11 +148,7 @@
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not PASS: REVIEW 0/2 failed=2."
-                     },
-                     {
-                         "outcome_id":  "O-AUTONOMY-STABILITY",
-                         "blocker":  "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
+                         "blocker":  "Materialized QA is not PASS: REVIEW 0/1 failed=1."
                      }
                  ],
     "monitored_tasks":  [
