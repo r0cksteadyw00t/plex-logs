@@ -1,22 +1,22 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "REVIEW",
-  "started_utc": "2026-06-13T21:59:48Z",
-  "ended_utc": "2026-06-13T22:01:11Z",
-  "updated_utc": "2026-06-13T22:01:11Z",
+  "started_utc": "2026-06-13T22:06:32Z",
+  "ended_utc": "2026-06-13T22:07:51Z",
+  "updated_utc": "2026-06-13T22:07:51Z",
   "target_count": 229,
   "rows_found": 146,
-  "checked": 4,
-  "passed": 3,
+  "checked": 3,
+  "passed": 2,
   "failed": 1,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
   "decision_retry_count": 1,
-  "decision_probe_skip": 111,
-  "decision_probe_limit": 4,
+  "decision_probe_skip": 115,
+  "decision_probe_limit": 3,
   "decision_probe_total_candidates": 141,
-  "selected_decision_candidates": 4,
+  "selected_decision_candidates": 3,
   "stopped_early": false,
   "stopped_reason": "",
   "targets": [
@@ -4398,11 +4398,44 @@
   ],
   "results": [
     {
-      "metadata_id": 50354,
-      "part_id": 127713,
+      "metadata_id": 50345,
+      "part_id": 127694,
       "section_id": 5,
-      "title": "The Lord of the Rings: The War of the Rohirrim",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c\\stream.mkv",
+      "title": "The Mitchells vs. the Machines",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1\\stream.mkv",
+      "status": "PASS",
+      "http_status": 200,
+      "access_mode": "allowed_networks",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
+      "attempt": 2,
+      "decision_attempts": [
+        {
+          "attempt": 1,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "FAIL",
+          "http_status": 0,
+          "reason": "socket hang up"
+        },
+        {
+          "attempt": 2,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "PASS",
+          "http_status": 200,
+          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
+        }
+      ],
+      "target_hash": "ScarFLIX_part-a0692a530078eae1",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1"
+    },
+    {
+      "metadata_id": 50341,
+      "part_id": 127688,
+      "section_id": 5,
+      "title": "The Mummy: Tomb of the Dragon Emperor",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mummy Tomb of the Dragon Emperor (2008)\\ScarFLIX_part-5c4c8ab3132bfd55\\stream.mkv",
       "status": "FAIL",
       "http_status": 401,
       "access_mode": "allowed_networks",
@@ -4417,7 +4450,7 @@
           "base_url": "http://192.168.1.184:32400",
           "status": "FAIL",
           "http_status": 0,
-          "reason": "socket hang up"
+          "reason": "timeout"
         },
         {
           "attempt": 2,
@@ -4434,41 +4467,15 @@
           "reason": "HTTP 401"
         }
       ],
-      "target_hash": "ScarFLIX_part-cfe52e744ff27d3c",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c"
+      "target_hash": "ScarFLIX_part-5c4c8ab3132bfd55",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mummy Tomb of the Dragon Emperor (2008)\\ScarFLIX_part-5c4c8ab3132bfd55"
     },
     {
-      "metadata_id": 50350,
-      "part_id": 127703,
+      "metadata_id": 50594,
+      "part_id": 128181,
       "section_id": 5,
-      "title": "The Magic Faraway Tree",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 1,
-      "decision_attempts": [
-        {
-          "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "PASS",
-          "http_status": 200,
-          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
-        }
-      ],
-      "target_hash": "ScarFLIX_part-479e0ebd60d6e6ff",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff"
-    },
-    {
-      "metadata_id": 50349,
-      "part_id": 127702,
-      "section_id": 5,
-      "title": "The Magnificent Seven",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa\\stream.mkv",
+      "title": "The Nice Guys",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Nice Guys (2016)\\ScarFLIX_part-cba26c04e97c0343\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "allowed_networks",
@@ -4493,41 +4500,8 @@
           "reason": "Plex client-style decision returned HTTP 200 for materialized path"
         }
       ],
-      "target_hash": "ScarFLIX_part-ea09f142010b00aa",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa"
-    },
-    {
-      "metadata_id": 50347,
-      "part_id": 127698,
-      "section_id": 5,
-      "title": "The Mist",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 2,
-      "decision_attempts": [
-        {
-          "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "FAIL",
-          "http_status": 0,
-          "reason": "timeout"
-        },
-        {
-          "attempt": 2,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "PASS",
-          "http_status": 200,
-          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
-        }
-      ],
-      "target_hash": "ScarFLIX_part-93599b6b163a4b72",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72"
+      "target_hash": "ScarFLIX_part-cba26c04e97c0343",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Nice Guys (2016)\\ScarFLIX_part-cba26c04e97c0343"
     }
   ],
   "next_action": "Quarantine failed materialized source/release and keep title retryable."
