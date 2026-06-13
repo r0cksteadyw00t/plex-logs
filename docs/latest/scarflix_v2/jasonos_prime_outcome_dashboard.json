@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-13T00:45:02Z",
+  "updated_utc": "2026-06-13T00:55:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -104,9 +104,9 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON",
-    "staged_candidate_count": 43,
-    "plex_safe_webdav_visible_rows": 1
+    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
+    "plex_safe_webdav_visible_rows": 1,
+    "staged_candidate_count": 43
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -125,9 +125,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 105,
+    "platform_child_progress_age_minutes": 115,
     "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-13T00:45:09Z",
+    "next_check_utc": "2026-06-13T00:55:12Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "5-concurrent stream QA",
     "file": "D:/PlexTools/logs/scarflix_v2_concurrent_stream_qa_wrapper_20260613.log",
     "last_progress_utc": "2026-06-12T23:00:26.569Z",
-    "age_minutes": 105,
+    "age_minutes": 115,
     "last_line": "[2026-06-12T23:00:26Z] [REVIEW] Final: REVIEW",
     "pass_lines": 0,
     "review_lines": 2,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-13T00:40:06Z",
+    "updated_utc": "2026-06-13T00:50:10Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-13T00:45:02Z",
+    "updated_utc": "2026-06-13T00:50:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-13T00:45:02Z",
-    "updated_utc": "2026-06-13T00:45:03Z",
-    "ended_utc": "2026-06-13T00:45:03Z",
+    "started_utc": "2026-06-13T00:55:02Z",
+    "updated_utc": "2026-06-13T00:55:06Z",
+    "ended_utc": "2026-06-13T00:55:06Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -211,7 +211,7 @@
       {
         "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
         "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-13T00:50:03Z",
+        "retry_after_utc": "2026-06-13T01:05:06Z",
         "url_host": "192.168.1.184:18788",
         "is_local_live_proxy": true
       }
@@ -376,12 +376,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-13T00:40:14.990Z",
+      "utc": "2026-06-13T00:50:18.223Z",
       "title": "Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24",
       "detail": "Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:"
     },
     {
-      "utc": "2026-06-13T00:40:07Z",
+      "utc": "2026-06-13T00:50:11Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -545,10 +545,18 @@
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
   },
+  "grokbuild_forensic_agent": {
+    "status": "REVIEW_STALE_PROGRESS",
+    "updated_utc": "2026-06-13T00:55:03Z",
+    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
+    "implementation": "node_native",
+    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
+    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
+  },
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-13T00:45:02Z",
+    "updated_utc": "2026-06-13T00:55:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -611,9 +619,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-13T00:45:02Z",
-      "updated_utc": "2026-06-13T00:45:03Z",
-      "ended_utc": "2026-06-13T00:45:03Z",
+      "started_utc": "2026-06-13T00:55:02Z",
+      "updated_utc": "2026-06-13T00:55:06Z",
+      "ended_utc": "2026-06-13T00:55:06Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -655,7 +663,7 @@
         {
           "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
           "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-13T00:50:03Z",
+          "retry_after_utc": "2026-06-13T01:05:06Z",
           "url_host": "192.168.1.184:18788",
           "is_local_live_proxy": true
         }
@@ -761,7 +769,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-13T00:45:02Z",
+      "updated_utc": "2026-06-13T00:55:02Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -794,12 +802,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 10048
+              "pid": 6412
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 22892
+              "pid": 15640
             }
           ]
         }
@@ -807,8 +815,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 418015,
-    "safe_pipeline_log_age_seconds": 474899,
+    "canary_status_age_seconds": 418614,
+    "safe_pipeline_log_age_seconds": 475498,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -825,7 +833,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=40548"
+        "detail": "pid=17468"
       }
     ],
     "blockers": []
@@ -881,7 +889,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-13T00:45:02Z",
+    "updated_utc": "2026-06-13T00:55:02Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -914,12 +922,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 10048
+            "pid": 6412
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 22892
+            "pid": 15640
           }
         ]
       }
