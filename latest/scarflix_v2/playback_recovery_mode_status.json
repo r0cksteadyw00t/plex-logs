@@ -1,48 +1,33 @@
-{
-  "component": "jasonos_prime_playback_recovery_mode",
-  "schema_version": "jasonos.playback_recovery.v1",
-  "status": "MONITORING_PASS_WEB_DAV_WITH_FILESYSTEM_CAUTION",
-  "updated_utc": "2026-06-13T05:44:22Z",
-  "heartbeat_id": "playback-recovery-retry",
-  "command_launch_ms": [
-    76,
-    58,
-    60
-  ],
-  "plex_identity": "PASS_HTTP_200",
-  "webdav_health": "PASS_HTTP_200",
-  "rclone": {
-    "running": true,
-    "pid": 18336
-  },
-  "filesystem_mount_probe": "TIMEOUT_24S_ON_DIRECT_S_PATH_TEST",
-  "watch_now_recheck": [
-    {
-      "title": "Gremlins",
-      "hash": "scarflix_part-942255f029875306",
-      "status": "PASS",
-      "http": 200,
-      "ms": 1513,
-      "content_length": "1714768887"
-    },
-    {
-      "title": "Anna",
-      "hash": "scarflix_part-81107989d2e30cfb",
-      "status": "PASS",
-      "http": 200,
-      "ms": 1383,
-      "content_length": "1721714811"
-    }
-  ],
-  "safety": {
-    "pause_publication_active": true,
-    "expansion_paused": true,
-    "heavy_jobs_forbidden": true,
-    "reason": "WebDAV is healthy, but direct S: filesystem probe timed out; keep expansion held until filesystem path stability is proven."
-  },
-  "raw_urls": {
-    "playback_recovery": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_recovery_mode_status.md",
-    "watch_now": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.md",
-    "grok_handoff": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md"
-  }
+﻿{
+    "component":  "jasonos_prime_playback_recovery_mode",
+    "status":  "PASS",
+    "updated_utc":  "2026-06-13T05:57:10Z",
+    "source":  "JasonOS_Prime_PlaybackPathRecovery.ps1",
+    "playback_path_recovery_status":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json",
+    "no_publication_started":  true,
+    "no_expansion_started":  true,
+    "watch_now":  [
+                      {
+                          "title":  "Gremlins",
+                          "hash":  "scarflix_part-942255f029875306",
+                          "ok":  true,
+                          "status_code":  200,
+                          "ms":  1389,
+                          "content_length":  "1714768887",
+                          "error":  ""
+                      },
+                      {
+                          "title":  "Anna",
+                          "hash":  "scarflix_part-81107989d2e30cfb",
+                          "ok":  true,
+                          "status_code":  200,
+                          "ms":  1384,
+                          "content_length":  "1721714811",
+                          "error":  ""
+                      }
+                  ],
+    "watch_now_source":  "cached_previous_status",
+    "failures":  [
+
+                 ]
 }
