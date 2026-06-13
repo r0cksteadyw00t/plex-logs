@@ -1,6 +1,6 @@
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
-**Updated UTC:** 2026-06-13T03:19:32.266Z
+**Updated UTC:** 2026-06-13T03:22:33.717Z
 
 **Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
 
@@ -20,9 +20,45 @@
 
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
+## Catalogue Expansion Campaign Active - 2026-06-13 13:25 Australia/Sydney
+
+Current execution state:
+
+- Sentinel: `PASS / LOW` during the latest campaign checks.
+- Orchestrator: `PASS`, launch health non-degraded, timeout rate `0`.
+- Plex: watchdog installed and Plex identity checks are passing.
+- PAUSE_PUBLICATION: active and must remain active.
+- Section 5 affected hybrid_movies_live baseline: `105/105` expected hashes visible in Plex Section 5.
+- Materialized QA: still stale `REVIEW 119/229`; a detached delayed refresh task has been scheduled instead of running QA inline from Codex.
+
+Actions taken:
+
+- Started protected additive catalogue campaign runner:
+  - Campaign root: `D:\PlexTools\JasonOS_Campaigns\path2_catalogue_single_wave_20260613T031256Z`
+  - Runner PID: `14720`
+  - Intended duration: 12 hours
+  - Mode: single-title Path 2 additive waves, max concurrency 1, rollback on regression or WebDAV preflight failure
+- Successful additive wave:
+  - `Gremlins (1984)` / `scarflix_part-942255f029875306`
+  - Post-wave Section 5 baseline remained `105/105`.
+- Held hashes after safe preflight failures:
+  - `scarflix_part-d2dc1715682f383c` / `Influencers (2025)` - WebDAV 503 in previous 10-title preflight.
+  - `scarflix_part-8f866cc77c432167` / `Lucy Shimmers and the Prince of Peace (2020)` - WebDAV preflight failed before alias creation.
+  - `scarflix_part-bf8b8fcb4150df6b` / `Man in the Mirror: The Michael Jackson Story (2004)` - WebDAV preflight failed before alias creation.
+- No publication, broad expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+- Scheduled detached QA refresh:
+  - Task: `ScarFLIX_v2_MaterializedPlexDecisionQA_Delayed`
+  - Next run: `2026-06-13T13:55:55+10:00`
+
+Current decision:
+
+- Continue the active single-title additive campaign only while Sentinel, launch health, and Section 5 baseline remain stable.
+- Keep failing WebDAV hashes held and retryable rather than forcing migration.
+- Do not mark full catalogue expansion complete until Materialized QA refreshes to PASS and a separate TV discovery/audit lane produces verified candidates.
+
 ## PATH 2 PROTECTED PILOT MIGRATION STATUS
 
-**Updated UTC:** 2026-06-13T03:17:22.827Z
+**Updated UTC:** 2026-06-13T03:20:15.190Z
 **Status:** ROLLED_BACK_PILOT_ERROR
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
@@ -35,6 +71,28 @@
 
 ### Decision
 Pilot failed before completion; rollback was performed.
+
+## Phase 5 Section 5 Uncapped Index Snapshot
+
+**Updated UTC:** 2026-06-13T03:19:32.266Z
+
+**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+
+**True baseline:** `105/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `227`
+
+**Parsed Section 5 Video rows:** `227`
+
+**Unique indexed ScarFLIX_part hashes:** `224`
+
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
+
+**Recommendation:** Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
