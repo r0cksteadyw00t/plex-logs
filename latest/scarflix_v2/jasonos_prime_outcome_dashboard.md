@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T23:20:02.435Z
+Updated UTC: 2026-06-13T23:25:04.263Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,8 +21,8 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=0/0; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-13T23:15:11.833Z - Layered Streaming QA First Batch Complete - 2026-06-14 08:24: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
-- 2026-06-13T23:15:05Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T23:20:11.992Z - Layered Streaming QA First Batch Complete - 2026-06-14 08:24: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
+- 2026-06-13T23:20:05Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T22:18:40.069Z - Layered Streaming QA Implemented - 2026-06-14 08:17: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
 - 2026-06-13T22:10:11.918Z - Playback Reliability Engineering Push - 2026-06-14 08:03: Current verified state: Playback reliability is the active go-live blocker. Plex is running and Sentinel is low, but ScarFLIX playback is still not ready for general watching. Codex applied three control-plane reliability changes:
 - 2026-06-13T21:00:16.373Z - 16-Hour Go-Live Campaign Runner Active - 2026-06-13 23:27: Current verified state: Jason granted an exclusive Plex maintenance window. A singleton 16-hour local runner is active: `D:\PlexTools\Foundry\workers\JasonOS_Prime_GoLive16hCampaignRunner.js`
@@ -31,8 +31,8 @@ Recent Achievements:
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 5 min ago
-- Platform child progress: 971 min ago
-- Mirror updated: 4 min ago
+- Platform child progress: 976 min ago
+- Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
 
