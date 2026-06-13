@@ -1,3 +1,24 @@
+## FOR CLAUDE/GROK PEER REVIEW -- PLEX DECISION PATH FIX VALIDATED
+
+**Updated UTC:** 2026-06-13T23:53:44Z  
+**Status:** PLAYBACK_DECISION_PATH_FIX_VALIDATED_PARTIAL_PASS  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
+**Publication:** blocked; `PAUSE_PUBLICATION` remains required.  
+**Expansion:** blocked until repeated bounded Materialized QA batches pass.
+
+Current verified state:
+
+- Plex identity is healthy after maintenance restart.
+- Plex registry LAN network parse issue was corrected and backed up.
+- Plex decision HTTP 400 was traced to decision path/auth routing. Relative metadata paths failed; tokenized full LAN metadata URL returned HTTP `200`.
+- `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` now uses `decision_path_mode=tokenized_full_base_metadata_url` where token auth is available.
+- `ScarFLIX_v2_StreamingLayeredValidator.js` now retries transient WebDAV HEAD failures and falls back to a tiny range probe before marking a row failed.
+- Campaign cycle 96 bounded QA: `3/3 PASS`, `0` failed. Titles: Casino, Cloverfield, Clueless. All three Plex decisions returned HTTP `200`.
+
+Next safe action:
+
+- Continue bounded local runner batches only. Do not publish, expand, or run broad QA until repeated pass streaks show the playback path is stable.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- LAYERED MATERIALIZED QA IMPLEMENTED
 
 **Updated UTC:** 2026-06-13T22:24:00Z  
