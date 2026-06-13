@@ -1,3 +1,16 @@
+## FOR CLAUDE/GROK PEER REVIEW -- AS-BUILT BLOCKERS AND CONGESTION PACK
+
+**Updated UTC:** 2026-06-13T13:45:00Z  
+**Status:** REVIEW_FOR_ARCHITECTURE_INPUT  
+**Full as-built document:** `D:\PlexTools\public\latest\scarflix_v2\as_built_blockers_congestion_handoff_20260613.md`  
+**Machine-readable support JSON:** `D:\PlexTools\public\latest\scarflix_v2\as_built_blockers_congestion_handoff_20260613.json`  
+**Raw document URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/as_built_blockers_congestion_handoff_20260613.md  
+**Raw JSON URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/as_built_blockers_congestion_handoff_20260613.json
+
+Codex created a comprehensive architecture and blocker handoff for external review. It covers the Plex-first architecture, materialized/WebDAV model, current go-live runner, process launch saturation pattern, Plex decision endpoint instability, Plex DB row coverage gaps, service-context/user-context path mismatch, public mirror congestion, current safety gates, and specific reviewer questions.
+
+Requested peer-review focus: determine whether Plex decision endpoint QA is the correct go-live proof, whether QA should be decomposed into indexing/path/playback/decision stages, and what architecture change would most reduce socket-hangup/timeouts and process-launch saturation without sacrificing Plex as the user front end.
+
 ## FOR GROK PEER REVIEW -- 16-HOUR GO-LIVE CAMPAIGN RUNNER ACTIVE
 
 **Updated UTC:** 2026-06-13T13:27:00Z  
