@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-13T08:30:03Z",
+  "updated_utc": "2026-06-13T08:35:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
-    "platform_child_progress_age_minutes": 81,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 86,
     "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-13T08:33:27Z",
+    "next_check_utc": "2026-06-13T08:36:45Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 81,
+    "age_minutes": 86,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-13T08:25:08Z",
+    "updated_utc": "2026-06-13T08:30:27Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-13T08:30:03Z",
+    "updated_utc": "2026-06-13T08:35:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,12 +376,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-13T08:28:33.676Z",
+      "utc": "2026-06-13T08:31:50.395Z",
       "title": "Playback-First Recovery Lock-In - 2026-06-13 15:54",
       "detail": "Current verified state: Sentinel: `PASS / LOW`. Command launch: healthy after recovery; latest five `cmd /c echo alive` checks were `32ms`, `12ms`, `25ms`, `29ms`, and `11ms`. Plex Media Server: running and protected by `JasonOS_Prime_PlexWatchdog` plus logon task."
     },
     {
-      "utc": "2026-06-13T08:26:37Z",
+      "utc": "2026-06-13T08:30:50Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-13T08:30:03Z",
+    "updated_utc": "2026-06-13T08:35:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -807,8 +807,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 445922,
-    "safe_pipeline_log_age_seconds": 502806,
+    "canary_status_age_seconds": 446222,
+    "safe_pipeline_log_age_seconds": 503106,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -825,7 +825,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=25464"
+        "detail": "pid=36268"
       }
     ],
     "blockers": []
