@@ -1,12 +1,12 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-13T10:29:14Z
+Updated UTC: 2026-06-13T10:35:23Z
 
-Overall status: `HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY`
+Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
 Go-live ready: `False`
 
-Active Plex sessions: `1`
+Active Plex sessions: `0`
 
 Sentinel: `PASS / LOW`
 
@@ -16,7 +16,7 @@ PAUSE_PUBLICATION active: `True`
 
 | Outcome | Status | Progress | Summary | Next Safe Action |
 |---|---:|---:|---|---|
-| Reliable Plex playback first | `HELD_ACTIVE_PLEX_PLAYBACK` | 65% | Plex remains the playback front end; current priority is no scanner/indexer contention during viewing. | Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet. |
+| Reliable Plex playback first | `PASS_INFRASTRUCTURE_READY_REQUIRES_CLIENT_CONFIRMATION` | 65% | Plex remains the playback front end; current priority is no scanner/indexer contention during viewing. | Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet. |
 | ScarFLIX movies and TV playable in Plex | `REVIEW_NOT_GO_LIVE_READY` | 45% | Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover. | Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable. |
 | IPTV-only Live TV ready for cutover | `HELD_READY_FOR_QUIET_WINDOW` | 80% | IPTV-only package is ready and guarded; no physical tuner path is allowed. | Let the quiet-window watcher start Threadfin when active sessions are zero, then verify adapter endpoints before any Plex Live TV/DVR attach. |
 | Daily AI and Command Centre usable | `REVIEW_NOT_GO_LIVE_READY` | 55% | Core AI/reporting exists, but Command Centre usability is degraded and needs a fresh end-user pass. | Stabilize Command Centre and run a lightweight usability proof when playback-sensitive work is quiet. |
@@ -26,11 +26,8 @@ PAUSE_PUBLICATION active: `True`
 
 ## Blocking Items
 
-- `O-PLAYBACK`: Active Plex sessions: 1. No disruptive action allowed.
 - `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: REVIEW 119/229 failed=110.
-- `O-SCARFLIX-CATALOGUE`: Active Plex playback prevents safe focused QA/expansion work.
 - `O-MISSION-002-IPTV`: Threadfin virtual adapter is not verified running yet: HELD_THREADFIN_NOT_RUNNING.
-- `O-MISSION-002-IPTV`: Active Plex sessions hold Threadfin start and all Plex Live TV/DVR attach work.
 - `O-DAILY-AI-COMMAND`: Command Centre is not PASS: DEGRADED.
 - `O-AUTONOMY-STABILITY`: Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED.
 
