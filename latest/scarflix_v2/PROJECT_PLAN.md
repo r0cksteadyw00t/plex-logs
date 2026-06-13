@@ -1,3 +1,19 @@
+## Playback Recovery Partial PASS - 2026-06-13 15:31 Australia/Sydney
+
+- User-reported symptom: Plex `Playback Error: Content is unavailable` across movies.
+- Root cause found: Plex was online, but `S:\media` was missing because the rclone WebDAV mount was not active after reboot.
+- Recovery action: ran `ScarFLIX_v2_RcloneMountKeepalive.ps1`; rclone started and `S:\media` / `S:\media\catalog` became available.
+- Current launch health: `cmd /c echo alive` recovered to `157ms`, `101ms`, `65ms`.
+- Limited Watch Now lane created from WebDAV HEAD probes:
+  - `Gremlins` - PASS HTTP 200
+  - `Anna` - PASS HTTP 200
+  - `Annabelle` - PASS HTTP 200
+  - `Annihilation` - PASS HTTP 200
+  - `Armageddon` - PASS HTTP 200
+  - `Battleship` - PASS HTTP 200
+- Caveat: WebDAV HEAD latency remains high on several titles (`7-9s`), so this is a limited playback recovery, not clearance for broad expansion.
+- Safety posture: PAUSE_PUBLICATION remains active; Path 2/catalogue expansion remains paused; non-critical high-churn workers remain disabled until playback path stability is proven.
+
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
 **Updated UTC:** 2026-06-13T05:08:32.202Z
