@@ -1,20 +1,20 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "REVIEW",
-  "started_utc": "2026-06-13T16:46:36Z",
-  "ended_utc": "2026-06-13T16:47:14Z",
-  "updated_utc": "2026-06-13T16:47:14Z",
+  "started_utc": "2026-06-13T17:04:08Z",
+  "ended_utc": "2026-06-13T17:04:47Z",
+  "updated_utc": "2026-06-13T17:04:47Z",
   "target_count": 229,
-  "rows_found": 114,
+  "rows_found": 116,
   "checked": 2,
   "passed": 0,
   "failed": 2,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
-  "decision_probe_skip": 99,
+  "decision_probe_skip": 102,
   "decision_probe_limit": 3,
-  "decision_probe_total_candidates": 109,
+  "decision_probe_total_candidates": 111,
   "selected_decision_candidates": 3,
   "stopped_early": true,
   "stopped_reason": "Stopped after 2 consecutive Plex decision failures.",
@@ -2901,7 +2901,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Saving Bikini Bottom The Sandy Cheeks Movie (2024)\\ScarFLIX_part-ea2f9bd880ad510e",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50558,
+          "part_id": 128118,
+          "section_id": 5,
+          "title": "Saving Bikini Bottom: The Sandy Cheeks Movie",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Saving Bikini Bottom The Sandy Cheeks Movie (2024)\\ScarFLIX_part-ea2f9bd880ad510e\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -3807,7 +3815,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Tombstone (1993)\\ScarFLIX_part-4a066b8b94606da9",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50554,
+          "part_id": 128112,
+          "section_id": 5,
+          "title": "Tombstone",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Tombstone (1993)\\ScarFLIX_part-4a066b8b94606da9\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -4141,22 +4157,6 @@
   ],
   "results": [
     {
-      "metadata_id": 50324,
-      "part_id": 127662,
-      "section_id": 5,
-      "title": "Vertigo",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126\\stream.mkv",
-      "status": "FAIL",
-      "http_status": 0,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "socket hang up",
-      "target_hash": "ScarFLIX_part-ac22c691d6568126",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126"
-    },
-    {
       "metadata_id": 50163,
       "part_id": 127505,
       "section_id": 5,
@@ -4168,9 +4168,25 @@
       "base_url": "http://192.168.1.184:32400",
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "timeout",
+      "reason": "socket hang up",
       "target_hash": "ScarFLIX_part-ac3865f01b2e1ab8",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Warcraft (2016)\\ScarFLIX_part-ac3865f01b2e1ab8"
+    },
+    {
+      "metadata_id": 50159,
+      "part_id": 127503,
+      "section_id": 5,
+      "title": "ScarFLIX Part C2fa5a32a4d5e81c",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Watchmen (2009)\\ScarFLIX_part-c2fa5a32a4d5e81c\\stream.mkv",
+      "status": "FAIL",
+      "http_status": 0,
+      "access_mode": "allowed_networks",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "timeout",
+      "target_hash": "ScarFLIX_part-c2fa5a32a4d5e81c",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Watchmen (2009)\\ScarFLIX_part-c2fa5a32a4d5e81c"
     }
   ],
   "next_action": "Quarantine failed materialized source/release and keep title retryable."
