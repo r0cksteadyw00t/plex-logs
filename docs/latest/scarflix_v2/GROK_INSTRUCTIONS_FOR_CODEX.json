@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_playback_hold_and_runner_status_20260613_v27",
-      "created_at": "2026-06-13T19:05:10Z",
-      "expires_at": "2026-06-14T19:05:10Z",
+      "instruction_id": "phase0_record_peer_review_and_runner_status_20260613_v28",
+      "created_at": "2026-06-13T19:21:10Z",
+      "expires_at": "2026-06-14T19:21:10Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,16 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 60
+        "max_retries": 2,
+        "backoff": "exponential"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_record_playback_hold_and_runner_status_20260613_v27",
-            "auto_added_by_bridge": true
+            "summary": "Playback-first hold active. 16h go-live runner and bounded Materialized QA continue locally. Peer review requested on Plex decision QA stability, quiet-window queue, and staging-Plex boundaries. PAUSE_PUBLICATION remains active; no expansion or publishing. Current materialized QA state: REVIEW.",
+            "source_instruction_id": "phase0_record_peer_review_and_runner_status_20260613_v28"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-13T19:05:10Z",
+  "updated_utc": "2026-06-13T19:21:10Z",
   "source": "grok_api"
 }
