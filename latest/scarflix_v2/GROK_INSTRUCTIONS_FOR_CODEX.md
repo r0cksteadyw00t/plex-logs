@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-13T22:52:32Z
+Updated UTC: 2026-06-13T23:08:48Z
 Source: grok_api
 
 ## Summary
@@ -14,10 +14,10 @@ PASS
 
 ## Instructions
 
-### phase0_maintain_playback_hold_status_20260613_v41
+### phase0_maintain_playback_hold_status_20260613_v42
 
 - Target: `status_dashboard`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-14T22:52:32Z`
+- Expires: `2026-06-14T23:08:48Z`
