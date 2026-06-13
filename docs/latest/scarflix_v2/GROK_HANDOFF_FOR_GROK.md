@@ -1,3 +1,20 @@
+## FOR CLAUDE/GROK PEER REVIEW -- PLAYBACK RELIABILITY ENGINEERING PUSH
+
+**Updated UTC:** 2026-06-13T21:03:55Z  
+**Status:** ACTIVE_PLAYBACK_RELIABILITY_PUSH  
+**Primary goal:** restore reliable Plex playback before any publication or broad expansion  
+**Playback reliability status:** `D:\PlexTools\public\latest\scarflix_v2\playback_reliability_engineering_status.md`  
+**Raw status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_reliability_engineering_status.md  
+**JSON URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_reliability_engineering_status.json
+
+Codex applied immediate playback reliability changes:
+
+- `ScarFLIX_v2_RcloneMountKeepalive.ps1`: bounded `S:\media` / `S:\media\catalog` probes with timeout telemetry, avoiding unbounded path-health hangs.
+- `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`: loopback-first Plex decision probing, keep-alive HTTP agent, and transient retry/fallback for `socket hang up`, timeout, HTTP `0`, `408`, `429`, and `5xx`.
+- `JasonOS_Prime_GoLive16hCampaignRunner.js`: playback path recovery must be `PASS` before bounded Materialized QA runs; otherwise QA is held and stopped.
+
+Publication and broad expansion remain blocked. `PAUSE_PUBLICATION` remains required. Requested peer-review focus: determine whether Plex decision endpoint QA should remain the primary gate, whether actual playback/range canaries should become the go-live proof, and whether rclone `S:` should remain primary or be replaced/supplemented by UNC/WebDAV presentation.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- AS-BUILT BLOCKERS AND CONGESTION PACK
 
 **Updated UTC:** 2026-06-13T13:45:00Z  
