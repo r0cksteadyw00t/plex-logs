@@ -2,33 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T20:39:10Z",
-    "updated_utc":  "2026-06-13T20:39:17Z",
-    "report_only":  false,
-    "go_live_ready":  false,
-    "active_plex_sessions":  0,
-    "sentinel":  {
-                     "status":  "PASS",
-                     "alert_level":  "LOW"
-                 },
-    "safety":  {
-                   "pause_publication_active":  true,
-                   "no_publication_started":  true,
-                   "no_expansion_started":  true,
-                   "no_cleanup_performed":  true,
-                   "no_deletion_performed":  true,
-                   "no_source_mutation_performed":  true,
-                   "no_path_rewrite_performed":  true,
-                   "plex_restart_or_stop_allowed":  false
-               },
-    "outcomes":  [
-                     {
-                         "outcome_{
-    "component":  "jasonos_prime_go_live_readiness_audit",
-    "schema_version":  "jasonos.go_live_readiness.v1",
-    "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T20:39:10Z",
-    "updated_utc":  "2026-06-13T20:39:17Z",
+    "started_utc":  "2026-06-13T20:44:01Z",
+    "updated_utc":  "2026-06-13T20:44:07Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -71,10 +46,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=REVIEW 1/3 Section5Visible=105 Section5Missing=0 PausePublication=True"
+                                          "MaterializedQA=REVIEW 0/2 Section5Visible=105 Section5Missing=0 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not PASS: REVIEW 1/3 failed=2."
+                                          "Materialized QA is not PASS: REVIEW 0/2 failed=2."
                                       ],
                          "next_safe_action":  "Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable.",
                          "requires_quiet_window":  true,
@@ -173,7 +148,7 @@
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not PASS: REVIEW 1/3 failed=2."
+                         "blocker":  "Materialized QA is not PASS: REVIEW 0/2 failed=2."
                      }
                  ],
     "monitored_tasks":  [
