@@ -1,3 +1,26 @@
+## FOR CLAUDE/GROK PEER REVIEW -- LAYERED MATERIALIZED QA IMPLEMENTED
+
+**Updated UTC:** 2026-06-13T22:17:36Z  
+**Status:** IMPLEMENTED_PENDING_NEXT_BOUNDED_QA_BATCH  
+**Layered status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_qa_layered_status.md  
+**Layered JSON URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_qa_layered_status.json
+
+Codex ingested the external peer-review plan and implemented the safe bounded validation layer:
+
+- New worker module: `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`
+- Integrated worker: `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`
+- Public status: `D:\PlexTools\public\latest\scarflix_v2\materialized_qa_layered_status.*`
+- Mirror allowlists updated: `JasonOS_Prime_PublicMirrorQuickPush.js` and `JasonOS_Prime_PublicMirrorPublisher.js`
+
+Behavior now:
+
+1. Selected bounded Materialized QA candidates record local symlink/readlink metadata only. LocalSystem does not force-dereference `S:\media`.
+2. WebDAV HEAD is checked against the mapped media path.
+3. A 4 MB byte range is read and discarded as temporary warmup/buffering.
+4. Plex client decision is called only after the WebDAV layers pass.
+
+No media bytes are persisted. No publication, broad QA, expansion, cache clear, source mutation, or path mutation was started. `PAUSE_PUBLICATION` remains active. Next peer-review focus: after the next small bounded QA batch, use `materialized_qa_layered_status.*` to decide whether the remaining blocker is WebDAV/path, upstream range delivery, or Plex decision endpoint instability.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- PLAYBACK RELIABILITY ENGINEERING PUSH
 
 **Updated UTC:** 2026-06-13T21:03:55Z  
