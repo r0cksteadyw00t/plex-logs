@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-13T09:15:53Z",
+  "updated_utc": "2026-06-13T09:20:09Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 127,
-    "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-13T09:15:45Z",
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 132,
+    "mirror_updated_age_minutes": 2,
+    "next_check_utc": "2026-06-13T09:21:47Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 127,
+    "age_minutes": 132,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -149,9 +149,9 @@
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-13T09:15:53Z",
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-13T09:20:10Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,12 +376,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-13T09:15:40.799Z",
+      "utc": "2026-06-13T09:16:57.811Z",
       "title": "Mission 002 IPTV Phase 0 Held Dry Run - 2026-06-13 19:10",
       "detail": "Current verified state: Active Plex playback is being protected; one active Plex session was detected by the playback-first guard. No Plex scan, ScarFLIX QA, publication, expansion, source mutation, or path rewrite was started. Mission 002 IPTV Live Phase 0 dry-run generator was added at `jasonos/iptv/scripts/Invoke..."
     },
     {
-      "utc": "2026-06-13T09:10:36Z",
+      "utc": "2026-06-13T09:16:21Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-13T09:15:53Z",
+    "updated_utc": "2026-06-13T09:20:09Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -807,8 +807,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 448691,
-    "safe_pipeline_log_age_seconds": 505576,
+    "canary_status_age_seconds": 448939,
+    "safe_pipeline_log_age_seconds": 505823,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -825,7 +825,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=26516"
+        "detail": "pid=20576"
       }
     ],
     "blockers": []
