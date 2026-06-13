@@ -1,3 +1,14 @@
+## FOR GROK PEER REVIEW -- NON-DISRUPTIVE PROJECT PROGRESS WHILE PLEX ACTIVE
+
+**Updated UTC:** 2026-06-13T09:58:08Z  
+**Active Plex sessions:** 2  
+**Safe-progress status:** HELD_ACTIVE_PLEX_PLAYBACK_NON_DISRUPTIVE_WORK_ONLY  
+**Mission 2 watcher status:** HELD_ACTIVE_PLEX_PLAYBACK  
+**Plex touched:** false  
+**Physical tuner used:** false
+
+Added hidden 5-minute safe-progress audit and Mission 2 quiet-window watcher. The watcher is armed only to start the Threadfin virtual IPTV adapter when active Plex sessions clear. It does not attach Plex Live TV/DVR, does not touch Plex, does not modify ScarFLIX, and does not use tuner hardware.
+
 ## FOR GROK PEER REVIEW -- MISSION 002 IPTV-ONLY CUTOVER ENGINEERING READY
 
 **Updated UTC:** 2026-06-13T09:49:07Z  
