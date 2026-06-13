@@ -1,14 +1,14 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "status": "REVIEW_PARTIAL_BATCH_PASS",
-  "started_utc": "2026-06-13T23:49:38Z",
-  "ended_utc": "2026-06-13T23:50:51Z",
-  "updated_utc": "2026-06-13T23:50:51Z",
+  "status": "REVIEW",
+  "started_utc": "2026-06-13T23:56:05Z",
+  "ended_utc": "2026-06-13T23:57:54Z",
+  "updated_utc": "2026-06-13T23:57:54Z",
   "target_count": 229,
   "rows_found": 146,
-  "checked": 3,
+  "checked": 4,
   "passed": 3,
-  "failed": 0,
+  "failed": 1,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
@@ -19,17 +19,18 @@
   "retry_held_candidates": 0,
   "decision_probe_unfiltered_candidates": 141,
   "layered_validation_summary": {
-    "total": 3,
+    "total": 4,
     "passed": 3,
-    "review": 0,
+    "review": 1,
     "reasons": {
+      "webdav_head_upstream_server_error": 1,
       "webdav_head_and_temporary_range_warm_passed": 3
     }
   },
-  "decision_probe_skip": 13,
-  "decision_probe_limit": 3,
+  "decision_probe_skip": 16,
+  "decision_probe_limit": 4,
   "decision_probe_total_candidates": 141,
-  "selected_decision_candidates": 3,
+  "selected_decision_candidates": 4,
   "stopped_early": false,
   "stopped_reason": "",
   "targets": [
@@ -4412,10 +4413,10 @@
   "layered_results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-13T23:50:18Z",
-      "target_hash": "ScarFLIX_part-15435a4ab8d58746",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-15435a4ab8d58746/stream.mkv",
+      "updated_utc": "2026-06-13T23:56:46Z",
+      "target_hash": "ScarFLIX_part-9d12ffa4bdee7b47",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4427,10 +4428,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-15435a4ab8d58746",
+          "link_target": "S:\\media\\ScarFLIX_part-9d12ffa4bdee7b47",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4438,57 +4439,70 @@
           "is_file": false
         },
         "webdav_head": {
-          "ok": true,
+          "ok": false,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-15435a4ab8d58746/stream.mkv",
-          "status_code": 200,
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+          "status_code": 503,
           "bytes_read": 0,
-          "content_length": "1180424028",
-          "content_type": "application/octet-stream",
+          "content_length": "141",
+          "content_type": "text/plain; charset=utf-8",
           "accept_ranges": "bytes",
-          "elapsed_ms": 5277,
-          "attempt": 1,
-          "reason": "ok",
-          "attempts": 1
+          "elapsed_ms": 1093,
+          "attempt": 2,
+          "reason": "upstream_server_error",
+          "attempts": 2
         },
         "webdav_head_attempts": [
           {
-            "ok": true,
+            "ok": false,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-15435a4ab8d58746/stream.mkv",
-            "status_code": 200,
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+            "status_code": 503,
             "bytes_read": 0,
-            "content_length": "1180424028",
-            "content_type": "application/octet-stream",
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
             "accept_ranges": "bytes",
-            "elapsed_ms": 5277,
+            "elapsed_ms": 5526,
             "attempt": 1,
-            "reason": "ok"
+            "reason": "upstream_server_error"
+          },
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1093,
+            "attempt": 2,
+            "reason": "upstream_server_error"
           }
         ],
-        "webdav_range_warm": {
-          "ok": true,
+        "webdav_head_fallback_range": {
+          "ok": false,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-15435a4ab8d58746/stream.mkv",
-          "status_code": 206,
-          "bytes_read": 4194304,
-          "content_length": "4194304",
-          "content_type": "application/octet-stream",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+          "status_code": 503,
+          "bytes_read": 141,
+          "content_length": "141",
+          "content_type": "text/plain; charset=utf-8",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4116,
-          "reason": "ok"
+          "elapsed_ms": 776,
+          "reason": "upstream_server_error"
         }
       },
-      "status": "PASS",
-      "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 9429
+      "status": "REVIEW",
+      "reason": "webdav_head_upstream_server_error",
+      "elapsed_ms": 8178
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-13T23:50:30Z",
-      "target_hash": "ScarFLIX_part-bf8a62cf46526b11",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-bf8a62cf46526b11/stream.mkv",
+      "updated_utc": "2026-06-13T23:56:57Z",
+      "target_hash": "ScarFLIX_part-bd37929b54c7c1bf",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4500,10 +4514,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-bf8a62cf46526b11",
+          "link_target": "S:\\media\\ScarFLIX_part-bd37929b54c7c1bf",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4513,55 +4527,67 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bf8a62cf46526b11/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "1290093487",
+          "content_length": "1413214272",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1398,
-          "attempt": 1,
+          "elapsed_ms": 1688,
+          "attempt": 2,
           "reason": "ok",
-          "attempts": 1
+          "attempts": 2
         },
         "webdav_head_attempts": [
           {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8024,
+            "attempt": 1,
+            "reason": "timeout"
+          },
+          {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bf8a62cf46526b11/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1290093487",
+            "content_length": "1413214272",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1398,
-            "attempt": 1,
+            "elapsed_ms": 1688,
+            "attempt": 2,
             "reason": "ok"
           }
         ],
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bf8a62cf46526b11/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4102,
+          "elapsed_ms": 3891,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5503
+      "elapsed_ms": 14359
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-13T23:50:42Z",
-      "target_hash": "ScarFLIX_part-e37fbdce67a07b58",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-e37fbdce67a07b58/stream.mkv",
+      "updated_utc": "2026-06-13T23:57:19Z",
+      "target_hash": "ScarFLIX_part-8312e4b6385fd16c",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4573,10 +4599,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-e37fbdce67a07b58",
+          "link_target": "S:\\media\\ScarFLIX_part-8312e4b6385fd16c",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4586,13 +4612,98 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-e37fbdce67a07b58/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "1262272021",
+          "content_length": "3602397082",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1450,
+          "elapsed_ms": 1593,
+          "attempt": 2,
+          "reason": "ok",
+          "attempts": 2
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8014,
+            "attempt": 1,
+            "reason": "timeout"
+          },
+          {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "3602397082",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1593,
+            "attempt": 2,
+            "reason": "ok"
+          }
+        ],
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 3504,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_and_temporary_range_warm_passed",
+      "elapsed_ms": 13874
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-13T23:57:37Z",
+      "target_hash": "ScarFLIX_part-b9dbad7c5a4378f1",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b9dbad7c5a4378f1/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-b9dbad7c5a4378f1",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": true,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b9dbad7c5a4378f1/stream.mkv",
+          "status_code": 200,
+          "bytes_read": 0,
+          "content_length": "5762918708",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 7391,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4601,13 +4712,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-e37fbdce67a07b58/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b9dbad7c5a4378f1/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1262272021",
+            "content_length": "5762918708",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1450,
+            "elapsed_ms": 7391,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4615,28 +4726,131 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-e37fbdce67a07b58/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b9dbad7c5a4378f1/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3503,
+          "elapsed_ms": 3846,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 4954
+      "elapsed_ms": 11238
     }
   ],
   "results": [
     {
-      "metadata_id": 50662,
-      "part_id": 128327,
+      "metadata_id": 50581,
+      "part_id": 128158,
       "section_id": 5,
-      "title": "Casino",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv",
+      "title": "Commando",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47\\stream.mkv",
+      "status": "REVIEW",
+      "http_status": 0,
+      "access_mode": "token",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "layered_streaming_precheck_blocked_plex_decision",
+      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
+      "skipped_plex_decision": true,
+      "layered_validation": {
+        "component": "scarflix_v2_streaming_layered_validator",
+        "updated_utc": "2026-06-13T23:56:46Z",
+        "target_hash": "ScarFLIX_part-9d12ffa4bdee7b47",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+        "map_loaded": true,
+        "map_generated_utc": "2026-06-09T10:17:48Z",
+        "map_entry_found": true,
+        "temporary_buffering": {
+          "enabled": true,
+          "persisted": false,
+          "range_bytes_requested": 4194304
+        },
+        "layers": {
+          "local_symlink_metadata": {
+            "status": "PASS",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47",
+            "is_symbolic_link": true,
+            "link_target": "S:\\media\\ScarFLIX_part-9d12ffa4bdee7b47",
+            "error": "",
+            "blocking": false,
+            "exists": true,
+            "is_directory": false,
+            "is_file": false
+          },
+          "webdav_head": {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1093,
+            "attempt": 2,
+            "reason": "upstream_server_error",
+            "attempts": 2
+          },
+          "webdav_head_attempts": [
+            {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+              "status_code": 503,
+              "bytes_read": 0,
+              "content_length": "141",
+              "content_type": "text/plain; charset=utf-8",
+              "accept_ranges": "bytes",
+              "elapsed_ms": 5526,
+              "attempt": 1,
+              "reason": "upstream_server_error"
+            },
+            {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+              "status_code": 503,
+              "bytes_read": 0,
+              "content_length": "141",
+              "content_type": "text/plain; charset=utf-8",
+              "accept_ranges": "bytes",
+              "elapsed_ms": 1093,
+              "attempt": 2,
+              "reason": "upstream_server_error"
+            }
+          ],
+          "webdav_head_fallback_range": {
+            "ok": false,
+            "method": "GET",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9d12ffa4bdee7b47/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 141,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 776,
+            "reason": "upstream_server_error"
+          }
+        },
+        "status": "REVIEW",
+        "reason": "webdav_head_upstream_server_error",
+        "elapsed_ms": 8178
+      },
+      "target_hash": "ScarFLIX_part-9d12ffa4bdee7b47",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Commando (1985)\\ScarFLIX_part-9d12ffa4bdee7b47"
+    },
+    {
+      "metadata_id": 50530,
+      "part_id": 128061,
+      "section_id": 5,
+      "title": "Crank",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4657,14 +4871,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-15435a4ab8d58746",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746",
+      "target_hash": "ScarFLIX_part-bd37929b54c7c1bf",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-13T23:50:18Z",
-        "target_hash": "ScarFLIX_part-15435a4ab8d58746",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-15435a4ab8d58746/stream.mkv",
+        "updated_utc": "2026-06-13T23:56:57Z",
+        "target_hash": "ScarFLIX_part-bd37929b54c7c1bf",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4676,10 +4890,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Crank (2006)\\ScarFLIX_part-bd37929b54c7c1bf",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-15435a4ab8d58746",
+            "link_target": "S:\\media\\ScarFLIX_part-bd37929b54c7c1bf",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4689,56 +4903,68 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-15435a4ab8d58746/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1180424028",
+            "content_length": "1413214272",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 5277,
-            "attempt": 1,
+            "elapsed_ms": 1688,
+            "attempt": 2,
             "reason": "ok",
-            "attempts": 1
+            "attempts": 2
           },
           "webdav_head_attempts": [
             {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
+              "status_code": 0,
+              "bytes_read": 0,
+              "timed_out": true,
+              "error": "timeout",
+              "elapsed_ms": 8024,
+              "attempt": 1,
+              "reason": "timeout"
+            },
+            {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-15435a4ab8d58746/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "1180424028",
+              "content_length": "1413214272",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 5277,
-              "attempt": 1,
+              "elapsed_ms": 1688,
+              "attempt": 2,
               "reason": "ok"
             }
           ],
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-15435a4ab8d58746/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bd37929b54c7c1bf/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 4116,
+            "elapsed_ms": 3891,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 9429
+        "elapsed_ms": 14359
       }
     },
     {
-      "metadata_id": 50611,
-      "part_id": 128220,
+      "metadata_id": 50529,
+      "part_id": 128060,
       "section_id": 5,
-      "title": "Cloverfield",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11\\stream.mkv",
+      "title": "Creed",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4759,14 +4985,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-bf8a62cf46526b11",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11",
+      "target_hash": "ScarFLIX_part-8312e4b6385fd16c",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-13T23:50:30Z",
-        "target_hash": "ScarFLIX_part-bf8a62cf46526b11",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-bf8a62cf46526b11/stream.mkv",
+        "updated_utc": "2026-06-13T23:57:19Z",
+        "target_hash": "ScarFLIX_part-8312e4b6385fd16c",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4778,10 +5004,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Cloverfield (2008)\\ScarFLIX_part-bf8a62cf46526b11",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Creed (2015)\\ScarFLIX_part-8312e4b6385fd16c",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-bf8a62cf46526b11",
+            "link_target": "S:\\media\\ScarFLIX_part-8312e4b6385fd16c",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4791,56 +5017,68 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bf8a62cf46526b11/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1290093487",
+            "content_length": "3602397082",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1398,
-            "attempt": 1,
+            "elapsed_ms": 1593,
+            "attempt": 2,
             "reason": "ok",
-            "attempts": 1
+            "attempts": 2
           },
           "webdav_head_attempts": [
             {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
+              "status_code": 0,
+              "bytes_read": 0,
+              "timed_out": true,
+              "error": "timeout",
+              "elapsed_ms": 8014,
+              "attempt": 1,
+              "reason": "timeout"
+            },
+            {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bf8a62cf46526b11/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "1290093487",
+              "content_length": "3602397082",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 1398,
-              "attempt": 1,
+              "elapsed_ms": 1593,
+              "attempt": 2,
               "reason": "ok"
             }
           ],
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-bf8a62cf46526b11/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-8312e4b6385fd16c/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 4102,
+            "elapsed_ms": 3504,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 5503
+        "elapsed_ms": 13874
       }
     },
     {
-      "metadata_id": 50623,
-      "part_id": 128248,
+      "metadata_id": 50528,
+      "part_id": 128059,
       "section_id": 5,
-      "title": "Clueless",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58\\stream.mkv",
+      "title": "Dances with Wolves",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4861,14 +5099,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-e37fbdce67a07b58",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58",
+      "target_hash": "ScarFLIX_part-b9dbad7c5a4378f1",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-13T23:50:42Z",
-        "target_hash": "ScarFLIX_part-e37fbdce67a07b58",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-e37fbdce67a07b58/stream.mkv",
+        "updated_utc": "2026-06-13T23:57:37Z",
+        "target_hash": "ScarFLIX_part-b9dbad7c5a4378f1",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b9dbad7c5a4378f1/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4880,10 +5118,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Clueless (1995)\\ScarFLIX_part-e37fbdce67a07b58",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dances with Wolves (1990)\\ScarFLIX_part-b9dbad7c5a4378f1",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-e37fbdce67a07b58",
+            "link_target": "S:\\media\\ScarFLIX_part-b9dbad7c5a4378f1",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4893,13 +5131,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-e37fbdce67a07b58/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b9dbad7c5a4378f1/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1262272021",
+            "content_length": "5762918708",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1450,
+            "elapsed_ms": 7391,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -4908,13 +5146,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-e37fbdce67a07b58/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b9dbad7c5a4378f1/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "1262272021",
+              "content_length": "5762918708",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 1450,
+              "elapsed_ms": 7391,
               "attempt": 1,
               "reason": "ok"
             }
@@ -4922,21 +5160,21 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-e37fbdce67a07b58/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b9dbad7c5a4378f1/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3503,
+            "elapsed_ms": 3846,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 4954
+        "elapsed_ms": 11238
       }
     }
   ],
-  "next_action": "This bounded Materialized QA batch passed; continue the next batch before go-live."
+  "next_action": "Quarantine failed materialized source/release and keep title retryable."
 }
