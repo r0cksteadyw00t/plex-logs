@@ -1,47 +1,72 @@
 ﻿{
     "component":  "jasonos_iptv_source_preflight_status",
     "schema_version":  "jasonos.iptv.source_preflight_status.v1",
-    "status":  "HELD_NO_PROVIDER_INPUTS",
-    "updated_utc":  "2026-06-13T09:15:12Z",
+    "status":  "PASS_HELD_SOURCE_PREFLIGHT_READY",
+    "updated_utc":  "2026-06-13T09:33:25Z",
     "publishes_to_plex":  false,
     "scarflix_modified":  false,
     "plex_touched":  false,
     "network_fetch_performed":  false,
-    "source_manifest":  "jasonos\\iptv\\sources\\source_manifest.held.seed.json",
+    "source_manifest":  ".\\jasonos\\iptv\\sources\\source_manifest.cutover_candidate.json",
     "mapping_seed":  "jasonos\\iptv\\mapping\\channel_mappings.seed.json",
-    "source_count":  2,
-    "enabled_source_count":  0,
-    "provider_url_count":  0,
+    "source_count":  4,
+    "enabled_source_count":  4,
+    "provider_url_count":  4,
     "mapping_count":  4,
     "errors":  [
 
                ],
     "warnings":  [
-
+                     "Source mjh_au_sydney_raw_tv is enabled in manifest, but Phase 0 preflight does not fetch network streams.",
+                     "Source mjh_au_sydney_epg is enabled in manifest, but Phase 0 preflight does not fetch network streams.",
+                     "Source mjh_au_melbourne_raw_tv is enabled in manifest, but Phase 0 preflight does not fetch network streams.",
+                     "Source mjh_au_melbourne_epg is enabled in manifest, but Phase 0 preflight does not fetch network streams."
                  ],
     "sources":  [
                     {
-                        "source_id":  "au_public_fta_placeholder",
-                        "display_name":  "Australian FTA public source placeholder",
-                        "source_class":  "manual_placeholder",
-                        "ingestion_mode":  "HELD_CONFIG_ONLY",
-                        "enabled":  false,
-                        "provider_url_present":  false,
+                        "source_id":  "mjh_au_sydney_raw_tv",
+                        "display_name":  "Matt Huisman AU Sydney Raw TV",
+                        "source_class":  "public_m3u",
+                        "ingestion_mode":  "ACTIVE_VALIDATE_ONLY",
+                        "enabled":  true,
+                        "provider_url_present":  true,
                         "network_fetch_performed":  false,
                         "publishable":  false,
-                        "notes":  "Placeholder for future validated free-to-air M3U/XMLTV source. No network ingestion is permitted while provider_url is blank."
+                        "notes":  "Public generated AU Freeview playlist. Validate only; do not publish until Guardian PASS and cutover is explicitly enabled."
                     },
                     {
-                        "source_id":  "afl_event_placeholder",
-                        "display_name":  "AFL event feed placeholder",
-                        "source_class":  "manual_placeholder",
-                        "ingestion_mode":  "HELD_CONFIG_ONLY",
-                        "enabled":  false,
-                        "provider_url_present":  false,
+                        "source_id":  "mjh_au_sydney_epg",
+                        "display_name":  "Matt Huisman AU Sydney EPG",
+                        "source_class":  "public_xmltv",
+                        "ingestion_mode":  "ACTIVE_VALIDATE_ONLY",
+                        "enabled":  true,
+                        "provider_url_present":  true,
                         "network_fetch_performed":  false,
                         "publishable":  false,
-                        "notes":  "Placeholder for future legal AFL/event source mapping. Requires explicit source validation before any active use."
+                        "notes":  "Companion XMLTV guide for Sydney source."
+                    },
+                    {
+                        "source_id":  "mjh_au_melbourne_raw_tv",
+                        "display_name":  "Matt Huisman AU Melbourne Raw TV",
+                        "source_class":  "public_m3u",
+                        "ingestion_mode":  "ACTIVE_VALIDATE_ONLY",
+                        "enabled":  true,
+                        "provider_url_present":  true,
+                        "network_fetch_performed":  false,
+                        "publishable":  false,
+                        "notes":  "Public generated AU Freeview playlist. Included for AFL/7mate Melbourne fallback coverage."
+                    },
+                    {
+                        "source_id":  "mjh_au_melbourne_epg",
+                        "display_name":  "Matt Huisman AU Melbourne EPG",
+                        "source_class":  "public_xmltv",
+                        "ingestion_mode":  "ACTIVE_VALIDATE_ONLY",
+                        "enabled":  true,
+                        "provider_url_present":  true,
+                        "network_fetch_performed":  false,
+                        "publishable":  false,
+                        "notes":  "Companion XMLTV guide for Melbourne source."
                     }
                 ],
-    "next_safe_action":  "Add legal provider source inputs in held validate-only mode, then run bounded stream validation before Guardian can allow Plex output."
+    "next_safe_action":  "Run bounded stream validation before Guardian can allow Plex output."
 }
