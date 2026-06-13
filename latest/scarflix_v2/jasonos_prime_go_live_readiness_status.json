@@ -1,0 +1,226 @@
+﻿{
+    "component":  "jasonos_prime_go_live_readiness_audit",
+    "schema_version":  "jasonos.go_live_readiness.v1",
+    "status":  "HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY",
+    "started_utc":  "2026-06-13T10:09:36Z",
+    "updated_utc":  "2026-06-13T10:09:44Z",
+    "report_only":  false,
+    "go_live_ready":  false,
+    "active_plex_sessions":  1,
+    "sentinel":  {
+                     "status":  "PASS",
+                     "alert_level":  "LOW"
+                 },
+    "safety":  {
+                   "pause_publication_active":  true,
+                   "no_publication_started":  true,
+                   "no_expansion_started":  true,
+                   "no_cleanup_performed":  true,
+                   "no_deletion_performed":  true,
+                   "no_source_mutation_performed":  true,
+                   "no_path_rewrite_performed":  true,
+                   "plex_restart_or_stop_allowed":  false
+               },
+    "outcomes":  [
+                     {
+                         "outcome_id":  "O-PLAYBACK",
+                         "name":  "Reliable Plex playback first",
+                         "go_live_status":  "HELD_ACTIVE_PLEX_PLAYBACK",
+                         "progress_percent":  65,
+                         "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
+                         "evidence":  [
+                                          "Guard=REVIEW_PLEX_BACKGROUND_JOB_STOP_UNVERIFIED ActiveSessions=1 PlexWatchdog=PASS PlaybackPath=PASS"
+                                      ],
+                         "blockers":  [
+                                          "Active Plex sessions: 1. No disruptive action allowed.",
+                                          "Plex background scanner/analyzer pressure still detected: 1."
+                                      ],
+                         "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
+                         "requires_quiet_window":  true,
+                         "plex_disruptive_action_allowed":  false
+                     },
+                     {
+                         "outcome_id":  "O-SCARFLIX-CATALOGUE",
+                         "name":  "ScarFLIX movies and TV playable in Plex",
+                         "go_live_status":  "REVIEW_NOT_GO_LIVE_READY",
+                         "progress_percent":  45,
+                         "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
+                         "evidence":  [
+                                          "MaterializedQA=REVIEW 119/229 Section5Visible=105 Section5Missing=0 PausePublication=True"
+                                      ],
+                         "blockers":  [
+                                          "Materialized QA is not PASS: REVIEW 119/229 failed=110.",
+                                          "Active Plex playback prevents safe focused QA/expansion work."
+                                      ],
+                         "next_safe_action":  "Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable.",
+                         "requires_quiet_window":  true,
+                         "plex_disruptive_action_allowed":  false
+                     },
+                     {
+                         "outcome_id":  "O-MISSION-002-IPTV",
+                         "name":  "IPTV-only Live TV ready for cutover",
+                         "go_live_status":  "HELD_READY_FOR_QUIET_WINDOW",
+                         "progress_percent":  80,
+                         "summary":  "IPTV-only package is ready and guarded; no physical tuner path is allowed.",
+                         "evidence":  [
+                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=HELD_ACTIVE_PLEX_PLAYBACK Verify=HELD_THREADFIN_NOT_RUNNING Watcher=HELD_ACTIVE_PLEX_PLAYBACK PhysicalTuner=false"
+                                      ],
+                         "blockers":  [
+                                          "Threadfin virtual adapter is not verified running yet: HELD_THREADFIN_NOT_RUNNING.",
+                                          "Active Plex sessions hold Threadfin start and all Plex Live TV/DVR attach work."
+                                      ],
+                         "next_safe_action":  "Let the quiet-window watcher start Threadfin when active sessions are zero, then verify adapter endpoints before any Plex Live TV/DVR attach.",
+                         "requires_quiet_window":  true,
+                         "plex_disruptive_action_allowed":  false
+                     },
+                     {
+                         "outcome_id":  "O-DAILY-AI-COMMAND",
+                         "name":  "Daily AI and Command Centre usable",
+                         "go_live_status":  "REVIEW_NOT_GO_LIVE_READY",
+                         "progress_percent":  55,
+                         "summary":  "Core AI/reporting exists, but Command Centre usability is degraded and needs a fresh end-user pass.",
+                         "evidence":  [
+                                          "CommandCentre=DEGRADED DailyAI=PASS"
+                                      ],
+                         "blockers":  [
+                                          "Command Centre is not PASS: DEGRADED."
+                                      ],
+                         "next_safe_action":  "Stabilize Command Centre and run a lightweight usability proof when playback-sensitive work is quiet.",
+                         "requires_quiet_window":  false,
+                         "plex_disruptive_action_allowed":  false
+                     },
+                     {
+                         "outcome_id":  "O-GROK-GITHUB-DASHBOARD",
+                         "name":  "Truthful public dashboard and Grok peer-review loop",
+                         "go_live_status":  "PASS_OPERATIONAL",
+                         "progress_percent":  90,
+                         "summary":  "Public mirror and Grok report delivery are operational; this audit adds the missing go-live verdict layer.",
+                         "evidence":  [
+                                          "PublicMirror=PASS GrokDelivery=PASS_DELIVERED_TO_GROK_API Mode=REAL_API"
+                                      ],
+                         "blockers":  [
+
+                                      ],
+                         "next_safe_action":  "Publish this readiness audit and keep top-of-file handoffs current after each material change.",
+                         "requires_quiet_window":  false,
+                         "plex_disruptive_action_allowed":  false
+                     },
+                     {
+                         "outcome_id":  "O-AUTONOMY-STABILITY",
+                         "name":  "Autonomous operation and stall recovery",
+                         "go_live_status":  "REVIEW_NOT_GO_LIVE_READY",
+                         "progress_percent":  70,
+                         "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
+                         "evidence":  [
+                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Ready"
+                                      ],
+                         "blockers":  [
+                                          "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
+                                      ],
+                         "next_safe_action":  "Keep orchestration alive, reduce high-churn work during playback, and treat repeated no-progress cycles as Grok review triggers.",
+                         "requires_quiet_window":  false,
+                         "plex_disruptive_action_allowed":  false
+                     },
+                     {
+                         "outcome_id":  "O-PROJECT-GO-LIVE-CONTROL",
+                         "name":  "Formal go-live control across all outcomes",
+                         "go_live_status":  "PASS_READINESS_LEDGER_INSTALLED",
+                         "progress_percent":  85,
+                         "summary":  "This worker converts fragmented plans into a live go-live blocker ledger.",
+                         "evidence":  [
+                                          "StatusJson=D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_go_live_readiness_status.json StatusMd=D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_go_live_readiness_status.md ProjectPlan=C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\PROJECT_PLAN.md"
+                                      ],
+                         "blockers":  [
+                                          "TASKS.md last write: 2026-06-10 17:46:07",
+                                          "OUTCOMES.md last write: 2026-06-10 17:59:34"
+                                      ],
+                         "next_safe_action":  "Use this audit as the active control plane and update stale task docs from its blocker list.",
+                         "requires_quiet_window":  false,
+                         "plex_disruptive_action_allowed":  false
+                     }
+                 ],
+    "blockers":  [
+                     {
+                         "outcome_id":  "O-PLAYBACK",
+                         "blocker":  "Active Plex sessions: 1. No disruptive action allowed."
+                     },
+                     {
+                         "outcome_id":  "O-PLAYBACK",
+                         "blocker":  "Plex background scanner/analyzer pressure still detected: 1."
+                     },
+                     {
+                         "outcome_id":  "O-SCARFLIX-CATALOGUE",
+                         "blocker":  "Materialized QA is not PASS: REVIEW 119/229 failed=110."
+                     },
+                     {
+                         "outcome_id":  "O-SCARFLIX-CATALOGUE",
+                         "blocker":  "Active Plex playback prevents safe focused QA/expansion work."
+                     },
+                     {
+                         "outcome_id":  "O-MISSION-002-IPTV",
+                         "blocker":  "Threadfin virtual adapter is not verified running yet: HELD_THREADFIN_NOT_RUNNING."
+                     },
+                     {
+                         "outcome_id":  "O-MISSION-002-IPTV",
+                         "blocker":  "Active Plex sessions hold Threadfin start and all Plex Live TV/DVR attach work."
+                     },
+                     {
+                         "outcome_id":  "O-DAILY-AI-COMMAND",
+                         "blocker":  "Command Centre is not PASS: DEGRADED."
+                     },
+                     {
+                         "outcome_id":  "O-AUTONOMY-STABILITY",
+                         "blocker":  "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
+                     }
+                 ],
+    "monitored_tasks":  [
+                            {
+                                "task_name":  "JasonOS_Prime_PlaybackFirstStabilityGuard",
+                                "exists":  true,
+                                "state":  "Ready",
+                                "last_result":  0
+                            },
+                            {
+                                "task_name":  "JasonOS_Prime_PlaybackPathRecovery",
+                                "exists":  true,
+                                "state":  "Ready",
+                                "last_result":  0
+                            },
+                            {
+                                "task_name":  "JasonOS_Prime_PlexWatchdog",
+                                "exists":  true,
+                                "state":  "Ready",
+                                "last_result":  0
+                            },
+                            {
+                                "task_name":  "JasonOS_Prime_ProjectSafeProgressAudit",
+                                "exists":  true,
+                                "state":  "Ready",
+                                "last_result":  0
+                            },
+                            {
+                                "task_name":  "JasonOS_Prime_Mission002_QuietWindowCutoverWatcher",
+                                "exists":  true,
+                                "state":  "Ready",
+                                "last_result":  0
+                            },
+                            {
+                                "task_name":  "JasonOS_Prime_GoLiveReadinessAudit",
+                                "exists":  true,
+                                "state":  "Ready",
+                                "last_result":  0
+                            }
+                        ],
+    "next_safe_actions":  [
+                              "Do not restart/stop Plex or run heavy catalogue work while active playback exists.",
+                              "Keep PAUSE_PUBLICATION active until Materialized QA returns to PASS and playback verification is current.",
+                              "Allow Mission 002 watcher to start Threadfin virtual adapter only when active Plex sessions are zero.",
+                              "After playback quiets, run bounded playback verification before any ScarFLIX expansion.",
+                              "Refresh TASKS.md and OUTCOMES.md from this readiness ledger rather than treating stale rows as current truth."
+                          ],
+    "public_urls":  {
+                        "raw_status_md":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.md",
+                        "raw_status_json":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.json",
+                        "raw_grok_handoff":  "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md"
+                    }
+}
