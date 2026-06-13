@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_playback_reliability_engineering",
   "status": "ACTIVE_PLAYBACK_RELIABILITY_PUSH",
-  "updated_utc": "2026-06-13T22:17:36Z",
+  "updated_utc": "2026-06-13T22:24:00Z",
   "publication_allowed": false,
   "broad_expansion_allowed": false,
   "pause_publication_required": true,
@@ -12,7 +12,7 @@
     },
     {
       "file": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js",
-      "change": "loopback-first Plex decision probing, keep-alive HTTP agent, transient retry/fallback, layered WebDAV HEAD and 4MB discard-only range warmup before Plex decision"
+      "change": "loopback-first Plex decision probing, keep-alive HTTP agent, transient retry/fallback, layered WebDAV HEAD and 4MB discard-only range warmup before Plex decision, token-auth all-bases before no-auth fallback"
     },
     {
       "file": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_StreamingLayeredValidator.js",
@@ -40,6 +40,22 @@
     ]
   },
   "current_go_live_ready": false,
-  "current_primary_blocker": "playback path and Plex decision reliability",
-  "next_expected_signal": "bounded QA pass rate, layered WebDAV/range status, and decision_attempts after loopback-first retry patch"
+  "current_primary_blocker": "Plex decision auth/routing/endpoint behavior after WebDAV/range pass",
+  "latest_layered_batch": {
+    "updated_utc": "2026-06-13T22:21:26Z",
+    "layered_total": 3,
+    "layered_passed": 3,
+    "webdav_head_http_200": 3,
+    "range_http_206": 3,
+    "plex_decision_checked": 3,
+    "plex_decision_passed": 2,
+    "plex_decision_failed": 1,
+    "failed_reason": "LAN decision timeout attempts followed by loopback HTTP 401"
+  },
+  "plex_token_probe": {
+    "token_printed": false,
+    "loopback_status": 401,
+    "lan_status": 200
+  },
+  "next_expected_signal": "bounded QA pass rate and decision_attempts after token-auth LAN selection patch"
 }
