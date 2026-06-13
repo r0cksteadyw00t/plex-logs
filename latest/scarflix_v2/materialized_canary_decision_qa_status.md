@@ -1,11 +1,11 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: REVIEW_PARTIAL_BATCH_PASS
-Updated UTC: 2026-06-13T21:54:38Z
+Status: RUNNING_PLEX_DECISION_PROBES
+Updated UTC: 2026-06-13T22:00:15Z
 Targets: 229
 Rows found: 146
-Checked: 3
-Passed: 3
+Checked: 0
+Passed: 0
 Failed: 0
 Query errors: 0
-Next action: This bounded Materialized QA batch passed; continue the next batch before go-live.
+Next action: Materialized Plex decision QA is running bounded client-style decision probes.
