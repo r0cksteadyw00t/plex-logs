@@ -1,3 +1,16 @@
+## Playback Recovery Monitoring PASS - 2026-06-13 15:33 Australia/Sydney
+
+- Heartbeat: `playback-recovery-retry`.
+- Command launch: PASS (`166ms`, `27ms`, `75ms`).
+- Plex identity: PASS HTTP 200.
+- WebDAV bridge health: PASS HTTP 200.
+- rclone: running as PID `18336`.
+- Mount visibility: `S:\`, `S:\media`, and `S:\media\catalog` are available.
+- Watch Now recheck:
+  - `Gremlins` - PASS HTTP 200, `1603ms`
+  - `Anna` - PASS HTTP 200, `1380ms`
+- Decision: playback path is currently recovered for the limited Watch Now lane. Keep expansion paused and PAUSE_PUBLICATION active until a wider playback stability window is proven.
+
 ## Playback Recovery Partial PASS - 2026-06-13 15:31 Australia/Sydney
 
 - User-reported symptom: Plex `Playback Error: Content is unavailable` across movies.
