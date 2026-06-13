@@ -1,6 +1,6 @@
 ﻿# Playback Quiet Resume
 
-**Updated UTC:** 2026-06-13T12:20:07Z  
+**Updated UTC:** 2026-06-13T12:22:05Z  
 **Status:** HELD_ACTIVE_PLEX_PLAYBACK
 
 ## Gate
