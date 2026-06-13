@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T20:29:05Z",
-    "updated_utc":  "2026-06-13T20:29:10Z",
+    "started_utc":  "2026-06-13T20:34:06Z",
+    "updated_utc":  "2026-06-13T20:34:12Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -29,10 +29,10 @@
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
-                                          "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
+                                          "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=PASS"
                                       ],
                          "blockers":  [
-                                          "Playback path recovery is not PASS: REVIEW."
+                                          "Plex background scanner/analyzer pressure still detected: 2."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
                          "requires_quiet_window":  false,
@@ -45,10 +45,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=RUNNING_DISCOVERING_PLEX_ROWS 0/0 Section5Visible=105 Section5Missing=0 PausePublication=True"
+                                          "MaterializedQA=REVIEW 1/3 Section5Visible=105 Section5Missing=0 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not PASS: RUNNING_DISCOVERING_PLEX_ROWS 0/0 failed=0."
+                                          "Materialized QA is not PASS: REVIEW 1/3 failed=2."
                                       ],
                          "next_safe_action":  "Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable.",
                          "requires_quiet_window":  true,
@@ -139,11 +139,11 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Playback path recovery is not PASS: REVIEW."
+                         "blocker":  "Plex background scanner/analyzer pressure still detected: 2."
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not PASS: RUNNING_DISCOVERING_PLEX_ROWS 0/0 failed=0."
+                         "blocker":  "Materialized QA is not PASS: REVIEW 1/3 failed=2."
                      }
                  ],
     "monitored_tasks":  [
