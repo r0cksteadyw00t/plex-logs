@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T09:50:44.353Z
+Updated UTC: 2026-06-13T09:55:36.817Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,9 +21,9 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-13T09:49:55.870Z - Mission 002 IPTV-Only Cutover Engineering Ready - 2026-06-13 19:49: Current verified state: Mission 002 is explicitly IPTV-only. No physical tuner, antenna, DVB/OTA device, coax input, or hardware HDHomeRun will be used. Threadfin remains the virtual Plex-compatible adapter layer only. Added full architecture doc: `jasonos/iptv/cutover/MISSION_002_IPTV_ONLY_CUTOVER_ARCHITECTURE.md`.
+- 2026-06-13T09:51:04.372Z - Mission 002 IPTV-Only Cutover Engineering Ready - 2026-06-13 19:49: Current verified state: Mission 002 is explicitly IPTV-only. No physical tuner, antenna, DVB/OTA device, coax input, or hardware HDHomeRun will be used. Threadfin remains the virtual Plex-compatible adapter layer only. Added full architecture doc: `jasonos/iptv/cutover/MISSION_002_IPTV_ONLY_CUTOVER_ARCHITECTURE.md`.
+- 2026-06-13T09:50:47Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T09:45:50.106Z - Mission 002 IPTV Cutover Package Ready But Held - 2026-06-13 19:40: Current verified state: Jason correction applied after the first package: AFL IP streaming is `7plus` primary; antenna/linear reference is channel `70`. Mission 002 mapping now prefers the public `mjh-7afl-fast` / `7AFL` candidate for the held AFL IP lane and treats Seven/7mate regional channels as fallback/linear r...
-- 2026-06-13T09:45:48Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T09:39:13.801Z - Mission 002 IPTV Cutover Package Ready But Held - 2026-06-13 19:33: Current verified state: Jason correction applied after the first package: AFL IP streaming is `7plus` primary; antenna/linear reference is channel `70`. Mission 002 mapping now prefers the public `mjh-7afl-fast` / `7AFL` candidate for the held AFL IP lane and treats Seven/7mate regional channels as fallback/linear r...
 - 2026-06-13T09:25:53.489Z - Mission 002 IPTV Phase 0 Held Dry Run - 2026-06-13 19:10: Current verified state: Active Plex playback is being protected; one active Plex session was detected by the playback-first guard. No Plex scan, ScarFLIX QA, publication, expansion, source mutation, or path rewrite was started. Mission 002 IPTV Live Phase 0 dry-run generator was added at `jasonos/iptv/scripts/Invoke...
 - 2026-06-13T09:05:33.821Z - Playback Priority Guard - 2026-06-13 19:00: Current verified state: Sentinel: `PASS / LOW`. Plex watchdog: `PASS`; Plex Media Server is running. Playback path recovery: `PASS`; WebDAV and `S:\media\catalog` were healthy in the latest recovery cycle.
@@ -31,7 +31,7 @@ Recent Achievements:
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 5 min ago
-- Platform child progress: 162 min ago
+- Platform child progress: 167 min ago
 - Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
