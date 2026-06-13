@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-13T10:40:21Z",
+  "updated_utc": "2026-06-13T10:40:20Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -104,7 +104,7 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
+    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON",
     "staged_candidate_count": 43,
     "plex_safe_webdav_visible_rows": 1
   },
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 207,
-    "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-13T10:40:37Z",
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 212,
+    "mirror_updated_age_minutes": 1,
+    "next_check_utc": "2026-06-13T10:41:14Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 207,
+    "age_minutes": 212,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-13T10:35:49Z",
+    "updated_utc": "2026-06-13T10:40:19Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-13T10:35:28Z",
+    "updated_utc": "2026-06-13T10:40:20Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,12 +376,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-13T10:35:51.626Z",
+      "utc": "2026-06-13T10:36:22.281Z",
       "title": "Go-Live Readiness Ledger Installed - 2026-06-13 20:09",
       "detail": "Current verified state: New live go-live audit: `D:\\PlexTools\\Scripts\\scarflix_v2\\JasonOS_Prime_GoLiveReadinessAudit.ps1`. New hidden scheduled task: `JasonOS_Prime_GoLiveReadinessAudit`, every 5 minutes, LastTaskResult `0`. Public status: `D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_go_live_readiness_statu..."
     },
     {
-      "utc": "2026-06-13T10:35:23Z",
+      "utc": "2026-06-13T10:35:56Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-13T10:35:26Z",
+    "updated_utc": "2026-06-13T10:40:20Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -807,25 +807,25 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 453465,
-    "safe_pipeline_log_age_seconds": 510350,
+    "canary_status_age_seconds": 453743,
+    "safe_pipeline_log_age_seconds": 510628,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
       {
         "action": "refresh_grokbuild",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_GrokBuild_Agent.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=4368"
+        "detail": "pid=12496"
       }
     ],
     "blockers": []
@@ -925,13 +925,5 @@
       }
     ],
     "next_action": "Quarantine failed materialized source/release and keep title retryable."
-  },
-  "grokbuild_forensic_agent": {
-    "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-13T10:40:21Z",
-    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
-    "implementation": "node_native",
-    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
-    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
   }
 }
