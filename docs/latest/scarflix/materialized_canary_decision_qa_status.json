@@ -1,20 +1,21 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "status": "REVIEW",
-  "started_utc": "2026-06-13T20:58:11Z",
-  "ended_utc": "2026-06-13T20:58:55Z",
-  "updated_utc": "2026-06-13T20:58:55Z",
+  "status": "REVIEW_PARTIAL_BATCH_PASS",
+  "started_utc": "2026-06-13T21:04:17Z",
+  "ended_utc": "2026-06-13T21:05:46Z",
+  "updated_utc": "2026-06-13T21:05:46Z",
   "target_count": 229,
-  "rows_found": 150,
+  "rows_found": 154,
   "checked": 3,
-  "passed": 1,
-  "failed": 2,
+  "passed": 3,
+  "failed": 0,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
-  "decision_probe_skip": 92,
+  "decision_retry_count": 1,
+  "decision_probe_skip": 95,
   "decision_probe_limit": 3,
-  "decision_probe_total_candidates": 145,
+  "decision_probe_total_candidates": 149,
   "selected_decision_candidates": 3,
   "stopped_early": false,
   "stopped_reason": "",
@@ -1591,7 +1592,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50662,
+          "part_id": 128327,
+          "section_id": 5,
+          "title": "Casino",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Casino (1995)\\ScarFLIX_part-15435a4ab8d58746\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -2314,7 +2323,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50664,
+          "part_id": 128331,
+          "section_id": 5,
+          "title": "Homefront",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Homefront (2013)\\ScarFLIX_part-f5c5e50cc68c7a6a\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -2507,7 +2524,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\L.E.T.H.A.L. Ladies Return to Savage Beach (1998)\\ScarFLIX_part-c624488ce1ac323e",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50660,
+          "part_id": 128323,
+          "section_id": 5,
+          "title": "L.E.T.H.A.L. Ladies: Return to Savage Beach",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\L.E.T.H.A.L. Ladies Return to Savage Beach (1998)\\ScarFLIX_part-c624488ce1ac323e\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -2707,7 +2732,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Mortal Kombat Legends Snow Blind (2022)\\ScarFLIX_part-7110affe1186b949",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50659,
+          "part_id": 128322,
+          "section_id": 5,
+          "title": "Mortal Kombat Legends: Snow Blind",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Mortal Kombat Legends Snow Blind (2022)\\ScarFLIX_part-7110affe1186b949\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -4429,18 +4462,68 @@
   ],
   "results": [
     {
+      "metadata_id": 50398,
+      "part_id": 127807,
+      "section_id": 5,
+      "title": "Teen Wolf: The Movie",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Teen Wolf The Movie (2023)\\ScarFLIX_part-0e360325f9b2603d\\stream.mkv",
+      "status": "PASS",
+      "http_status": 200,
+      "access_mode": "allowed_networks",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
+      "attempt": 2,
+      "decision_attempts": [
+        {
+          "attempt": 1,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "FAIL",
+          "http_status": 0,
+          "reason": "socket hang up"
+        },
+        {
+          "attempt": 2,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "PASS",
+          "http_status": 200,
+          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
+        }
+      ],
+      "target_hash": "ScarFLIX_part-0e360325f9b2603d",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Teen Wolf The Movie (2023)\\ScarFLIX_part-0e360325f9b2603d"
+    },
+    {
       "metadata_id": 50381,
       "part_id": 127773,
       "section_id": 5,
       "title": "Terminator: Dark Fate",
       "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Dark Fate (2019)\\ScarFLIX_part-6a30d1aa558bac1f\\stream.mkv",
-      "status": "FAIL",
-      "http_status": 0,
+      "status": "PASS",
+      "http_status": 200,
       "access_mode": "allowed_networks",
       "base_url": "http://192.168.1.184:32400",
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "socket hang up",
+      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
+      "attempt": 2,
+      "decision_attempts": [
+        {
+          "attempt": 1,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "FAIL",
+          "http_status": 0,
+          "reason": "timeout"
+        },
+        {
+          "attempt": 2,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "PASS",
+          "http_status": 200,
+          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
+        }
+      ],
       "target_hash": "ScarFLIX_part-6a30d1aa558bac1f",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Dark Fate (2019)\\ScarFLIX_part-6a30d1aa558bac1f"
     },
@@ -4457,25 +4540,26 @@
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
       "reason": "Plex client-style decision returned HTTP 200 for materialized path",
+      "attempt": 2,
+      "decision_attempts": [
+        {
+          "attempt": 1,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "FAIL",
+          "http_status": 0,
+          "reason": "timeout"
+        },
+        {
+          "attempt": 2,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "PASS",
+          "http_status": 200,
+          "reason": "Plex client-style decision returned HTTP 200 for materialized path"
+        }
+      ],
       "target_hash": "ScarFLIX_part-89731919b552c615",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Salvation (2009)\\ScarFLIX_part-89731919b552c615"
-    },
-    {
-      "metadata_id": 50391,
-      "part_id": 127790,
-      "section_id": 5,
-      "title": "The Big Short",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Big Short (2015)\\ScarFLIX_part-491a4bfccb102f1e\\stream.mkv",
-      "status": "FAIL",
-      "http_status": 0,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "timeout",
-      "target_hash": "ScarFLIX_part-491a4bfccb102f1e",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Big Short (2015)\\ScarFLIX_part-491a4bfccb102f1e"
     }
   ],
-  "next_action": "Quarantine failed materialized source/release and keep title retryable."
+  "next_action": "This bounded Materialized QA batch passed; continue the next batch before go-live."
 }
