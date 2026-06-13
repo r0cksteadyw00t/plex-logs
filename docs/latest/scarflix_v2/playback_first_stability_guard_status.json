@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
-    "status":  "PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED",
-    "started_utc":  "2026-06-13T10:41:31Z",
-    "ended_utc":  "2026-06-13T10:41:38Z",
-    "duration_seconds":  7,
+    "status":  "REVIEW_PLEX_BACKGROUND_JOB_STOP_UNVERIFIED",
+    "started_utc":  "2026-06-13T10:45:33Z",
+    "ended_utc":  "2026-06-13T10:45:39Z",
+    "duration_seconds":  6,
     "report_only":  false,
     "no_publication_started":  true,
     "no_expansion_started":  true,
@@ -14,7 +14,7 @@
     "cmd_avg_ms":  0,
     "plex_session_state":  {
                                "ok":  true,
-                               "active_count":  0,
+                               "active_count":  1,
                                "base_used":  "http://192.168.1.184:32400",
                                "token_source":  "plex_token.txt",
                                "attempts":  [
@@ -55,14 +55,14 @@
                                                     "token_source":  "plex_token.txt",
                                                     "ok":  true,
                                                     "status_code":  200,
-                                                    "active_count":  0,
+                                                    "active_count":  1,
                                                     "error":  ""
                                                 }
                                             ],
                                "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-13T20:41:38+10:00",
+                            "local_time":  "2026-06-13T20:45:37+10:00",
                             "hour":  20,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
@@ -70,13 +70,21 @@
                             "off_peak_maintenance_allowed":  false
                         },
     "suppress_background_work":  true,
-    "quiet_reason":  "idle_outside_off_peak_window",
-    "plex_background_jobs_found":  0,
+    "quiet_reason":  "active_plex_stream_detected",
+    "plex_background_jobs_found":  1,
     "plex_background_jobs":  {
-
+                                 "pid":  13192,
+                                 "name":  "Plex Media Scanner",
+                                 "reason":  "plex_background_scanner_or_analyzer",
+                                 "command_line":  "not_collected_to_keep_guard_lightweight"
                              },
     "stopped_jobs":  {
-
+                         "pid":  13192,
+                         "name":  "Plex Media Scanner",
+                         "reason":  "plex_background_scanner_or_analyzer",
+                         "stopped":  true,
+                         "verified_gone":  false,
+                         "error":  "process_still_visible_after_stop_attempt"
                      },
     "playback_error_pressure":  {
                                     "recent_error_count":  0,
@@ -89,7 +97,9 @@
                                     "reason":  "default_guard_path_keeps_log_analysis_off_to_avoid_contention"
                                 },
     "reasons":  [
-                    "Plex is idle, but the local time is outside the off-peak maintenance window."
+                    "Active Plex stream detected; production Plex background scanning/indexing is suppressed.",
+                    "Plex background scanner/analyzer work was active during playback-first mode.",
+                    "A Plex background scanner/analyzer stop attempt did not verify process exit."
                 ],
     "next_action":  "Keep QA/expansion held; verify Plex-client playback only after rclone/WebDAV error pressure falls and background scanner/analyzer load is quiet.",
     "files":  {
