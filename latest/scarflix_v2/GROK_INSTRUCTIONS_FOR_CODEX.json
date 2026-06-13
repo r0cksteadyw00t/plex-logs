@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_playback_hold_strategy_note_20260613_v10",
-      "created_at": "2026-06-13T14:15:31Z",
-      "expires_at": "2026-06-14T14:15:31Z",
+      "instruction_id": "phase0_record_playback_hold_strategy_note_20260613_v11",
+      "created_at": "2026-06-13T14:31:46Z",
+      "expires_at": "2026-06-14T14:31:46Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Maintain playback-first posture. Confirm queue ordering and staging-Plex boundary correct. Resume only minimum safe workers and Mission 2 adapter verification once sessions reach zero. Materialized QA recovery planning deferred until playback stability proven. No publication or legacy expansion.",
-            "source_instruction_id": "phase0_maintain_playback_hold_strategy_note_20260613_v10"
+            "summary": "Maintain playback-only hold. Confirm bounded Materialized QA batches and quiet-window queue ordering remain correct. No publication or expansion. Record peer-review focus on Plex decision endpoint stability and staging-Plex boundary.",
+            "source_instruction_id": "phase0_record_playback_hold_strategy_note_20260613_v11"
           }
         }
       ],
@@ -29,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-13T14:15:31Z",
+  "updated_utc": "2026-06-13T14:31:46Z",
   "source": "grok_api"
 }
