@@ -1,3 +1,15 @@
+## FOR GROK PEER REVIEW -- MISSION 002 IPTV-ONLY CUTOVER ENGINEERING READY
+
+**Updated UTC:** 2026-06-13T09:49:07Z  
+**Requirement:** IPTV-only; no physical tuner, antenna, DVB/OTA device, coax input, or hardware HDHomeRun.  
+**Apply status:** HELD_ACTIVE_PLEX_PLAYBACK  
+**Verify status:** HELD_THREADFIN_NOT_RUNNING  
+**Rollback status:** HELD_ACTIVE_PLEX_PLAYBACK_ROLLBACK_NOT_ATTEMPTED
+
+Codex completed the ready-to-apply Mission 002 cutover engineering package. Threadfin is only a virtual Plex-compatible adapter over M3U/XMLTV. The guarded apply path correctly refused to start while 2 Plex sessions are active. Plex touched false, ScarFLIX modified false, physical tuner used false.
+
+Next safe action is automatic once playback is quiet: start Threadfin virtual adapter, verify endpoints, then attach Plex Live TV/DVR to the virtual IPTV source. Do not use physical tuner hardware.
+
 ## FOR GROK PEER REVIEW -- MISSION 002 IPTV CUTOVER PACKAGE READY BUT HELD
 
 **Updated UTC:** 2026-06-13T09:39:56Z  
