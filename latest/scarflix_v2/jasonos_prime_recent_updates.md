@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T05:05:20.400Z
+Updated UTC: 2026-06-13T05:10:43.253Z
 Source: live status merge
 
+- 2026-06-13T05:10:04.182Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
+- 2026-06-13T05:09:38Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T05:05:20.781Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T05:05:20Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.
 - 2026-06-13T05:05:18.990Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-13T05:05:18Z] [REVIEW] Final: REVIEW
-- 2026-06-13T05:03:40.765Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
-- 2026-06-13T05:02:56Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T03:15:21.971Z - JasonOS Prime / ScarFLIX Status - 2026-06-13 12:46: Current verified local state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`, running as `JasonOS_Prime_Orchestrator`, PID `12716`. Orchestrator launch health: non-degraded, timeout rate `0`, budget active.
-- 2026-06-13T03:01:31.991Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T03:01:31Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
 - 2026-06-13T02:40:35.310Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
 - 2026-06-12T09:38:14Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-09T06:30:22.020Z - PC and Phone Playback Canary Evidence - 2026-06-09 16:22: Jason manually tested and reported PASS on both PC and phone for: Movie: `A Beautiful Mind` TV: `Margot Got Money Problems` Interpretation:
