@@ -1,3 +1,25 @@
+## 16-Hour Go-Live Campaign Runner Active - 2026-06-13T13:27Z
+
+- Jason granted an exclusive Plex maintenance window and authorized Plex restart/repair if needed.
+- Created singleton local runner: `D:\PlexTools\Foundry\workers\JasonOS_Prime_GoLive16hCampaignRunner.js`.
+- Created hidden launcher: `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_GoLive16hCampaignRunner.vbs`.
+- Registered task: `JasonOS_Prime_GoLive16hCampaignRunner`.
+- Public status: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_16h_campaign_status.json`.
+- Runner duration: 16 hours, ending `2026-06-14T05:22:00Z`.
+- Runner behavior:
+  - checks launch health, Sentinel, Plex identity, and Plex sessions every cycle;
+  - runs playback-path recovery and Mission 2 Threadfin apply/verify when safe;
+  - advances Materialized QA in bounded batches using skip/limit cursor support;
+  - suppresses non-critical high-churn workers;
+  - stops Materialized QA if launch health degrades or active Plex playback appears;
+  - never disables `PAUSE_PUBLICATION`;
+  - never starts publication or broad expansion.
+- Materialized QA worker was patched to isolate Plex SQLite lookup failures, write live progress status, and support bounded decision-probe batches.
+- First observed cycles:
+  - Cycle 1: Sentinel `PASS/LOW`, active sessions `0`, QA checked `3`, passed `1`, failed `2`, launch after QA `20ms`.
+  - Cycle 2: Sentinel `PASS/LOW`, active sessions `0`, QA advanced cursor to `6`, launch remained healthy.
+- Current go-live blocker: Materialized QA now produces useful evidence, but Plex decision probes still show socket hangup/timeout failures. Expansion and publication remain held.
+
 ## Go-Live Readiness Ledger Installed - 2026-06-13T10:09:44Z
 
 - Added status-only go-live audit worker: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_GoLiveReadinessAudit.ps1`.
