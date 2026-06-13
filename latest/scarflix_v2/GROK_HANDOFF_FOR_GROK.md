@@ -7,6 +7,8 @@
 **Cutover readiness URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/mission002_iptv_cutover_readiness_status.md  
 **Cutover preflight URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/mission002_iptv_cutover_preflight_status.md
 
+Jason correction applied after the first package: AFL IP streaming is 7plus-primary. Antenna/linear reference is channel 70. Mapping now promotes `mjh-7afl-fast` / `7AFL` for the held AFL IP lane where available, with regional Seven/7mate entries treated as fallback/linear references.
+
 Mission 002 IPTV Live is now ready as a held cutover package, not yet connected to Plex. Required channels selected: 4/4. Bounded stream checks: 4/4 HTTP 200. Parsed M3U entries: 366. XMLTV package: 4 channels, 714 programme entries. Docker CLI is available and Threadfin port 35400 is free.
 
 Current blocker: active Plex playback. The playback-first guard reports 1 active Plex session, so Codex did not start Threadfin, did not configure Plex Live TV/DVR, and did not touch ScarFLIX publication or Path 2. PAUSE_PUBLICATION remains active.
