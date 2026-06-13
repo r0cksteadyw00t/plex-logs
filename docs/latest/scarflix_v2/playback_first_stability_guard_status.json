@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
-    "status":  "PASS_PLAYBACK_PRIORITY_ACTIVE",
-    "started_utc":  "2026-06-13T09:59:31Z",
-    "ended_utc":  "2026-06-13T09:59:36Z",
-    "duration_seconds":  5,
+    "status":  "REVIEW_PLEX_BACKGROUND_JOB_STOP_UNVERIFIED",
+    "started_utc":  "2026-06-13T10:07:31Z",
+    "ended_utc":  "2026-06-13T10:07:41Z",
+    "duration_seconds":  9,
     "report_only":  false,
     "no_publication_started":  true,
     "no_expansion_started":  true,
@@ -62,8 +62,8 @@
                                "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-13T19:59:36+10:00",
-                            "hour":  19,
+                            "local_time":  "2026-06-13T20:07:38+10:00",
+                            "hour":  20,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
                             "in_off_peak_window":  false,
@@ -71,12 +71,20 @@
                         },
     "suppress_background_work":  true,
     "quiet_reason":  "active_plex_stream_detected",
-    "plex_background_jobs_found":  0,
+    "plex_background_jobs_found":  1,
     "plex_background_jobs":  {
-
+                                 "pid":  37780,
+                                 "name":  "Plex Media Scanner",
+                                 "reason":  "plex_background_scanner_or_analyzer",
+                                 "command_line":  "not_collected_to_keep_guard_lightweight"
                              },
     "stopped_jobs":  {
-
+                         "pid":  37780,
+                         "name":  "Plex Media Scanner",
+                         "reason":  "plex_background_scanner_or_analyzer",
+                         "stopped":  true,
+                         "verified_gone":  false,
+                         "error":  "process_still_visible_after_stop_attempt"
                      },
     "playback_error_pressure":  {
                                     "recent_error_count":  0,
@@ -89,7 +97,9 @@
                                     "reason":  "default_guard_path_keeps_log_analysis_off_to_avoid_contention"
                                 },
     "reasons":  [
-                    "Active Plex stream detected; production Plex background scanning/indexing is suppressed."
+                    "Active Plex stream detected; production Plex background scanning/indexing is suppressed.",
+                    "Plex background scanner/analyzer work was active during playback-first mode.",
+                    "A Plex background scanner/analyzer stop attempt did not verify process exit."
                 ],
     "next_action":  "Keep QA/expansion held; verify Plex-client playback only after rclone/WebDAV error pressure falls and background scanner/analyzer load is quiet.",
     "files":  {
