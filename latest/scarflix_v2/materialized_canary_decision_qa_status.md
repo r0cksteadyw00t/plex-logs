@@ -1,11 +1,11 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: REVIEW
-Updated UTC: 2026-06-13T20:39:03Z
+Status: RUNNING_DISCOVERING_PLEX_ROWS
+Updated UTC: 2026-06-13T20:45:25Z
 Targets: 229
-Rows found: 149
-Checked: 2
+Rows found: 0
+Checked: 0
 Passed: 0
-Failed: 2
+Failed: 0
 Query errors: 0
-Next action: Quarantine failed materialized source/release and keep title retryable.
+Next action: Materialized Plex decision QA is discovering Plex DB rows.
