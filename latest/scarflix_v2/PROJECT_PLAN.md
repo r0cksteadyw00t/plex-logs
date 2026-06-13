@@ -2,8 +2,10 @@
 
 - Playback reliability is now the primary go-live track.
 - Applied bounded `S:\media` / `S:\media\catalog` path probes to `ScarFLIX_v2_RcloneMountKeepalive.ps1`.
+- Added opt-in stalled rclone mount restart for the go-live runner only after it confirms no active Plex sessions.
 - Applied loopback-first Plex decision probing, keep-alive HTTP, and transient retry/fallback to `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`.
-- Updated `JasonOS_Prime_GoLive16hCampaignRunner.js` so playback path recovery must be `PASS` before any bounded Materialized QA batch runs.
+- Updated `JasonOS_Prime_GoLive16hCampaignRunner.js` so playback path recovery must be `PASS` before any bounded Materialized QA batch runs, and stale QA RUNNING status is replaced with an explicit playback-path hold state.
+- Latest controlled recovery at `2026-06-13T21:13Z`: `PASS`, Watch Now HEAD probes for Gremlins and Anna HTTP 200.
 - Added public status:
   - `D:\PlexTools\public\latest\scarflix_v2\playback_reliability_engineering_status.md`
   - `D:\PlexTools\public\latest\scarflix_v2\playback_reliability_engineering_status.json`
