@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T09:05:10.415Z
+Updated UTC: 2026-06-13T09:10:10.625Z
 Source: live status merge
 
-- 2026-06-13T09:01:07.209Z - Playback Priority Guard - 2026-06-13 19:00: Current verified state: Sentinel: `PASS / LOW`. Plex watchdog: `PASS`; Plex Media Server is running. Playback path recovery: `PASS`; WebDAV and `S:\media\catalog` were healthy in the latest recovery cycle.
-- 2026-06-13T09:00:46Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T09:05:33.821Z - Playback Priority Guard - 2026-06-13 19:00: Current verified state: Sentinel: `PASS / LOW`. Plex watchdog: `PASS`; Plex Media Server is running. Playback path recovery: `PASS`; WebDAV and `S:\media\catalog` were healthy in the latest recovery cycle.
+- 2026-06-13T09:05:23Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T08:50:57.076Z - Playback-First Recovery Lock-In - 2026-06-13 15:54: Current verified state: Sentinel: `PASS / LOW`. Command launch: healthy after recovery; latest five `cmd /c echo alive` checks were `32ms`, `12ms`, `25ms`, `29ms`, and `11ms`. Plex Media Server: running and protected by `JasonOS_Prime_PlexWatchdog` plus logon task.
 - 2026-06-13T07:08:43.775Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
 - 2026-06-13T05:50:18.679Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
