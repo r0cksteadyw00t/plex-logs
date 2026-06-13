@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_go_live_16h_campaign_runner",
   "schema_version": "jasonos.go_live_16h_campaign.v1",
-  "status": "HELD_DUPLICATE_RUNNER_LOCK",
+  "status": "RUNNING",
   "started_utc": "2026-06-13T13:22:00Z",
   "ends_utc": "2026-06-14T05:22:00Z",
   "ends_epoch_ms": 1781414520131,
   "duration_hours": 16,
   "exclusive_plex_window": true,
-  "cycle_count": 72,
+  "cycle_count": 73,
   "qa_cursor": 98,
   "qa_batch_size": 4,
   "pause_publication_required": true,
@@ -20,7 +20,7 @@
     "campaign_log": "D:\\PlexTools\\state\\jasonos_prime\\go_live_16h_campaign\\campaign_log.ndjson",
     "log": "D:\\PlexTools\\logs\\jasonos_prime\\jasonos_prime_go_live_16h_campaign.log"
   },
-  "updated_utc": "2026-06-13T21:06:44Z",
+  "updated_utc": "2026-06-13T21:08:43Z",
   "noncritical_tasks_suppressed": [
     "JasonOS_Prime_FastTrackAccelerator",
     "JasonOS_Prime_PublicMirrorPublisher",
@@ -48,19 +48,14 @@
     "failed": 0,
     "total_candidates": 149
   },
-  "last_launch_after_qa": {
-    "ok": true,
-    "elapsed_ms": 20,
-    "status": 0,
-    "error": ""
-  },
+  "last_launch_after_qa": null,
   "materialized_qa": {
     "status": "REVIEW_PARTIAL_BATCH_PASS",
     "target_count": 229,
     "rows_found": 154,
     "checked": 3,
     "passed": 3,
-    "failed": 2,
+    "failed": 0,
     "query_errors": 0,
     "decision_probe_total_candidates": 149
   },
@@ -70,10 +65,10 @@
     "blocker_count": 3
   },
   "last_cycle": {
-    "updated_utc": "2026-06-13T21:05:59Z",
+    "updated_utc": "2026-06-13T21:08:43Z",
     "launch_health": {
       "ok": true,
-      "elapsed_ms": 31,
+      "elapsed_ms": 30,
       "status": 0,
       "error": ""
     },
@@ -85,29 +80,35 @@
       "ok": true,
       "active_sessions": 0,
       "endpoint": "http://192.168.1.184:32400/status/sessions",
-      "elapsed_ms": 1634
+      "elapsed_ms": 1575
     },
     "plex_identity": {
       "ok": true,
       "endpoint": "http://127.0.0.1:32400/identity",
       "status_code": 200,
-      "elapsed_ms": 5
+      "elapsed_ms": 2
     },
     "actions": [
-      "suppressed_noncritical_tasks",
       "ran_playback_path_recovery_once",
-      "ran_mission2_threadfin_apply",
-      "ran_mission2_threadfin_verify",
-      "ran_bounded_materialized_qa_batch",
+      "held_materialized_qa_due_playback_path_recovery",
       "ran_go_live_readiness_audit_once"
     ],
-    "blockers": []
+    "blockers": [
+      "playback_path_recovery_not_pass"
+    ]
   },
-  "last_action": "suppressed_noncritical_tasks, ran_playback_path_recovery_once, ran_mission2_threadfin_apply, ran_mission2_threadfin_verify, ran_bounded_materialized_qa_batch, ran_go_live_readiness_audit_once",
-  "last_blocker": "",
+  "last_action": "ran_playback_path_recovery_once, held_materialized_qa_due_playback_path_recovery, ran_go_live_readiness_audit_once",
+  "last_blocker": "playback_path_recovery_not_pass",
   "duplicate_runner": {
     "current_pid": 24752,
     "owner_pid": 33100,
     "owner_started_utc": "2026-06-13T13:25:01Z"
+  },
+  "playback_recovery": {
+    "status": "REVIEW",
+    "updated_utc": "2026-06-13T21:08:32Z",
+    "failures": [
+      "S: media/catalog path is not reliably ready"
+    ]
   }
 }
