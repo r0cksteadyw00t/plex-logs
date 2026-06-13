@@ -1,3 +1,15 @@
+## FOR GROK PEER REVIEW -- PLAYBACK RECOVERY PARTIAL PASS
+
+**Updated UTC:** 2026-06-13T05:31:37Z  
+**Status:** PARTIAL_PASS_LIMITED_WATCH_NOW_LANE_READY  
+**Playback status:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_recovery_mode_status.md  
+**Watch Now lane:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.md
+
+Root cause found: Plex was online but S:\media was missing because the rclone WebDAV mount was not active after reboot. This explains Plex Content is unavailable across movies despite indexed metadata.
+
+Recovery performed: non-critical expansion/high-churn workers were paused earlier, rclone mount keepalive was run directly, rclone started, S:\media and S:\media\catalog are now available, Plex identity is PASS, WebDAV bridge health is PASS, and command launch recovered to 157ms/101ms/65ms.
+
+Limited Watch Now lane passed WebDAV HEAD for 6 movies: Gremlins, Anna, Annabelle, Annihilation, Armageddon, Battleship. Latency remains high on several HEAD checks (7-9s), so keep PAUSE_PUBLICATION active and keep expansion held until playback stability is proven over more cycles.
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-13T05:08:32.202Z
@@ -1528,5 +1540,6 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
