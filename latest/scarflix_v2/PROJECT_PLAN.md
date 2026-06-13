@@ -1,3 +1,21 @@
+## 2026-06-13 Live Reset And Grok Design Ingestion
+
+**Updated UTC:** 2026-06-13T02:46:07Z
+
+**Control plane:** Sentinel `PASS/LOW`; Orchestrator `PASS`; launch health non-degraded.
+
+**Plex:** Plex Media Server is currently running and local `/identity` returns HTTP `200`.
+
+**Section 5:** The stale `REVIEW_PLEX_INDEX_QUERY_FAILED` state has been cleared by a fresh read-only uncapped snapshot. Current result is `PASS_UNCAPPED_BASELINE_CAPTURED` with `105/105` affected hybrid_movies_live hashes present in Plex Section 5.
+
+**Publication safety:** `PAUSE_PUBLICATION` remains active. No publication, broad expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Infrastructure added:** `JasonOS_Prime_PlexWatchdog` now guards Plex availability. It starts Plex only when absent and never kills/restarts a running Plex server.
+
+**Grok design ingestion:** Mission 002 IPTV Live requirements have been added to `docs/MISSION_002_IPTV_LIVE_DESIGN.md`. Core decisions: Plex-first output, explicit feedback first, robust ChannelMapping/EPG mapping, no seamless failover promise, no early multi-agent swarm, and analysis-only Reflector.
+
+**Next safe action:** Resume protected Path 2 / Materialized QA recovery using the corrected healthy baseline, while beginning Mission 002 only as isolated scaffold/design work.
+
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
 **Updated UTC:** 2026-06-13T02:43:34.291Z
