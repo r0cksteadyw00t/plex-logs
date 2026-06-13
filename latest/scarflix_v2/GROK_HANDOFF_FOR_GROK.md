@@ -12,6 +12,8 @@ Codex applied immediate playback reliability changes:
 - `ScarFLIX_v2_RcloneMountKeepalive.ps1`: bounded `S:\media` / `S:\media\catalog` probes with timeout telemetry, avoiding unbounded path-health hangs.
 - `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`: loopback-first Plex decision probing, keep-alive HTTP agent, and transient retry/fallback for `socket hang up`, timeout, HTTP `0`, `408`, `429`, and `5xx`.
 - `JasonOS_Prime_GoLive16hCampaignRunner.js`: playback path recovery must be `PASS` before bounded Materialized QA runs; otherwise QA is held and stopped.
+- Added opt-in stalled rclone mount restart mode, used only by the go-live runner after it confirms no active Plex sessions.
+- Latest controlled recovery at `2026-06-13T21:13Z`: `PASS`; `S:\media` and `S:\media\catalog` responsive; Watch Now HEAD probes for Gremlins and Anna returned HTTP 200.
 
 Publication and broad expansion remain blocked. `PAUSE_PUBLICATION` remains required. Requested peer-review focus: determine whether Plex decision endpoint QA should remain the primary gate, whether actual playback/range canaries should become the go-live proof, and whether rclone `S:` should remain primary or be replaced/supplemented by UNC/WebDAV presentation.
 
