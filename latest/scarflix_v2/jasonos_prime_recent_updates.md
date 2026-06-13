@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T06:25:03.077Z
+Updated UTC: 2026-06-13T06:30:02.832Z
 Source: live status merge
 
-- 2026-06-13T06:20:19.597Z - Playback-First Recovery Lock-In - 2026-06-13 15:54: Current verified state: Sentinel: `PASS / LOW`. Command launch: healthy after recovery; latest five `cmd /c echo alive` checks were `32ms`, `12ms`, `25ms`, `29ms`, and `11ms`. Plex Media Server: running and protected by `JasonOS_Prime_PlexWatchdog` plus logon task.
-- 2026-06-13T06:20:13Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T06:25:39.076Z - Playback-First Recovery Lock-In - 2026-06-13 15:54: Current verified state: Sentinel: `PASS / LOW`. Command launch: healthy after recovery; latest five `cmd /c echo alive` checks were `32ms`, `12ms`, `25ms`, `29ms`, and `11ms`. Plex Media Server: running and protected by `JasonOS_Prime_PlexWatchdog` plus logon task.
+- 2026-06-13T06:25:25Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T05:50:18.679Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
 - 2026-06-13T05:10:57Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-13T05:05:20.781Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T05:05:20Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.
