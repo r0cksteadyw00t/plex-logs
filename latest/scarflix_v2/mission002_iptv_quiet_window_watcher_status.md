@@ -1,7 +1,7 @@
 ﻿# Mission 002 IPTV Quiet Window Cutover Watcher
 
-**Updated UTC:** 2026-06-13T12:33:04Z  
-**Status:** REVIEW_THREADFIN_STARTED_OR_HELD_VERIFY_NOT_PASS
+**Updated UTC:** 2026-06-13T12:38:02Z  
+**Status:** PASS_THREADFIN_ALREADY_READY_PLEX_ATTACH_HELD
 
 ## Safety
 
@@ -17,15 +17,15 @@
 
 - Readiness: PASS_CUTOVER_PACKAGE_READY_HELD
 - Preflight: HELD_ACTIVE_PLEX_PLAYBACK
-- Verify before: REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY
+- Verify before: PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE
 
 ## Actions
 
-- quiet_window_detected_starting_threadfin_virtual_adapter
+- none
 
 ## Warnings
 
-- verify_after:REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY
+- none
 
 ## Errors
 
