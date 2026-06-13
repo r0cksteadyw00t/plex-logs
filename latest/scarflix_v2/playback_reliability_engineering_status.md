@@ -1,6 +1,6 @@
 # Playback Reliability Engineering Status
 
-**Updated UTC:** 2026-06-13T21:03:55Z  
+**Updated UTC:** 2026-06-13T22:17:36Z  
 **Status:** ACTIVE_PLAYBACK_RELIABILITY_PUSH  
 **Publication allowed:** false  
 **Broad expansion allowed:** false  
@@ -31,12 +31,19 @@ The go-live campaign runner is active, but go-live remains blocked until repeata
    - Added keep-alive HTTP agents with one socket to reduce connection churn.
    - Added bounded retry/fallback for transient `timeout`, `socket hang up`, `ECONNRESET`, HTTP `0`, `408`, `429`, and `5xx` decision failures.
    - Results now include `decision_attempts` so reviewers can see whether loopback or fallback succeeded.
+   - Added layered pre-decision validation for selected bounded QA candidates: WebDAV HEAD and a 4 MB discard-only range warmup must pass before Plex decision is called.
+   - Service-context local checks are symlink/readlink metadata only; LocalSystem does not force-dereference `S:\media`.
 
 3. `JasonOS_Prime_GoLive16hCampaignRunner.js`
    - Playback path recovery is now a hard precondition before bounded Materialized QA.
    - If playback path recovery is not `PASS`, the runner holds QA and stops the QA worker instead of adding pressure.
    - QA hold states are now written explicitly so stale `RUNNING_PLEX_DECISION_PROBES` files do not mislead dashboards.
    - Publication and broad expansion remain blocked.
+
+4. `ScarFLIX_v2_StreamingLayeredValidator.js`
+   - New bounded read-only validator module for Materialized QA.
+   - Writes `materialized_qa_layered_status.*` for peer review.
+   - Does not persist media bytes and does not start publication, expansion, cache clearing, or path mutation.
 
 ## Larger Solution Space Under Review
 
@@ -55,7 +62,7 @@ These are the candidate strategies being actively considered or prepared:
 
 Not go-live ready yet.
 
-Plex process health is good, Sentinel is low, and command launch is currently healthy. A fresh controlled recovery at `2026-06-13T21:13Z` returned `PASS`: `S:\media` and `S:\media\catalog` were responsive, and Watch Now HEAD probes for Gremlins and Anna returned HTTP 200. The correct next local action is to let the patched runner continue bounded recovery/QA cycles, then review whether loopback-first retries increase pass rate and reduce socket failures.
+Plex process health is good, Sentinel is low, and command launch is currently healthy. A fresh controlled recovery at `2026-06-13T21:13Z` returned `PASS`: `S:\media` and `S:\media\catalog` were responsive, and Watch Now HEAD probes for Gremlins and Anna returned HTTP 200. The correct next local action is to let the patched runner continue bounded recovery/QA cycles, then review whether layered WebDAV/range checks pass and whether loopback-first Plex decision retries increase pass rate and reduce socket failures.
 
 ## Reviewer Questions
 
