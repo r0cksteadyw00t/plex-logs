@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_playback_reliability_engineering",
-  "status": "PLAYBACK_DECISION_PATH_FIX_VALIDATED_PARTIAL_PASS",
-  "updated_utc": "2026-06-13T23:53:44Z",
+  "status": "PLAYBACK_DECISION_PATH_FIX_HOLDS_UPSTREAM_SOURCE_RELIABILITY_REMAINS",
+  "updated_utc": "2026-06-13T23:58:17Z",
   "publication_allowed": false,
   "broad_expansion_allowed": false,
   "pause_publication_required": true,
@@ -47,29 +47,31 @@
   },
   "next_expected_signal": "bounded QA pass rate and decision_attempts after token-auth LAN selection patch",
   "go_live_ready": false,
-  "current_gate": "Require repeated bounded Materialized QA pass streaks before publication or expansion.",
+  "current_gate": "Plex decision path/auth fix validated; source/upstream WebDAV failures still need retry/quarantine and alternate candidate policy before go-live.",
   "latest_evidence": {
-    "go_live_campaign_cycle": 96,
-    "sentinel_status": "PASS",
-    "sentinel_alert_level": "LOW",
-    "playback_recovery_status": "PASS",
-    "bounded_materialized_qa_status": "REVIEW_PARTIAL_BATCH_PASS",
-    "checked": 3,
+    "bounded_materialized_qa_status": "REVIEW",
+    "decision_probe_skip": 16,
+    "decision_probe_limit": 4,
+    "checked": 4,
     "passed": 3,
-    "failed": 0,
-    "decision_path_mode": "tokenized_full_base_metadata_url",
-    "titles_passed": [
-      "Casino",
-      "Cloverfield",
-      "Clueless"
+    "failed": 1,
+    "passed_titles": [
+      "Crank",
+      "Creed",
+      "Dances with Wolves"
     ],
-    "plex_decision_http_status": 200,
-    "layered_validation_reason": "webdav_head_and_temporary_range_warm_passed"
+    "review_title": "Commando",
+    "review_hash": "ScarFLIX_part-9d12ffa4bdee7b47",
+    "review_layer": "webdav_head_and_fallback_range",
+    "review_reason": "webdav_head_upstream_server_error",
+    "review_http_status": 503,
+    "plex_decision_path_mode_for_passed_rows": "tokenized_full_base_metadata_url",
+    "interpretation": "Plex decision/auth routing fix held; remaining failure is per-source upstream WebDAV/RD availability."
   },
   "backups": [
     "D:/PlexTools/Backups/plex_registry_network_fix_20260613T233903Z/plex_media_server_hkcu.reg",
     "D:/PlexTools/Backups/materialized_decision_full_lan_path_20260613T234307Z/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js",
     "D:/PlexTools/Backups/layered_validator_head_fallback_20260613T234534Z/ScarFLIX_v2_StreamingLayeredValidator.js"
   ],
-  "next_safe_action": "Keep the local go-live runner in bounded playback-first mode; do not run broad QA, publisher, or expansion until repeated pass streaks clear the playback gate."
+  "next_safe_action": "Continue bounded local go-live runner batches. Retry and source-quarantine failed releases after threshold while keeping titles wanted/retryable. Do not publish or expand yet."
 }
