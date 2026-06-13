@@ -1,28 +1,29 @@
 {
   "component": "jasonos_prime_playback_first_stability_guard",
-  "status": "REVIEW_INLINE_GUARD_RUN_BLOCKED_BY_PROCESS_CONTENTION",
-  "updated_utc": "2026-06-13T08:28:12Z",
-  "purpose": "Playback quality/stability guard for suppressing Plex background scanner/analyzer load and detecting rclone/WebDAV error pressure.",
+  "status": "PASS_LIGHTWEIGHT_GUARD_CREATED_AND_RAN_ONCE_TASK_INSTALL_UNCONFIRMED",
+  "updated_utc": "2026-06-13T08:36:00Z",
+  "purpose": "Playback quality/stability guard for suppressing Plex background scanner/analyzer load during playback-first recovery.",
+  "confirmed_results": {
+    "local_script_created": "D:/PlexTools/Scripts/scarflix_v2/JasonOS_Prime_PlaybackFirstStabilityGuard.ps1",
+    "hidden_launcher_created": "D:/PlexTools/Scripts/scarflix_v2/hidden_tasks/JasonOS_Prime_PlaybackFirstStabilityGuard.vbs",
+    "first_full_guard_timed_out": true,
+    "simplified_guard_completed_once": true,
+    "default_log_analysis_disabled_to_avoid_contention": true,
+    "stops_only_plex_media_scanner": true
+  },
+  "unconfirmed": {
+    "scheduled_task_install_attempted": true,
+    "scheduled_task_install_confirmed": false,
+    "reason": "Registration and verification commands timed out under process/control-plane contention."
+  },
   "safety": {
     "stops_plex_media_server": false,
+    "stops_all_plex_transcoders": false,
     "publication_started": false,
     "expansion_started": false,
     "source_mutation": false,
     "path_rewrite": false,
     "plex_db_mutation": false
   },
-  "fresh_evidence": {
-    "command_launch_recovered_temporarily_ms": [81, 46, 33],
-    "non_critical_scarflix_tasks_disabled": true,
-    "core_playback_tasks_enabled": true,
-    "plex_background_scanner_or_analysis_load_detected": true,
-    "rclone_webdav_error_pressure_detected": true,
-    "inline_guard_timeout_ms": 90000,
-    "direct_scanner_stop_timeout_ms": 30000
-  },
-  "created_local_files": [
-    "D:/PlexTools/Scripts/scarflix_v2/JasonOS_Prime_PlaybackFirstStabilityGuard.ps1",
-    "D:/PlexTools/Scripts/scarflix_v2/hidden_tasks/JasonOS_Prime_PlaybackFirstStabilityGuard.vbs"
-  ],
-  "next_action": "Run guard detached when command launch is stable; wait for rclone/WebDAV pressure to fall; verify tiny Plex-client Watch Now lane before expansion."
+  "next_action": "Verify/install hidden scheduled task when command launch is stable, then run tiny Plex-client Watch Now verification only."
 }
