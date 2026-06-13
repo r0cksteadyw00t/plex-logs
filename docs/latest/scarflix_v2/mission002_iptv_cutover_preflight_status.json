@@ -1,0 +1,41 @@
+﻿{
+    "component":  "jasonos_mission002_iptv_cutover_preflight",
+    "schema_version":  "jasonos.iptv.cutover_preflight.v1",
+    "status":  "HELD_ACTIVE_PLEX_PLAYBACK",
+    "started_utc":  "2026-06-13T09:32:42Z",
+    "updated_utc":  "2026-06-13T09:32:43Z",
+    "cutover_enabled":  false,
+    "publishes_to_plex":  false,
+    "plex_touched":  false,
+    "scarflix_modified":  false,
+    "package_ready":  true,
+    "active_plex_sessions":  1,
+    "plex_session_check":  {
+                               "ok":  true,
+                               "base_used":  "http://192.168.1.184:32400",
+                               "source_status":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\playback_first_stability_guard_status.json"
+                           },
+    "artifacts":  {
+                      "held_master_m3u":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\master.cutover.held.m3u",
+                      "held_master_xmltv":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\master.cutover.held.xml",
+                      "decision_manifest":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\iptv_cutover_decision_manifest.json",
+                      "guardian_report":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\iptv_cutover_guardian_report.json",
+                      "threadfin_compose":  "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\jasonos\\iptv\\cutover\\docker-compose.threadfin.held.yml"
+                  },
+    "threadfin_runtime":  {
+                              "docker_cli_available":  true,
+                              "docker_version":  "Docker version 29.5.2, build 79eb04c",
+                              "docker_error":  "",
+                              "desired_port":  35400,
+                              "desired_port_available":  true,
+                              "container_name":  "jasonos-mission002-threadfin",
+                              "compose_started":  false
+                          },
+    "blockers":  [
+                     "active_plex_playback:1"
+                 ],
+    "warnings":  [
+
+                 ],
+    "next_safe_action":  "Hold cutover while Plex playback is active. In a quiet window, start the held Threadfin adapter, point it at master.cutover.held.m3u/xml, verify Plex Live TV/DVR manually or via safe API, then enable cutover only after Guardian remains PASS."
+}
