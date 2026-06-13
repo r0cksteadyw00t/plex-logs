@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-13T09:05:35Z  
+**Updated UTC:** 2026-06-13T09:09:32Z  
 **Status:** PASS_PLAYBACK_PRIORITY_ACTIVE
 
 ## Scope
@@ -25,7 +25,7 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Background Jobs
 
-- pid=  stopped=False verified_gone=False reason= error=Cannot bind argument to parameter 'Id' because it is null.
+- none
 
 ## Recent rclone/WebDAV Error Pressure
 
