@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-13T09:30:09Z",
+  "updated_utc": "2026-06-13T09:35:15Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -125,9 +125,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 142,
+    "platform_child_progress_age_minutes": 147,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-13T09:30:47Z",
+    "next_check_utc": "2026-06-13T09:35:48Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 142,
+    "age_minutes": 147,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-13T09:25:29Z",
+    "updated_utc": "2026-06-13T09:30:33Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-13T09:30:12Z",
+    "updated_utc": "2026-06-13T09:35:15Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,14 +376,19 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-13T09:34:27.229Z",
+      "title": "Mission 002 IPTV Cutover Package Ready But Held - 2026-06-13 19:33",
+      "detail": "Current verified state: Mission 002 IPTV source preflight: `PASS_HELD_SOURCE_PREFLIGHT_READY`. Mission 002 IPTV cutover readiness: `PASS_CUTOVER_PACKAGE_READY_HELD`. Mission 002 IPTV cutover preflight: `HELD_ACTIVE_PLEX_PLAYBACK`."
+    },
+    {
+      "utc": "2026-06-13T09:30:40Z",
+      "title": "Autonomous controller: candidate_source_model_pass",
+      "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
+    },
+    {
       "utc": "2026-06-13T09:25:53.489Z",
       "title": "Mission 002 IPTV Phase 0 Held Dry Run - 2026-06-13 19:10",
       "detail": "Current verified state: Active Plex playback is being protected; one active Plex session was detected by the playback-first guard. No Plex scan, ScarFLIX QA, publication, expansion, source mutation, or path rewrite was started. Mission 002 IPTV Live Phase 0 dry-run generator was added at `jasonos/iptv/scripts/Invoke..."
-    },
-    {
-      "utc": "2026-06-13T09:25:42Z",
-      "title": "Autonomous controller: candidate_source_model_pass",
-      "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
     {
       "utc": "2026-06-13T09:05:33.821Z",
@@ -439,11 +444,6 @@
       "utc": "2026-06-09T06:20:29.274Z",
       "title": "Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:18",
       "detail": "Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:16:06Z` Probe duration: `38ms`"
-    },
-    {
-      "utc": "2026-06-09T06:15:56.866Z",
-      "title": "Controlled Materialized Expansion Eligible; Full Expansion Still Gated - 2026-06-09 16:10",
-      "detail": "Latest verified lightweight snapshot: Probe status: `PASS` Probe updated UTC: `2026-06-09T06:07:03Z` Probe duration: `30ms`"
     }
   ],
   "outcomes": [
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-13T09:30:09Z",
+    "updated_utc": "2026-06-13T09:35:15Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -807,15 +807,15 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 449540,
-    "safe_pipeline_log_age_seconds": 506424,
+    "canary_status_age_seconds": 449841,
+    "safe_pipeline_log_age_seconds": 506725,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
       {
         "action": "refresh_grokbuild",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_GrokBuild_Agent.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "refresh_grok_peer_bridge",
@@ -825,7 +825,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=24436"
+        "detail": "pid=26044"
       }
     ],
     "blockers": []
