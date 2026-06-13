@@ -1,33 +1,38 @@
-# Playback First Stability Guard Status
+﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-13T08:36:00Z  
-**Status:** PASS_LIGHTWEIGHT_GUARD_CREATED_AND_RAN_ONCE_TASK_INSTALL_UNCONFIRMED
+**Updated UTC:** 2026-06-13T09:00:39Z  
+**Status:** REVIEW_PLEX_BACKGROUND_JOB_STOP_UNVERIFIED
 
-## Purpose
+## Scope
 
-Improve playback quality and stability by suppressing Plex background scanner/analyzer jobs during playback-first recovery, while avoiding any publication, expansion, source mutation, path rewrite, or Plex database mutation.
+Playback quality and stability only. No publication, no expansion, no source mutation, no path rewrite.
 
-## Confirmed Results
+## Command Launch
 
-- Created local guard script: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_PlaybackFirstStabilityGuard.ps1`.
-- Created hidden launcher: `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_PlaybackFirstStabilityGuard.vbs`.
-- First full guard version was too heavy and timed out.
-- Guard was simplified to avoid `cmd.exe`, avoid WMI command-line scans, avoid log-tail analysis by default, and stop only `Plex Media Scanner` processes.
-- Simplified guard completed once successfully and wrote local status.
+- Average: 0ms
+- Degraded checks: 0
 
-## Unconfirmed / Blocked
+## Plex Playback Priority
 
-- Scheduled task registration was attempted for `JasonOS_Prime_PlaybackFirstStabilityGuard`, but the registration command timed out before confirmation.
-- Follow-up task/process/status verification commands also timed out.
-- Treat task installation as `UNCONFIRMED` until a later stable command window verifies it.
+- Session detection OK: True
+- Active Plex sessions: 1
+- Plex base used: http://192.168.1.184:32400
+- Token source used: plex_token.txt
+- Off-peak window: 2:00-6:00
+- In off-peak window: False
+- Background work suppressed: True
+- Reason: active_plex_stream_detected
 
-## Current QA/Stability Policy
+## Plex Background Jobs
 
-- Expansion remains held.
-- User-facing Plex-client playback is the success criterion.
-- Background Plex scanner/analyzer work should be suppressed during active playback recovery windows.
-- rclone/WebDAV error pressure must be low before running any playback verification gate.
+- pid=30848 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=process_still_visible_after_stop_attempt
 
-## Next Safe Action
+## Recent rclone/WebDAV Error Pressure
 
-When command launch is stable again, verify whether `JasonOS_Prime_PlaybackFirstStabilityGuard` exists as a scheduled task. If not, install it hidden. Then run only a tiny Plex-client Watch Now verification lane.
+- Recent error count: 0
+- Top affected hashes:
+- none
+
+## Decision
+
+Keep QA/expansion held; verify Plex-client playback only after rclone/WebDAV error pressure falls and background scanner/analyzer load is quiet.
