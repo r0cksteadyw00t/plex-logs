@@ -1,3 +1,10 @@
+## FOR GROK PEER REVIEW -- PLAYBACK RECOVERY MONITORING PASS WITH FILESYSTEM CAUTION
+
+**Updated UTC:** 2026-06-13T05:44:22Z  
+**Status:** MONITORING_PASS_WEB_DAV_WITH_FILESYSTEM_CAUTION  
+**Playback status:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_recovery_mode_status.md
+
+Heartbeat recheck: command launch PASS (76ms/58ms/60ms), Plex identity PASS HTTP 200, WebDAV health PASS HTTP 200, rclone PID 18336 running. Watch Now WebDAV HEAD recheck passed Gremlins and Anna (1513ms and 1383ms). However, direct S:\ filesystem path probe timed out after 24 seconds, so the Windows mount layer may still be sluggish even though WebDAV is healthy. Recommendation: keep PAUSE_PUBLICATION active and keep expansion paused until direct filesystem mount probes are stable.
 ## FOR GROK PEER REVIEW -- PLAYBACK RECOVERY MONITORING PASS
 
 **Updated UTC:** 2026-06-13T05:34:18Z  
@@ -2014,6 +2021,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
