@@ -2,33 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T20:04:27Z",
-    "updated_utc":  "2026-06-13T20:04:34Z",
-    "report_only":  false,
-    "go_live_ready":  false,
-    "active_plex_sessions":  0,
-    "sentinel":  {
-                     "status":  "PASS",
-                     "alert_level":  "LOW"
-                 },
-    "safety":  {
-                   "pause_publication_active":  true,
-                   "no_publication_started":  true,
-                   "no_expansion_started":  true,
-                   "no_cleanup_performed":  true,
-                   "no_deletion_performed":  true,
-                   "no_source_mutation_performed":  true,
-                   "no_path_rewrite_performed":  true,
-                   "plex_restart_or_stop_allowed":  false
-               },
-    "outcomes":  [
-                     {
-                         "outcome_{
-    "component":  "jasonos_prime_go_live_readiness_audit",
-    "schema_version":  "jasonos.go_live_readiness.v1",
-    "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T20:04:27Z",
-    "updated_utc":  "2026-06-13T20:04:34Z",
+    "started_utc":  "2026-06-13T20:09:01Z",
+    "updated_utc":  "2026-06-13T20:09:07Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -57,7 +32,6 @@
                                           "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
-                                          "Plex background scanner/analyzer pressure still detected: 2.",
                                           "Playback path recovery is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
@@ -163,10 +137,6 @@
                      }
                  ],
     "blockers":  [
-                     {
-                         "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex background scanner/analyzer pressure still detected: 2."
-                     },
                      {
                          "outcome_id":  "O-PLAYBACK",
                          "blocker":  "Playback path recovery is not PASS: REVIEW."
