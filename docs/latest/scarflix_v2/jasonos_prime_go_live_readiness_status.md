@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-13T18:01:15Z
+Updated UTC: 2026-06-13T18:04:07Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -26,8 +26,8 @@ PAUSE_PUBLICATION active: `True`
 
 ## Blocking Items
 
-- `O-PLAYBACK`: Plex background scanner/analyzer pressure still detected: 3.
-- `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: RUNNING_PLEX_DECISION_PROBES 1/2 failed=1.
+- `O-PLAYBACK`: Plex background scanner/analyzer pressure still detected: 2.
+- `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: REVIEW 1/3 failed=2.
 
 ## Monitored Tasks
 
