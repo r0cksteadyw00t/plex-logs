@@ -1,7 +1,7 @@
 ﻿# Mission 002 IPTV Source Preflight
 
-**Updated UTC:** 2026-06-13T09:15:12Z  
-**Status:** HELD_NO_PROVIDER_INPUTS
+**Updated UTC:** 2026-06-13T09:33:25Z  
+**Status:** PASS_HELD_SOURCE_PREFLIGHT_READY
 
 ## Safety
 
@@ -13,15 +13,17 @@
 
 ## Counts
 
-- Source count: 2
-- Enabled source count: 0
-- Provider URL count: 0
+- Source count: 4
+- Enabled source count: 4
+- Provider URL count: 4
 - Mapping count: 4
 
 ## Sources
 
-- au_public_fta_placeholder / enabled: False / provider_url_present: False / mode: HELD_CONFIG_ONLY
-- afl_event_placeholder / enabled: False / provider_url_present: False / mode: HELD_CONFIG_ONLY
+- mjh_au_sydney_raw_tv / enabled: True / provider_url_present: True / mode: ACTIVE_VALIDATE_ONLY
+- mjh_au_sydney_epg / enabled: True / provider_url_present: True / mode: ACTIVE_VALIDATE_ONLY
+- mjh_au_melbourne_raw_tv / enabled: True / provider_url_present: True / mode: ACTIVE_VALIDATE_ONLY
+- mjh_au_melbourne_epg / enabled: True / provider_url_present: True / mode: ACTIVE_VALIDATE_ONLY
 
 ## Decision
 
