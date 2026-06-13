@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-13T09:00:08Z",
+  "updated_utc": "2026-06-13T09:05:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 112,
-    "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-13T09:00:46Z",
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 116,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-13T09:06:00Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 112,
+    "age_minutes": 116,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-13T08:55:26Z",
+    "updated_utc": "2026-06-13T09:00:36Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-13T09:00:08Z",
+    "updated_utc": "2026-06-13T09:05:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,12 +376,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-13T08:59:48.500Z",
+      "utc": "2026-06-13T09:01:07.209Z",
       "title": "Playback Priority Guard - 2026-06-13 19:00",
       "detail": "Current verified state: Sentinel: `PASS / LOW`. Plex watchdog: `PASS`; Plex Media Server is running. Playback path recovery: `PASS`; WebDAV and `S:\\media\\catalog` were healthy in the latest recovery cycle."
     },
     {
-      "utc": "2026-06-13T08:55:29Z",
+      "utc": "2026-06-13T09:00:46Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-13T09:00:08Z",
+    "updated_utc": "2026-06-13T09:05:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -807,15 +807,15 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 447741,
-    "safe_pipeline_log_age_seconds": 504625,
+    "canary_status_age_seconds": 448020,
+    "safe_pipeline_log_age_seconds": 504904,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
       {
         "action": "refresh_grokbuild",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_GrokBuild_Agent.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "refresh_grok_peer_bridge",
@@ -825,7 +825,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=36928"
+        "detail": "pid=11680"
       }
     ],
     "blockers": []
