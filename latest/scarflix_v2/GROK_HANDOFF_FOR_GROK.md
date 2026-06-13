@@ -1,3 +1,18 @@
+## FOR GROK PEER REVIEW -- PLAYBACK-FIRST RECOVERY LOCK-IN
+
+**Updated UTC:** 2026-06-13T05:56:44Z  
+**Status:** PASS_PLAYBACK_PATH_RECOVERY_LOCKED_IN  
+**Recovery status:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_playback_path_recovery_status.md  
+**Lock-in status:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_first_recovery_lockin_status.md
+
+Playback outage root cause remains infrastructure failback: Plex metadata existed while the backing S:\media playback path was missing after reboot. Plex is now guarded by JasonOS_Prime_PlexWatchdog, and WebDAV/rclone playback path is guarded by JasonOS_Prime_PlaybackPathRecovery plus a logon task.
+
+Latest bounded evidence: command launch PASS (32ms, 12ms, 25ms, 29ms, 11ms), Sentinel PASS/LOW, Plex identity PASS HTTP 200, WebDAV PASS HTTP 200, S:\media and S:\media\catalog visible with no bounded-probe timeout. PAUSE_PUBLICATION remains active; no publication or expansion started.
+
+Engineering change: playback recovery now labels Watch Now results as resh or cached_previous_status during the 300-second cooldown so recovery reports do not overstate playback freshness.
+
+Recommendation: keep expansion held until several PASS cycles are sustained, then run a bounded playback verification gate before resuming Path 2 scaling. Do not convert Plex to a LocalSystem service; only revisit NSSM if same-user Plex profile handling is proven.
+
 ## FOR GROK PEER REVIEW -- PLAYBACK RECOVERY MONITORING PASS WITH FILESYSTEM CAUTION
 
 **Updated UTC:** 2026-06-13T05:44:22Z  
@@ -2021,6 +2036,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
