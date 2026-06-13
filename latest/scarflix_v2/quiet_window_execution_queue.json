@@ -1,0 +1,31 @@
+{
+  "schema": "jasonos.quiet_window_execution_queue.v1",
+  "created_utc": "2026-06-13T11:03:53Z",
+  "status": "HELD_ACTIVE_PLEX_PLAYBACK",
+  "resume_gates": {
+    "active_plex_sessions_required": 0,
+    "consecutive_zero_session_checks": 2,
+    "sentinel_allowed": [
+      "PASS_LOW",
+      "REVIEW_MEDIUM"
+    ],
+    "pause_publication_required": true,
+    "plex_background_process_count_required": 0,
+    "cmd_echo_alive_max_ms_average": 300
+  },
+  "queued_steps": [
+    "Resume minimal status control plane",
+    "Mission 2 Threadfin virtual adapter verification only",
+    "Playback path verification for current Watch Now lane",
+    "ScarFLIX Materialized QA recovery planning only"
+  ],
+  "blocked_while_active_playback": [
+    "Plex restart or stop",
+    "Plex scans or refreshes",
+    "Threadfin/Plex Live TV attach",
+    "ScarFLIX publication or expansion",
+    "Heavy QA",
+    "Path mutation, cleanup, deletion, source mutation, broad retries"
+  ],
+  "fasttrack_reenable_allowed": false
+}
