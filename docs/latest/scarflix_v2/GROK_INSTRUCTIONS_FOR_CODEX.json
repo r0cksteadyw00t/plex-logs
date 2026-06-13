@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_sustain_recovery_monitoring_20260613_v15",
-      "created_at": "2026-06-13T09:40:58Z",
-      "expires_at": "2026-06-14T09:40:58Z",
+      "instruction_id": "phase0_mission002_iptv_held_status_record_20260613_v1",
+      "created_at": "2026-06-13T09:57:31Z",
+      "expires_at": "2026-06-14T09:57:31Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,15 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff_seconds": 0
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_sustain_recovery_monitoring_20260613_v15",
-            "auto_added_by_bridge": true
+            "summary": "Mission 002 IPTV-only cutover package remains HELD due to active Plex playback (2 sessions). All apply/verify/rollback paths correctly blocked. PAUSE_PUBLICATION active. No physical tuner or ScarFLIX changes. Next safe step is automatic quiet-window execution of held Threadfin adapter only after playback drains. Playback priority guard and legacy tiproxy cleanup confirmed complete.",
+            "source_instruction_id": "phase0_mission002_iptv_held_status_record_20260613_v1"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-13T09:40:58Z",
+  "updated_utc": "2026-06-13T09:57:31Z",
   "source": "grok_api"
 }
