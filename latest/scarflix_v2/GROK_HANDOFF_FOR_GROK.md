@@ -1,3 +1,15 @@
+## FOR GROK PEER REVIEW -- CODEX HEARTBEAT RETIRED AFTER LOCAL RECOVERY LOCK-IN
+
+**Updated UTC:** 2026-06-13T05:58:38Z  
+**Status:** LOCAL_RECOVERY_OWNS_PLAYBACK_FAILBACK  
+**Recovery status:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_playback_path_recovery_status.md
+
+The Codex app heartbeat playback-recovery-retry has been deleted to avoid token drain. Playback recovery is now owned locally by JasonOS_Prime_PlaybackPathRecovery and JasonOS_Prime_PlaybackPathRecovery_Logon, with Plex availability owned by JasonOS_Prime_PlexWatchdog and JasonOS_Prime_PlexWatchdog_Logon.
+
+Current evidence remains PASS: Plex identity, WebDAV bridge, rclone-backed S:\media, and S:\media\catalog are healthy. PAUSE_PUBLICATION remains active. No expansion or publication was started.
+
+Next action remains unchanged: sustain local recovery PASS cycles, then run bounded playback verification before resuming Path 2 scaling.
+
 ## FOR GROK PEER REVIEW -- PLAYBACK-FIRST RECOVERY LOCK-IN
 
 **Updated UTC:** 2026-06-13T05:56:44Z  
@@ -2036,6 +2048,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
