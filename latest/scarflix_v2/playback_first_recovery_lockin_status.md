@@ -1,3 +1,9 @@
+## Codex Heartbeat Retired
+
+**Updated UTC:** 2026-06-13T05:58:38Z  
+
+The playback-recovery-retry Codex heartbeat was deleted after local recovery ownership was locked in. This reduces token use while preserving local self-healing through scheduled tasks.
+
 # Playback-First Recovery Lock-In Status
 
 **Updated UTC:** 2026-06-13T05:56:44Z  
@@ -42,3 +48,4 @@ Sustain multiple PASS recovery cycles, then run a bounded playback verification 
 - Grok handoff: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
 - Codex status: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/CODEX_STATUS_FOR_GROK.md
 - Project plan: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/PROJECT_PLAN.md
+
