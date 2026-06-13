@@ -5,7 +5,7 @@
 **Raw status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_reliability_engineering_status.md  
 **JSON URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_reliability_engineering_status.json
 
-Current focus is playback reliability, not catalogue expansion. Codex patched bounded rclone path probes, loopback-first/retry Plex decision QA, and a campaign gate that prevents Materialized QA from running unless playback path recovery is `PASS`. `PAUSE_PUBLICATION` remains active. Go-live remains blocked until repeated Plex playback/decision confidence improves.
+Current focus is playback reliability, not catalogue expansion. Codex patched bounded rclone path probes, opt-in stalled rclone mount restart, loopback-first/retry Plex decision QA, and a campaign gate that prevents Materialized QA from running unless playback path recovery is `PASS`. Latest controlled recovery at `2026-06-13T21:13Z` returned `PASS` with Watch Now HEAD probes for Gremlins and Anna HTTP 200. `PAUSE_PUBLICATION` remains active. Go-live remains blocked until repeated Plex playback/decision confidence improves.
 
 ## FOR CLAUDE/GROK PEER REVIEW -- AS-BUILT BLOCKERS AND CONGESTION PACK
 
