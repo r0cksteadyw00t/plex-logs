@@ -1,5 +1,43 @@
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
+**Updated UTC:** 2026-06-13T03:25:22.877Z
+
+**Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
+
+**True baseline:** `105/105` expected affected hybrid_movies_live hashes are currently present in the uncapped Plex Section 5 index snapshot.
+
+**Plex Section 5 reported total size:** `227`
+
+**Parsed Section 5 Video rows:** `227`
+
+**Unique indexed ScarFLIX_part hashes:** `224`
+
+**Conclusion:** The previous 16/105 result was at least partly a measurement artifact. The uncapped snapshot found 105/105 expected affected hashes currently present in Plex Section 5.
+
+**Recommendation:** Rerun the focused Section 5 verification gate with the corrected uncapped verifier logic before considering any controlled expansion.
+
+**Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-13T03:23:11.883Z
+**Status:** ROLLED_BACK_PILOT_ERROR
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: 105/105 visible, - missing.
+- Pilot attempted: true
+- Created aliases: 0
+- Rollback performed: true
+
+### Decision
+Pilot failed before completion; rollback was performed.
+
+## Phase 5 Section 5 Uncapped Index Snapshot
+
 **Updated UTC:** 2026-06-13T03:22:33.717Z
 
 **Status:** `PASS_UNCAPPED_BASELINE_CAPTURED`
@@ -55,22 +93,6 @@ Current decision:
 - Continue the active single-title additive campaign only while Sentinel, launch health, and Section 5 baseline remain stable.
 - Keep failing WebDAV hashes held and retryable rather than forcing migration.
 - Do not mark full catalogue expansion complete until Materialized QA refreshes to PASS and a separate TV discovery/audit lane produces verified candidates.
-
-## PATH 2 PROTECTED PILOT MIGRATION STATUS
-
-**Updated UTC:** 2026-06-13T03:20:15.190Z
-**Status:** ROLLED_BACK_PILOT_ERROR
-**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Summary
-- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: 105/105 visible, - missing.
-- Pilot attempted: true
-- Created aliases: 0
-- Rollback performed: true
-
-### Decision
-Pilot failed before completion; rollback was performed.
 
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
