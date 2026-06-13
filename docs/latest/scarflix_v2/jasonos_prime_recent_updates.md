@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T02:55:03.259Z
+Updated UTC: 2026-06-13T03:00:05.205Z
 Source: live status merge
 
-- 2026-06-13T02:50:22.638Z - JasonOS Prime / ScarFLIX Status - 2026-06-13 12:46: Current verified local state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`, running as `JasonOS_Prime_Orchestrator`, PID `12716`. Orchestrator launch health: non-degraded, timeout rate `0`, budget active.
-- 2026-06-13T02:50:13Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T02:55:14.487Z - JasonOS Prime / ScarFLIX Status - 2026-06-13 12:46: Current verified local state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`, running as `JasonOS_Prime_Orchestrator`, PID `12716`. Orchestrator launch health: non-degraded, timeout rate `0`, budget active.
+- 2026-06-13T02:55:07Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T02:40:35.310Z - Fire TV Canary Evidence and Current Blocker - 2026-06-09 16:24: Jason reported: Fire TV PASS: `Kaiju No. 8` Fire TV FAIL: `Four Seasons` Interpretation:
 - 2026-06-13T01:00:19.649Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T01:00:19Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=Unable to connect to the remote server
 - 2026-06-12T23:00:26.569Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-12T23:00:26Z] [REVIEW] Final: REVIEW
