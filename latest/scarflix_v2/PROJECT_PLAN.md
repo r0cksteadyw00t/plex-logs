@@ -1,3 +1,19 @@
+## PATH 2 PROTECTED PILOT MIGRATION STATUS
+
+**Updated UTC:** 2026-06-13T03:26:03.434Z
+**Status:** ROLLED_BACK_PILOT_ERROR
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+### Summary
+- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
+- Baseline: 105/105 visible, - missing.
+- Pilot attempted: true
+- Created aliases: 0
+- Rollback performed: true
+
+### Decision
+Pilot failed before completion; rollback was performed.
+
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
 **Updated UTC:** 2026-06-13T03:25:22.877Z
@@ -19,22 +35,6 @@
 **Safety:** PAUSE_PUBLICATION remained active. No refresh, cache clear, publication, expansion, cleanup, deletion, source mutation, or path rewrite was performed.
 
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-## PATH 2 PROTECTED PILOT MIGRATION STATUS
-
-**Updated UTC:** 2026-06-13T03:23:11.883Z
-**Status:** ROLLED_BACK_PILOT_ERROR
-**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
-
-### Summary
-- Dedicated runner: `JasonOS_Prime_Path2PilotMigrationRunner.js`
-- Baseline: 105/105 visible, - missing.
-- Pilot attempted: true
-- Created aliases: 0
-- Rollback performed: true
-
-### Decision
-Pilot failed before completion; rollback was performed.
 
 ## Phase 5 Section 5 Uncapped Index Snapshot
 
@@ -83,6 +83,7 @@ Actions taken:
   - `scarflix_part-d2dc1715682f383c` / `Influencers (2025)` - WebDAV 503 in previous 10-title preflight.
   - `scarflix_part-8f866cc77c432167` / `Lucy Shimmers and the Prince of Peace (2020)` - WebDAV preflight failed before alias creation.
   - `scarflix_part-bf8b8fcb4150df6b` / `Man in the Mirror: The Michael Jackson Story (2004)` - WebDAV preflight failed before alias creation.
+  - `scarflix_part-5f2b46ebc01460e6` / `My Hero Academia: You're Next (2024)` - WebDAV preflight failed before alias creation.
 - No publication, broad expansion, cleanup, deletion, source mutation, or path rewrite was performed.
 - Scheduled detached QA refresh:
   - Task: `ScarFLIX_v2_MaterializedPlexDecisionQA_Delayed`
