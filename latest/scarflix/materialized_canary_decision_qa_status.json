@@ -1,23 +1,23 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "REVIEW",
-  "started_utc": "2026-06-13T19:49:35Z",
-  "ended_utc": "2026-06-13T19:50:24Z",
-  "updated_utc": "2026-06-13T19:50:24Z",
+  "started_utc": "2026-06-13T19:56:09Z",
+  "ended_utc": "2026-06-13T19:56:50Z",
+  "updated_utc": "2026-06-13T19:56:50Z",
   "target_count": 229,
-  "rows_found": 143,
-  "checked": 3,
-  "passed": 1,
+  "rows_found": 146,
+  "checked": 2,
+  "passed": 0,
   "failed": 2,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
-  "decision_probe_skip": 62,
+  "decision_probe_skip": 65,
   "decision_probe_limit": 3,
-  "decision_probe_total_candidates": 138,
+  "decision_probe_total_candidates": 141,
   "selected_decision_candidates": 3,
-  "stopped_early": false,
-  "stopped_reason": "",
+  "stopped_early": true,
+  "stopped_reason": "Stopped after 2 consecutive Plex decision failures.",
   "targets": [
     {
       "hash": "ScarFLIX_part-5efdbdcf716997a3",
@@ -1902,7 +1902,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50642,
+          "part_id": 128290,
+          "section_id": 5,
+          "title": "Dune",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -2820,7 +2828,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ocean's Twelve (2004)\\ScarFLIX_part-c9fbe9904ebf4733",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50643,
+          "part_id": 128291,
+          "section_id": 5,
+          "title": "Ocean's Twelve",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ocean's Twelve (2004)\\ScarFLIX_part-c9fbe9904ebf4733\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -3397,7 +3413,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Cabin in the Woods (2012)\\ScarFLIX_part-4e9571fb14dbaf20",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50639,
+          "part_id": 128283,
+          "section_id": 5,
+          "title": "The Cabin in the Woods",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Cabin in the Woods (2012)\\ScarFLIX_part-4e9571fb14dbaf20\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -4373,38 +4397,6 @@
   ],
   "results": [
     {
-      "metadata_id": 50446,
-      "part_id": 127901,
-      "section_id": 5,
-      "title": "Night at the Museum",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Night at the Museum (2006)\\ScarFLIX_part-b73c939b16cf8b54\\stream.mkv",
-      "status": "FAIL",
-      "http_status": 0,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "socket hang up",
-      "target_hash": "ScarFLIX_part-b73c939b16cf8b54",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Night at the Museum (2006)\\ScarFLIX_part-b73c939b16cf8b54"
-    },
-    {
-      "metadata_id": 50443,
-      "part_id": 127897,
-      "section_id": 5,
-      "title": "9½ Weeks",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "target_hash": "ScarFLIX_part-2248c141861c0a2c",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Nine 1 2 Weeks (1986)\\ScarFLIX_part-2248c141861c0a2c"
-    },
-    {
       "metadata_id": 50441,
       "part_id": 127895,
       "section_id": 5,
@@ -4416,9 +4408,25 @@
       "base_url": "http://192.168.1.184:32400",
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "timeout",
+      "reason": "socket hang up",
       "target_hash": "ScarFLIX_part-5a66bfd3dde459fc",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ninja Assassin (2009)\\ScarFLIX_part-5a66bfd3dde459fc"
+    },
+    {
+      "metadata_id": 50585,
+      "part_id": 128162,
+      "section_id": 5,
+      "title": "Oblivion",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Oblivion (2013)\\ScarFLIX_part-44ae6e942e074320\\stream.mkv",
+      "status": "FAIL",
+      "http_status": 0,
+      "access_mode": "allowed_networks",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "timeout",
+      "target_hash": "ScarFLIX_part-44ae6e942e074320",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Oblivion (2013)\\ScarFLIX_part-44ae6e942e074320"
     }
   ],
   "next_action": "Quarantine failed materialized source/release and keep title retryable."
