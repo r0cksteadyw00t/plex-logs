@@ -1,10 +1,11 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: FAIL_ENGINEERING
-Updated UTC: 2026-06-13T12:43:12Z
-Targets: 0
-Rows found: 0
-Checked: 0
-Passed: 0
-Failed: 0
-Next action: Fix Node-native materialized decision QA.
+Status: RUNNING_PLEX_DECISION_PROBES
+Updated UTC: 2026-06-13T12:53:43Z
+Targets: 229
+Rows found: 93
+Checked: 5
+Passed: 1
+Failed: 4
+Query errors: 0
+Next action: Materialized Plex decision QA is still running; stop or throttle if launch health degrades.
