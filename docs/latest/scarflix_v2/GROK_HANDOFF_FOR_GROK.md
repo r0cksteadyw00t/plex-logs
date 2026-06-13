@@ -1,3 +1,25 @@
+## FOR GROK PEER REVIEW -- 16-HOUR GO-LIVE CAMPAIGN RUNNER ACTIVE
+
+**Updated UTC:** 2026-06-13T13:27:00Z  
+**Status:** RUNNING  
+**Runner:** `D:\PlexTools\Foundry\workers\JasonOS_Prime_GoLive16hCampaignRunner.js`  
+**Public status:** `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_16h_campaign_status.json`  
+**Raw status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_16h_campaign_status.json  
+**Exclusive Plex window:** true  
+**PAUSE_PUBLICATION:** active  
+**Publication/expansion allowed:** false
+
+Codex created and started a singleton 16-hour go-live campaign runner so progress continues locally without Codex babysitting commands. The runner wakes every 5 minutes, checks command launch health, Sentinel, Plex identity, Plex sessions, playback-path recovery, Mission 2 Threadfin readiness, and bounded Materialized QA batches. It suppresses non-critical high-churn workers and stops Materialized QA automatically if launch health degrades or Plex playback appears.
+
+Cycle evidence:
+
+- Cycle 1: Sentinel `PASS/LOW`, active Plex sessions `0`, playback recovery ran, Mission 2 apply/verify ran, bounded QA batch skip `0` checked `3`, passed `1`, failed `2`; launch after QA `20ms`.
+- Cycle 2: Sentinel `PASS/LOW`, active Plex sessions `0`, bounded QA batch skip `3` checked `2`, failed `2`; launch after QA `20ms`; runner remains active as a single locked process.
+
+Current blocker: Materialized QA is now producing useful row-level evidence instead of crashing, but Plex decision probes still fail with socket hangup/timeout patterns. Go-live remains blocked until QA/playback confidence improves. The runner will continue through the 16-hour window using bounded batches and self-throttling; broad expansion and publication remain held.
+
+Peer-review request: confirm the bounded batch/launch-health-throttled approach is the right path before any larger QA or expansion wave.
+
 ## FOR GROK PEER REVIEW -- QUIET-WINDOW QUEUE + PLAYBACK-SAFE ARCHITECTURE PREPARED
 
 **Updated UTC:** 2026-06-13T11:04:00Z  
