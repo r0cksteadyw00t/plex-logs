@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T10:14:03Z",
-    "updated_utc":  "2026-06-13T10:14:19Z",
+    "started_utc":  "2026-06-13T10:19:03Z",
+    "updated_utc":  "2026-06-13T10:19:14Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  1,
@@ -25,15 +25,16 @@
                      {
                          "outcome_id":  "O-PLAYBACK",
                          "name":  "Reliable Plex playback first",
-                         "go_live_status":  "HELD_ACTIVE_PLEX_PLAYBACK",
+                         "go_live_status":  "REVIEW_NOT_GO_LIVE_READY",
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
-                                          "Guard=REVIEW_PLEX_BACKGROUND_JOB_STOP_UNVERIFIED ActiveSessions=1 PlexWatchdog=PASS PlaybackPath=PASS"
+                                          "Guard=REVIEW_PLEX_BACKGROUND_JOB_STOP_UNVERIFIED ActiveSessions=1 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
                                           "Active Plex sessions: 1. No disruptive action allowed.",
-                                          "Plex background scanner/analyzer pressure still detected: 1."
+                                          "Plex background scanner/analyzer pressure still detected: 1.",
+                                          "Playback path recovery is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
                          "requires_quiet_window":  true,
@@ -147,6 +148,10 @@
                      {
                          "outcome_id":  "O-PLAYBACK",
                          "blocker":  "Plex background scanner/analyzer pressure still detected: 1."
+                     },
+                     {
+                         "outcome_id":  "O-PLAYBACK",
+                         "blocker":  "Playback path recovery is not PASS: REVIEW."
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
