@@ -1,54 +1,33 @@
-{
-  "component": "jasonos_prime_playback_recovery_mode",
-  "status": "REVIEW_PLAYBACK_STILL_FAILING_COMMAND_LAUNCH_DEGRADED",
-  "updated_utc": "2026-06-13T07:23:19Z",
-  "jason_reported_symptom": "Plex Playback Error: Content is unavailable for movies",
-  "local_codex_checks": {
-    "cmd_echo_alive": {
-      "status": "TIMEOUT",
-      "timeout_ms": 5000
-    },
-    "targeted_task_pause_retry": {
-      "status": "TIMEOUT",
-      "timeout_ms": 120000
-    }
-  },
-  "interpretation": "Plex/WebDAV infrastructure PASS does not equal Plex-client playback PASS. Current evidence points to playback-path saturation and source/WebDAV instability under automation pressure.",
-  "safety": {
-    "pause_publication_required": true,
-    "publication_started": false,
-    "expansion_allowed": false,
-    "heavy_jobs_allowed": false
-  },
-  "keep_alive": [
-    "Plex Media Server",
-    "ScarFLIX_v2_RcloneMountKeepalive",
-    "WebDAV bridge",
-    "Stream proxy",
-    "JasonOS_Prime_PlexWatchdog",
-    "JasonOS_Prime_PlaybackPathRecovery",
-    "JasonOS_Prime_Sentinel",
-    "JasonOS_Prime_Orchestrator"
-  ],
-  "hold_until_playback_verified": [
-    "PlatformGate",
-    "VisibleCatalogQA",
-    "PlexDecisionQA",
-    "ConcurrentQA",
-    "AutoGate",
-    "Publisher",
-    "Path2 scaling",
-    "Materialized expansion",
-    "FastTrack accelerator",
-    "High-churn dashboard embellishment workers"
-  ],
-  "prior_webdav_responsive_watch_now_candidates": [
-    "Gremlins (1984)",
-    "Anna (2019)",
-    "Annabelle (2014)",
-    "Annihilation (2018)",
-    "Armageddon (1998)",
-    "Battleship (2012)"
-  ],
-  "next_safe_action": "Enforce watching-first quiet mode, let rclone/WebDAV settle, then verify one small Plex-client Watch Now lane end-to-end before any expansion."
+﻿{
+    "component":  "jasonos_prime_playback_recovery_mode",
+    "status":  "REVIEW",
+    "updated_utc":  "2026-06-13T21:15:38Z",
+    "source":  "JasonOS_Prime_PlaybackPathRecovery.ps1",
+    "playback_path_recovery_status":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json",
+    "no_publication_started":  true,
+    "no_expansion_started":  true,
+    "watch_now":  [
+                      {
+                          "title":  "Gremlins",
+                          "hash":  "scarflix_part-942255f029875306",
+                          "ok":  true,
+                          "status_code":  200,
+                          "ms":  1396,
+                          "content_length":  "1714768887",
+                          "error":  ""
+                      },
+                      {
+                          "title":  "Anna",
+                          "hash":  "scarflix_part-81107989d2e30cfb",
+                          "ok":  true,
+                          "status_code":  200,
+                          "ms":  1585,
+                          "content_length":  "1721714811",
+                          "error":  ""
+                      }
+                  ],
+    "watch_now_source":  "fresh",
+    "failures":  [
+                     "S: media/catalog path is not reliably ready"
+                 ]
 }
