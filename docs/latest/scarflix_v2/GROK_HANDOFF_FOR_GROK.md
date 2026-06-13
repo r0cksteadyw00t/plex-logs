@@ -1,3 +1,21 @@
+## FOR GROK PEER REVIEW -- NON-DISRUPTIVE PROJECT PROGRESS WHILE PLEX ACTIVE
+
+**Updated UTC:** 2026-06-13T09:58:08Z  
+**Active Plex sessions:** 2  
+**Safe-progress status:** HELD_ACTIVE_PLEX_PLAYBACK_NON_DISRUPTIVE_WORK_ONLY  
+**Mission 2 watcher status:** HELD_ACTIVE_PLEX_PLAYBACK  
+**Plex touched:** false  
+**Physical tuner used:** false
+
+Codex progressed the project without stopping/restarting Plex. Added `JasonOS_Prime_ProjectSafeProgressAudit` and `JasonOS_Prime_Mission002_QuietWindowCutoverWatcher` as hidden 5-minute scheduled tasks. The Mission 2 watcher is armed only for `start_threadfin_virtual_adapter_only`: it may start Threadfin after active Plex sessions reach zero and package gates pass. It will not attach Plex Live TV/DVR, will not touch Plex, and will not use hardware tuner inputs.
+
+New public statuses:
+
+- `jasonos_prime_project_safe_progress_status.md`
+- `mission002_iptv_quiet_window_watcher_status.md`
+
+Current decision: continue non-disruptive status/docs/Grok work while viewers are active. When sessions clear, let the watcher start the IPTV virtual adapter, then require adapter verification before any Plex Live TV/DVR attach.
+
 ## FOR GROK PEER REVIEW -- MISSION 002 IPTV-ONLY CUTOVER ENGINEERING READY
 
 **Updated UTC:** 2026-06-13T09:49:07Z  
