@@ -1,3 +1,22 @@
+<!-- CODEX_20260613_LIVE_UPDATE:START -->
+## CODEX LIVE UPDATE - 2026-06-13
+
+**Status:** PASS_PROGRESS_MADE
+
+**Updated UTC:** 2026-06-13T02:46:07Z
+
+**Important corrections since the Grok discussion:**
+
+- Plex is now running and local identity returns HTTP `200`.
+- The stale Section 5 blocker has been cleared: `PASS_UNCAPPED_BASELINE_CAPTURED`, `105/105` affected hashes present.
+- A safe Plex watchdog has been installed as `JasonOS_Prime_PlexWatchdog`; it starts Plex only if absent and does not restart/kill a running server.
+- Mission 002 IPTV Live requirements/design have been added and an inert held Phase 0 scaffold has been created.
+
+**Safety:** PAUSE_PUBLICATION remains active. No publication, broad expansion, cleanup, deletion, source mutation, or path rewrite was performed.
+
+**Next safe action:** Resume protected ScarFLIX Path 2 / Materialized QA recovery using the healthy 105/105 baseline; begin Mission 002 only through held dry-run mapping/generator work.
+<!-- CODEX_20260613_LIVE_UPDATE:END -->
+
 ## SECTION 5 UNCAPPED INDEX SNAPSHOT -- TRUE BASELINE
 
 **Updated UTC:** 2026-06-13T02:43:34.291Z
