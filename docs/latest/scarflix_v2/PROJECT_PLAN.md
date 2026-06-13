@@ -1,3 +1,16 @@
+## Playback Reliability Engineering Push - 2026-06-13T21:03:55Z
+
+- Playback reliability is now the primary go-live track.
+- Applied bounded `S:\media` / `S:\media\catalog` path probes to `ScarFLIX_v2_RcloneMountKeepalive.ps1`.
+- Applied loopback-first Plex decision probing, keep-alive HTTP, and transient retry/fallback to `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`.
+- Updated `JasonOS_Prime_GoLive16hCampaignRunner.js` so playback path recovery must be `PASS` before any bounded Materialized QA batch runs.
+- Added public status:
+  - `D:\PlexTools\public\latest\scarflix_v2\playback_reliability_engineering_status.md`
+  - `D:\PlexTools\public\latest\scarflix_v2\playback_reliability_engineering_status.json`
+- `PAUSE_PUBLICATION` remains active.
+- Publication and broad catalogue expansion remain blocked.
+- Next signal: review bounded QA results after loopback-first retry behavior appears in `decision_attempts`.
+
 ## 16-Hour Go-Live Campaign Runner Active - 2026-06-13T13:27Z
 
 - Jason granted an exclusive Plex maintenance window and authorized Plex restart/repair if needed.
