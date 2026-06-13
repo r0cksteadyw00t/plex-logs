@@ -1,0 +1,47 @@
+﻿{
+    "component":  "jasonos_iptv_source_preflight_status",
+    "schema_version":  "jasonos.iptv.source_preflight_status.v1",
+    "status":  "HELD_NO_PROVIDER_INPUTS",
+    "updated_utc":  "2026-06-13T09:15:12Z",
+    "publishes_to_plex":  false,
+    "scarflix_modified":  false,
+    "plex_touched":  false,
+    "network_fetch_performed":  false,
+    "source_manifest":  "jasonos\\iptv\\sources\\source_manifest.held.seed.json",
+    "mapping_seed":  "jasonos\\iptv\\mapping\\channel_mappings.seed.json",
+    "source_count":  2,
+    "enabled_source_count":  0,
+    "provider_url_count":  0,
+    "mapping_count":  4,
+    "errors":  [
+
+               ],
+    "warnings":  [
+
+                 ],
+    "sources":  [
+                    {
+                        "source_id":  "au_public_fta_placeholder",
+                        "display_name":  "Australian FTA public source placeholder",
+                        "source_class":  "manual_placeholder",
+                        "ingestion_mode":  "HELD_CONFIG_ONLY",
+                        "enabled":  false,
+                        "provider_url_present":  false,
+                        "network_fetch_performed":  false,
+                        "publishable":  false,
+                        "notes":  "Placeholder for future validated free-to-air M3U/XMLTV source. No network ingestion is permitted while provider_url is blank."
+                    },
+                    {
+                        "source_id":  "afl_event_placeholder",
+                        "display_name":  "AFL event feed placeholder",
+                        "source_class":  "manual_placeholder",
+                        "ingestion_mode":  "HELD_CONFIG_ONLY",
+                        "enabled":  false,
+                        "provider_url_present":  false,
+                        "network_fetch_performed":  false,
+                        "publishable":  false,
+                        "notes":  "Placeholder for future legal AFL/event source mapping. Requires explicit source validation before any active use."
+                    }
+                ],
+    "next_safe_action":  "Add legal provider source inputs in held validate-only mode, then run bounded stream validation before Guardian can allow Plex output."
+}
