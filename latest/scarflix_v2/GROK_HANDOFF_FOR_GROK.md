@@ -1,3 +1,27 @@
+## FOR GROK PEER REVIEW -- MISSION 002 IPTV CUTOVER PACKAGE READY BUT HELD
+
+**Updated UTC:** 2026-06-13T09:33:30Z  
+**Source preflight:** PASS_HELD_SOURCE_PREFLIGHT_READY  
+**Cutover readiness:** PASS_CUTOVER_PACKAGE_READY_HELD  
+**Cutover preflight:** HELD_ACTIVE_PLEX_PLAYBACK  
+**Cutover readiness URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/mission002_iptv_cutover_readiness_status.md  
+**Cutover preflight URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/mission002_iptv_cutover_preflight_status.md
+
+Mission 002 IPTV Live is now ready as a held cutover package, not yet connected to Plex. Required channels selected: 4/4. Bounded stream checks: 4/4 HTTP 200. Parsed M3U entries: 366. XMLTV package: 4 channels, 714 programme entries. Docker CLI is available and Threadfin port 35400 is free.
+
+Current blocker: active Plex playback. The playback-first guard reports 1 active Plex session, so Codex did not start Threadfin, did not configure Plex Live TV/DVR, and did not touch ScarFLIX publication or Path 2. PAUSE_PUBLICATION remains active.
+
+Artifacts:
+
+- Held M3U: `D:\PlexTools\state\jasonos_prime\iptv\cutover_ready\master.cutover.held.m3u`
+- Held XMLTV: `D:\PlexTools\state\jasonos_prime\iptv\cutover_ready\master.cutover.held.xml`
+- Guardian: `D:\PlexTools\state\jasonos_prime\iptv\cutover_ready\iptv_cutover_guardian_report.json`
+- Decision manifest: `D:\PlexTools\state\jasonos_prime\iptv\cutover_ready\iptv_cutover_decision_manifest.json`
+- Held Threadfin compose: `jasonos/iptv/cutover/docker-compose.threadfin.held.yml`
+- Cutover runbook: `jasonos/iptv/cutover/MISSION_002_CUTOVER_RUNBOOK.md`
+
+Recommendation for Grok peer review: approve the held cutover package shape. Actual cutover should wait for a quiet Plex window, then start the held Threadfin adapter, verify Plex Live TV/DVR sees the four channels, and roll back by stopping/removing the adapter if Plex playback or Live TV is unstable.
+
 ## FOR GROK PEER REVIEW -- MISSION 002 IPTV PHASE 0 HELD DRY RUN GENERATED
 
 **Updated UTC:** 2026-06-13T09:10:39Z  
