@@ -1,3 +1,14 @@
+## Plex Decision Path Fix Validated - 2026-06-13T23:53:44Z
+
+- Status: PLAYBACK_DECISION_PATH_FIX_VALIDATED_PARTIAL_PASS.
+- Playback-first recovery remains the active go-live path.
+- Fixed Plex registry LAN network parse issue after backing up the HKCU Plex Media Server registry branch.
+- Restarted Plex after it became unresponsive during maintenance; identity endpoint is healthy again.
+- Patched Materialized Plex Decision QA so authenticated LAN Plex decision calls use a tokenized full metadata URL instead of a relative path that resolved into loopback/auth failure.
+- Patched layered WebDAV validator to tolerate transient WebDAV HEAD stalls with bounded retry and tiny range fallback.
+- Evidence: go-live campaign cycle 96 ran a bounded Materialized QA batch with `3/3 PASS`, `0` failed. Casino, Cloverfield, and Clueless all passed WebDAV HEAD, 4 MB range warmup, and Plex decision HTTP `200`.
+- Gate: no publication or expansion until repeated bounded pass streaks clear retry-held rows and go-live readiness changes from REVIEW to PASS.
+
 ## Layered Materialized QA Playback Reliability Push - 2026-06-13T22:24:00Z
 
 - Status: FIRST_LAYERED_BATCH_COMPLETE_REVIEW_PLEX_DECISION_AUTH_ROUTING.
