@@ -1,22 +1,36 @@
-# Mission 002 IPTV Live Phase 0 Status
+﻿# Mission 002 IPTV Live Phase 0 Dry Run
 
-Updated UTC: 2026-06-13T02:46:07Z
+**Updated UTC:** 2026-06-13T09:10:39Z  
+**Status:** PASS_HELD_DRY_RUN_GENERATED  
+**Guardian:** HELD_GUARDIAN_BLOCKED_NO_PROVIDER_URLS
 
-Status: `SCAFFOLD_HELD`
+## Safety
 
-What exists:
+- Plex touched: false
+- ScarFLIX modified: false
+- Publishes to Plex: false
+- Source ingestion performed: false
+- Artifacts are held previews only.
 
-- Design document: `docs/MISSION_002_IPTV_LIVE_DESIGN.md`
-- Mapping seed: `jasonos/iptv/mapping/channel_mappings.seed.json`
+## Channels
 
-What does not exist yet:
+- au.7.melbourne / 7 Melbourne / tvg candidate: 7Melbourne.au / status: HELD_NO_PROVIDER_URL
+- au.7.sydney / 7 Sydney / tvg candidate: 7Sydney.au / status: HELD_NO_PROVIDER_URL
+- au.7plus.afl / AFL Live / tvg candidate:  / status: HELD_NO_PROVIDER_URL
+- au.7mate / 7mate / tvg candidate: 7mate.au / status: HELD_NO_PROVIDER_URL
 
-- No generated `master.m3u`.
-- No generated `master.xml`.
-- No live provider ingestion.
-- No Plex-facing IPTV output.
+## Artifacts
 
-Next safe implementation step:
+- Normalized mapping: D:\PlexTools\state\jasonos_prime\iptv\phase0\channel_mappings.normalized.json
+- Held M3U preview: D:\PlexTools\state\jasonos_prime\iptv\phase0\master.held.m3u
+- Held XMLTV preview: D:\PlexTools\state\jasonos_prime\iptv\phase0\master.held.xml
+- Decision manifest: D:\PlexTools\state\jasonos_prime\iptv\phase0\iptv_decision_manifest.held.json
+- Guardian report: D:\PlexTools\state\jasonos_prime\iptv\phase0\iptv_guardian_report.json
 
-Create the SQLite/channel mapping loader and a dry-run generator that writes held artifacts only. Do not point Plex at generated IPTV files until Validator and Guardian pass.
+## Guardian Decision
 
+Publication is blocked because no validated provider URLs exist yet. This is expected for Phase 0 scaffolding.
+
+## Next Safe Action
+
+Add validator input schema and source-ingestion adapters in held mode only. Do not point Plex at IPTV outputs until provider URLs exist and Guardian reaches PASS.
