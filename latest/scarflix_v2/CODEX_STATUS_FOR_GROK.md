@@ -1,13 +1,15 @@
 ## FOR CLAUDE/GROK PEER REVIEW -- LAYERED MATERIALIZED QA IMPLEMENTED
 
-**Updated UTC:** 2026-06-13T22:17:36Z  
-**Status:** IMPLEMENTED_PENDING_NEXT_BOUNDED_QA_BATCH  
+**Updated UTC:** 2026-06-13T22:24:00Z  
+**Status:** FIRST_LAYERED_BATCH_COMPLETE_REVIEW_PLEX_DECISION_AUTH_ROUTING  
 **Layered status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_qa_layered_status.md  
 **Layered JSON URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_qa_layered_status.json
 
 Codex ingested the external peer-review plan and implemented the low-risk engineering portion: `ScarFLIX_v2_StreamingLayeredValidator.js` plus integration into `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`. Selected bounded QA candidates now run service-context-safe local symlink metadata capture, WebDAV HEAD, and a 4 MB discard-only range warmup before Plex decision probing. The Plex decision endpoint remains the final compatibility proof, but failures are now separated into WebDAV/path/range versus Plex decision classes.
 
-No publication, expansion, cache clear, broad QA, source mutation, or permanent buffering was started. `PAUSE_PUBLICATION` remains required. Next action is for the existing bounded local go-live runner to exercise the new layer in a small QA batch when playback path recovery, Sentinel, launch health, and active-session gates allow.
+First bounded batch after implementation: layered prechecks `3/3 PASS`, WebDAV HEAD `3/3 HTTP 200`, range warmup `3/3 HTTP 206`, Plex decision `2/3 PASS`, `1/3` failed at Plex decision/auth routing. The failed row timed out against LAN decision attempts then received loopback HTTP `401`. Token check showed loopback token auth HTTP `401`, LAN token auth HTTP `200`; QA access selection is now patched to try token-auth on all configured bases before no-auth fallback.
+
+No publication, expansion, cache clear, broad QA, source mutation, or permanent buffering was started. `PAUSE_PUBLICATION` remains required. Next action is for the existing bounded local go-live runner to run the next small QA batch with token-auth LAN available for Plex decision calls.
 
 ## FOR CLAUDE/GROK PEER REVIEW -- PLAYBACK RELIABILITY ENGINEERING PUSH
 
