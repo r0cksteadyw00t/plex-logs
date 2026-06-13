@@ -1,0 +1,84 @@
+{
+  "component": "jasonos_prime_playback_recovery_mode",
+  "schema_version": "jasonos.playback_recovery.v1",
+  "status": "PARTIAL_PASS_LIMITED_WATCH_NOW_LANE_READY",
+  "updated_utc": "2026-06-13T05:31:37Z",
+  "root_cause": "Plex was online but S:/media rclone WebDAV mount was missing after reboot.",
+  "recovery_actions": [
+    "Stopped Path2 campaign runner earlier",
+    "Disabled non-critical high-churn workers earlier",
+    "Ran ScarFLIX_v2_RcloneMountKeepalive.ps1",
+    "rclone started and S:/media plus S:/media/catalog became available"
+  ],
+  "command_launch_ms": [
+    157,
+    101,
+    65
+  ],
+  "plex_identity": "PASS_HTTP_200",
+  "webdav_health": "PASS_HTTP_200",
+  "rclone_mount": "PASS_S_MEDIA_AND_CATALOG_READY",
+  "rclone_pid": 18336,
+  "watch_now": [
+    {
+      "title": "Gremlins",
+      "hash": "scarflix_part-942255f029875306",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1802,
+      "content_length": "1714768887"
+    },
+    {
+      "title": "Anna",
+      "hash": "scarflix_part-81107989d2e30cfb",
+      "status": "PASS",
+      "http": 200,
+      "ms": 7482,
+      "content_length": "1721714811"
+    },
+    {
+      "title": "Annabelle",
+      "hash": "scarflix_part-c08b683f68e4e49e",
+      "status": "PASS",
+      "http": 200,
+      "ms": 8992,
+      "content_length": "2022794810"
+    },
+    {
+      "title": "Annihilation",
+      "hash": "scarflix_part-d8b22fb3f498688e",
+      "status": "PASS",
+      "http": 200,
+      "ms": 8979,
+      "content_length": "2329772465"
+    },
+    {
+      "title": "Armageddon",
+      "hash": "scarflix_part-2eaab8df357724dc",
+      "status": "PASS",
+      "http": 200,
+      "ms": 7414,
+      "content_length": "732649045"
+    },
+    {
+      "title": "Battleship",
+      "hash": "scarflix_part-8aa2235ef7c1e0f6",
+      "status": "PASS",
+      "http": 200,
+      "ms": 7220,
+      "content_length": "892122616"
+    }
+  ],
+  "safety": {
+    "pause_publication_active": true,
+    "expansion_paused": true,
+    "noncritical_workers_disabled": true,
+    "broad_catalogue_expansion_allowed": false,
+    "reason": "WebDAV works but latency remains high on several titles; keep focus on playback stability."
+  },
+  "raw_urls": {
+    "playback_recovery": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_recovery_mode_status.md",
+    "watch_now": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.md",
+    "grok_handoff": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md"
+  }
+}
