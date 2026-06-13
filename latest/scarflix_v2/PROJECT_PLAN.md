@@ -1,3 +1,14 @@
+## Playback-First Recovery Lock-In - 2026-06-13 15:56:44 Australia/Sydney
+
+- Status: PASS_PLAYBACK_PATH_RECOVERY_LOCKED_IN.
+- Plex watchdog: active and PASS.
+- Playback path recovery: active and PASS.
+- Root cause addressed: Plex metadata can be available while S:\media is missing after reboot; the new failback worker now restores WebDAV/rclone playback path readiness without running publication or expansion.
+- Latest launch health: 32ms, 12ms, 25ms, 29ms, 11ms.
+- Latest path state: WebDAV PASS, Plex identity PASS, S:\media and S:\media\catalog visible with no bounded-probe timeout.
+- Safety: PAUSE_PUBLICATION remains active; no publication, expansion, Plex DB mutation, source mutation, or path rewrite occurred.
+- Next gate: sustain several PASS recovery cycles, then run bounded playback verification before resuming Path 2 scaling.
+
 ## Playback Recovery Monitoring PASS With Filesystem Caution - 2026-06-13 15:43 Australia/Sydney
 
 - Heartbeat: `playback-recovery-retry`.
@@ -3001,3 +3012,4 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
