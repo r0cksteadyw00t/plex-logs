@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T07:20:02.436Z
+Updated UTC: 2026-06-13T07:25:02.389Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: STALE_STATUS
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -29,10 +29,10 @@ Recent Achievements:
 - 2026-06-13T05:05:18.990Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-13T05:05:18Z] [REVIEW] Final: REVIEW
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 4 min ago
-- Platform child progress: 11 min ago
-- Mirror updated: 1 min ago
+- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
+- Controller updated: 9 min ago
+- Platform child progress: 16 min ago
+- Mirror updated: 4 min ago
 - Platform runner running: false
 - Platform child active: true
 
