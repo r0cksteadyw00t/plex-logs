@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T21:20:02.449Z
+Updated UTC: 2026-06-13T21:25:01.662Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
-Automation state: STALE_STATUS
+Automation state: PROGRESSING
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -21,18 +21,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=1/3; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-13T21:14:23.041Z - Playback Reliability Engineering Push - 2026-06-14 08:03: Current verified state: Playback reliability is the active go-live blocker. Plex is running and Sentinel is low, but ScarFLIX playback is still not ready for general watching. Codex applied three control-plane reliability changes:
-- 2026-06-13T21:10:12Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T21:23:30.482Z - Playback Reliability Engineering Push - 2026-06-14 08:03: Current verified state: Playback reliability is the active go-live blocker. Plex is running and Sentinel is low, but ScarFLIX playback is still not ready for general watching. Codex applied three control-plane reliability changes:
+- 2026-06-13T21:22:52Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T21:00:16.373Z - 16-Hour Go-Live Campaign Runner Active - 2026-06-13 23:27: Current verified state: Jason granted an exclusive Plex maintenance window. A singleton 16-hour local runner is active: `D:\PlexTools\Foundry\workers\JasonOS_Prime_GoLive16hCampaignRunner.js`
 - 2026-06-13T13:20:15.189Z - Playback-Safe Planning Progress While Stream Is Active - 2026-06-13 21:04: Current verified state: Production Plex still has active playback, so no live Plex, Threadfin, Docker, catalogue, scan, refresh, QA, publication, expansion, cleanup, deletion, or path mutation work was started. Added held quiet-window queue: `jasonos/control/QUIET_WINDOW_EXECUTION_QUEUE.md`
 - 2026-06-13T11:00:34.572Z - Playback-Only Hold Reinstated - 2026-06-13 20:54: Current verified state: Jason reported the viewer had stopped, but a direct Plex session check still reports `1` active session. Current active Plex title: `The Magic Faraway Tree`, state `playing`. Plex server was not stopped, restarted, or modified.
 - 2026-06-13T10:50:20.104Z - Go-Live Readiness Ledger Installed - 2026-06-13 20:09: Current verified state: New live go-live audit: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_GoLiveReadinessAudit.ps1`. New hidden scheduled task: `JasonOS_Prime_GoLiveReadinessAudit`, every 5 minutes, LastTaskResult `0`. Public status: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_readiness_statu...
 
 Heartbeat / Stall Check:
-- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 10 min ago
-- Platform child progress: 851 min ago
-- Mirror updated: 2 min ago
+- Background controller and worker tasks are expected to continue without Codex.
+- Controller updated: 2 min ago
+- Platform child progress: 856 min ago
+- Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
 
