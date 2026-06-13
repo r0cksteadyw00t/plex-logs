@@ -1,7 +1,7 @@
 ﻿# Mission 002 IPTV Threadfin Virtual Adapter Apply
 
-**Updated UTC:** 2026-06-13T09:48:53Z  
-**Status:** HELD_ACTIVE_PLEX_PLAYBACK
+**Updated UTC:** 2026-06-13T10:36:05Z  
+**Status:** FAIL_THREADFIN_DOCKER_START_FAILED
 
 ## Safety
 
@@ -10,19 +10,19 @@
 - Plex touched: false
 - ScarFLIX modified: false
 - Cutover enabled: false
-- Active Plex sessions: 2
+- Active Plex sessions: 0
 
 ## Actions
 
-- none
+- active_m3u_xmltv_copied_from_held_package
 
 ## Warnings
 
-- active_plex_playback:2
+- none
 
 ## Errors
 
-- none
+- docker_compose_up_failed
 
 ## Decision
 
