@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_current_hold_status_summary_20260613_v16",
-      "created_at": "2026-06-13T15:52:34Z",
-      "expires_at": "2026-06-14T15:52:34Z",
+      "instruction_id": "phase0_record_playback_hold_status_summary_20260613_v17",
+      "created_at": "2026-06-13T16:08:19Z",
+      "expires_at": "2026-06-14T16:08:19Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,16 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 2,
-        "backoff": "fixed"
+        "max_retries": 1,
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_record_current_hold_status_summary_20260613_v16",
-            "auto_added_by_bridge": true
+            "summary": "Playback priority hold remains active with 1 Plex session. PAUSE_PUBLICATION enforced. Materialized QA in REVIEW. No expansion, publishing, or resolver work permitted. 16h runner continues bounded self-throttled cycles.",
+            "source_instruction_id": "phase0_record_playback_hold_status_summary_20260613_v17"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-13T15:52:34Z",
+  "updated_utc": "2026-06-13T16:08:19Z",
   "source": "grok_api"
 }
