@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-13T10:20:34.055Z
+Updated UTC: 2026-06-13T10:25:38.486Z
 Source: live status merge
 
-- 2026-06-13T10:16:19.885Z - Go-Live Readiness Ledger Installed - 2026-06-13 20:09: Current verified state: New live go-live audit: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_GoLiveReadinessAudit.ps1`. New hidden scheduled task: `JasonOS_Prime_GoLiveReadinessAudit`, every 5 minutes, LastTaskResult `0`. Public status: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_readiness_statu...
-- 2026-06-13T10:15:45Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T10:25:34.755Z - Go-Live Readiness Ledger Installed - 2026-06-13 20:09: Current verified state: New live go-live audit: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_GoLiveReadinessAudit.ps1`. New hidden scheduled task: `JasonOS_Prime_GoLiveReadinessAudit`, every 5 minutes, LastTaskResult `0`. Public status: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_readiness_statu...
+- 2026-06-13T10:20:36Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T10:06:37.091Z - Non-Disruptive Project Progress While Plex Is Active - 2026-06-13 19:58: Current verified state: Active Plex sessions: `2`. Sentinel: `PASS / LOW`. Plex watchdog: `PASS`.
 - 2026-06-13T09:51:04.372Z - Mission 002 IPTV-Only Cutover Engineering Ready - 2026-06-13 19:49: Current verified state: Mission 002 is explicitly IPTV-only. No physical tuner, antenna, DVB/OTA device, coax input, or hardware HDHomeRun will be used. Threadfin remains the virtual Plex-compatible adapter layer only. Added full architecture doc: `jasonos/iptv/cutover/MISSION_002_IPTV_ONLY_CUTOVER_ARCHITECTURE.md`.
 - 2026-06-13T09:45:50.106Z - Mission 002 IPTV Cutover Package Ready But Held - 2026-06-13 19:40: Current verified state: Jason correction applied after the first package: AFL IP streaming is `7plus` primary; antenna/linear reference is channel `70`. Mission 002 mapping now prefers the public `mjh-7afl-fast` / `7AFL` candidate for the held AFL IP lane and treats Seven/7mate regional channels as fallback/linear r...
