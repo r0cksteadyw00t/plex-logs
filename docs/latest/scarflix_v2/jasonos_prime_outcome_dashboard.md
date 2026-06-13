@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T08:10:03.188Z
+Updated UTC: 2026-06-13T08:15:03.645Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
-Automation state: STALE_STATUS
+Automation state: PROGRESSING
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -21,18 +21,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-13T07:55:15.625Z - Playback-First Recovery Lock-In - 2026-06-13 15:54: Current verified state: Sentinel: `PASS / LOW`. Command launch: healthy after recovery; latest five `cmd /c echo alive` checks were `32ms`, `12ms`, `25ms`, `29ms`, and `11ms`. Plex Media Server: running and protected by `JasonOS_Prime_PlexWatchdog` plus logon task.
-- 2026-06-13T07:55:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T08:12:34.659Z - Playback-First Recovery Lock-In - 2026-06-13 15:54: Current verified state: Sentinel: `PASS / LOW`. Command launch: healthy after recovery; latest five `cmd /c echo alive` checks were `32ms`, `12ms`, `25ms`, `29ms`, and `11ms`. Plex Media Server: running and protected by `JasonOS_Prime_PlexWatchdog` plus logon task.
+- 2026-06-13T08:12:26Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T07:08:43.775Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
 - 2026-06-13T05:50:18.679Z - Catalogue Expansion Campaign - 2026-06-13 13:25: Current verified state: Sentinel: `PASS / LOW`. Orchestrator: `PASS`; launch health non-degraded with timeout rate `0`. Plex Media Server: self-healing watchdog installed; current identity checks are passing.
 - 2026-06-13T05:10:57Z - Autonomous controller: candidate_source_model_review: Candidate-source model requires engineering review before catalogue expansion
 - 2026-06-13T05:05:18.990Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-13T05:05:18Z] [REVIEW] Final: REVIEW
 
 Heartbeat / Stall Check:
-- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 15 min ago
-- Platform child progress: 61 min ago
-- Mirror updated: 3 min ago
+- Background controller and worker tasks are expected to continue without Codex.
+- Controller updated: 3 min ago
+- Platform child progress: 66 min ago
+- Mirror updated: 4 min ago
 - Platform runner running: false
 - Platform child active: true
 
