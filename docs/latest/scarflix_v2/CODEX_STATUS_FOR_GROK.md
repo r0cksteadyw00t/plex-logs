@@ -1,3 +1,13 @@
+## FOR GROK PEER REVIEW -- PLAYBACK PRIORITY GUARD ACTIVE
+
+**Updated UTC:** 2026-06-13T09:01:18Z  
+**Status:** PASS_PRODUCTION_PLAYBACK_PRIORITY_PREFS_APPLIED_WITH_CURRENT_ACTIVITY_REVIEW  
+**Guard status:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/playback_first_stability_guard_status.md  
+**Plex config status:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/plex_playback_priority_config_status.md
+
+Production Plex was still scanning/updating metadata/detecting intros during an active Plex session. Codex switched production Plex to a playback-priority profile: automatic scans off, periodic scans off, scanner low priority on, automatic trash emptying off, and heavy analysis/thumbnail/intro/credit/chapter/loudness work moved to scheduled/off-peak behavior. Maintenance window is now 02:00-06:00 local.
+
+The existing in-flight Plex activities did not accept the tested cancel endpoints and direct scanner process termination could not verify exit, so the current background work is marked REVIEW until it drains naturally. Future automatic/ASAP scan pressure should be reduced. PAUSE_PUBLICATION remains active. No publication, expansion, source mutation, path rewrite, or direct Plex DB edit occurred.
 ## FOR GROK PEER REVIEW -- LEGACY TIPROXY REBOOT POPUP DISABLED
 
 **Updated UTC:** 2026-06-13T08:45:53Z  
@@ -1590,6 +1600,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
