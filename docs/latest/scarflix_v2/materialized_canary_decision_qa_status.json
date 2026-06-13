@@ -1,20 +1,20 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "REVIEW",
-  "started_utc": "2026-06-13T20:31:32Z",
-  "ended_utc": "2026-06-13T20:32:10Z",
-  "updated_utc": "2026-06-13T20:32:10Z",
+  "started_utc": "2026-06-13T20:38:23Z",
+  "ended_utc": "2026-06-13T20:39:03Z",
+  "updated_utc": "2026-06-13T20:39:03Z",
   "target_count": 229,
-  "rows_found": 147,
+  "rows_found": 149,
   "checked": 2,
   "passed": 0,
   "failed": 2,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
-  "decision_probe_skip": 80,
+  "decision_probe_skip": 83,
   "decision_probe_limit": 3,
-  "decision_probe_total_candidates": 142,
+  "decision_probe_total_candidates": 144,
   "selected_decision_candidates": 3,
   "stopped_early": true,
   "stopped_reason": "Stopped after 2 consecutive Plex decision failures.",
@@ -1427,7 +1427,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Angels & Demons (2009)\\ScarFLIX_part-07bcb8bc9c545c8d",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50653,
+          "part_id": 128308,
+          "section_id": 5,
+          "title": "Angels & Demons",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Angels & Demons (2009)\\ScarFLIX_part-07bcb8bc9c545c8d\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -1782,7 +1790,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Death Race (2008)\\ScarFLIX_part-fd7ffd1d86da1bd7",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50650,
+          "part_id": 128305,
+          "section_id": 5,
+          "title": "Death Race",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Death Race (2008)\\ScarFLIX_part-fd7ffd1d86da1bd7\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -4405,22 +4421,6 @@
   ],
   "results": [
     {
-      "metadata_id": 50416,
-      "part_id": 127841,
-      "section_id": 5,
-      "title": "Shrek Forever After",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Shrek Forever After (2010)\\ScarFLIX_part-9340c96017dac230\\stream.mkv",
-      "status": "FAIL",
-      "http_status": 0,
-      "access_mode": "allowed_networks",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "socket hang up",
-      "target_hash": "ScarFLIX_part-9340c96017dac230",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Shrek Forever After (2010)\\ScarFLIX_part-9340c96017dac230"
-    },
-    {
       "metadata_id": 50415,
       "part_id": 127840,
       "section_id": 5,
@@ -4432,9 +4432,25 @@
       "base_url": "http://192.168.1.184:32400",
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "timeout",
+      "reason": "socket hang up",
       "target_hash": "ScarFLIX_part-3ac0e5bd2415a5fc",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Silent Hill (2006)\\ScarFLIX_part-3ac0e5bd2415a5fc"
+    },
+    {
+      "metadata_id": 50414,
+      "part_id": 127839,
+      "section_id": 5,
+      "title": "Sin Nombre",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sin Nombre (2009)\\ScarFLIX_part-24f719d304fd7aa0\\stream.mkv",
+      "status": "FAIL",
+      "http_status": 0,
+      "access_mode": "allowed_networks",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "timeout",
+      "target_hash": "ScarFLIX_part-24f719d304fd7aa0",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sin Nombre (2009)\\ScarFLIX_part-24f719d304fd7aa0"
     }
   ],
   "next_action": "Quarantine failed materialized source/release and keep title retryable."
