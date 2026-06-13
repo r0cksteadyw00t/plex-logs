@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-13T20:59:07Z
+Updated UTC: 2026-06-13T21:05:59Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -16,7 +16,7 @@ PAUSE_PUBLICATION active: `True`
 
 | Outcome | Status | Progress | Summary | Next Safe Action |
 |---|---:|---:|---|---|
-| Reliable Plex playback first | `PASS_INFRASTRUCTURE_READY_REQUIRES_CLIENT_CONFIRMATION` | 65% | Plex remains the playback front end; current priority is no scanner/indexer contention during viewing. | Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet. |
+| Reliable Plex playback first | `REVIEW_NOT_GO_LIVE_READY` | 65% | Plex remains the playback front end; current priority is no scanner/indexer contention during viewing. | Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet. |
 | ScarFLIX movies and TV playable in Plex | `REVIEW_NOT_GO_LIVE_READY` | 45% | Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover. | Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable. |
 | IPTV-only Live TV ready for cutover | `PASS_VIRTUAL_ADAPTER_READY_PLEX_ATTACH_PENDING` | 90% | IPTV-only package is ready and guarded; no physical tuner path is allowed. | Threadfin virtual adapter is ready. Hold Plex Live TV/DVR attach until there are no active sessions, then verify guide/playback and rollback if unstable. |
 | Daily AI and Command Centre usable | `REVIEW_NOT_GO_LIVE_READY` | 55% | Core AI/reporting exists, but Command Centre usability is degraded and needs a fresh end-user pass. | Stabilize Command Centre and run a lightweight usability proof when playback-sensitive work is quiet. |
@@ -26,7 +26,9 @@ PAUSE_PUBLICATION active: `True`
 
 ## Blocking Items
 
-- `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: REVIEW 1/3 failed=2.
+- `O-PLAYBACK`: Plex background scanner/analyzer pressure still detected: 2.
+- `O-PLAYBACK`: Playback path recovery is not PASS: REVIEW.
+- `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: RUNNING_PLEX_DECISION_PROBES 0/0 failed=0.
 
 ## Monitored Tasks
 
