@@ -2,10 +2,10 @@
 
 ## Active Priority - Quality and Playback Stability
 
-**Updated UTC:** 2026-06-13T08:28:12Z  
-**Status:** REVIEW_PLAYBACK_STABILITY_GUARD_CREATED_INLINE_RUN_BLOCKED
+**Updated UTC:** 2026-06-13T08:36:00Z  
+**Status:** PASS_LIGHTWEIGHT_STABILITY_GUARD_CREATED_PLAYBACK_VERIFICATION_STILL_REQUIRED
 
-Jason has explicitly redirected the project to quality, stability, QA evidence, issue investigation, and problem solving. Catalogue expansion is not the active priority while Plex movie playback is unreliable.
+Jason redirected the project to quality, stability, QA evidence, issue investigation, and problem solving. Catalogue expansion is not the active priority while Plex movie playback is unreliable.
 
 ## Current Decision
 
@@ -29,22 +29,16 @@ Created a dedicated playback-first stability guard:
 - `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_PlaybackFirstStabilityGuard.ps1`
 - `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_PlaybackFirstStabilityGuard.vbs`
 
-The guard is designed to:
+The first full guard version timed out. The final default guard was simplified to avoid `cmd.exe`, WMI command-line scans, and log-tail analysis by default. It stops only `Plex Media Scanner` processes during playback-first mode and does not stop Plex Media Server or all Plex transcoders.
 
-- Measure command launch health.
-- Detect rclone/WebDAV upstream error pressure.
-- Identify Plex background scanner/analyzer/thumbnail/credit jobs.
-- Stop only background Plex analysis jobs during playback-first mode.
-- Never stop Plex Media Server.
-- Never mutate publication, sources, paths, or Plex database.
-- Write public status artifacts.
+Confirmed: the simplified guard completed once successfully and wrote local status.
 
-Inline execution is currently blocked by process/control-plane contention: the first guard run timed out after 90 seconds, and a direct scanner-stop attempt timed out after 30 seconds. It should be run detached/local when command launch permits.
+Unconfirmed: scheduled task registration was attempted but timed out before confirmation. Verify later before treating the guard as recurring.
 
 ## Next Safe Sequence
 
 1. Keep QA/expansion/campaign workers disabled.
-2. Run `JasonOS_Prime_PlaybackFirstStabilityGuard` detached through its hidden launcher when launch health permits.
+2. Verify or install `JasonOS_Prime_PlaybackFirstStabilityGuard` as a hidden scheduled task when launch health is stable.
 3. Wait 2-5 minutes for Plex scanner/analyzer load and rclone/WebDAV pressure to drop.
 4. Verify one small Plex-client Watch Now lane end-to-end.
 5. If one title still fails, isolate it through Plex metadata row, local path, WebDAV range, and Plex logs.
