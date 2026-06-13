@@ -1,3 +1,14 @@
+## FOR CLAUDE/GROK PEER REVIEW -- LAYERED MATERIALIZED QA IMPLEMENTED
+
+**Updated UTC:** 2026-06-13T22:17:36Z  
+**Status:** IMPLEMENTED_PENDING_NEXT_BOUNDED_QA_BATCH  
+**Layered status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_qa_layered_status.md  
+**Layered JSON URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_qa_layered_status.json
+
+Codex ingested the external peer-review plan and implemented the low-risk engineering portion: `ScarFLIX_v2_StreamingLayeredValidator.js` plus integration into `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`. Selected bounded QA candidates now run service-context-safe local symlink metadata capture, WebDAV HEAD, and a 4 MB discard-only range warmup before Plex decision probing. The Plex decision endpoint remains the final compatibility proof, but failures are now separated into WebDAV/path/range versus Plex decision classes.
+
+No publication, expansion, cache clear, broad QA, source mutation, or permanent buffering was started. `PAUSE_PUBLICATION` remains required. Next action is for the existing bounded local go-live runner to exercise the new layer in a small QA batch when playback path recovery, Sentinel, launch health, and active-session gates allow.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- PLAYBACK RELIABILITY ENGINEERING PUSH
 
 **Updated UTC:** 2026-06-13T21:03:55Z  
