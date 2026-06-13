@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-13T11:40:37Z  
+**Updated UTC:** 2026-06-13T11:46:06Z  
 **Status:** PASS_PLAYBACK_PRIORITY_ACTIVE
 
 ## Scope
@@ -15,7 +15,7 @@ Playback quality and stability only. No publication, no expansion, no source mut
 ## Plex Playback Priority
 
 - Session detection OK: True
-- Active Plex sessions: 1
+- Active Plex sessions: 2
 - Plex base used: http://192.168.1.184:32400
 - Token source used: plex_token.txt
 - Off-peak window: 2:00-6:00
@@ -25,7 +25,8 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Background Jobs
 
-- none
+- pid=7488 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=28644 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
 
 ## Recent rclone/WebDAV Error Pressure
 
