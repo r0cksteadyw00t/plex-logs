@@ -1,34 +1,33 @@
 # Playback First Stability Guard Status
 
-**Updated UTC:** 2026-06-13T08:28:12Z  
-**Status:** REVIEW_INLINE_GUARD_RUN_BLOCKED_BY_PROCESS_CONTENTION
+**Updated UTC:** 2026-06-13T08:36:00Z  
+**Status:** PASS_LIGHTWEIGHT_GUARD_CREATED_AND_RAN_ONCE_TASK_INSTALL_UNCONFIRMED
 
 ## Purpose
 
-Improve playback quality and stability by suppressing background Plex scanner/analyzer/thumbnail/credit jobs during playback-first recovery, while detecting rclone/WebDAV upstream error pressure.
+Improve playback quality and stability by suppressing Plex background scanner/analyzer jobs during playback-first recovery, while avoiding any publication, expansion, source mutation, path rewrite, or Plex database mutation.
 
-## Scope
+## Confirmed Results
 
-- No publication.
-- No expansion.
-- No source mutation.
-- No path rewrite.
-- No Plex database mutation.
-- Does not stop Plex Media Server.
+- Created local guard script: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_PlaybackFirstStabilityGuard.ps1`.
+- Created hidden launcher: `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_PlaybackFirstStabilityGuard.vbs`.
+- First full guard version was too heavy and timed out.
+- Guard was simplified to avoid `cmd.exe`, avoid WMI command-line scans, avoid log-tail analysis by default, and stop only `Plex Media Scanner` processes.
+- Simplified guard completed once successfully and wrote local status.
 
-## Current Evidence
+## Unconfirmed / Blocked
 
-- Command launch briefly recovered, then degraded again under live load.
-- Multiple Plex background scanner/analyzer/thumbnail jobs were visible.
-- rclone/WebDAV logs showed repeated upstream/cache failures for specific `ScarFLIX_part-*` hashes.
-- Inline first run of the guard did not return within 90 seconds.
-- Direct attempt to stop only Plex Media Scanner processes did not return within 30 seconds.
+- Scheduled task registration was attempted for `JasonOS_Prime_PlaybackFirstStabilityGuard`, but the registration command timed out before confirmation.
+- Follow-up task/process/status verification commands also timed out.
+- Treat task installation as `UNCONFIRMED` until a later stable command window verifies it.
 
-## Files Created Locally
+## Current QA/Stability Policy
 
-- `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_PlaybackFirstStabilityGuard.ps1`
-- `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_PlaybackFirstStabilityGuard.vbs`
+- Expansion remains held.
+- User-facing Plex-client playback is the success criterion.
+- Background Plex scanner/analyzer work should be suppressed during active playback recovery windows.
+- rclone/WebDAV error pressure must be low before running any playback verification gate.
 
 ## Next Safe Action
 
-Run the guard detached through the hidden launcher when command launch is stable, then wait for rclone/WebDAV error pressure to fall before performing a tiny Plex-client Watch Now verification.
+When command launch is stable again, verify whether `JasonOS_Prime_PlaybackFirstStabilityGuard` exists as a scheduled task. If not, install it hidden. Then run only a tiny Plex-client Watch Now verification lane.
