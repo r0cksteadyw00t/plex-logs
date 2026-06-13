@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Project Safe Progress Audit
 
-**Updated UTC:** 2026-06-13T12:33:01Z  
+**Updated UTC:** 2026-06-13T12:38:02Z  
 **Status:** PASS_SAFE_STATUS_ONLY_PROGRESS
 
 ## Current Gates
@@ -9,8 +9,8 @@
 - Sentinel: PASS / LOW
 - Mission 2 readiness: PASS_CUTOVER_PACKAGE_READY_HELD
 - Mission 2 preflight: HELD_ACTIVE_PLEX_PLAYBACK
-- Mission 2 apply: FAIL_THREADFIN_DOCKER_START_FAILED
-- Mission 2 verify: REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY
+- Mission 2 apply: PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH
+- Mission 2 verify: PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE
 - Materialized QA: UNKNOWN
 
 ## Allowed Work
@@ -18,7 +18,7 @@
 - Status-only work: True
 - Public/Grok updates: True
 - Mission 2 virtual adapter auto-start: True
-- Mission 2 Plex Live attach: False
+- Mission 2 Plex Live attach: True
 - ScarFLIX expansion: False
 - Plex restart/stop: False
 
