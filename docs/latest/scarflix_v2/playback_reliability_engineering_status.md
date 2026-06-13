@@ -1,5 +1,29 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-13T23:53:44Z
+
+**Status:** PLAYBACK_DECISION_PATH_FIX_VALIDATED_PARTIAL_PASS  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Validated fixes:
+
+- Plex registry LAN network parse issue fixed and backed up.
+- Plex restarted after becoming unresponsive; identity endpoint is healthy.
+- Materialized Plex Decision QA now uses tokenized full LAN metadata URL for Plex decision calls when token auth is available.
+- Layered WebDAV validator now includes bounded HEAD retry and tiny range fallback for transient WebDAV stalls.
+
+Latest evidence:
+
+- Go-live campaign cycle 96 completed a bounded Materialized QA batch: `3/3 PASS`, `0` failed.
+- Casino, Cloverfield, and Clueless passed symlink metadata, WebDAV HEAD, 4 MB range warmup, and Plex decision HTTP `200`.
+- Decision path mode for all three: `tokenized_full_base_metadata_url`.
+
+Current gate:
+
+- Go-live remains blocked until repeated bounded batches pass and retry-held/transient rows are resolved. No publication or expansion is allowed yet.
+
 **Updated UTC:** 2026-06-13T22:24:00Z  
 **Status:** ACTIVE_PLAYBACK_RELIABILITY_PUSH  
 **Publication allowed:** false  
