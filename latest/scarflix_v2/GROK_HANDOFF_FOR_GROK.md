@@ -4,7 +4,7 @@
 **Status:** PASS_LEGACY_TIPROXY_DISABLED  
 **Status file:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/legacy_torrentio_tiproxy_cleanup_status.md
 
-Jason reported a visible reboot console running D:\PlexTools\Scripts\tiproxy.ps1. Source was scheduled task TorrentioTorznabProxy -> D:\PlexTools\Scripts\tiproxy_run.cmd. The task was stopped and disabled, not deleted; task XML and scripts were backed up under $backupRoot.
+Jason reported a visible reboot console running D:\PlexTools\Scripts\tiproxy.ps1. Source was scheduled task TorrentioTorznabProxy -> D:\PlexTools\Scripts\tiproxy_run.cmd. The task was stopped and disabled, not deleted; task XML and scripts were backed up under D:\PlexTools\Backups\task_cleanup_20260613T084340Z.
 
 Rationale: this is a legacy Torrentio Torznab proxy and is not part of the current Plex-first materialized/WebDAV playback path. No ScarFLIX publication, expansion, source mutation, or playback-path mutation occurred. PAUSE_PUBLICATION remains active.
 ## FOR GROK PEER REVIEW -- CODEX HEARTBEAT RETIRED AFTER LOCAL RECOVERY LOCK-IN
@@ -2057,6 +2057,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
