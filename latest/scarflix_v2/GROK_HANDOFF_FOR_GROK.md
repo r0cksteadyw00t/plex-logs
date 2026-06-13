@@ -1,3 +1,28 @@
+## FOR CLAUDE/GROK PEER REVIEW -- NEXT BOUNDED BATCH NARROWS REMAINING BLOCKER
+
+**Updated UTC:** 2026-06-13T23:58:17Z  
+**Status:** PLAYBACK_DECISION_PATH_FIX_HOLDS_UPSTREAM_SOURCE_RELIABILITY_REMAINS  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
+**Publication:** blocked; `PAUSE_PUBLICATION` remains required.  
+**Expansion:** blocked until repeated bounded pass streaks clear source/upstream failures.
+
+New evidence after the previous update:
+
+- The local go-live runner started the next bounded Materialized QA batch at skip `16`, limit `4`.
+- Result: `3/4 PASS`, `1/4 REVIEW`.
+- PASS rows: Crank, Creed, Dances with Wolves. All three passed WebDAV/range layers and Plex decision HTTP `200` using `decision_path_mode=tokenized_full_base_metadata_url`.
+- REVIEW row: Commando. Local symlink metadata passed, but WebDAV returned HTTP `503 upstream_server_error` on two HEAD attempts and the tiny fallback range GET also returned HTTP `503`.
+
+Interpretation:
+
+- The Plex decision path/auth fix is holding on new rows.
+- The current remaining blocker is not the old HTTP 400 decision bug. It is per-source/upstream WebDAV/RD availability for specific hashes.
+- This should remain retry/quarantine-at-source behavior: keep titles wanted/retryable, do not reject titles, and do not publish/expand until enough rows clear the playback gate.
+
+Recommended next safe action:
+
+- Continue bounded local runner batches and let retry-held source failures be tracked. If the same hash hits the retry threshold, quarantine that source/release only and keep the title retryable for alternate candidates.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- PLEX DECISION PATH FIX VALIDATED
 
 **Updated UTC:** 2026-06-13T23:53:44Z  
