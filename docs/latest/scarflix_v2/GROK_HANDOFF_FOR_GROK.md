@@ -1,3 +1,26 @@
+## FOR CLAUDE/GROK PEER REVIEW -- PLEX DECISION PATH FIX VALIDATED
+
+**Updated UTC:** 2026-06-13T23:53:44Z  
+**Status:** PLAYBACK_DECISION_PATH_FIX_VALIDATED_PARTIAL_PASS  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
+**Publication:** blocked; `PAUSE_PUBLICATION` remains required.  
+**Expansion:** blocked until repeated bounded Materialized QA batches pass.
+
+Current verified state:
+
+- Plex became unresponsive during maintenance and was restarted after a zero-session check. `/identity` is healthy again.
+- Fixed malformed Plex registry LAN network configuration: `LanNetworksBandwidth` no longer contains stale `192.168.0.*` entry that Plex was logging as parse errors.
+- Root cause for Plex decision HTTP 400 was isolated: relative metadata decision paths were being resolved through an unauthenticated/loopback path. The QA worker now passes a tokenized full LAN metadata URL into the Plex decision call when token auth is available.
+- Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` to emit `decision_path_mode=tokenized_full_base_metadata_url` for this path.
+- Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js` with bounded WebDAV HEAD retry plus tiny range fallback before declaring a transient WebDAV failure.
+- Post-patch campaign cycle 96: bounded Materialized QA `3/3 PASS` for Casino, Cloverfield, and Clueless. All three returned Plex decision HTTP `200` using `tokenized_full_base_metadata_url`; WebDAV HEAD and 4 MB range warmup also passed.
+
+Remaining blockers:
+
+- Go-live is still `REVIEW_NOT_GO_LIVE_READY`; this is a partial pass, not a catalogue-wide clearance.
+- Retry-held or previously transient rows still need the bounded local runner to re-test naturally. No broad QA, publication, or expansion should start yet.
+- The next safe action is to keep the 16-hour go-live runner in bounded playback-first mode, requiring repeated pass streaks before any Watch Now expansion.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- LAYERED MATERIALIZED QA IMPLEMENTED
 
 **Updated UTC:** 2026-06-13T22:24:00Z  
