@@ -1,17 +1,17 @@
 # Path 2 Protected Pilot Migration
 
-- Updated UTC: 2026-06-11T05:20:38.136Z
-- Status: `PASS_PROTECTED_ADDITIVE_PILOT_COMPLETE`
+- Updated UTC: 2026-06-13T03:26:03.434Z
+- Status: `ROLLED_BACK_PILOT_ERROR`
 - Incident: `INC-MQA-HYBRID-MOVIES-LIVE-TIMEOUT-20260610`
-- Baseline: 94/105 visible, missing=11
+- Baseline: 105/105 visible, missing=-
 - Pilot attempted: true
-- Target count: 10
-- Created aliases: 10
-- Rolled back: false
+- Target count: 1
+- Created aliases: 0
+- Rolled back: true
 
 ## Decision
 
-Protected additive pilot completed. Legacy ScarFLIX_part-* paths were preserved; alias symlinks and additive map entries were created for the pilot only.
+Pilot failed before completion; rollback was performed.
 
 ## Raw Handoff URL
 
