@@ -1,7 +1,7 @@
 ﻿# Mission 002 IPTV Threadfin Virtual Adapter Verification
 
-**Updated UTC:** 2026-06-13T09:48:52Z  
-**Status:** HELD_THREADFIN_NOT_RUNNING
+**Updated UTC:** 2026-06-13T10:36:12Z  
+**Status:** PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE
 
 ## Safety
 
@@ -20,13 +20,16 @@
 ## Container
 
 - Docker available: True
-- Container running: False
-- Container line: 
+- Container running: True
+- Container line: jasonos-mission002-threadfin|Up 2 minutes
 - Error: 
 
 ## Endpoints
 
-- not checked because container is not running
+- http://127.0.0.1:35400/web/: ok=True, http=200, ms=784, error=
+- http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=24, error=
+- http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=16, error=
+- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=18, error=
 
 ## Decision
 
