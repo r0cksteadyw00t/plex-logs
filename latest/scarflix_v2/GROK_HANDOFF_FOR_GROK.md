@@ -1,7 +1,7 @@
 ## FOR CLAUDE/GROK PEER REVIEW -- LAYERED MATERIALIZED QA IMPLEMENTED
 
-**Updated UTC:** 2026-06-13T22:17:36Z  
-**Status:** IMPLEMENTED_PENDING_NEXT_BOUNDED_QA_BATCH  
+**Updated UTC:** 2026-06-13T22:24:00Z  
+**Status:** FIRST_LAYERED_BATCH_COMPLETE_REVIEW_PLEX_DECISION_AUTH_ROUTING  
 **Layered status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_qa_layered_status.md  
 **Layered JSON URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_qa_layered_status.json
 
@@ -19,7 +19,19 @@ Behavior now:
 3. A 4 MB byte range is read and discarded as temporary warmup/buffering.
 4. Plex client decision is called only after the WebDAV layers pass.
 
-No media bytes are persisted. No publication, broad QA, expansion, cache clear, source mutation, or path mutation was started. `PAUSE_PUBLICATION` remains active. Next peer-review focus: after the next small bounded QA batch, use `materialized_qa_layered_status.*` to decide whether the remaining blocker is WebDAV/path, upstream range delivery, or Plex decision endpoint instability.
+First bounded batch after implementation:
+
+- Decision skip/limit: `121/3`
+- Layered prechecks: `3/3 PASS`
+- WebDAV HEAD: `3/3 HTTP 200`
+- Temporary range warmup: `3/3 HTTP 206`, `4 MB` read and discarded per item
+- Plex decision: `2/3 PASS`, `1/3 REVIEW/FAIL`
+- Failed title: `The Secret World of Arrietty`
+- Failure class: Plex decision/auth/routing, not WebDAV delivery. The row timed out on LAN decision attempts and then received loopback HTTP `401`.
+
+Follow-up patch applied: the Plex access selector now tries token-auth on all configured bases before no-auth fallback. Token check without printing the token showed loopback token auth returns HTTP `401`, while LAN token auth returns HTTP `200`, so the next bounded QA cycle should prefer token-auth LAN instead of no-auth loopback for protected decision calls.
+
+No media bytes are persisted. No publication, broad QA, expansion, cache clear, source mutation, or path mutation was started. `PAUSE_PUBLICATION` remains active. Next peer-review focus: confirm that the remaining blocker is Plex decision auth/routing/endpoint behavior after WebDAV and range delivery have passed.
 
 ## FOR CLAUDE/GROK PEER REVIEW -- PLAYBACK RELIABILITY ENGINEERING PUSH
 
