@@ -1,3 +1,16 @@
+## Playback Recovery Monitoring PASS With Filesystem Caution - 2026-06-13 15:43 Australia/Sydney
+
+- Heartbeat: `playback-recovery-retry`.
+- Command launch: PASS (`76ms`, `58ms`, `60ms`).
+- Plex identity: PASS HTTP 200.
+- WebDAV bridge health: PASS HTTP 200.
+- rclone: running as PID `18336`.
+- WebDAV Watch Now recheck:
+  - `Gremlins` - PASS HTTP 200, `1513ms`
+  - `Anna` - PASS HTTP 200, `1383ms`
+- Caution: direct `S:\` filesystem path probe timed out in this heartbeat. WebDAV is healthy, but the filesystem mount layer may still be sluggish under direct Windows path probes.
+- Decision: keep the limited Watch Now lane active, keep expansion paused, and continue monitoring before resuming Path 2 or broader catalogue work.
+
 ## Playback Recovery Monitoring PASS - 2026-06-13 15:33 Australia/Sydney
 
 - Heartbeat: `playback-recovery-retry`.
