@@ -1,23 +1,23 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "REVIEW",
-  "started_utc": "2026-06-13T20:51:57Z",
-  "ended_utc": "2026-06-13T20:52:37Z",
-  "updated_utc": "2026-06-13T20:52:37Z",
+  "started_utc": "2026-06-13T20:58:11Z",
+  "ended_utc": "2026-06-13T20:58:55Z",
+  "updated_utc": "2026-06-13T20:58:55Z",
   "target_count": 229,
-  "rows_found": 149,
-  "checked": 2,
-  "passed": 0,
+  "rows_found": 150,
+  "checked": 3,
+  "passed": 1,
   "failed": 2,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
-  "decision_probe_skip": 89,
+  "decision_probe_skip": 92,
   "decision_probe_limit": 3,
-  "decision_probe_total_candidates": 144,
+  "decision_probe_total_candidates": 145,
   "selected_decision_candidates": 3,
-  "stopped_early": true,
-  "stopped_reason": "Stopped after 2 consecutive Plex decision failures.",
+  "stopped_early": false,
+  "stopped_reason": "",
   "targets": [
     {
       "hash": "ScarFLIX_part-5efdbdcf716997a3",
@@ -3849,7 +3849,15 @@
         "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Princess Diaries 2 Royal Engagement (2004)\\ScarFLIX_part-d8b5bf7055bb4fb8",
         "source": "visible_filesystem"
       },
-      "rows": [],
+      "rows": [
+        {
+          "metadata_id": 50656,
+          "part_id": 128315,
+          "section_id": 5,
+          "title": "The Princess Diaries 2: Royal Engagement",
+          "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Princess Diaries 2 Royal Engagement (2004)\\ScarFLIX_part-d8b5bf7055bb4fb8\\stream.mkv"
+        }
+      ],
       "query_error": ""
     },
     {
@@ -4421,11 +4429,11 @@
   ],
   "results": [
     {
-      "metadata_id": 50402,
-      "part_id": 127815,
+      "metadata_id": 50381,
+      "part_id": 127773,
       "section_id": 5,
-      "title": "Spy",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Spy (2015)\\ScarFLIX_part-94620cf0a7e850ab\\stream.mkv",
+      "title": "Terminator: Dark Fate",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Dark Fate (2019)\\ScarFLIX_part-6a30d1aa558bac1f\\stream.mkv",
       "status": "FAIL",
       "http_status": 0,
       "access_mode": "allowed_networks",
@@ -4433,15 +4441,31 @@
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
       "reason": "socket hang up",
-      "target_hash": "ScarFLIX_part-94620cf0a7e850ab",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Spy (2015)\\ScarFLIX_part-94620cf0a7e850ab"
+      "target_hash": "ScarFLIX_part-6a30d1aa558bac1f",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Dark Fate (2019)\\ScarFLIX_part-6a30d1aa558bac1f"
     },
     {
-      "metadata_id": 50400,
-      "part_id": 127811,
+      "metadata_id": 50392,
+      "part_id": 127791,
       "section_id": 5,
-      "title": "Stand by Me",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Stand by Me (1986)\\ScarFLIX_part-d708c8b30a147319\\stream.mkv",
+      "title": "Terminator Salvation",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Salvation (2009)\\ScarFLIX_part-89731919b552c615\\stream.mkv",
+      "status": "PASS",
+      "http_status": 200,
+      "access_mode": "allowed_networks",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
+      "target_hash": "ScarFLIX_part-89731919b552c615",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Terminator Salvation (2009)\\ScarFLIX_part-89731919b552c615"
+    },
+    {
+      "metadata_id": 50391,
+      "part_id": 127790,
+      "section_id": 5,
+      "title": "The Big Short",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Big Short (2015)\\ScarFLIX_part-491a4bfccb102f1e\\stream.mkv",
       "status": "FAIL",
       "http_status": 0,
       "access_mode": "allowed_networks",
@@ -4449,8 +4473,8 @@
       "timeout_ms": 15000,
       "decision_policy": "client_flexible_direct_play_stream_allowed",
       "reason": "timeout",
-      "target_hash": "ScarFLIX_part-d708c8b30a147319",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Stand by Me (1986)\\ScarFLIX_part-d708c8b30a147319"
+      "target_hash": "ScarFLIX_part-491a4bfccb102f1e",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Big Short (2015)\\ScarFLIX_part-491a4bfccb102f1e"
     }
   ],
   "next_action": "Quarantine failed materialized source/release and keep title retryable."
