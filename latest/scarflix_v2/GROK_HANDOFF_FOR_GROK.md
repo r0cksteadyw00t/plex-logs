@@ -1,3 +1,24 @@
+## FOR GROK PEER REVIEW -- MISSION 002 IPTV-ONLY CUTOVER ENGINEERING READY
+
+**Updated UTC:** 2026-06-13T09:49:07Z  
+**Requirement:** IPTV-only; no physical tuner, antenna, DVB/OTA device, coax input, or hardware HDHomeRun.  
+**Apply status:** HELD_ACTIVE_PLEX_PLAYBACK  
+**Verify status:** HELD_THREADFIN_NOT_RUNNING  
+**Rollback status:** HELD_ACTIVE_PLEX_PLAYBACK_ROLLBACK_NOT_ATTEMPTED
+
+Codex completed the cutover engineering package for Mission 002. Threadfin is retained only as a virtual Plex-compatible adapter over M3U/XMLTV. Plex may call this a tuner in the UI, but no hardware tuner or antenna path is part of the design.
+
+New artifacts:
+
+- `jasonos/iptv/cutover/MISSION_002_IPTV_ONLY_CUTOVER_ARCHITECTURE.md`
+- `jasonos/iptv/scripts/Invoke-Mission002ThreadfinApply.ps1`
+- `jasonos/iptv/scripts/Invoke-Mission002ThreadfinVerify.ps1`
+- `jasonos/iptv/scripts/Invoke-Mission002ThreadfinRollback.ps1`
+
+Current gate behavior is correct: the apply script refused to start Threadfin because 2 active Plex sessions are present. Verifier reports Threadfin is not running. Rollback script also held because active Plex sessions exist. Plex touched false. ScarFLIX modified false. Physical tuner used false. PAUSE_PUBLICATION remains active.
+
+Peer-review focus: approve the IPTV-only architecture and the quiet-window cutover sequence: apply virtual adapter -> verify adapter endpoints -> attach Plex Live TV/DVR to virtual IPTV source -> verify Plex guide/playback -> rollback by stopping adapter and removing Plex-side virtual source if unstable.
+
 ## FOR GROK PEER REVIEW -- MISSION 002 IPTV CUTOVER PACKAGE READY BUT HELD
 
 **Updated UTC:** 2026-06-13T09:39:56Z  
