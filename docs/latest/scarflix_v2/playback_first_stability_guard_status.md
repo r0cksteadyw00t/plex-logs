@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-13T11:00:32Z  
+**Updated UTC:** 2026-06-13T11:05:33Z  
 **Status:** PASS_PLAYBACK_PRIORITY_ACTIVE
 
 ## Scope
@@ -25,7 +25,7 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Background Jobs
 
-- none
+- pid=21324 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
 
 ## Recent rclone/WebDAV Error Pressure
 
