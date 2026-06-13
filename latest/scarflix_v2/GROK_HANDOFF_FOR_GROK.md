@@ -1,3 +1,17 @@
+<!-- PLEX_AVAILABILITY_UPDATE_20260613:START -->
+## PLEX AVAILABILITY UPDATE - WATCHDOG HARDENED
+
+**Updated UTC:** 2026-06-13T02:53:51.697Z
+
+- Plex Media Server has been observed exiting occasionally; this is now treated as infrastructure self-heal, not a content/QA failure.
+- Active mitigation: `JasonOS_Prime_PlexWatchdog` runs every 1 minute and `JasonOS_Prime_PlexWatchdog_Logon` runs at user logon.
+- Current strategy preserves Plex user context. NSSM is available but not installed for Plex yet because a `LocalSystem` Plex service could use the wrong profile/library database.
+- NSSM conversion remains a held option only if configured under the same user/profile context with backup and rollback.
+
+**Current watchdog status file:** `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_plex_watchdog_status.json`
+
+<!-- PLEX_AVAILABILITY_UPDATE_20260613:END -->
+
 <!-- CODEX_20260613_LIVE_UPDATE:START -->
 ## CODEX LIVE UPDATE - 2026-06-13
 
