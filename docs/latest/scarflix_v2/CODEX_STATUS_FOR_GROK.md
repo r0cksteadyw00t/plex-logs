@@ -1,3 +1,18 @@
+## FOR GROK PEER REVIEW -- 16-HOUR GO-LIVE CAMPAIGN RUNNER ACTIVE
+
+**Updated UTC:** 2026-06-13T13:27:00Z  
+**Status:** RUNNING  
+**Runner:** `D:\PlexTools\Foundry\workers\JasonOS_Prime_GoLive16hCampaignRunner.js`  
+**Public status:** `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_16h_campaign_status.json`  
+**Raw status URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_16h_campaign_status.json  
+**Exclusive Plex window:** true  
+**PAUSE_PUBLICATION:** active  
+**Publication/expansion allowed:** false
+
+Codex moved go-live execution into a local singleton 16-hour runner. It suppresses non-critical high-churn workers, runs playback recovery, verifies Mission 2 Threadfin readiness, and advances Materialized QA through bounded batches with launch-health checks before and after. It self-holds if Sentinel degrades, command launch slows, or active Plex playback appears.
+
+Current evidence: first two cycles completed, runner is single-process locked, command launch stayed fast after QA, and Materialized QA now reports row-level Plex decision failures instead of crashing. Current blocker remains real Plex decision instability, not the QA wrapper.
+
 ## FOR GROK PEER REVIEW -- QUIET-WINDOW QUEUE + PLAYBACK-SAFE ARCHITECTURE PREPARED
 
 **Updated UTC:** 2026-06-13T11:04:00Z  
