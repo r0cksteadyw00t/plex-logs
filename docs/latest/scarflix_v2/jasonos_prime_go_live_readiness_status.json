@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-13T17:04:59Z",
-    "updated_utc":  "2026-06-13T17:05:06Z",
+    "started_utc":  "2026-06-13T17:11:05Z",
+    "updated_utc":  "2026-06-13T17:11:11Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -29,11 +29,10 @@
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
-                                          "Guard=PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
+                                          "Guard=PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=PASS"
                                       ],
                          "blockers":  [
-                                          "Plex background scanner/analyzer pressure still detected: 3.",
-                                          "Playback path recovery is not PASS: REVIEW."
+                                          "Plex background scanner/analyzer pressure still detected: 2."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
                          "requires_quiet_window":  false,
@@ -110,10 +109,10 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=PASS_ACTIVE_TRUE_HANDS_OFF SafeAuditTask=Ready QuietWatcherTask=Ready"
+                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Ready"
                                       ],
                          "blockers":  [
-
+                                          "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
                                       ],
                          "next_safe_action":  "Keep orchestration alive, reduce high-churn work during playback, and treat repeated no-progress cycles as Grok review triggers.",
                          "requires_quiet_window":  false,
@@ -140,15 +139,15 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex background scanner/analyzer pressure still detected: 3."
-                     },
-                     {
-                         "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Playback path recovery is not PASS: REVIEW."
+                         "blocker":  "Plex background scanner/analyzer pressure still detected: 2."
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "blocker":  "Materialized QA is not PASS: REVIEW 0/2 failed=2."
+                     },
+                     {
+                         "outcome_id":  "O-AUTONOMY-STABILITY",
+                         "blocker":  "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
                      }
                  ],
     "monitored_tasks":  [
