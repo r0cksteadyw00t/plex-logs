@@ -1,3 +1,18 @@
+## Mission 002 IPTV Cutover-Ready Held State - 2026-06-13T09:39:56Z
+
+- Jason correction applied: AFL IP streaming is 7plus-primary; antenna/linear reference is channel 70.
+- Mapping now promotes `mjh-7afl-fast` / `7AFL` for the held AFL IP lane, with Seven/7mate regional channels as fallback/linear references only.
+- Mission 002 IPTV source preflight: `PASS_HELD_SOURCE_PREFLIGHT_READY`.
+- Mission 002 IPTV cutover readiness: `PASS_CUTOVER_PACKAGE_READY_HELD`.
+- Mission 002 IPTV cutover preflight: `HELD_ACTIVE_PLEX_PLAYBACK`.
+- Required channels selected: `4/4`; stream checks OK: `4/4`; XMLTV programmes: `509`.
+- Docker CLI and Threadfin port `35400` are ready.
+- Active Plex sessions: `2`, so no Threadfin start or Plex Live TV/DVR change was attempted.
+- Added held Threadfin compose: `jasonos/iptv/cutover/docker-compose.threadfin.held.yml`.
+- Added cutover runbook: `jasonos/iptv/cutover/MISSION_002_CUTOVER_RUNBOOK.md`.
+- Safety: Plex touched false, ScarFLIX modified false, publishes to Plex false, `PAUSE_PUBLICATION` active.
+- Next safe action: perform Threadfin/Plex Live TV cutover only in a quiet playback window after preflight is no longer held.
+
 ## Mission 002 IPTV Phase 0 Held Dry Run - 2026-06-13T09:10:39Z
 
 - Use Case 2 progressed while active Plex playback was protected.
