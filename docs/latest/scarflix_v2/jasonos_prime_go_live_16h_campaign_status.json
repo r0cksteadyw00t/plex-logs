@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_go_live_16h_campaign_runner",
   "schema_version": "jasonos.go_live_16h_campaign.v1",
-  "status": "RUNNING",
+  "status": "HELD_SENTINEL",
   "started_utc": "2026-06-13T13:22:00Z",
   "ends_utc": "2026-06-14T05:22:00Z",
   "ends_epoch_ms": 1781414520131,
   "duration_hours": 16,
   "exclusive_plex_window": true,
-  "cycle_count": 34,
+  "cycle_count": 35,
   "qa_cursor": 102,
   "qa_batch_size": 3,
   "pause_publication_required": true,
@@ -20,7 +20,7 @@
     "campaign_log": "D:\\PlexTools\\state\\jasonos_prime\\go_live_16h_campaign\\campaign_log.ndjson",
     "log": "D:\\PlexTools\\logs\\jasonos_prime\\jasonos_prime_go_live_16h_campaign.log"
   },
-  "updated_utc": "2026-06-13T16:48:14Z",
+  "updated_utc": "2026-06-13T16:53:31Z",
   "noncritical_tasks_suppressed": [
     "JasonOS_Prime_FastTrackAccelerator",
     "JasonOS_Prime_PublicMirrorPublisher",
@@ -59,7 +59,7 @@
     "target_count": 229,
     "rows_found": 114,
     "checked": 2,
-    "passed": 1,
+    "passed": 0,
     "failed": 2,
     "query_errors": 0,
     "decision_probe_total_candidates": 109
@@ -70,38 +70,36 @@
     "blocker_count": 3
   },
   "last_cycle": {
-    "updated_utc": "2026-06-13T16:48:14Z",
+    "updated_utc": "2026-06-13T16:53:31Z",
     "launch_health": {
       "ok": true,
-      "elapsed_ms": 30,
+      "elapsed_ms": 19,
       "status": 0,
       "error": ""
     },
     "sentinel": {
-      "status": "PASS",
-      "alert_level": "LOW"
+      "status": "ALERT",
+      "alert_level": "HIGH"
     },
     "plex_sessions": {
       "ok": true,
       "active_sessions": 0,
       "endpoint": "http://192.168.1.184:32400/status/sessions",
-      "elapsed_ms": 2122
+      "elapsed_ms": 1905
     },
     "plex_identity": {
       "ok": true,
       "endpoint": "http://127.0.0.1:32400/identity",
       "status_code": 200,
-      "elapsed_ms": 0
+      "elapsed_ms": 3
     },
     "actions": [
-      "ran_playback_path_recovery_once",
-      "ran_mission2_threadfin_apply",
-      "ran_mission2_threadfin_verify",
-      "ran_bounded_materialized_qa_batch",
-      "ran_go_live_readiness_audit_once"
+      "held_qa_due_sentinel"
     ],
-    "blockers": []
+    "blockers": [
+      "sentinel_alert_or_high"
+    ]
   },
-  "last_action": "ran_playback_path_recovery_once, ran_mission2_threadfin_apply, ran_mission2_threadfin_verify, ran_bounded_materialized_qa_batch, ran_go_live_readiness_audit_once",
-  "last_blocker": ""
+  "last_action": "held_qa_due_sentinel",
+  "last_blocker": "sentinel_alert_or_high"
 }
