@@ -1,6 +1,6 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-13T16:20:01Z
+Updated UTC: 2026-06-13T16:25:01Z
 Status: PASS
 Alert level: LOW
 Jason action required: false
@@ -16,11 +16,11 @@ Codex action required: false
 - dashboard_status: PASS
 - dashboard_age_minutes: 5
 - mirror_status: PASS
-- mirror_age_minutes: 3
+- mirror_age_minutes: 4
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 8101
-- durable_platform_gate_age_minutes: 8101
+- checkpoint_age_minutes: 8106
+- durable_platform_gate_age_minutes: 8106
 - platform_progress_fresh: false
 
 ## Recovery Actions
