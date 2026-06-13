@@ -1,6 +1,6 @@
 ﻿# Mission 002 IPTV Threadfin Virtual Adapter Verification
 
-**Updated UTC:** 2026-06-13T10:40:56Z  
+**Updated UTC:** 2026-06-13T10:44:56Z  
 **Status:** REVIEW_THREADFIN_REACHABLE_LINEUP_EMPTY
 
 ## Safety
@@ -23,15 +23,15 @@
 
 - Docker available: True
 - Container running: True
-- Container line: jasonos-mission002-threadfin|Up 7 minutes
+- Container line: jasonos-mission002-threadfin|Up 11 minutes
 - Error: 
 
 ## Endpoints
 
-- http://127.0.0.1:35400/web/: ok=True, http=200, ms=127, error=
-- http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=21, error=
-- http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=144, error=
-- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=10, error=
+- http://127.0.0.1:35400/web/: ok=True, http=200, ms=132, error=
+- http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=24, error=
+- http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=17, error=
+- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=13, error=
 
 ## Decision
 
