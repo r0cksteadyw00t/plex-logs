@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-13T10:40:35.032Z
+Updated UTC: 2026-06-13T10:45:05.392Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,8 +21,8 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=119/229; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-13T10:36:22.281Z - Go-Live Readiness Ledger Installed - 2026-06-13 20:09: Current verified state: New live go-live audit: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_GoLiveReadinessAudit.ps1`. New hidden scheduled task: `JasonOS_Prime_GoLiveReadinessAudit`, every 5 minutes, LastTaskResult `0`. Public status: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_readiness_statu...
-- 2026-06-13T10:35:56Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T10:41:09.544Z - Go-Live Readiness Ledger Installed - 2026-06-13 20:09: Current verified state: New live go-live audit: `D:\PlexTools\Scripts\scarflix_v2\JasonOS_Prime_GoLiveReadinessAudit.ps1`. New hidden scheduled task: `JasonOS_Prime_GoLiveReadinessAudit`, every 5 minutes, LastTaskResult `0`. Public status: `D:\PlexTools\public\latest\scarflix_v2\jasonos_prime_go_live_readiness_statu...
+- 2026-06-13T10:40:28Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T10:06:37.091Z - Non-Disruptive Project Progress While Plex Is Active - 2026-06-13 19:58: Current verified state: Active Plex sessions: `2`. Sentinel: `PASS / LOW`. Plex watchdog: `PASS`.
 - 2026-06-13T09:51:04.372Z - Mission 002 IPTV-Only Cutover Engineering Ready - 2026-06-13 19:49: Current verified state: Mission 002 is explicitly IPTV-only. No physical tuner, antenna, DVB/OTA device, coax input, or hardware HDHomeRun will be used. Threadfin remains the virtual Plex-compatible adapter layer only. Added full architecture doc: `jasonos/iptv/cutover/MISSION_002_IPTV_ONLY_CUTOVER_ARCHITECTURE.md`.
 - 2026-06-13T09:45:50.106Z - Mission 002 IPTV Cutover Package Ready But Held - 2026-06-13 19:40: Current verified state: Jason correction applied after the first package: AFL IP streaming is `7plus` primary; antenna/linear reference is channel `70`. Mission 002 mapping now prefers the public `mjh-7afl-fast` / `7AFL` candidate for the held AFL IP lane and treats Seven/7mate regional channels as fallback/linear r...
@@ -30,9 +30,9 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 4 min ago
-- Platform child progress: 212 min ago
-- Mirror updated: 1 min ago
+- Controller updated: 5 min ago
+- Platform child progress: 216 min ago
+- Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
 
