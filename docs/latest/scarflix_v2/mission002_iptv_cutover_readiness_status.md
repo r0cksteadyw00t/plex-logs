@@ -1,6 +1,6 @@
 ﻿# Mission 002 IPTV Cutover Readiness
 
-**Updated UTC:** 2026-06-13T09:32:16Z  
+**Updated UTC:** 2026-06-13T09:39:32Z  
 **Status:** PASS_CUTOVER_PACKAGE_READY_HELD  
 **Cutover enabled:** false
 
@@ -20,21 +20,21 @@
 - Stream checks OK: 4
 - Stream checks failed: 0
 - XMLTV channels: 4
-- XMLTV programmes: 714
+- XMLTV programmes: 509
 
 ## Decisions
 
 - au.7.sydney: SELECTED_HELD via mjh-seven-syd (mjh_au_sydney_raw_tv)
 - au.7.melbourne: SELECTED_HELD via mjh-seven-mel (mjh_au_melbourne_raw_tv)
 - au.7mate: SELECTED_HELD via mjh-7mate-syd (mjh_au_sydney_raw_tv)
-- au.7plus.afl: SELECTED_HELD via mjh-7mate-mel (mjh_au_melbourne_raw_tv)
+- au.7plus.afl: SELECTED_HELD via mjh-7afl-fast (mjh_au_sydney_raw_tv)
 
 ## Stream Checks
 
-- au.7.sydney: ok=True, http=200, ms=1971, bytes=41967
-- au.7.melbourne: ok=True, http=200, ms=2596, bytes=42099
-- au.7mate: ok=True, http=200, ms=1557, bytes=41673
-- au.7plus.afl: ok=True, http=200, ms=1585, bytes=41841
+- au.7.sydney: ok=True, http=200, ms=3284, bytes=41943
+- au.7.melbourne: ok=True, http=200, ms=1043, bytes=42123
+- au.7mate: ok=True, http=200, ms=1571, bytes=41673
+- au.7plus.afl: ok=True, http=200, ms=1799, bytes=16329
 
 ## Held Artifacts
 
