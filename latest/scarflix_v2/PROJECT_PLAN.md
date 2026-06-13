@@ -1,3 +1,12 @@
+## Playback Priority Guard Active - 2026-06-13T09:01:18Z
+
+- Production Plex moved to playback-priority mode.
+- Active Plex sessions detected: 1 during this run.
+- Current Plex background activities observed: library scan, metadata update, intro detection.
+- Applied Plex preferences: automatic scans disabled, periodic scans disabled, scanner low priority enabled, auto-empty-trash disabled, heavy analysis/preview/intro/credit/chapter/loudness generation moved to scheduled/off-peak behavior, maintenance window 02:00-06:00.
+- Guard cadence tightened to every 1 minute.
+- Current caveat: existing in-flight activities did not cancel cleanly through tested endpoints; allow them to drain unless a safe Plex API cancellation path is proven.
+- Safety: no publication, no expansion, no source mutation, no path rewrite, no direct Plex DB edit; PAUSE_PUBLICATION preserved.
 ## Legacy Tiproxy Reboot Popup Disabled - 2026-06-13T08:45:53Z
 
 - Stopped and disabled scheduled task TorrentioTorznabProxy, which launched visible console command D:\PlexTools\Scripts\tiproxy.ps1 after reboot.
@@ -3025,6 +3034,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
