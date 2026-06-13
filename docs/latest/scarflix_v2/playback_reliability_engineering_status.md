@@ -24,6 +24,7 @@ The go-live campaign runner is active, but go-live remains blocked until repeata
    - Replaced unbounded `Test-Path` readiness checks with bounded path probes.
    - Status now records `media_path_timed_out`, `catalog_path_timed_out`, and detailed initial/final mount probes.
    - This prevents a stalled `S:` path from hanging the health worker or falsely looking healthy.
+   - Added explicit `-AllowRestartStalledMount` mode. The normal keepalive remains non-disruptive; the go-live runner can request a rclone mount restart only after it has already confirmed no active Plex sessions.
 
 2. `ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js`
    - Plex decision QA now prefers `http://127.0.0.1:32400` before the LAN address.
@@ -34,6 +35,7 @@ The go-live campaign runner is active, but go-live remains blocked until repeata
 3. `JasonOS_Prime_GoLive16hCampaignRunner.js`
    - Playback path recovery is now a hard precondition before bounded Materialized QA.
    - If playback path recovery is not `PASS`, the runner holds QA and stops the QA worker instead of adding pressure.
+   - QA hold states are now written explicitly so stale `RUNNING_PLEX_DECISION_PROBES` files do not mislead dashboards.
    - Publication and broad expansion remain blocked.
 
 ## Larger Solution Space Under Review
@@ -53,7 +55,7 @@ These are the candidate strategies being actively considered or prepared:
 
 Not go-live ready yet.
 
-Plex process health is good, Sentinel is low, and command launch is currently healthy. The blocker is playback-path and Plex decision reliability. The correct next local action is to let the patched runner continue bounded recovery/QA cycles, then review whether loopback-first retries increase pass rate and reduce socket failures.
+Plex process health is good, Sentinel is low, and command launch is currently healthy. A fresh controlled recovery at `2026-06-13T21:13Z` returned `PASS`: `S:\media` and `S:\media\catalog` were responsive, and Watch Now HEAD probes for Gremlins and Anna returned HTTP 200. The correct next local action is to let the patched runner continue bounded recovery/QA cycles, then review whether loopback-first retries increase pass rate and reduce socket failures.
 
 ## Reviewer Questions
 
@@ -62,4 +64,3 @@ Plex process health is good, Sentinel is low, and command launch is currently he
 3. Should repeated socket/timeout rows be quarantined immediately as source failures, or retried over multiple idle cycles first?
 4. Would a staging Plex instance materially reduce production instability, provided it never writes to or shares the production Plex database?
 5. What is the safest restart policy for Plex given that production Plex requires the interactive user profile and mounted media context?
-
