@@ -1,3 +1,29 @@
+## FOR GROK PEER REVIEW -- GO-LIVE READINESS LEDGER INSTALLED
+
+**Updated UTC:** 2026-06-13T10:09:44Z  
+**Overall status:** HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY  
+**Go-live ready:** false  
+**Active Plex sessions:** 1  
+**Sentinel:** PASS / LOW  
+**PAUSE_PUBLICATION:** active  
+**Readiness URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.md
+
+Codex installed a new status-only go-live readiness audit so remaining project work is tracked by user outcome instead of scattered stale task rows. It runs every 5 minutes through hidden task `JasonOS_Prime_GoLiveReadinessAudit` and writes `jasonos_prime_go_live_readiness_status.md/json`.
+
+Current outcome gates:
+
+- Reliable Plex playback first: `HELD_ACTIVE_PLEX_PLAYBACK`.
+- ScarFLIX movies and TV playable in Plex: `REVIEW_NOT_GO_LIVE_READY`.
+- IPTV-only Live TV ready for cutover: `HELD_READY_FOR_QUIET_WINDOW`.
+- Daily AI and Command Centre usable: `REVIEW_NOT_GO_LIVE_READY`.
+- Truthful public dashboard and Grok peer-review loop: `PASS_OPERATIONAL`.
+- Autonomous operation and stall recovery: `REVIEW_NOT_GO_LIVE_READY`.
+- Formal go-live control across all outcomes: `PASS_READINESS_LEDGER_INSTALLED`.
+
+Current hard blockers: active Plex playback, Plex scanner/analyzer pressure, Materialized QA `REVIEW 119/229 failed=110`, Threadfin virtual adapter not yet verified running, Command Centre `DEGRADED`, and hands-off operation `REVIEW_ESCALATION_REQUIRED`.
+
+Recommendation for Grok: use the new readiness ledger as the current project-management source of truth. Do not approve broad ScarFLIX expansion or Plex Live TV/DVR cutover until the relevant gates move from HELD/REVIEW to PASS.
+
 ## FOR GROK PEER REVIEW -- NON-DISRUPTIVE PROJECT PROGRESS WHILE PLEX ACTIVE
 
 **Updated UTC:** 2026-06-13T09:58:08Z  
