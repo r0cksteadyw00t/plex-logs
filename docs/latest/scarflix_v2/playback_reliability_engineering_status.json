@@ -1,27 +1,15 @@
 {
   "component": "jasonos_prime_playback_reliability_engineering",
-  "status": "ACTIVE_PLAYBACK_RELIABILITY_PUSH",
-  "updated_utc": "2026-06-13T22:24:00Z",
+  "status": "PLAYBACK_DECISION_PATH_FIX_VALIDATED_PARTIAL_PASS",
+  "updated_utc": "2026-06-13T23:53:44Z",
   "publication_allowed": false,
   "broad_expansion_allowed": false,
   "pause_publication_required": true,
   "changes_applied": [
-    {
-      "file": "D:/PlexTools/Scripts/scarflix_v2/ScarFLIX_v2_RcloneMountKeepalive.ps1",
-      "change": "bounded S: path readiness probes with timeout telemetry plus opt-in stalled mount restart"
-    },
-    {
-      "file": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js",
-      "change": "loopback-first Plex decision probing, keep-alive HTTP agent, transient retry/fallback, layered WebDAV HEAD and 4MB discard-only range warmup before Plex decision, token-auth all-bases before no-auth fallback"
-    },
-    {
-      "file": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_StreamingLayeredValidator.js",
-      "change": "new bounded read-only layered streaming validator that writes materialized_qa_layered_status and never persists media bytes"
-    },
-    {
-      "file": "D:/PlexTools/Foundry/workers/JasonOS_Prime_GoLive16hCampaignRunner.js",
-      "change": "playback path PASS required before bounded Materialized QA runs, explicit QA hold status writer"
-    }
+    "Fixed malformed Plex LanNetworksBandwidth registry value after backup.",
+    "Restarted Plex after maintenance-time API unresponsiveness; identity endpoint recovered.",
+    "Patched ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js to use tokenized full LAN metadata URL for Plex decision calls when token auth is available.",
+    "Patched ScarFLIX_v2_StreamingLayeredValidator.js with bounded WebDAV HEAD retry and tiny range fallback for transient HEAD failures."
   ],
   "latest_controlled_recovery": {
     "utc": "2026-06-13T21:13:02Z",
@@ -57,5 +45,31 @@
     "loopback_status": 401,
     "lan_status": 200
   },
-  "next_expected_signal": "bounded QA pass rate and decision_attempts after token-auth LAN selection patch"
+  "next_expected_signal": "bounded QA pass rate and decision_attempts after token-auth LAN selection patch",
+  "go_live_ready": false,
+  "current_gate": "Require repeated bounded Materialized QA pass streaks before publication or expansion.",
+  "latest_evidence": {
+    "go_live_campaign_cycle": 96,
+    "sentinel_status": "PASS",
+    "sentinel_alert_level": "LOW",
+    "playback_recovery_status": "PASS",
+    "bounded_materialized_qa_status": "REVIEW_PARTIAL_BATCH_PASS",
+    "checked": 3,
+    "passed": 3,
+    "failed": 0,
+    "decision_path_mode": "tokenized_full_base_metadata_url",
+    "titles_passed": [
+      "Casino",
+      "Cloverfield",
+      "Clueless"
+    ],
+    "plex_decision_http_status": 200,
+    "layered_validation_reason": "webdav_head_and_temporary_range_warm_passed"
+  },
+  "backups": [
+    "D:/PlexTools/Backups/plex_registry_network_fix_20260613T233903Z/plex_media_server_hkcu.reg",
+    "D:/PlexTools/Backups/materialized_decision_full_lan_path_20260613T234307Z/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js",
+    "D:/PlexTools/Backups/layered_validator_head_fallback_20260613T234534Z/ScarFLIX_v2_StreamingLayeredValidator.js"
+  ],
+  "next_safe_action": "Keep the local go-live runner in bounded playback-first mode; do not run broad QA, publisher, or expansion until repeated pass streaks clear the playback gate."
 }
