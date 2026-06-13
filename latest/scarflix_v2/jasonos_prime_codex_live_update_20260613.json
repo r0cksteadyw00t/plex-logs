@@ -1,0 +1,60 @@
+{
+  "component": "jasonos_prime_codex_live_update",
+  "schema_version": "jasonos.codex_live_update.v1",
+  "updated_utc": "2026-06-13T02:46:07Z",
+  "status": "PASS_PROGRESS_MADE",
+  "sentinel": {
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-13T02:50:03Z"
+  },
+  "orchestrator": {
+    "status": "PASS",
+    "pid": 12716,
+    "last_error": "",
+    "launch_health": {
+      "updated_utc": "2026-06-13T02:50:05.476Z",
+      "window_minutes": 10,
+      "sample_count": 3,
+      "latency_sample_count": 3,
+      "avg_spawn_latency_ms": 0,
+      "avg_process_runtime_ms": 7129,
+      "timeout_count": 0,
+      "timeout_rate": 0,
+      "launches_last_minute": 0,
+      "budget_per_minute": 8,
+      "degraded_required": false,
+      "active_child_count": 0,
+      "tracked_child_count": 0
+    }
+  },
+  "plex": {
+    "process_guard": "JasonOS_Prime_PlexWatchdog",
+    "watchdog_status": "PASS",
+    "identity_status_code": 200,
+    "action_taken": "none"
+  },
+  "section5": {
+    "status": "PASS_UNCAPPED_BASELINE_CAPTURED",
+    "updated_utc": "2026-06-13T02:43:34.291Z",
+    "expected_count": 105,
+    "present_count": 105,
+    "missing_count": 0,
+    "plex_reported_total_size": 227,
+    "parsed_video_count": 227,
+    "unique_part_hash_count": 224
+  },
+  "mission002": {
+    "status": "SCAFFOLD_HELD",
+    "design": "docs/MISSION_002_IPTV_LIVE_DESIGN.md",
+    "mapping_seed": "jasonos/iptv/mapping/channel_mappings.seed.json",
+    "publishes_to_plex": false
+  },
+  "safety": {
+    "pause_publication_active": true,
+    "no_publication_started": true,
+    "no_expansion_started": true,
+    "no_cleanup_performed": true,
+    "no_source_mutation_performed": true
+  }
+}
