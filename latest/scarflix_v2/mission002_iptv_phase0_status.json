@@ -1,13 +1,24 @@
-{
-  "component": "jasonos_iptv_phase0_status",
-  "schema_version": "jasonos.iptv.phase0_status.v0",
-  "status": "SCAFFOLD_HELD",
-  "updated_utc": "2026-06-13T02:46:07Z",
-  "publishes_to_plex": false,
-  "scarflix_modified": false,
-  "artifacts": {
-    "design": "docs/MISSION_002_IPTV_LIVE_DESIGN.md",
-    "mapping_seed": "jasonos/iptv/mapping/channel_mappings.seed.json"
-  },
-  "next_safe_action": "Create a dry-run mapping loader and generator that writes held artifacts only."
+﻿{
+    "component":  "jasonos_iptv_phase0_status",
+    "schema_version":  "jasonos.iptv.phase0_status.v1",
+    "status":  "PASS_HELD_DRY_RUN_GENERATED",
+    "updated_utc":  "2026-06-13T09:10:39Z",
+    "publishes_to_plex":  false,
+    "scarflix_modified":  false,
+    "plex_touched":  false,
+    "active_playback_respected":  true,
+    "mapping_count":  4,
+    "required_phase0_channels":  4,
+    "guardian_status":  "HELD_GUARDIAN_BLOCKED_NO_PROVIDER_URLS",
+    "artifacts":  {
+                      "design":  "docs/MISSION_002_IPTV_LIVE_DESIGN.md",
+                      "mapping_seed":  "jasonos\\iptv\\mapping\\channel_mappings.seed.json",
+                      "normalized_mapping":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\phase0\\channel_mappings.normalized.json",
+                      "decision_manifest":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\phase0\\iptv_decision_manifest.held.json",
+                      "guardian_report":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\phase0\\iptv_guardian_report.json",
+                      "held_m3u":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\phase0\\master.held.m3u",
+                      "held_xml":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\phase0\\master.held.xml",
+                      "summary":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\phase0\\mission002_phase0_dry_run_summary.md"
+                  },
+    "next_safe_action":  "Add validator input model and source-ingestion adapters in held mode only; do not point Plex at IPTV outputs until Guardian PASS."
 }
