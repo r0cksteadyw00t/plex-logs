@@ -1,0 +1,88 @@
+{
+  "component": "jasonos_prime_as_built_blockers_congestion_handoff",
+  "updated_utc": "2026-06-13T13:45:00Z",
+  "audience": ["claude_ai", "grok", "codex", "future_engineering_review"],
+  "status": "REVIEW_FOR_ARCHITECTURE_INPUT",
+  "current_state": {
+    "plex_frontend_required": true,
+    "pause_publication_active": true,
+    "publication_allowed": false,
+    "broad_expansion_allowed": false,
+    "sentinel": {
+      "status": "PASS",
+      "alert_level": "LOW"
+    },
+    "active_plex_sessions": 0,
+    "go_live_ready": false,
+    "go_live_campaign": {
+      "status": "RUNNING",
+      "cycle_count": 4,
+      "qa_cursor": 12,
+      "qa_batch_size": 3,
+      "last_launch_after_qa_ms": 21,
+      "ends_utc": "2026-06-14T05:22:00Z"
+    },
+    "materialized_qa": {
+      "status": "REVIEW",
+      "target_count": 229,
+      "rows_found": 94,
+      "decision_probe_total_candidates": 89,
+      "latest_batch_checked": 3,
+      "latest_batch_passed": 2,
+      "latest_batch_failed": 1,
+      "latest_failure_reason": "socket hang up"
+    }
+  },
+  "primary_blockers": [
+    {
+      "id": "B1",
+      "name": "Materialized QA remains REVIEW",
+      "evidence": "Latest bounded batch checked 3, passed 2, failed 1; target_count 229; rows_found 94.",
+      "risk": "Blocks publication and broad expansion."
+    },
+    {
+      "id": "B2",
+      "name": "Plex decision endpoint instability",
+      "evidence": "Some rows return HTTP 200; others return socket hang up or timeout.",
+      "risk": "Catalogue may appear in Plex but not reliably play."
+    },
+    {
+      "id": "B3",
+      "name": "Incomplete Plex DB row coverage",
+      "evidence": "229 materialized targets discovered but only 94 Plex DB rows found.",
+      "risk": "Plex indexing/metadata visibility is still incomplete."
+    },
+    {
+      "id": "B4",
+      "name": "Process launch saturation under heavy work",
+      "evidence": "Full QA and broad mirror publisher previously caused command launch timeouts; bounded QA keeps launch after QA near 20 ms.",
+      "risk": "Unbounded local work can degrade Plex host responsiveness."
+    },
+    {
+      "id": "B5",
+      "name": "Service context path visibility mismatch",
+      "evidence": "LocalSystem/service context cannot reliably dereference user-session S: rclone mount symlinks.",
+      "risk": "Wrong verification strategy can fail good paths or trigger loops."
+    }
+  ],
+  "review_questions": [
+    "Is Plex decision endpoint testing the right go-live proof?",
+    "Should QA be decomposed into indexing, WebDAV/path, real playback canary, and decision proof stages?",
+    "Is materialized symlink/WebDAV still the right production architecture?",
+    "What is the highest leverage process launch saturation fix?",
+    "Are socket hangup failures more likely Plex probing, WebDAV bridge, rclone/VFS cache, upstream Real-Debrid latency, or media/container metadata?"
+  ],
+  "files": {
+    "workspace_document": "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\docs\\AS_BUILT_BLOCKERS_CONGESTION_HANDOFF_20260613.md",
+    "public_document": "D:\\PlexTools\\public\\latest\\scarflix_v2\\as_built_blockers_congestion_handoff_20260613.md",
+    "public_json": "D:\\PlexTools\\public\\latest\\scarflix_v2\\as_built_blockers_congestion_handoff_20260613.json",
+    "go_live_campaign_status": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_go_live_16h_campaign_status.json",
+    "materialized_qa_status": "D:\\PlexTools\\public\\latest\\scarflix_v2\\materialized_canary_decision_qa_status.json"
+  },
+  "raw_urls": {
+    "public_document": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/as_built_blockers_congestion_handoff_20260613.md",
+    "public_json": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/as_built_blockers_congestion_handoff_20260613.json",
+    "go_live_campaign_status": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_16h_campaign_status.json",
+    "materialized_qa_status": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/materialized_canary_decision_qa_status.json"
+  }
+}
