@@ -12,7 +12,9 @@ Jason indicated the viewer had stopped, but direct Plex session API still report
 
 Playback-first guard was patched to handle stale Plex scanner process records. Parser check passed. Manual guard cycle now reports `PASS_PLAYBACK_PRIORITY_ACTIVE`, active sessions `1`, background jobs found `0`. No publication, expansion, Plex restart, Plex library work, Docker work, or Threadfin cutover was started.
 
-Next safe action: wait for active sessions to reach zero, then re-check Sentinel/launch health and resume only the minimum required workers before Mission 2 adapter verification or ScarFLIX playback recovery.
+Added `JasonOS_Prime_PlaybackQuietResume`, a hidden-wrapper task that checks every 2 minutes and resumes only minimum safe workers after active sessions reach zero. Test result: `HELD_ACTIVE_PLEX_PLAYBACK`. It will not re-enable FastTrack.
+
+Next safe action: wait for active sessions to reach zero, let quiet-resume restore minimum workers, then re-check Sentinel/launch health before Mission 2 adapter verification or ScarFLIX playback recovery.
 
 ## FOR GROK PEER REVIEW -- GO-LIVE READINESS LEDGER INSTALLED
 
