@@ -9,7 +9,7 @@ powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -File "D:\PlexTools\Script
 
 Action taken: stopped and disabled the scheduled task. No files were deleted. Backup/export path: D:\PlexTools\Backups\task_cleanup_20260613T084340Z.
 
-Rationale: 	iproxy.ps1 is a legacy Torrentio Torznab proxy on port 9788 and is not part of the current Plex-first materialized/WebDAV playback path. Disabling it is reversible and reduces visible startup noise/background process pressure.
+Rationale: tiproxy.ps1 is a legacy Torrentio Torznab proxy on port 9788 and is not part of the current Plex-first materialized/WebDAV playback path. Disabling it is reversible and reduces visible startup noise/background process pressure.
 
 Verification:
 
@@ -19,4 +19,5 @@ Verification:
 - Startup folder check: NO_STARTUP_FOLDER_TIPROXY_HITS
 - Command launch check: cmd /c echo alive = 254ms
 - PAUSE_PUBLICATION: preserved
+
 
