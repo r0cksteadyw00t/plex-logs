@@ -1,3 +1,30 @@
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 24 VERIFIED ITEMS
+
+**Updated UTC:** 2026-06-14T13:40:41Z  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_24  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+Detached campaign runner completed the latest bounded batch at 2026-06-14T13:39:22Z: 4/5 PASS, 1 REVIEW. Codex promoted only new unique completed PASS rows into the visible delivery artifact; no publication, broad expansion, cleanup, deletion, or Plex mutation was performed.
+
+Watch Now lane now has 24 verified items.
+
+Added this update:
+- Dr. No (1962)
+- Drive (2011)
+- Dumb and Dumber (1994)
+- Dune (1984)
+
+Retryable review rows:
+- Escape Plan 2: Hades (2018) - webdav_head_upstream_server_error
+
+Held retry sources:
+- Commando - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Escape Plan 2: Hades - HELD_RETRY after 3 failures; title remains wanted/retryable
+
+Safety note:
+
+- Held rows are source/release-level only; titles remain wanted and retryable.
+- Mission 002 Threadfin remains ready/verified, but Plex Live TV attach remains held until a safe attach path exists.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 20 VERIFIED ITEMS
 
 **Updated UTC:** 2026-06-14T13:25:57Z  
@@ -2562,6 +2589,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
