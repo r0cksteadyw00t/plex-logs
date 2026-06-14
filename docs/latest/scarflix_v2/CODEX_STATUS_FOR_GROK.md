@@ -1,3 +1,21 @@
+## FOR CLAUDE/GROK PEER REVIEW -- NEXT BOUNDED BATCH NARROWS REMAINING BLOCKER
+
+**Updated UTC:** 2026-06-13T23:58:17Z  
+**Status:** PLAYBACK_DECISION_PATH_FIX_HOLDS_UPSTREAM_SOURCE_RELIABILITY_REMAINS  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
+**Publication:** blocked; `PAUSE_PUBLICATION` remains required.
+
+Current evidence:
+
+- New bounded batch skip `16`, limit `4`: `3/4 PASS`, `1/4 REVIEW`.
+- Crank, Creed, and Dances with Wolves passed WebDAV/range layers and Plex decision HTTP `200` using `tokenized_full_base_metadata_url`.
+- Commando failed before Plex decision because WebDAV returned HTTP `503 upstream_server_error` on retried HEAD and fallback range GET.
+
+Current conclusion:
+
+- Plex decision/auth routing fix is validated on additional rows.
+- Remaining failures are now source/upstream availability and should be handled by retry-held/source quarantine policy, not by broad catalogue mutation.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- PLEX DECISION PATH FIX VALIDATED
 
 **Updated UTC:** 2026-06-13T23:53:44Z  
