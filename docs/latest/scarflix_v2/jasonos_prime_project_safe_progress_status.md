@@ -1,11 +1,11 @@
 ﻿# JasonOS Prime Project Safe Progress Audit
 
-**Updated UTC:** 2026-06-14T09:48:01Z  
+**Updated UTC:** 2026-06-14T09:53:01Z  
 **Status:** HELD_ACTIVE_PLEX_PLAYBACK_NON_DISRUPTIVE_WORK_ONLY
 
 ## Current Gates
 
-- Active Plex sessions: 2
+- Active Plex sessions: 1
 - Sentinel: PASS / LOW
 - Mission 2 readiness: PASS_CUTOVER_PACKAGE_READY_HELD
 - Mission 2 preflight: HELD_ACTIVE_PLEX_PLAYBACK
@@ -24,4 +24,4 @@
 
 ## Reasons
 
-- active_plex_sessions:2
+- active_plex_sessions:1
