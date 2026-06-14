@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T02:33:36Z
+- Updated UTC: 2026-06-14T02:47:12Z
 - Threshold: 3
-- Tracked: 16
+- Tracked: 17
 - Held: 0
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -28,5 +28,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Nacho Libre: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - RoboCop: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Sin Nombre: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- The Faculty: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
