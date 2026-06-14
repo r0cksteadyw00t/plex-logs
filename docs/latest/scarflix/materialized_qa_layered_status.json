@@ -1,27 +1,26 @@
 {
   "component": "scarflix_v2_streaming_layered_validator",
-  "updated_utc": "2026-06-14T03:44:44Z",
-  "status": "REVIEW",
+  "updated_utc": "2026-06-14T03:51:17Z",
+  "status": "PASS",
   "qa_component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "decision_probe_skip": 136,
+  "decision_probe_skip": 139,
   "decision_probe_limit": 3,
   "range_bytes": 4194304,
   "summary": {
-    "total": 3,
+    "total": 2,
     "passed": 2,
-    "review": 1,
+    "review": 0,
     "reasons": {
-      "webdav_head_upstream_server_error": 1,
       "webdav_head_and_temporary_range_warm_passed": 2
     }
   },
   "results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T03:44:18Z",
-      "target_hash": "ScarFLIX_part-056b613c36104e31",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+      "updated_utc": "2026-06-14T03:50:51Z",
+      "target_hash": "ScarFLIX_part-3a38fe9c1419d910",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -33,10 +32,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-056b613c36104e31",
+          "link_target": "S:\\media\\ScarFLIX_part-3a38fe9c1419d910",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -44,210 +43,136 @@
           "is_file": false
         },
         "webdav_head": {
-          "ok": false,
+          "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
-          "status_code": 503,
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
+          "status_code": 200,
           "bytes_read": 0,
-          "content_length": "141",
-          "content_type": "text/plain; charset=utf-8",
+          "content_length": "1364013240",
+          "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 850,
+          "elapsed_ms": 1915,
+          "attempt": 1,
+          "reason": "ok",
+          "attempts": 1
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "1364013240",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1915,
+            "attempt": 1,
+            "reason": "ok"
+          }
+        ],
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 3553,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_and_temporary_range_warm_passed",
+      "elapsed_ms": 5471
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-14T03:51:07Z",
+      "target_hash": "ScarFLIX_part-451fc0cdd0ee7fdf",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Monarch Legacy of Monsters (2023)\\Season 01\\Monarch Legacy of Monsters (2023) - S01E01 - ScarFLIX_part-451fc0cdd0ee7fdf",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Monarch Legacy of Monsters (2023)\\Season 01\\Monarch Legacy of Monsters (2023) - S01E01 - ScarFLIX_part-451fc0cdd0ee7fdf",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\Monarch Legacy of Monsters (2023)\\Season 01\\Monarch Legacy of Monsters (2023) - S01E01 - ScarFLIX_part-451fc0cdd0ee7fdf",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-451fc0cdd0ee7fdf",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": true,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
+          "status_code": 200,
+          "bytes_read": 0,
+          "content_length": "1397349316",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 1513,
           "attempt": 2,
-          "reason": "upstream_server_error",
+          "reason": "ok",
           "attempts": 2
         },
         "webdav_head_attempts": [
           {
             "ok": false,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
-            "status_code": 503,
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
+            "status_code": 0,
             "bytes_read": 0,
-            "content_length": "141",
-            "content_type": "text/plain; charset=utf-8",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 2285,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8008,
             "attempt": 1,
-            "reason": "upstream_server_error"
+            "reason": "timeout"
           },
           {
-            "ok": false,
+            "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
-            "status_code": 503,
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
+            "status_code": 200,
             "bytes_read": 0,
-            "content_length": "141",
-            "content_type": "text/plain; charset=utf-8",
+            "content_length": "1397349316",
+            "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 850,
+            "elapsed_ms": 1513,
             "attempt": 2,
-            "reason": "upstream_server_error"
-          }
-        ],
-        "webdav_head_fallback_range": {
-          "ok": false,
-          "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
-          "status_code": 503,
-          "bytes_read": 141,
-          "content_length": "141",
-          "content_type": "text/plain; charset=utf-8",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 835,
-          "reason": "upstream_server_error"
-        }
-      },
-      "status": "REVIEW",
-      "reason": "webdav_head_upstream_server_error",
-      "elapsed_ms": 4734
-    },
-    {
-      "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T03:44:26Z",
-      "target_hash": "ScarFLIX_part-b40cd0c89fdac0f7",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
-      "map_loaded": true,
-      "map_generated_utc": "2026-06-09T10:17:48Z",
-      "map_entry_found": true,
-      "temporary_buffering": {
-        "enabled": true,
-        "persisted": false,
-        "range_bytes_requested": 4194304
-      },
-      "layers": {
-        "local_symlink_metadata": {
-          "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
-          "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-b40cd0c89fdac0f7",
-          "error": "",
-          "blocking": false,
-          "exists": true,
-          "is_directory": false,
-          "is_file": false
-        },
-        "webdav_head": {
-          "ok": true,
-          "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
-          "status_code": 200,
-          "bytes_read": 0,
-          "content_length": "5194361033",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 6621,
-          "attempt": 1,
-          "reason": "ok",
-          "attempts": 1
-        },
-        "webdav_head_attempts": [
-          {
-            "ok": true,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
-            "status_code": 200,
-            "bytes_read": 0,
-            "content_length": "5194361033",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 6621,
-            "attempt": 1,
             "reason": "ok"
           }
         ],
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3878,
+          "elapsed_ms": 4076,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 10504
-    },
-    {
-      "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T03:44:39Z",
-      "target_hash": "ScarFLIX_part-734e5ca7e95283c8",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
-      "map_loaded": true,
-      "map_generated_utc": "2026-06-09T10:17:48Z",
-      "map_entry_found": true,
-      "temporary_buffering": {
-        "enabled": true,
-        "persisted": false,
-        "range_bytes_requested": 4194304
-      },
-      "layers": {
-        "local_symlink_metadata": {
-          "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
-          "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-734e5ca7e95283c8",
-          "error": "",
-          "blocking": false,
-          "exists": true,
-          "is_directory": false,
-          "is_file": false
-        },
-        "webdav_head": {
-          "ok": true,
-          "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
-          "status_code": 200,
-          "bytes_read": 0,
-          "content_length": "1588002895",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 8003,
-          "attempt": 1,
-          "reason": "ok",
-          "attempts": 1
-        },
-        "webdav_head_attempts": [
-          {
-            "ok": true,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
-            "status_code": 200,
-            "bytes_read": 0,
-            "content_length": "1588002895",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 8003,
-            "attempt": 1,
-            "reason": "ok"
-          }
-        ],
-        "webdav_range_warm": {
-          "ok": true,
-          "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
-          "status_code": 206,
-          "bytes_read": 4194304,
-          "content_length": "4194304",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 3977,
-          "reason": "ok"
-        }
-      },
-      "status": "PASS",
-      "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 11982
+      "elapsed_ms": 14354
     }
   ],
-  "next_action": "Inspect WebDAV/path/range failures before calling broad Plex decision QA."
+  "next_action": "Layered streaming prechecks passed for this bounded batch; remaining failures, if any, are downstream of WebDAV/range delivery."
 }
