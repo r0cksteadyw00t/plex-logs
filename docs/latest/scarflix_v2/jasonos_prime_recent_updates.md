@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T06:15:02.672Z
+Updated UTC: 2026-06-14T06:20:02.576Z
 Source: live status merge
 
-- 2026-06-14T06:10:12.000Z - Cycle 149 Clean Pass - 2026-06-14T06:07:13Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 149: launch health 50 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint. Bounded Materialized QA batch skip 72, limit 4: 3/4 PASS, 1 failed. Detailed row titles...
-- 2026-06-14T06:10:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T06:15:11.731Z - Cycle 149 Clean Pass - 2026-06-14T06:07:13Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 149: launch health 50 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint. Bounded Materialized QA batch skip 72, limit 4: 3/4 PASS, 1 failed. Detailed row titles...
+- 2026-06-14T06:15:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T06:00:11.898Z - Cycle 147 Source Retry Added - 2026-06-14T05:54:33Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 147: launch health 20 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 65, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Night at the Museum; 9ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ Weeks;...
 - 2026-06-14T05:45:18.425Z - Cycle 145 Source Retry Added - 2026-06-14T05:40:42Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 145: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 REVIEW. Passed title: Man on Fire.
 - 2026-06-14T05:39:21.426Z - Cycle 145 Clean Pass - 2026-06-14T05:39:21Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 145: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 failed. Detailed row titles for this completed batch were superseded by t...
