@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-14T22:54:01Z",
-    "updated_utc":  "2026-06-14T22:54:07Z",
+    "started_utc":  "2026-06-14T22:59:01Z",
+    "updated_utc":  "2026-06-14T22:59:07Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  1,
@@ -110,10 +110,10 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=PASS_ACTIVE_TRUE_HANDS_OFF SafeAuditTask=Ready QuietWatcherTask=Ready"
+                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Ready"
                                       ],
                          "blockers":  [
-
+                                          "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
                                       ],
                          "next_safe_action":  "Keep orchestration alive, reduce high-churn work during playback, and treat repeated no-progress cycles as Grok review triggers.",
                          "requires_quiet_window":  false,
@@ -149,6 +149,10 @@
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "blocker":  "Active Plex playback prevents safe focused QA/expansion work."
+                     },
+                     {
+                         "outcome_id":  "O-AUTONOMY-STABILITY",
+                         "blocker":  "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
                      }
                  ],
     "monitored_tasks":  [
