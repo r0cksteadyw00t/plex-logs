@@ -1,26 +1,27 @@
 {
   "component": "scarflix_v2_streaming_layered_validator",
-  "updated_utc": "2026-06-14T01:54:34Z",
-  "status": "PASS",
+  "updated_utc": "2026-06-14T02:01:22Z",
+  "status": "RUNNING",
   "qa_component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "decision_probe_skip": 80,
-  "decision_probe_limit": 3,
+  "decision_probe_skip": 83,
+  "decision_probe_limit": 4,
   "range_bytes": 4194304,
   "summary": {
     "total": 3,
-    "passed": 3,
-    "review": 0,
+    "passed": 2,
+    "review": 1,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 3
+      "webdav_head_and_temporary_range_warm_passed": 2,
+      "webdav_head_upstream_server_error": 1
     }
   },
-  "results": [
+  "recent_results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T01:53:53Z",
-      "target_hash": "ScarFLIX_part-17c22fece3c579f9",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sense and Sensibility (1995)\\ScarFLIX_part-17c22fece3c579f9",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
+      "updated_utc": "2026-06-14T02:00:50Z",
+      "target_hash": "ScarFLIX_part-3ac0e5bd2415a5fc",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Silent Hill (2006)\\ScarFLIX_part-3ac0e5bd2415a5fc",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-3ac0e5bd2415a5fc/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -32,10 +33,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sense and Sensibility (1995)\\ScarFLIX_part-17c22fece3c579f9",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sense and Sensibility (1995)\\ScarFLIX_part-17c22fece3c579f9",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Silent Hill (2006)\\ScarFLIX_part-3ac0e5bd2415a5fc",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Silent Hill (2006)\\ScarFLIX_part-3ac0e5bd2415a5fc",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-17c22fece3c579f9",
+          "link_target": "S:\\media\\ScarFLIX_part-3ac0e5bd2415a5fc",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -45,13 +46,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3ac0e5bd2415a5fc/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "1128257632",
+          "content_length": "1721540280",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1476,
+          "elapsed_ms": 1540,
           "attempt": 2,
           "reason": "ok",
           "attempts": 2
@@ -60,25 +61,25 @@
           {
             "ok": false,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3ac0e5bd2415a5fc/stream.mkv",
             "status_code": 0,
             "bytes_read": 0,
             "timed_out": true,
             "error": "timeout",
-            "elapsed_ms": 8006,
+            "elapsed_ms": 8012,
             "attempt": 1,
             "reason": "timeout"
           },
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3ac0e5bd2415a5fc/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1128257632",
+            "content_length": "1721540280",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1476,
+            "elapsed_ms": 1540,
             "attempt": 2,
             "reason": "ok"
           }
@@ -86,26 +87,26 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3ac0e5bd2415a5fc/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3418,
+          "elapsed_ms": 3533,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 13657
+      "elapsed_ms": 13841
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T01:54:04Z",
-      "target_hash": "ScarFLIX_part-0e300705b506774a",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sherlock Holmes (2009)\\ScarFLIX_part-0e300705b506774a",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-0e300705b506774a/stream.mkv",
+      "updated_utc": "2026-06-14T02:01:08Z",
+      "target_hash": "ScarFLIX_part-24f719d304fd7aa0",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sin Nombre (2009)\\ScarFLIX_part-24f719d304fd7aa0",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-24f719d304fd7aa0/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -117,10 +118,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sherlock Holmes (2009)\\ScarFLIX_part-0e300705b506774a",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sherlock Holmes (2009)\\ScarFLIX_part-0e300705b506774a",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sin Nombre (2009)\\ScarFLIX_part-24f719d304fd7aa0",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sin Nombre (2009)\\ScarFLIX_part-24f719d304fd7aa0",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-0e300705b506774a",
+          "link_target": "S:\\media\\ScarFLIX_part-24f719d304fd7aa0",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -128,57 +129,70 @@
           "is_file": false
         },
         "webdav_head": {
-          "ok": true,
+          "ok": false,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-0e300705b506774a/stream.mkv",
-          "status_code": 200,
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-24f719d304fd7aa0/stream.mkv",
+          "status_code": 503,
           "bytes_read": 0,
-          "content_length": "1827038238",
-          "content_type": "application/octet-stream",
+          "content_length": "141",
+          "content_type": "text/plain; charset=utf-8",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1622,
-          "attempt": 1,
-          "reason": "ok",
-          "attempts": 1
+          "elapsed_ms": 1215,
+          "attempt": 2,
+          "reason": "upstream_server_error",
+          "attempts": 2
         },
         "webdav_head_attempts": [
           {
-            "ok": true,
+            "ok": false,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-0e300705b506774a/stream.mkv",
-            "status_code": 200,
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-24f719d304fd7aa0/stream.mkv",
+            "status_code": 503,
             "bytes_read": 0,
-            "content_length": "1827038238",
-            "content_type": "application/octet-stream",
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1622,
+            "elapsed_ms": 4052,
             "attempt": 1,
-            "reason": "ok"
+            "reason": "upstream_server_error"
+          },
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-24f719d304fd7aa0/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1215,
+            "attempt": 2,
+            "reason": "upstream_server_error"
           }
         ],
-        "webdav_range_warm": {
-          "ok": true,
+        "webdav_head_fallback_range": {
+          "ok": false,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-0e300705b506774a/stream.mkv",
-          "status_code": 206,
-          "bytes_read": 4194304,
-          "content_length": "4194304",
-          "content_type": "application/octet-stream",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-24f719d304fd7aa0/stream.mkv",
+          "status_code": 503,
+          "bytes_read": 141,
+          "content_length": "141",
+          "content_type": "text/plain; charset=utf-8",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3889,
-          "reason": "ok"
+          "elapsed_ms": 832,
+          "reason": "upstream_server_error"
         }
       },
-      "status": "PASS",
-      "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5512
+      "status": "REVIEW",
+      "reason": "webdav_head_upstream_server_error",
+      "elapsed_ms": 6868
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T01:54:23Z",
-      "target_hash": "ScarFLIX_part-9340c96017dac230",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Shrek Forever After (2010)\\ScarFLIX_part-9340c96017dac230",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-9340c96017dac230/stream.mkv",
+      "updated_utc": "2026-06-14T02:01:19Z",
+      "target_hash": "ScarFLIX_part-ffcfe7a189f19f24",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sing (2016)\\ScarFLIX_part-ffcfe7a189f19f24",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-ffcfe7a189f19f24/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -190,10 +204,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Shrek Forever After (2010)\\ScarFLIX_part-9340c96017dac230",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Shrek Forever After (2010)\\ScarFLIX_part-9340c96017dac230",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sing (2016)\\ScarFLIX_part-ffcfe7a189f19f24",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sing (2016)\\ScarFLIX_part-ffcfe7a189f19f24",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-9340c96017dac230",
+          "link_target": "S:\\media\\ScarFLIX_part-ffcfe7a189f19f24",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -203,49 +217,60 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9340c96017dac230/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ffcfe7a189f19f24/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "3140779597",
+          "content_length": "2918628944",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 7428,
-          "attempt": 1,
+          "elapsed_ms": 1644,
+          "attempt": 2,
           "reason": "ok",
-          "attempts": 1
+          "attempts": 2
         },
         "webdav_head_attempts": [
           {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ffcfe7a189f19f24/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8029,
+            "attempt": 1,
+            "reason": "timeout"
+          },
+          {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9340c96017dac230/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ffcfe7a189f19f24/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3140779597",
+            "content_length": "2918628944",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7428,
-            "attempt": 1,
+            "elapsed_ms": 1644,
+            "attempt": 2,
             "reason": "ok"
           }
         ],
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9340c96017dac230/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ffcfe7a189f19f24/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4481,
+          "elapsed_ms": 3403,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 11910
+      "elapsed_ms": 13840
     }
-  ],
-  "next_action": "Layered streaming prechecks passed for this bounded batch; remaining failures, if any, are downstream of WebDAV/range delivery."
+  ]
 }
