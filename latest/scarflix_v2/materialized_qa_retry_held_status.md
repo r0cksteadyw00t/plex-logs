@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: REVIEW_HELD_RETRY_SOURCES
-- Updated UTC: 2026-06-14T15:22:09Z
+- Updated UTC: 2026-06-14T15:36:35Z
 - Threshold: 3
-- Tracked: 19
+- Tracked: 20
 - Held: 6
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -31,5 +31,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Casino: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Harakiri: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Rambo: Last Blood: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Terminator: Dark Fate: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
