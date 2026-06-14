@@ -1,23 +1,28 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T15:40:49Z  
+Updated UTC: 2026-06-14T15:55:55Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 51
+Item count: 54
 
 ## Latest Quiet-Window Batch
 
-- Checked: 3
+- Checked: 5
 - Passed: 3
-- Review: 0
+- Review: 2
 - New unique items added: 3
 - Reverified existing items: 0
-- Held retry sources: 6
+- Held retry sources: 7
 
 ## Added This Update
 
-- The Boy and the Heron (2023) -- scarflix_part-e88bc8bc09b28631 -- HTTP 200
-- The Boy in the Striped Pyjamas (2008) -- scarflix_part-6d4172141ef2dd2a -- HTTP 200
-- The Cabin in the Woods (2012) -- scarflix_part-4e9571fb14dbaf20 -- HTTP 200
+- The Deadly Little Mermaid (2026) -- scarflix_part-b0824386b672f488 -- HTTP 200
+- The Devil's Advocate (1997) -- scarflix_part-d99a060ace386b52 -- HTTP 200
+- The Equalizer 2 (2018) -- scarflix_part-761f0288a98ecf2c -- HTTP 200
+
+## Retryable Review Rows
+
+- The Empty Man (2020) -- scarflix_part-f5edc313355fa64c -- webdav_head_upstream_server_error
+- The Faculty (1998) -- scarflix_part-5a0bbbb5939deba7 -- webdav_head_upstream_server_error
 
 ## Held Retry Sources
 
@@ -27,6 +32,7 @@ Item count: 51
 - Maleficent: Mistress of Evil -- scarflix_part-574e40d64a636c74 -- failures=3 -- timeout
 - RoboCop -- scarflix_part-9ba42fdb610c4448 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Sin Nombre -- scarflix_part-24f719d304fd7aa0 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- The Faculty -- scarflix_part-5a0bbbb5939deba7 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 ## Verified Items
 
@@ -81,3 +87,6 @@ Item count: 51
 - The Boy and the Heron (2023) -- scarflix_part-e88bc8bc09b28631 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - The Boy in the Striped Pyjamas (2008) -- scarflix_part-6d4172141ef2dd2a -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - The Cabin in the Woods (2012) -- scarflix_part-4e9571fb14dbaf20 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- The Deadly Little Mermaid (2026) -- scarflix_part-b0824386b672f488 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- The Devil's Advocate (1997) -- scarflix_part-d99a060ace386b52 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- The Equalizer 2 (2018) -- scarflix_part-761f0288a98ecf2c -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
