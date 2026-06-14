@@ -1,5 +1,24 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T04:52:14Z
+
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle 138.
+- Launch health 19 ms; post-QA launch check 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA skip 29, limit 6: 5/6 PASS, 1 REVIEW.
+- Passed titles: Dune; EuroTrip; Ex Machina; Fantastic Mr. Fox; Fargo.
+- Review title: Escape Plan 2: Hades (Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error).
+- Retry ledger: tracked 18, held 0, threshold 3. Latest tracked source is Escape Plan 2: Hades at failure count 2/3; held remains 0.
+
+Current gate:
+
+- Source retry backlog remains below hold threshold. Publication and expansion remain blocked until the delivery gate explicitly passes.
 ## Current Update - 2026-06-14T04:37:06Z
 
 **Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
@@ -148,6 +167,7 @@ Latest evidence:
 Current gate:
 
 - Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 
 
 
