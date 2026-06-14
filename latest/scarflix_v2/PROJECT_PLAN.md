@@ -1,3 +1,13 @@
+## Cycle 115 Source Retry Added - 2026-06-14T02:05:58Z
+
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
+- Extended runner cycle `115`: launch health `19 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA batch skip `83`, limit `4`: `3/4 PASS`, `1` REVIEW.
+- Passed titles: Silent Hill; Sing; Spartacus.
+- REVIEW title: Sin Nombre, failed before Plex decision with `webdav_head_upstream_server_error`.
+- Retry ledger increased to tracked `16`, held `0`, threshold `3`.
+- Continue actual delivery cycles; source/release-only quarantine only after threshold. Publication and expansion remain blocked until delivery gates pass.
+
 ## Cycle 113 Source Retry Added - 2026-06-14T01:50:58Z
 
 - Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
