@@ -1,3 +1,20 @@
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 15 VERIFIED ITEMS
+
+**Updated UTC:** 2026-06-14T12:55:25Z  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_15  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+The last completed detached bounded batch available for lane update was 2/3 PASS, 1 REVIEW. Codex refreshed the visible delivery artifact only; no broad publication or expansion was started. A newer canary batch is currently running/discovering rows and was not used for this lane update.
+
+Watch Now lane now has 15 verified items.
+
+Added this update:
+- Aliens vs Predator Requiem (2007)
+
+Safety note:
+
+- Retry held count remains 0.
+- Source-level REVIEW items remain retryable; titles are not rejected.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 14 VERIFIED ITEMS
 
 **Updated UTC:** 2026-06-14T12:40:52Z  
@@ -3328,6 +3345,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
