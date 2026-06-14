@@ -1,3 +1,12 @@
+## Cycle 128 Source Retry Added - 2026-06-14T03:39:57Z
+
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
+- Extended runner cycle 128: launch health 20 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA batch skip 132, limit 4: 3/4 PASS, 1 REVIEW.
+- Passed titles: Twister; Undisputed III: Redemption; Valerian and the City of a Thousand Planets.
+- REVIEW title: Vertigo (Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error).
+- Retry ledger: tracked 21, held 0, threshold 3.
+- Continue actual delivery cycles; source/release-only quarantine only after threshold. Publication and expansion remain blocked until delivery gates pass.
 ## Cycle 127 Clean Pass - 2026-06-14T03:37:05Z
 
 - Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES.
@@ -3343,6 +3352,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
