@@ -1,3 +1,20 @@
+## GO-LIVE USER OUTCOME STATUS UPDATE - PLAYBACK-FIRST DELIVERY
+
+**Updated UTC:** 2026-06-14T22:11:15Z  
+**Status:** DELIVERY_PROGRESS_PUBLICATION_BLOCKED  
+**Watch Now evidence lane:** 130 PASS-only items  
+**Latest bounded QA:** REVIEW_PARTIAL_BATCH_PASS, checked 5, passed 5, failed 0  
+**Retry-held sources:** 11 held / 16 tracked  
+**Sentinel:** PASS/LOW  
+**Campaign:** RUNNING, cycle 299, updated 06/14/2026 22:07:06  
+**Plex sessions:** campaign=endpoint_unavailable; IPTV watcher=1  
+**Mission 002 IPTV:** Threadfin PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE, channels=4, IPTV-only=true, physical tuner=false  
+**Publication:** BLOCKED / PAUSE_PUBLICATION respected  
+**Raw lane URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json
+
+**User-outcome interpretation:** There is real verified playback evidence, but full user-facing go-live is not complete. The immediate delivery gap is surfacing the verified-only Watch Now set in Plex while holding failed or unverified sources out of the user path.
+
+**Next autonomous action:** keep the detached campaign running, fix/route around unreliable Plex session detection, expose only the PASS-only lane when gates are clean, and continue source/release retry or quarantine without broad publication.
 ## GO-LIVE DELIVERY UPDATE — INCREMENTAL PASS ROW PROMOTED
 
 **Updated UTC:** 2026-06-14T19:25:45Z  
@@ -4121,6 +4138,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
