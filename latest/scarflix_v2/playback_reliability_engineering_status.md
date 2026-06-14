@@ -17,6 +17,7 @@ Current blocker:
 
 - Plex decision path/auth routing is now validated on additional rows.
 - Remaining failures are specific source/upstream availability problems. They should be retried, source-quarantined after threshold, and replaced by alternate candidates without rejecting the title.
+- Public retry ledger status is now exported as `materialized_qa_retry_held_status.*`; current first export is `TRACKING_RETRY_SOURCES`, tracked `7`, held `0`.
 
 ## Current Update - 2026-06-13T23:53:44Z
 
