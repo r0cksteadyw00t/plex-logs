@@ -1,5 +1,23 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T01:05:27Z
+
+**Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle `107`.
+- Launch health `22 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA skip `52`, limit `4`: `4/4 PASS`, `0` failed.
+- Retry ledger: tracked `11`, held `0`, threshold `3`.
+
+Current gate:
+
+- Positive cycle, but publication and expansion remain blocked until the delivery gate explicitly passes.
+
 ## Current Update - 2026-06-14T00:50:27Z
 
 **Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
