@@ -1,24 +1,20 @@
 # JasonOS Prime User-Visible Delivery Status
 
-- Updated UTC: 2026-06-14T13:13:42Z
-- Status: QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_17
+- Updated UTC: 2026-06-14T13:25:57Z
+- Status: QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_20
 - Active Plex sessions reported by campaign: 0
 - Sentinel: PASS / LOW
 - Publication: PAUSE_PUBLICATION remains required
-- Watch Now lane: 17 verified items
-- Latest completed bounded QA used: 4/5 PASS, 1 REVIEW
-- Retry held count: 0
+- Watch Now lane: 20 verified items
+- Latest completed bounded QA used: 3/3 PASS, 0 REVIEW
+- Retry held count: 1
 
 ## Added This Update
 
-- The Ballerina (2016)
-- Cloverfield (2008)
+- Dances with Wolves (1990)
+- Daredevil (2003)
+- Dawn of the Dead (2004)
 
-## Reverified Existing Items
+## Held Retry Sources
 
-- Armageddon (1998)
-- Battleship (2012)
-
-## Retryable Review Rows
-
-- Casino (1995) - webdav_head_upstream_server_error
+- Commando - source/release held after 3 failures; title remains wanted/retryable
