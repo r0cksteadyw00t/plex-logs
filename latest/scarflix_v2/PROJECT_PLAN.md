@@ -1,3 +1,22 @@
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 14 VERIFIED ITEMS
+
+**Updated UTC:** 2026-06-14T12:40:52Z  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_14  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+The detached campaign runner completed another bounded batch: 0/0 PASS, 0 REVIEW. Codex refreshed the visible delivery artifact only; no broad publication or expansion was started.
+
+Watch Now lane now has 14 verified items.
+
+Added this update:
+- Valerian and the City of a Thousand Planets (2017)
+- Vertigo (1958)
+- Downton Abbey (2010) - S01E01
+
+Safety note:
+
+- Retry held count remains 0.
+- Source-level REVIEW items remain retryable; titles are not rejected.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 11 VERIFIED ITEMS
 
 **Updated UTC:** 2026-06-14T12:10:25Z  
@@ -3591,6 +3610,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
