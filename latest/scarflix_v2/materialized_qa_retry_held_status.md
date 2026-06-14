@@ -1,10 +1,10 @@
 # Materialized QA Retry-Held Source Status
 
-- Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T12:41:30Z
+- Status: REVIEW_HELD_RETRY_SOURCES
+- Updated UTC: 2026-06-14T13:24:30Z
 - Threshold: 3
 - Tracked: 19
-- Held: 0
+- Held: 1
 - Publication allowed: false
 - Broad expansion allowed: false
 
@@ -12,7 +12,7 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 
 ## Items
 
-- Commando: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Commando: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Escape Plan 2: Hades: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Home: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
@@ -23,13 +23,13 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - The Faculty: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Princess Diaries 2: Royal Engagement: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Wish: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- A Cinderella Story: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - They Call Me Trinity: TRACKING_RETRY; failures=1; held=false; reason=timeout
-- A Cinderella Story: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- AVPR: Aliens vs Predator - Requiem: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Million Dollar Baby: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Ladybug & Cat Noir Awakening: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - The Empty Man: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Mitchells vs. the Machines: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Aftermath: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Casino: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
