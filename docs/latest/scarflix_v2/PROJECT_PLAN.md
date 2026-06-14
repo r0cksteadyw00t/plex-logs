@@ -1,3 +1,12 @@
+## Next Bounded Batch Evidence - 2026-06-13T23:58:17Z
+
+- Status: PLAYBACK_DECISION_PATH_FIX_HOLDS_UPSTREAM_SOURCE_RELIABILITY_REMAINS.
+- Bounded Materialized QA batch skip `16`, limit `4`: `3/4 PASS`, `1/4 REVIEW`.
+- Crank, Creed, and Dances with Wolves passed layered validation plus Plex decision HTTP `200` with `decision_path_mode=tokenized_full_base_metadata_url`.
+- Commando failed on WebDAV/RD upstream availability: HTTP `503 upstream_server_error` after bounded HEAD retry and tiny fallback range GET.
+- Current engineering conclusion: the old Plex decision HTTP 400 path/auth blocker is fixed; the remaining blocker is per-source upstream reliability.
+- Continue retry-held/source-only quarantine policy. Keep titles wanted/retryable, keep publication paused, and do not start expansion until pass streak and source policy gates are clean.
+
 ## Plex Decision Path Fix Validated - 2026-06-13T23:53:44Z
 
 - Status: PLAYBACK_DECISION_PATH_FIX_VALIDATED_PARTIAL_PASS.
