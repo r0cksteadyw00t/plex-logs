@@ -1,10 +1,10 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: REVIEW_HELD_RETRY_SOURCES
-- Updated UTC: 2026-06-14T13:24:30Z
+- Updated UTC: 2026-06-14T13:39:22Z
 - Threshold: 3
 - Tracked: 19
-- Held: 1
+- Held: 2
 - Publication allowed: false
 - Broad expansion allowed: false
 
@@ -13,7 +13,7 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 ## Items
 
 - Commando: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- Escape Plan 2: Hades: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Escape Plan 2: Hades: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Home: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Maleficent: Mistress of Evil: TRACKING_RETRY; failures=2; held=false; reason=timeout
