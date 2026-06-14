@@ -1,3 +1,21 @@
+## FOR CLAUDE/GROK PEER REVIEW -- 9PM MELBOURNE QUIET-WINDOW PLAN
+
+**Updated UTC:** 2026-06-14T09:22:14Z  
+**Planned quiet window:** 2026-06-14 21:00 Australia/Melbourne ($plannedUtc)  
+**Status:** WAIT_FOR_CONFIRMED_ZERO_SESSIONS_THEN_VISIBLE_DELIVERY  
+**Publication:** blocked; PAUSE_PUBLICATION remains required until delivery gates pass.
+
+Jason advised current Plex viewers should be finished at 9pm Melbourne time. The automation has been updated to hold disruptive work before then and, after that time, still verify active Plex sessions are actually zero before acting.
+
+Delivery-first queue for the quiet window:
+
+1. Verify zero active Plex sessions for two consecutive checks.
+2. Verify Sentinel is not ALERT/HIGH and launch health is under the threshold.
+3. Create/refresh a visible verified Watch Now lane from already-passing titles.
+4. Run bounded playback-path verification for that lane via detached/local runner.
+5. Progress Mission 002 Plex Live TV/DVR attach only if safe and reversible.
+
+Corrected metric: internal QA is not the outcome; visible Plex playback is the outcome.
 ## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 182 USER-VISIBLE OUTCOME GAP IDENTIFIED
 
 **Updated UTC:** 2026-06-14T09:08:36Z  
@@ -3222,6 +3240,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
