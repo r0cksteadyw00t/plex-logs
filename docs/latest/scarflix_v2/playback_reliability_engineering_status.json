@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_playback_reliability_engineering",
   "status": "ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES",
-  "updated_utc": "2026-06-14T01:05:27Z",
+  "updated_utc": "2026-06-14T01:20:29Z",
   "publication_allowed": false,
   "broad_expansion_allowed": false,
   "pause_publication_required": true,
@@ -28,7 +28,7 @@
     ]
   },
   "current_go_live_ready": false,
-  "current_primary_blocker": "Publication and broad expansion remain gated until bounded delivery QA clears; current source retry ledger has no held sources.",
+  "current_primary_blocker": "Publication and broad expansion remain gated until bounded delivery QA clears; retry ledger is growing but no source has reached hold threshold.",
   "latest_layered_batch": {
     "updated_utc": "2026-06-13T22:21:26Z",
     "layered_total": 3,
@@ -47,34 +47,34 @@
   },
   "next_expected_signal": "next bounded QA cycles should confirm whether clean pass trend continues or individual sources reach retry hold threshold",
   "go_live_ready": false,
-  "current_gate": "Cycle 107 bounded QA clean pass validates current playback/decision retry path; continue bounded delivery cycles with source quarantine only after retry threshold.",
+  "current_gate": "Cycle 109 bounded QA clean pass continues; WebDAV retry/backoff recovered two first-attempt HEAD timeouts before Plex decision PASS.",
   "latest_evidence": {
-    "go_live_campaign_cycle": 107,
-    "campaign_updated_utc": "2026-06-14T01:03:09Z",
+    "go_live_campaign_cycle": 109,
+    "campaign_updated_utc": "2026-06-14T01:17:58Z",
     "runner_pid": 13412,
     "campaign_ends_utc": "2026-06-15T00:36:58Z",
-    "launch_health_ms": 22,
+    "launch_health_ms": 45,
+    "post_qa_launch_health_ms": 20,
     "sentinel_status": "PASS",
     "sentinel_alert_level": "LOW",
     "active_plex_sessions": 0,
     "plex_identity_http_status": 200,
     "bounded_materialized_qa_status": "REVIEW_PARTIAL_BATCH_PASS",
-    "decision_probe_skip": 52,
-    "decision_probe_limit": 4,
-    "checked": 4,
-    "passed": 4,
+    "decision_probe_skip": 61,
+    "decision_probe_limit": 3,
+    "checked": 3,
+    "passed": 3,
     "failed": 0,
     "passed_titles": [
-      "Josee, the Tiger and the Fish",
-      "L.E.T.H.A.L. Ladies: Return to Savage Beach",
-      "Legend",
-      "Legends of the Fall"
+      "Mortal Kombat Legends: Snow Blind",
+      "Mr. & Mrs. Smith",
+      "Mulholland Drive"
     ],
     "retry_ledger_status": "TRACKING_RETRY_SOURCES",
-    "retry_tracked_count": 11,
+    "retry_tracked_count": 13,
     "retry_held_count": 0,
     "retry_threshold": 3,
-    "interpretation": "Clean bounded pass. Josee initially timed out on Plex decision but retry succeeded HTTP 200, validating retry path. No source reached hold threshold; publication and expansion remain gated."
+    "interpretation": "Clean bounded pass. Two rows needed WebDAV HEAD retry after first-attempt timeout, then range warm and Plex decision passed. No source reached hold threshold; publication and expansion remain gated."
   },
   "backups": [
     "D:/PlexTools/Backups/plex_registry_network_fix_20260613T233903Z/plex_media_server_hkcu.reg",
@@ -84,7 +84,7 @@
   "next_safe_action": "Continue extended bounded delivery cycles; source-quarantine only after threshold while keeping titles wanted/retryable.",
   "retry_ledger_public_status": {
     "status": "TRACKING_RETRY_SOURCES",
-    "tracked_count": 7,
+    "tracked_count": 13,
     "held_count": 0,
     "threshold": 3,
     "json": "D:/PlexTools/public/latest/scarflix_v2/materialized_qa_retry_held_status.json",
