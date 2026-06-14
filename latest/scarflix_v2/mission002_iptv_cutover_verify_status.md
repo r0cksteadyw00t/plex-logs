@@ -1,6 +1,6 @@
 ﻿# Mission 002 IPTV Threadfin Virtual Adapter Verification
 
-**Updated UTC:** 2026-06-14T17:43:08Z  
+**Updated UTC:** 2026-06-14T17:50:32Z  
 **Status:** PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE
 
 ## Safety
@@ -28,10 +28,10 @@
 
 ## Endpoints
 
-- http://127.0.0.1:35400/web/: ok=True, http=200, ms=56, error=
+- http://127.0.0.1:35400/web/: ok=True, http=200, ms=53, error=
 - http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=10, error=
 - http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=12, error=
-- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=8, error=
+- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=9, error=
 
 ## Decision
 
