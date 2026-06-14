@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T00:45:01.955Z
+Updated UTC: 2026-06-14T00:50:02.171Z
 Source: live status merge
 
-- 2026-06-14T00:40:43.343Z - Extended Delivery Runner Confirmed - 2026-06-14 10:40: Current verified state: Final active runner PID is `13412`. Extended campaign end is `2026-06-15T00:36:58Z`. Campaign duration from original start is `35.2` hours, with about `23.9` hours remaining after correction.
-- 2026-06-14T00:40:06Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T00:45:11.287Z - Extended Delivery Runner Confirmed - 2026-06-14 10:40: Current verified state: Final active runner PID is `13412`. Extended campaign end is `2026-06-15T00:36:58Z`. Campaign duration from original start is `35.2` hours, with about `23.9` hours remaining after correction.
+- 2026-06-14T00:45:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T00:38:24.224Z - Actual Go-Live Delivery Window Extended - 2026-06-14 10:36: Current verified state: The local go-live campaign runner now reflects Jason's extra 24-hour exclusive Plex access window. Runner was restarted safely between QA batches; Plex was not stopped. New runner PID: `12560`.
 - 2026-06-14T00:30:11.353Z - Cycle 100 Source Retry Tracking Updated - 2026-06-14 10:20: Current verified state: Go-live runner cycle `100` completed with launch health `17 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`. Escape Plan 2: Hades is newly tracked for `webdav_head_upstream_server_error`.
 - 2026-06-14T00:15:11.825Z - Bounded Playback QA Pass Streak Resumed - 2026-06-14 10:06: Current verified state: Go-live runner cycle `98` completed with launch health `18 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `20`, limit `3`: `3/3 PASS`, `0` failed. Retry ledger remains `TRACKING_RETRY_SOURCES`: tracked `7`, held `0`, threshold `3`.
