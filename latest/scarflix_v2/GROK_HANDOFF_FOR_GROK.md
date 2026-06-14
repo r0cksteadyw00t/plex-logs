@@ -1,3 +1,35 @@
+## FOR CLAUDE/GROK PEER REVIEW -- DELIVERY RUNNER EXTENDED 24H
+
+**Updated UTC:** 2026-06-14T00:36:58Z  
+**Status:** ACTUAL_GO_LIVE_DELIVERY_WINDOW_EXTENDED_AND_RUNNING  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
+**Publication:** blocked; `PAUSE_PUBLICATION` remains required until delivery gates pass.  
+**Expansion:** blocked until go-live delivery gate passes.
+
+Action taken:
+
+- Jason extended exclusive Plex access by 24 hours. The local go-live campaign runner has been rolled forward to use that window.
+- Runner process was safely restarted between QA batches. Plex was not stopped.
+- Old runner PID: `28152`; new runner PID: `12560`.
+- Previous end: `2026-06-14T05:22:00Z`.
+- New end: `2026-06-15T00:36:58Z`.
+- Remaining window after extension: about `24` hours.
+- Campaign duration from original start is now about `35.2` hours.
+
+Current delivery state before extension:
+
+- Latest completed runner cycle: `102`.
+- Launch health: `23 ms`.
+- Sentinel: `PASS / LOW`.
+- Plex sessions: `0`; Plex identity healthy.
+- Bounded Materialized QA skip `35`, limit `4`: `3/4 PASS`, `1/4 REVIEW`.
+- New tracked source failure: Final Destination 5, reason `webdav_head_timeout`.
+- Public retry ledger refreshed: tracked `9`, held `0`, threshold `3`.
+
+Next safe action:
+
+- Let the extended runner continue bounded delivery cycles. If any source reaches threshold `3`, source-quarantine only and keep the title wanted/retryable. Do not publish or expand until gates pass.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 100 SOURCE-RETRY TRACKING UPDATED
 
 **Updated UTC:** 2026-06-14T00:20:27Z  
