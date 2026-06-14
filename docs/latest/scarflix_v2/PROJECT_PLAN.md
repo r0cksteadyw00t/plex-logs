@@ -1,3 +1,19 @@
+## GO-LIVE DELIVERY UPDATE — CLEAN AFFECTED-MOVIE PASS BATCH PROMOTED
+
+**Updated UTC:** 2026-06-14T17:10:29Z  
+**Status:** DELIVERY_PROGRESS_PUBLICATION_BLOCKED  
+**Watch Now evidence lane:** 69 -> 69 verified PASS-only items  
+**Added this update:** 0  
+**Latest bounded QA:** 5 checked / 5 PASS / 0 held for retry  
+**Sentinel:** PASS/LOW  
+**Publication:** BLOCKED / PAUSE_PUBLICATION respected  
+**Raw lane URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json
+
+**What changed:** Promoted a clean 5/5 PASS bounded QA batch from the affected movie set. No publication, broad expansion, cache clear, deletion, or source mutation was performed.
+
+**Added titles:** 
+
+**Next autonomous action:** Continue the detached go-live campaign, keep noncritical expansion suppressed, keep publication blocked, and promote only new PASS rows after each bounded QA cycle.
 ## GO-LIVE DELIVERY UPDATE — MOVIE + TV PASS-ONLY BATCH PROMOTED
 
 **Updated UTC:** 2026-06-14T16:56:01Z  
@@ -4056,6 +4072,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
