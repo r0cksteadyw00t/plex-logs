@@ -1,8 +1,8 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T15:26:04Z  
+Updated UTC: 2026-06-14T15:40:49Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 48
+Item count: 51
 
 ## Latest Quiet-Window Batch
 
@@ -15,9 +15,9 @@ Item count: 48
 
 ## Added This Update
 
-- Split (2017) -- scarflix_part-9f1e4252bdcbf864 -- HTTP 200
-- Spy (2015) -- scarflix_part-94620cf0a7e850ab -- HTTP 200
-- Stand by Me (1986) -- scarflix_part-d708c8b30a147319 -- HTTP 200
+- The Boy and the Heron (2023) -- scarflix_part-e88bc8bc09b28631 -- HTTP 200
+- The Boy in the Striped Pyjamas (2008) -- scarflix_part-6d4172141ef2dd2a -- HTTP 200
+- The Cabin in the Woods (2012) -- scarflix_part-4e9571fb14dbaf20 -- HTTP 200
 
 ## Held Retry Sources
 
@@ -78,3 +78,6 @@ Item count: 48
 - Split (2017) -- scarflix_part-9f1e4252bdcbf864 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Spy (2015) -- scarflix_part-94620cf0a7e850ab -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Stand by Me (1986) -- scarflix_part-d708c8b30a147319 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- The Boy and the Heron (2023) -- scarflix_part-e88bc8bc09b28631 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- The Boy in the Striped Pyjamas (2008) -- scarflix_part-6d4172141ef2dd2a -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- The Cabin in the Woods (2012) -- scarflix_part-4e9571fb14dbaf20 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
