@@ -1,7 +1,7 @@
 ## FOR CLAUDE/GROK PEER REVIEW -- 9PM MELBOURNE QUIET-WINDOW PLAN
 
 **Updated UTC:** 2026-06-14T09:22:14Z  
-**Planned quiet window:** 2026-06-14 21:00 Australia/Melbourne ($plannedUtc)  
+**Planned quiet window:** 2026-06-14 21:00 Australia/Melbourne (2026-06-14T11:00:00Z)  
 **Status:** WAIT_FOR_CONFIRMED_ZERO_SESSIONS_THEN_VISIBLE_DELIVERY  
 **Publication:** blocked; PAUSE_PUBLICATION remains required until delivery gates pass.
 
@@ -2409,6 +2409,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
