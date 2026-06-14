@@ -1,6 +1,6 @@
 # Playback Reliability Engineering Status
 
-## Current Update - 2026-06-14T03:07:18Z
+## Current Update - 2026-06-14T03:22:15Z
 
 **Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
 **Publication allowed:** false  
@@ -9,11 +9,11 @@
 
 Latest evidence:
 
-- Extended delivery runner cycle 123.
-- Launch health 21 ms; post-QA launch check 19 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint.
-- Bounded Materialized QA skip 115, limit 3: 3/3 PASS, 0 failed.
-- Passed titles: The Mitchells vs. the Machines; The Mummy: Tomb of the Dragon Emperor; The Nice Guys.
-- Retry ledger: tracked 18, held 0, threshold 3.
+- Extended delivery runner cycle 125.
+- Launch health 41 ms; post-QA launch check 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA skip 122, limit 3: 3/3 PASS, 0 failed.
+- Passed titles: .
+- Retry ledger: tracked 19, held 0, threshold 3.
 
 Current gate:
 
