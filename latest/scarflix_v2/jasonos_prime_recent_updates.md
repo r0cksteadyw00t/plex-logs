@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T04:25:02.419Z
+Updated UTC: 2026-06-14T04:30:02.601Z
 Source: live status merge
 
-- 2026-06-14T04:22:20.534Z - Cycle 134 Source Retry Added - 2026-06-14T04:22:20Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 134: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 12, limit 5: 4/5 PASS, 1 REVIEW. Passed titles: Battleship; Casino; Cloverfield; Clueless.
-- 2026-06-14T04:20:05Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T04:25:11.844Z - Cycle 134 Source Retry Added - 2026-06-14T04:22:20Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 134: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 12, limit 5: 4/5 PASS, 1 REVIEW. Passed titles: Battleship; Casino; Cloverfield; Clueless.
+- 2026-06-14T04:25:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T04:15:11.428Z - Cycle 132 Clean Pass - 2026-06-14T04:07:10Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 132: launch health 26 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 5, limit 3: 3/3 PASS, 0 failed. Passed titles: American Pie: Reunion; Angels & Demons; Anna.
 - 2026-06-14T04:00:11.779Z - Cycle 130 Clean Pass + Cursor Wrap - 2026-06-14T03:54:01Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 130: launch health 42 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 139, limit 3: 2/2 PASS, 0 failed. Passed titles: The Rising; Aftermath.
 - 2026-06-14T03:45:11.775Z - Cycle 128 Source Retry Added - 2026-06-14T03:39:57Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 128: launch health 20 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 132, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Twister; Undisputed III: Redemption; Valerian an...
