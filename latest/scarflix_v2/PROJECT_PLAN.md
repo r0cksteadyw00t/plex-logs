@@ -1,3 +1,13 @@
+## Cycle 105 Source Backlog Update - 2026-06-14T00:50:27Z
+
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
+- Extended runner cycle `105`: launch health `21 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA batch skip `46`, limit `3`: `2/3 PASS`, `1/3 REVIEW`.
+- Homefront and Idiocracy passed Plex decision HTTP `200`.
+- `ScarFLIX Part 31696108f69a37b9` failed before Plex decision with `webdav_head_upstream_server_error`.
+- Retry ledger: tracked `11`, held `0`, threshold `3`.
+- Watch placeholder-like failed title for possible metadata/source-quality issue if it repeats. Keep source-only retry policy; do not publish or expand.
+
 ## Extended Delivery Runner Confirmed - 2026-06-14T00:40:06Z
 
 - Status: ACTUAL_GO_LIVE_DELIVERY_RUNNER_EXTENDED_CONFIRMED.
