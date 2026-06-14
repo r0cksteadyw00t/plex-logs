@@ -1,48 +1,49 @@
 {
   "component": "scarflix_watch_now_verified_lane",
   "status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "updated_utc": "2026-06-14T12:09:56Z",
-  "item_count": 11,
+  "updated_utc": "2026-06-14T12:40:00Z",
+  "item_count": 14,
   "latest_batch": {
     "source": "materialized_canary_decision_qa_status",
-    "updated_utc": "2026-06-14T12:03:46Z",
-    "checked": 3,
+    "updated_utc": "2026-06-14T12:34:18Z",
+    "checked": 4,
     "passed": 3,
-    "review": 0,
+    "review": 1,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 3
+      "webdav_head_and_temporary_range_warm_passed": 3,
+      "webdav_head_upstream_server_error": 1
     }
   },
   "added_this_update": [
     {
-      "title": "The Reader (2008)",
-      "hash": "scarflix_part-cbb3019bd5a233a2",
+      "title": "Valerian and the City of a Thousand Planets (2017)",
+      "hash": "scarflix_part-68c43fa40f40a5e5",
       "status": "PASS",
       "http": 200,
-      "ms": 4988,
-      "content_length": "1772611050",
+      "ms": 6121,
+      "content_length": "3276150755",
       "source": "quiet_window_bounded_qa_pass",
-      "verified_utc": "2026-06-14T12:02:51Z"
+      "verified_utc": "2026-06-14T12:33:27Z"
     },
     {
-      "title": "The Secret of NIMH (1982)",
-      "hash": "scarflix_part-5ed2c591e5dd946b",
+      "title": "Vertigo (1958)",
+      "hash": "scarflix_part-ac22c691d6568126",
       "status": "PASS",
       "http": 200,
-      "ms": 7737,
-      "content_length": "3797746938",
+      "ms": 1653,
+      "content_length": "2630942761",
       "source": "quiet_window_bounded_qa_pass",
-      "verified_utc": "2026-06-14T12:03:11Z"
+      "verified_utc": "2026-06-14T12:33:47Z"
     },
     {
-      "title": "The Secret World of Arrietty (2010)",
-      "hash": "scarflix_part-d210252fd88190b1",
+      "title": "Downton Abbey (2010) - S01E01",
+      "hash": "scarflix_part-b40cd0c89fdac0f7",
       "status": "PASS",
       "http": 200,
-      "ms": 1761,
-      "content_length": "943107502",
+      "ms": 6831,
+      "content_length": "5194361033",
       "source": "quiet_window_bounded_qa_pass",
-      "verified_utc": "2026-06-14T12:03:36Z"
+      "verified_utc": "2026-06-14T12:34:12Z"
     }
   ],
   "items": [
@@ -155,6 +156,36 @@
       "content_length": "943107502",
       "source": "quiet_window_bounded_qa_pass",
       "verified_utc": "2026-06-14T12:03:36Z"
+    },
+    {
+      "title": "Valerian and the City of a Thousand Planets (2017)",
+      "hash": "scarflix_part-68c43fa40f40a5e5",
+      "status": "PASS",
+      "http": 200,
+      "ms": 6121,
+      "content_length": "3276150755",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T12:33:27Z"
+    },
+    {
+      "title": "Vertigo (1958)",
+      "hash": "scarflix_part-ac22c691d6568126",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1653,
+      "content_length": "2630942761",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T12:33:47Z"
+    },
+    {
+      "title": "Downton Abbey (2010) - S01E01",
+      "hash": "scarflix_part-b40cd0c89fdac0f7",
+      "status": "PASS",
+      "http": 200,
+      "ms": 6831,
+      "content_length": "5194361033",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T12:34:12Z"
     }
   ],
   "caveat": "This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.",
