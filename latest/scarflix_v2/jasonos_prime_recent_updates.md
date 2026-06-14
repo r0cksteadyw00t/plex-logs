@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T05:00:02.578Z
+Updated UTC: 2026-06-14T05:05:02.593Z
 Source: live status merge
 
-- 2026-06-14T04:55:12.064Z - Cycle 138 Source Retry Added - 2026-06-14T04:52:14Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 138: launch health 19 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 29, limit 6: 5/6 PASS, 1 REVIEW. Passed titles: Dune; EuroTrip; Ex Machina; Fantastic Mr. Fox; Fa...
-- 2026-06-14T04:55:05Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T05:00:11.725Z - Cycle 138 Source Retry Added - 2026-06-14T04:52:14Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 138: launch health 19 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 29, limit 6: 5/6 PASS, 1 REVIEW. Passed titles: Dune; EuroTrip; Ex Machina; Fantastic Mr. Fox; Fa...
+- 2026-06-14T05:00:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T04:45:11.669Z - Cycle 136 Clean Pass - 2026-06-14T04:37:06Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 136: launch health 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 20, limit 4: 4/4 PASS, 0 failed. Passed titles: Daredevil; Dawn of the Dead; Death Race; Despicabl...
 - 2026-06-14T04:30:12.030Z - Cycle 134 Source Retry Added - 2026-06-14T04:22:20Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 134: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 12, limit 5: 4/5 PASS, 1 REVIEW. Passed titles: Battleship; Casino; Cloverfield; Clueless.
 - 2026-06-14T04:15:11.428Z - Cycle 132 Clean Pass - 2026-06-14T04:07:10Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 132: launch health 26 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 5, limit 3: 3/3 PASS, 0 failed. Passed titles: American Pie: Reunion; Angels & Demons; Anna.
