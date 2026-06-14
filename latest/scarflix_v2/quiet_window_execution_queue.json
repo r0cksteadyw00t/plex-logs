@@ -1,7 +1,12 @@
 {
   "schema": "jasonos.quiet_window_execution_queue.v1",
-  "created_utc": "2026-06-13T11:03:53Z",
-  "status": "HELD_ACTIVE_PLEX_PLAYBACK",
+  "updated_utc": "2026-06-14T09:22:14Z",
+  "status": "PLANNED_QUIET_WINDOW_AT_2026_06_14_2100_MELBOURNE",
+  "planned_quiet_window": {
+    "local_time": "2026-06-14 21:00 Australia/Melbourne",
+    "utc_time": "2026-06-14T11:00:00Z",
+    "source": "Jason advised current Plex viewers should be finished at 9pm Melbourne time."
+  },
   "resume_gates": {
     "active_plex_sessions_required": 0,
     "consecutive_zero_session_checks": 2,
@@ -10,22 +15,25 @@
       "REVIEW_MEDIUM"
     ],
     "pause_publication_required": true,
-    "plex_background_process_count_required": 0,
-    "cmd_echo_alive_max_ms_average": 300
+    "cmd_echo_alive_max_ms_average": 300,
+    "no_active_plex_background_indexing_required": true
   },
   "queued_steps": [
-    "Resume minimal status control plane",
-    "Mission 2 Threadfin virtual adapter verification only",
-    "Playback path verification for current Watch Now lane",
-    "ScarFLIX Materialized QA recovery planning only"
+    "Verify active Plex sessions are zero for two consecutive checks.",
+    "Verify Sentinel is PASS/LOW or REVIEW/MEDIUM and command launch is healthy.",
+    "Create or refresh a visible verified Watch Now lane from already-passing titles.",
+    "Run bounded playback-path verification for the Watch Now lane using detached/local runner only.",
+    "If playback lane passes, prepare next bounded visible expansion gate without broad publication.",
+    "Mission 002: progress Plex Live TV/DVR attach only if it can be done without disrupting Plex and with rollback."
   ],
   "blocked_while_active_playback": [
     "Plex restart or stop",
     "Plex scans or refreshes",
     "Threadfin/Plex Live TV attach",
-    "ScarFLIX publication or expansion",
+    "ScarFLIX publication or broad expansion",
     "Heavy QA",
     "Path mutation, cleanup, deletion, source mutation, broad retries"
   ],
+  "corrected_success_metric": "Visible in Plex and verified playable by the user, not only internal QA passed.",
   "fasttrack_reenable_allowed": false
 }
