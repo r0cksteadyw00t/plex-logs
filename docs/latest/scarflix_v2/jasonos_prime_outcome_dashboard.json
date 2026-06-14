@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-14T00:30:01Z",
+  "updated_utc": "2026-06-14T00:40:01Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -125,9 +125,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 1041,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-14T00:30:06Z",
+    "platform_child_progress_age_minutes": 1051,
+    "mirror_updated_age_minutes": 4,
+    "next_check_utc": "2026-06-14T00:40:06Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 1041,
+    "age_minutes": 1051,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-14T00:25:03Z",
+    "updated_utc": "2026-06-14T00:35:03Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-14T00:30:01Z",
+    "updated_utc": "2026-06-14T00:40:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,14 +376,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-14T00:25:12.142Z",
-      "title": "Cycle 100 Source Retry Tracking Updated - 2026-06-14 10:20",
-      "detail": "Current verified state: Go-live runner cycle `100` completed with launch health `17 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`. Escape Plan 2: Hades is newly tracked for `webdav_head_upstream_server_error`."
+      "utc": "2026-06-14T00:38:24.224Z",
+      "title": "Actual Go-Live Delivery Window Extended - 2026-06-14 10:36",
+      "detail": "Current verified state: The local go-live campaign runner now reflects Jason's extra 24-hour exclusive Plex access window. Runner was restarted safely between QA batches; Plex was not stopped. New runner PID: `12560`."
     },
     {
-      "utc": "2026-06-14T00:25:04Z",
+      "utc": "2026-06-14T00:35:04Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
+    },
+    {
+      "utc": "2026-06-14T00:30:11.353Z",
+      "title": "Cycle 100 Source Retry Tracking Updated - 2026-06-14 10:20",
+      "detail": "Current verified state: Go-live runner cycle `100` completed with launch health `17 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`. Escape Plan 2: Hades is newly tracked for `webdav_head_upstream_server_error`."
     },
     {
       "utc": "2026-06-14T00:15:11.825Z",
@@ -439,11 +444,6 @@
       "utc": "2026-06-13T10:06:37.091Z",
       "title": "Non-Disruptive Project Progress While Plex Is Active - 2026-06-13 19:58",
       "detail": "Current verified state: Active Plex sessions: `2`. Sentinel: `PASS / LOW`. Plex watchdog: `PASS`."
-    },
-    {
-      "utc": "2026-06-13T09:51:04.372Z",
-      "title": "Mission 002 IPTV-Only Cutover Engineering Ready - 2026-06-13 19:49",
-      "detail": "Current verified state: Mission 002 is explicitly IPTV-only. No physical tuner, antenna, DVB/OTA device, coax input, or hardware HDHomeRun will be used. Threadfin remains the virtual Plex-compatible adapter layer only. Added full architecture doc: `jasonos/iptv/cutover/MISSION_002_IPTV_ONLY_CUTOVER_ARCHITECTURE.md`."
     }
   ],
   "outcomes": [
@@ -468,7 +468,7 @@
     {
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
-      "last_change": "2026-06-14T00:25:19Z - materialized canary Plex decision QA",
+      "last_change": "2026-06-14T00:38:37Z - materialized canary Plex decision QA",
       "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW_PARTIAL_BATCH_PASS, targets=229, rows_found=146, checked=3, decision=3/3, failed=0, success_rate=100%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=0/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=1. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
       "progress": 36,
       "eta": "resume controlled materialized/WebDAV publishing",
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-14T00:30:01Z",
+    "updated_utc": "2026-06-14T00:40:01Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -807,8 +807,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 503516,
-    "safe_pipeline_log_age_seconds": 560400,
+    "canary_status_age_seconds": 504112,
+    "safe_pipeline_log_age_seconds": 560996,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -825,7 +825,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=36708"
+        "detail": "pid=30336"
       }
     ],
     "blockers": []
