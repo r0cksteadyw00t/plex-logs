@@ -1,24 +1,27 @@
 {
   "component": "scarflix_watch_now_verified_lane",
   "status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "updated_utc": "2026-06-14T15:40:49Z",
-  "item_count": 51,
+  "updated_utc": "2026-06-14T15:55:55Z",
+  "item_count": 54,
   "latest_batch": {
     "source": "materialized_canary_decision_qa_status.json",
-    "source_updated_utc": "2026-06-14T15:36:35Z",
-    "status": "REVIEW_PARTIAL_BATCH_PASS",
-    "checked": 3,
+    "source_updated_utc": "2026-06-14T15:50:36Z",
+    "status": "REVIEW",
+    "checked": 5,
     "passed": 3,
-    "failed": 0,
+    "failed": 2,
     "new_unique_added": 3,
     "reverified_existing": [],
-    "review_retryable": [],
-    "held_retry_count": 6
+    "review_retryable": [
+      "The Empty Man (2020)",
+      "The Faculty (1998)"
+    ],
+    "held_retry_count": 7
   },
   "added_this_update": [
-    "The Boy and the Heron (2023)",
-    "The Boy in the Striped Pyjamas (2008)",
-    "The Cabin in the Woods (2012)"
+    "The Deadly Little Mermaid (2026)",
+    "The Devil's Advocate (1997)",
+    "The Equalizer 2 (2018)"
   ],
   "items": [
     {
@@ -530,6 +533,36 @@
       "content_length": "3405621919",
       "source": "quiet_window_bounded_qa_pass",
       "verified_utc": "2026-06-14T15:36:25Z"
+    },
+    {
+      "title": "The Deadly Little Mermaid (2026)",
+      "hash": "scarflix_part-b0824386b672f488",
+      "status": "PASS",
+      "http": 200,
+      "ms": 3854,
+      "content_length": "2514816935",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T15:49:42Z"
+    },
+    {
+      "title": "The Devil's Advocate (1997)",
+      "hash": "scarflix_part-d99a060ace386b52",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1528,
+      "content_length": "1356274717",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T15:49:54Z"
+    },
+    {
+      "title": "The Equalizer 2 (2018)",
+      "hash": "scarflix_part-761f0288a98ecf2c",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1430,
+      "content_length": "2893145364",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T15:50:19Z"
     }
   ],
   "caveat": "This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.",
