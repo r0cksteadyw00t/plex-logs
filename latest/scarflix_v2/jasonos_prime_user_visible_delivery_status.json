@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_user_visible_delivery_status",
-  "updated_utc": "2026-06-14T11:13:11Z",
-  "status": "QUIET_WINDOW_DELIVERY_IN_PROGRESS_WATCH_NOW_LANE_REFRESHED",
-  "active_plex_sessions": 0,
+  "updated_utc": "2026-06-14T11:24:56Z",
+  "status": "HELD_ACTIVE_PLAYBACK_AFTER_QUIET_WINDOW_STARTED",
+  "active_plex_sessions": 1,
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "publication_state": "PAUSE_PUBLICATION_REQUIRED",
@@ -16,11 +16,10 @@
     "skip": 116,
     "limit": 3
   },
-  "retry_held_count": 0,
+  "blocker": "A Plex session became active again after the quiet-window delivery start; disruptive QA/attach/publication work is held.",
   "next_safe_delivery_focus": [
-    "Keep bounded QA running via existing campaign runner while sessions remain zero.",
-    "Do not broaden publication; grow visible Watch Now lane only from passing evidence.",
-    "Investigate or retry source-level WebDAV 503 items without rejecting titles.",
-    "Prepare Mission 002 Plex attach only as separate reversible quiet-window step."
+    "Wait for active sessions to return to zero for two consecutive checks.",
+    "Resume bounded Watch Now lane growth only after the session clears.",
+    "Keep Mission 002 Plex attach held until zero sessions and safe attach path is available."
   ]
 }
