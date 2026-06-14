@@ -1,22 +1,24 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T14:10:42Z  
+Updated UTC: 2026-06-14T14:25:43Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 30
+Item count: 34
 
 ## Latest Quiet-Window Batch
 
-- Checked: 3
-- Passed: 2
-- Review: 1
-- New unique items added: 2
+- Checked: 4
+- Passed: 4
+- Review: 0
+- New unique items added: 4
 - Reverified existing items: 0
 - Held retry sources: 3
 
 ## Added This Update
 
-- Hidden Figures (2016) -- scarflix_part-ec10430fcf0b3b3a -- HTTP 200
-- Homefront (2013) -- scarflix_part-f5c5e50cc68c7a6a -- HTTP 200
+- Indecent Proposal (1993) -- scarflix_part-52c63b31fc203627 -- HTTP 200
+- Josee, the Tiger and the Fish (2020) -- scarflix_part-076bee16088c0032 -- HTTP 200
+- L.E.T.H.A.L. Ladies: Return to Savage Beach (1998) -- scarflix_part-c624488ce1ac323e -- HTTP 200
+- Legend (2015) -- scarflix_part-a6694a54be2d1ec9 -- HTTP 200
 
 ## Held Retry Sources
 
@@ -56,3 +58,7 @@ Item count: 30
 - Fracture (2007) -- scarflix_part-61f18dcc8c34f579 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Hidden Figures (2016) -- scarflix_part-ec10430fcf0b3b3a -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Homefront (2013) -- scarflix_part-f5c5e50cc68c7a6a -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Indecent Proposal (1993) -- scarflix_part-52c63b31fc203627 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Josee, the Tiger and the Fish (2020) -- scarflix_part-076bee16088c0032 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- L.E.T.H.A.L. Ladies: Return to Savage Beach (1998) -- scarflix_part-c624488ce1ac323e -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Legend (2015) -- scarflix_part-a6694a54be2d1ec9 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
