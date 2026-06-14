@@ -1,7 +1,20 @@
 {
   "component": "scarflix_watch_now_verified_lane",
-  "status": "PASS_LIMITED_6_MOVIE_WEB_DAV_HEAD_VERIFIED",
-  "updated_utc": "2026-06-13T05:31:37Z",
+  "status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
+  "updated_utc": "2026-06-14T11:12:27Z",
+  "item_count": 8,
+  "latest_batch": {
+    "source": "materialized_canary_decision_qa_status",
+    "updated_utc": "2026-06-14T11:11:37Z",
+    "checked": 3,
+    "passed": 2,
+    "review": 1,
+    "reasons": {
+      "webdav_head_fallback_range_and_temporary_range_warm_passed": 1,
+      "webdav_head_and_temporary_range_warm_passed": 1,
+      "webdav_head_upstream_server_error": 1
+    }
+  },
   "items": [
     {
       "title": "Gremlins",
@@ -9,7 +22,9 @@
       "status": "PASS",
       "http": 200,
       "ms": 1802,
-      "content_length": "1714768887"
+      "content_length": "1714768887",
+      "source": "previous_watch_now_lane",
+      "verified_utc": "2026-06-13T05:31:37Z"
     },
     {
       "title": "Anna",
@@ -17,7 +32,9 @@
       "status": "PASS",
       "http": 200,
       "ms": 7482,
-      "content_length": "1721714811"
+      "content_length": "1721714811",
+      "source": "previous_watch_now_lane",
+      "verified_utc": "2026-06-13T05:31:37Z"
     },
     {
       "title": "Annabelle",
@@ -25,7 +42,9 @@
       "status": "PASS",
       "http": 200,
       "ms": 8992,
-      "content_length": "2022794810"
+      "content_length": "2022794810",
+      "source": "previous_watch_now_lane",
+      "verified_utc": "2026-06-13T05:31:37Z"
     },
     {
       "title": "Annihilation",
@@ -33,7 +52,9 @@
       "status": "PASS",
       "http": 200,
       "ms": 8979,
-      "content_length": "2329772465"
+      "content_length": "2329772465",
+      "source": "previous_watch_now_lane",
+      "verified_utc": "2026-06-13T05:31:37Z"
     },
     {
       "title": "Armageddon",
@@ -41,7 +62,9 @@
       "status": "PASS",
       "http": 200,
       "ms": 7414,
-      "content_length": "732649045"
+      "content_length": "732649045",
+      "source": "previous_watch_now_lane",
+      "verified_utc": "2026-06-13T05:31:37Z"
     },
     {
       "title": "Battleship",
@@ -49,8 +72,31 @@
       "status": "PASS",
       "http": 200,
       "ms": 7220,
-      "content_length": "892122616"
+      "content_length": "892122616",
+      "source": "previous_watch_now_lane",
+      "verified_utc": "2026-06-13T05:31:37Z"
+    },
+    {
+      "title": "The Mummy Tomb of the Dragon Emperor (2008)",
+      "hash": "scarflix_part-5c4c8ab3132bfd55",
+      "status": "PASS",
+      "http": 206,
+      "ms": 6464,
+      "content_length": "65536",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T11:10:39Z"
+    },
+    {
+      "title": "The Nice Guys (2016)",
+      "hash": "scarflix_part-cba26c04e97c0343",
+      "status": "PASS",
+      "http": 200,
+      "ms": 7593,
+      "content_length": "912089201",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T11:11:23Z"
     }
   ],
-  "caveat": "HTTP HEAD passed but latency remains high on several titles; use this as limited watch-now lane, not broad expansion clearance."
+  "caveat": "This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.",
+  "next_action": "Use this lane for user-facing Watch Now guidance; continue bounded QA/retry/quarantine before broad publication."
 }
