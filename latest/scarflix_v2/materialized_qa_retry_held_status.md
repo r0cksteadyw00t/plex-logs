@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T03:16:30Z
+- Updated UTC: 2026-06-14T03:23:59Z
 - Threshold: 3
-- Tracked: 19
+- Tracked: 20
 - Held: 0
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -31,5 +31,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - The Faculty: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Lord of the Rings: The War of the Rohirrim: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - The Princess Diaries 2: Royal Engagement: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- They Call Me Trinity: TRACKING_RETRY; failures=1; held=false; reason=timeout
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
