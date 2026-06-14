@@ -1,14 +1,14 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "status": "REVIEW_PARTIAL_BATCH_PASS",
-  "started_utc": "2026-06-14T21:03:48Z",
-  "ended_utc": "2026-06-14T21:05:57Z",
-  "updated_utc": "2026-06-14T21:05:57Z",
+  "status": "REVIEW",
+  "started_utc": "2026-06-14T21:11:38Z",
+  "ended_utc": "2026-06-14T21:14:34Z",
+  "updated_utc": "2026-06-14T21:14:34Z",
   "target_count": 229,
   "rows_found": 146,
-  "checked": 6,
+  "checked": 7,
   "passed": 6,
-  "failed": 0,
+  "failed": 1,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
@@ -19,17 +19,19 @@
   "retry_held_candidates": 11,
   "decision_probe_unfiltered_candidates": 141,
   "layered_validation_summary": {
-    "total": 6,
+    "total": 7,
     "passed": 6,
-    "review": 0,
+    "review": 1,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 6
+      "webdav_head_fallback_range_and_temporary_range_warm_passed": 1,
+      "webdav_head_timeout": 1,
+      "webdav_head_and_temporary_range_warm_passed": 5
     }
   },
-  "decision_probe_skip": 26,
-  "decision_probe_limit": 6,
+  "decision_probe_skip": 32,
+  "decision_probe_limit": 7,
   "decision_probe_total_candidates": 130,
-  "selected_decision_candidates": 6,
+  "selected_decision_candidates": 7,
   "stopped_early": false,
   "stopped_reason": "",
   "targets": [
@@ -4412,10 +4414,10 @@
   "layered_results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T21:04:23Z",
-      "target_hash": "ScarFLIX_part-f6f047a41becc4ce",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
+      "updated_utc": "2026-06-14T21:12:18Z",
+      "target_hash": "ScarFLIX_part-d1ce9c47a23732b3",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4427,10 +4429,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-f6f047a41becc4ce",
+          "link_target": "S:\\media\\ScarFLIX_part-d1ce9c47a23732b3",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4438,69 +4440,79 @@
           "is_file": false
         },
         "webdav_head": {
-          "ok": true,
+          "ok": false,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
-          "status_code": 200,
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
+          "status_code": 0,
           "bytes_read": 0,
-          "content_length": "2399851105",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 1651,
+          "timed_out": true,
+          "error": "timeout",
+          "elapsed_ms": 8013,
           "attempt": 2,
-          "reason": "ok",
+          "reason": "timeout",
           "attempts": 2
         },
         "webdav_head_attempts": [
           {
             "ok": false,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
             "status_code": 0,
             "bytes_read": 0,
             "timed_out": true,
             "error": "timeout",
-            "elapsed_ms": 8015,
+            "elapsed_ms": 8008,
             "attempt": 1,
             "reason": "timeout"
           },
           {
-            "ok": true,
+            "ok": false,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
-            "status_code": 200,
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
+            "status_code": 0,
             "bytes_read": 0,
-            "content_length": "2399851105",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 1651,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8013,
             "attempt": 2,
-            "reason": "ok"
+            "reason": "timeout"
           }
         ],
+        "webdav_head_fallback_range": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 65536,
+          "content_length": "65536",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 12254,
+          "reason": "ok"
+        },
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3651,
+          "elapsed_ms": 3892,
           "reason": "ok"
         }
       },
       "status": "PASS",
-      "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 14079
+      "reason": "webdav_head_fallback_range_and_temporary_range_warm_passed",
+      "elapsed_ms": 32930
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T21:04:36Z",
-      "target_hash": "ScarFLIX_part-519e46c6da7cf797",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
+      "updated_utc": "2026-06-14T21:12:55Z",
+      "target_hash": "ScarFLIX_part-f96ecae0bf043548",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4512,10 +4524,92 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-519e46c6da7cf797",
+          "link_target": "S:\\media\\ScarFLIX_part-f96ecae0bf043548",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": false,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+          "status_code": 0,
+          "bytes_read": 0,
+          "timed_out": true,
+          "error": "timeout",
+          "elapsed_ms": 8010,
+          "attempt": 2,
+          "reason": "timeout",
+          "attempts": 2
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8017,
+            "attempt": 1,
+            "reason": "timeout"
+          },
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8010,
+            "attempt": 2,
+            "reason": "timeout"
+          }
+        ],
+        "webdav_head_fallback_range": {
+          "ok": false,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+          "status_code": 0,
+          "bytes_read": 0,
+          "timed_out": true,
+          "error": "timeout",
+          "elapsed_ms": 12008,
+          "reason": "timeout"
+        }
+      },
+      "status": "REVIEW",
+      "reason": "webdav_head_timeout",
+      "elapsed_ms": 28793
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-14T21:13:13Z",
+      "target_hash": "ScarFLIX_part-c017966a31451921",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-c017966a31451921/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-c017966a31451921",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4525,13 +4619,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c017966a31451921/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "2165879819",
+          "content_length": "1377563229",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 7788,
+          "elapsed_ms": 5999,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4540,13 +4634,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c017966a31451921/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "2165879819",
+            "content_length": "1377563229",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7788,
+            "elapsed_ms": 5999,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4554,26 +4648,26 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c017966a31451921/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3901,
+          "elapsed_ms": 3905,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 11691
+      "elapsed_ms": 9905
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T21:04:53Z",
-      "target_hash": "ScarFLIX_part-fe8bc55cabbdf41b",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-fe8bc55cabbdf41b/stream.mkv",
+      "updated_utc": "2026-06-14T21:13:30Z",
+      "target_hash": "ScarFLIX_part-854736eb92c08f81",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4585,10 +4679,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-fe8bc55cabbdf41b",
+          "link_target": "S:\\media\\ScarFLIX_part-854736eb92c08f81",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4598,13 +4692,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-fe8bc55cabbdf41b/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "1933417222",
+          "content_length": "2625992775",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 7303,
+          "elapsed_ms": 7413,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4613,13 +4707,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-fe8bc55cabbdf41b/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1933417222",
+            "content_length": "2625992775",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7303,
+            "elapsed_ms": 7413,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4627,26 +4721,26 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-fe8bc55cabbdf41b/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4482,
+          "elapsed_ms": 4502,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 11788
+      "elapsed_ms": 11916
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T21:05:07Z",
-      "target_hash": "ScarFLIX_part-260dcb783b5b69c9",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-260dcb783b5b69c9/stream.mkv",
+      "updated_utc": "2026-06-14T21:13:47Z",
+      "target_hash": "ScarFLIX_part-61f18dcc8c34f579",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4658,10 +4752,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-260dcb783b5b69c9",
+          "link_target": "S:\\media\\ScarFLIX_part-61f18dcc8c34f579",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4671,13 +4765,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-260dcb783b5b69c9/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "1880046373",
+          "content_length": "1607882631",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1391,
+          "elapsed_ms": 7404,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4686,13 +4780,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-260dcb783b5b69c9/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1880046373",
+            "content_length": "1607882631",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1391,
+            "elapsed_ms": 7404,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4700,26 +4794,26 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-260dcb783b5b69c9/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4058,
+          "elapsed_ms": 3858,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5450
+      "elapsed_ms": 11262
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T21:05:27Z",
-      "target_hash": "ScarFLIX_part-c606557aefb014ab",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
+      "updated_utc": "2026-06-14T21:14:05Z",
+      "target_hash": "ScarFLIX_part-700e6d7fdb8236a0",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4731,10 +4825,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-c606557aefb014ab",
+          "link_target": "S:\\media\\ScarFLIX_part-700e6d7fdb8236a0",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4744,67 +4838,55 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "3828457819",
+          "content_length": "681508517",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1535,
-          "attempt": 2,
+          "elapsed_ms": 7960,
+          "attempt": 1,
           "reason": "ok",
-          "attempts": 2
+          "attempts": 1
         },
         "webdav_head_attempts": [
           {
-            "ok": false,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
-            "status_code": 0,
-            "bytes_read": 0,
-            "timed_out": true,
-            "error": "timeout",
-            "elapsed_ms": 8014,
-            "attempt": 1,
-            "reason": "timeout"
-          },
-          {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3828457819",
+            "content_length": "681508517",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1535,
-            "attempt": 2,
+            "elapsed_ms": 7960,
+            "attempt": 1,
             "reason": "ok"
           }
         ],
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4366,
+          "elapsed_ms": 3842,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 14674
+      "elapsed_ms": 11803
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T21:05:51Z",
-      "target_hash": "ScarFLIX_part-dec3fa773c4923fe",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+      "updated_utc": "2026-06-14T21:14:23Z",
+      "target_hash": "ScarFLIX_part-b1e773a80f50f6a6",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gravity (2013)\\ScarFLIX_part-b1e773a80f50f6a6",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b1e773a80f50f6a6/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4816,10 +4898,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gravity (2013)\\ScarFLIX_part-b1e773a80f50f6a6",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gravity (2013)\\ScarFLIX_part-b1e773a80f50f6a6",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-dec3fa773c4923fe",
+          "link_target": "S:\\media\\ScarFLIX_part-b1e773a80f50f6a6",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4829,69 +4911,57 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b1e773a80f50f6a6/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "630319537",
+          "content_length": "11665981129",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 5392,
-          "attempt": 2,
+          "elapsed_ms": 7574,
+          "attempt": 1,
           "reason": "ok",
-          "attempts": 2
+          "attempts": 1
         },
         "webdav_head_attempts": [
           {
-            "ok": false,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
-            "status_code": 0,
-            "bytes_read": 0,
-            "timed_out": true,
-            "error": "timeout",
-            "elapsed_ms": 8007,
-            "attempt": 1,
-            "reason": "timeout"
-          },
-          {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b1e773a80f50f6a6/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "630319537",
+            "content_length": "11665981129",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 5392,
-            "attempt": 2,
+            "elapsed_ms": 7574,
+            "attempt": 1,
             "reason": "ok"
           }
         ],
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b1e773a80f50f6a6/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3762,
+          "elapsed_ms": 3955,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 17918
+      "elapsed_ms": 11531
     }
   ],
   "results": [
     {
-      "metadata_id": 50506,
-      "part_id": 128012,
+      "metadata_id": 50455,
+      "part_id": 127917,
       "section_id": 5,
-      "title": "Drive",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce\\stream.mkv",
+      "title": "Fargo",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4912,14 +4982,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-f6f047a41becc4ce",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce",
+      "target_hash": "ScarFLIX_part-d1ce9c47a23732b3",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T21:04:23Z",
-        "target_hash": "ScarFLIX_part-f6f047a41becc4ce",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
+        "updated_utc": "2026-06-14T21:12:18Z",
+        "target_hash": "ScarFLIX_part-d1ce9c47a23732b3",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4931,10 +5001,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Drive (2011)\\ScarFLIX_part-f6f047a41becc4ce",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fargo (1996)\\ScarFLIX_part-d1ce9c47a23732b3",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-f6f047a41becc4ce",
+            "link_target": "S:\\media\\ScarFLIX_part-d1ce9c47a23732b3",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4942,70 +5012,179 @@
             "is_file": false
           },
           "webdav_head": {
-            "ok": true,
+            "ok": false,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
-            "status_code": 200,
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
+            "status_code": 0,
             "bytes_read": 0,
-            "content_length": "2399851105",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 1651,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8013,
             "attempt": 2,
-            "reason": "ok",
+            "reason": "timeout",
             "attempts": 2
           },
           "webdav_head_attempts": [
             {
               "ok": false,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
               "status_code": 0,
               "bytes_read": 0,
               "timed_out": true,
               "error": "timeout",
-              "elapsed_ms": 8015,
+              "elapsed_ms": 8008,
               "attempt": 1,
               "reason": "timeout"
             },
             {
-              "ok": true,
+              "ok": false,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
-              "status_code": 200,
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
+              "status_code": 0,
               "bytes_read": 0,
-              "content_length": "2399851105",
-              "content_type": "application/octet-stream",
-              "accept_ranges": "bytes",
-              "elapsed_ms": 1651,
+              "timed_out": true,
+              "error": "timeout",
+              "elapsed_ms": 8013,
               "attempt": 2,
-              "reason": "ok"
+              "reason": "timeout"
             }
           ],
+          "webdav_head_fallback_range": {
+            "ok": true,
+            "method": "GET",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
+            "status_code": 206,
+            "bytes_read": 65536,
+            "content_length": "65536",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 12254,
+            "reason": "ok"
+          },
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f6f047a41becc4ce/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d1ce9c47a23732b3/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3651,
+            "elapsed_ms": 3892,
             "reason": "ok"
           }
         },
         "status": "PASS",
-        "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 14079
+        "reason": "webdav_head_fallback_range_and_temporary_range_warm_passed",
+        "elapsed_ms": 32930
       }
     },
     {
-      "metadata_id": 50502,
-      "part_id": 128005,
+      "metadata_id": 50499,
+      "part_id": 128001,
       "section_id": 5,
-      "title": "Dumb and Dumber",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797\\stream.mkv",
+      "title": "Final Destination",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548\\stream.mkv",
+      "status": "REVIEW",
+      "http_status": 0,
+      "access_mode": "token",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "layered_streaming_precheck_blocked_plex_decision",
+      "reason": "Layered streaming validation blocked Plex decision: webdav_head_timeout",
+      "skipped_plex_decision": true,
+      "layered_validation": {
+        "component": "scarflix_v2_streaming_layered_validator",
+        "updated_utc": "2026-06-14T21:12:55Z",
+        "target_hash": "ScarFLIX_part-f96ecae0bf043548",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+        "map_loaded": true,
+        "map_generated_utc": "2026-06-09T10:17:48Z",
+        "map_entry_found": true,
+        "temporary_buffering": {
+          "enabled": true,
+          "persisted": false,
+          "range_bytes_requested": 4194304
+        },
+        "layers": {
+          "local_symlink_metadata": {
+            "status": "PASS",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548",
+            "is_symbolic_link": true,
+            "link_target": "S:\\media\\ScarFLIX_part-f96ecae0bf043548",
+            "error": "",
+            "blocking": false,
+            "exists": true,
+            "is_directory": false,
+            "is_file": false
+          },
+          "webdav_head": {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8010,
+            "attempt": 2,
+            "reason": "timeout",
+            "attempts": 2
+          },
+          "webdav_head_attempts": [
+            {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+              "status_code": 0,
+              "bytes_read": 0,
+              "timed_out": true,
+              "error": "timeout",
+              "elapsed_ms": 8017,
+              "attempt": 1,
+              "reason": "timeout"
+            },
+            {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+              "status_code": 0,
+              "bytes_read": 0,
+              "timed_out": true,
+              "error": "timeout",
+              "elapsed_ms": 8010,
+              "attempt": 2,
+              "reason": "timeout"
+            }
+          ],
+          "webdav_head_fallback_range": {
+            "ok": false,
+            "method": "GET",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-f96ecae0bf043548/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 12008,
+            "reason": "timeout"
+          }
+        },
+        "status": "REVIEW",
+        "reason": "webdav_head_timeout",
+        "elapsed_ms": 28793
+      },
+      "target_hash": "ScarFLIX_part-f96ecae0bf043548",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination (2000)\\ScarFLIX_part-f96ecae0bf043548"
+    },
+    {
+      "metadata_id": 50498,
+      "part_id": 128000,
+      "section_id": 5,
+      "title": "Final Destination 5",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -5026,14 +5205,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-519e46c6da7cf797",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797",
+      "target_hash": "ScarFLIX_part-c017966a31451921",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T21:04:36Z",
-        "target_hash": "ScarFLIX_part-519e46c6da7cf797",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
+        "updated_utc": "2026-06-14T21:13:13Z",
+        "target_hash": "ScarFLIX_part-c017966a31451921",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-c017966a31451921/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -5045,10 +5224,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dumb and Dumber (1994)\\ScarFLIX_part-519e46c6da7cf797",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Final Destination 5 (2011)\\ScarFLIX_part-c017966a31451921",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-519e46c6da7cf797",
+            "link_target": "S:\\media\\ScarFLIX_part-c017966a31451921",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -5058,13 +5237,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c017966a31451921/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "2165879819",
+            "content_length": "1377563229",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7788,
+            "elapsed_ms": 5999,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -5073,13 +5252,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c017966a31451921/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "2165879819",
+              "content_length": "1377563229",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 7788,
+              "elapsed_ms": 5999,
               "attempt": 1,
               "reason": "ok"
             }
@@ -5087,27 +5266,27 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-519e46c6da7cf797/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c017966a31451921/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3901,
+            "elapsed_ms": 3905,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 11691
+        "elapsed_ms": 9905
       }
     },
     {
-      "metadata_id": 50642,
-      "part_id": 128290,
+      "metadata_id": 50495,
+      "part_id": 127993,
       "section_id": 5,
-      "title": "Dune",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b\\stream.mkv",
+      "title": "Finding Dory",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -5128,14 +5307,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-fe8bc55cabbdf41b",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b",
+      "target_hash": "ScarFLIX_part-854736eb92c08f81",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T21:04:53Z",
-        "target_hash": "ScarFLIX_part-fe8bc55cabbdf41b",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-fe8bc55cabbdf41b/stream.mkv",
+        "updated_utc": "2026-06-14T21:13:30Z",
+        "target_hash": "ScarFLIX_part-854736eb92c08f81",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -5147,10 +5326,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dune (1984)\\ScarFLIX_part-fe8bc55cabbdf41b",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Finding Dory (2016)\\ScarFLIX_part-854736eb92c08f81",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-fe8bc55cabbdf41b",
+            "link_target": "S:\\media\\ScarFLIX_part-854736eb92c08f81",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -5160,13 +5339,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-fe8bc55cabbdf41b/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1933417222",
+            "content_length": "2625992775",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7303,
+            "elapsed_ms": 7413,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -5175,13 +5354,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-fe8bc55cabbdf41b/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "1933417222",
+              "content_length": "2625992775",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 7303,
+              "elapsed_ms": 7413,
               "attempt": 1,
               "reason": "ok"
             }
@@ -5189,27 +5368,27 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-fe8bc55cabbdf41b/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-854736eb92c08f81/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 4482,
+            "elapsed_ms": 4502,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 11788
+        "elapsed_ms": 11916
       }
     },
     {
-      "metadata_id": 50605,
-      "part_id": 128208,
+      "metadata_id": 50493,
+      "part_id": 127991,
       "section_id": 5,
-      "title": "EuroTrip",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9\\stream.mkv",
+      "title": "Fracture",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -5230,14 +5409,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-260dcb783b5b69c9",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9",
+      "target_hash": "ScarFLIX_part-61f18dcc8c34f579",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T21:05:07Z",
-        "target_hash": "ScarFLIX_part-260dcb783b5b69c9",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-260dcb783b5b69c9/stream.mkv",
+        "updated_utc": "2026-06-14T21:13:47Z",
+        "target_hash": "ScarFLIX_part-61f18dcc8c34f579",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -5249,10 +5428,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\EuroTrip (2004)\\ScarFLIX_part-260dcb783b5b69c9",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fracture (2007)\\ScarFLIX_part-61f18dcc8c34f579",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-260dcb783b5b69c9",
+            "link_target": "S:\\media\\ScarFLIX_part-61f18dcc8c34f579",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -5262,13 +5441,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-260dcb783b5b69c9/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1880046373",
+            "content_length": "1607882631",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1391,
+            "elapsed_ms": 7404,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -5277,13 +5456,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-260dcb783b5b69c9/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "1880046373",
+              "content_length": "1607882631",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 1391,
+              "elapsed_ms": 7404,
               "attempt": 1,
               "reason": "ok"
             }
@@ -5291,27 +5470,27 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-260dcb783b5b69c9/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-61f18dcc8c34f579/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 4058,
+            "elapsed_ms": 3858,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 5450
+        "elapsed_ms": 11262
       }
     },
     {
-      "metadata_id": 50573,
-      "part_id": 128142,
+      "metadata_id": 50490,
+      "part_id": 127986,
       "section_id": 5,
-      "title": "Ex Machina",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab\\stream.mkv",
+      "title": "Friday",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -5332,14 +5511,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-c606557aefb014ab",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab",
+      "target_hash": "ScarFLIX_part-700e6d7fdb8236a0",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T21:05:27Z",
-        "target_hash": "ScarFLIX_part-c606557aefb014ab",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
+        "updated_utc": "2026-06-14T21:14:05Z",
+        "target_hash": "ScarFLIX_part-700e6d7fdb8236a0",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -5351,10 +5530,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Ex Machina (2015)\\ScarFLIX_part-c606557aefb014ab",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Friday (1995)\\ScarFLIX_part-700e6d7fdb8236a0",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-c606557aefb014ab",
+            "link_target": "S:\\media\\ScarFLIX_part-700e6d7fdb8236a0",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -5364,68 +5543,56 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3828457819",
+            "content_length": "681508517",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1535,
-            "attempt": 2,
+            "elapsed_ms": 7960,
+            "attempt": 1,
             "reason": "ok",
-            "attempts": 2
+            "attempts": 1
           },
           "webdav_head_attempts": [
             {
-              "ok": false,
-              "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
-              "status_code": 0,
-              "bytes_read": 0,
-              "timed_out": true,
-              "error": "timeout",
-              "elapsed_ms": 8014,
-              "attempt": 1,
-              "reason": "timeout"
-            },
-            {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "3828457819",
+              "content_length": "681508517",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 1535,
-              "attempt": 2,
+              "elapsed_ms": 7960,
+              "attempt": 1,
               "reason": "ok"
             }
           ],
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-c606557aefb014ab/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-700e6d7fdb8236a0/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 4366,
+            "elapsed_ms": 3842,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 14674
+        "elapsed_ms": 11803
       }
     },
     {
-      "metadata_id": 50604,
-      "part_id": 128207,
+      "metadata_id": 50617,
+      "part_id": 128232,
       "section_id": 5,
-      "title": "Fantastic Mr. Fox",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe\\stream.mkv",
+      "title": "Gravity",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gravity (2013)\\ScarFLIX_part-b1e773a80f50f6a6\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -5434,19 +5601,10 @@
       "decision_path_mode": "tokenized_full_base_metadata_url",
       "decision_policy": "client_flexible_direct_play_stream_allowed",
       "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 2,
+      "attempt": 1,
       "decision_attempts": [
         {
           "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "FAIL",
-          "http_status": 0,
-          "reason": "socket hang up",
-          "decision_path_mode": "tokenized_full_base_metadata_url",
-          "response_body_snippet": ""
-        },
-        {
-          "attempt": 2,
           "base_url": "http://192.168.1.184:32400",
           "status": "PASS",
           "http_status": 200,
@@ -5455,14 +5613,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-dec3fa773c4923fe",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
+      "target_hash": "ScarFLIX_part-b1e773a80f50f6a6",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gravity (2013)\\ScarFLIX_part-b1e773a80f50f6a6",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T21:05:51Z",
-        "target_hash": "ScarFLIX_part-dec3fa773c4923fe",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+        "updated_utc": "2026-06-14T21:14:23Z",
+        "target_hash": "ScarFLIX_part-b1e773a80f50f6a6",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gravity (2013)\\ScarFLIX_part-b1e773a80f50f6a6",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b1e773a80f50f6a6/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -5474,10 +5632,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gravity (2013)\\ScarFLIX_part-b1e773a80f50f6a6",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Gravity (2013)\\ScarFLIX_part-b1e773a80f50f6a6",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-dec3fa773c4923fe",
+            "link_target": "S:\\media\\ScarFLIX_part-b1e773a80f50f6a6",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -5487,62 +5645,50 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b1e773a80f50f6a6/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "630319537",
+            "content_length": "11665981129",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 5392,
-            "attempt": 2,
+            "elapsed_ms": 7574,
+            "attempt": 1,
             "reason": "ok",
-            "attempts": 2
+            "attempts": 1
           },
           "webdav_head_attempts": [
             {
-              "ok": false,
-              "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
-              "status_code": 0,
-              "bytes_read": 0,
-              "timed_out": true,
-              "error": "timeout",
-              "elapsed_ms": 8007,
-              "attempt": 1,
-              "reason": "timeout"
-            },
-            {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b1e773a80f50f6a6/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "630319537",
+              "content_length": "11665981129",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 5392,
-              "attempt": 2,
+              "elapsed_ms": 7574,
+              "attempt": 1,
               "reason": "ok"
             }
           ],
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b1e773a80f50f6a6/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3762,
+            "elapsed_ms": 3955,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 17918
+        "elapsed_ms": 11531
       }
     }
   ],
-  "next_action": "This bounded Materialized QA batch passed; continue the next batch before go-live."
+  "next_action": "Quarantine failed materialized source/release and keep title retryable."
 }
