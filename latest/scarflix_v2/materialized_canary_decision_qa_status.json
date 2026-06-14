@@ -1,150 +1,22 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "status": "RUNNING_PLEX_DECISION_PROBES",
-  "started_utc": "2026-06-14T01:53:17Z",
-  "updated_utc": "2026-06-14T01:54:03Z",
+  "status": "RUNNING_DISCOVERING_PLEX_ROWS",
+  "started_utc": "2026-06-14T02:00:14Z",
+  "updated_utc": "2026-06-14T02:00:18Z",
   "target_count": 229,
-  "rows_found": 146,
-  "checked": 1,
-  "passed": 1,
+  "rows_found": 0,
+  "checked": 0,
+  "passed": 0,
   "failed": 0,
   "query_errors": 0,
-  "query_error_details": [],
-  "decision_timeout_ms": 15000,
-  "decision_retry_count": 1,
   "layered_validation_enabled": true,
-  "layered_range_bytes": 4194304,
   "retry_held_file": "D:\\PlexTools\\state\\jasonos_prime\\go_live_16h_campaign\\materialized_qa_retry_held.json",
   "retry_held_candidates": 0,
-  "decision_probe_unfiltered_candidates": 141,
   "layered_validation_summary": {
-    "total": 1,
-    "passed": 1,
+    "total": 0,
+    "passed": 0,
     "review": 0,
-    "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 1
-    }
+    "reasons": {}
   },
-  "decision_probe_skip": 80,
-  "decision_probe_limit": 3,
-  "decision_probe_total_candidates": 141,
-  "selected_decision_candidates": 3,
-  "consecutive_decision_failures": 0,
-  "recent_results": [
-    {
-      "metadata_id": 50422,
-      "part_id": 127851,
-      "section_id": 5,
-      "title": "Sense and Sensibility",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sense and Sensibility (1995)\\ScarFLIX_part-17c22fece3c579f9\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
-      "access_mode": "token",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 15000,
-      "decision_path_mode": "tokenized_full_base_metadata_url",
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 1,
-      "decision_attempts": [
-        {
-          "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "PASS",
-          "http_status": 200,
-          "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-          "decision_path_mode": "tokenized_full_base_metadata_url",
-          "response_body_snippet": ""
-        }
-      ],
-      "target_hash": "ScarFLIX_part-17c22fece3c579f9",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sense and Sensibility (1995)\\ScarFLIX_part-17c22fece3c579f9",
-      "layered_validation": {
-        "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T01:53:53Z",
-        "target_hash": "ScarFLIX_part-17c22fece3c579f9",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sense and Sensibility (1995)\\ScarFLIX_part-17c22fece3c579f9",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
-        "map_loaded": true,
-        "map_generated_utc": "2026-06-09T10:17:48Z",
-        "map_entry_found": true,
-        "temporary_buffering": {
-          "enabled": true,
-          "persisted": false,
-          "range_bytes_requested": 4194304
-        },
-        "layers": {
-          "local_symlink_metadata": {
-            "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sense and Sensibility (1995)\\ScarFLIX_part-17c22fece3c579f9",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Sense and Sensibility (1995)\\ScarFLIX_part-17c22fece3c579f9",
-            "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-17c22fece3c579f9",
-            "error": "",
-            "blocking": false,
-            "exists": true,
-            "is_directory": false,
-            "is_file": false
-          },
-          "webdav_head": {
-            "ok": true,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
-            "status_code": 200,
-            "bytes_read": 0,
-            "content_length": "1128257632",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 1476,
-            "attempt": 2,
-            "reason": "ok",
-            "attempts": 2
-          },
-          "webdav_head_attempts": [
-            {
-              "ok": false,
-              "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
-              "status_code": 0,
-              "bytes_read": 0,
-              "timed_out": true,
-              "error": "timeout",
-              "elapsed_ms": 8006,
-              "attempt": 1,
-              "reason": "timeout"
-            },
-            {
-              "ok": true,
-              "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
-              "status_code": 200,
-              "bytes_read": 0,
-              "content_length": "1128257632",
-              "content_type": "application/octet-stream",
-              "accept_ranges": "bytes",
-              "elapsed_ms": 1476,
-              "attempt": 2,
-              "reason": "ok"
-            }
-          ],
-          "webdav_range_warm": {
-            "ok": true,
-            "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-17c22fece3c579f9/stream.mkv",
-            "status_code": 206,
-            "bytes_read": 4194304,
-            "content_length": "4194304",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 3418,
-            "reason": "ok"
-          }
-        },
-        "status": "PASS",
-        "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 13657
-      }
-    }
-  ],
-  "next_action": "Materialized Plex decision QA is still running; stop or throttle if launch health degrades."
+  "next_action": "Materialized Plex decision QA is discovering Plex DB rows."
 }
