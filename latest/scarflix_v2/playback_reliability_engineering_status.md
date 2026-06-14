@@ -1,5 +1,24 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T03:54:01Z
+
+**Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle 130.
+- Launch health 42 ms; post-QA launch check 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA skip 139, limit 3: 2/2 PASS, 0 failed.
+- Passed titles: The Rising; Aftermath.
+- Retry ledger: tracked 22, held 0, threshold 3.
+- QA cursor wrapped after the high-skip batch; runner is continuing the next bounded pass from the start of the candidate set.
+
+Current gate:
+
+- Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
 ## Current Update - 2026-06-14T03:39:57Z
 
 **Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
@@ -74,6 +93,7 @@ Latest evidence:
 Current gate:
 
 - Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 
 
 
