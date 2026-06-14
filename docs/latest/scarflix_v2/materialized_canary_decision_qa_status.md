@@ -1,14 +1,14 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: RUNNING_DISCOVERING_PLEX_ROWS
-Updated UTC: 2026-06-14T10:55:55Z
+Status: REVIEW
+Updated UTC: 2026-06-14T10:57:09Z
 Targets: 229
-Rows found: 0
-Checked: 0
-Passed: 0
+Rows found: 146
+Checked: 3
+Passed: 3
 Failed: 0
-Layered streaming checked: 0
-Layered streaming passed: 0
+Layered streaming checked: 3
+Layered streaming passed: 3
 Layered streaming review: 0
-Query errors: 0
-Next action: Materialized Plex decision QA is discovering Plex DB rows.
+Query errors: 1
+Next action: Some Plex SQLite lookups failed; keep playback-first mode and rerun or inspect Plex DB access before go-live.
