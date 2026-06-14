@@ -1,6 +1,6 @@
 ﻿# Mission 002 IPTV Threadfin Virtual Adapter Apply
 
-**Updated UTC:** 2026-06-14T15:20:36Z  
+**Updated UTC:** 2026-06-14T15:27:49Z  
 **Status:** PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH
 
 ## Safety
