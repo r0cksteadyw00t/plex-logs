@@ -1,5 +1,25 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T00:50:27Z
+
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle `105`.
+- Launch health `21 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA skip `46`, limit `3`: `2/3 PASS`, `1/3 REVIEW`.
+- Homefront and Idiocracy passed Plex decision HTTP `200`.
+- `ScarFLIX Part 31696108f69a37b9` failed at WebDAV layer with `webdav_head_upstream_server_error`.
+- Retry ledger: tracked `11`, held `0`, threshold `3`.
+
+Current gate:
+
+- Delivery cycles continue, but go-live publication/expansion stays blocked. Source failures must either pass on retry or be source-quarantined after threshold.
+
 ## Current Update - 2026-06-14T00:40:06Z
 
 **Status:** ACTUAL_GO_LIVE_DELIVERY_RUNNER_EXTENDED_CONFIRMED  
