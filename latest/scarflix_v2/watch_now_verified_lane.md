@@ -1,18 +1,25 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T12:54:59Z  
+Updated UTC: 2026-06-14T13:13:42Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 15
+Item count: 17
 
 ## Latest Quiet-Window Batch
 
-- Checked: 1
-- Passed: 1
-- Review: 0
+- Checked: 5
+- Passed: 4
+- Review: 1
+- New unique items added: 2
+- Reverified existing items: 2
 
 ## Added This Update
 
-- Aliens vs Predator Requiem (2007) -- scarflix_part-141663efa544da92 -- HTTP 200
+- The Ballerina (2016) -- scarflix_part-6bc868616f378edf -- HTTP 200
+- Cloverfield (2008) -- scarflix_part-bf8a62cf46526b11 -- HTTP 200
+
+## Retryable Review Rows
+
+- Casino (1995) -- scarflix_part-15435a4ab8d58746 -- webdav_head_upstream_server_error
 
 ## Verified Items
 
@@ -31,7 +38,5 @@ Item count: 15
 - Vertigo (1958) -- scarflix_part-ac22c691d6568126 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Downton Abbey (2010) - S01E01 -- scarflix_part-b40cd0c89fdac0f7 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Aliens vs Predator Requiem (2007) -- scarflix_part-141663efa544da92 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
-
-## Caveat
-
-This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.
+- The Ballerina (2016) -- scarflix_part-6bc868616f378edf -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Cloverfield (2008) -- scarflix_part-bf8a62cf46526b11 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
