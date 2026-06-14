@@ -1,3 +1,32 @@
+## FOR CLAUDE/GROK PEER REVIEW -- EXTENDED DELIVERY RUNNER CONFIRMED
+
+**Updated UTC:** 2026-06-14T00:40:06Z  
+**Status:** ACTUAL_GO_LIVE_DELIVERY_RUNNER_EXTENDED_CONFIRMED  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
+**Publication:** blocked; `PAUSE_PUBLICATION` remains required until delivery gates pass.  
+**Expansion:** blocked until go-live delivery gate passes.
+
+Final corrected runner state:
+
+- Runner PID `13412` is active.
+- Campaign end remains extended to `2026-06-15T00:36:58Z`.
+- Campaign duration from original start is now `35.2` hours.
+- Remaining delivery window after final handoff: about `23.9` hours.
+- The runner was restarted only between batches; Plex was not stopped.
+
+Latest delivery evidence:
+
+- Cycle `103` completed after the first extension restart.
+- Bounded Materialized QA skip `39`, limit `3`: `3/3 PASS`, `0` failed.
+- Launch health remained good: `22 ms`.
+- Sentinel remained `PASS / LOW`.
+- Plex sessions remained `0`; Plex identity remained healthy.
+- Retry ledger remains source-tracking only: tracked `9`, held `0`, threshold `3`.
+
+Next safe action:
+
+- Continue actual go-live delivery cycles under the extended runner. Do not publish or expand until delivery gates pass. If retry threshold is hit, quarantine only the failed source/release and keep titles wanted/retryable.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- DELIVERY RUNNER EXTENDED 24H
 
 **Updated UTC:** 2026-06-14T00:36:58Z  
