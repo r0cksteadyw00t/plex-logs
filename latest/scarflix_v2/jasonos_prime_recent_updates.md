@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T00:25:02.158Z
+Updated UTC: 2026-06-14T00:30:02.087Z
 Source: live status merge
 
-- 2026-06-14T00:22:02.789Z - Cycle 100 Source Retry Tracking Updated - 2026-06-14 10:20: Current verified state: Go-live runner cycle `100` completed with launch health `17 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`. Escape Plan 2: Hades is newly tracked for `webdav_head_upstream_server_error`.
-- 2026-06-14T00:20:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T00:25:12.142Z - Cycle 100 Source Retry Tracking Updated - 2026-06-14 10:20: Current verified state: Go-live runner cycle `100` completed with launch health `17 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`. Escape Plan 2: Hades is newly tracked for `webdav_head_upstream_server_error`.
+- 2026-06-14T00:25:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T00:15:11.825Z - Bounded Playback QA Pass Streak Resumed - 2026-06-14 10:06: Current verified state: Go-live runner cycle `98` completed with launch health `18 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `20`, limit `3`: `3/3 PASS`, `0` failed. Retry ledger remains `TRACKING_RETRY_SOURCES`: tracked `7`, held `0`, threshold `3`.
 - 2026-06-14T00:01:51.388Z - Next Bounded Batch Narrows Remaining Blocker - 2026-06-14 09:58: Current verified state: The Plex decision/auth routing fix held on the next bounded batch. Batch skip `16`, limit `4`: `3/4 PASS`, `1/4 REVIEW`. Crank, Creed, and Dances with Wolves passed layered WebDAV/range validation and Plex decision HTTP 200.
 - 2026-06-13T23:54:27.646Z - Plex Decision Path Fix Validated - 2026-06-14 09:53: Current verified state: Playback-first recovery remains active; publication and broad expansion remain blocked. Plex registry LAN network parse issue was corrected after backup, then Plex was restarted because the API became unresponsive during maintenance. Plex identity is healthy again.
