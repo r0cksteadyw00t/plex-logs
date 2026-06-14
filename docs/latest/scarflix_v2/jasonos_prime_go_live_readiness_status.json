@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-14T22:04:01Z",
-    "updated_utc":  "2026-06-14T22:04:07Z",
+    "started_utc":  "2026-06-14T22:09:01Z",
+    "updated_utc":  "2026-06-14T22:09:08Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  1,
@@ -45,10 +45,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=REVIEW_PARTIAL_BATCH_PASS 4/4 Section5Visible=105 Section5Missing=0 PausePublication=True"
+                                          "MaterializedQA=RUNNING_PLEX_DECISION_PROBES 0/0 Section5Visible=105 Section5Missing=0 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not PASS: REVIEW_PARTIAL_BATCH_PASS 4/4 failed=0.",
+                                          "Materialized QA is not PASS: RUNNING_PLEX_DECISION_PROBES 0/0 failed=0.",
                                           "Active Plex playback prevents safe focused QA/expansion work."
                                       ],
                          "next_safe_action":  "Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable.",
@@ -62,7 +62,7 @@
                          "progress_percent":  90,
                          "summary":  "IPTV-only package is ready and guarded; no physical tuner path is allowed.",
                          "evidence":  [
-                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=HELD_ACTIVE_PLEX_PLAYBACK PhysicalTuner=false"
+                                          "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=HELD_ACTIVE_PLEX_PLAYBACK Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=HELD_ACTIVE_PLEX_PLAYBACK PhysicalTuner=false"
                                       ],
                          "blockers":  [
                                           "Active Plex sessions hold Threadfin start and all Plex Live TV/DVR attach work."
@@ -110,10 +110,10 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Ready"
+                                          "Orchestrator=PASS HandsOff=PASS_ACTIVE_TRUE_HANDS_OFF SafeAuditTask=Ready QuietWatcherTask=Ready"
                                       ],
                          "blockers":  [
-                                          "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
+
                                       ],
                          "next_safe_action":  "Keep orchestration alive, reduce high-churn work during playback, and treat repeated no-progress cycles as Grok review triggers.",
                          "requires_quiet_window":  false,
@@ -144,15 +144,11 @@
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not PASS: REVIEW_PARTIAL_BATCH_PASS 4/4 failed=0."
+                         "blocker":  "Materialized QA is not PASS: RUNNING_PLEX_DECISION_PROBES 0/0 failed=0."
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "blocker":  "Active Plex playback prevents safe focused QA/expansion work."
-                     },
-                     {
-                         "outcome_id":  "O-AUTONOMY-STABILITY",
-                         "blocker":  "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
                      }
                  ],
     "monitored_tasks":  [
