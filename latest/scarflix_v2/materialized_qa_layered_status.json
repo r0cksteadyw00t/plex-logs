@@ -1,26 +1,27 @@
 {
   "component": "scarflix_v2_streaming_layered_validator",
-  "updated_utc": "2026-06-14T20:20:18Z",
+  "updated_utc": "2026-06-14T20:27:53Z",
   "status": "PASS",
   "qa_component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "decision_probe_skip": 129,
-  "decision_probe_limit": 4,
+  "decision_probe_skip": 3,
+  "decision_probe_limit": 5,
   "range_bytes": 4194304,
   "summary": {
-    "total": 1,
-    "passed": 1,
+    "total": 5,
+    "passed": 5,
     "review": 0,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 1
+      "webdav_head_and_temporary_range_warm_passed": 4,
+      "webdav_head_fallback_range_and_temporary_range_warm_passed": 1
     }
   },
   "results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T20:20:12Z",
-      "target_hash": "ScarFLIX_part-451fc0cdd0ee7fdf",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Monarch Legacy of Monsters (2023)\\Season 01\\Monarch Legacy of Monsters (2023) - S01E01 - ScarFLIX_part-451fc0cdd0ee7fdf",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
+      "updated_utc": "2026-06-14T20:26:25Z",
+      "target_hash": "ScarFLIX_part-141663efa544da92",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Aliens vs Predator Requiem (2007)\\ScarFLIX_part-141663efa544da92",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-141663efa544da92/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -32,10 +33,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Monarch Legacy of Monsters (2023)\\Season 01\\Monarch Legacy of Monsters (2023) - S01E01 - ScarFLIX_part-451fc0cdd0ee7fdf",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\Monarch Legacy of Monsters (2023)\\Season 01\\Monarch Legacy of Monsters (2023) - S01E01 - ScarFLIX_part-451fc0cdd0ee7fdf",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Aliens vs Predator Requiem (2007)\\ScarFLIX_part-141663efa544da92",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Aliens vs Predator Requiem (2007)\\ScarFLIX_part-141663efa544da92",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-451fc0cdd0ee7fdf",
+          "link_target": "S:\\media\\ScarFLIX_part-141663efa544da92",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -45,13 +46,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-141663efa544da92/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "1397349316",
+          "content_length": "2778189147",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1837,
+          "elapsed_ms": 1824,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -60,13 +61,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-141663efa544da92/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1397349316",
+            "content_length": "2778189147",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1837,
+            "elapsed_ms": 1824,
             "attempt": 1,
             "reason": "ok"
           }
@@ -74,19 +75,357 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-451fc0cdd0ee7fdf/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-141663efa544da92/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3440,
+          "elapsed_ms": 4845,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5282
+      "elapsed_ms": 6673
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-14T20:26:48Z",
+      "target_hash": "ScarFLIX_part-a61d38731f010847",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Amadeus (1984)\\ScarFLIX_part-a61d38731f010847",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-a61d38731f010847/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Amadeus (1984)\\ScarFLIX_part-a61d38731f010847",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Amadeus (1984)\\ScarFLIX_part-a61d38731f010847",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-a61d38731f010847",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": false,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a61d38731f010847/stream.mkv",
+          "status_code": 0,
+          "bytes_read": 0,
+          "timed_out": true,
+          "error": "timeout",
+          "elapsed_ms": 8009,
+          "attempt": 2,
+          "reason": "timeout",
+          "attempts": 2
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a61d38731f010847/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8007,
+            "attempt": 1,
+            "reason": "timeout"
+          },
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a61d38731f010847/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8009,
+            "attempt": 2,
+            "reason": "timeout"
+          }
+        ],
+        "webdav_head_fallback_range": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a61d38731f010847/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 65536,
+          "content_length": "65536",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 2300,
+          "reason": "ok"
+        },
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a61d38731f010847/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 4057,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_fallback_range_and_temporary_range_warm_passed",
+      "elapsed_ms": 23132
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-14T20:27:11Z",
+      "target_hash": "ScarFLIX_part-636c5357a0359a77",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\American Reunion (2012)\\ScarFLIX_part-636c5357a0359a77",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-636c5357a0359a77/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\American Reunion (2012)\\ScarFLIX_part-636c5357a0359a77",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\American Reunion (2012)\\ScarFLIX_part-636c5357a0359a77",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-636c5357a0359a77",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": true,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-636c5357a0359a77/stream.mkv",
+          "status_code": 200,
+          "bytes_read": 0,
+          "content_length": "732221209",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 1611,
+          "attempt": 2,
+          "reason": "ok",
+          "attempts": 2
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-636c5357a0359a77/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8016,
+            "attempt": 1,
+            "reason": "timeout"
+          },
+          {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-636c5357a0359a77/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "732221209",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1611,
+            "attempt": 2,
+            "reason": "ok"
+          }
+        ],
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-636c5357a0359a77/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 3511,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_and_temporary_range_warm_passed",
+      "elapsed_ms": 13896
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-14T20:27:32Z",
+      "target_hash": "ScarFLIX_part-07bcb8bc9c545c8d",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Angels & Demons (2009)\\ScarFLIX_part-07bcb8bc9c545c8d",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-07bcb8bc9c545c8d/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Angels & Demons (2009)\\ScarFLIX_part-07bcb8bc9c545c8d",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Angels & Demons (2009)\\ScarFLIX_part-07bcb8bc9c545c8d",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-07bcb8bc9c545c8d",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": true,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-07bcb8bc9c545c8d/stream.mkv",
+          "status_code": 200,
+          "bytes_read": 0,
+          "content_length": "2506289135",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 1594,
+          "attempt": 2,
+          "reason": "ok",
+          "attempts": 2
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-07bcb8bc9c545c8d/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8003,
+            "attempt": 1,
+            "reason": "timeout"
+          },
+          {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-07bcb8bc9c545c8d/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "2506289135",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1594,
+            "attempt": 2,
+            "reason": "ok"
+          }
+        ],
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-07bcb8bc9c545c8d/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 3462,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_and_temporary_range_warm_passed",
+      "elapsed_ms": 13812
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-14T20:27:42Z",
+      "target_hash": "ScarFLIX_part-81107989d2e30cfb",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-81107989d2e30cfb/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Anna (2019)\\ScarFLIX_part-81107989d2e30cfb",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-81107989d2e30cfb",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": true,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-81107989d2e30cfb/stream.mkv",
+          "status_code": 200,
+          "bytes_read": 0,
+          "content_length": "1721714811",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 1866,
+          "attempt": 1,
+          "reason": "ok",
+          "attempts": 1
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-81107989d2e30cfb/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "1721714811",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1866,
+            "attempt": 1,
+            "reason": "ok"
+          }
+        ],
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-81107989d2e30cfb/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 4370,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_and_temporary_range_warm_passed",
+      "elapsed_ms": 6238
     }
   ],
   "next_action": "Layered streaming prechecks passed for this bounded batch; remaining failures, if any, are downstream of WebDAV/range delivery."
