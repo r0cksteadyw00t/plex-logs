@@ -1,25 +1,31 @@
 {
   "component": "jasonos_prime_user_visible_delivery_status",
-  "updated_utc": "2026-06-14T11:24:56Z",
-  "status": "HELD_ACTIVE_PLAYBACK_AFTER_QUIET_WINDOW_STARTED",
-  "active_plex_sessions": 1,
+  "updated_utc": "2026-06-14T12:10:25Z",
+  "status": "QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_11",
+  "active_plex_sessions": -1,
+  "active_session_note": "Campaign reported -1 session count in latest cycle, meaning session endpoint unavailable or indeterminate; no new disruptive inline work was started by Codex.",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "publication_state": "PAUSE_PUBLICATION_REQUIRED",
   "watch_now_lane_status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "watch_now_lane_item_count": 8,
+  "watch_now_lane_item_count": 11,
   "latest_bounded_qa": {
-    "status": "REVIEW",
-    "checked": 3,
-    "passed": 2,
-    "failed": 1,
-    "skip": 116,
-    "limit": 3
+    "status": "RUNNING_PLEX_DECISION_PROBES",
+    "checked": 1,
+    "passed": 1,
+    "failed": 0,
+    "skip": 122,
+    "limit": 4
   },
-  "blocker": "A Plex session became active again after the quiet-window delivery start; disruptive QA/attach/publication work is held.",
+  "added_this_update": [
+    "The Reader (2008)",
+    "The Secret of NIMH (1982)",
+    "The Secret World of Arrietty (2010)"
+  ],
+  "retry_held_count": 0,
   "next_safe_delivery_focus": [
-    "Wait for active sessions to return to zero for two consecutive checks.",
-    "Resume bounded Watch Now lane growth only after the session clears.",
-    "Keep Mission 002 Plex attach held until zero sessions and safe attach path is available."
+    "Continue only via detached campaign runner while Plex sessions are clear/healthy.",
+    "Do not broaden publication; grow visible Watch Now lane only from passing evidence.",
+    "Resolve session-count indeterminate state before disruptive work if it persists."
   ]
 }
