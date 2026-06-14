@@ -12,10 +12,11 @@ Latest evidence:
 - Extended delivery runner cycle 125.
 - Launch health 41 ms; post-QA launch check 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
 - Bounded Materialized QA skip 122, limit 3: 3/3 PASS, 0 failed.
-- Passed titles: .
+- Passed titles: The Texas Chain Saw Massacre; The Transporter; New Moon.
 - Retry ledger: tracked 19, held 0, threshold 3.
 
 Current gate:
 
 - Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 
