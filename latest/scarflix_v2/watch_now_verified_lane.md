@@ -1,20 +1,20 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T12:09:56Z  
+Updated UTC: 06/14/2026 12:40:00  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 11
+Item count: 14
 
 ## Latest Quiet-Window Batch
 
-- Checked: 3
+- Checked: 4
 - Passed: 3
-- Review: 0
+- Review: 1
 
 ## Added This Update
 
-- The Reader (2008) -- scarflix_part-cbb3019bd5a233a2 -- HTTP 200
-- The Secret of NIMH (1982) -- scarflix_part-5ed2c591e5dd946b -- HTTP 200
-- The Secret World of Arrietty (2010) -- scarflix_part-d210252fd88190b1 -- HTTP 200
+- Valerian and the City of a Thousand Planets (2017) -- scarflix_part-68c43fa40f40a5e5 -- HTTP 200
+- Vertigo (1958) -- scarflix_part-ac22c691d6568126 -- HTTP 200
+- Downton Abbey (2010) - S01E01 -- scarflix_part-b40cd0c89fdac0f7 -- HTTP 200
 
 ## Verified Items
 
@@ -29,6 +29,9 @@ Item count: 11
 - The Reader (2008) -- scarflix_part-cbb3019bd5a233a2 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - The Secret of NIMH (1982) -- scarflix_part-5ed2c591e5dd946b -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - The Secret World of Arrietty (2010) -- scarflix_part-d210252fd88190b1 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Valerian and the City of a Thousand Planets (2017) -- scarflix_part-68c43fa40f40a5e5 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Vertigo (1958) -- scarflix_part-ac22c691d6568126 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Downton Abbey (2010) - S01E01 -- scarflix_part-b40cd0c89fdac0f7 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 
 ## Caveat
 
