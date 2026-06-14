@@ -1,27 +1,26 @@
 {
   "component": "scarflix_watch_now_verified_lane",
   "status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "updated_utc": "2026-06-14T15:55:55Z",
-  "item_count": 54,
+  "updated_utc": "2026-06-14T16:15:36Z",
+  "item_count": 59,
   "latest_batch": {
-    "source": "materialized_canary_decision_qa_status.json",
-    "source_updated_utc": "2026-06-14T15:50:36Z",
-    "status": "REVIEW",
-    "checked": 5,
-    "passed": 3,
-    "failed": 2,
-    "new_unique_added": 3,
-    "reverified_existing": [],
-    "review_retryable": [
-      "The Empty Man (2020)",
-      "The Faculty (1998)"
-    ],
-    "held_retry_count": 7
+    "updated_utc": "2026-06-14T16:15:36Z",
+    "source": "heartbeat_go_live_delivery_correction",
+    "canary_status": "REVIEW",
+    "canary_updated_utc": "2026-06-14T16:11:10Z",
+    "canary_checked": 5,
+    "canary_passed": 4,
+    "canary_failed": 1,
+    "recovered_completed_batch_utc": "2026-06-14T16:04:10Z",
+    "added_count": 5,
+    "skipped_duplicate_count": 3
   },
   "added_this_update": [
-    "The Deadly Little Mermaid (2026)",
-    "The Devil's Advocate (1997)",
-    "The Equalizer 2 (2018)"
+    "The Lord of the Rings The War of the Rohirrim (2024)",
+    "The Magic Faraway Tree (2026)",
+    "The Magnificent Seven (2016)",
+    "The Mist (2007)",
+    "The Mitchells vs. the Machines (2021)"
   ],
   "items": [
     {
@@ -563,8 +562,58 @@
       "content_length": "2893145364",
       "source": "quiet_window_bounded_qa_pass",
       "verified_utc": "2026-06-14T15:50:19Z"
+    },
+    {
+      "title": "The Lord of the Rings The War of the Rohirrim (2024)",
+      "hash": "scarflix_part-cfe52e744ff27d3c",
+      "status": "PASS",
+      "http": 200,
+      "ms": 0,
+      "content_length": "",
+      "source": "quiet_window_bounded_qa_pass_log_recovered_1604",
+      "verified_utc": "2026-06-14T16:03:24Z"
+    },
+    {
+      "title": "The Magic Faraway Tree (2026)",
+      "hash": "scarflix_part-479e0ebd60d6e6ff",
+      "status": "PASS",
+      "http": 200,
+      "ms": 0,
+      "content_length": "",
+      "source": "quiet_window_bounded_qa_pass_log_recovered_1604",
+      "verified_utc": "2026-06-14T16:03:36Z"
+    },
+    {
+      "title": "The Magnificent Seven (2016)",
+      "hash": "scarflix_part-ea09f142010b00aa",
+      "status": "PASS",
+      "http": 200,
+      "ms": 0,
+      "content_length": "",
+      "source": "quiet_window_bounded_qa_pass_log_recovered_1604",
+      "verified_utc": "2026-06-14T16:03:42Z"
+    },
+    {
+      "title": "The Mist (2007)",
+      "hash": "scarflix_part-93599b6b163a4b72",
+      "status": "PASS",
+      "http": 200,
+      "ms": 0,
+      "content_length": "",
+      "source": "quiet_window_bounded_qa_pass_log_recovered_1604",
+      "verified_utc": "2026-06-14T16:03:53Z"
+    },
+    {
+      "title": "The Mitchells vs. the Machines (2021)",
+      "hash": "scarflix_part-a0692a530078eae1",
+      "status": "PASS",
+      "http": 200,
+      "ms": 10087,
+      "content_length": "3405621919",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T16:10:21Z"
     }
   ],
-  "caveat": "This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.",
-  "next_action": "Continue detached bounded QA batches; promote only completed PASS rows; keep REVIEW/HELD rows source-retryable."
+  "caveat": "Verified lane is a delivery evidence artifact from bounded Plex/WebDAV checks. Publication remains blocked until full gates pass.",
+  "next_action": "Continue bounded Materialized QA recovery; promote PASS-only rows, hold retryable failed sources, and do not broaden publication until delivery gates pass."
 }
