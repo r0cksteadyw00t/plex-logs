@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_materialized_qa_retry_held_status",
   "status": "TRACKING_RETRY_SOURCES",
-  "updated_utc": "2026-06-14T01:17:49Z",
+  "updated_utc": "2026-06-14T01:32:18Z",
   "threshold": 3,
-  "tracked_count": 13,
+  "tracked_count": 14,
   "held_count": 0,
   "retry_policy": "source_or_release_only; title remains wanted and retryable",
   "publication_allowed": false,
@@ -177,6 +177,19 @@
       "layered_reason": "webdav_head_and_temporary_range_warm_passed",
       "first_seen_utc": "2026-06-14T01:10:47Z",
       "last_seen_utc": "2026-06-14T01:10:47Z"
+    },
+    {
+      "hash": "scarflix_part-73b16faf4582f6ed",
+      "title": "Nacho Libre",
+      "status": "TRACKING_RETRY",
+      "held": false,
+      "failure_count": 1,
+      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
+      "http_status": 0,
+      "layered_status": "REVIEW",
+      "layered_reason": "webdav_head_upstream_server_error",
+      "first_seen_utc": "2026-06-14T01:25:10Z",
+      "last_seen_utc": "2026-06-14T01:25:10Z"
     }
   ],
   "next_action": "After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates."
