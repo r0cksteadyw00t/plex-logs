@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_playback_reliability_engineering",
-  "status": "ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED",
-  "updated_utc": "2026-06-14T02:05:58Z",
+  "status": "ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES",
+  "updated_utc": "2026-06-14T02:20:58Z",
   "publication_allowed": false,
   "broad_expansion_allowed": false,
   "pause_publication_required": true,
@@ -28,7 +28,7 @@
     ]
   },
   "current_go_live_ready": false,
-  "current_primary_blocker": "Publication and broad expansion remain gated until bounded delivery QA clears; retry ledger is growing but no source has reached hold threshold.",
+  "current_primary_blocker": "Publication and broad expansion remain gated until bounded delivery QA clears; retry ledger has no held sources.",
   "latest_layered_batch": {
     "updated_utc": "2026-06-13T22:21:26Z",
     "layered_total": 3,
@@ -45,39 +45,37 @@
     "loopback_status": 401,
     "lan_status": 200
   },
-  "next_expected_signal": "next bounded QA cycles should confirm whether clean pass trend resumes or individual sources reach retry hold threshold",
+  "next_expected_signal": "next bounded QA cycles should confirm whether clean pass trend continues or individual sources reach retry hold threshold",
   "go_live_ready": false,
-  "current_gate": "Cycle 115 bounded QA produced 3/4 PASS with one WebDAV source retry item below hold threshold.",
+  "current_gate": "Cycle 117 bounded QA clean pass continues; retry ledger unchanged at 16 tracked and 0 held.",
   "latest_evidence": {
-    "go_live_campaign_cycle": 115,
-    "campaign_updated_utc": "2026-06-14T02:01:56Z",
+    "go_live_campaign_cycle": 117,
+    "campaign_updated_utc": "2026-06-14T02:16:50Z",
     "runner_pid": 13412,
     "campaign_ends_utc": "2026-06-15T00:36:58Z",
-    "launch_health_ms": 19,
-    "post_qa_launch_health_ms": 22,
+    "launch_health_ms": 21,
+    "post_qa_launch_health_ms": 23,
     "sentinel_status": "PASS",
     "sentinel_alert_level": "LOW",
     "active_plex_sessions": 0,
     "plex_identity_http_status": 200,
-    "bounded_materialized_qa_status": "REVIEW",
-    "decision_probe_skip": 83,
+    "bounded_materialized_qa_status": "REVIEW_PARTIAL_BATCH_PASS",
+    "decision_probe_skip": 90,
     "decision_probe_limit": 4,
     "checked": 4,
-    "passed": 3,
-    "failed": 1,
+    "passed": 4,
+    "failed": 0,
     "passed_titles": [
-      "Silent Hill",
-      "Sing",
-      "Spartacus"
+      "Stand by Me",
+      "Teen Wolf: The Movie",
+      "Terminator: Dark Fate",
+      "Terminator Salvation"
     ],
-    "review_title": "Sin Nombre",
-    "review_hash": "scarflix_part-24f719d304fd7aa0",
-    "review_reason": "webdav_head_upstream_server_error",
     "retry_ledger_status": "TRACKING_RETRY_SOURCES",
     "retry_tracked_count": 16,
     "retry_held_count": 0,
     "retry_threshold": 3,
-    "interpretation": "One source/WebDAV availability failure below threshold. No source reached hold threshold; publication and expansion remain gated."
+    "interpretation": "Clean bounded pass. No source reached hold threshold; publication and expansion remain gated."
   },
   "backups": [
     "D:/PlexTools/Backups/plex_registry_network_fix_20260613T233903Z/plex_media_server_hkcu.reg",
