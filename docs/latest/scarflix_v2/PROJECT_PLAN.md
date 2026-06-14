@@ -6,6 +6,7 @@
 - Commando failed on WebDAV/RD upstream availability: HTTP `503 upstream_server_error` after bounded HEAD retry and tiny fallback range GET.
 - Current engineering conclusion: the old Plex decision HTTP 400 path/auth blocker is fixed; the remaining blocker is per-source upstream reliability.
 - Continue retry-held/source-only quarantine policy. Keep titles wanted/retryable, keep publication paused, and do not start expansion until pass streak and source policy gates are clean.
+- Added public retry ledger exports: `materialized_qa_retry_held_status.json` and `.md`. Initial export shows `TRACKING_RETRY_SOURCES`, tracked `7`, held `0`, threshold `3`.
 
 ## Plex Decision Path Fix Validated - 2026-06-13T23:53:44Z
 
