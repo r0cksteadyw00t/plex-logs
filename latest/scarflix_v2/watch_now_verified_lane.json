@@ -1,29 +1,27 @@
 {
   "component": "scarflix_watch_now_verified_lane",
   "status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "updated_utc": "2026-06-14T12:54:59Z",
-  "item_count": 15,
+  "updated_utc": "2026-06-14T13:13:42Z",
+  "item_count": 17,
   "latest_batch": {
-    "source": "materialized_canary_decision_qa_status",
-    "updated_utc": "2026-06-14T12:54:47Z",
-    "checked": 1,
-    "passed": 1,
-    "review": 0,
-    "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 1
-    }
+    "source": "materialized_canary_decision_qa_status.json",
+    "source_updated_utc": "2026-06-14T13:10:29Z",
+    "status": "REVIEW",
+    "checked": 5,
+    "passed": 4,
+    "failed": 1,
+    "new_unique_added": 2,
+    "reverified_existing": [
+      "Armageddon (1998)",
+      "Battleship (2012)"
+    ],
+    "review_retryable": [
+      "Casino (1995)"
+    ]
   },
   "added_this_update": [
-    {
-      "title": "Aliens vs Predator Requiem (2007)",
-      "hash": "scarflix_part-141663efa544da92",
-      "status": "PASS",
-      "http": 200,
-      "ms": 5028,
-      "content_length": "2778189147",
-      "source": "quiet_window_bounded_qa_pass",
-      "verified_utc": "2026-06-14T12:54:43Z"
-    }
+    "The Ballerina (2016)",
+    "Cloverfield (2008)"
   ],
   "items": [
     {
@@ -175,8 +173,28 @@
       "content_length": "2778189147",
       "source": "quiet_window_bounded_qa_pass",
       "verified_utc": "2026-06-14T12:54:43Z"
+    },
+    {
+      "title": "The Ballerina (2016)",
+      "hash": "scarflix_part-6bc868616f378edf",
+      "status": "PASS",
+      "http": 200,
+      "ms": 7423,
+      "content_length": "1401597252",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "06/14/2026 13:09:30"
+    },
+    {
+      "title": "Cloverfield (2008)",
+      "hash": "scarflix_part-bf8a62cf46526b11",
+      "status": "PASS",
+      "http": 200,
+      "ms": 6447,
+      "content_length": "1290093487",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "06/14/2026 13:10:18"
     }
   ],
   "caveat": "This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.",
-  "next_action": "Use this lane for user-facing Watch Now guidance; continue bounded QA/retry/quarantine before broad publication."
+  "next_action": "Continue detached bounded QA batches; promote only completed PASS rows; keep REVIEW rows retryable."
 }
