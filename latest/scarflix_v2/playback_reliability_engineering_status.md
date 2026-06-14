@@ -12,7 +12,7 @@ Latest evidence:
 - Extended delivery runner cycle 127.
 - Launch health 21 ms; post-QA launch check 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
 - Bounded Materialized QA skip 129, limit 3: 3/3 PASS, 0 failed.
-- Passed titles: .
+- Passed titles: Tombstone; Tomorrowland: A World Beyond; Twelve Monkeys.
 - Retry ledger: tracked 20, held 0, threshold 3.
 
 Current gate:
@@ -55,6 +55,7 @@ Latest evidence:
 Current gate:
 
 - Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 
 
 
