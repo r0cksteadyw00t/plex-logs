@@ -1,3 +1,13 @@
+## Cycle 162 Active Playback Hold Continues - 2026-06-14T07:22:52Z
+
+- Status: HELD_ACTIVE_PLAYBACK_USER_STREAM_PROTECTED.
+- Extended runner cycle 162: launch health 23 ms; post-hold launch check 20 ms; Sentinel PASS / LOW; active sessions were 1.
+- Runner actions: stopped_materialized_qa_due_active_playback.
+- Runner blocker: active_plex_playback_detected.
+- Last bounded Materialized QA batch skip 91, limit 4: 4/4 PASS, 0 REVIEW.
+- Passed titles: Teen Wolf: The Movie; Terminator: Dark Fate; Terminator Salvation; The Big Short.
+- Retry ledger: tracked 18, held 0, threshold 3.
+- Continue automatically after playback clears. Publication and expansion remain blocked until delivery gates pass.
 ## Cycle 156 Active Playback Hold - 2026-06-14T06:53:09Z
 
 - Status: HELD_ACTIVE_PLAYBACK_USER_STREAM_PROTECTED.
@@ -3465,6 +3475,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
