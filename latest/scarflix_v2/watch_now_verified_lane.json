@@ -1,27 +1,24 @@
 {
   "component": "scarflix_watch_now_verified_lane",
   "status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "updated_utc": "2026-06-14T13:13:42Z",
-  "item_count": 17,
+  "updated_utc": "2026-06-14T13:25:57Z",
+  "item_count": 20,
   "latest_batch": {
     "source": "materialized_canary_decision_qa_status.json",
-    "source_updated_utc": "2026-06-14T13:10:29Z",
-    "status": "REVIEW",
-    "checked": 5,
-    "passed": 4,
-    "failed": 1,
-    "new_unique_added": 2,
-    "reverified_existing": [
-      "Armageddon (1998)",
-      "Battleship (2012)"
-    ],
-    "review_retryable": [
-      "Casino (1995)"
-    ]
+    "source_updated_utc": "2026-06-14T13:24:30Z",
+    "status": "REVIEW_PARTIAL_BATCH_PASS",
+    "checked": 3,
+    "passed": 3,
+    "failed": 0,
+    "new_unique_added": 3,
+    "reverified_existing": [],
+    "review_retryable": [],
+    "held_retry_count": 1
   },
   "added_this_update": [
-    "The Ballerina (2016)",
-    "Cloverfield (2008)"
+    "Dances with Wolves (1990)",
+    "Daredevil (2003)",
+    "Dawn of the Dead (2004)"
   ],
   "items": [
     {
@@ -193,8 +190,38 @@
       "content_length": "1290093487",
       "source": "quiet_window_bounded_qa_pass",
       "verified_utc": "06/14/2026 13:10:18"
+    },
+    {
+      "title": "Dances with Wolves (1990)",
+      "hash": "scarflix_part-b9dbad7c5a4378f1",
+      "status": "PASS",
+      "http": 200,
+      "ms": 5156,
+      "content_length": "5762918708",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "06/14/2026 13:23:41"
+    },
+    {
+      "title": "Daredevil (2003)",
+      "hash": "scarflix_part-8ce42f7e275d1e85",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1605,
+      "content_length": "1831891237",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "06/14/2026 13:24:02"
+    },
+    {
+      "title": "Dawn of the Dead (2004)",
+      "hash": "scarflix_part-7c4868fe7b1db021",
+      "status": "PASS",
+      "http": 200,
+      "ms": 8005,
+      "content_length": "1616217557",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "06/14/2026 13:24:20"
     }
   ],
   "caveat": "This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.",
-  "next_action": "Continue detached bounded QA batches; promote only completed PASS rows; keep REVIEW rows retryable."
+  "next_action": "Continue detached bounded QA batches; promote only completed PASS rows; keep REVIEW/HELD rows source-retryable."
 }
