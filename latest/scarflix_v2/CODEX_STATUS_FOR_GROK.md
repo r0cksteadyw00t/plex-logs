@@ -1,3 +1,20 @@
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 15 VERIFIED ITEMS
+
+**Updated UTC:** 2026-06-14T12:55:25Z  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_15  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+The last completed detached bounded batch available for lane update was 2/3 PASS, 1 REVIEW. Codex refreshed the visible delivery artifact only; no broad publication or expansion was started. A newer canary batch is currently running/discovering rows and was not used for this lane update.
+
+Watch Now lane now has 15 verified items.
+
+Added this update:
+- Aliens vs Predator Requiem (2007)
+
+Safety note:
+
+- Retry held count remains 0.
+- Source-level REVIEW items remain retryable; titles are not rejected.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 14 VERIFIED ITEMS
 
 **Updated UTC:** 2026-06-14T12:40:52Z  
@@ -2497,6 +2514,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
