@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T12:11:16Z
+- Updated UTC: 2026-06-14T12:34:18Z
 - Threshold: 3
-- Tracked: 19
+- Tracked: 18
 - Held: 0
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -22,9 +22,8 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Sin Nombre: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Faculty: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Princess Diaries 2: Royal Engagement: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Wish: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - They Call Me Trinity: TRACKING_RETRY; failures=1; held=false; reason=timeout
-- Vertigo: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- Wish: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - A Cinderella Story: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - AVPR: Aliens vs Predator - Requiem: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Million Dollar Baby: TRACKING_RETRY; failures=1; held=false; reason=timeout
