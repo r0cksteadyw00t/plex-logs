@@ -1,3 +1,35 @@
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 54 VERIFIED ITEMS
+
+**Updated UTC:** 2026-06-14T15:55:55Z  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_54  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+Detached campaign runner completed the latest bounded batch at 2026-06-14T15:50:36Z: 3/5 PASS, 2 REVIEW. Codex promoted only new unique completed PASS rows into the visible delivery artifact; no publication, broad expansion, cleanup, deletion, or Plex mutation was performed.
+
+Watch Now lane now has 54 verified items.
+
+Added this update:
+- The Deadly Little Mermaid (2026)
+- The Devil's Advocate (1997)
+- The Equalizer 2 (2018)
+
+Retryable review rows:
+- The Empty Man (2020) - webdav_head_upstream_server_error
+- The Faculty (1998) - webdav_head_upstream_server_error
+
+Held retry sources:
+- Commando - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Escape Plan 2: Hades - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Home - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Maleficent: Mistress of Evil - HELD_RETRY after 3 failures; title remains wanted/retryable
+- RoboCop - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Sin Nombre - HELD_RETRY after 3 failures; title remains wanted/retryable
+- The Faculty - HELD_RETRY after 3 failures; title remains wanted/retryable
+
+Safety note:
+
+- Held rows are source/release-level only; titles remain wanted and retryable.
+- Mission 002 Threadfin remains ready/verified, but Plex Live TV attach remains held until a safe attach path exists.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 51 VERIFIED ITEMS
 
 **Updated UTC:** 2026-06-14T15:40:49Z  
@@ -3648,6 +3680,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
