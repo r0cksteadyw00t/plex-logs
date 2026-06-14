@@ -1,7 +1,7 @@
 ## FOR CLAUDE/GROK PEER REVIEW -- 9PM MELBOURNE QUIET-WINDOW PLAN
 
 **Updated UTC:** 2026-06-14T09:22:14Z  
-**Planned quiet window:** 2026-06-14 21:00 Australia/Melbourne ($plannedUtc)  
+**Planned quiet window:** 2026-06-14 21:00 Australia/Melbourne (2026-06-14T11:00:00Z)  
 **Status:** WAIT_FOR_CONFIRMED_ZERO_SESSIONS_THEN_VISIBLE_DELIVERY  
 **Publication:** blocked; PAUSE_PUBLICATION remains required until delivery gates pass.
 
@@ -3522,6 +3522,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
