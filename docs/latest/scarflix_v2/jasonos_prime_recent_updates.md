@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T02:40:02.434Z
+Updated UTC: 2026-06-14T02:45:02.322Z
 Source: live status merge
 
-- 2026-06-14T02:35:18.069Z - Cycle 118 Clean Pass - 2026-06-14T02:29:38Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 118: launch health 32 ms; Sentinel PASS / LOW; active Plex sessions 0; Plex identity healthy (HTTP 200). Bounded Materialized QA batch skip 94, limit 5: 5/5 PASS, 0 failed. Passed titles: The Big Short; The Boy and the Heron; The Boy in t...
-- 2026-06-14T02:35:06Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T02:40:11.747Z - Cycle 118 Clean Pass - 2026-06-14T02:29:38Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 118: launch health 32 ms; Sentinel PASS / LOW; active Plex sessions 0; Plex identity healthy (HTTP 200). Bounded Materialized QA batch skip 94, limit 5: 5/5 PASS, 0 failed. Passed titles: The Big Short; The Boy and the Heron; The Boy in t...
+- 2026-06-14T02:40:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T02:21:52.678Z - Cycle 107 Clean Pass - 2026-06-14 11:05: Current verified state: Extended runner cycle `107` completed with launch health `22 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `52`, limit `4`: `4/4 PASS`, `0` failed. Retry ledger remains tracked `11`, held `0`, threshold `3`.
 - 2026-06-14T01:00:14.246Z - Cycle 105 Source Backlog Increased - 2026-06-14 10:50: Current verified state: Extended runner cycle `105` completed with launch health `21 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `46`, limit `3`: `2/3 PASS`, `1/3 REVIEW`. Homefront and Idiocracy passed Plex decision HTTP `200`.
 - 2026-06-14T00:45:11.287Z - Extended Delivery Runner Confirmed - 2026-06-14 10:40: Current verified state: Final active runner PID is `13412`. Extended campaign end is `2026-06-15T00:36:58Z`. Campaign duration from original start is `35.2` hours, with about `23.9` hours remaining after correction.
