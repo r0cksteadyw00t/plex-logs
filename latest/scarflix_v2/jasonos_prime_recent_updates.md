@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T03:30:02.980Z
+Updated UTC: 2026-06-14T03:35:02.519Z
 Source: live status merge
 
-- 2026-06-14T03:25:29.816Z - Cycle 126 Source Retry Added - 2026-06-14T03:25:29Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 126: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 125, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Witch!; There Will Be Blood; To Wong Foo, Thanks...
-- 2026-06-14T03:25:03Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T03:30:13.422Z - Cycle 126 Source Retry Added - 2026-06-14T03:25:29Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 126: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 125, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Witch!; There Will Be Blood; To Wong Foo, Thanks...
+- 2026-06-14T03:30:06Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T03:23:29.902Z - Cycle 125 Clean Pass - 2026-06-14T03:22:15Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 125: launch health 41 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 122, limit 3: 3/3 PASS, 0 failed. Passed titles: The Texas Chain Saw Massacre; The Transporter; Ne...
 - 2026-06-14T03:15:12.307Z - Cycle 123 Clean Pass - 2026-06-14T03:07:18Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 123: launch health 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint. Bounded Materialized QA batch skip 115, limit 3: 3/3 PASS, 0 failed. Passed titles: The...
 - 2026-06-14T03:00:15.938Z - Cycle 121 Clean Pass - 2026-06-14T02:52:18Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 121: launch health 38 ms; Sentinel PASS / LOW; active Plex sessions 0; Plex identity healthy (HTTP 200). Bounded Materialized QA batch skip 108, limit 3: 3/3 PASS, 0 failed. Passed titles: The Italian Job; The Jungle Book; The Last Samurai.
