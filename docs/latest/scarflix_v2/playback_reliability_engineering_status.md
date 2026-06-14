@@ -1,5 +1,24 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T00:20:27Z
+
+**Status:** BOUNDED_QA_CONTINUES_SOURCE_UPSTREAM_503_TRACKED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest bounded batch:
+
+- Go-live runner cycle `100`.
+- Launch health `17 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Materialized QA skip `27`, limit `5`: `4/5 PASS`, `1` source/upstream REVIEW.
+- Newly tracked source: Escape Plan 2: Hades, reason `webdav_head_upstream_server_error`.
+- Retry ledger now tracks `8` sources, holds `0`, threshold `3`.
+
+Current gate:
+
+- Keep running bounded batches. If any source reaches threshold, source-quarantine only and keep the title wanted/retryable.
+
 ## Current Update - 2026-06-14T00:06:03Z
 
 **Status:** BOUNDED_PLAYBACK_QA_PASS_STREAK_RESUMED_NOT_GO_LIVE_READY  
