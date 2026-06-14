@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T05:45:03.010Z
+Updated UTC: 2026-06-14T05:50:02.773Z
 Source: live status merge
 
-- 2026-06-14T05:40:43.072Z - Cycle 145 Source Retry Added - 2026-06-14T05:40:42Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 145: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 REVIEW. Passed title: Man on Fire.
-- 2026-06-14T05:40:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T05:45:18.425Z - Cycle 145 Source Retry Added - 2026-06-14T05:40:42Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 145: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 REVIEW. Passed title: Man on Fire.
+- 2026-06-14T05:45:05Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T05:39:21.426Z - Cycle 145 Clean Pass - 2026-06-14T05:39:21Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 145: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 failed. Detailed row titles for this completed batch were superseded by t...
 - 2026-06-14T05:30:11.813Z - Cycle 142 Source Retry Added - 2026-06-14T05:22:18Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 142: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 47, limit 3: 2/3 PASS, 1 REVIEW. Passed titles: Idiocracy; Ikiru.
 - 2026-06-14T05:15:12.471Z - Cycle 140 Clean Pass - 2026-06-14T05:07:07Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 140: launch health 31 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint. Bounded Materialized QA batch skip 38, limit 4: 4/4 PASS, 0 failed. Passed titles: Frac...
