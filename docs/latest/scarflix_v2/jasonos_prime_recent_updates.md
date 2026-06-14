@@ -1,10 +1,11 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T01:05:02.005Z
+Updated UTC: 2026-06-14T01:10:01.936Z
 Source: live status merge
 
+- 2026-06-14T01:06:20.353Z - Cycle 107 Clean Pass - 2026-06-14 11:05: Current verified state: Extended runner cycle `107` completed with launch health `22 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `52`, limit `4`: `4/4 PASS`, `0` failed. Retry ledger remains tracked `11`, held `0`, threshold `3`.
+- 2026-06-14T01:05:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T01:00:14.246Z - Cycle 105 Source Backlog Increased - 2026-06-14 10:50: Current verified state: Extended runner cycle `105` completed with launch health `21 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `46`, limit `3`: `2/3 PASS`, `1/3 REVIEW`. Homefront and Idiocracy passed Plex decision HTTP `200`.
-- 2026-06-14T01:00:06Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T00:45:11.287Z - Extended Delivery Runner Confirmed - 2026-06-14 10:40: Current verified state: Final active runner PID is `13412`. Extended campaign end is `2026-06-15T00:36:58Z`. Campaign duration from original start is `35.2` hours, with about `23.9` hours remaining after correction.
 - 2026-06-14T00:38:24.224Z - Actual Go-Live Delivery Window Extended - 2026-06-14 10:36: Current verified state: The local go-live campaign runner now reflects Jason's extra 24-hour exclusive Plex access window. Runner was restarted safely between QA batches; Plex was not stopped. New runner PID: `12560`.
 - 2026-06-14T00:30:11.353Z - Cycle 100 Source Retry Tracking Updated - 2026-06-14 10:20: Current verified state: Go-live runner cycle `100` completed with launch health `17 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`. Escape Plan 2: Hades is newly tracked for `webdav_head_upstream_server_error`.
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-13T22:10:11.918Z - Playback Reliability Engineering Push - 2026-06-14 08:03: Current verified state: Playback reliability is the active go-live blocker. Plex is running and Sentinel is low, but ScarFLIX playback is still not ready for general watching. Codex applied three control-plane reliability changes:
 - 2026-06-13T21:00:16.373Z - 16-Hour Go-Live Campaign Runner Active - 2026-06-13 23:27: Current verified state: Jason granted an exclusive Plex maintenance window. A singleton 16-hour local runner is active: `D:\PlexTools\Foundry\workers\JasonOS_Prime_GoLive16hCampaignRunner.js`
 - 2026-06-13T13:20:15.189Z - Playback-Safe Planning Progress While Stream Is Active - 2026-06-13 21:04: Current verified state: Production Plex still has active playback, so no live Plex, Threadfin, Docker, catalogue, scan, refresh, QA, publication, expansion, cleanup, deletion, or path mutation work was started. Added held quiet-window queue: `jasonos/control/QUIET_WINDOW_EXECUTION_QUEUE.md`
-- 2026-06-13T11:00:34.572Z - Playback-Only Hold Reinstated - 2026-06-13 20:54: Current verified state: Jason reported the viewer had stopped, but a direct Plex session check still reports `1` active session. Current active Plex title: `The Magic Faraway Tree`, state `playing`. Plex server was not stopped, restarted, or modified.
