@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T01:30:02.176Z
+Updated UTC: 2026-06-14T01:35:02.045Z
 Source: live status merge
 
-- 2026-06-14T01:25:11.736Z - Cycle 107 Clean Pass - 2026-06-14 11:05: Current verified state: Extended runner cycle `107` completed with launch health `22 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `52`, limit `4`: `4/4 PASS`, `0` failed. Retry ledger remains tracked `11`, held `0`, threshold `3`.
-- 2026-06-14T01:25:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T01:30:11.957Z - Cycle 107 Clean Pass - 2026-06-14 11:05: Current verified state: Extended runner cycle `107` completed with launch health `22 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `52`, limit `4`: `4/4 PASS`, `0` failed. Retry ledger remains tracked `11`, held `0`, threshold `3`.
+- 2026-06-14T01:30:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T01:00:14.246Z - Cycle 105 Source Backlog Increased - 2026-06-14 10:50: Current verified state: Extended runner cycle `105` completed with launch health `21 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `46`, limit `3`: `2/3 PASS`, `1/3 REVIEW`. Homefront and Idiocracy passed Plex decision HTTP `200`.
 - 2026-06-14T00:45:11.287Z - Extended Delivery Runner Confirmed - 2026-06-14 10:40: Current verified state: Final active runner PID is `13412`. Extended campaign end is `2026-06-15T00:36:58Z`. Campaign duration from original start is `35.2` hours, with about `23.9` hours remaining after correction.
 - 2026-06-14T00:38:24.224Z - Actual Go-Live Delivery Window Extended - 2026-06-14 10:36: Current verified state: The local go-live campaign runner now reflects Jason's extra 24-hour exclusive Plex access window. Runner was restarted safely between QA batches; Plex was not stopped. New runner PID: `12560`.
