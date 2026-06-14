@@ -1,15 +1,15 @@
 # JasonOS Prime Go-Live 16h Campaign Status
 
-- Status: RUNNING_EXTENDED_24H_DELIVERY_WINDOW
-- Updated UTC: 2026-06-14T00:40:06Z
+- Status: RUNNING
+- Updated UTC: 2026-06-14T00:42:17Z
 - Started UTC: 2026-06-13T13:22:00Z
 - Ends UTC: 2026-06-15T00:36:58Z
-- Cycle: 103
+- Cycle: 104
 - Launch health: 22 ms
 - Sentinel: PASS / LOW
 - Active Plex sessions: 0
-- Materialized QA: REVIEW_PARTIAL_BATCH_PASS checked=3 passed=3 failed=0
-- QA cursor: 42
+- Materialized QA: REVIEW checked=4 passed=3 failed=1
+- QA cursor: 46
 - Last action: ran_playback_path_recovery_once, ran_mission2_threadfin_apply, ran_mission2_threadfin_verify, ran_bounded_materialized_qa_batch, ran_go_live_readiness_audit_once
 - Last blocker: 
 
