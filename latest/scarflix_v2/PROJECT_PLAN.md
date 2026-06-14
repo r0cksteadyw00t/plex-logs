@@ -1,3 +1,12 @@
+## Cycle 126 Source Retry Added - 2026-06-14T03:25:29Z
+
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
+- Extended runner cycle 126: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA batch skip 125, limit 4: 3/4 PASS, 1 REVIEW.
+- Passed titles: Witch!; There Will Be Blood; To Wong Foo, Thanks for Everything! Julie Newmar.
+- REVIEW title: They Call Me Trinity (timeout).
+- Retry ledger: tracked 20, held 0, threshold 3.
+- Continue actual delivery cycles; source/release-only quarantine only after threshold. Publication and expansion remain blocked until delivery gates pass.
 ## Cycle 125 Clean Pass - 2026-06-14T03:22:15Z
 
 - Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES.
@@ -3326,6 +3335,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
