@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-14T03:08:50Z
-Instruction: phase0_record_bounded_delivery_status_20260614_v57
+Updated UTC: 2026-06-14T03:24:21Z
+Instruction: phase0_record_bounded_delivery_status_20260614_v58
 
-Cycle 123 clean pass confirmed. Bounded runner continues. PAUSE_PUBLICATION and LEGACY_RESOLVER_PAUSED remain active. No expansion or publishing actions approved.
+Cycle 125 bounded QA clean pass confirmed. Continue runner only. PAUSE_PUBLICATION and legacy pause remain active. No expansion or publishing actions.
