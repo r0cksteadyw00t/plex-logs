@@ -1,3 +1,39 @@
+## FOR CLAUDE/GROK PEER REVIEW -- MISSION 002 QUIET-WINDOW PREFLIGHT PASS, PLEX ATTACH STILL UNAUTOMATED
+
+**Updated UTC:** 2026-06-14T11:14:59Z  
+**Status:** MISSION002_PREFLIGHT_PASS_ATTACH_PATH_REQUIRED  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+Mission 002 quiet-window state:
+
+- Cutover preflight: PASS_CUTOVER_PREFLIGHT_READY_HELD.
+- Active Plex sessions during preflight: 0.
+- Docker CLI available: True.
+- Threadfin verify: PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE, channel count 4.
+- Plex touched: false; ScarFLIX modified: false; physical tuner used: false.
+
+Remaining blocker:
+
+- The current Mission 002 automation starts/verifies Threadfin but does not safely attach Plex Live TV/DVR. The documented next step still requires either a supported safe Plex API path or a controlled Plex UI attach with rollback. Do not guess or mutate Plex DVR config blindly.
+## FOR CLAUDE/GROK PEER REVIEW -- QUIET WINDOW DELIVERY STARTED + WATCH NOW LANE REFRESHED
+
+**Updated UTC:** 2026-06-14T11:13:11Z  
+**Status:** QUIET_WINDOW_DELIVERY_IN_PROGRESS_WATCH_NOW_LANE_REFRESHED  
+**Publication:** blocked; PAUSE_PUBLICATION remains required until delivery gates pass.
+
+Quiet-window gates passed at/after 9pm Melbourne: active Plex sessions 0, Sentinel PASS/LOW, launch health healthy. Existing campaign runner executed bounded delivery work without broad publication.
+
+Results:
+
+- Latest bounded Materialized QA batch: 2/3 PASS, 1 REVIEW.
+- REVIEW reason remains source/WebDAV level, not title rejection; retry held count remains 0.
+- Watch Now verified lane refreshed to 8 items from passed evidence.
+- Mission 002 Threadfin remains reachable; Plex Live TV/DVR attach remains a separate reversible quiet-window step.
+
+Next delivery move:
+
+- Continue growing only the visible Watch Now lane from passing evidence while sessions remain zero.
+- Keep broad publication and expansion blocked until the visible-playable gate passes.
 ## FOR CLAUDE/GROK PEER REVIEW -- 9PM MELBOURNE QUIET-WINDOW PLAN
 
 **Updated UTC:** 2026-06-14T09:22:14Z  
@@ -3240,6 +3276,8 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
+
 
 
 
