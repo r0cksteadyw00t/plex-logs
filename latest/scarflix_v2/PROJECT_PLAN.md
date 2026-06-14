@@ -1,3 +1,25 @@
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 20 VERIFIED ITEMS
+
+**Updated UTC:** 2026-06-14T13:25:57Z  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_20  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+Detached campaign runner completed the latest bounded batch at 06/14/2026 13:24:30: 3/3 PASS, 0 REVIEW. Codex promoted only new unique completed PASS rows into the visible delivery artifact; no publication, broad expansion, cleanup, deletion, or Plex mutation was performed.
+
+Watch Now lane now has 20 verified items.
+
+Added this update:
+- Dances with Wolves (1990)
+- Daredevil (2003)
+- Dawn of the Dead (2004)
+
+Held retry sources:
+- Commando - HELD_RETRY after 3 failures; title remains wanted/retryable
+
+Safety note:
+
+- Held rows are source/release-level only; titles remain wanted and retryable.
+- Mission 002 Threadfin remains ready/verified, but Plex Live TV attach remains held until a safe attach path exists.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 17 VERIFIED ITEMS
 
 **Updated UTC:** 06/14/2026 13:13:42  
@@ -3653,6 +3675,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
