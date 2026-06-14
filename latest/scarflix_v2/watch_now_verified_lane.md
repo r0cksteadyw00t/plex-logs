@@ -1,25 +1,27 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T13:13:42Z  
+Updated UTC: 2026-06-14T13:25:57Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 17
+Item count: 20
 
 ## Latest Quiet-Window Batch
 
-- Checked: 5
-- Passed: 4
-- Review: 1
-- New unique items added: 2
-- Reverified existing items: 2
+- Checked: 3
+- Passed: 3
+- Review: 0
+- New unique items added: 3
+- Reverified existing items: 0
+- Held retry sources: 1
 
 ## Added This Update
 
-- The Ballerina (2016) -- scarflix_part-6bc868616f378edf -- HTTP 200
-- Cloverfield (2008) -- scarflix_part-bf8a62cf46526b11 -- HTTP 200
+- Dances with Wolves (1990) -- scarflix_part-b9dbad7c5a4378f1 -- HTTP 200
+- Daredevil (2003) -- scarflix_part-8ce42f7e275d1e85 -- HTTP 200
+- Dawn of the Dead (2004) -- scarflix_part-7c4868fe7b1db021 -- HTTP 200
 
-## Retryable Review Rows
+## Held Retry Sources
 
-- Casino (1995) -- scarflix_part-15435a4ab8d58746 -- webdav_head_upstream_server_error
+- Commando -- scarflix_part-9d12ffa4bdee7b47 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 ## Verified Items
 
@@ -40,3 +42,6 @@ Item count: 17
 - Aliens vs Predator Requiem (2007) -- scarflix_part-141663efa544da92 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - The Ballerina (2016) -- scarflix_part-6bc868616f378edf -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Cloverfield (2008) -- scarflix_part-bf8a62cf46526b11 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Dances with Wolves (1990) -- scarflix_part-b9dbad7c5a4378f1 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Daredevil (2003) -- scarflix_part-8ce42f7e275d1e85 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Dawn of the Dead (2004) -- scarflix_part-7c4868fe7b1db021 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
