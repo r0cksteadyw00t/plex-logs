@@ -1,7 +1,7 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: REVIEW_HELD_RETRY_SOURCES
-- Updated UTC: 2026-06-14T16:52:55Z
+- Updated UTC: 2026-06-14T17:37:27Z
 - Threshold: 3
 - Tracked: 19
 - Held: 9
@@ -25,9 +25,9 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - They Call Me Trinity: TRACKING_RETRY; failures=2; held=false; reason=timeout
 - A Cinderella Story: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Empty Man: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Casino: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Ladybug & Cat Noir Awakening: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Aftermath: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- Casino: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Harakiri: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Rambo: Last Blood: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Terminator: Dark Fate: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
