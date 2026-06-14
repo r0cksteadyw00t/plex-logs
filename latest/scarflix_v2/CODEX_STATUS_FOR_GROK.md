@@ -1,3 +1,20 @@
+## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 128 SOURCE RETRY ADDED
+
+**Updated UTC:** 2026-06-14T03:39:57Z  
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+Latest cycle:
+
+- Cycle 128: launch health 20 ms, Sentinel PASS / LOW, Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded QA skip 132, limit 4: 3/4 PASS, 1 REVIEW.
+- Passed: Twister; Undisputed III: Redemption; Valerian and the City of a Thousand Planets.
+- Review: Vertigo (Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error).
+- Retry ledger: tracked 21, held 0, threshold 3.
+
+Current conclusion:
+
+- Continue runner. This is a source/release retry case below threshold, not a user-action blocker.
 ## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 127 CLEAN PASS
 
 **Updated UTC:** 2026-06-14T03:37:05Z  
@@ -2079,6 +2096,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
