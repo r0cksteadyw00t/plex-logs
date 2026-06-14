@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T02:47:12Z
+- Updated UTC: 2026-06-14T03:02:30Z
 - Threshold: 3
-- Tracked: 17
+- Tracked: 18
 - Held: 0
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -29,5 +29,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - RoboCop: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Sin Nombre: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Faculty: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- The Lord of the Rings: The War of the Rohirrim: TRACKING_RETRY; failures=1; held=false; reason=timeout
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
