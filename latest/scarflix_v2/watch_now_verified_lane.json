@@ -1,25 +1,25 @@
 {
   "component": "scarflix_watch_now_verified_lane",
   "status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "updated_utc": "2026-06-14T13:55:39Z",
-  "item_count": 28,
+  "updated_utc": "2026-06-14T14:10:42Z",
+  "item_count": 30,
   "latest_batch": {
     "source": "materialized_canary_decision_qa_status.json",
-    "source_updated_utc": "2026-06-14T13:53:45Z",
-    "status": "REVIEW_PARTIAL_BATCH_PASS",
-    "checked": 4,
-    "passed": 4,
-    "failed": 0,
-    "new_unique_added": 4,
+    "source_updated_utc": "2026-06-14T14:08:14Z",
+    "status": "REVIEW",
+    "checked": 3,
+    "passed": 2,
+    "failed": 1,
+    "new_unique_added": 2,
     "reverified_existing": [],
-    "review_retryable": [],
-    "held_retry_count": 2
+    "review_retryable": [
+      "Home (2015)"
+    ],
+    "held_retry_count": 3
   },
   "added_this_update": [
-    "Final Destination (2000)",
-    "Final Destination 5 (2011)",
-    "Finding Dory (2016)",
-    "Fracture (2007)"
+    "Hidden Figures (2016)",
+    "Homefront (2013)"
   ],
   "items": [
     {
@@ -301,6 +301,26 @@
       "content_length": "1607882631",
       "source": "quiet_window_bounded_qa_pass",
       "verified_utc": "2026-06-14T13:53:37Z"
+    },
+    {
+      "title": "Hidden Figures (2016)",
+      "hash": "scarflix_part-ec10430fcf0b3b3a",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1624,
+      "content_length": "2593594853",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T14:07:43Z"
+    },
+    {
+      "title": "Homefront (2013)",
+      "hash": "scarflix_part-f5c5e50cc68c7a6a",
+      "status": "PASS",
+      "http": 200,
+      "ms": 6428,
+      "content_length": "1962601588",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T14:08:04Z"
     }
   ],
   "caveat": "This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.",
