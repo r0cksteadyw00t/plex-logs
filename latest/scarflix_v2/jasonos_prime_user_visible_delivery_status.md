@@ -1,17 +1,18 @@
 # JasonOS Prime User-Visible Delivery Status
 
-- Updated UTC: 2026-06-14T12:40:52Z
-- Status: QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_14
+- Updated UTC: 2026-06-14T12:55:25Z
+- Status: QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_15
 - Active Plex sessions reported by campaign: 0
 - Sentinel: PASS / LOW
 - Publication: PAUSE_PUBLICATION remains required
-- Watch Now lane: 14 verified items
-- Latest bounded QA: 3/4 PASS, 1 REVIEW
+- Watch Now lane: 15 verified items
+- Latest completed bounded QA used: 2/3 PASS, 1 REVIEW
 - Retry held count: 0
 
 ## Added This Update
 
-- Valerian and the City of a Thousand Planets (2017)
-- Vertigo (1958)
-- Downton Abbey (2010) - S01E01
+- Aliens vs Predator Requiem (2007)
 
+## Note
+
+A newer canary batch is currently running/discovering rows and was not used for this lane update.
