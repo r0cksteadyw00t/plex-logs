@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_go_live_16h_campaign_runner",
   "schema_version": "jasonos.go_live_16h_campaign.v1",
-  "status": "RUNNING",
+  "status": "HELD_ACTIVE_PLAYBACK",
   "started_utc": "2026-06-13T13:22:00Z",
   "ends_utc": "2026-06-15T00:36:58Z",
   "ends_epoch_ms": 1781483818000,
   "duration_hours": 35.2,
   "exclusive_plex_window": true,
-  "cycle_count": 299,
+  "cycle_count": 300,
   "qa_cursor": 51,
   "qa_batch_size": 6,
   "pause_publication_required": true,
@@ -20,7 +20,7 @@
     "campaign_log": "D:\\PlexTools\\state\\jasonos_prime\\go_live_16h_campaign\\campaign_log.ndjson",
     "log": "D:\\PlexTools\\logs\\jasonos_prime\\jasonos_prime_go_live_16h_campaign.log"
   },
-  "updated_utc": "2026-06-14T22:07:06Z",
+  "updated_utc": "2026-06-14T22:12:09Z",
   "noncritical_tasks_suppressed": [
     "JasonOS_Prime_FastTrackAccelerator",
     "JasonOS_Prime_PublicMirrorPublisher",
@@ -72,10 +72,10 @@
     "blocker_count": 3
   },
   "last_cycle": {
-    "updated_utc": "2026-06-14T22:07:06Z",
+    "updated_utc": "2026-06-14T22:12:09Z",
     "launch_health": {
       "ok": true,
-      "elapsed_ms": 19,
+      "elapsed_ms": 21,
       "status": 0,
       "error": ""
     },
@@ -84,27 +84,27 @@
       "alert_level": "LOW"
     },
     "plex_sessions": {
-      "ok": false,
-      "active_sessions": -1,
-      "error": "Plex sessions endpoint unavailable"
+      "ok": true,
+      "active_sessions": 1,
+      "endpoint": "http://192.168.1.184:32400/status/sessions",
+      "elapsed_ms": 1734
     },
     "plex_identity": {
       "ok": true,
       "endpoint": "http://127.0.0.1:32400/identity",
       "status_code": 200,
-      "elapsed_ms": 0
+      "elapsed_ms": 1
     },
     "actions": [
-      "ran_playback_path_recovery_once",
-      "ran_mission2_threadfin_apply",
-      "ran_mission2_threadfin_verify",
-      "ran_bounded_materialized_qa_batch",
-      "ran_go_live_readiness_audit_once"
+      "suppressed_noncritical_tasks",
+      "stopped_materialized_qa_due_active_playback"
     ],
-    "blockers": []
+    "blockers": [
+      "active_plex_playback_detected"
+    ]
   },
-  "last_action": "ran_playback_path_recovery_once, ran_mission2_threadfin_apply, ran_mission2_threadfin_verify, ran_bounded_materialized_qa_batch, ran_go_live_readiness_audit_once",
-  "last_blocker": "",
+  "last_action": "suppressed_noncritical_tasks, stopped_materialized_qa_due_active_playback",
+  "last_blocker": "active_plex_playback_detected",
   "duplicate_runner": {
     "current_pid": 24752,
     "owner_pid": 33100,
