@@ -1,16 +1,21 @@
 {
-  "updated_utc": "2026-06-14T03:25:02.740Z",
+  "updated_utc": "2026-06-14T03:30:02.980Z",
   "source": "live status merge",
   "updates": [
+    {
+      "utc": "2026-06-14T03:25:29.816Z",
+      "title": "Cycle 126 Source Retry Added - 2026-06-14T03:25:29Z",
+      "detail": "Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 126: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 125, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Witch!; There Will Be Blood; To Wong Foo, Thanks..."
+    },
+    {
+      "utc": "2026-06-14T03:25:03Z",
+      "title": "Autonomous controller: candidate_source_model_pass",
+      "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
+    },
     {
       "utc": "2026-06-14T03:23:29.902Z",
       "title": "Cycle 125 Clean Pass - 2026-06-14T03:22:15Z",
       "detail": "Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 125: launch health 41 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 122, limit 3: 3/3 PASS, 0 failed. Passed titles: The Texas Chain Saw Massacre; The Transporter; Ne..."
-    },
-    {
-      "utc": "2026-06-14T03:20:04Z",
-      "title": "Autonomous controller: candidate_source_model_pass",
-      "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
     {
       "utc": "2026-06-14T03:15:12.307Z",
@@ -66,11 +71,6 @@
       "utc": "2026-06-13T23:54:27.646Z",
       "title": "Plex Decision Path Fix Validated - 2026-06-14 09:53",
       "detail": "Current verified state: Playback-first recovery remains active; publication and broad expansion remain blocked. Plex registry LAN network parse issue was corrected after backup, then Plex was restarted because the API became unresponsive during maintenance. Plex identity is healthy again."
-    },
-    {
-      "utc": "2026-06-13T23:45:19.917Z",
-      "title": "Layered Streaming QA First Batch Complete - 2026-06-14 08:24",
-      "detail": "Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\\PlexTools\\Foundry\\workers\\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\\PlexTools\\Foundry\\workers\\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and..."
     }
   ]
 }
