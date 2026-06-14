@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-14T22:04:07Z
+Updated UTC: 2026-06-14T22:09:08Z
 
 Overall status: `HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY`
 
@@ -27,9 +27,8 @@ PAUSE_PUBLICATION active: `True`
 ## Blocking Items
 
 - `O-PLAYBACK`: Active Plex sessions: 1. No disruptive action allowed.
-- `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: REVIEW_PARTIAL_BATCH_PASS 4/4 failed=0.
+- `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: RUNNING_PLEX_DECISION_PROBES 0/0 failed=0.
 - `O-SCARFLIX-CATALOGUE`: Active Plex playback prevents safe focused QA/expansion work.
-- `O-AUTONOMY-STABILITY`: Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED.
 
 ## Monitored Tasks
 
