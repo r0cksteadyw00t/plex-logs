@@ -1,5 +1,42 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T03:39:57Z
+
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle 128.
+- Launch health 20 ms; post-QA launch check 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA skip 132, limit 4: 3/4 PASS, 1 REVIEW.
+- Passed titles: Twister; Undisputed III: Redemption; Valerian and the City of a Thousand Planets.
+- Review title: Vertigo (Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error).
+- Retry ledger: tracked 21, held 0, threshold 3.
+
+Current gate:
+
+- Source retry backlog increased, but no source is held. Publication and expansion remain blocked until the delivery gate explicitly passes.
+## Current Update - 2026-06-14T03:37:05Z
+
+**Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle 127.
+- Launch health 21 ms; post-QA launch check 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA skip 129, limit 3: 3/3 PASS, 0 failed.
+- Passed titles: Tombstone; Tomorrowland: A World Beyond; Twelve Monkeys.
+- Retry ledger: tracked 20, held 0, threshold 3.
+
+Current gate:
+
+- Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
 ## Current Update - 2026-06-14T03:25:29Z
 
 **Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
@@ -37,6 +74,9 @@ Latest evidence:
 Current gate:
 
 - Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
+
+
 
 
 
