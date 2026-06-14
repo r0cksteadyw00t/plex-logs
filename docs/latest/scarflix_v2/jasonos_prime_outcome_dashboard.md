@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-14T03:45:02.852Z
+Updated UTC: 2026-06-14T03:50:02.867Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,8 +21,8 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=2/3; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-14T03:40:12.422Z - Cycle 128 Source Retry Added - 2026-06-14T03:39:57Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 128: launch health 20 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 132, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Twister; Undisputed III: Redemption; Valerian an...
-- 2026-06-14T03:40:05Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T03:45:11.775Z - Cycle 128 Source Retry Added - 2026-06-14T03:39:57Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 128: launch health 20 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 132, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Twister; Undisputed III: Redemption; Valerian an...
+- 2026-06-14T03:45:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T03:30:13.422Z - Cycle 126 Source Retry Added - 2026-06-14T03:25:29Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 126: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 125, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Witch!; There Will Be Blood; To Wong Foo, Thanks...
 - 2026-06-14T03:23:29.902Z - Cycle 125 Clean Pass - 2026-06-14T03:22:15Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 125: launch health 41 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 122, limit 3: 3/3 PASS, 0 failed. Passed titles: The Texas Chain Saw Massacre; The Transporter; Ne...
 - 2026-06-14T03:15:12.307Z - Cycle 123 Clean Pass - 2026-06-14T03:07:18Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 123: launch health 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint. Bounded Materialized QA batch skip 115, limit 3: 3/3 PASS, 0 failed. Passed titles: The...
@@ -31,7 +31,7 @@ Recent Achievements:
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 5 min ago
-- Platform child progress: 1236 min ago
+- Platform child progress: 1241 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
