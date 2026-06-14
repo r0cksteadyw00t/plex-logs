@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-14T20:50:04Z
-Instruction: phase0_record_quiet_window_delivery_status_20260614_v123
+Updated UTC: 2026-06-14T21:06:36Z
+Instruction: phase0_record_quiet_window_delivery_status_20260614_v124
 
-Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.
+Continue detached go-live campaign. PAUSE_PUBLICATION respected. Promote only new bounded QA PASS rows. No expansion, publishing, or source changes.
