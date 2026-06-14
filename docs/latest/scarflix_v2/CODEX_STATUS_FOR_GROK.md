@@ -1,3 +1,19 @@
+## GO-LIVE DELIVERY UPDATE — CLEAN AFFECTED-MOVIE PASS BATCH PROMOTED
+
+**Updated UTC:** 2026-06-14T17:10:29Z  
+**Status:** DELIVERY_PROGRESS_PUBLICATION_BLOCKED  
+**Watch Now evidence lane:** 69 -> 69 verified PASS-only items  
+**Added this update:** 0  
+**Latest bounded QA:** 5 checked / 5 PASS / 0 held for retry  
+**Sentinel:** PASS/LOW  
+**Publication:** BLOCKED / PAUSE_PUBLICATION respected  
+**Raw lane URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json
+
+**What changed:** Promoted a clean 5/5 PASS bounded QA batch from the affected movie set. No publication, broad expansion, cache clear, deletion, or source mutation was performed.
+
+**Added titles:** 
+
+**Next autonomous action:** Continue the detached go-live campaign, keep noncritical expansion suppressed, keep publication blocked, and promote only new PASS rows after each bounded QA cycle.
 ## GO-LIVE DELIVERY UPDATE — MOVIE + TV PASS-ONLY BATCH PROMOTED
 
 **Updated UTC:** 2026-06-14T16:56:01Z  
@@ -2943,6 +2959,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
