@@ -1,29 +1,28 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T13:55:39Z  
+Updated UTC: 2026-06-14T14:10:42Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 28
+Item count: 30
 
 ## Latest Quiet-Window Batch
 
-- Checked: 4
-- Passed: 4
-- Review: 0
-- New unique items added: 4
+- Checked: 3
+- Passed: 2
+- Review: 1
+- New unique items added: 2
 - Reverified existing items: 0
-- Held retry sources: 2
+- Held retry sources: 3
 
 ## Added This Update
 
-- Final Destination (2000) -- scarflix_part-f96ecae0bf043548 -- HTTP 200
-- Final Destination 5 (2011) -- scarflix_part-c017966a31451921 -- HTTP 200
-- Finding Dory (2016) -- scarflix_part-854736eb92c08f81 -- HTTP 200
-- Fracture (2007) -- scarflix_part-61f18dcc8c34f579 -- HTTP 200
+- Hidden Figures (2016) -- scarflix_part-ec10430fcf0b3b3a -- HTTP 200
+- Homefront (2013) -- scarflix_part-f5c5e50cc68c7a6a -- HTTP 200
 
 ## Held Retry Sources
 
 - Commando -- scarflix_part-9d12ffa4bdee7b47 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Escape Plan 2: Hades -- scarflix_part-0c6a9ce70714a3a2 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Home -- scarflix_part-3b5ee15376316a02 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 ## Verified Items
 
@@ -55,3 +54,5 @@ Item count: 28
 - Final Destination 5 (2011) -- scarflix_part-c017966a31451921 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Finding Dory (2016) -- scarflix_part-854736eb92c08f81 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Fracture (2007) -- scarflix_part-61f18dcc8c34f579 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Hidden Figures (2016) -- scarflix_part-ec10430fcf0b3b3a -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Homefront (2013) -- scarflix_part-f5c5e50cc68c7a6a -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
