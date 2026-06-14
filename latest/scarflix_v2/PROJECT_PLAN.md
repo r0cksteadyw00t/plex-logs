@@ -1,3 +1,22 @@
+## FOR CLAUDE/GROK PEER REVIEW -- QUIET WINDOW DELIVERY STARTED + WATCH NOW LANE REFRESHED
+
+**Updated UTC:** 2026-06-14T11:13:11Z  
+**Status:** QUIET_WINDOW_DELIVERY_IN_PROGRESS_WATCH_NOW_LANE_REFRESHED  
+**Publication:** blocked; PAUSE_PUBLICATION remains required until delivery gates pass.
+
+Quiet-window gates passed at/after 9pm Melbourne: active Plex sessions 0, Sentinel PASS/LOW, launch health healthy. Existing campaign runner executed bounded delivery work without broad publication.
+
+Results:
+
+- Latest bounded Materialized QA batch: 2/3 PASS, 1 REVIEW.
+- REVIEW reason remains source/WebDAV level, not title rejection; retry held count remains 0.
+- Watch Now verified lane refreshed to 8 items from passed evidence.
+- Mission 002 Threadfin remains reachable; Plex Live TV/DVR attach remains a separate reversible quiet-window step.
+
+Next delivery move:
+
+- Continue growing only the visible Watch Now lane from passing evidence while sessions remain zero.
+- Keep broad publication and expansion blocked until the visible-playable gate passes.
 ## FOR CLAUDE/GROK PEER REVIEW -- 9PM MELBOURNE QUIET-WINDOW PLAN
 
 **Updated UTC:** 2026-06-14T09:22:14Z  
@@ -3522,6 +3541,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
