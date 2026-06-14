@@ -1,3 +1,12 @@
+## Cycle 100 Source-Retry Tracking Update - 2026-06-14T00:20:27Z
+
+- Status: BOUNDED_QA_CONTINUES_SOURCE_UPSTREAM_503_TRACKED.
+- Go-live runner cycle `100`: launch health `17 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`.
+- Escape Plan 2: Hades is now tracked for WebDAV upstream 503 behavior (`webdav_head_upstream_server_error`).
+- Retry ledger: tracked `8`, held `0`, threshold `3`.
+- Keep publication and expansion blocked. Continue bounded batches and source/release-only retry/quarantine handling.
+
 ## Pass Streak Resumed After Source 503 - 2026-06-14T00:06:03Z
 
 - Status: BOUNDED_PLAYBACK_QA_PASS_STREAK_RESUMED_NOT_GO_LIVE_READY.
