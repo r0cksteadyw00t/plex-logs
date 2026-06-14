@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-14T18:56:31Z  
+**Updated UTC:** 2026-06-14T19:01:33Z  
 **Status:** PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED
 
 ## Scope
@@ -25,7 +25,7 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Background Jobs
 
-- pid=35740 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
+- none
 
 ## Recent rclone/WebDAV Error Pressure
 
