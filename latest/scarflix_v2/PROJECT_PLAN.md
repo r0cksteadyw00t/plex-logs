@@ -1,11 +1,12 @@
-## Cycle 145 Clean Pass - 2026-06-14T05:39:21Z
+## Cycle 145 Source Retry Added - 2026-06-14T05:40:42Z
 
-- Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES.
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
 - Extended runner cycle 145: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
-- Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 failed.
-- Detailed row titles for this completed batch were superseded by the next running canary artifact before this heartbeat; counts are taken from the campaign state and remain authoritative.
-- Retry ledger: tracked 18, held 0, threshold 3.
-- Continue actual delivery cycles. Publication and expansion remain blocked until delivery gates pass.
+- Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 REVIEW.
+- Passed title: Man on Fire.
+- REVIEW titles: Maleficent: Mistress of Evil (timeout); Million Dollar Baby (timeout); Ladybug & Cat Noir Awakening (timeout).
+- Retry ledger: tracked 18, held 0, threshold 3. Current review sources are below hold threshold: Maleficent: Mistress of Evil 2/3; Million Dollar Baby 1/3; Ladybug & Cat Noir Awakening 1/3; held remains 0.
+- Continue actual delivery cycles; source/release-only quarantine only after threshold. Publication and expansion remain blocked until delivery gates pass.
 ## Cycle 142 Source Retry Added - 2026-06-14T05:22:18Z
 
 - Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
@@ -3420,6 +3421,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
