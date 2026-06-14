@@ -1,19 +1,19 @@
 # JasonOS Prime User-Visible Delivery Status
 
-- Updated UTC: 2026-06-14T15:26:04Z
-- Status: QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_48
+- Updated UTC: 2026-06-14T15:40:49Z
+- Status: QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_51
 - Active Plex sessions reported by campaign: 0
 - Sentinel: PASS / LOW
 - Publication: PAUSE_PUBLICATION remains required
-- Watch Now lane: 48 verified items
+- Watch Now lane: 51 verified items
 - Latest completed bounded QA used: 3/3 PASS, 0 REVIEW
 - Retry held count: 6
 
 ## Added This Update
 
-- Split (2017)
-- Spy (2015)
-- Stand by Me (1986)
+- The Boy and the Heron (2023)
+- The Boy in the Striped Pyjamas (2008)
+- The Cabin in the Woods (2012)
 
 ## Held Retry Sources
 
