@@ -1,12 +1,12 @@
 # JasonOS Prime User-Visible Delivery Status
 
-Updated UTC: 2026-06-14T16:15:36Z
+Updated UTC: 2026-06-14T16:26:11Z
 Status: DELIVERY_PROGRESS_PUBLICATION_BLOCKED
 
 ## User-Facing Delivery Evidence
-- Watch Now verified evidence lane: 59 PASS-only items
+- Watch Now verified evidence lane: 64 PASS-only items
 - Added this update: 5
-- Latest bounded QA: 5 checked, 4 passed, 1 held/retryable
+- Latest bounded QA: 4 checked, 3 passed, 1 held/retryable
 - Active Plex sessions reported by campaign: 0
 
 ## Gate Position
