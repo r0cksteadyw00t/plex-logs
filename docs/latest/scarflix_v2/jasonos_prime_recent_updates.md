@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T05:25:02.920Z
+Updated UTC: 2026-06-14T05:30:02.569Z
 Source: live status merge
 
-- 2026-06-14T05:22:18.825Z - Cycle 142 Source Retry Added - 2026-06-14T05:22:18Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 142: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 47, limit 3: 2/3 PASS, 1 REVIEW. Passed titles: Idiocracy; Ikiru.
-- 2026-06-14T05:20:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T05:25:12.043Z - Cycle 142 Source Retry Added - 2026-06-14T05:22:18Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 142: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 47, limit 3: 2/3 PASS, 1 REVIEW. Passed titles: Idiocracy; Ikiru.
+- 2026-06-14T05:25:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T05:15:12.471Z - Cycle 140 Clean Pass - 2026-06-14T05:07:07Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 140: launch health 31 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint. Bounded Materialized QA batch skip 38, limit 4: 4/4 PASS, 0 failed. Passed titles: Frac...
 - 2026-06-14T05:00:11.725Z - Cycle 138 Source Retry Added - 2026-06-14T04:52:14Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 138: launch health 19 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 29, limit 6: 5/6 PASS, 1 REVIEW. Passed titles: Dune; EuroTrip; Ex Machina; Fantastic Mr. Fox; Fa...
 - 2026-06-14T04:45:11.669Z - Cycle 136 Clean Pass - 2026-06-14T04:37:06Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 136: launch health 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 20, limit 4: 4/4 PASS, 0 failed. Passed titles: Daredevil; Dawn of the Dead; Death Race; Despicabl...
