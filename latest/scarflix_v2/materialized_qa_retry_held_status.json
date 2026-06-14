@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_materialized_qa_retry_held_status",
   "status": "TRACKING_RETRY_SOURCES",
-  "updated_utc": "2026-06-14T03:31:13Z",
+  "updated_utc": "2026-06-14T03:38:09Z",
   "threshold": 3,
-  "tracked_count": 20,
+  "tracked_count": 21,
   "held_count": 0,
   "retry_policy": "source_or_release_only; title remains wanted and retryable",
   "publication_allowed": false,
@@ -268,6 +268,19 @@
       "layered_reason": "webdav_head_and_temporary_range_warm_passed",
       "first_seen_utc": "2026-06-14T03:23:59Z",
       "last_seen_utc": "2026-06-14T03:23:59Z"
+    },
+    {
+      "hash": "scarflix_part-ac22c691d6568126",
+      "title": "Vertigo",
+      "status": "TRACKING_RETRY",
+      "held": false,
+      "failure_count": 1,
+      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
+      "http_status": 0,
+      "layered_status": "REVIEW",
+      "layered_reason": "webdav_head_upstream_server_error",
+      "first_seen_utc": "2026-06-14T03:38:09Z",
+      "last_seen_utc": "2026-06-14T03:38:09Z"
     }
   ],
   "next_action": "After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates."
