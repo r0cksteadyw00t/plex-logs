@@ -1,5 +1,24 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T05:22:18Z
+
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle 142.
+- Launch health 24 ms; post-QA launch check 19 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA skip 47, limit 3: 2/3 PASS, 1 REVIEW.
+- Passed titles: Idiocracy; Ikiru.
+- Review title: ScarFLIX Part 31696108f69a37b9 (Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error).
+- Retry ledger: tracked 17, held 0, threshold 3. Latest tracked source is ScarFLIX Part 31696108f69a37b9 at failure count 2/3; held remains 0.
+
+Current gate:
+
+- Source retry backlog remains below hold threshold. Publication and expansion remain blocked until the delivery gate explicitly passes.
 ## Current Update - 2026-06-14T05:07:07Z
 
 **Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
@@ -185,6 +204,7 @@ Latest evidence:
 Current gate:
 
 - Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 
 
 
