@@ -1,3 +1,48 @@
+## GO-LIVE DELIVERY UPDATE — PASS-ONLY WATCH NOW LANE CORRECTION
+
+**Updated UTC:** 2026-06-14T16:15:36Z  
+**Status:** DELIVERY_PROGRESS_PUBLICATION_BLOCKED  
+**Watch Now evidence lane:** 54 -> 59 verified PASS-only items  
+**Added this update:** 5  
+**Latest bounded QA:** 5 checked / 4 PASS / 1 held for retry  
+**Sentinel:** PASS/LOW  
+**Publication:** BLOCKED / PAUSE_PUBLICATION respected  
+**Raw lane URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json
+
+**What changed:** Corrected the prior no-growth lane timestamp by promoting only completed, bounded QA PASS rows. The 16:04 completed 4/4 batch was recovered from campaign/log evidence, and unique PASS rows from the 16:11 completed bounded QA batch were added. The REVIEW source from the 16:11 batch remains held/retryable and excluded from delivery.
+
+**Added titles:** The Lord of the Rings The War of the Rohirrim (2024); The Magic Faraway Tree (2026); The Magnificent Seven (2016); The Mist (2007); The Mitchells vs. the Machines (2021)
+
+**Next autonomous action:** Continue the detached go-live campaign, keep noncritical expansion suppressed, keep publication blocked, and promote only new PASS rows after each bounded QA cycle.
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 54 VERIFIED ITEMS
+
+**Updated UTC:** 2026-06-14T16:10:44Z  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_54  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+Detached campaign runner completed the latest bounded batch at 2026-06-14T16:10:42Z: 2/2 PASS, 0 REVIEW. Codex promoted only new unique completed PASS rows into the visible delivery artifact; no publication, broad expansion, cleanup, deletion, or Plex mutation was performed.
+
+Watch Now lane now has 54 verified items.
+
+Added this update:
+- None
+
+Retryable review rows:
+-  - 
+
+Held retry sources:
+- Commando - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Escape Plan 2: Hades - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Home - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Maleficent: Mistress of Evil - HELD_RETRY after 3 failures; title remains wanted/retryable
+- RoboCop - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Sin Nombre - HELD_RETRY after 3 failures; title remains wanted/retryable
+- The Faculty - HELD_RETRY after 3 failures; title remains wanted/retryable
+
+Safety note:
+
+- Held rows are source/release-level only; titles remain wanted and retryable.
+- Mission 002 Threadfin remains ready/verified, but Plex Live TV attach remains held until a safe attach path exists.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 54 VERIFIED ITEMS
 
 **Updated UTC:** 2026-06-14T15:55:55Z  
@@ -3680,6 +3725,8 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
+
 
 
 
