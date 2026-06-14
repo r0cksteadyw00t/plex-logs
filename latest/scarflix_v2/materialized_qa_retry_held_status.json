@@ -1,53 +1,14 @@
 {
   "component": "jasonos_prime_materialized_qa_retry_held_status",
   "status": "TRACKING_RETRY_SOURCES",
-  "updated_utc": "2026-06-14T03:51:17Z",
+  "updated_utc": "2026-06-14T04:05:56Z",
   "threshold": 3,
-  "tracked_count": 22,
+  "tracked_count": 21,
   "held_count": 0,
   "retry_policy": "source_or_release_only; title remains wanted and retryable",
   "publication_allowed": false,
   "broad_expansion_allowed": false,
   "items": [
-    {
-      "hash": "scarflix_part-a61d38731f010847",
-      "title": "Amadeus",
-      "status": "TRACKING_RETRY",
-      "held": false,
-      "failure_count": 1,
-      "reason": "HTTP 400",
-      "http_status": 400,
-      "layered_status": "PASS",
-      "layered_reason": "webdav_head_and_temporary_range_warm_passed",
-      "first_seen_utc": "2026-06-13T23:26:27Z",
-      "last_seen_utc": "2026-06-13T23:26:27Z"
-    },
-    {
-      "hash": "scarflix_part-636c5357a0359a77",
-      "title": "American Pie: Reunion",
-      "status": "TRACKING_RETRY",
-      "held": false,
-      "failure_count": 1,
-      "reason": "HTTP 400",
-      "http_status": 400,
-      "layered_status": "PASS",
-      "layered_reason": "webdav_head_and_temporary_range_warm_passed",
-      "first_seen_utc": "2026-06-13T23:26:27Z",
-      "last_seen_utc": "2026-06-13T23:26:27Z"
-    },
-    {
-      "hash": "scarflix_part-81107989d2e30cfb",
-      "title": "Anna",
-      "status": "TRACKING_RETRY",
-      "held": false,
-      "failure_count": 1,
-      "reason": "HTTP 400",
-      "http_status": 400,
-      "layered_status": "PASS",
-      "layered_reason": "webdav_head_and_temporary_range_warm_passed",
-      "first_seen_utc": "2026-06-13T23:32:34Z",
-      "last_seen_utc": "2026-06-13T23:32:34Z"
-    },
     {
       "hash": "scarflix_part-c08b683f68e4e49e",
       "title": "Annabelle",
@@ -294,6 +255,32 @@
       "layered_reason": "webdav_head_upstream_server_error",
       "first_seen_utc": "2026-06-14T03:44:44Z",
       "last_seen_utc": "2026-06-14T03:44:44Z"
+    },
+    {
+      "hash": "scarflix_part-4b145ffcf8fc8032",
+      "title": "A Cinderella Story",
+      "status": "TRACKING_RETRY",
+      "held": false,
+      "failure_count": 1,
+      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
+      "http_status": 0,
+      "layered_status": "REVIEW",
+      "layered_reason": "webdav_head_upstream_server_error",
+      "first_seen_utc": "2026-06-14T03:58:36Z",
+      "last_seen_utc": "2026-06-14T03:58:36Z"
+    },
+    {
+      "hash": "scarflix_part-141663efa544da92",
+      "title": "AVPR: Aliens vs Predator - Requiem",
+      "status": "TRACKING_RETRY",
+      "held": false,
+      "failure_count": 1,
+      "reason": "timeout",
+      "http_status": 0,
+      "layered_status": "PASS",
+      "layered_reason": "webdav_head_and_temporary_range_warm_passed",
+      "first_seen_utc": "2026-06-14T03:58:36Z",
+      "last_seen_utc": "2026-06-14T03:58:36Z"
     }
   ],
   "next_action": "After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates."
