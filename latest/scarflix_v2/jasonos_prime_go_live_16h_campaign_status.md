@@ -1,7 +1,7 @@
 # JasonOS Prime Go-Live 16h Campaign Status
 
-- Status: RUNNING
-- Updated UTC: 2026-06-14T00:38:44Z
+- Status: RUNNING_EXTENDED_24H_DELIVERY_WINDOW
+- Updated UTC: 2026-06-14T00:40:06Z
 - Started UTC: 2026-06-13T13:22:00Z
 - Ends UTC: 2026-06-15T00:36:58Z
 - Cycle: 103
