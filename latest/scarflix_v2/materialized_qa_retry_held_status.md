@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T03:38:09Z
+- Updated UTC: 2026-06-14T03:51:17Z
 - Threshold: 3
-- Tracked: 21
+- Tracked: 22
 - Held: 0
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -33,5 +33,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - The Princess Diaries 2: Royal Engagement: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - They Call Me Trinity: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Vertigo: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Wish: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
