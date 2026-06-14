@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-14T23:32:10Z
-Instruction: phase0_record_quiet_window_delivery_status_20260614_v133
+Updated UTC: 2026-06-14T23:48:10Z
+Instruction: phase0_record_quiet_window_delivery_status_20260614_v134
 
-Continue detached go-live campaign under PAUSE_PUBLICATION. Promote only new bounded QA PASS rows. No expansion, publishing, or resolver changes. Record quiet window status.
+PAUSE_PUBLICATION active. Materialized QA REVIEW. 130 verified PASS-only items in Watch Now lane. Continue detached campaign only; record status.
