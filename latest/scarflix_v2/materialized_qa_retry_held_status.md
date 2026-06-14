@@ -1,7 +1,7 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T04:33:53Z
+- Updated UTC: 2026-06-14T04:48:24Z
 - Threshold: 3
 - Tracked: 18
 - Held: 0
@@ -13,7 +13,7 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 ## Items
 
 - Commando: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- Escape Plan 2: Hades: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Escape Plan 2: Hades: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Final Destination 5: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
 - Home: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
