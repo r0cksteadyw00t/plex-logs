@@ -1,5 +1,24 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T03:25:29Z
+
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle 126.
+- Launch health 24 ms; post-QA launch check 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA skip 125, limit 4: 3/4 PASS, 1 REVIEW.
+- Passed titles: Witch!; There Will Be Blood; To Wong Foo, Thanks for Everything! Julie Newmar.
+- Review title: They Call Me Trinity (timeout).
+- Retry ledger: tracked 20, held 0, threshold 3.
+
+Current gate:
+
+- Source retry backlog increased, but no source is held. Publication and expansion remain blocked until the delivery gate explicitly passes.
 ## Current Update - 2026-06-14T03:22:15Z
 
 **Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
@@ -18,5 +37,6 @@ Latest evidence:
 Current gate:
 
 - Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 
 
