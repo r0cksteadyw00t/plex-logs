@@ -1,22 +1,16 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "REVIEW",
-  "started_utc": "2026-06-14T10:55:53Z",
-  "ended_utc": "2026-06-14T10:57:09Z",
-  "updated_utc": "2026-06-14T10:57:09Z",
+  "started_utc": "2026-06-14T11:02:51Z",
+  "ended_utc": "2026-06-14T11:04:12Z",
+  "updated_utc": "2026-06-14T11:04:12Z",
   "target_count": 229,
   "rows_found": 146,
-  "checked": 3,
+  "checked": 4,
   "passed": 3,
-  "failed": 0,
-  "query_errors": 1,
-  "query_error_details": [
-    {
-      "hash": "ScarFLIX_part-b2f04965dd22cfcd",
-      "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\A Beautiful Mind (2001)\\ScarFLIX_part-b2f04965dd22cfcd",
-      "error": "exit=1 | Command failed: C:/Program Files/Plex/Plex Media Server/Plex SQLite.exe -readonly -batch -noheader -separator \t C:/Users/jason/AppData/Local/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db select coalesce(m.id,0), mp.id, mi.library_section_id, coalesce(nullif(trim(m.title),''), nullif(trim(show.title),''), ''), coalesce(mp.file,'') from media_parts mp join media_items mi on mi.id=mp.media_item_id left join metadata_items m on m.id=mi.metadata_item_id left join metadata_items season on season.id=m.parent_id left join metadata_items show on show.id=season.parent_id where mi.library_section_id in (5,6,7,8,10) and mi.deleted_at is null and mp.deleted_at is null and (m.deleted_at is null or m.id is null) and mp.file like '%ScarFLIX_part-b2f04965dd22cfcd%' order by mp.id desc limit 5;"
-    }
-  ],
+  "failed": 1,
+  "query_errors": 0,
+  "query_error_details": [],
   "decision_timeout_ms": 15000,
   "decision_retry_count": 1,
   "layered_validation_enabled": true,
@@ -25,17 +19,18 @@
   "retry_held_candidates": 0,
   "decision_probe_unfiltered_candidates": 141,
   "layered_validation_summary": {
-    "total": 3,
+    "total": 4,
     "passed": 3,
-    "review": 0,
+    "review": 1,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 3
+      "webdav_head_and_temporary_range_warm_passed": 3,
+      "webdav_head_upstream_server_error": 1
     }
   },
-  "decision_probe_skip": 109,
-  "decision_probe_limit": 3,
+  "decision_probe_skip": 112,
+  "decision_probe_limit": 4,
   "decision_probe_total_candidates": 141,
-  "selected_decision_candidates": 3,
+  "selected_decision_candidates": 4,
   "stopped_early": false,
   "stopped_reason": "",
   "targets": [
@@ -1277,7 +1272,7 @@
         "source": "visible_filesystem"
       },
       "rows": [],
-      "query_error": "exit=1 | Command failed: C:/Program Files/Plex/Plex Media Server/Plex SQLite.exe -readonly -batch -noheader -separator \t C:/Users/jason/AppData/Local/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db select coalesce(m.id,0), mp.id, mi.library_section_id, coalesce(nullif(trim(m.title),''), nullif(trim(show.title),''), ''), coalesce(mp.file,'') from media_parts mp join media_items mi on mi.id=mp.media_item_id left join metadata_items m on m.id=mi.metadata_item_id left join metadata_items season on season.id=m.parent_id left join metadata_items show on show.id=season.parent_id where mi.library_section_id in (5,6,7,8,10) and mi.deleted_at is null and mp.deleted_at is null and (m.deleted_at is null or m.id is null) and mp.file like '%ScarFLIX_part-b2f04965dd22cfcd%' order by mp.id desc limit 5;"
+      "query_error": ""
     },
     {
       "target": {
@@ -4418,10 +4413,10 @@
   "layered_results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T10:56:25Z",
-      "target_hash": "ScarFLIX_part-78ebe23593166235",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-78ebe23593166235/stream.mkv",
+      "updated_utc": "2026-06-14T11:03:22Z",
+      "target_hash": "ScarFLIX_part-479e0ebd60d6e6ff",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-479e0ebd60d6e6ff/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4433,10 +4428,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-78ebe23593166235",
+          "link_target": "S:\\media\\ScarFLIX_part-479e0ebd60d6e6ff",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4446,13 +4441,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-78ebe23593166235/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-479e0ebd60d6e6ff/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "2865082223",
+          "content_length": "2147442308",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 7908,
+          "elapsed_ms": 7456,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4461,13 +4456,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-78ebe23593166235/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-479e0ebd60d6e6ff/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "2865082223",
+            "content_length": "2147442308",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7908,
+            "elapsed_ms": 7456,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4475,26 +4470,26 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-78ebe23593166235/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-479e0ebd60d6e6ff/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3829,
+          "elapsed_ms": 3904,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 11740
+      "elapsed_ms": 11366
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T10:56:43Z",
-      "target_hash": "ScarFLIX_part-7a2e0f853be1ef51",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-7a2e0f853be1ef51/stream.mkv",
+      "updated_utc": "2026-06-14T11:03:39Z",
+      "target_hash": "ScarFLIX_part-ea09f142010b00aa",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-ea09f142010b00aa/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4506,10 +4501,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-7a2e0f853be1ef51",
+          "link_target": "S:\\media\\ScarFLIX_part-ea09f142010b00aa",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4519,13 +4514,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7a2e0f853be1ef51/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ea09f142010b00aa/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "1077155701",
+          "content_length": "1042383466",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 7178,
+          "elapsed_ms": 7258,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4534,13 +4529,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7a2e0f853be1ef51/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ea09f142010b00aa/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1077155701",
+            "content_length": "1042383466",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7178,
+            "elapsed_ms": 7258,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4548,26 +4543,26 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7a2e0f853be1ef51/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ea09f142010b00aa/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4125,
+          "elapsed_ms": 3984,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 11321
+      "elapsed_ms": 11245
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T10:56:59Z",
-      "target_hash": "ScarFLIX_part-cfe52e744ff27d3c",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-cfe52e744ff27d3c/stream.mkv",
+      "updated_utc": "2026-06-14T11:03:57Z",
+      "target_hash": "ScarFLIX_part-93599b6b163a4b72",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-93599b6b163a4b72/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4579,10 +4574,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-cfe52e744ff27d3c",
+          "link_target": "S:\\media\\ScarFLIX_part-93599b6b163a4b72",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4592,13 +4587,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-cfe52e744ff27d3c/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-93599b6b163a4b72/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "3856072694",
+          "content_length": "2578224053",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 5380,
+          "elapsed_ms": 7500,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4607,13 +4602,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-cfe52e744ff27d3c/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-93599b6b163a4b72/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3856072694",
+            "content_length": "2578224053",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 5380,
+            "elapsed_ms": 7500,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4621,28 +4616,114 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-cfe52e744ff27d3c/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-93599b6b163a4b72/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4117,
+          "elapsed_ms": 3800,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 9498
+      "elapsed_ms": 11301
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-14T11:04:11Z",
+      "target_hash": "ScarFLIX_part-a0692a530078eae1",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-a0692a530078eae1",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": false,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+          "status_code": 503,
+          "bytes_read": 0,
+          "content_length": "141",
+          "content_type": "text/plain; charset=utf-8",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 783,
+          "attempt": 2,
+          "reason": "upstream_server_error",
+          "attempts": 2
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 2195,
+            "attempt": 1,
+            "reason": "upstream_server_error"
+          },
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 783,
+            "attempt": 2,
+            "reason": "upstream_server_error"
+          }
+        ],
+        "webdav_head_fallback_range": {
+          "ok": false,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+          "status_code": 503,
+          "bytes_read": 141,
+          "content_length": "141",
+          "content_type": "text/plain; charset=utf-8",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 767,
+          "reason": "upstream_server_error"
+        }
+      },
+      "status": "REVIEW",
+      "reason": "webdav_head_upstream_server_error",
+      "elapsed_ms": 4501
     }
   ],
   "results": [
     {
-      "metadata_id": 50358,
-      "part_id": 127721,
+      "metadata_id": 50350,
+      "part_id": 127703,
       "section_id": 5,
-      "title": "The Jungle Book",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235\\stream.mkv",
+      "title": "The Magic Faraway Tree",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4663,14 +4744,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-78ebe23593166235",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235",
+      "target_hash": "ScarFLIX_part-479e0ebd60d6e6ff",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T10:56:25Z",
-        "target_hash": "ScarFLIX_part-78ebe23593166235",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-78ebe23593166235/stream.mkv",
+        "updated_utc": "2026-06-14T11:03:22Z",
+        "target_hash": "ScarFLIX_part-479e0ebd60d6e6ff",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-479e0ebd60d6e6ff/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4682,10 +4763,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Jungle Book (2016)\\ScarFLIX_part-78ebe23593166235",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magic Faraway Tree (2026)\\ScarFLIX_part-479e0ebd60d6e6ff",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-78ebe23593166235",
+            "link_target": "S:\\media\\ScarFLIX_part-479e0ebd60d6e6ff",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4695,13 +4776,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-78ebe23593166235/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-479e0ebd60d6e6ff/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "2865082223",
+            "content_length": "2147442308",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7908,
+            "elapsed_ms": 7456,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -4710,13 +4791,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-78ebe23593166235/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-479e0ebd60d6e6ff/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "2865082223",
+              "content_length": "2147442308",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 7908,
+              "elapsed_ms": 7456,
               "attempt": 1,
               "reason": "ok"
             }
@@ -4724,27 +4805,27 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-78ebe23593166235/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-479e0ebd60d6e6ff/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3829,
+            "elapsed_ms": 3904,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 11740
+        "elapsed_ms": 11366
       }
     },
     {
-      "metadata_id": 50355,
-      "part_id": 127714,
+      "metadata_id": 50349,
+      "part_id": 127702,
       "section_id": 5,
-      "title": "The Last Samurai",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51\\stream.mkv",
+      "title": "The Magnificent Seven",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4765,14 +4846,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-7a2e0f853be1ef51",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51",
+      "target_hash": "ScarFLIX_part-ea09f142010b00aa",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T10:56:43Z",
-        "target_hash": "ScarFLIX_part-7a2e0f853be1ef51",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-7a2e0f853be1ef51/stream.mkv",
+        "updated_utc": "2026-06-14T11:03:39Z",
+        "target_hash": "ScarFLIX_part-ea09f142010b00aa",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-ea09f142010b00aa/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4784,10 +4865,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Last Samurai (2003)\\ScarFLIX_part-7a2e0f853be1ef51",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Magnificent Seven (2016)\\ScarFLIX_part-ea09f142010b00aa",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-7a2e0f853be1ef51",
+            "link_target": "S:\\media\\ScarFLIX_part-ea09f142010b00aa",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4797,13 +4878,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7a2e0f853be1ef51/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ea09f142010b00aa/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1077155701",
+            "content_length": "1042383466",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7178,
+            "elapsed_ms": 7258,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -4812,13 +4893,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7a2e0f853be1ef51/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ea09f142010b00aa/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "1077155701",
+              "content_length": "1042383466",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 7178,
+              "elapsed_ms": 7258,
               "attempt": 1,
               "reason": "ok"
             }
@@ -4826,27 +4907,27 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7a2e0f853be1ef51/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ea09f142010b00aa/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 4125,
+            "elapsed_ms": 3984,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 11321
+        "elapsed_ms": 11245
       }
     },
     {
-      "metadata_id": 50354,
-      "part_id": 127713,
+      "metadata_id": 50347,
+      "part_id": 127698,
       "section_id": 5,
-      "title": "The Lord of the Rings: The War of the Rohirrim",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c\\stream.mkv",
+      "title": "The Mist",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4867,14 +4948,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-cfe52e744ff27d3c",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c",
+      "target_hash": "ScarFLIX_part-93599b6b163a4b72",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T10:56:59Z",
-        "target_hash": "ScarFLIX_part-cfe52e744ff27d3c",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-cfe52e744ff27d3c/stream.mkv",
+        "updated_utc": "2026-06-14T11:03:57Z",
+        "target_hash": "ScarFLIX_part-93599b6b163a4b72",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-93599b6b163a4b72/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4886,10 +4967,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Lord of the Rings The War of the Rohirrim (2024)\\ScarFLIX_part-cfe52e744ff27d3c",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mist (2007)\\ScarFLIX_part-93599b6b163a4b72",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-cfe52e744ff27d3c",
+            "link_target": "S:\\media\\ScarFLIX_part-93599b6b163a4b72",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4899,13 +4980,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-cfe52e744ff27d3c/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-93599b6b163a4b72/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3856072694",
+            "content_length": "2578224053",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 5380,
+            "elapsed_ms": 7500,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -4914,13 +4995,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-cfe52e744ff27d3c/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-93599b6b163a4b72/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "3856072694",
+              "content_length": "2578224053",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 5380,
+              "elapsed_ms": 7500,
               "attempt": 1,
               "reason": "ok"
             }
@@ -4928,21 +5009,124 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-cfe52e744ff27d3c/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-93599b6b163a4b72/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 4117,
+            "elapsed_ms": 3800,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 9498
+        "elapsed_ms": 11301
       }
+    },
+    {
+      "metadata_id": 50345,
+      "part_id": 127694,
+      "section_id": 5,
+      "title": "The Mitchells vs. the Machines",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1\\stream.mkv",
+      "status": "REVIEW",
+      "http_status": 0,
+      "access_mode": "token",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "layered_streaming_precheck_blocked_plex_decision",
+      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
+      "skipped_plex_decision": true,
+      "layered_validation": {
+        "component": "scarflix_v2_streaming_layered_validator",
+        "updated_utc": "2026-06-14T11:04:11Z",
+        "target_hash": "ScarFLIX_part-a0692a530078eae1",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+        "map_loaded": true,
+        "map_generated_utc": "2026-06-09T10:17:48Z",
+        "map_entry_found": true,
+        "temporary_buffering": {
+          "enabled": true,
+          "persisted": false,
+          "range_bytes_requested": 4194304
+        },
+        "layers": {
+          "local_symlink_metadata": {
+            "status": "PASS",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1",
+            "is_symbolic_link": true,
+            "link_target": "S:\\media\\ScarFLIX_part-a0692a530078eae1",
+            "error": "",
+            "blocking": false,
+            "exists": true,
+            "is_directory": false,
+            "is_file": false
+          },
+          "webdav_head": {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 783,
+            "attempt": 2,
+            "reason": "upstream_server_error",
+            "attempts": 2
+          },
+          "webdav_head_attempts": [
+            {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+              "status_code": 503,
+              "bytes_read": 0,
+              "content_length": "141",
+              "content_type": "text/plain; charset=utf-8",
+              "accept_ranges": "bytes",
+              "elapsed_ms": 2195,
+              "attempt": 1,
+              "reason": "upstream_server_error"
+            },
+            {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+              "status_code": 503,
+              "bytes_read": 0,
+              "content_length": "141",
+              "content_type": "text/plain; charset=utf-8",
+              "accept_ranges": "bytes",
+              "elapsed_ms": 783,
+              "attempt": 2,
+              "reason": "upstream_server_error"
+            }
+          ],
+          "webdav_head_fallback_range": {
+            "ok": false,
+            "method": "GET",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-a0692a530078eae1/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 141,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 767,
+            "reason": "upstream_server_error"
+          }
+        },
+        "status": "REVIEW",
+        "reason": "webdav_head_upstream_server_error",
+        "elapsed_ms": 4501
+      },
+      "target_hash": "ScarFLIX_part-a0692a530078eae1",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\The Mitchells vs. the Machines (2021)\\ScarFLIX_part-a0692a530078eae1"
     }
   ],
-  "next_action": "Some Plex SQLite lookups failed; keep playback-first mode and rerun or inspect Plex DB access before go-live."
+  "next_action": "Quarantine failed materialized source/release and keep title retryable."
 }
