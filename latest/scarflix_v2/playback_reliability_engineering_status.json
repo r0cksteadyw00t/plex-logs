@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_playback_reliability_engineering",
-  "status": "ACTUAL_GO_LIVE_DELIVERY_WINDOW_EXTENDED_AND_RUNNING",
-  "updated_utc": "2026-06-14T00:36:58Z",
+  "status": "ACTUAL_GO_LIVE_DELIVERY_RUNNER_EXTENDED_CONFIRMED",
+  "updated_utc": "2026-06-14T00:40:06Z",
   "publication_allowed": false,
   "broad_expansion_allowed": false,
   "pause_publication_required": true,
@@ -49,33 +49,31 @@
   "go_live_ready": false,
   "current_gate": "Plex decision path/auth fix validated; source/upstream WebDAV failures still need retry/quarantine and alternate candidate policy before go-live.",
   "latest_evidence": {
-    "go_live_campaign_cycle": 102,
-    "campaign_updated_utc": "2026-06-14T00:32:20Z",
-    "launch_health_ms": 23,
+    "go_live_campaign_cycle": 103,
+    "campaign_updated_utc": "2026-06-14T00:38:44Z",
+    "launch_health_ms": 22,
     "sentinel_status": "PASS",
     "sentinel_alert_level": "LOW",
     "active_plex_sessions": 0,
     "plex_identity_http_status": 200,
-    "bounded_materialized_qa_status": "REVIEW",
-    "decision_probe_skip": 35,
-    "decision_probe_limit": 4,
-    "checked": 4,
+    "bounded_materialized_qa_status": "REVIEW_PARTIAL_BATCH_PASS",
+    "decision_probe_skip": 39,
+    "decision_probe_limit": 3,
+    "checked": 3,
     "passed": 3,
-    "failed": 1,
-    "latest_review_title": "Final Destination 5",
-    "latest_review_reason": "webdav_head_timeout",
+    "failed": 0,
     "retry_ledger_status": "TRACKING_RETRY_SOURCES",
     "retry_tracked_count": 9,
     "retry_held_count": 0,
     "retry_threshold": 3,
-    "interpretation": "Runner extended; Plex decision path remains fixed; remaining failures are per-source WebDAV availability."
+    "interpretation": "Extended runner confirmed and latest bounded batch passed; delivery gates still block publication and expansion."
   },
   "backups": [
     "D:/PlexTools/Backups/plex_registry_network_fix_20260613T233903Z/plex_media_server_hkcu.reg",
     "D:/PlexTools/Backups/materialized_decision_full_lan_path_20260613T234307Z/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js",
     "D:/PlexTools/Backups/layered_validator_head_fallback_20260613T234534Z/ScarFLIX_v2_StreamingLayeredValidator.js"
   ],
-  "next_safe_action": "Use the extended delivery window for bounded local runner cycles. Source-quarantine only after threshold while keeping titles wanted/retryable.",
+  "next_safe_action": "Continue extended bounded delivery cycles through the 24-hour window; source-quarantine only after threshold while keeping titles wanted/retryable.",
   "retry_ledger_public_status": {
     "status": "TRACKING_RETRY_SOURCES",
     "tracked_count": 7,
@@ -89,13 +87,12 @@
   "delivery_window": {
     "mode": "actual_go_live_delivery",
     "exclusive_plex_window": true,
-    "extended_by_hours": 24,
-    "runner_pid": 12560,
-    "old_runner_pid": 28152,
+    "runner_pid": 13412,
+    "old_runner_pid": 12560,
     "started_utc": "2026-06-13T13:22:00Z",
     "old_ends_utc": "2026-06-14T05:22:00Z",
     "new_ends_utc": "2026-06-15T00:36:58Z",
     "duration_hours": 35.2,
-    "remaining_hours_at_extension": 24
+    "remaining_hours_at_confirmation": 23.9
   }
 }
