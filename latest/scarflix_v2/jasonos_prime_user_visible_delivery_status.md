@@ -6,7 +6,7 @@
 - Sentinel: PASS / LOW
 - Publication: PAUSE_PUBLICATION remains required
 - Watch Now lane: 14 verified items
-- Latest bounded QA: 0/0 PASS, 0 REVIEW
+- Latest bounded QA: 3/4 PASS, 1 REVIEW
 - Retry held count: 0
 
 ## Added This Update
@@ -14,3 +14,4 @@
 - Valerian and the City of a Thousand Planets (2017)
 - Vertigo (1958)
 - Downton Abbey (2010) - S01E01
+
