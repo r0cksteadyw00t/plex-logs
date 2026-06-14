@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T00:10:02.549Z
+Updated UTC: 2026-06-14T00:15:02.147Z
 Source: live status merge
 
-- 2026-06-14T00:06:34.133Z - Bounded Playback QA Pass Streak Resumed - 2026-06-14 10:06: Current verified state: Go-live runner cycle `98` completed with launch health `18 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `20`, limit `3`: `3/3 PASS`, `0` failed. Retry ledger remains `TRACKING_RETRY_SOURCES`: tracked `7`, held `0`, threshold `3`.
-- 2026-06-14T00:05:07Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T00:10:15.298Z - Bounded Playback QA Pass Streak Resumed - 2026-06-14 10:06: Current verified state: Go-live runner cycle `98` completed with launch health `18 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `20`, limit `3`: `3/3 PASS`, `0` failed. Retry ledger remains `TRACKING_RETRY_SOURCES`: tracked `7`, held `0`, threshold `3`.
+- 2026-06-14T00:10:07Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T00:01:51.388Z - Next Bounded Batch Narrows Remaining Blocker - 2026-06-14 09:58: Current verified state: The Plex decision/auth routing fix held on the next bounded batch. Batch skip `16`, limit `4`: `3/4 PASS`, `1/4 REVIEW`. Crank, Creed, and Dances with Wolves passed layered WebDAV/range validation and Plex decision HTTP 200.
 - 2026-06-13T23:54:27.646Z - Plex Decision Path Fix Validated - 2026-06-14 09:53: Current verified state: Playback-first recovery remains active; publication and broad expansion remain blocked. Plex registry LAN network parse issue was corrected after backup, then Plex was restarted because the API became unresponsive during maintenance. Plex identity is healthy again.
 - 2026-06-13T23:45:19.917Z - Layered Streaming QA First Batch Complete - 2026-06-14 08:24: Current verified state: Peer-review plan was ingested and applied to the bounded Materialized QA path. Added `D:\PlexTools\Foundry\workers\ScarFLIX_v2_StreamingLayeredValidator.js`. Patched `D:\PlexTools\Foundry\workers\ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js` so selected QA candidates now run WebDAV HEAD and...
