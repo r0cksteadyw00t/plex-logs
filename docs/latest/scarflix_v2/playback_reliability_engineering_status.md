@@ -1,6 +1,6 @@
 # Playback Reliability Engineering Status
 
-## Current Update - 2026-06-14T06:23:50Z
+## Current Update - 2026-06-14T06:37:38Z
 
 **Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
 **Publication allowed:** false  
@@ -9,10 +9,10 @@
 
 Latest evidence:
 
-- Extended delivery runner cycle 151 completed at 06/14/2026 06:20:39.
-- Launch health 19 ms; post-QA launch check 20 ms; Sentinel PASS / LOW; Plex identity status was not recorded in this campaign cycle; active sessions were 0.
-- Bounded Materialized QA skip 79, limit 4: 4/4 PASS, 0 REVIEW.
-- Passed titles: Saving Bikini Bottom: The Sandy Cheeks Movie; Sense and Sensibility; Sherlock Holmes; Shrek Forever After.
+- Extended delivery runner cycle 153 completed at 06/14/2026 06:34:40.
+- Launch health 21 ms; post-QA launch check 20 ms; Sentinel PASS / LOW; Plex identity status was not recorded in this campaign cycle; active sessions were 0.
+- Bounded Materialized QA skip 88, limit 3: 3/3 PASS, 0 REVIEW.
+- Passed titles: Split; Spy; Stand by Me.
 - Retry ledger: tracked 18, held 0, threshold 3.
 
 Current gate:
