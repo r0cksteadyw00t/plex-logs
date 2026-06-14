@@ -1,7 +1,7 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T06:20:33Z
+- Updated UTC: 2026-06-14T06:34:33Z
 - Threshold: 3
 - Tracked: 18
 - Held: 0
@@ -19,7 +19,7 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Maleficent: Mistress of Evil: TRACKING_RETRY; failures=2; held=false; reason=timeout
 - Nacho Libre: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - RoboCop: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- Sin Nombre: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Sin Nombre: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Faculty: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Lord of the Rings: The War of the Rohirrim: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - The Princess Diaries 2: Royal Engagement: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
