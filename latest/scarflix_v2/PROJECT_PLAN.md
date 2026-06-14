@@ -1,3 +1,12 @@
+## Cycle 138 Source Retry Added - 2026-06-14T04:52:14Z
+
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
+- Extended runner cycle 138: launch health 19 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA batch skip 29, limit 6: 5/6 PASS, 1 REVIEW.
+- Passed titles: Dune; EuroTrip; Ex Machina; Fantastic Mr. Fox; Fargo.
+- REVIEW title: Escape Plan 2: Hades (Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error).
+- Retry ledger: tracked 18, held 0, threshold 3. Latest tracked source is Escape Plan 2: Hades at failure count 2/3; held remains 0.
+- Continue actual delivery cycles; source/release-only quarantine only after threshold. Publication and expansion remain blocked until delivery gates pass.
 ## Cycle 136 Clean Pass - 2026-06-14T04:37:06Z
 
 - Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES.
@@ -3386,6 +3395,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
