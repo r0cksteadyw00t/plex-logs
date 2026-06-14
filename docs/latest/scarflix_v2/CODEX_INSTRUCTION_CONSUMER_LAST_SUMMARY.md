@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-14T19:14:32Z
-Instruction: phase0_record_bounded_qa_status_only_20260614_v117
+Updated UTC: 2026-06-14T19:29:48Z
+Instruction: phase0_record_bounded_qa_status_only_20260614_v118
 
-Phase 0 stabilisation: PAUSE_PUBLICATION respected. Continue detached bounded Materialized QA cycles only. No publishing, expansion, source movement, or long QA. Record delivery evidence lane growth from local logs when available.
+Phase 0 stabilisation: PAUSE_PUBLICATION active, materialized QA REVIEW, 130 verified PASS rows in watch-now lane. No expansion or publishing instructed. Continue detached bounded QA cycles only.
