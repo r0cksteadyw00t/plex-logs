@@ -1,10 +1,10 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: REVIEW_HELD_RETRY_SOURCES
-- Updated UTC: 2026-06-14T15:36:35Z
+- Updated UTC: 2026-06-14T15:50:36Z
 - Threshold: 3
 - Tracked: 20
-- Held: 6
+- Held: 7
 - Publication allowed: false
 - Broad expansion allowed: false
 
@@ -18,14 +18,14 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Maleficent: Mistress of Evil: HELD_RETRY; failures=3; held=true; reason=timeout
 - RoboCop: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Sin Nombre: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- The Faculty: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- The Faculty: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Princess Diaries 2: Royal Engagement: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Wish: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - A Cinderella Story: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- The Empty Man: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - They Call Me Trinity: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Ladybug & Cat Noir Awakening: TRACKING_RETRY; failures=1; held=false; reason=timeout
-- The Empty Man: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Mitchells vs. the Machines: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Aftermath: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Casino: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
