@@ -1,7 +1,14 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: HELD_PLAYBACK_PATH_RECOVERY
-Updated UTC: 2026-06-14T18:57:39Z
-Held reason: playback_path_recovery_not_pass
-Playback recovery: REVIEW
-Next action: Hold Materialized QA until playback path recovery returns PASS.
+Status: REVIEW_PARTIAL_BATCH_PASS
+Updated UTC: 2026-06-14T19:04:29Z
+Targets: 229
+Rows found: 146
+Checked: 3
+Passed: 3
+Failed: 0
+Layered streaming checked: 3
+Layered streaming passed: 3
+Layered streaming review: 0
+Query errors: 0
+Next action: This bounded Materialized QA batch passed; continue the next batch before go-live.
