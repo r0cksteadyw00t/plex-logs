@@ -1,3 +1,20 @@
+## Cycle 126 Source Retry Added - 2026-06-14T03:25:29Z
+
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
+- Extended runner cycle 126: launch health 24 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA batch skip 125, limit 4: 3/4 PASS, 1 REVIEW.
+- Passed titles: Witch!; There Will Be Blood; To Wong Foo, Thanks for Everything! Julie Newmar.
+- REVIEW title: They Call Me Trinity (timeout).
+- Retry ledger: tracked 20, held 0, threshold 3.
+- Continue actual delivery cycles; source/release-only quarantine only after threshold. Publication and expansion remain blocked until delivery gates pass.
+## Cycle 125 Clean Pass - 2026-06-14T03:22:15Z
+
+- Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES.
+- Extended runner cycle 125: launch health 41 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA batch skip 122, limit 3: 3/3 PASS, 0 failed.
+- Passed titles: The Texas Chain Saw Massacre; The Transporter; New Moon.
+- Retry ledger: tracked 19, held 0, threshold 3. Retry ledger is now tracked 19, held 0; latest tracked source is The Princess Diaries 2: Royal Engagement (webdav_head_upstream_server_error).
+- Continue actual delivery cycles. Publication and expansion remain blocked until delivery gates pass.
 ## Cycle 123 Clean Pass - 2026-06-14T03:07:18Z
 
 - Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES.
@@ -3318,6 +3335,9 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
+
+
 
 
 
