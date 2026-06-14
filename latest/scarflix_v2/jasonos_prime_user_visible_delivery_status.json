@@ -1,38 +1,27 @@
 {
   "component": "jasonos_prime_user_visible_delivery_status",
   "status": "DELIVERY_PROGRESS_PUBLICATION_BLOCKED",
-  "updated_utc": "2026-06-14T19:25:45Z",
-  "watch_now_verified_count": 130,
-  "previous_watch_now_verified_count": 129,
-  "added_this_update": [
-    "The Empty Man (2020)"
-  ],
-  "latest_bounded_qa": {
-    "status": "RUNNING_DISCOVERING_PLEX_ROWS",
-    "checked": 0,
-    "passed": 0,
-    "failed": 0,
-    "updated_utc": "2026-06-14T19:25:20Z"
-  },
-  "campaign": {
-    "status": "RUNNING",
-    "updated_utc": "2026-06-14T19:19:42Z",
-    "cycle_count": 275,
-    "qa_cursor": 99,
-    "active_sessions": 0
-  },
-  "sentinel": {
-    "status": "PASS",
-    "alert_level": "LOW"
-  },
-  "gates": {
-    "pause_publication_required": true,
-    "publication_allowed": false,
-    "broad_expansion_allowed": false
-  },
-  "blockers": [
-    "Full publication remains blocked until delivery gates pass.",
-    "Held/retryable upstream WebDAV/source failures remain excluded from user delivery."
-  ],
-  "raw_watch_now_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json"
+  "updated_utc": "2026-06-14T22:11:15Z",
+  "user_outcome_summary": "130 PASS-only Watch Now evidence items exist, but full user-facing go-live remains blocked until verified-only Plex surfacing, active-session detection, and held source replacement are resolved.",
+  "watch_now_evidence_count": 130,
+  "watch_now_updated_utc": "2026-06-14T19:25:45Z",
+  "latest_bounded_qa_status": "REVIEW_PARTIAL_BATCH_PASS",
+  "latest_bounded_qa_checked": 5,
+  "latest_bounded_qa_passed": 5,
+  "latest_bounded_qa_failed": 0,
+  "retry_held_sources": 11,
+  "retry_tracked_sources": 16,
+  "sentinel_status": "PASS",
+  "sentinel_alert": "LOW",
+  "campaign_status": "RUNNING",
+  "campaign_updated_utc": "2026-06-14T22:07:06Z",
+  "campaign_cycle": 299,
+  "plex_sessions_by_campaign": "endpoint_unavailable",
+  "plex_sessions_by_iptv_watcher": "1",
+  "mission002_iptv_status": "HELD_ACTIVE_PLEX_PLAYBACK",
+  "mission002_threadfin_status": "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE",
+  "mission002_threadfin_channels": 4,
+  "publication_allowed": false,
+  "broad_expansion_allowed": false,
+  "next_user_visible_action": "Create or refresh a Plex-visible verified-only Watch Now surface from the 130 PASS-only items when active playback/session detection gates are clean; keep failed sources held/retryable and continue bounded QA."
 }
