@@ -1,7 +1,7 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T05:02:36Z
+- Updated UTC: 2026-06-14T05:16:36Z
 - Threshold: 3
 - Tracked: 17
 - Held: 0
@@ -14,8 +14,8 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 
 - Commando: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Escape Plan 2: Hades: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- Home: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Home: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Maleficent: Mistress of Evil: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Man on Fire: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Nacho Libre: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
