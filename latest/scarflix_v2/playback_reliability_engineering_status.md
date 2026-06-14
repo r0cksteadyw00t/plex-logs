@@ -1,5 +1,25 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T00:40:06Z
+
+**Status:** ACTUAL_GO_LIVE_DELIVERY_RUNNER_EXTENDED_CONFIRMED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Final corrected runner state:
+
+- Active runner PID: `13412`.
+- Extended campaign end: `2026-06-15T00:36:58Z`.
+- Campaign duration: `35.2` hours from original start.
+- Remaining delivery window: about `23.9` hours.
+
+Latest evidence:
+
+- Cycle `103`: bounded Materialized QA skip `39`, limit `3`: `3/3 PASS`, `0` failed.
+- Launch health `22 ms`; Sentinel `PASS / LOW`; Plex sessions `0`; Plex identity healthy.
+- Retry ledger: tracked `9`, held `0`, threshold `3`.
+
 ## Current Update - 2026-06-14T00:36:58Z
 
 **Status:** ACTUAL_GO_LIVE_DELIVERY_WINDOW_EXTENDED_AND_RUNNING  
