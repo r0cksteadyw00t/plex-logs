@@ -23,6 +23,12 @@ Recommended next safe action:
 
 - Continue bounded local runner batches and let retry-held source failures be tracked. If the same hash hits the retry threshold, quarantine that source/release only and keep the title retryable for alternate candidates.
 
+Status export added after this batch:
+
+- New public retry ledger: `materialized_qa_retry_held_status.json` and `.md`.
+- Current state at first export: `TRACKING_RETRY_SOURCES`, tracked `7`, held `0`, threshold `3`.
+- This makes source-level retry/quarantine state visible to Grok without exposing private runner state or secrets.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- PLEX DECISION PATH FIX VALIDATED
 
 **Updated UTC:** 2026-06-13T23:53:44Z  
