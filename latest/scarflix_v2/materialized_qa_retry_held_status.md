@@ -1,7 +1,7 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T06:41:36Z
+- Updated UTC: 2026-06-14T08:24:48Z
 - Threshold: 3
 - Tracked: 18
 - Held: 0
