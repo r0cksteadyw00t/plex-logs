@@ -1,7 +1,7 @@
 ﻿# Mission 002 IPTV Threadfin Virtual Adapter Apply
 
-**Updated UTC:** 2026-06-14T00:30:31Z  
-**Status:** FAIL_THREADFIN_COMPOSE_MISSING
+**Updated UTC:** 2026-06-14T00:37:34Z  
+**Status:** PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH
 
 ## Safety
 
@@ -14,15 +14,16 @@
 
 ## Actions
 
-- none
+- active_m3u_xmltv_copied_from_held_package
+- threadfin_container_start_requested
 
 ## Warnings
 
-- none
+- docker_compose_reported_nonzero_but_container_is_running
 
 ## Errors
 
-- threadfin_compose_missing
+- none
 
 ## Decision
 
