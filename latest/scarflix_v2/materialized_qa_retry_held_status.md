@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T03:51:17Z
+- Updated UTC: 2026-06-14T04:05:56Z
 - Threshold: 3
-- Tracked: 22
+- Tracked: 21
 - Held: 0
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -12,9 +12,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 
 ## Items
 
-- Amadeus: TRACKING_RETRY; failures=1; held=false; reason=HTTP 400
-- American Pie: Reunion: TRACKING_RETRY; failures=1; held=false; reason=HTTP 400
-- Anna: TRACKING_RETRY; failures=1; held=false; reason=HTTP 400
 - Annabelle: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
 - Armageddon: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
 - The Ballerina: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
@@ -34,5 +31,7 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - They Call Me Trinity: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Vertigo: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Wish: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- A Cinderella Story: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- AVPR: Aliens vs Predator - Requiem: TRACKING_RETRY; failures=1; held=false; reason=timeout
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
