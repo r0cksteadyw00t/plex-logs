@@ -1,5 +1,25 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T02:05:58Z
+
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle `115`.
+- Launch health `19 ms`; post-QA launch check `22 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA skip `83`, limit `4`: `3/4 PASS`, `1` REVIEW.
+- Passed titles: Silent Hill; Sing; Spartacus.
+- Review title: Sin Nombre, blocked at WebDAV with `webdav_head_upstream_server_error`.
+- Retry ledger: tracked `16`, held `0`, threshold `3`.
+
+Current gate:
+
+- Source retry backlog increased, but no source is held. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 ## Current Update - 2026-06-14T01:50:58Z
 
 **Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
