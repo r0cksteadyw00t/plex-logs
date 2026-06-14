@@ -1,14 +1,14 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: RUNNING_PLEX_DECISION_PROBES
-Updated UTC: 2026-06-14T21:12:01Z
+Status: REVIEW
+Updated UTC: 2026-06-14T21:14:34Z
 Targets: 229
 Rows found: 146
-Checked: 0
-Passed: 0
-Failed: 0
-Layered streaming checked: 0
-Layered streaming passed: 0
-Layered streaming review: 0
+Checked: 7
+Passed: 6
+Failed: 1
+Layered streaming checked: 7
+Layered streaming passed: 6
+Layered streaming review: 1
 Query errors: 0
-Next action: Materialized Plex decision QA is running bounded client-style decision probes.
+Next action: Quarantine failed materialized source/release and keep title retryable.
