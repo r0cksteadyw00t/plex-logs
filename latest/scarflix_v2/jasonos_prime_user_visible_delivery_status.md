@@ -1,19 +1,24 @@
 # JasonOS Prime User-Visible Delivery Status
 
-- Updated UTC: 2026-06-14T15:40:49Z
-- Status: QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_51
+- Updated UTC: 2026-06-14T15:55:55Z
+- Status: QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_54
 - Active Plex sessions reported by campaign: 0
 - Sentinel: PASS / LOW
 - Publication: PAUSE_PUBLICATION remains required
-- Watch Now lane: 51 verified items
-- Latest completed bounded QA used: 3/3 PASS, 0 REVIEW
-- Retry held count: 6
+- Watch Now lane: 54 verified items
+- Latest completed bounded QA used: 3/5 PASS, 2 REVIEW
+- Retry held count: 7
 
 ## Added This Update
 
-- The Boy and the Heron (2023)
-- The Boy in the Striped Pyjamas (2008)
-- The Cabin in the Woods (2012)
+- The Deadly Little Mermaid (2026)
+- The Devil's Advocate (1997)
+- The Equalizer 2 (2018)
+
+## Retryable Review Rows
+
+- The Empty Man (2020) - source/release remains retryable
+- The Faculty (1998) - source/release remains retryable
 
 ## Held Retry Sources
 
@@ -23,3 +28,4 @@
 - Maleficent: Mistress of Evil - source/release held after 3 failures; title remains wanted/retryable
 - RoboCop - source/release held after 3 failures; title remains wanted/retryable
 - Sin Nombre - source/release held after 3 failures; title remains wanted/retryable
+- The Faculty - source/release held after 3 failures; title remains wanted/retryable
