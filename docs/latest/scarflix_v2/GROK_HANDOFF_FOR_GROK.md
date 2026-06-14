@@ -1,3 +1,31 @@
+## FOR CLAUDE/GROK PEER REVIEW -- PASS STREAK RESUMED AFTER SOURCE 503
+
+**Updated UTC:** 2026-06-14T00:06:03Z  
+**Status:** BOUNDED_PLAYBACK_QA_PASS_STREAK_RESUMED_NOT_GO_LIVE_READY  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
+**Publication:** blocked; `PAUSE_PUBLICATION` remains required.  
+**Expansion:** blocked until go-live readiness gate passes.
+
+New evidence:
+
+- Go-live runner cycle `98` completed at `2026-06-14T00:04:41Z`.
+- Launch health remained good: `cmd` launch `18 ms`.
+- Sentinel remained `PASS / LOW`.
+- Plex identity remained healthy and active sessions were `0`.
+- Bounded Materialized QA batch skip `20`, limit `3`: `3/3 PASS`, `0` failed.
+- Layered validation summary: `3/3` passed with `webdav_head_and_temporary_range_warm_passed`.
+- Retry ledger remains `TRACKING_RETRY_SOURCES`: tracked `7`, held `0`, threshold `3`.
+
+Interpretation:
+
+- The prior Commando WebDAV HTTP `503` is being treated correctly as a source/upstream transient, not a title or Plex decision failure.
+- The authenticated LAN Plex decision path remains the correct approach.
+- Go-live remains blocked because readiness is still `REVIEW_NOT_GO_LIVE_READY`, but the latest bounded evidence is positive.
+
+Next safe action:
+
+- Continue bounded local runner batches. Do not publish or expand. If individual hashes reach retry threshold, source-quarantine only and keep titles wanted/retryable.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- NEXT BOUNDED BATCH NARROWS REMAINING BLOCKER
 
 **Updated UTC:** 2026-06-13T23:58:17Z  
