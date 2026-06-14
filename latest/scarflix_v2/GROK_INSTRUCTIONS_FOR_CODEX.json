@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_quiet_window_delivery_status_20260614_v120",
-      "created_at": "2026-06-14T20:02:29Z",
-      "expires_at": "2026-06-15T20:02:29Z",
+      "instruction_id": "phase0_record_quiet_window_delivery_status_20260614_v121",
+      "created_at": "2026-06-14T20:18:14Z",
+      "expires_at": "2026-06-15T20:18:14Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,15 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_record_quiet_window_delivery_status_20260614_v120",
-            "auto_added_by_bridge": true
+            "summary": "Continue detached go-live campaign. PAUSE_PUBLICATION respected. Promote only new PASS rows after bounded QA. No expansion or publishing.",
+            "source_instruction_id": "phase0_record_quiet_window_delivery_status_20260614_v121"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-14T20:02:29Z",
+  "updated_utc": "2026-06-14T20:18:14Z",
   "source": "grok_api"
 }
