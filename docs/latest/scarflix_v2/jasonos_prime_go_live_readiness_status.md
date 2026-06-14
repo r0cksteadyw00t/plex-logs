@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-14T13:46:31Z
+Updated UTC: 2026-06-14T13:49:07Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -32,7 +32,7 @@ PAUSE_PUBLICATION active: `True`
 
 | Task | Exists | State | Last Result |
 |---|---:|---:|---:|
-| `JasonOS_Prime_PlaybackFirstStabilityGuard` | `True` | `Ready` | `267009` |
+| `JasonOS_Prime_PlaybackFirstStabilityGuard` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_PlaybackPathRecovery` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_PlexWatchdog` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_ProjectSafeProgressAudit` | `True` | `Ready` | `0` |
