@@ -1,10 +1,10 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: REVIEW_HELD_RETRY_SOURCES
-- Updated UTC: 2026-06-14T19:19:36Z
+- Updated UTC: 2026-06-14T20:07:16Z
 - Threshold: 3
-- Tracked: 16
-- Held: 10
+- Tracked: 17
+- Held: 11
 - Publication allowed: false
 - Broad expansion allowed: false
 
@@ -21,12 +21,13 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Sin Nombre: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Faculty: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Princess Diaries 2: Royal Engagement: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- They Call Me Trinity: HELD_RETRY; failures=3; held=true; reason=timeout
 - Wish: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- They Call Me Trinity: TRACKING_RETRY; failures=2; held=false; reason=timeout
 - A Cinderella Story: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Casino: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Harakiri: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Aftermath: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Terminator: Dark Fate: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
+- Undisputed III: Redemption: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
