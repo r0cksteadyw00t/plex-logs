@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_materialized_qa_retry_held_status",
   "status": "TRACKING_RETRY_SOURCES",
-  "updated_utc": "2026-06-14T02:47:12Z",
+  "updated_utc": "2026-06-14T03:02:30Z",
   "threshold": 3,
-  "tracked_count": 17,
+  "tracked_count": 18,
   "held_count": 0,
   "retry_policy": "source_or_release_only; title remains wanted and retryable",
   "publication_allowed": false,
@@ -229,6 +229,19 @@
       "layered_reason": "webdav_head_upstream_server_error",
       "first_seen_utc": "2026-06-14T02:40:14Z",
       "last_seen_utc": "2026-06-14T02:40:14Z"
+    },
+    {
+      "hash": "scarflix_part-cfe52e744ff27d3c",
+      "title": "The Lord of the Rings: The War of the Rohirrim",
+      "status": "TRACKING_RETRY",
+      "held": false,
+      "failure_count": 1,
+      "reason": "timeout",
+      "http_status": 0,
+      "layered_status": "PASS",
+      "layered_reason": "webdav_head_and_temporary_range_warm_passed",
+      "first_seen_utc": "2026-06-14T02:55:06Z",
+      "last_seen_utc": "2026-06-14T02:55:06Z"
     }
   ],
   "next_action": "After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates."
