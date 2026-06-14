@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_materialized_qa_retry_held_status",
   "status": "REVIEW_HELD_RETRY_SOURCES",
-  "updated_utc": "2026-06-14T15:22:09Z",
+  "updated_utc": "2026-06-14T15:36:35Z",
   "threshold": 3,
-  "tracked_count": 19,
+  "tracked_count": 20,
   "held_count": 6,
   "retry_policy": "source_or_release_only; title remains wanted and retryable",
   "publication_allowed": false,
@@ -255,6 +255,19 @@
       "layered_reason": "webdav_head_upstream_server_error",
       "first_seen_utc": "2026-06-14T15:00:52Z",
       "last_seen_utc": "2026-06-14T15:00:52Z"
+    },
+    {
+      "hash": "scarflix_part-6a30d1aa558bac1f",
+      "title": "Terminator: Dark Fate",
+      "status": "TRACKING_RETRY",
+      "held": false,
+      "failure_count": 1,
+      "reason": "Layered streaming validation blocked Plex decision: webdav_head_timeout",
+      "http_status": 0,
+      "layered_status": "REVIEW",
+      "layered_reason": "webdav_head_timeout",
+      "first_seen_utc": "2026-06-14T15:29:34Z",
+      "last_seen_utc": "2026-06-14T15:29:34Z"
     }
   ],
   "next_action": "After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates."
