@@ -1,25 +1,23 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T14:55:44Z  
+Updated UTC: 2026-06-14T15:10:49Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 42
+Item count: 45
 
 ## Latest Quiet-Window Batch
 
-- Checked: 5
-- Passed: 5
+- Checked: 3
+- Passed: 3
 - Review: 0
-- New unique items added: 5
+- New unique items added: 3
 - Reverified existing items: 0
-- Held retry sources: 4
+- Held retry sources: 5
 
 ## Added This Update
 
-- Ninja Assassin (2009) -- scarflix_part-5a66bfd3dde459fc -- HTTP 200
-- Oblivion (2013) -- scarflix_part-44ae6e942e074320 -- HTTP 200
-- Ocean's Twelve (2004) -- scarflix_part-c9fbe9904ebf4733 -- HTTP 200
-- Predator 2 (1990) -- scarflix_part-e8e703109144873c -- HTTP 200
-- Rambo III (1988) -- scarflix_part-773c89fbdc43eb83 -- HTTP 200
+- Sense and Sensibility (1995) -- scarflix_part-17c22fece3c579f9 -- HTTP 200
+- Sherlock Holmes (2009) -- scarflix_part-0e300705b506774a -- HTTP 200
+- Shrek Forever After (2010) -- scarflix_part-9340c96017dac230 -- HTTP 200
 
 ## Held Retry Sources
 
@@ -27,6 +25,7 @@ Item count: 42
 - Escape Plan 2: Hades -- scarflix_part-0c6a9ce70714a3a2 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Home -- scarflix_part-3b5ee15376316a02 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Maleficent: Mistress of Evil -- scarflix_part-574e40d64a636c74 -- failures=3 -- timeout
+- RoboCop -- scarflix_part-9ba42fdb610c4448 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 ## Verified Items
 
@@ -72,3 +71,6 @@ Item count: 42
 - Ocean's Twelve (2004) -- scarflix_part-c9fbe9904ebf4733 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Predator 2 (1990) -- scarflix_part-e8e703109144873c -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Rambo III (1988) -- scarflix_part-773c89fbdc43eb83 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Sense and Sensibility (1995) -- scarflix_part-17c22fece3c579f9 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Sherlock Holmes (2009) -- scarflix_part-0e300705b506774a -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Shrek Forever After (2010) -- scarflix_part-9340c96017dac230 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
