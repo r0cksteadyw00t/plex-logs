@@ -1,11 +1,12 @@
-## Cycle 149 Clean Pass - 2026-06-14T06:07:13Z
+## Cycle 149 Source Retry Added - 2026-06-14T06:10:38Z
 
-- Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES.
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
 - Extended runner cycle 149: launch health 50 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint.
-- Bounded Materialized QA batch skip 72, limit 4: 3/4 PASS, 1 failed.
-- Detailed row titles for this completed batch were superseded by the next running canary artifact before this heartbeat; counts are taken from the campaign state and remain authoritative.
-- Retry ledger: tracked 18, held 0, threshold 3.
-- Continue actual delivery cycles. Publication and expansion remain blocked until delivery gates pass.
+- Bounded Materialized QA batch skip 72, limit 4: 3/4 PASS, 1 REVIEW.
+- Passed titles: Rambo III; Rambo: Last Blood; Reservoir Dogs.
+- REVIEW title: RoboCop (Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error).
+- Retry ledger: tracked 18, held 0, threshold 3. Latest tracked source is RoboCop at failure count 2/3; held remains 0.
+- Continue actual delivery cycles; source/release-only quarantine only after threshold. Publication and expansion remain blocked until delivery gates pass.
 ## Cycle 147 Source Retry Added - 2026-06-14T05:54:33Z
 
 - Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
@@ -3438,6 +3439,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
