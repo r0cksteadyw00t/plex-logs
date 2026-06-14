@@ -1,25 +1,26 @@
-## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 146 CLEAN PASS
+## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 147 SOURCE RETRY ADDED
 
-**Updated UTC:** 2026-06-14T05:52:32Z  
-**Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
+**Updated UTC:** 2026-06-14T05:54:33Z  
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
 **Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
 **Publication:** blocked; PAUSE_PUBLICATION remains required until delivery gates pass.  
 **Expansion:** blocked until go-live delivery gate passes.
 
 New evidence:
 
-- Extended delivery runner cycle 146 completed at 2026-06-14T05:46:15Z.
-- Launch health remained good: 33 ms; post-QA launch check 24 ms.
+- Extended delivery runner cycle 147 completed at 2026-06-14T05:53:02Z.
+- Launch health remained good: 20 ms; post-QA launch check 26 ms.
 - Sentinel remained PASS / LOW; no Jason action required.
 - Plex identity remained healthy (HTTP 200); active sessions were 0.
-- Bounded Materialized QA batch skip 62, limit 3: 3/3 PASS, 0 failed.
-- PASS rows: .
-- Layered validation passed 1/2.
-- Retry ledger is tracked 18, held 0, threshold 3.
+- Bounded Materialized QA batch skip 65, limit 4: 3/4 PASS, 1 REVIEW.
+- PASS rows: Night at the Museum; 9½ Weeks; Ninja Assassin.
+- REVIEW row: Nacho Libre (Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error).
+- Layered validation passed 3/4.
+- Retry ledger is tracked 18, held 0, threshold 3. Latest tracked source is Nacho Libre at failure count 2/3; held remains 0.
 
 Interpretation:
 
-- Clean bounded delivery verification continues on the post-wrap sweep.
+- This is a source/release retry below threshold, not a broad playback-path regression.
 - No source has reached threshold, so no source/release quarantine action is due yet.
 - Continue bounded runner work. Publication and broad expansion remain gated.
 ## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 145 SOURCE RETRY ADDED
@@ -3038,6 +3039,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
