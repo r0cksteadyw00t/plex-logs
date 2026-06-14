@@ -1,3 +1,19 @@
+## GO-LIVE DELIVERY UPDATE — PASS-ONLY WATCH NOW LANE ADVANCED
+
+**Updated UTC:** 2026-06-14T16:26:11Z  
+**Status:** DELIVERY_PROGRESS_PUBLICATION_BLOCKED  
+**Watch Now evidence lane:** 59 -> 64 verified PASS-only items  
+**Added this update:** 5  
+**Latest bounded QA:** 4 checked / 3 PASS / 1 held for retry  
+**Sentinel:** PASS/LOW  
+**Publication:** BLOCKED / PAUSE_PUBLICATION respected  
+**Raw lane URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json
+
+**What changed:** Promoted completed bounded QA PASS rows only. The 16:17 completed 3/3 batch was recovered from campaign/log evidence, and unique PASS rows from the current completed bounded QA artifact were added. REVIEW sources remain held/retryable and excluded from delivery.
+
+**Added titles:** The Texas Chain Saw Massacre (1974); The Transporter (2002); The Twilight Saga New Moon (2009); The Witch (2016); There Will Be Blood (2007)
+
+**Next autonomous action:** Continue the detached go-live campaign, keep noncritical expansion suppressed, keep publication blocked, and promote only new PASS rows after each bounded QA cycle.
 ## GO-LIVE DELIVERY UPDATE — PASS-ONLY WATCH NOW LANE CORRECTION
 
 **Updated UTC:** 2026-06-14T16:15:36Z  
@@ -3725,6 +3741,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
