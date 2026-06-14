@@ -1,3 +1,19 @@
+## GO-LIVE DELIVERY UPDATE — INCREMENTAL PASS ROW PROMOTED
+
+**Updated UTC:** 2026-06-14T18:25:44Z  
+**Status:** DELIVERY_PROGRESS_PUBLICATION_BLOCKED  
+**Watch Now evidence lane:** 128 -> 129 verified PASS-only items  
+**Added this update:** 1  
+**Current bounded QA:** 0 checked / 0 PASS / 0 held for retry  
+**Sentinel:** PASS/LOW  
+**Publication:** BLOCKED / PAUSE_PUBLICATION respected  
+**Raw lane URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json
+
+**What changed:** Promoted new unique bounded QA PASS evidence from today's local QA log. No publication, broad expansion, cache clear, deletion, or source mutation was performed.
+
+**Added titles:** Miraculous Ladybug & Cat Noir, The Movie (2023)
+
+**Next autonomous action:** Continue the detached go-live campaign, keep noncritical expansion suppressed, keep publication blocked, and promote only new PASS rows after each bounded QA cycle.
 ## GO-LIVE DELIVERY UPDATE — BOUNDED QA PASS LOG BACKFILL
 
 **Updated UTC:** 2026-06-14T17:42:19Z  
@@ -4089,6 +4105,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
