@@ -1,5 +1,23 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T00:06:03Z
+
+**Status:** BOUNDED_PLAYBACK_QA_PASS_STREAK_RESUMED_NOT_GO_LIVE_READY  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest bounded batch:
+
+- Go-live runner cycle `98`.
+- Launch health `18 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Materialized QA skip `20`, limit `3`: `3/3 PASS`, `0` failed.
+- Retry ledger: tracked `7`, held `0`, threshold `3`.
+
+Current gate:
+
+- Positive pass streak evidence resumed, but go-live remains `REVIEW_NOT_GO_LIVE_READY`. Continue bounded runner batches and source-retry policy only.
+
 ## Current Update - 2026-06-13T23:58:17Z
 
 **Status:** PLAYBACK_DECISION_PATH_FIX_HOLDS_UPSTREAM_SOURCE_RELIABILITY_REMAINS  
