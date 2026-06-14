@@ -1,87 +1,42 @@
 {
   "component": "jasonos_prime_user_visible_delivery_status",
-  "updated_utc": "2026-06-14T15:55:55Z",
-  "status": "QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_54",
-  "active_plex_sessions": 0,
-  "sentinel_status": "PASS",
-  "sentinel_alert_level": "LOW",
-  "publication_state": "PAUSE_PUBLICATION_REQUIRED",
-  "watch_now_lane_status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "watch_now_lane_item_count": 54,
-  "latest_completed_bounded_qa": {
+  "status": "DELIVERY_PROGRESS_PUBLICATION_BLOCKED",
+  "updated_utc": "2026-06-14T16:15:36Z",
+  "watch_now_verified_count": 59,
+  "previous_watch_now_verified_count": 54,
+  "added_this_update": [
+    "The Lord of the Rings The War of the Rohirrim (2024)",
+    "The Magic Faraway Tree (2026)",
+    "The Magnificent Seven (2016)",
+    "The Mist (2007)",
+    "The Mitchells vs. the Machines (2021)"
+  ],
+  "latest_bounded_qa": {
     "status": "REVIEW",
     "checked": 5,
-    "passed": 3,
-    "failed": 2,
-    "source_updated_utc": "2026-06-14T15:50:36Z",
-    "new_unique_added": 3,
-    "reverified_existing": [],
-    "review_retryable": [
-      "The Empty Man (2020)",
-      "The Faculty (1998)"
-    ]
+    "passed": 4,
+    "failed": 1,
+    "updated_utc": "2026-06-14T16:11:10Z"
   },
-  "added_this_update": [
-    "The Deadly Little Mermaid (2026)",
-    "The Devil's Advocate (1997)",
-    "The Equalizer 2 (2018)"
+  "campaign": {
+    "status": "RUNNING",
+    "updated_utc": "2026-06-14T16:11:17Z",
+    "cycle_count": 249,
+    "qa_cursor": 113,
+    "active_sessions": 0
+  },
+  "sentinel": {
+    "status": "PASS",
+    "alert_level": "LOW"
+  },
+  "gates": {
+    "pause_publication_required": true,
+    "publication_allowed": false,
+    "broad_expansion_allowed": false
+  },
+  "blockers": [
+    "Full publication remains blocked until delivery gates pass.",
+    "Held/retryable upstream WebDAV/source failures remain excluded from user delivery."
   ],
-  "retry_held_count": 7,
-  "held_retry_sources": [
-    {
-      "title": "Commando",
-      "hash": "scarflix_part-9d12ffa4bdee7b47",
-      "failure_count": 3,
-      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
-      "last_seen_utc": "2026-06-14T13:17:25Z"
-    },
-    {
-      "title": "Escape Plan 2: Hades",
-      "hash": "scarflix_part-0c6a9ce70714a3a2",
-      "failure_count": 3,
-      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
-      "last_seen_utc": "2026-06-14T13:39:22Z"
-    },
-    {
-      "title": "Home",
-      "hash": "scarflix_part-3b5ee15376316a02",
-      "failure_count": 3,
-      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
-      "last_seen_utc": "2026-06-14T14:08:14Z"
-    },
-    {
-      "title": "Maleficent: Mistress of Evil",
-      "hash": "scarflix_part-574e40d64a636c74",
-      "failure_count": 3,
-      "reason": "timeout",
-      "last_seen_utc": "2026-06-14T14:30:56Z"
-    },
-    {
-      "title": "RoboCop",
-      "hash": "scarflix_part-9ba42fdb610c4448",
-      "failure_count": 3,
-      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
-      "last_seen_utc": "2026-06-14T15:00:52Z"
-    },
-    {
-      "title": "Sin Nombre",
-      "hash": "scarflix_part-24f719d304fd7aa0",
-      "failure_count": 3,
-      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
-      "last_seen_utc": "2026-06-14T15:14:55Z"
-    },
-    {
-      "title": "The Faculty",
-      "hash": "scarflix_part-5a0bbbb5939deba7",
-      "failure_count": 3,
-      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
-      "last_seen_utc": "2026-06-14T15:50:36Z"
-    }
-  ],
-  "next_safe_delivery_focus": [
-    "Continue detached campaign runner while Plex sessions remain clear and Sentinel remains PASS/LOW.",
-    "Promote only completed PASS rows into the Watch Now artifact.",
-    "Keep REVIEW/HELD rows retryable at source/release level and do not reject titles.",
-    "Do not broaden publication until delivery gates pass."
-  ]
+  "raw_watch_now_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json"
 }
