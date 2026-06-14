@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T01:03:03Z
+- Updated UTC: 2026-06-14T01:17:49Z
 - Threshold: 3
-- Tracked: 11
+- Tracked: 13
 - Held: 0
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -23,5 +23,7 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Final Destination 5: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_timeout
 - Home: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Maleficent: Mistress of Evil: TRACKING_RETRY; failures=1; held=false; reason=timeout
+- Man on Fire: TRACKING_RETRY; failures=1; held=false; reason=timeout
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
