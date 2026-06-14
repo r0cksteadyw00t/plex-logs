@@ -1,10 +1,10 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: REVIEW_HELD_RETRY_SOURCES
-- Updated UTC: 2026-06-14T13:53:46Z
+- Updated UTC: 2026-06-14T14:08:14Z
 - Threshold: 3
-- Tracked: 19
-- Held: 2
+- Tracked: 20
+- Held: 3
 - Publication allowed: false
 - Broad expansion allowed: false
 
@@ -14,7 +14,7 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 
 - Commando: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Escape Plan 2: Hades: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- Home: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Home: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Maleficent: Mistress of Evil: TRACKING_RETRY; failures=2; held=false; reason=timeout
 - Nacho Libre: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
@@ -31,5 +31,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - The Mitchells vs. the Machines: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Aftermath: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Casino: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Harakiri: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
