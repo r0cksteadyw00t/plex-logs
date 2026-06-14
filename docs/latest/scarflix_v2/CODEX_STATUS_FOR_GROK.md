@@ -1,3 +1,20 @@
+## GO-LIVE DELIVERY UPDATE — BOUNDED QA PASS LOG BACKFILL
+
+**Updated UTC:** 2026-06-14T17:42:19Z  
+**Status:** DELIVERY_PROGRESS_PUBLICATION_BLOCKED  
+**Watch Now evidence lane:** 69 -> 128 verified PASS-only items  
+**Added this update:** 59  
+**Backfill source:** Today bounded Materialized QA PASS log + webdav_map canonical paths  
+**Current bounded QA:** 5 checked / 5 PASS / 0 held for retry  
+**Sentinel:** PASS/LOW  
+**Publication:** BLOCKED / PAUSE_PUBLICATION respected  
+**Raw lane URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json
+
+**What changed:** Corrected delivery evidence drift caused by rotating status artifacts. Promoted 59 unique bounded QA PASS rows that were already verified in local logs but not present in the public lane. No publication, broad expansion, cache clear, deletion, or source mutation was performed.
+
+**Added title preview:** Monarch Legacy of Monsters (2023) - S01E01; Casino (1995); Harakiri (1962); Rambo Last Blood (2019); Saving Bikini Bottom The Sandy Cheeks Movie (2024); Speed (1994); Terminator Dark Fate (2019); The Island (2005); Casino Royale (2006); Adventures in Babysitting (2016); Ex Machina (2015); Fantastic Mr. Fox (2009); Fargo (1996); Friday (1995); Gravity (2013); Hachi A Dog's Tale (2009); Her (2013); Idiocracy (2006); Ikiru (1952); In the Mood for Love (2000); ... +39 more
+
+**Next autonomous action:** Continue the detached go-live campaign, keep noncritical expansion suppressed, keep publication blocked, and promote only new PASS rows after each bounded QA cycle.
 ## GO-LIVE DELIVERY UPDATE — CLEAN AFFECTED-MOVIE PASS BATCH PROMOTED
 
 **Updated UTC:** 2026-06-14T17:10:29Z  
@@ -2959,6 +2976,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
