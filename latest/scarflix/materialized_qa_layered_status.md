@@ -1,7 +1,7 @@
 # ScarFLIX v2 Materialized QA Layered Streaming Status
 
-Status: RUNNING
-Updated UTC: 2026-06-14T15:57:08Z
+Status: PASS
+Updated UTC: 2026-06-14T15:57:14Z
 Total: 3
 Passed: 3
 Review: 0
