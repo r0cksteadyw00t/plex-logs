@@ -1,3 +1,28 @@
+## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 100 SOURCE-RETRY TRACKING UPDATED
+
+**Updated UTC:** 2026-06-14T00:20:27Z  
+**Status:** BOUNDED_QA_CONTINUES_SOURCE_UPSTREAM_503_TRACKED  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md  
+**Publication:** blocked; `PAUSE_PUBLICATION` remains required.  
+**Expansion:** blocked until go-live readiness gate passes.
+
+New evidence:
+
+- Go-live runner cycle `100` completed at `2026-06-14T00:18:46Z`.
+- Launch health remained good: `17 ms`.
+- Sentinel remained `PASS / LOW`.
+- Plex identity remained healthy and active sessions were `0`.
+- Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`.
+- PASS rows: Drive, Dumb and Dumber, Dune, EuroTrip. Each passed Plex decision HTTP `200`.
+- REVIEW row: Escape Plan 2: Hades. It failed before Plex decision because WebDAV returned `webdav_head_upstream_server_error`.
+- Public retry ledger updated: `TRACKING_RETRY_SOURCES`, tracked `8`, held `0`, threshold `3`.
+
+Interpretation:
+
+- The old Plex decision HTTP 400 issue remains resolved for new passing rows.
+- Current non-pass rows are source/upstream WebDAV failures, not broad Plex or catalogue failures.
+- No Jason decision is required; continue source/release-only retry tracking and keep titles wanted/retryable.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- PASS STREAK RESUMED AFTER SOURCE 503
 
 **Updated UTC:** 2026-06-14T00:06:03Z  
