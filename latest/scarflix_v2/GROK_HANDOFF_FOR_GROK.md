@@ -1,3 +1,29 @@
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 17 VERIFIED ITEMS
+
+**Updated UTC:** 06/14/2026 13:13:42  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_17  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+Detached campaign runner completed the latest bounded batch at 06/14/2026 13:10:29: 4/5 PASS, 1 REVIEW. Codex promoted only new unique completed PASS rows into the visible delivery artifact; no publication, broad expansion, cleanup, deletion, or Plex mutation was performed.
+
+Watch Now lane now has 17 verified items.
+
+Added this update:
+- The Ballerina (2016)
+- Cloverfield (2008)
+
+Reverified existing pass rows:
+- Armageddon (1998)
+- Battleship (2012)
+
+Retryable review rows:
+- Casino (1995) - webdav_head_upstream_server_error
+
+Safety note:
+
+- Retry held count remains 0.
+- Source-level REVIEW items remain retryable; titles are not rejected.
+- Mission 002 Threadfin remains ready/verified, but Plex Live TV attach remains held until a safe attach path exists.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 15 VERIFIED ITEMS
 
 **Updated UTC:** 2026-06-14T12:55:25Z  
@@ -3345,6 +3371,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
