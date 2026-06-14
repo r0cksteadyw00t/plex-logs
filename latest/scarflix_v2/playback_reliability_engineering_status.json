@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_playback_reliability_engineering",
   "status": "HELD_ACTIVE_PLAYBACK_USER_STREAM_PROTECTED",
-  "updated_utc": "2026-06-14T07:52:29Z",
+  "updated_utc": "2026-06-14T08:38:30Z",
   "publication_allowed": false,
   "broad_expansion_allowed": false,
   "pause_publication_required": true,
@@ -28,7 +28,7 @@
     ]
   },
   "current_go_live_ready": false,
-  "current_primary_blocker": "Active Plex playback is still present; runner is holding QA, expansion, and Plex attach work to avoid disrupting playback.",
+  "current_primary_blocker": "Active Plex playback is present again; runner is holding QA, expansion, and Plex attach work to avoid disrupting playback.",
   "latest_layered_batch": {
     "updated_utc": "2026-06-13T22:21:26Z",
     "layered_total": 3,
@@ -45,14 +45,14 @@
     "loopback_status": 401,
     "lan_status": 200
   },
-  "next_expected_signal": "runner should resume bounded QA automatically after Plex active sessions return to zero; Mission 002 watcher can continue when quiet window opens",
+  "next_expected_signal": "runner should keep using quiet windows for bounded QA and hold again whenever active playback appears",
   "go_live_ready": false,
-  "current_gate": "Cycle 168 active playback hold continues; Mission 002 Threadfin adapter is reachable and held for quiet-window Plex attach.",
+  "current_gate": "Cycle 176 hold with recent clean QA window: 5/5 PASS; retry ledger 18 tracked, 0 held.",
   "latest_evidence": {
-    "go_live_campaign_cycle": 168,
-    "campaign_updated_utc": "06/14/2026 07:52:12",
+    "go_live_campaign_cycle": 176,
+    "campaign_updated_utc": "2026-06-14T08:34:58Z",
     "campaign_ends_utc": "2026-06-15T00:36:58Z",
-    "launch_health_ms": 30,
+    "launch_health_ms": 19,
     "post_qa_launch_health_ms": 20,
     "sentinel_status": "PASS",
     "sentinel_alert_level": "LOW",
@@ -60,17 +60,17 @@
     "plex_sessions_ok": true,
     "plex_identity_http_status": 200,
     "bounded_materialized_qa_status": "REVIEW_PARTIAL_BATCH_PASS",
-    "decision_probe_skip": 91,
-    "decision_probe_limit": 4,
-    "checked": 4,
-    "passed": 4,
+    "decision_probe_skip": 95,
+    "decision_probe_limit": 5,
+    "checked": 5,
+    "passed": 5,
     "failed": 0,
     "passed_titles_detail_available": true,
     "retry_ledger_status": "TRACKING_RETRY_SOURCES",
     "retry_tracked_count": 18,
     "retry_held_count": 0,
     "retry_threshold": 3,
-    "interpretation": "Active playback protected. Mission 002 virtual adapter is ready-held. No Jason action required."
+    "interpretation": "Recent clean bounded pass followed by active playback hold. No Jason action required."
   },
   "backups": [
     "D:/PlexTools/Backups/plex_registry_network_fix_20260613T233903Z/plex_media_server_hkcu.reg",
