@@ -1,9 +1,9 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: TRACKING_RETRY_SOURCES
-- Updated UTC: 2026-06-14T12:34:18Z
+- Updated UTC: 2026-06-14T12:41:30Z
 - Threshold: 3
-- Tracked: 18
+- Tracked: 19
 - Held: 0
 - Publication allowed: false
 - Broad expansion allowed: false
@@ -30,5 +30,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Ladybug & Cat Noir Awakening: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - The Empty Man: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Mitchells vs. the Machines: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Aftermath: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 Next action: After the threshold, quarantine only the failed source/release and keep the title wanted for alternate candidates.
