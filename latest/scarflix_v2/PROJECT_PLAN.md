@@ -1,3 +1,13 @@
+## Cycle 113 Source Retry Added - 2026-06-14T01:50:58Z
+
+- Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED.
+- Extended runner cycle `113`: launch health `24 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA batch skip `75`, limit `5`: `4/5 PASS`, `1` REVIEW.
+- Passed titles: Robots; Rocky III; Rush; Saving Bikini Bottom: The Sandy Cheeks Movie.
+- REVIEW title: RoboCop, failed before Plex decision with `webdav_head_upstream_server_error`.
+- Retry ledger increased to tracked `15`, held `0`, threshold `3`.
+- Continue actual delivery cycles; source/release-only quarantine only after threshold. Publication and expansion remain blocked until delivery gates pass.
+
 ## Cycle 111 Clean Pass - 2026-06-14T01:35:58Z
 
 - Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES.
