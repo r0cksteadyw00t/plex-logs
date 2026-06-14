@@ -1,7 +1,7 @@
 ﻿# Mission 002 IPTV Cutover Preflight
 
-**Updated UTC:** 2026-06-13T09:39:56Z  
-**Status:** HELD_ACTIVE_PLEX_PLAYBACK  
+**Updated UTC:** 2026-06-14T11:14:25Z  
+**Status:** PASS_CUTOVER_PREFLIGHT_READY_HELD  
 **Cutover enabled:** false
 
 ## Safety
@@ -15,7 +15,7 @@
 ## Gate State
 
 - Cutover package ready: True
-- Active Plex sessions: 2
+- Active Plex sessions: 0
 - Docker CLI available: True
 - Docker version: Docker version 29.5.2, build 79eb04c
 - Threadfin desired port: 35400
@@ -23,7 +23,7 @@
 
 ## Blockers
 
-- active_plex_playback:2
+- none
 
 ## Warnings
 
