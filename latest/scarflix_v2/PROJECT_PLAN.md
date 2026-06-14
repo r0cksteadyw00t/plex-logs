@@ -1,3 +1,12 @@
+## Cycle 176 Active Playback Hold + Clean QA Window - 2026-06-14T08:38:30Z
+
+- Status: HELD_ACTIVE_PLAYBACK_USER_STREAM_PROTECTED.
+- Current runner cycle 176: launch health 19 ms; post-check 20 ms; Sentinel PASS / LOW; active sessions were 1.
+- QA is held now, but the brief quiet window at 06/14/2026 08:24:48 produced a clean bounded batch: skip 95, limit 5: 5/5 PASS, 0 REVIEW.
+- Passed titles: The Boy and the Heron; The Boy in the Striped Pyjamas; The Cabin in the Woods; The Count of Monte Cristo; The Count of Monte Cristo.
+- Retry ledger: tracked 18, held 0, threshold 3.
+- Mission 002 IPTV: watcher PASS_THREADFIN_ALREADY_READY_PLEX_ATTACH_HELD; Threadfin verify PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE; http://127.0.0.1:35400 reachable with 4 channels; Plex Live TV/DVR attach not attempted while active sessions=0.
+- Continue automatically. Publication, broad expansion, and Plex Live TV/DVR attach remain blocked while playback is active.
 ## Cycle 168 Active Playback Hold + Mission 002 Ready-Held - 2026-06-14T07:52:29Z
 
 - Status: HELD_ACTIVE_PLAYBACK_USER_STREAM_PROTECTED.
@@ -3486,6 +3495,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
