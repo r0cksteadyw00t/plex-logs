@@ -1,5 +1,25 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T01:50:58Z
+
+**Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle `113`.
+- Launch health `24 ms`; post-QA launch check `21 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA skip `75`, limit `5`: `4/5 PASS`, `1` REVIEW.
+- Passed titles: Robots; Rocky III; Rush; Saving Bikini Bottom: The Sandy Cheeks Movie.
+- Review title: RoboCop, blocked at WebDAV with `webdav_head_upstream_server_error`.
+- Retry ledger: tracked `15`, held `0`, threshold `3`.
+
+Current gate:
+
+- Source retry backlog increased, but no source is held. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 ## Current Update - 2026-06-14T01:35:58Z
 
 **Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
