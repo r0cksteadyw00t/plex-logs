@@ -1,5 +1,24 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T02:20:58Z
+
+**Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle `117`.
+- Launch health `21 ms`; post-QA launch check `23 ms`; Sentinel `PASS / LOW`; active Plex sessions `0`; Plex identity healthy.
+- Bounded Materialized QA skip `90`, limit `4`: `4/4 PASS`, `0` failed.
+- Passed titles: Stand by Me; Teen Wolf: The Movie; Terminator: Dark Fate; Terminator Salvation.
+- Retry ledger: tracked `16`, held `0`, threshold `3`.
+
+Current gate:
+
+- Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 ## Current Update - 2026-06-14T02:05:58Z
 
 **Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
