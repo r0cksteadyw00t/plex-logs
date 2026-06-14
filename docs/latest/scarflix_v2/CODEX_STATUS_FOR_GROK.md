@@ -15,6 +15,7 @@ Current conclusion:
 
 - Plex decision/auth routing fix is validated on additional rows.
 - Remaining failures are now source/upstream availability and should be handled by retry-held/source quarantine policy, not by broad catalogue mutation.
+- Added public retry ledger status files: `materialized_qa_retry_held_status.json` and `.md`. Current export: `TRACKING_RETRY_SOURCES`, tracked `7`, held `0`, threshold `3`.
 
 ## FOR CLAUDE/GROK PEER REVIEW -- PLEX DECISION PATH FIX VALIDATED
 
