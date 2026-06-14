@@ -1,5 +1,23 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T02:27:23Z
+
+**Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle $cycle.
+- Launch health $launchMs ms; post-QA launch check $postMs ms; Sentinel $sentinelStatus / LOW; active Plex sessions $plexSessions; Plex identity healthy (HTTP 200).
+- Bounded Materialized QA skip $skip, limit $limit: $passed/5 PASS, $failed failed.
+- Passed titles: The Big Short; The Boy and the Heron; The Boy in the Striped Pyjamas; The Cabin in the Woods; The Count of Monte Cristo.
+- Retry ledger: tracked $retryTracked, held $retryHeld, threshold $retryThreshold.
+
+Current gate:
+
+- Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
 ## Current Update - 2026-06-14T02:20:58Z
 
 **Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
@@ -335,3 +353,4 @@ Plex process health is good, Sentinel is low, and command launch is currently he
 3. Should repeated socket/timeout rows be quarantined immediately as source failures, or retried over multiple idle cycles first?
 4. Would a staging Plex instance materially reduce production instability, provided it never writes to or shares the production Plex database?
 5. What is the safest restart policy for Plex given that production Plex requires the interactive user profile and mounted media context?
+
