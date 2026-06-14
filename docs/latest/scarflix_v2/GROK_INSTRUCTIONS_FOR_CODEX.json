@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_bounded_delivery_status_20260614_v59",
-      "created_at": "2026-06-14T03:40:42Z",
-      "expires_at": "2026-06-15T03:40:42Z",
+      "instruction_id": "phase0_record_bounded_delivery_status_20260614_v60",
+      "created_at": "2026-06-14T03:56:42Z",
+      "expires_at": "2026-06-15T03:56:42Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -18,11 +18,10 @@
       },
       "actions": [
         {
-          "action_type": "write_status_summary",
+          "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Cycle 128: bounded QA 3/4 PASS (Vertigo REVIEW due to webdav_head_upstream_server_error). Retry ledger tracked 21/0/3. Continue runner only. PAUSE_PUBLICATION and LEGACY_RESOLVER_PAUSED remain active. No expansion or publishing instructed.",
-            "source_instruction_id": "phase0_record_bounded_delivery_status_20260614_v59",
-            "auto_added_by_bridge": true
+            "note": "Continue bounded Materialized QA runner cycles. PAUSE_PUBLICATION remains active. No publishing, expansion, source movement, or long QA instructed. Record only.",
+            "source_instruction_id": "phase0_record_bounded_delivery_status_20260614_v60"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-14T03:40:42Z",
+  "updated_utc": "2026-06-14T03:56:42Z",
   "source": "grok_api"
 }
