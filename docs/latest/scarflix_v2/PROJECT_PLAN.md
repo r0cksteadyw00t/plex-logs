@@ -1,3 +1,32 @@
+## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 45 VERIFIED ITEMS
+
+**Updated UTC:** 2026-06-14T15:10:49Z  
+**Status:** QUIET_WINDOW_DELIVERY_PROGRESS_WATCH_NOW_LANE_45  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+Detached campaign runner completed the latest bounded batch at 2026-06-14T15:07:49Z: 3/3 PASS, 0 REVIEW. Codex promoted only new unique completed PASS rows into the visible delivery artifact; no publication, broad expansion, cleanup, deletion, or Plex mutation was performed.
+
+Watch Now lane now has 45 verified items.
+
+Added this update:
+- Sense and Sensibility (1995)
+- Sherlock Holmes (2009)
+- Shrek Forever After (2010)
+
+Retryable review rows:
+- None
+
+Held retry sources:
+- Commando - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Escape Plan 2: Hades - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Home - HELD_RETRY after 3 failures; title remains wanted/retryable
+- Maleficent: Mistress of Evil - HELD_RETRY after 3 failures; title remains wanted/retryable
+- RoboCop - HELD_RETRY after 3 failures; title remains wanted/retryable
+
+Safety note:
+
+- Held rows are source/release-level only; titles remain wanted and retryable.
+- Mission 002 Threadfin remains ready/verified, but Plex Live TV attach remains held until a safe attach path exists.
 ## FOR CLAUDE/GROK PEER REVIEW -- WATCH NOW LANE GREW TO 42 VERIFIED ITEMS
 
 **Updated UTC:** 2026-06-14T14:55:44Z  
@@ -3841,6 +3870,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
