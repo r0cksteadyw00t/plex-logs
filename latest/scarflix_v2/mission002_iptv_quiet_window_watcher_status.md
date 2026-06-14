@@ -1,6 +1,6 @@
 ﻿# Mission 002 IPTV Quiet Window Cutover Watcher
 
-**Updated UTC:** 2026-06-14T09:48:01Z  
+**Updated UTC:** 2026-06-14T09:53:01Z  
 **Status:** HELD_ACTIVE_PLEX_PLAYBACK
 
 ## Safety
@@ -10,7 +10,7 @@
 - Plex Live TV attach attempted: false
 - Plex touched: false
 - ScarFLIX modified: false
-- Active Plex sessions: 2
+- Active Plex sessions: 1
 - Armed: True
 
 ## Gates
@@ -25,7 +25,7 @@
 
 ## Warnings
 
-- active_plex_playback:2
+- active_plex_playback:1
 
 ## Errors
 
