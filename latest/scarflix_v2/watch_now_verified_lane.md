@@ -1,30 +1,30 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T14:25:43Z  
+Updated UTC: 2026-06-14T14:40:41Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 34
+Item count: 37
 
 ## Latest Quiet-Window Batch
 
-- Checked: 4
-- Passed: 4
+- Checked: 3
+- Passed: 3
 - Review: 0
-- New unique items added: 4
+- New unique items added: 3
 - Reverified existing items: 0
-- Held retry sources: 3
+- Held retry sources: 4
 
 ## Added This Update
 
-- Indecent Proposal (1993) -- scarflix_part-52c63b31fc203627 -- HTTP 200
-- Josee, the Tiger and the Fish (2020) -- scarflix_part-076bee16088c0032 -- HTTP 200
-- L.E.T.H.A.L. Ladies: Return to Savage Beach (1998) -- scarflix_part-c624488ce1ac323e -- HTTP 200
-- Legend (2015) -- scarflix_part-a6694a54be2d1ec9 -- HTTP 200
+- Mortal Kombat Legends: Snow Blind (2022) -- scarflix_part-7110affe1186b949 -- HTTP 200
+- Mr. & Mrs. Smith (2005) -- scarflix_part-5e6de7f21f05908e -- HTTP 200
+- Mulholland Drive (2001) -- scarflix_part-a5f5f717cb4537ea -- HTTP 200
 
 ## Held Retry Sources
 
 - Commando -- scarflix_part-9d12ffa4bdee7b47 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Escape Plan 2: Hades -- scarflix_part-0c6a9ce70714a3a2 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Home -- scarflix_part-3b5ee15376316a02 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Maleficent: Mistress of Evil -- scarflix_part-574e40d64a636c74 -- failures=3 -- timeout
 
 ## Verified Items
 
@@ -62,3 +62,6 @@ Item count: 34
 - Josee, the Tiger and the Fish (2020) -- scarflix_part-076bee16088c0032 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - L.E.T.H.A.L. Ladies: Return to Savage Beach (1998) -- scarflix_part-c624488ce1ac323e -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Legend (2015) -- scarflix_part-a6694a54be2d1ec9 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Mortal Kombat Legends: Snow Blind (2022) -- scarflix_part-7110affe1186b949 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Mr. & Mrs. Smith (2005) -- scarflix_part-5e6de7f21f05908e -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Mulholland Drive (2001) -- scarflix_part-a5f5f717cb4537ea -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
