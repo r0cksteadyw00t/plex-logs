@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-14T05:04:08Z
+Updated UTC: 2026-06-14T05:10:03Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -26,15 +26,15 @@ PAUSE_PUBLICATION active: `True`
 
 ## Blocking Items
 
-- `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: REVIEW_PARTIAL_BATCH_PASS 3/3 failed=0.
+- `O-SCARFLIX-CATALOGUE`: Materialized QA is not PASS: REVIEW_PARTIAL_BATCH_PASS 4/4 failed=0.
 
 ## Monitored Tasks
 
 | Task | Exists | State | Last Result |
 |---|---:|---:|---:|
 | `JasonOS_Prime_PlaybackFirstStabilityGuard` | `True` | `Ready` | `0` |
-| `JasonOS_Prime_PlaybackPathRecovery` | `True` | `Ready` | `0` |
-| `JasonOS_Prime_PlexWatchdog` | `True` | `Ready` | `0` |
+| `JasonOS_Prime_PlaybackPathRecovery` | `True` | `Ready` | `267009` |
+| `JasonOS_Prime_PlexWatchdog` | `True` | `Running` | `0` |
 | `JasonOS_Prime_ProjectSafeProgressAudit` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_Mission002_QuietWindowCutoverWatcher` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_GoLiveReadinessAudit` | `True` | `Ready` | `0` |
