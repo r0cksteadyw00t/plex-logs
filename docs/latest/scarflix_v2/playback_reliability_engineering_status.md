@@ -1,5 +1,23 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-14T04:37:06Z
+
+**Status:** ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest evidence:
+
+- Extended delivery runner cycle 136.
+- Launch health 21 ms; post-QA launch check 21 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0.
+- Bounded Materialized QA skip 20, limit 4: 4/4 PASS, 0 failed.
+- Passed titles: Daredevil; Dawn of the Dead; Death Race; Despicable Me 3.
+- Retry ledger: tracked 18, held 0, threshold 3.
+
+Current gate:
+
+- Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
 ## Current Update - 2026-06-14T04:22:20Z
 
 **Status:** ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED  
@@ -130,6 +148,7 @@ Latest evidence:
 Current gate:
 
 - Positive cycle. Publication and expansion remain blocked until the delivery gate explicitly passes.
+
 
 
 
