@@ -1,10 +1,10 @@
 # Materialized QA Retry-Held Source Status
 
 - Status: REVIEW_HELD_RETRY_SOURCES
-- Updated UTC: 2026-06-14T14:22:36Z
+- Updated UTC: 2026-06-14T14:38:02Z
 - Threshold: 3
-- Tracked: 20
-- Held: 3
+- Tracked: 19
+- Held: 4
 - Publication allowed: false
 - Broad expansion allowed: false
 
@@ -15,8 +15,8 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Commando: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Escape Plan 2: Hades: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Home: HELD_RETRY; failures=3; held=true; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Maleficent: Mistress of Evil: HELD_RETRY; failures=3; held=true; reason=timeout
 - ScarFLIX Part 31696108f69a37b9: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
-- Maleficent: Mistress of Evil: TRACKING_RETRY; failures=2; held=false; reason=timeout
 - Nacho Libre: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - RoboCop: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Sin Nombre: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
@@ -25,7 +25,6 @@ Policy: source/release-only retry and quarantine. Titles remain wanted and retry
 - Wish: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - A Cinderella Story: TRACKING_RETRY; failures=2; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - They Call Me Trinity: TRACKING_RETRY; failures=1; held=false; reason=timeout
-- Million Dollar Baby: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - Ladybug & Cat Noir Awakening: TRACKING_RETRY; failures=1; held=false; reason=timeout
 - The Empty Man: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - The Mitchells vs. the Machines: TRACKING_RETRY; failures=1; held=false; reason=Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
