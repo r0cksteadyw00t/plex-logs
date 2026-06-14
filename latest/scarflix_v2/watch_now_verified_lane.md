@@ -1,8 +1,8 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T15:10:49Z  
+Updated UTC: 2026-06-14T15:26:04Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 45
+Item count: 48
 
 ## Latest Quiet-Window Batch
 
@@ -11,13 +11,13 @@ Item count: 45
 - Review: 0
 - New unique items added: 3
 - Reverified existing items: 0
-- Held retry sources: 5
+- Held retry sources: 6
 
 ## Added This Update
 
-- Sense and Sensibility (1995) -- scarflix_part-17c22fece3c579f9 -- HTTP 200
-- Sherlock Holmes (2009) -- scarflix_part-0e300705b506774a -- HTTP 200
-- Shrek Forever After (2010) -- scarflix_part-9340c96017dac230 -- HTTP 200
+- Split (2017) -- scarflix_part-9f1e4252bdcbf864 -- HTTP 200
+- Spy (2015) -- scarflix_part-94620cf0a7e850ab -- HTTP 200
+- Stand by Me (1986) -- scarflix_part-d708c8b30a147319 -- HTTP 200
 
 ## Held Retry Sources
 
@@ -26,6 +26,7 @@ Item count: 45
 - Home -- scarflix_part-3b5ee15376316a02 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 - Maleficent: Mistress of Evil -- scarflix_part-574e40d64a636c74 -- failures=3 -- timeout
 - RoboCop -- scarflix_part-9ba42fdb610c4448 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Sin Nombre -- scarflix_part-24f719d304fd7aa0 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 ## Verified Items
 
@@ -74,3 +75,6 @@ Item count: 45
 - Sense and Sensibility (1995) -- scarflix_part-17c22fece3c579f9 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Sherlock Holmes (2009) -- scarflix_part-0e300705b506774a -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Shrek Forever After (2010) -- scarflix_part-9340c96017dac230 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Split (2017) -- scarflix_part-9f1e4252bdcbf864 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Spy (2015) -- scarflix_part-94620cf0a7e850ab -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Stand by Me (1986) -- scarflix_part-d708c8b30a147319 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
