@@ -1,5 +1,24 @@
 # Playback Reliability Engineering Status
 
+## Current Update - 2026-06-13T23:58:17Z
+
+**Status:** PLAYBACK_DECISION_PATH_FIX_HOLDS_UPSTREAM_SOURCE_RELIABILITY_REMAINS  
+**Publication allowed:** false  
+**Broad expansion allowed:** false  
+**PAUSE_PUBLICATION:** must remain active
+
+Latest bounded batch:
+
+- Batch skip `16`, limit `4`: `3/4 PASS`, `1/4 REVIEW`.
+- Crank, Creed, and Dances with Wolves passed WebDAV/range layers and Plex decision HTTP `200`.
+- Commando failed at WebDAV layer with HTTP `503 upstream_server_error`; fallback range also returned HTTP `503`.
+
+Current blocker:
+
+- Plex decision path/auth routing is now validated on additional rows.
+- Remaining failures are specific source/upstream availability problems. They should be retried, source-quarantined after threshold, and replaced by alternate candidates without rejecting the title.
+- Public retry ledger status is now exported as `materialized_qa_retry_held_status.*`; current first export is `TRACKING_RETRY_SOURCES`, tracked `7`, held `0`.
+
 ## Current Update - 2026-06-13T23:53:44Z
 
 **Status:** PLAYBACK_DECISION_PATH_FIX_VALIDATED_PARTIAL_PASS  
