@@ -1,3 +1,20 @@
+## GO-LIVE DELIVERY UPDATE — MOVIE + TV PASS-ONLY BATCH PROMOTED
+
+**Updated UTC:** 2026-06-14T16:56:01Z  
+**Status:** DELIVERY_PROGRESS_PUBLICATION_BLOCKED  
+**Watch Now evidence lane:** 67 -> 69 verified PASS-only items  
+**Added this update:** 2  
+**Recovered bounded QA:** 5 checked / 4 PASS / 1 held for retry at 2026-06-14T16:46:49Z  
+**Latest canary artifact:** 0 checked / 0 PASS / 0 held  
+**Sentinel:** PASS/LOW  
+**Publication:** BLOCKED / PAUSE_PUBLICATION respected  
+**Raw lane URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_lane.json
+
+**What changed:** Promoted completed bounded QA PASS rows across movies and TV. The later zero-row canary artifact did not add delivery evidence. The failed Wish source from the 16:46 batch remains held/retryable and excluded from delivery.
+
+**Added titles:** Frieren Beyond Journey's End - S01E01; MacGyver (2016) - S01E01
+
+**Next autonomous action:** Continue the detached go-live campaign, keep noncritical expansion suppressed, keep publication blocked, and promote only new PASS rows after each bounded QA cycle.
 ## GO-LIVE DELIVERY UPDATE — CLEAN PASS-ONLY BATCH PROMOTED
 
 **Updated UTC:** 2026-06-14T16:40:37Z  
@@ -4039,6 +4056,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
