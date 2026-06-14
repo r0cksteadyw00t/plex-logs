@@ -1,10 +1,10 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-14T02:55:02.474Z
+Updated UTC: 2026-06-14T03:00:02.641Z
 Source: live status merge
 
-- 2026-06-14T02:52:18.458Z - Cycle 121 Clean Pass - 2026-06-14T02:52:18Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 121: launch health 38 ms; Sentinel PASS / LOW; active Plex sessions 0; Plex identity healthy (HTTP 200). Bounded Materialized QA batch skip 108, limit 3: 3/3 PASS, 0 failed. Passed titles: The Italian Job; The Jungle Book; The Last Samurai.
-- 2026-06-14T02:50:04Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-14T02:55:14.157Z - Cycle 121 Clean Pass - 2026-06-14T02:52:18Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 121: launch health 38 ms; Sentinel PASS / LOW; active Plex sessions 0; Plex identity healthy (HTTP 200). Bounded Materialized QA batch skip 108, limit 3: 3/3 PASS, 0 failed. Passed titles: The Italian Job; The Jungle Book; The Last Samurai.
+- 2026-06-14T02:55:05Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T02:45:11.163Z - Cycle 118 Clean Pass - 2026-06-14T02:29:38Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 118: launch health 32 ms; Sentinel PASS / LOW; active Plex sessions 0; Plex identity healthy (HTTP 200). Bounded Materialized QA batch skip 94, limit 5: 5/5 PASS, 0 failed. Passed titles: The Big Short; The Boy and the Heron; The Boy in t...
 - 2026-06-14T02:21:52.678Z - Cycle 107 Clean Pass - 2026-06-14 11:05: Current verified state: Extended runner cycle `107` completed with launch health `22 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `52`, limit `4`: `4/4 PASS`, `0` failed. Retry ledger remains tracked `11`, held `0`, threshold `3`.
 - 2026-06-14T01:00:14.246Z - Cycle 105 Source Backlog Increased - 2026-06-14 10:50: Current verified state: Extended runner cycle `105` completed with launch health `21 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, and Plex identity healthy. Bounded Materialized QA batch skip `46`, limit `3`: `2/3 PASS`, `1/3 REVIEW`. Homefront and Idiocracy passed Plex decision HTTP `200`.
