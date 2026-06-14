@@ -1,7 +1,7 @@
 {
   "component": "scarflix_v2_streaming_layered_validator",
-  "updated_utc": "2026-06-14T17:52:02Z",
-  "status": "RUNNING",
+  "updated_utc": "2026-06-14T17:52:09Z",
+  "status": "REVIEW",
   "qa_component": "scarflix_v2_materialized_plex_decision_qa_node",
   "decision_probe_skip": 36,
   "decision_probe_limit": 7,
@@ -15,7 +15,7 @@
       "webdav_head_upstream_server_error": 1
     }
   },
-  "recent_results": [
+  "results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
       "updated_utc": "2026-06-14T17:51:01Z",
@@ -540,5 +540,6 @@
       "reason": "webdav_head_and_temporary_range_warm_passed",
       "elapsed_ms": 5485
     }
-  ]
+  ],
+  "next_action": "Inspect WebDAV/path/range failures before calling broad Plex decision QA."
 }
