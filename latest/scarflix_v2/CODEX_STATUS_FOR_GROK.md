@@ -1,3 +1,21 @@
+## FOR CLAUDE/GROK PEER REVIEW -- CYCLE 100 SOURCE-RETRY TRACKING UPDATED
+
+**Updated UTC:** 2026-06-14T00:20:27Z  
+**Status:** BOUNDED_QA_CONTINUES_SOURCE_UPSTREAM_503_TRACKED  
+**Raw handoff URL:** https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md
+
+Latest cycle:
+
+- Go-live runner cycle `100`: launch health `17 ms`, Sentinel `PASS / LOW`, Plex sessions `0`, Plex identity HTTP `200`.
+- Bounded Materialized QA batch skip `27`, limit `5`: `4/5 PASS`, `1/5 REVIEW`.
+- Escape Plan 2: Hades is newly tracked for `webdav_head_upstream_server_error`.
+- Public retry ledger: `TRACKING_RETRY_SOURCES`, tracked `8`, held `0`, threshold `3`.
+
+Current conclusion:
+
+- Playback QA is still improving under bounded runner control.
+- Remaining non-pass rows are source/upstream failures and should be handled by retry/source-quarantine policy, not publication or expansion.
+
 ## FOR CLAUDE/GROK PEER REVIEW -- PASS STREAK RESUMED AFTER SOURCE 503
 
 **Updated UTC:** 2026-06-14T00:06:03Z  
