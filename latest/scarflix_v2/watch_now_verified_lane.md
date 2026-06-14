@@ -1,24 +1,24 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T13:40:41Z  
+Updated UTC: 2026-06-14T13:55:39Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 24
+Item count: 28
 
 ## Latest Quiet-Window Batch
 
-- Checked: 5
+- Checked: 4
 - Passed: 4
-- Review: 1
+- Review: 0
 - New unique items added: 4
 - Reverified existing items: 0
 - Held retry sources: 2
 
 ## Added This Update
 
-- Dr. No (1962) -- scarflix_part-00effd68c382bc07 -- HTTP 200
-- Drive (2011) -- scarflix_part-f6f047a41becc4ce -- HTTP 200
-- Dumb and Dumber (1994) -- scarflix_part-519e46c6da7cf797 -- HTTP 200
-- Dune (1984) -- scarflix_part-fe8bc55cabbdf41b -- HTTP 200
+- Final Destination (2000) -- scarflix_part-f96ecae0bf043548 -- HTTP 200
+- Final Destination 5 (2011) -- scarflix_part-c017966a31451921 -- HTTP 200
+- Finding Dory (2016) -- scarflix_part-854736eb92c08f81 -- HTTP 200
+- Fracture (2007) -- scarflix_part-61f18dcc8c34f579 -- HTTP 200
 
 ## Held Retry Sources
 
@@ -51,3 +51,7 @@ Item count: 24
 - Drive (2011) -- scarflix_part-f6f047a41becc4ce -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Dumb and Dumber (1994) -- scarflix_part-519e46c6da7cf797 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Dune (1984) -- scarflix_part-fe8bc55cabbdf41b -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Final Destination (2000) -- scarflix_part-f96ecae0bf043548 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Final Destination 5 (2011) -- scarflix_part-c017966a31451921 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Finding Dory (2016) -- scarflix_part-854736eb92c08f81 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Fracture (2007) -- scarflix_part-61f18dcc8c34f579 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
