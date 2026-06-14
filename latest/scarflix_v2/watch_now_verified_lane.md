@@ -1,23 +1,25 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T14:40:41Z  
+Updated UTC: 2026-06-14T14:55:44Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 37
+Item count: 42
 
 ## Latest Quiet-Window Batch
 
-- Checked: 3
-- Passed: 3
+- Checked: 5
+- Passed: 5
 - Review: 0
-- New unique items added: 3
+- New unique items added: 5
 - Reverified existing items: 0
 - Held retry sources: 4
 
 ## Added This Update
 
-- Mortal Kombat Legends: Snow Blind (2022) -- scarflix_part-7110affe1186b949 -- HTTP 200
-- Mr. & Mrs. Smith (2005) -- scarflix_part-5e6de7f21f05908e -- HTTP 200
-- Mulholland Drive (2001) -- scarflix_part-a5f5f717cb4537ea -- HTTP 200
+- Ninja Assassin (2009) -- scarflix_part-5a66bfd3dde459fc -- HTTP 200
+- Oblivion (2013) -- scarflix_part-44ae6e942e074320 -- HTTP 200
+- Ocean's Twelve (2004) -- scarflix_part-c9fbe9904ebf4733 -- HTTP 200
+- Predator 2 (1990) -- scarflix_part-e8e703109144873c -- HTTP 200
+- Rambo III (1988) -- scarflix_part-773c89fbdc43eb83 -- HTTP 200
 
 ## Held Retry Sources
 
@@ -65,3 +67,8 @@ Item count: 37
 - Mortal Kombat Legends: Snow Blind (2022) -- scarflix_part-7110affe1186b949 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Mr. & Mrs. Smith (2005) -- scarflix_part-5e6de7f21f05908e -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Mulholland Drive (2001) -- scarflix_part-a5f5f717cb4537ea -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Ninja Assassin (2009) -- scarflix_part-5a66bfd3dde459fc -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Oblivion (2013) -- scarflix_part-44ae6e942e074320 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Ocean's Twelve (2004) -- scarflix_part-c9fbe9904ebf4733 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Predator 2 (1990) -- scarflix_part-e8e703109144873c -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Rambo III (1988) -- scarflix_part-773c89fbdc43eb83 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
