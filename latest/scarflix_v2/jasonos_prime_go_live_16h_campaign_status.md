@@ -1,17 +1,17 @@
 # JasonOS Prime Go-Live 16h Campaign Status
 
-- Status: HELD_ACTIVE_PLAYBACK
-- Updated UTC: 2026-06-14T22:27:16Z
+- Status: RUNNING
+- Updated UTC: 2026-06-14T22:34:41Z
 - Started UTC: 2026-06-13T13:22:00Z
 - Ends UTC: 2026-06-15T00:36:58Z
-- Cycle: 303
-- Launch health: 23 ms
+- Cycle: 304
+- Launch health: 20 ms
 - Sentinel: PASS / LOW
-- Active Plex sessions: 1
-- Materialized QA: REVIEW_PARTIAL_BATCH_PASS checked=5 passed=5 failed=0
-- QA cursor: 51
-- Last action: stopped_materialized_qa_due_active_playback
-- Last blocker: active_plex_playback_detected
+- Active Plex sessions: 0
+- Materialized QA: REVIEW checked=6 passed=5 failed=1
+- QA cursor: 57
+- Last action: ran_playback_path_recovery_once, ran_mission2_threadfin_apply, ran_mission2_threadfin_verify, ran_bounded_materialized_qa_batch, ran_go_live_readiness_audit_once
+- Last blocker: 
 
 Safety:
 - PAUSE_PUBLICATION remains active.
