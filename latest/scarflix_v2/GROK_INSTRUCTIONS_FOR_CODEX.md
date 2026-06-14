@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-14T09:21:09Z
+Updated UTC: 2026-06-14T09:36:39Z
 Source: grok_api
 
 ## Summary
@@ -14,10 +14,10 @@ PASS
 
 ## Instructions
 
-### phase0_record_user_visible_delivery_gap_20260614_v80
+### phase0_record_quiet_window_visible_delivery_plan_20260614_v81
 
 - Target: `status_dashboard`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-15T09:21:09Z`
+- Expires: `2026-06-15T09:36:39Z`
