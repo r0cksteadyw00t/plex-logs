@@ -1,24 +1,27 @@
 {
   "component": "scarflix_watch_now_verified_lane",
   "status": "PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED",
-  "updated_utc": "2026-06-14T13:25:57Z",
-  "item_count": 20,
+  "updated_utc": "2026-06-14T13:40:41Z",
+  "item_count": 24,
   "latest_batch": {
     "source": "materialized_canary_decision_qa_status.json",
-    "source_updated_utc": "2026-06-14T13:24:30Z",
-    "status": "REVIEW_PARTIAL_BATCH_PASS",
-    "checked": 3,
-    "passed": 3,
-    "failed": 0,
-    "new_unique_added": 3,
+    "source_updated_utc": "2026-06-14T13:39:22Z",
+    "status": "REVIEW",
+    "checked": 5,
+    "passed": 4,
+    "failed": 1,
+    "new_unique_added": 4,
     "reverified_existing": [],
-    "review_retryable": [],
-    "held_retry_count": 1
+    "review_retryable": [
+      "Escape Plan 2: Hades (2018)"
+    ],
+    "held_retry_count": 2
   },
   "added_this_update": [
-    "Dances with Wolves (1990)",
-    "Daredevil (2003)",
-    "Dawn of the Dead (2004)"
+    "Dr. No (1962)",
+    "Drive (2011)",
+    "Dumb and Dumber (1994)",
+    "Dune (1984)"
   ],
   "items": [
     {
@@ -220,6 +223,46 @@
       "content_length": "1616217557",
       "source": "quiet_window_bounded_qa_pass",
       "verified_utc": "06/14/2026 13:24:20"
+    },
+    {
+      "title": "Dr. No (1962)",
+      "hash": "scarflix_part-00effd68c382bc07",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1632,
+      "content_length": "905693491",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T13:38:08Z"
+    },
+    {
+      "title": "Drive (2011)",
+      "hash": "scarflix_part-f6f047a41becc4ce",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1587,
+      "content_length": "2399851105",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T13:38:28Z"
+    },
+    {
+      "title": "Dumb and Dumber (1994)",
+      "hash": "scarflix_part-519e46c6da7cf797",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1611,
+      "content_length": "2165879819",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T13:38:46Z"
+    },
+    {
+      "title": "Dune (1984)",
+      "hash": "scarflix_part-fe8bc55cabbdf41b",
+      "status": "PASS",
+      "http": 200,
+      "ms": 1689,
+      "content_length": "1933417222",
+      "source": "quiet_window_bounded_qa_pass",
+      "verified_utc": "2026-06-14T13:39:07Z"
     }
   ],
   "caveat": "This is a limited verified lane from already-visible/passing materialized rows. It is not broad expansion clearance and does not disable PAUSE_PUBLICATION.",
