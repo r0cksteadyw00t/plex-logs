@@ -1,14 +1,14 @@
 {
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
-  "status": "REVIEW_PARTIAL_BATCH_PASS",
-  "started_utc": "2026-06-14T16:37:40Z",
-  "ended_utc": "2026-06-14T16:39:17Z",
-  "updated_utc": "2026-06-14T16:39:17Z",
+  "status": "REVIEW",
+  "started_utc": "2026-06-14T16:45:10Z",
+  "ended_utc": "2026-06-14T16:46:40Z",
+  "updated_utc": "2026-06-14T16:46:40Z",
   "target_count": 229,
   "rows_found": 146,
-  "checked": 4,
+  "checked": 5,
   "passed": 4,
-  "failed": 0,
+  "failed": 1,
   "query_errors": 0,
   "query_error_details": [],
   "decision_timeout_ms": 15000,
@@ -19,17 +19,18 @@
   "retry_held_candidates": 8,
   "decision_probe_unfiltered_candidates": 141,
   "layered_validation_summary": {
-    "total": 4,
+    "total": 5,
     "passed": 4,
-    "review": 0,
+    "review": 1,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 4
+      "webdav_head_and_temporary_range_warm_passed": 4,
+      "webdav_head_upstream_server_error": 1
     }
   },
-  "decision_probe_skip": 123,
-  "decision_probe_limit": 4,
+  "decision_probe_skip": 127,
+  "decision_probe_limit": 5,
   "decision_probe_total_candidates": 133,
-  "selected_decision_candidates": 4,
+  "selected_decision_candidates": 5,
   "stopped_early": false,
   "stopped_reason": "",
   "targets": [
@@ -4412,10 +4413,10 @@
   "layered_results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T16:38:04Z",
-      "target_hash": "ScarFLIX_part-3aa6a5ad236af39b",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twelve Monkeys (1995)\\ScarFLIX_part-3aa6a5ad236af39b",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-3aa6a5ad236af39b/stream.mkv",
+      "updated_utc": "2026-06-14T16:45:37Z",
+      "target_hash": "ScarFLIX_part-ac22c691d6568126",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-ac22c691d6568126/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4427,10 +4428,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twelve Monkeys (1995)\\ScarFLIX_part-3aa6a5ad236af39b",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twelve Monkeys (1995)\\ScarFLIX_part-3aa6a5ad236af39b",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-3aa6a5ad236af39b",
+          "link_target": "S:\\media\\ScarFLIX_part-ac22c691d6568126",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4440,13 +4441,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3aa6a5ad236af39b/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ac22c691d6568126/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "3810294852",
+          "content_length": "2630942761",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1362,
+          "elapsed_ms": 1645,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4455,13 +4456,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3aa6a5ad236af39b/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ac22c691d6568126/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3810294852",
+            "content_length": "2630942761",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1362,
+            "elapsed_ms": 1645,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4469,26 +4470,26 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3aa6a5ad236af39b/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ac22c691d6568126/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3581,
+          "elapsed_ms": 3594,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 4948
+      "elapsed_ms": 5244
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T16:38:15Z",
-      "target_hash": "ScarFLIX_part-b6caef61efed54f1",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b6caef61efed54f1/stream.mkv",
+      "updated_utc": "2026-06-14T16:45:53Z",
+      "target_hash": "ScarFLIX_part-056b613c36104e31",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4500,10 +4501,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-b6caef61efed54f1",
+          "link_target": "S:\\media\\ScarFLIX_part-056b613c36104e31",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4511,57 +4512,70 @@
           "is_file": false
         },
         "webdav_head": {
-          "ok": true,
+          "ok": false,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b6caef61efed54f1/stream.mkv",
-          "status_code": 200,
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+          "status_code": 503,
           "bytes_read": 0,
-          "content_length": "2704047725",
-          "content_type": "application/octet-stream",
+          "content_length": "141",
+          "content_type": "text/plain; charset=utf-8",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1452,
-          "attempt": 1,
-          "reason": "ok",
-          "attempts": 1
+          "elapsed_ms": 810,
+          "attempt": 2,
+          "reason": "upstream_server_error",
+          "attempts": 2
         },
         "webdav_head_attempts": [
           {
-            "ok": true,
+            "ok": false,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b6caef61efed54f1/stream.mkv",
-            "status_code": 200,
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+            "status_code": 503,
             "bytes_read": 0,
-            "content_length": "2704047725",
-            "content_type": "application/octet-stream",
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1452,
+            "elapsed_ms": 4269,
             "attempt": 1,
-            "reason": "ok"
+            "reason": "upstream_server_error"
+          },
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 810,
+            "attempt": 2,
+            "reason": "upstream_server_error"
           }
         ],
-        "webdav_range_warm": {
-          "ok": true,
+        "webdav_head_fallback_range": {
+          "ok": false,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b6caef61efed54f1/stream.mkv",
-          "status_code": 206,
-          "bytes_read": 4194304,
-          "content_length": "4194304",
-          "content_type": "application/octet-stream",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+          "status_code": 503,
+          "bytes_read": 141,
+          "content_length": "141",
+          "content_type": "text/plain; charset=utf-8",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3702,
-          "reason": "ok"
+          "elapsed_ms": 1096,
+          "reason": "upstream_server_error"
         }
       },
-      "status": "PASS",
-      "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5154
+      "status": "REVIEW",
+      "reason": "webdav_head_upstream_server_error",
+      "elapsed_ms": 6932
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T16:38:28Z",
-      "target_hash": "ScarFLIX_part-64c1bfd3e5881850",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-64c1bfd3e5881850/stream.mkv",
+      "updated_utc": "2026-06-14T16:45:55Z",
+      "target_hash": "ScarFLIX_part-b40cd0c89fdac0f7",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4573,10 +4587,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-64c1bfd3e5881850",
+          "link_target": "S:\\media\\ScarFLIX_part-b40cd0c89fdac0f7",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4586,13 +4600,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-64c1bfd3e5881850/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "1966601347",
+          "content_length": "5194361033",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1558,
+          "elapsed_ms": 1641,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4601,13 +4615,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-64c1bfd3e5881850/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1966601347",
+            "content_length": "5194361033",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1558,
+            "elapsed_ms": 1641,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4615,26 +4629,26 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-64c1bfd3e5881850/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3459,
+          "elapsed_ms": 3527,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5017
+      "elapsed_ms": 5174
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-14T16:38:53Z",
-      "target_hash": "ScarFLIX_part-68c43fa40f40a5e5",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-68c43fa40f40a5e5/stream.mkv",
+      "updated_utc": "2026-06-14T16:46:11Z",
+      "target_hash": "ScarFLIX_part-734e5ca7e95283c8",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
       "map_loaded": true,
       "map_generated_utc": "2026-06-09T10:17:48Z",
       "map_entry_found": true,
@@ -4646,10 +4660,10 @@
       "layers": {
         "local_symlink_metadata": {
           "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
           "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-68c43fa40f40a5e5",
+          "link_target": "S:\\media\\ScarFLIX_part-734e5ca7e95283c8",
           "error": "",
           "blocking": false,
           "exists": true,
@@ -4659,13 +4673,13 @@
         "webdav_head": {
           "ok": true,
           "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68c43fa40f40a5e5/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
           "status_code": 200,
           "bytes_read": 0,
-          "content_length": "3276150755",
+          "content_length": "809592310",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1640,
+          "elapsed_ms": 1490,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -4674,13 +4688,13 @@
           {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68c43fa40f40a5e5/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3276150755",
+            "content_length": "809592310",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1640,
+            "elapsed_ms": 1490,
             "attempt": 1,
             "reason": "ok"
           }
@@ -4688,28 +4702,101 @@
         "webdav_range_warm": {
           "ok": true,
           "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68c43fa40f40a5e5/stream.mkv",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
           "status_code": 206,
           "bytes_read": 4194304,
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3756,
+          "elapsed_ms": 3586,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5396
+      "elapsed_ms": 5077
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-14T16:46:27Z",
+      "target_hash": "ScarFLIX_part-3a38fe9c1419d910",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-3a38fe9c1419d910",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": true,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
+          "status_code": 200,
+          "bytes_read": 0,
+          "content_length": "1364013240",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 1496,
+          "attempt": 1,
+          "reason": "ok",
+          "attempts": 1
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "1364013240",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1496,
+            "attempt": 1,
+            "reason": "ok"
+          }
+        ],
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 3499,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_and_temporary_range_warm_passed",
+      "elapsed_ms": 4995
     }
   ],
   "results": [
     {
-      "metadata_id": 50615,
-      "part_id": 128230,
+      "metadata_id": 50324,
+      "part_id": 127662,
       "section_id": 5,
-      "title": "Twelve Monkeys",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twelve Monkeys (1995)\\ScarFLIX_part-3aa6a5ad236af39b\\stream.mkv",
+      "title": "Vertigo",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4730,14 +4817,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-3aa6a5ad236af39b",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twelve Monkeys (1995)\\ScarFLIX_part-3aa6a5ad236af39b",
+      "target_hash": "ScarFLIX_part-ac22c691d6568126",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T16:38:04Z",
-        "target_hash": "ScarFLIX_part-3aa6a5ad236af39b",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twelve Monkeys (1995)\\ScarFLIX_part-3aa6a5ad236af39b",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-3aa6a5ad236af39b/stream.mkv",
+        "updated_utc": "2026-06-14T16:45:37Z",
+        "target_hash": "ScarFLIX_part-ac22c691d6568126",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-ac22c691d6568126/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4749,10 +4836,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twelve Monkeys (1995)\\ScarFLIX_part-3aa6a5ad236af39b",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twelve Monkeys (1995)\\ScarFLIX_part-3aa6a5ad236af39b",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Vertigo (1958)\\ScarFLIX_part-ac22c691d6568126",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-3aa6a5ad236af39b",
+            "link_target": "S:\\media\\ScarFLIX_part-ac22c691d6568126",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4762,13 +4849,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3aa6a5ad236af39b/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ac22c691d6568126/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3810294852",
+            "content_length": "2630942761",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1362,
+            "elapsed_ms": 1645,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -4777,13 +4864,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3aa6a5ad236af39b/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ac22c691d6568126/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "3810294852",
+              "content_length": "2630942761",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 1362,
+              "elapsed_ms": 1645,
               "attempt": 1,
               "reason": "ok"
             }
@@ -4791,27 +4878,130 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3aa6a5ad236af39b/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-ac22c691d6568126/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3581,
+            "elapsed_ms": 3594,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 4948
+        "elapsed_ms": 5244
       }
     },
     {
-      "metadata_id": 50325,
-      "part_id": 127663,
+      "metadata_id": 50625,
+      "part_id": 128252,
       "section_id": 5,
-      "title": "Twister",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1\\stream.mkv",
+      "title": "Wish",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31\\stream.mkv",
+      "status": "REVIEW",
+      "http_status": 0,
+      "access_mode": "token",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 15000,
+      "decision_policy": "layered_streaming_precheck_blocked_plex_decision",
+      "reason": "Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error",
+      "skipped_plex_decision": true,
+      "layered_validation": {
+        "component": "scarflix_v2_streaming_layered_validator",
+        "updated_utc": "2026-06-14T16:45:53Z",
+        "target_hash": "ScarFLIX_part-056b613c36104e31",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+        "map_loaded": true,
+        "map_generated_utc": "2026-06-09T10:17:48Z",
+        "map_entry_found": true,
+        "temporary_buffering": {
+          "enabled": true,
+          "persisted": false,
+          "range_bytes_requested": 4194304
+        },
+        "layers": {
+          "local_symlink_metadata": {
+            "status": "PASS",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31",
+            "is_symbolic_link": true,
+            "link_target": "S:\\media\\ScarFLIX_part-056b613c36104e31",
+            "error": "",
+            "blocking": false,
+            "exists": true,
+            "is_directory": false,
+            "is_file": false
+          },
+          "webdav_head": {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 810,
+            "attempt": 2,
+            "reason": "upstream_server_error",
+            "attempts": 2
+          },
+          "webdav_head_attempts": [
+            {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+              "status_code": 503,
+              "bytes_read": 0,
+              "content_length": "141",
+              "content_type": "text/plain; charset=utf-8",
+              "accept_ranges": "bytes",
+              "elapsed_ms": 4269,
+              "attempt": 1,
+              "reason": "upstream_server_error"
+            },
+            {
+              "ok": false,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+              "status_code": 503,
+              "bytes_read": 0,
+              "content_length": "141",
+              "content_type": "text/plain; charset=utf-8",
+              "accept_ranges": "bytes",
+              "elapsed_ms": 810,
+              "attempt": 2,
+              "reason": "upstream_server_error"
+            }
+          ],
+          "webdav_head_fallback_range": {
+            "ok": false,
+            "method": "GET",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-056b613c36104e31/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 141,
+            "content_length": "141",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1096,
+            "reason": "upstream_server_error"
+          }
+        },
+        "status": "REVIEW",
+        "reason": "webdav_head_upstream_server_error",
+        "elapsed_ms": 6932
+      },
+      "target_hash": "ScarFLIX_part-056b613c36104e31",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Wish (2023)\\ScarFLIX_part-056b613c36104e31"
+    },
+    {
+      "metadata_id": 50288,
+      "part_id": 127592,
+      "section_id": 6,
+      "title": "Episode 1",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4832,14 +5022,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-b6caef61efed54f1",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1",
+      "target_hash": "ScarFLIX_part-b40cd0c89fdac0f7",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T16:38:15Z",
-        "target_hash": "ScarFLIX_part-b6caef61efed54f1",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b6caef61efed54f1/stream.mkv",
+        "updated_utc": "2026-06-14T16:45:55Z",
+        "target_hash": "ScarFLIX_part-b40cd0c89fdac0f7",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4851,10 +5041,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Twister (1996)\\ScarFLIX_part-b6caef61efed54f1",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\Downton Abbey (2010)\\Season 01\\Downton Abbey (2010) - S01E01 - ScarFLIX_part-b40cd0c89fdac0f7",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-b6caef61efed54f1",
+            "link_target": "S:\\media\\ScarFLIX_part-b40cd0c89fdac0f7",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4864,13 +5054,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b6caef61efed54f1/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "2704047725",
+            "content_length": "5194361033",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1452,
+            "elapsed_ms": 1641,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -4879,13 +5069,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b6caef61efed54f1/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "2704047725",
+              "content_length": "5194361033",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 1452,
+              "elapsed_ms": 1641,
               "attempt": 1,
               "reason": "ok"
             }
@@ -4893,27 +5083,27 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b6caef61efed54f1/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-b40cd0c89fdac0f7/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3702,
+            "elapsed_ms": 3527,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 5154
+        "elapsed_ms": 5174
       }
     },
     {
-      "metadata_id": 50168,
-      "part_id": 127508,
-      "section_id": 5,
-      "title": "Undisputed III: Redemption",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850\\stream.mkv",
+      "metadata_id": 50297,
+      "part_id": 127661,
+      "section_id": 6,
+      "title": "The Journey's End",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -4922,19 +5112,10 @@
       "decision_path_mode": "tokenized_full_base_metadata_url",
       "decision_policy": "client_flexible_direct_play_stream_allowed",
       "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 2,
+      "attempt": 1,
       "decision_attempts": [
         {
           "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "FAIL",
-          "http_status": 0,
-          "reason": "timeout",
-          "decision_path_mode": "tokenized_full_base_metadata_url",
-          "response_body_snippet": ""
-        },
-        {
-          "attempt": 2,
           "base_url": "http://192.168.1.184:32400",
           "status": "PASS",
           "http_status": 200,
@@ -4943,14 +5124,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-64c1bfd3e5881850",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850",
+      "target_hash": "ScarFLIX_part-734e5ca7e95283c8",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T16:38:28Z",
-        "target_hash": "ScarFLIX_part-64c1bfd3e5881850",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-64c1bfd3e5881850/stream.mkv",
+        "updated_utc": "2026-06-14T16:46:11Z",
+        "target_hash": "ScarFLIX_part-734e5ca7e95283c8",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -4962,10 +5143,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Undisputed III Redemption (2010)\\ScarFLIX_part-64c1bfd3e5881850",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\Frieren Beyond Journey's End\\Season 01\\Frieren Beyond Journey's End - S01E01 - ScarFLIX_part-734e5ca7e95283c8",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-64c1bfd3e5881850",
+            "link_target": "S:\\media\\ScarFLIX_part-734e5ca7e95283c8",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -4975,13 +5156,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-64c1bfd3e5881850/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "1966601347",
+            "content_length": "809592310",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1558,
+            "elapsed_ms": 1490,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -4990,13 +5171,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-64c1bfd3e5881850/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "1966601347",
+              "content_length": "809592310",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 1558,
+              "elapsed_ms": 1490,
               "attempt": 1,
               "reason": "ok"
             }
@@ -5004,27 +5185,27 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-64c1bfd3e5881850/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-734e5ca7e95283c8/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3459,
+            "elapsed_ms": 3586,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 5017
+        "elapsed_ms": 5077
       }
     },
     {
-      "metadata_id": 50167,
-      "part_id": 127507,
-      "section_id": 5,
-      "title": "Valerian and the City of a Thousand Planets",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5\\stream.mkv",
+      "metadata_id": 50291,
+      "part_id": 127595,
+      "section_id": 6,
+      "title": "The Rising",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910\\stream.mkv",
       "status": "PASS",
       "http_status": 200,
       "access_mode": "token",
@@ -5033,19 +5214,10 @@
       "decision_path_mode": "tokenized_full_base_metadata_url",
       "decision_policy": "client_flexible_direct_play_stream_allowed",
       "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 2,
+      "attempt": 1,
       "decision_attempts": [
         {
           "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "FAIL",
-          "http_status": 0,
-          "reason": "timeout",
-          "decision_path_mode": "tokenized_full_base_metadata_url",
-          "response_body_snippet": ""
-        },
-        {
-          "attempt": 2,
           "base_url": "http://192.168.1.184:32400",
           "status": "PASS",
           "http_status": 200,
@@ -5054,14 +5226,14 @@
           "response_body_snippet": ""
         }
       ],
-      "target_hash": "ScarFLIX_part-68c43fa40f40a5e5",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5",
+      "target_hash": "ScarFLIX_part-3a38fe9c1419d910",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
       "layered_validation": {
         "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-14T16:38:53Z",
-        "target_hash": "ScarFLIX_part-68c43fa40f40a5e5",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-68c43fa40f40a5e5/stream.mkv",
+        "updated_utc": "2026-06-14T16:46:27Z",
+        "target_hash": "ScarFLIX_part-3a38fe9c1419d910",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
         "map_loaded": true,
         "map_generated_utc": "2026-06-09T10:17:48Z",
         "map_entry_found": true,
@@ -5073,10 +5245,10 @@
         "layers": {
           "local_symlink_metadata": {
             "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Valerian and the City of a Thousand Planets (2017)\\ScarFLIX_part-68c43fa40f40a5e5",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Shows\\MacGyver (2016)\\Season 01\\MacGyver (2016) - S01E01 - ScarFLIX_part-3a38fe9c1419d910",
             "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-68c43fa40f40a5e5",
+            "link_target": "S:\\media\\ScarFLIX_part-3a38fe9c1419d910",
             "error": "",
             "blocking": false,
             "exists": true,
@@ -5086,13 +5258,13 @@
           "webdav_head": {
             "ok": true,
             "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68c43fa40f40a5e5/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
             "status_code": 200,
             "bytes_read": 0,
-            "content_length": "3276150755",
+            "content_length": "1364013240",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1640,
+            "elapsed_ms": 1496,
             "attempt": 1,
             "reason": "ok",
             "attempts": 1
@@ -5101,13 +5273,13 @@
             {
               "ok": true,
               "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68c43fa40f40a5e5/stream.mkv",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
               "status_code": 200,
               "bytes_read": 0,
-              "content_length": "3276150755",
+              "content_length": "1364013240",
               "content_type": "application/octet-stream",
               "accept_ranges": "bytes",
-              "elapsed_ms": 1640,
+              "elapsed_ms": 1496,
               "attempt": 1,
               "reason": "ok"
             }
@@ -5115,21 +5287,21 @@
           "webdav_range_warm": {
             "ok": true,
             "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68c43fa40f40a5e5/stream.mkv",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-3a38fe9c1419d910/stream.mkv",
             "status_code": 206,
             "bytes_read": 4194304,
             "content_length": "4194304",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 3756,
+            "elapsed_ms": 3499,
             "reason": "ok"
           }
         },
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 5396
+        "elapsed_ms": 4995
       }
     }
   ],
-  "next_action": "This bounded Materialized QA batch passed; continue the next batch before go-live."
+  "next_action": "Quarantine failed materialized source/release and keep title retryable."
 }
