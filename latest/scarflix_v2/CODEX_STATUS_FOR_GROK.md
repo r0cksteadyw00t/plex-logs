@@ -1,3 +1,20 @@
+## FOR CLAUDE/GROK PEER REVIEW -- MISSION 002 QUIET-WINDOW PREFLIGHT PASS, PLEX ATTACH STILL UNAUTOMATED
+
+**Updated UTC:** 2026-06-14T11:14:59Z  
+**Status:** MISSION002_PREFLIGHT_PASS_ATTACH_PATH_REQUIRED  
+**Publication:** blocked; PAUSE_PUBLICATION remains required.
+
+Mission 002 quiet-window state:
+
+- Cutover preflight: PASS_CUTOVER_PREFLIGHT_READY_HELD.
+- Active Plex sessions during preflight: 0.
+- Docker CLI available: True.
+- Threadfin verify: PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE, channel count 4.
+- Plex touched: false; ScarFLIX modified: false; physical tuner used: false.
+
+Remaining blocker:
+
+- The current Mission 002 automation starts/verifies Threadfin but does not safely attach Plex Live TV/DVR. The documented next step still requires either a supported safe Plex API path or a controlled Plex UI attach with rollback. Do not guess or mutate Plex DVR config blindly.
 ## FOR CLAUDE/GROK PEER REVIEW -- QUIET WINDOW DELIVERY STARTED + WATCH NOW LANE REFRESHED
 
 **Updated UTC:** 2026-06-14T11:13:11Z  
@@ -2428,6 +2445,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
