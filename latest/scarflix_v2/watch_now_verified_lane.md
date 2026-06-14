@@ -1,27 +1,29 @@
 # Watch Now Verified Lane
 
-Updated UTC: 2026-06-14T13:25:57Z  
+Updated UTC: 2026-06-14T13:40:41Z  
 Status: PASS_LIMITED_VISIBLE_DELIVERY_LANE_REFRESHED  
-Item count: 20
+Item count: 24
 
 ## Latest Quiet-Window Batch
 
-- Checked: 3
-- Passed: 3
-- Review: 0
-- New unique items added: 3
+- Checked: 5
+- Passed: 4
+- Review: 1
+- New unique items added: 4
 - Reverified existing items: 0
-- Held retry sources: 1
+- Held retry sources: 2
 
 ## Added This Update
 
-- Dances with Wolves (1990) -- scarflix_part-b9dbad7c5a4378f1 -- HTTP 200
-- Daredevil (2003) -- scarflix_part-8ce42f7e275d1e85 -- HTTP 200
-- Dawn of the Dead (2004) -- scarflix_part-7c4868fe7b1db021 -- HTTP 200
+- Dr. No (1962) -- scarflix_part-00effd68c382bc07 -- HTTP 200
+- Drive (2011) -- scarflix_part-f6f047a41becc4ce -- HTTP 200
+- Dumb and Dumber (1994) -- scarflix_part-519e46c6da7cf797 -- HTTP 200
+- Dune (1984) -- scarflix_part-fe8bc55cabbdf41b -- HTTP 200
 
 ## Held Retry Sources
 
 - Commando -- scarflix_part-9d12ffa4bdee7b47 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
+- Escape Plan 2: Hades -- scarflix_part-0c6a9ce70714a3a2 -- failures=3 -- Layered streaming validation blocked Plex decision: webdav_head_upstream_server_error
 
 ## Verified Items
 
@@ -45,3 +47,7 @@ Item count: 20
 - Dances with Wolves (1990) -- scarflix_part-b9dbad7c5a4378f1 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Daredevil (2003) -- scarflix_part-8ce42f7e275d1e85 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
 - Dawn of the Dead (2004) -- scarflix_part-7c4868fe7b1db021 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Dr. No (1962) -- scarflix_part-00effd68c382bc07 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Drive (2011) -- scarflix_part-f6f047a41becc4ce -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Dumb and Dumber (1994) -- scarflix_part-519e46c6da7cf797 -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
+- Dune (1984) -- scarflix_part-fe8bc55cabbdf41b -- PASS -- HTTP 200 -- quiet_window_bounded_qa_pass
