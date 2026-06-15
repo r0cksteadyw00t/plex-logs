@@ -1,3 +1,11 @@
+## MISSION 002 LIVE TV UPDATE - CHROME EXTENSION INSTALLED BUT DISABLED
+
+**Updated UTC:** 2026-06-15T05:23:32Z  
+**User report:** Codex Chrome Extension installed.  
+**Check result:** Installed=true, enabled=false in Chrome selected profile Default; native host correct=true; Chrome running=true.  
+**Impact:** Official Plex account-level Online Media Sources opt-out remains blocked because Codex cannot control the logged-in Plex account session until the extension is enabled.  
+**Current protection:** Local reversible hosts suppression for pg.provider.plex.tv remains active and Threadfin curated IPTV remains reachable.  
+**Next safe action:** Enable the Codex Chrome Extension, then retry Plex account Online Media Sources opt-outs for Live TV on Plex.
 ## MISSION 002 LIVE TV UPDATE - PLEX CHANNELS SUPPRESSION APPLIED
 
 **Updated UTC:** 2026-06-15T05:19:33Z  
