@@ -1,46 +1,104 @@
 {
     "component":  "jasonos_mission002_community_sports_source_discovery",
-    "schema_version":  "jasonos.iptv.community_sports_source_discovery_status.v1",
-    "status":  "PASS_DISCOVERY_READY_NO_ENGINE_CANDIDATES_YET",
-    "started_utc":  "2026-06-15T14:00:30.9450155Z",
-    "updated_utc":  "2026-06-15T14:00:58.5609750Z",
+    "schema_version":  "jasonos.iptv.community_sports_source_discovery_status.v2",
+    "status":  "REVIEW_SKIPPED_NETWORK_STATUS_ONLY",
+    "discovery_scope":  "MULTI_SOURCE_V2_AGGRESSIVE_DISCOVERY_GATED_PROMOTION",
+    "started_utc":  "2026-06-15T14:20:04.9509207Z",
+    "updated_utc":  "2026-06-15T14:20:05.4335108Z",
     "config_path":  "C:\\Users\\jason\\OneDrive\\Public\\TOKENS\\mission002_community_sports_source_discovery_config.json",
     "config_created":  false,
+    "config_upgraded_to_v2":  true,
     "pause_publication_preserved":  true,
     "writes_threadfin":  false,
     "writes_plex":  false,
     "source_details_redacted_publicly":  true,
     "stream_urls_redacted_publicly":  true,
-    "sources_configured":  4,
-    "sources_fetched":  4,
+    "sources_configured":  7,
+    "sources_processed":  7,
+    "sources_fetched":  0,
     "source_fetch_error_count":  0,
-    "channels_extracted_unique":  196,
-    "relevant_candidate_count":  195,
-    "probed_count":  20,
-    "probe_pass_count":  20,
+    "child_sources_discovered":  0,
+    "duplicate_streams_suppressed":  0,
+    "channels_extracted_unique":  0,
+    "relevant_candidate_count":  0,
+    "probed_count":  0,
+    "probe_pass_count":  0,
     "probe_fail_count":  0,
-    "review_queue_count":  1,
+    "review_queue_count":  0,
     "sports_source_engine_candidate_count":  0,
-    "pending_review_or_engine_candidate_count":  1,
-    "pending_private_source_count":  1,
+    "pending_review_or_engine_candidate_count":  0,
+    "pending_private_source_count":  0,
     "private_index_path":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\community_sports_discovery\\mission002_community_source_index.private.json",
     "private_review_queue_path":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\community_sports_discovery\\mission002_community_review_queue.private.json",
     "private_pending_sports_source_package_path":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\community_sports_discovery\\mission002_external_sports_sources.discovered.pending_private.json",
+    "private_source_graph_path":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\community_sports_discovery\\mission002_community_source_graph.private.json",
     "public_redacted_candidates_path":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_community_sports_candidates.redacted.json",
     "public_redacted_coverage_gaps_path":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_community_sports_coverage_gaps.redacted.json",
+    "public_redacted_source_graph_path":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_community_sports_source_graph.redacted.json",
+    "worker_stats":  {
+                         "url_m3u":  4,
+                         "markdown_url_index":  1,
+                         "url_text":  0,
+                         "github_code_search":  2,
+                         "github_gist_search":  0,
+                         "child_sources_discovered":  0,
+                         "duplicate_streams_suppressed":  0
+                     },
+    "source_class_counts":  [
+                                {
+                                    "source_class":  "broadcaster_public",
+                                    "count":  2
+                                },
+                                {
+                                    "source_class":  "community_public_list",
+                                    "count":  3
+                                },
+                                {
+                                    "source_class":  "github_code_search",
+                                    "count":  2
+                                }
+                            ],
+    "trust_tier_counts":  [
+                              {
+                                  "trust_tier":  "A",
+                                  "count":  2
+                              },
+                              {
+                                  "trust_tier":  "B",
+                                  "count":  3
+                              },
+                              {
+                                  "trust_tier":  "D",
+                                  "count":  2
+                              }
+                          ],
+    "recast_signal_counts":  [
+
+                             ],
+    "implemented_workers":  [
+                                "Configured URL M3U fetcher",
+                                "Markdown/text URL index crawler",
+                                "GitHub code search child-source discovery",
+                                "Public child-source queue with run cap",
+                                "Stream hash duplicate suppression",
+                                "Source graph builder",
+                                "Strict redacted public status publisher"
+                            ],
     "peer_review_result":  {
                                "accepted":  [
                                                 "Mission 002 should be a durable source intelligence layer, not a one-off scraper.",
-                                                "Discovery, scoring, validation, and promotion must remain separate stages.",
-                                                "Every candidate needs provenance, hashing, score, decision, and replayable evidence."
+                                                "Discovery can be significantly broader than promotion.",
+                                                "Source graph/provenance is required before promotion.",
+                                                "Community lists, raw repo files, markdown indices, GitHub code search, and public recast/mirror references can be indexed."
                                             ],
                                "corrected":  [
                                                  "The runner does not directly mutate Plex or Threadfin.",
-                                                 "Unauthorized paid/OTT stream acquisition is not automated.",
-                                                 "Public status redacts source URLs and stream URLs."
+                                                 "Unauthorized paid/OTT stream acquisition is not automated or promoted.",
+                                                 "Public status redacts source URLs and stream URLs.",
+                                                 "Recast/aggregator/github-discovered sources are held with burn-in requirements instead of being auto-applied."
                                              ]
                            },
-    "next_safe_action":  "Review the private pending package, copy selected entries into the governed external sports source config if accepted, then pass them through Invoke-Mission002SportsSourceEngine.ps1. Do not publish until that gate passes.",
+    "next_safe_action":  "Use the private graph and pending package to select only high-confidence entries for the governed Sports Source Engine. Recast, aggregator, or GitHub-discovered entries require burn-in and repeated PASS probes before any Threadfin/Plex promotion.",
     "fetch_errors_redacted":  [
 
                               ]
