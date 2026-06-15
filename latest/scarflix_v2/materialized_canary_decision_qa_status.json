@@ -2,11 +2,11 @@
   "component": "scarflix_v2_materialized_plex_decision_qa_node",
   "status": "RUNNING_PLEX_DECISION_PROBES",
   "started_utc": "2026-06-15T02:29:10Z",
-  "updated_utc": "2026-06-15T02:35:16Z",
+  "updated_utc": "2026-06-15T02:35:30Z",
   "target_count": 229,
   "rows_found": 132,
-  "checked": 28,
-  "passed": 28,
+  "checked": 29,
+  "passed": 29,
   "failed": 0,
   "query_errors": 0,
   "query_error_details": [],
@@ -18,11 +18,11 @@
   "retry_held_candidates": 0,
   "decision_probe_unfiltered_candidates": 127,
   "layered_validation_summary": {
-    "total": 28,
-    "passed": 28,
+    "total": 29,
+    "passed": 29,
     "review": 0,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 28
+      "webdav_head_and_temporary_range_warm_passed": 29
     }
   },
   "decision_probe_skip": 0,
@@ -31,108 +31,6 @@
   "selected_decision_candidates": 127,
   "consecutive_decision_failures": 0,
   "recent_results": [
-    {
-      "metadata_id": 50518,
-      "part_id": 128035,
-      "section_id": 5,
-      "title": "Dawn of the Dead",
-      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021\\stream.mkv",
-      "status": "PASS",
-      "http_status": 200,
-      "access_mode": "token",
-      "base_url": "http://192.168.1.184:32400",
-      "timeout_ms": 20000,
-      "decision_path_mode": "tokenized_full_base_metadata_url",
-      "decision_policy": "client_flexible_direct_play_stream_allowed",
-      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-      "attempt": 1,
-      "decision_attempts": [
-        {
-          "attempt": 1,
-          "base_url": "http://192.168.1.184:32400",
-          "status": "PASS",
-          "http_status": 200,
-          "reason": "Plex client-style decision returned HTTP 200 for materialized path",
-          "decision_path_mode": "tokenized_full_base_metadata_url",
-          "response_body_snippet": ""
-        }
-      ],
-      "target_hash": "ScarFLIX_part-7c4868fe7b1db021",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021",
-      "layered_validation": {
-        "component": "scarflix_v2_streaming_layered_validator",
-        "updated_utc": "2026-06-15T02:32:42Z",
-        "target_hash": "ScarFLIX_part-7c4868fe7b1db021",
-        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021",
-        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-7c4868fe7b1db021/stream.mkv",
-        "map_loaded": true,
-        "map_generated_utc": "2026-06-15T02:28:56Z",
-        "map_entry_found": true,
-        "temporary_buffering": {
-          "enabled": true,
-          "persisted": false,
-          "range_bytes_requested": 4194304
-        },
-        "layers": {
-          "local_symlink_metadata": {
-            "status": "PASS",
-            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021",
-            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Dawn of the Dead (2004)\\ScarFLIX_part-7c4868fe7b1db021",
-            "is_symbolic_link": true,
-            "link_target": "S:\\media\\ScarFLIX_part-7c4868fe7b1db021",
-            "error": "",
-            "blocking": false,
-            "exists": true,
-            "is_directory": false,
-            "is_file": false
-          },
-          "webdav_head": {
-            "ok": true,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7c4868fe7b1db021/stream.mkv",
-            "status_code": 200,
-            "bytes_read": 0,
-            "content_length": "1616217557",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 1679,
-            "attempt": 1,
-            "reason": "ok",
-            "attempts": 1
-          },
-          "webdav_head_attempts": [
-            {
-              "ok": true,
-              "method": "HEAD",
-              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7c4868fe7b1db021/stream.mkv",
-              "status_code": 200,
-              "bytes_read": 0,
-              "content_length": "1616217557",
-              "content_type": "application/octet-stream",
-              "accept_ranges": "bytes",
-              "elapsed_ms": 1679,
-              "attempt": 1,
-              "reason": "ok"
-            }
-          ],
-          "webdav_range_warm": {
-            "ok": true,
-            "method": "GET",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-7c4868fe7b1db021/stream.mkv",
-            "status_code": 206,
-            "bytes_read": 4194304,
-            "content_length": "4194304",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 3421,
-            "reason": "ok"
-          }
-        },
-        "status": "PASS",
-        "reason": "webdav_head_and_temporary_range_warm_passed",
-        "elapsed_ms": 5101
-      }
-    },
     {
       "metadata_id": 50650,
       "part_id": 128305,
@@ -1058,6 +956,108 @@
         "status": "PASS",
         "reason": "webdav_head_and_temporary_range_warm_passed",
         "elapsed_ms": 5087
+      }
+    },
+    {
+      "metadata_id": 50604,
+      "part_id": 128207,
+      "section_id": 5,
+      "title": "Fantastic Mr. Fox",
+      "file": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe\\stream.mkv",
+      "status": "PASS",
+      "http_status": 200,
+      "access_mode": "token",
+      "base_url": "http://192.168.1.184:32400",
+      "timeout_ms": 20000,
+      "decision_path_mode": "tokenized_full_base_metadata_url",
+      "decision_policy": "client_flexible_direct_play_stream_allowed",
+      "reason": "Plex client-style decision returned HTTP 200 for materialized path",
+      "attempt": 1,
+      "decision_attempts": [
+        {
+          "attempt": 1,
+          "base_url": "http://192.168.1.184:32400",
+          "status": "PASS",
+          "http_status": 200,
+          "reason": "Plex client-style decision returned HTTP 200 for materialized path",
+          "decision_path_mode": "tokenized_full_base_metadata_url",
+          "response_body_snippet": ""
+        }
+      ],
+      "target_hash": "ScarFLIX_part-dec3fa773c4923fe",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
+      "layered_validation": {
+        "component": "scarflix_v2_streaming_layered_validator",
+        "updated_utc": "2026-06-15T02:35:18Z",
+        "target_hash": "ScarFLIX_part-dec3fa773c4923fe",
+        "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
+        "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+        "map_loaded": true,
+        "map_generated_utc": "2026-06-15T02:28:56Z",
+        "map_entry_found": true,
+        "temporary_buffering": {
+          "enabled": true,
+          "persisted": false,
+          "range_bytes_requested": 4194304
+        },
+        "layers": {
+          "local_symlink_metadata": {
+            "status": "PASS",
+            "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
+            "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Fantastic Mr. Fox (2009)\\ScarFLIX_part-dec3fa773c4923fe",
+            "is_symbolic_link": true,
+            "link_target": "S:\\media\\ScarFLIX_part-dec3fa773c4923fe",
+            "error": "",
+            "blocking": false,
+            "exists": true,
+            "is_directory": false,
+            "is_file": false
+          },
+          "webdav_head": {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "630319537",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1540,
+            "attempt": 1,
+            "reason": "ok",
+            "attempts": 1
+          },
+          "webdav_head_attempts": [
+            {
+              "ok": true,
+              "method": "HEAD",
+              "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+              "status_code": 200,
+              "bytes_read": 0,
+              "content_length": "630319537",
+              "content_type": "application/octet-stream",
+              "accept_ranges": "bytes",
+              "elapsed_ms": 1540,
+              "attempt": 1,
+              "reason": "ok"
+            }
+          ],
+          "webdav_range_warm": {
+            "ok": true,
+            "method": "GET",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-dec3fa773c4923fe/stream.mkv",
+            "status_code": 206,
+            "bytes_read": 4194304,
+            "content_length": "4194304",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 3556,
+            "reason": "ok"
+          }
+        },
+        "status": "PASS",
+        "reason": "webdav_head_and_temporary_range_warm_passed",
+        "elapsed_ms": 5097
       }
     }
   ],
