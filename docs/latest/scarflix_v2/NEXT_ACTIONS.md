@@ -1,3 +1,10 @@
+## Mission 002 Community Sports Source Discovery - Current Next Actions (2026-06-15T13:47:38Z)
+
+1. Treat Invoke-Mission002CommunitySportsSourceDiscovery.ps1 as the upstream source-intelligence runner for external sports discovery.
+2. Keep discovery read-only and redacted publicly; do not publish discovered channels directly.
+3. Use the private pending package at D:\PlexTools\state\jasonos_prime\iptv\community_sports_discovery\mission002_external_sports_sources.discovered.pending_private.json only as input to the governed Sports Source Engine review path.
+4. Continue the 4-hour hidden discovery cadence to refresh AFL/Fox/Kayo/Fox Sports coverage evidence.
+5. Full AFL coverage remains blocked on a legitimate Plex-compatible Fox Footy/Kayo/Fox Sports source or adapter; do not fabricate rows.
 # TV-First Whole-Show Next Actions (2026-06-15T12:47:07Z)
 
 1. Build the additive TV publication adapter for the 21 accepted private-stage episode candidates only.
