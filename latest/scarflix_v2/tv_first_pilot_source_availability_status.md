@@ -1,6 +1,6 @@
 # TV-First Pilot Source Availability
 
-Updated UTC: 2026-06-15T04:42:04Z
+Updated UTC: 2026-06-15T14:33:01Z
 Status: REVIEW_PARTIAL_PILOT_SOURCES_AVAILABLE
 Batch: D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_execution_batches/tv_active_2026_pilot_10_small_high_confidence.held.json
 Checked: 10
