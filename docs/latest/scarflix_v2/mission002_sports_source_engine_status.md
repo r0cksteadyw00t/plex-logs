@@ -1,8 +1,8 @@
 # Mission 002 Sports Source Engine
 
-Updated UTC: 2026-06-15T12:19:35Z
+Updated UTC: 2026-06-15T21:50:52Z
 
-Status: PASS_FOUNDATION_READY_HELD_NO_PRIVATE_CONFIG
+Status: PASS_EXTERNAL_SPORTS_PROMOTIONS_READY
 
 ## Gate
 
@@ -34,12 +34,12 @@ Sample promoted baseline channels:
 
 ## External Sports Sources
 
-- Private config present: False
-- External source count: 0
-- External candidates: 0
-- External promoted: 0
-- External held: 0
-- Current hold reason: No private external sports source config exists yet.
+- Private config present: True
+- External source count: 2
+- External candidates: 62
+- External promoted: 61
+- External held: 1
+- Current hold reason: none
 
 ## Outputs
 
