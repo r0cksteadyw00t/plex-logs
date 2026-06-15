@@ -1,3 +1,15 @@
+# Mission 002 AFL Scope Correction - PASS (2026-06-15T09:41:12Z)
+
+User correction applied: free-to-air channels must be Melbourne/Sydney only. The earlier 47-channel regional Seven/7mate expansion was incorrect and has been replaced.
+
+- Active curated M3U channels: 33.
+- Threadfin lineup channels: 33.
+- Plex enabled DVR mappings: 33.
+- Plex EPG channel tags: 33.
+- Active AFL-relevant channels: 7 Melbourne, 7 Sydney, 7mate Melbourne, 7mate Sydney, 7plus AFL Live.
+- Corrected AFL stream probe: 5/5 PASS.
+- Fox Footy / Fox Sports / Kayo are confirmed as required for full non-aerial AFL coverage, but are held because the configured legal Plex-compatible M3U/XMLTV sources do not expose them.
+- Next work: paid OTT adapter feasibility spike. Do not use regional FTA or fake Fox/Kayo rows as substitutes.
 # Mission 002 AFL IPTV Expansion - PASS (2026-06-15T09:15:44Z)
 
 User outcome delivered: Plex real Live TV/DVR now includes the curated AFL-relevant Seven, 7mate, and 7plus IP streams that were missing from the earlier lineup.
@@ -4283,6 +4295,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
