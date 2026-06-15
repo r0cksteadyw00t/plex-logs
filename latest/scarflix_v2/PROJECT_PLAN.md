@@ -1,3 +1,15 @@
+# TV-First Whole-Show Parallel Lane - Gate Accepted/Held (2026-06-15T12:47:07Z)
+
+- TV is now an active parallel catalogue lane, prioritised ahead of further movie expansion where execution capacity conflicts.
+- Current bounded pilot scope: Haunted Hotel, MobLand, The Institute.
+- Whole-show stage status: 28 episodes enumerated; 21 validated private-stage episode candidates accepted by TV publication gate; 7 held for alternate-source retry/replacement.
+- New engineering components:
+  - `JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js`
+  - `JasonOS_Prime_TVFirstPrivateStageRetryRepair.js`
+  - `JasonOS_Prime_TVFirstPublicationGate.js`
+- Current state: no Plex-visible publication yet. The accepted set is held behind a TV-specific additive publication adapter with rollback and post-publication verification.
+- Safety constraints preserved: PAUSE_PUBLICATION active, no generic publisher, no legacy direct resolver, no Plex refresh, no webdav_map/path rewrite.
+
 # Mission 002 Sports Source Engine - Foundation PASS (2026-06-15T12:09:00Z)
 
 - Built the dedicated Mission 002 sports ingestion engine and metadata gate.
