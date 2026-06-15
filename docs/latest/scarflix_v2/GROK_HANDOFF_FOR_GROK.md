@@ -1,3 +1,16 @@
+# FOR GROK PEER REVIEW - TV-FIRST PILOT 10 PROBE + 3-SHOW PRIVATE GATE REFRESH (2026-06-15T14:36:30Z)
+
+- User request context: keep progressing TV shows including all seasons while Mission 002 work proceeds.
+- Ran TV pilot source availability probe against the active-2026 pilot-10 batch.
+- Result: `REVIEW_PARTIAL_PILOT_SOURCES_AVAILABLE`; 10 checked, 3 cached Plex-compatible PASS, 7 review/held.
+- Prepared protected TV manifest for the 3 PASS shows only: Haunted Hotel, MobLand, The Institute.
+- Re-ran whole-show private stage adapter for those 3 shows: 28 episodes enumerated, 19 already private-staged and validated, 9 held for alternate-source retry.
+- Final validator: `PASS_PRIVATE_STAGE_VALIDATED`, 19 checked, 19 PASS, 0 REVIEW.
+- Final publication gate: `PASS_TV_PUBLICATION_GATE_ACCEPTED_HELD`, accepted 19 episodes and held 9 episodes.
+- Accepted by show: Haunted Hotel 5, MobLand 9, The Institute 5.
+- Safety: private-stage/gate only; no Plex-visible publication, no Plex refresh, no webdav_map write, no path rewrite, no generic publisher, no legacy direct resolver.
+- Next TV action: build/run the additive TV publication adapter for the 19 accepted private candidates only, with rollback and post-publication Plex/WebDAV verification; continue source-retry for the 9 held episodes separately.
+
 # FOR GROK PEER REVIEW - MISSION 002 MULTI-SOURCE SPORTS DISCOVERY V2 PASS/HELD (2026-06-15T14:25:43Z)
 
 - User request: peer review and implement the v2.0 ambitious multi-source sports discovery platform for AFL/sports coverage.
