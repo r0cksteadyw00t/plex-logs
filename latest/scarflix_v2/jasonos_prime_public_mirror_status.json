@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-15T17:47:59.010Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-15T17:53:00.532Z",
   "last_success_utc": "2026-06-15T17:47:59.010Z",
   "pat_present": true,
   "pushed": [
@@ -15,11 +15,11 @@
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_predictive_simulator_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_predictive_simulator_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_self_evolution_status.json",
@@ -786,10 +786,6 @@
       "status": 304
     },
     {
-      "file": "docs/latest/scarflix_v2/mission002_iptv_cutover_readiness_status.md",
-      "status": 304
-    },
-    {
       "file": "docs/latest/scarflix_v2/mission002_iptv_cutover_preflight_status.json",
       "status": 304
     },
@@ -1183,13 +1179,20 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "docs/latest/scarflix_v2/mission002_iptv_cutover_readiness_status.md",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
