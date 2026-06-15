@@ -1,25 +1,27 @@
 {
     "component":  "jasonos_mission002_sports_source_engine",
     "schema_version":  "jasonos.iptv.sports_source_engine_status.redacted.v1",
-    "status":  "PASS_EXTERNAL_SPORTS_PROMOTIONS_READY",
-    "updated_utc":  "2026-06-15T21:50:52Z",
+    "status":  "PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW",
+    "updated_utc":  "2026-06-15T22:07:25Z",
     "active_backend_changed":  false,
     "pause_publication_preserved":  true,
     "private_config_present":  true,
     "reliability_threshold":  70,
-    "current_active_channel_count":  33,
-    "current_active_promoted_count":  33,
+    "current_active_channel_count":  37,
+    "current_active_promoted_count":  37,
     "external_source_count":  2,
-    "external_candidate_count":  62,
-    "external_promoted_count":  61,
-    "external_held_count":  1,
+    "external_candidate_count":  100,
+    "external_technical_ready_count":  96,
+    "external_promoted_count":  0,
+    "external_held_count":  4,
     "public_redacted_metadata_path":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_sports_channel_metadata.redacted.json",
-    "promotion_gate":  {
-                           "plex_safe_required":  true,
-                           "live_ok_required":  true,
-                           "reliability_threshold":  70,
-                           "held_reason_must_be_empty":  true
-                       },
+    "technical_reporting_policy":  {
+                                       "legal_or_drm_filtering":  false,
+                                       "plex_compatible_format_scored":  true,
+                                       "live_ok_required":  true,
+                                       "reliability_threshold":  70,
+                                       "publish_requires_explicit_user_approval":  true
+                                   },
     "source_details_redacted":  true,
-    "next_safe_action":  "Add a governed private sports source config, rerun this engine, then apply only promoted overlay channels through Threadfin/Plex with backup and rollback."
+    "next_safe_action":  "Review the technical candidate report and explicitly approve a publish set before running any Threadfin/Plex apply step."
 }
