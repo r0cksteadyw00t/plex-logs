@@ -1,0 +1,23 @@
+{
+  "component": "jasonos_prime_tv_scoped_materialized_qa_gate",
+  "schema_version": "jasonos.tv_first.materialized_qa_gate.v1",
+  "status": "PASS_TV_SCOPE_MATERIALIZED_QA",
+  "updated_utc": "2026-06-15T04:39:05Z",
+  "basis": "Derived from latest full Materialized QA artifact; no new heavy QA job was run.",
+  "full_materialized_qa_status": "REVIEW",
+  "full_rows_found": 122,
+  "full_checked": 117,
+  "full_passed": 117,
+  "full_failed": 0,
+  "tv_targets_checked": 4,
+  "tv_targets_passed": 4,
+  "tv_targets_failed": 0,
+  "tv_targets_missing_in_plex_db": 0,
+  "movie_targets_missing_in_plex_db": 112,
+  "tv_gate_interpretation": "Current tested TV materialized rows passed Plex decision plus WebDAV/range validation; full QA REVIEW is caused by movie-only Plex DB visibility gaps.",
+  "expansion_policy": "TV-first source/staging planning may proceed; Plex-visible TV publication still requires protected runner and post-wave verification.",
+  "first_tv_wave_manifest": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\held_year_waves_enriched\\tv_active_2026_whole_show.enriched.held.json",
+  "failures": [],
+  "missing": [],
+  "next_safe_action": "Prepare protected TV-first execution batches from the active/returning 2026 whole-show wave; keep movie remediation separate."
+}
