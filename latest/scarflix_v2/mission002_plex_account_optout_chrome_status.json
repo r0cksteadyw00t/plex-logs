@@ -1,17 +1,39 @@
 {
   "component": "jasonos_mission002_plex_account_optout_chrome_bridge",
   "schema_version": "jasonos.iptv.plex_account_optout_chrome_bridge.v1",
-  "status": "BLOCKED_CHROME_EXTENSION_DISABLED",
-  "updated_utc": "2026-06-15T05:23:32Z",
-  "user_report": "Codex Chrome Extension installed",
-  "chrome_running": true,
-  "extension_installed": true,
-  "extension_enabled": false,
-  "selected_profile": "Default",
-  "native_host_correct": true,
-  "account_optout_attempted": false,
-  "account_optout_blocker": "Codex Chrome Extension is installed but disabled in the selected Chrome profile. Chrome bridge cannot control the logged-in Plex account session until enabled.",
+  "status": "PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED",
+  "updated_utc": "2026-06-15T05:33:23Z",
+  "chrome_bridge_connected": true,
+  "chrome_profile": "Person 2 via Codex extension bridge; local Plex session at 127.0.0.1:32400",
+  "account_settings_applied": {
+    "live_tv": "Disabled",
+    "movies_and_shows": "Disabled",
+    "discover_source": "Disabled",
+    "more_ways_to_watch_search_results": "Disabled",
+    "streaming_availabilities_on_detail_pages": "Disabled"
+  },
+  "verification": {
+    "plex_home_reloaded": true,
+    "live_tv_text_present": false,
+    "plex_online_indicators_present": false,
+    "checked_indicators": [
+      "Live TV",
+      "Movies & Shows",
+      "Discover",
+      "Available on Plex",
+      "Crunchyroll",
+      "More Ways to Watch"
+    ]
+  },
   "local_hosts_suppression_active": true,
-  "local_hosts_suppression_status_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_plex_online_channels_suppression_status.json",
-  "next_safe_action": "Enable the Codex Chrome Extension in Chrome. After it is enabled, retry the Chrome bridge and apply Plex Account > Online Media Sources opt-outs for Live TV on Plex."
+  "local_hosts_suppression_role": "Defense in depth only; account-level opt-out is now applied.",
+  "safety": {
+    "iptv_only": true,
+    "physical_tuner_used": false,
+    "plex_database_touched": false,
+    "plex_restarted": false,
+    "metadata_domains_blocked": false,
+    "account_settings_changed": true
+  },
+  "next_safe_action": "Relaunch Plex clients. If Live TV returns, check whether the client is signed into the same r0cksteady account and whether it cached old sidebar state."
 }

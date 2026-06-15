@@ -1,20 +1,33 @@
 # Mission 2 Plex Account Opt-Out Chrome Status
 
-**Updated UTC:** 2026-06-15T05:23:32Z  
-**Status:** BLOCKED_CHROME_EXTENSION_DISABLED
+**Updated UTC:** 2026-06-15T05:33:23Z  
+**Status:** PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED
 
 ## Result
 
-The Codex Chrome Extension is installed in Chrome's selected Default profile, but it is disabled. The native host manifest is correct and Chrome is running.
+The Codex Chrome Extension bridge connected after a clean reset. Plex Web was opened through the local Plex session and the official account-level **Online Media Sources** settings were updated.
 
-## Impact
+## Applied Account Settings
 
-The official Plex account-level Online Media Sources opt-out cannot be applied through the logged-in browser session until the extension is enabled.
+- Live TV: Disabled
+- Movies & Shows: Disabled
+- Discover Source: Disabled
+- Display "More Ways to Watch" search results: Disabled
+- Display availabilities from other streaming services on detail pages: Disabled
 
-## Current Protection
+## Verification
 
-The reversible local hosts suppression for pg.provider.plex.tv remains active, so the Plex host is still blocking the Plex-owned free Live TV provider endpoint locally.
+After reloading Plex Home, the page no longer showed Live TV, Movies & Shows, Discover, Crunchyroll, Available on Plex, or More Ways to Watch indicators in the captured visible text.
+
+## Safety
+
+- IPTV only: true
+- Physical tuner used: false
+- Plex database touched: false
+- Plex restarted: false
+- Metadata/sign-in/account domains blocked: false
+- Existing hosts suppression remains active as defense in depth only.
 
 ## Next Safe Action
 
-Enable the Codex Chrome Extension in Chrome, then retry the account opt-out path.
+Relaunch Plex clients. If a client still shows Plex Channels, verify it is signed into the same 0cksteady account and has refreshed its sidebar cache.

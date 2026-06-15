@@ -2,7 +2,7 @@
   "component": "jasonos_prime_actual_go_live_delivery_status",
   "schema_version": "jasonos.go_live_delivery.v1",
   "status": "REVIEW_TV_FIRST_PRIVATE_STAGE_VALIDATED_MOVIE_QA_HELD",
-  "updated_utc": "2026-06-15T05:23:32Z",
+  "updated_utc": "2026-06-15T05:33:23Z",
   "user_priority": "TV first if movies and TV cannot progress concurrently",
   "materialized_qa": {
     "status": "REVIEW",
@@ -75,9 +75,13 @@
     "plex_online_channels_blocked_endpoint": "epg.provider.plex.tv",
     "plex_online_channels_rollback_backup": "D:\\PlexTools\\Backups\\mission002_plex_online_channels_suppression_20260615T051117Z\\hosts.bak",
     "plex_online_channels_limitation": "This local suppression blocks the Plex free-live-TV provider endpoint on this Windows/Plex host. Plex's official durable fix is still account-level Online Media Sources disablement; other client devices may need account opt-out or local/network DNS enforcement if they fetch Plex online channels directly.",
-    "plex_account_optout_chrome_status": "BLOCKED_CHROME_EXTENSION_DISABLED",
     "codex_chrome_extension_installed": true,
-    "codex_chrome_extension_enabled": false
+    "codex_chrome_extension_enabled": false,
+    "plex_account_optout_chrome_status": "PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED",
+    "plex_online_live_tv_setting": "Disabled",
+    "plex_online_movies_shows_setting": "Disabled",
+    "plex_online_discover_setting": "Disabled",
+    "plex_home_online_indicators_present_after_optout": false
   },
   "safety": {
     "pause_publication_required": true,
