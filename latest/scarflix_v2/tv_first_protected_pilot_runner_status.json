@@ -1,0 +1,47 @@
+{
+  "component": "jasonos_prime_tv_first_protected_pilot_runner",
+  "schema_version": "jasonos.tv_first.protected_pilot_runner.v1",
+  "updated_utc": "2026-06-15T04:49:27Z",
+  "mode": "prepare_only",
+  "batch_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_execution_batches/tv_active_2026_pilot_10_small_high_confidence.held.json",
+  "availability_path": "D:/PlexTools/public/latest/scarflix_v2/tv_first_pilot_source_availability_status.json",
+  "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
+  "full_materialized_qa_status": "REVIEW",
+  "safety": {
+    "no_publication_started": true,
+    "no_broad_expansion_started": true,
+    "no_plex_refresh_performed": true,
+    "no_real_debrid_mutation_performed": true,
+    "no_webdav_map_write_performed": true,
+    "no_path_rewrite_performed": true,
+    "no_legacy_direct_resolver_called": true,
+    "generic_publisher_not_called": true
+  },
+  "prepared_count": 3,
+  "prepared_titles": [
+    {
+      "title": "Haunted Hotel",
+      "tmdb_id": 255752,
+      "execution_state": "PREPARED_HELD_FOR_PROTECTED_TV_STAGING_ADAPTER",
+      "request_file": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_protected_pilot\\requests\\Haunted_Hotel_255752.prepared.json"
+    },
+    {
+      "title": "MobLand",
+      "tmdb_id": 247718,
+      "execution_state": "PREPARED_HELD_FOR_PROTECTED_TV_STAGING_ADAPTER",
+      "request_file": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_protected_pilot\\requests\\MobLand_247718.prepared.json"
+    },
+    {
+      "title": "The Institute",
+      "tmdb_id": 253372,
+      "execution_state": "PREPARED_HELD_FOR_PROTECTED_TV_STAGING_ADAPTER",
+      "request_file": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_protected_pilot\\requests\\The_Institute_253372.prepared.json"
+    }
+  ],
+  "status": "PASS_PROTECTED_TV_PILOT_REQUEST_PREPARED",
+  "pilot_root": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_protected_pilot",
+  "prepared_manifest": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_protected_pilot\\tv_first_protected_pilot_request.prepared.json",
+  "rollback_manifest": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_protected_pilot\\rollback\\tv_first_protected_pilot_rollback.prepared.json",
+  "unmatched_pass_rows": [],
+  "next_safe_action": "Review prepared 3-show TV pilot manifest, then execute only through an additive TV-specific staging adapter with rollback and post-wave verification."
+}
