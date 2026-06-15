@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-15T22:52:45.039Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-15T22:55:51.620Z",
   "last_success_utc": "2026-06-15T22:52:45.039Z",
   "pat_present": true,
   "pushed": [
@@ -51,23 +51,23 @@
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/index.html",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_recent_updates.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_recent_updates.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/PROJECT_PLAN.md",
@@ -175,11 +175,11 @@
     },
     {
       "file": "latest/scarflix_v2/watchdog_stall_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/watchdog_stall_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/watchdog_swarm_escalation.json",
@@ -447,11 +447,11 @@
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_go_live_readiness_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_go_live_readiness_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_go_live_16h_campaign_status.json",
@@ -563,27 +563,27 @@
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_outcome_dashboard.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_outcome_dashboard.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/index.html",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_recent_updates.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_recent_updates.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/PROJECT_PLAN.md",
@@ -691,11 +691,11 @@
     },
     {
       "file": "docs/latest/scarflix_v2/watchdog_stall_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/watchdog_stall_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/watchdog_swarm_escalation.json",
@@ -719,11 +719,11 @@
     },
     {
       "file": "docs/latest/scarflix_v2/autonomous_controller_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/autonomous_controller_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/platform_gate_checkpoint.json",
@@ -1050,10 +1050,6 @@
       "status": 200
     },
     {
-      "file": "latest/scarflix/jasonos_prime_recent_updates.json",
-      "status": 200
-    },
-    {
       "file": "latest/scarflix/playback_architecture_status.json",
       "status": 304
     },
@@ -1215,13 +1211,20 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "latest/scarflix/jasonos_prime_recent_updates.json",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
