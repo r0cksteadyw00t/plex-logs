@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_actual_go_live_delivery_status",
   "schema_version": "jasonos.go_live_delivery.v1",
-  "status": "REVIEW_TV_FIRST_PILOT_SOURCES_PARTIAL_MOVIE_QA_HELD",
-  "updated_utc": "2026-06-15T04:44:59Z",
+  "status": "REVIEW_TV_FIRST_PROTECTED_PILOT_PREPARED_MOVIE_QA_HELD",
+  "updated_utc": "2026-06-15T04:49:44Z",
   "user_priority": "TV first if movies and TV cannot progress concurrently",
   "materialized_qa": {
     "status": "REVIEW",
@@ -32,7 +32,7 @@
     "active_2026_unique": 64,
     "first_wave": "tv_active_2026_whole_show",
     "first_wave_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\held_year_waves_enriched\\tv_active_2026_whole_show.enriched.held.json",
-    "execution_state": "HELD_PROTECTED_TV_PILOT_REQUIRED",
+    "execution_state": "PASS_PROTECTED_TV_PILOT_REQUEST_PREPARED_HELD_FOR_ADAPTER",
     "priority_gate_status": "TV_FIRST_PRIORITY_ENFORCED",
     "tv_scoped_materialized_qa_gate": "PASS_TV_SCOPE_MATERIALIZED_QA",
     "execution_batches_status": "PASS_TV_FIRST_BATCHES_PREPARED",
@@ -43,6 +43,10 @@
       "MobLand",
       "The Institute"
     ],
+    "protected_pilot_runner_status": "PASS_PROTECTED_TV_PILOT_REQUEST_PREPARED",
+    "protected_pilot_prepared_count": 3,
+    "protected_pilot_manifest": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_protected_pilot\\tv_first_protected_pilot_request.prepared.json",
+    "protected_pilot_rollback_manifest": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_protected_pilot\\rollback\\tv_first_protected_pilot_rollback.prepared.json",
     "generic_movie_or_unscoped_expansion_allowed": false
   },
   "movies_expansion": {
@@ -68,7 +72,8 @@
     "physical_tuner_used": false
   },
   "next_safe_actions": [
-    "Build a protected additive TV source/staging pilot for the 3 PASS rows only.",
+    "Build the additive TV staging adapter for the 3 prepared PASS rows only.",
+    "Run the prepared TV pilot only through the TV-specific adapter with rollback and immediate post-wave verification.",
     "Keep the 7 REVIEW pilot TV rows held and retryable for cache/source review.",
     "Keep movie remediation separate because current full Materialized QA REVIEW is movie-only Plex DB visibility.",
     "Keep generic/movie/unscoped expansion blocked while TV and movies cannot safely run concurrently.",
