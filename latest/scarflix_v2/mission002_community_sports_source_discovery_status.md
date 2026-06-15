@@ -1,8 +1,8 @@
 # Mission 002 Multi-Source Sports Source Discovery
 
-Status: REVIEW_SKIPPED_NETWORK_STATUS_ONLY
+Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE
 
-Updated UTC: 2026-06-15T14:20:05.4335108Z
+Updated UTC: 2026-06-15T14:25:43.8453840Z
 
 ## Peer Review Outcome
 
@@ -13,30 +13,30 @@ Updated UTC: 2026-06-15T14:20:05.4335108Z
 ## Current Run
 
 - Sources configured: 7
-- Sources processed: 7
-- Sources fetched: 0
-- Child sources discovered: 0
-- Duplicate streams suppressed: 0
-- Unique candidate channels extracted: 0
-- Relevant candidate channels: 0
-- Probe attempts: 0
-- Probe PASS: 0
-- Review queue items: 0
-- Sports Source Engine candidates: 0
-- Pending review/engine candidates: 0
-- Private pending source packages: 0
+- Sources processed: 47
+- Sources fetched: 17
+- Child sources discovered: 40
+- Duplicate streams suppressed: 164
+- Unique candidate channels extracted: 1693
+- Relevant candidate channels: 196
+- Probe attempts: 40
+- Probe PASS: 40
+- Review queue items: 195
+- Sports Source Engine candidates: 1
+- Pending review/engine candidates: 195
+- Private pending source packages: 2
 
 ## Coverage Gaps
 
-- AFL: missing (matches=0, probe_pass=0)
+- AFL: adequate (matches=1, probe_pass=1)
 - AFLW: missing (matches=0, probe_pass=0)
 - Fox Footy: missing (matches=0, probe_pass=0)
 - Kayo: missing (matches=0, probe_pass=0)
 - Fox Sports: missing (matches=0, probe_pass=0)
-- Racing: missing (matches=0, probe_pass=0)
-- Cricket: missing (matches=0, probe_pass=0)
+- Racing: strong (matches=5, probe_pass=5)
+- Cricket: adequate (matches=1, probe_pass=1)
 - NRL: missing (matches=0, probe_pass=0)
-- AU Free-To-Air Sports Adjacent: missing (matches=0, probe_pass=0)
+- AU Free-To-Air Sports Adjacent: strong (matches=8, probe_pass=3)
 
 ## Safety
 
