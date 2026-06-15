@@ -2,13 +2,13 @@
 
 Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE
 
-Updated UTC: 2026-06-15T22:01:53.6641586Z
+Updated UTC: 2026-06-15T22:09:58.6349095Z
 
 ## Peer Review Outcome
 
 - Accepted v2.0 direction: discovery is now multi-source and more aggressive.
 - Implemented adjustment: URL M3U, markdown/text indices, GitHub code-search child discovery, source graphing, duplicate suppression, and recast signal scoring.
-- Safety correction: promotion remains gated; this runner does not mutate Threadfin/Plex and does not publish stream URLs.
+- Correction: discovery/scoring is separated from publishing; this runner does not mutate Threadfin/Plex and does not publish stream URLs.
 
 ## Current Run
 
@@ -20,7 +20,7 @@ Updated UTC: 2026-06-15T22:01:53.6641586Z
 - Unique candidate channels extracted: 1694
 - Relevant candidate channels: 197
 - Probe attempts: 40
-- Probe PASS: 40
+- Probe PASS: 39
 - Review queue items: 196
 - Sports Source Engine candidates: 1
 - Pending review/engine candidates: 196
@@ -38,7 +38,7 @@ Updated UTC: 2026-06-15T22:01:53.6641586Z
 - NRL: missing (matches=0, probe_pass=0)
 - AU Free-To-Air Sports Adjacent: strong (matches=8, probe_pass=3)
 
-## Safety
+## Privacy / Mutation Boundary
 
 - Writes Threadfin: false
 - Writes Plex: false
@@ -57,4 +57,4 @@ Updated UTC: 2026-06-15T22:01:53.6641586Z
 
 ## Next Safe Action
 
-Use the private graph and pending package to select only high-confidence entries for the governed Sports Source Engine. Recast, aggregator, or GitHub-discovered entries require burn-in and repeated PASS probes before any Threadfin/Plex promotion.
+Use the private graph and pending package to review candidates, then run the Sports Source Engine for technical scoring. Publishing requires explicit approval.
