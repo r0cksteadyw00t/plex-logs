@@ -1,3 +1,12 @@
+## Mission 002 Multi-Source Sports Discovery V2 - Current Next Actions (2026-06-15T14:25:43Z)
+
+1. Treat the v2 source graph as the upstream intelligence layer; do not publish discovered streams directly.
+2. Use only the private pending package and private graph as inputs to `Invoke-Mission002SportsSourceEngine.ps1`.
+3. Add burn-in history and repeated-probe persistence before any recast, aggregator, or GitHub-discovered source can be promoted.
+4. Add the next discovery workers in this order: GitHub Gist search, controlled M3U index crawler, then monitored forum/social references if terms permit.
+5. Keep Fox Footy, Kayo, Fox Sports, AFLW, and NRL marked as unresolved coverage gaps until a legitimate Plex-compatible source or subscription-backed adapter passes validation.
+6. Keep the current 33-channel Live TV baseline protected while Mission 002 discovery expands.
+
 ## TV-First Whole-Show Execution Batches - Current Next Actions (2026-06-15T13:54:08Z)
 
 1. Use D:\PlexTools\state\jasonos_prime\catalogue_expansion\tv_first_execution_batches\tv_active_2026_pilot_10_small_high_confidence.held.json as the next protected TV input batch.
