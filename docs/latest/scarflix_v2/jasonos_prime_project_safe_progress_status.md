@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Project Safe Progress Audit
 
-**Updated UTC:** 2026-06-14T23:53:02Z  
+**Updated UTC:** 2026-06-14T23:58:02Z  
 **Status:** PASS_SAFE_STATUS_ONLY_PROGRESS
 
 ## Current Gates
@@ -9,7 +9,7 @@
 - Sentinel: PASS / LOW
 - Mission 2 readiness: PASS_CUTOVER_PACKAGE_READY_HELD
 - Mission 2 preflight: PASS_CUTOVER_PREFLIGHT_READY_HELD
-- Mission 2 apply: HELD_ACTIVE_PLEX_PLAYBACK
+- Mission 2 apply: PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH
 - Mission 2 verify: PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE
 - Materialized QA: UNKNOWN
 
