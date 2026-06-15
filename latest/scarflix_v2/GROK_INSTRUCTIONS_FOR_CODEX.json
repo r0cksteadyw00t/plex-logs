@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_stabilisation_status_20260615_v139",
-      "created_at": "2026-06-15T01:08:55Z",
-      "expires_at": "2026-06-16T01:08:55Z",
+      "instruction_id": "phase0_record_stabilisation_status_20260615_v140",
+      "created_at": "2026-06-15T01:24:40Z",
+      "expires_at": "2026-06-16T01:24:40Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,20 +13,21 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff": "none"
+        "max_retries": 2,
+        "backoff": "exponential"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "summary": "Phase 0 stabilisation continuing under PAUSE_PUBLICATION. Bounded Materialized QA remains REVIEW. Watch Now verified collection stable at 126 items. No publishing, expansion, source mutation, or long QA instructed. Record only.",
-          "source_instruction_id": "phase0_record_stabilisation_status_20260615_v139"
+          "parameters": {
+            "note": "Phase 0 stabilisation continuing under PAUSE_PUBLICATION. Bounded QA and Watch Now verified collection remain primary focus. No legacy resolver or broad expansion actions permitted."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T01:08:55Z",
+  "updated_utc": "2026-06-15T01:24:40Z",
   "source": "grok_api"
 }
