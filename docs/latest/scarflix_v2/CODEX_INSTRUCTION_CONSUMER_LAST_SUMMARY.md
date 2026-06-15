@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-15T00:35:58Z
-Instruction: phase0_record_bounded_qa_status_20260615_v137
+Updated UTC: 2026-06-15T00:52:15Z
+Instruction: phase0_record_stabilisation_status_20260615_v138
 
-Continue bounded Materialized QA cycles only. PAUSE_PUBLICATION active. No publishing, expansion, source mutation, or long QA. Record status only. Retry-held backlog remains 11/19.
+Phase 0 Stabilisation ongoing. PAUSE_PUBLICATION active. Materialized QA REVIEW. Bounded QA and Watch Now verified collection maintained. No expansion or publishing instructed.
