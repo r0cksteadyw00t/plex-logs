@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-15T11:23:20Z
+Updated UTC: 2026-06-15T11:39:50Z
 Source: grok_api
 
 ## Summary
@@ -14,10 +14,10 @@ PASS
 
 ## Instructions
 
-### phase0_record_mission002_afl_stabilisation_strategy_20260615_v177
+### phase0_record_mission002_afl_stabilisation_status_20260615_v178
 
 - Target: `status_dashboard`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-16T11:23:20Z`
+- Expires: `2026-06-16T11:39:50Z`
