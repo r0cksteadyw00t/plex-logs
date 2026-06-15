@@ -1,12 +1,12 @@
 # TV-First Additive Publication Adapter
 
-Updated UTC: 2026-06-15T23:41:10Z
-Status: HELD_ACTIVE_OR_UNKNOWN_PLEX_SESSIONS
+Updated UTC: 2026-06-15T23:44:55Z
+Status: ROLLBACK_COMPLETE_PUBLICATION_FAILED
 Gate status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
 Expected episodes: 28
 Accepted episodes: 28
-Mutated entries: 0
-Rollback performed: false
+Mutated entries: 28
+Rollback performed: true
 
 ## Safety
 - additive_only: true
@@ -17,4 +17,4 @@ Rollback performed: false
 - rollback_manifest_before_mutation: true
 - tv_section_only_refresh: true
 
-Next safe action: Wait for zero active Plex sessions before TV publication.
+Next safe action: Inspect rollback manifest and failed verification evidence before retrying TV publication.
