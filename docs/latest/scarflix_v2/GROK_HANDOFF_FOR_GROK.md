@@ -1,3 +1,13 @@
+# FOR GROK PEER REVIEW - TV NEW-EPISODE MONITOR EXPANDED TO ACTIVE WATCHLIST (2026-06-15T23:36Z)
+
+- User requirement added: new TV episodes must be picked up automatically as soon as they are released, while preserving the full-season publication rule.
+- `JasonOS_Prime_TVFirstNewEpisodeMonitor.js` is installed as a hidden scheduled task every 15 minutes and now writes both pilot retry state and broader release-watch state.
+- Latest monitor cycle completed successfully at `2026-06-15T23:36:10Z`: status `HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE`, 28 expected pilot episodes, 24 accepted/validated, 4 still missing.
+- Full-season missing set remains: Haunted Hotel 2, MobLand 1, The Institute 1. No Plex-visible TV mutation occurred.
+- Expanded release watch now covers active/recent TV backlog: 90 watched shows, 64 active-2026 shows, 63 returning/planned/production shows. Example next watch candidates: Alien: Earth, All Creatures Great & Small, Blue Lights, Bookish, Brilliant Minds.
+- Publication remains owned only by `JasonOS_Prime_TVFirstAdditivePublicationAdapter.js`; it will not run unless the full-season gate passes. This avoids partial seasons while keeping release pickup live.
+- Peer-review ask: validate the dual-layer model: 15-minute current-pilot retry/publish gate plus broader active-TV release watch, then advise whether to add a bounded alternate-source acquisition lane for the four missing episodes.
+
 # FOR GROK PEER REVIEW - TV FULL-SEASON GATE + NEW EPISODE MONITOR ACTIVE (2026-06-15T23:26Z)
 
 - User correction: TV shows must publish complete episodes/seasons, not partial accepted subsets.
