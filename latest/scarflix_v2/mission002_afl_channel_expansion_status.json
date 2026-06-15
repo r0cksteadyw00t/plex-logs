@@ -1,131 +1,65 @@
 {
-  "component": "jasonos_mission002_afl_channel_expansion",
-  "schema_version": "jasonos.iptv.afl_channel_expansion.v1",
-  "status": "PASS_AFL_CHANNELS_EXPANDED_AND_STREAM_VERIFIED",
-  "updated_utc": "2026-06-15T09:13:43Z",
-  "user_outcome": "Plex real Live TV/DVR now includes the curated AFL-relevant Seven, 7mate, and 7plus IP streams from the all-Australia IPTV feed.",
-  "iptv_only": true,
-  "physical_tuner_used": false,
-  "plex_live_tv_surface": "real_plex_live_tv_dvr_guide",
-  "active_m3u_channel_count": 47,
-  "threadfin_lineup_channel_count": 47,
-  "plex_enabled_mapping_count": 47,
-  "plex_epg_channel_tags": 47,
-  "afl_relevant_plex_mapping_count": 19,
-  "afl_relevant_epg_tag_count": 19,
-  "afl_stream_probe": {
-    "status": "PASS_AFL_CHANNELS_STREAMABLE_AFTER_RETRY",
-    "checked_count": 17,
-    "pass_count": 17,
-    "fail_count": 0,
-    "retry_note": "7 Adelaide initially returned zero bytes, then passed 3/3 targeted 12-second retries.",
-    "artifact_json": "mission002_afl_channel_stream_probe.json",
-    "artifact_md": "mission002_afl_channel_stream_probe.md"
+  "component": "jasonos_mission002_afl_source_scope_correction",
+  "schema_version": "jasonos.iptv.afl_scope_correction.v1",
+  "status": "PASS_CORRECTED_FTA_SCOPE_WITH_PAID_AFL_HELD",
+  "updated_utc": "2026-06-15T09:39:50Z",
+  "user_correction": "Free-to-air channels must be Melbourne/Sydney only; non-aerial AFL sources such as Fox Footy/Kayo must be handled as paid IP/OTT integrations, not regional FTA substitutions.",
+  "active_lineup": {
+    "active_m3u_channel_count": 33,
+    "threadfin_lineup_channel_count": 33,
+    "plex_enabled_mapping_count": 33,
+    "plex_epg_channel_tags": 33,
+    "active_afl_ip_or_relevant_channels": [
+      "7 Melbourne",
+      "7 Sydney",
+      "7mate Melbourne",
+      "7mate Sydney",
+      "7plus AFL Live"
+    ],
+    "forbidden_regional_fta_present": false
   },
-  "afl_channels_enabled": [
-    "7 Adelaide",
-    "7 Brisbane",
-    "7 Cairns",
-    "7 Mackay",
-    "7 Melbourne",
-    "7 Perth",
-    "7 Rockhampton",
-    "7 Sunshine Coast",
-    "7 Sydney",
-    "7 Toowoomba",
-    "7 Townsville",
-    "7 Wide Bay",
-    "7mate Adelaide",
-    "7mate Brisbane",
-    "7mate Melbourne",
-    "7mate Perth",
-    "7mate Regional",
-    "7mate Sydney",
-    "7plus AFL Live"
-  ],
-  "held_optional_channels": [
-    {
-      "id": "mjh-sbs-sysdata_s_p_a_fifa_6",
-      "display_name": "FIFA+",
-      "reason": "Held after ffmpeg segment-load failure during expanded-channel verification."
-    }
-  ],
-  "provider_feeds": {
-    "m3u": "https://i.mjh.nz/au/all/raw-tv.m3u8",
-    "xmltv": "https://i.mjh.nz/au/all/epg.xml",
-    "selection_policy": "Use all-Australia provider data as source input, but publish only curated channels to Plex to avoid raw provider guide noise."
+  "verification": {
+    "threadfin_status": "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE",
+    "corrected_afl_stream_probe": "PASS_CORRECTED_AFL_CHANNELS_STREAMABLE",
+    "corrected_afl_stream_probe_pass": "5/5",
+    "plex_epg_metadata_items": 7067,
+    "plex_epg_media_items": 7121,
+    "plex_epg_forbidden_regional_tags": []
   },
-  "plex_dvr_mapping": {
-    "mapping_count": 47,
-    "enabled_count": 47,
-    "afl_mapping_count": 19,
-    "backup_before_db_mapping_update": "D:\\PlexTools\\Backups\\mission002_afl_plex_dvr_mapping_update_20260615T090332Z"
-  },
-  "plex_epg": {
-    "provider_db": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Plug-in Support\\Databases\\tv.plex.providers.epg.xmltv-e65bb7a0-9dad-493d-8108-d38ac54b0711.db",
-    "provider_db_mtime_utc": "2026-06-15T09:08:55Z",
-    "channel_tags": 47,
-    "metadata_items": 7118,
-    "media_items": 9806,
-    "tags": [
-      "mjh-10-vic Channel 10",
-      "mjh-10bold-vic 10 Drama",
-      "mjh-10peach-vic 10 Comedy",
-      "mjh-10shake-vic Nickelodeon",
-      "mjh-7afl-fast 7plus AFL Live",
-      "mjh-7bravo-fast 7Bravo",
-      "mjh-7flix-mel 7flix",
-      "mjh-7mate-ade 7mate Adelaide",
-      "mjh-7mate-bri 7mate Brisbane",
-      "mjh-7mate-mel 7mate Melbourne",
-      "mjh-7mate-per 7mate Perth",
-      "mjh-7mate-regional 7mate Regional",
-      "mjh-7mate-syd 7mate Sydney",
-      "mjh-7now-fast 7now",
-      "mjh-7two-mel 7two",
-      "mjh-9crime-fast 9Crime",
-      "mjh-abc-kids ABC Kids",
-      "mjh-abc-me ABC Entertains",
-      "mjh-abc-news ABC NEWS",
-      "mjh-abc-tv-plus ABC Family",
-      "mjh-abc-vic ABC TV",
-      "mjh-channel-9-vic Channel 9",
-      "mjh-gem-vic 9Gem",
-      "mjh-go-vic 9Go!",
-      "mjh-life-vic 9Life",
-      "mjh-racing-fast Racing.com",
-      "mjh-racingwa-fast Racing WA",
-      "mjh-rush-vic 9Rush",
-      "mjh-sbs-2syd SBS VICELAND",
-      "mjh-sbs-3syd SBS Food",
-      "mjh-sbs-4syd SBS World Movies",
-      "mjh-sbs-5nsw NITV",
-      "mjh-sbs-6nat SBS WorldWatch",
-      "mjh-sbs-sbst SBS",
-      "mjh-seven-ade 7 Adelaide",
-      "mjh-seven-bri 7 Brisbane",
-      "mjh-seven-cns 7 Cairns",
-      "mjh-seven-mel 7 Melbourne",
-      "mjh-seven-mky 7 Mackay",
-      "mjh-seven-per 7 Perth",
-      "mjh-seven-rky 7 Rockhampton",
-      "mjh-seven-ssc 7 Sunshine Coast",
-      "mjh-seven-syd 7 Sydney",
-      "mjh-seven-tsv 7 Townsville",
-      "mjh-seven-twb 7 Toowoomba",
-      "mjh-seven-wby 7 Wide Bay",
-      "mjh-sky-news-now Sky News Now"
-    ]
+  "paid_afl_sources": {
+    "required_for_every_game": true,
+    "held_count": 3,
+    "held": [
+      {
+        "display_name": "Fox Footy",
+        "provider": "Foxtel / Kayo Sports",
+        "reason": "Required for every-game AFL coverage, but no configured legal Plex-compatible M3U/XMLTV source exposes it."
+      },
+      {
+        "display_name": "Kayo Sports AFL live events",
+        "provider": "Kayo Sports",
+        "reason": "Official paid OTT app/DRM lane; needs a subscription-backed legal adapter before Plex Live TV inclusion."
+      },
+      {
+        "display_name": "Foxtel / Fox Sports AFL live events",
+        "provider": "Foxtel / Fox Sports",
+        "reason": "Official paid broadcast lane; held until a Plex-compatible, ToS-compliant IP source adapter exists."
+      }
+    ],
+    "current_blocker": "No configured legal Plex-compatible M3U/XMLTV source for Fox Footy/Fox Sports/Kayo in the active inputs. The public MJH AU feed search found 7AFL and no Fox/Kayo/Fox Sports channels.",
+    "next_engineering_action": "Build a legal paid-OTT adapter feasibility spike for Kayo/Foxtel/Fox Footy. Do not publish fake or unsupported Fox rows into Plex."
   },
   "safety": {
+    "iptv_only": true,
+    "physical_tuner_used": false,
     "pause_publication_preserved": true,
     "scarflix_publication_touched": false,
-    "no_catalogue_expansion": true,
-    "no_physical_tuner": true,
-    "backups_created": [
-      "D:\\PlexTools\\Backups\\mission002_afl_channel_expansion_20260615T085452Z",
-      "D:\\PlexTools\\Backups\\mission002_afl_plex_dvr_mapping_update_20260615T090332Z"
-    ]
+    "backup_root": "D:\\PlexTools\\Backups\\mission002_correct_fta_scope_and_afl_paid_gap_20260615T093349Z"
   },
-  "next_safe_action": "Ask Plex client to refresh/reopen Live TV if stale UI is cached; otherwise use the real Plex Live TV guide for 7/7mate/7plus AFL channels. Keep FIFA+ held until separately validated."
+  "sources": {
+    "afl_broadcast_rights": "https://www.afl.com.au/matches/broadcast-guide/broadcast-rights",
+    "afl_television_partners": "https://www.afl.com.au/matches/broadcast-guide/television-programs",
+    "kayo_australian_rules": "https://kayosports.com.au/en-AU/sport/Sport%3Apxf4y47kwth2g64m7wzo209y",
+    "mjh_all_feed": "https://i.mjh.nz/au/all/raw-tv.m3u8"
+  }
 }
