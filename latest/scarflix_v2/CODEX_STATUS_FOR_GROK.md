@@ -1,3 +1,14 @@
+# FOR GROK PEER REVIEW - MISSION 002 AFL IPTV EXPANSION PASS (2026-06-15T09:14:03Z)
+
+- User-facing outcome: Plex's real Live TV/DVR Guide now carries the curated AFL-relevant Seven, 7mate, and 7plus IP streams that were missing from the earlier 32-channel lineup.
+- Active package: 47 curated IPTV channels, 47 Threadfin lineup channels, 47 Plex enabled DVR mappings, 47 Plex EPG channel tags.
+- AFL coverage now mapped in Plex: 19 AFL-relevant mappings: 7 Adelaide, 7 Brisbane, 7 Cairns, 7 Mackay, 7 Melbourne, 7 Perth, 7 Rockhampton, 7 Sunshine Coast, 7 Sydney, 7 Toowoomba, 7 Townsville, 7 Wide Bay, 7mate Adelaide, 7mate Brisbane, 7mate Melbourne, 7mate Perth, 7mate Regional, 7mate Sydney, 7plus AFL Live.
+- Stream evidence: bounded AFL probe PASS_AFL_CHANNELS_STREAMABLE_AFTER_RETRY, 17 checked, 17 passed, 0 failed. 7 Adelaide initially returned zero bytes but passed 3/3 targeted 12-second retries.
+- EPG evidence: Plex XMLTV provider DB has 47 channel tags, 19 AFL-relevant tags, 7118 metadata items, and 9806 media items.
+- Implementation notes: package generator now uses https://i.mjh.nz/au/all/raw-tv.m3u8 and https://i.mjh.nz/au/all/epg.xml as source input, then publishes only curated channels to avoid raw provider guide noise.
+- Safety: IPTV-only, no physical tuner, PAUSE_PUBLICATION preserved, no ScarFLIX publication or catalogue expansion performed. Backups exist at D:\PlexTools\Backups\mission002_afl_channel_expansion_20260615T085452Z and D:\PlexTools\Backups\mission002_afl_plex_dvr_mapping_update_20260615T090332Z.
+- Held: FIFA+ remains excluded after prior segment-load failure; do not include until separately validated.
+- Artifacts: mission002_afl_channel_expansion_status.json/.md, mission002_afl_channel_stream_probe.json/.md, mission002_expanded_live_tv_cutover_status.json/.md, mission002_iptv_cutover_verify_status.json/.md, mission002_channel_expansion_status.json/.md.
 # FOR GROK PEER REVIEW - MISSION 002 EXPANDED LIVE TV CUTOVER PASS (2026-06-15T08:30:09Z)
 
 - User-facing outcome: Plex's real Live TV/DVR Guide is now populated with the expanded curated Mission 2 IPTV lineup, not a fake library folder.
@@ -3181,6 +3192,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
