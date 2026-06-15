@@ -1,0 +1,102 @@
+{
+  "component": "jasonos_mission002_expanded_live_tv_cutover",
+  "schema_version": "jasonos.iptv.expanded_live_tv_cutover.v1",
+  "status": "PASS_EXPANDED_CURATED_LIVE_TV_USER_VERIFIED",
+  "updated_utc": "2026-06-15T08:30:09Z",
+  "user_outcome": "Plex real Live TV/DVR guide is populated with the curated expanded IPTV lineup and Channel 10 playback was verified in Plex Web.",
+  "iptv_only": true,
+  "physical_tuner_used": false,
+  "plex_live_tv_surface": "real_plex_live_tv_dvr_guide",
+  "scarflix_publication_touched": false,
+  "pause_publication_preserved": true,
+  "active_plex_sessions_after_test": 0,
+  "channel_package": {
+    "selected_channel_count": 32,
+    "active_m3u_channel_count": 32,
+    "threadfin_lineup_channel_count": 32,
+    "plex_enabled_mapping_count": 32,
+    "missing_selected_ids": [],
+    "held_optional_channels": [
+      {
+        "id": "mjh-sbs-sysdata_s_p_a_fifa_6",
+        "display_name": "FIFA+",
+        "reason": "Held after ffmpeg segment-load failure during expanded-channel verification."
+      }
+    ]
+  },
+  "threadfin": {
+    "container": "jasonos-mission002-threadfin",
+    "web_base_url": "http://127.0.0.1:35400",
+    "plex_tuner_base_url": "http://127.0.0.1:5004",
+    "verify_status": "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE",
+    "stream_probe_status": "PASS_ALL_CHANNELS_STREAMABLE",
+    "stream_probe_pass_count": 32,
+    "stream_probe_fail_count": 0
+  },
+  "plex_dvr": {
+    "device_status": "alive",
+    "device_uri": "http://127.0.0.1:35400",
+    "advertised_tuners": 4,
+    "mapping_count": 32,
+    "enabled_count": 32,
+    "channel10_device_identifier": "Channel 10",
+    "channel10_channel_key": "mjh-10-vic",
+    "channel10_enabled": "1"
+  },
+  "plex_epg": {
+    "provider_db": "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Plug-in Support\\Databases\\tv.plex.providers.epg.xmltv-e65bb7a0-9dad-493d-8108-d38ac54b0711.db",
+    "provider_db_mtime_utc": "2026-06-15T08:04:46Z",
+    "channel_tags": 32,
+    "metadata_items": 7093,
+    "media_items": 6959,
+    "tags": [
+      "mjh-10-vic Channel 10",
+      "mjh-10bold-vic 10 Drama",
+      "mjh-10peach-vic 10 Comedy",
+      "mjh-10shake-vic Nickelodeon",
+      "mjh-7afl-fast 7plus AFL Live",
+      "mjh-7bravo-fast 7Bravo",
+      "mjh-7flix-mel 7flix",
+      "mjh-7mate-syd 7mate",
+      "mjh-7now-fast 7now",
+      "mjh-7two-mel 7two",
+      "mjh-9crime-fast 9Crime",
+      "mjh-abc-kids ABC Kids",
+      "mjh-abc-me ABC Entertains",
+      "mjh-abc-news ABC NEWS",
+      "mjh-abc-tv-plus ABC Family",
+      "mjh-abc-vic ABC TV",
+      "mjh-channel-9-vic Channel 9",
+      "mjh-gem-vic 9Gem",
+      "mjh-go-vic 9Go!",
+      "mjh-life-vic 9Life",
+      "mjh-racing-fast Racing.com",
+      "mjh-racingwa-fast Racing WA",
+      "mjh-rush-vic 9Rush",
+      "mjh-sbs-2syd SBS VICELAND",
+      "mjh-sbs-3syd SBS Food",
+      "mjh-sbs-4syd SBS World Movies",
+      "mjh-sbs-5nsw NITV",
+      "mjh-sbs-6nat SBS WorldWatch",
+      "mjh-sbs-sbst SBS",
+      "mjh-seven-mel 7 Melbourne",
+      "mjh-seven-syd 7 Sydney",
+      "mjh-sky-news-now Sky News Now"
+    ]
+  },
+  "verification": {
+    "chrome_plex_web_visual_check": "PASS_GUIDE_POPULATED",
+    "chrome_plex_web_playback_sample": "PASS_CHANNEL_10_LIVE_VIDEO_PLAYED",
+    "playback_error_seen_after_fix": false,
+    "terminated_test_stream_after_verification": true
+  },
+  "safety": {
+    "no_physical_tuner": true,
+    "no_scarflix_publication": true,
+    "no_catalogue_expansion": true,
+    "default_plex_online_sources_opted_out": true,
+    "tcp_5004_added_for_plex_tuner": true,
+    "udp_5004_not_added_reason": "Windows Media Player Network Sharing already owns UDP 5004; Plex playback succeeded over TCP 5004."
+  },
+  "next_safe_action": "Use Plex Live TV normally for the curated 32-channel lineup. Keep FIFA+ held until its segment-load failure is separately resolved. Do not broaden to raw all-channel provider output without curation."
+}
