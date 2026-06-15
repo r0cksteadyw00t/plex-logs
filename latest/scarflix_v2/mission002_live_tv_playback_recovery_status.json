@@ -1,0 +1,69 @@
+{
+  "status": "PASS_PLAYBACK_VERIFIED",
+  "updated_utc": "2026-06-15T06:47:59.0540177Z",
+  "updated_local": "2026-06-15T16:47:59.0541476+10:00",
+  "user_outcome": "Plex Live TV now uses the real Plex Live TV/DVR guide with curated JasonOS Mission 2 IPTV channels; clean Plex Web playback verified.",
+  "issue_reported": "Playback Error: Could not tune channel. Please check your tuner or antenna.",
+  "root_cause": "Threadfin was previously handing Plex raw upstream HLS/no-buffer output. Plex Live TV tuning requires a stable tuner-style transport stream handoff.",
+  "fix_applied": {
+    "component": "jasonos-mission002-threadfin",
+    "path": "D:\\PlexTools\\state\\jasonos_prime\\iptv\\threadfin\\conf\\settings.json",
+    "buffer": "ffmpeg",
+    "ffmpeg_mode": "low-latency MPEG-TS proxy via /usr/bin/ffmpeg",
+    "plex_server_restarted": false,
+    "threadfin_container_restarted": true
+  },
+  "backups": [
+    "D:\\PlexTools\\Backups\\mission002_threadfin_ffmpeg_buffer_fix_20260615T062906Z",
+    "D:\\PlexTools\\Backups\\mission002_threadfin_low_latency_ffmpeg_20260615T063225Z",
+    "D:\\PlexTools\\Backups\\mission002_live_tv_playback_recovery_docs_20260615T064759Z"
+  ],
+  "architecture_clarification": "This is not a fake Live TV folder. Plex Live TV/DVR is being redirected through a virtual HDHomeRun-compatible Threadfin tuner at http://127.0.0.1:35400, so Plex keeps its native Live TV Guide/Watch Now experience while only curated channels are exposed.",
+  "curated_channels": [
+    "7 Sydney",
+    "7 Melbourne",
+    "7mate",
+    "7plus AFL Live"
+  ],
+  "direct_threadfin_probe": {
+    "result": "PASS",
+    "method": "curl against each /stream/<id> endpoint with 12 second bounded capture",
+    "all_channels_http_200": true,
+    "all_channels_mpeg_ts_sync_byte": true,
+    "bytes_received": {
+      "7 Sydney": 3242316,
+      "7 Melbourne": 3776168,
+      "7mate": 2628012,
+      "7plus AFL Live": 6730240
+    },
+    "content_type": "application/octet-stream"
+  },
+  "plex_web_playback_probe": {
+    "result": "PASS",
+    "method": "Chrome extension controlled Plex Web test on real Live TV Guide",
+    "clean_tab_profile": "r0cksteady",
+    "channel": "7 Sydney",
+    "sample_seconds": 60,
+    "playback_error_seen": false,
+    "could_not_tune_seen": false,
+    "video_ready_state": 4,
+    "video_resolution": "896x504 in Plex Web element",
+    "current_time_start_seconds": 0.733888,
+    "current_time_end_seconds": 58.974362,
+    "player_src_type": "Plex Web blob stream from local Plex server"
+  },
+  "threadfin_log_evidence": [
+    "Buffer: true [ffmpeg]",
+    "Client User-Agent: Lavf/60.16.100",
+    "FFMPEG path: /usr/bin/ffmpeg",
+    "FFMPEG: Processing data",
+    "Streaming Status: Receive data from FFMPEG"
+  ],
+  "publication_state": "PAUSE_PUBLICATION unchanged; this Mission 2 IPTV fix did not start ScarFLIX publication or catalogue expansion.",
+  "user_instruction": "Use Plex > Live TV > MediaCentre > Guide. If an old modal remains from before the fix, close it or reload the page and press Watch Now again.",
+  "residual_risk": [
+    "Plex still labels the virtual adapter as a tuner; that is expected because this is how Plex Live TV accepts IPTV.",
+    "Threadfin currently advertises one tuner, so one simultaneous live channel is safest until tuner count/rescan is deliberately expanded.",
+    "If Plex caches a stale failed session, reload the Live TV page before retesting."
+  ]
+}
