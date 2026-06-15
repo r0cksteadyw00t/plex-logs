@@ -1,0 +1,50 @@
+{
+  "component": "jasonos_prime_blocker_resolution_status",
+  "status": "REVIEW_FULL_CATALOGUE_QA_BLOCKER_REMAINS",
+  "updated_utc": "2026-06-15T00:22:18Z",
+  "resolved_this_run": [
+    {
+      "blocker": "verified evidence not user-visible",
+      "resolution": "Created Plex collection JasonOS Watch Now Verified in Streaming Films",
+      "result": "PASS",
+      "count": 126
+    },
+    {
+      "blocker": "playback path uncertainty",
+      "resolution": "Ran playback path recovery/read-only verification",
+      "result": "PASS",
+      "details": "Plex identity, WebDAV bridge, rclone process, S:/media and S:/media/catalog OK"
+    }
+  ],
+  "remaining_blockers": [
+    {
+      "blocker": "Full ScarFLIX catalogue QA is not PASS",
+      "evidence": "{\"outcome_id\":\"O-SCARFLIX-CATALOGUE\",\"blocker\":\"Materialized QA is not PASS: REVIEW 4/5 failed=1.\"}",
+      "action": "Continue bounded QA and source/release replacement; do not broad publish"
+    },
+    {
+      "blocker": "TV verified surface not yet created",
+      "evidence": "4 lane items unresolved by section 6 file lookup; movie collection created first",
+      "action": "Resolve section 6 metadata by show/episode mapping before TV surface"
+    }
+  ],
+  "safety": {
+    "publication_allowed": false,
+    "broad_expansion_allowed": false,
+    "no_scan": true,
+    "no_new_files": true,
+    "no_source_mutation": true,
+    "collection_rollback": {
+      "backup_root": "D:\\PlexTools\\Backups\\watch_now_verified_collection_20260615T002008Z",
+      "collection_can_be_removed": true,
+      "delete_endpoint": "DELETE /library/metadata/50698"
+    }
+  },
+  "current": {
+    "sentinel": "PASS/LOW",
+    "campaign_status": "RUNNING",
+    "active_sessions": 0,
+    "retry_held": 11,
+    "mission002_threadfin": "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE"
+  }
+}
