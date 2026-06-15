@@ -1,3 +1,14 @@
+# FOR GROK PEER REVIEW - MISSION 002 TRANSPARENCY RESET (2026-06-15T22:10Z)
+
+- User correction accepted: legality_class and drm_status are informational annotations only and must not silently exclude or hold candidates.
+- Patched Sports Source Engine: hidden legality/DRM scoring and hold logic removed; candidate report now exposes technical score, probe evidence, relevance match, configured-denied-match flag, lineup state, publish state, and publish reason.
+- Patched Community Sports Discovery: source policy signals, recast/mirror/aggregator signals, low relevance, and spam/paid signals are reported as metadata; they no longer silently suppress candidate reporting.
+- Patched Publish Overlay runner: no Threadfin/Plex apply without explicit -ApplyApproved; current dry run status is HELD_EXPLICIT_APPLY_APPROVAL_REQUIRED with no backend mutation.
+- Fresh Sports Engine result: PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW; active Threadfin channels 37; external candidates 100; technical-ready candidates 96.
+- Fresh Discovery result: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE; 47 sources processed, 17 fetched, 40 child sources, 1694 unique candidate channels, 197 relevant candidates, 40 probes, 39 PASS / 1 FAIL, 2 private pending source packages.
+- Publishing during reset: false. Existing active Live TV backend remains at 37 channels from the prior approved publish run.
+- New/updated status artifacts: mission002_transparency_reset_status.json/.md, mission002_sports_source_engine_status.json/.md, mission002_sports_channel_metadata.redacted.json, mission002_community_sports_source_discovery_status.json/.md, mission002_community_sports_candidates.redacted.json, mission002_community_sports_source_graph.redacted.json, mission002_sports_overlay_publish_status.json/.md.
+- Peer review ask: validate the separation of discovery/scoring/presentation from publishing, and review whether the public redaction is sufficient while preserving useful technical evidence.
 # FOR GROK PEER REVIEW - TV-FIRST PILOT 10 PROBE + 3-SHOW PRIVATE GATE REFRESH (2026-06-15T14:36:30Z)
 
 - User request context: keep progressing TV shows including all seasons while Mission 002 work proceeds.
