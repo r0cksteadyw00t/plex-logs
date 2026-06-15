@@ -1,15 +1,15 @@
 {
   "component": "jasonos_prime_go_live_16h_campaign_runner",
   "schema_version": "jasonos.go_live_16h_campaign.v1",
-  "status": "RUNNING",
+  "status": "PAUSED_FOR_FULL_MATERIALIZED_VISIBLE_QA",
   "started_utc": "2026-06-15T00:40:15Z",
   "ends_utc": "2026-06-15T16:40:16Z",
   "ends_epoch_ms": 1781541616410,
   "duration_hours": 16,
   "exclusive_plex_window": true,
-  "cycle_count": 3,
-  "qa_cursor": 9,
-  "qa_batch_size": 3,
+  "cycle_count": 4,
+  "qa_cursor": 12,
+  "qa_batch_size": 4,
   "pause_publication_required": true,
   "publication_allowed": false,
   "broad_expansion_allowed": false,
@@ -20,7 +20,7 @@
     "campaign_log": "D:\\PlexTools\\state\\jasonos_prime\\go_live_16h_campaign\\campaign_log.ndjson",
     "log": "D:\\PlexTools\\logs\\jasonos_prime\\jasonos_prime_go_live_16h_campaign.log"
   },
-  "updated_utc": "2026-06-15T00:55:30Z",
+  "updated_utc": "2026-06-15T01:05:01Z",
   "noncritical_tasks_suppressed": [
     "JasonOS_Prime_FastTrackAccelerator",
     "JasonOS_Prime_PublicMirrorPublisher",
@@ -39,37 +39,37 @@
   ],
   "playback_recovery": {
     "status": "PASS",
-    "updated_utc": "2026-06-15T00:53:51Z",
+    "updated_utc": "2026-06-15T01:00:36Z",
     "failures": []
   },
   "last_qa_batch": {
-    "skip": 6,
+    "skip": 9,
     "batch_size": 3,
-    "elapsed_ms": 72644,
+    "elapsed_ms": 93170,
     "exit_status": 0,
-    "qa_status": "REVIEW",
+    "qa_status": "REVIEW_PARTIAL_BATCH_PASS",
     "checked": 3,
-    "passed": 1,
-    "failed": 2,
-    "total_candidates": 133,
-    "retry_held_count": 8,
+    "passed": 3,
+    "failed": 0,
+    "total_candidates": 136,
+    "retry_held_count": 5,
     "retry_tracked_count": 21
   },
   "last_launch_after_qa": {
     "ok": true,
-    "elapsed_ms": 24,
+    "elapsed_ms": 38,
     "status": 0,
     "error": ""
   },
   "materialized_qa": {
-    "status": "REVIEW",
+    "status": "REVIEW_PARTIAL_BATCH_PASS",
     "target_count": 229,
     "rows_found": 146,
     "checked": 3,
-    "passed": 1,
-    "failed": 2,
+    "passed": 3,
+    "failed": 0,
     "query_errors": 0,
-    "decision_probe_total_candidates": 133
+    "decision_probe_total_candidates": 136
   },
   "go_live_readiness": {
     "status": "REVIEW_NOT_GO_LIVE_READY",
@@ -77,10 +77,10 @@
     "blocker_count": 1
   },
   "last_cycle": {
-    "updated_utc": "2026-06-15T00:55:30Z",
+    "updated_utc": "2026-06-15T01:02:36Z",
     "launch_health": {
       "ok": true,
-      "elapsed_ms": 40,
+      "elapsed_ms": 96,
       "status": 0,
       "error": ""
     },
@@ -92,7 +92,7 @@
       "ok": true,
       "active_sessions": 0,
       "endpoint": "http://192.168.1.184:32400/status/sessions",
-      "elapsed_ms": 2091
+      "elapsed_ms": 1983
     },
     "plex_identity": {
       "ok": true,
@@ -111,6 +111,6 @@
     ],
     "blockers": []
   },
-  "last_action": "ran_playback_path_recovery_once, ran_mission2_threadfin_apply, ran_mission2_threadfin_verify, ran_retry_held_rechecker, ran_bounded_materialized_qa_batch, ran_watch_now_collection_publisher, ran_go_live_readiness_audit_once",
-  "last_blocker": ""
+  "last_action": "paused small-batch campaign to allow single full materialized-visible QA pass",
+  "last_blocker": "formal QA coverage requires full materialized-visible pass"
 }
