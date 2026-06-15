@@ -1,14 +1,14 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: REVIEW_PARTIAL_BATCH_PASS
-Updated UTC: 2026-06-15T00:34:55Z
+Status: REVIEW
+Updated UTC: 2026-06-15T00:41:37Z
 Targets: 229
 Rows found: 146
-Checked: 4
-Passed: 4
-Failed: 0
-Layered streaming checked: 4
-Layered streaming passed: 4
-Layered streaming review: 0
+Checked: 3
+Passed: 2
+Failed: 1
+Layered streaming checked: 3
+Layered streaming passed: 2
+Layered streaming review: 1
 Query errors: 0
-Next action: This bounded Materialized QA batch passed; continue the next batch before go-live.
+Next action: Quarantine failed materialized source/release and keep title retryable.
