@@ -2,15 +2,15 @@
   "component": "jasonos_prime_actual_go_live_delivery_status",
   "schema_version": "jasonos.go_live_delivery.v1",
   "status": "REVIEW_QA_RUNNING_EXPANSION_HELD",
-  "updated_utc": "2026-06-15T04:25:06Z",
+  "updated_utc": "2026-06-15T04:35:25Z",
   "user_priority": "TV first if movies and TV cannot progress concurrently",
   "materialized_qa": {
     "status": "RUNNING_PLEX_DECISION_PROBES",
     "rows_found": 122,
-    "checked": 65,
-    "passed": 65,
+    "checked": 110,
+    "passed": 110,
     "failed": 0,
-    "updated_utc": "2026-06-15T04:24:54Z"
+    "updated_utc": "2026-06-15T04:35:00Z"
   },
   "retry_held": {
     "status": "PASS_NO_HELD_RETRY_SOURCES",
@@ -29,10 +29,12 @@
     "active_2026_unique": 64,
     "first_wave": "tv_active_2026_whole_show",
     "first_wave_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\held_year_waves_enriched\\tv_active_2026_whole_show.enriched.held.json",
-    "execution_state": "HELD_QA_GATE_REQUIRED"
+    "execution_state": "HELD_QA_GATE_REQUIRED_GENERIC_EXPANSION_BLOCKED",
+    "priority_gate_status": "HELD_MATERIALIZED_QA_REQUIRED",
+    "generic_movie_or_unscoped_expansion_allowed": false
   },
   "movies_expansion": {
-    "execution_state": "LOWER_PRIORITY_THAN_TV_WHEN_CONCURRENCY_UNSAFE",
+    "execution_state": "HELD_SECONDARY_TO_TV_WHEN_CONCURRENCY_UNSAFE",
     "held_manifest_root": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\held_year_waves"
   },
   "mission002_iptv": {
@@ -55,8 +57,9 @@
   },
   "next_safe_actions": [
     "Let detached full Materialized QA finish; quarantine exact failing sources only if more REVIEW rows appear.",
-    "If QA reaches PASS, run go-live readiness audit and keep TV-first wave execution held until delivery gates pass.",
-    "Apply Plex Online Media Sources opt-out once a valid account session/token is available so Plex Live TV shows only curated Threadfin/DVR channels.",
-    "Execute TV active/returning 2026 whole-show wave before movie waves when expansion is allowed."
+    "If QA reaches PASS, run go-live readiness audit before any expansion.",
+    "Execute protected TV-first active/returning 2026 whole-show wave before movie waves when expansion is allowed.",
+    "Keep generic/movie/unscoped expansion blocked while TV and movies cannot safely run concurrently.",
+    "Apply Plex Online Media Sources opt-out once a valid account session/token is available so Plex Live TV shows only curated Threadfin/DVR channels."
   ]
 }
