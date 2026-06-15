@@ -1,3 +1,16 @@
+## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST PILOT SOURCE AVAILABILITY
+
+**Updated UTC:** 2026-06-15T04:44:59Z  
+**Priority decision:** TV shows are now the primary delivery lane whenever movies and TV cannot safely progress concurrently. Movie remediation remains secondary.  
+**Materialized QA:** Full artifact completed as REVIEW: 122 rows found, 117 checked, 117 passed, 0 failed, 0 query errors. REVIEW is caused by 112 materialized targets missing from Plex DB; current evidence shows those missing targets are movie-only visibility gaps.  
+**TV-scoped gate:** PASS_TV_SCOPE_MATERIALIZED_QA. TV rows checked 4/4, passed 4/4, failed 0, missing in Plex DB 0.  
+**TV-first execution plan:** 64 active/returning 2026 whole-show candidates split into pilot 10, next 25, large-show hold 20, review hold 10.  
+**Pilot source availability:** 3/10 pilot shows have cached Plex-compatible S01E01 candidates now: Haunted Hotel, MobLand, The Institute. The other 7 stay held/retryable for cache/source review.  
+**Fast-track control:** JasonOS_Prime_FastTrackAccelerator now blocks generic/movie/unscoped expansion and requires the protected TV-first path when expansion becomes eligible.  
+**Safety:** No publication, broad expansion, Plex refresh, Real-Debrid mutation, webdav_map write, path rewrite, or destructive cleanup occurred.
+
+**Next safe action:** build/enable a protected additive TV source/staging pilot for the 3 PASS rows only, with rollback and post-wave verification; keep movies and the 7 REVIEW TV rows held.
+
 ## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST PRIORITY NOW ENFORCED IN ACCELERATOR
 
 **Updated UTC:** 2026-06-15T04:35:25Z  
