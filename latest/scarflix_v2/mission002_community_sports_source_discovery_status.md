@@ -1,39 +1,42 @@
-# Mission 002 Community Sports Source Discovery
+# Mission 002 Multi-Source Sports Source Discovery
 
-Status: PASS_DISCOVERY_READY_NO_ENGINE_CANDIDATES_YET
+Status: REVIEW_SKIPPED_NETWORK_STATUS_ONLY
 
-Updated UTC: 2026-06-15T14:00:58.5609750Z
+Updated UTC: 2026-06-15T14:20:05.4335108Z
 
 ## Peer Review Outcome
 
-- Endorsed: v1.4 is the right direction as a source intelligence platform.
-- Implemented adjustment: discovery/indexing is now separated from Sports Source Engine validation and Threadfin/Plex publication.
-- Safety correction: this runner does not fabricate paid sports channels, scrape private portals, or publish stream URLs.
+- Accepted v2.0 direction: discovery is now multi-source and more aggressive.
+- Implemented adjustment: URL M3U, markdown/text indices, GitHub code-search child discovery, source graphing, duplicate suppression, and recast signal scoring.
+- Safety correction: promotion remains gated; this runner does not mutate Threadfin/Plex and does not publish stream URLs.
 
 ## Current Run
 
-- Sources configured: 4
-- Sources fetched: 4
-- Unique candidate channels extracted: 196
-- Relevant candidate channels: 195
-- Probe attempts: 20
-- Probe PASS: 20
-- Review queue items: 1
+- Sources configured: 7
+- Sources processed: 7
+- Sources fetched: 0
+- Child sources discovered: 0
+- Duplicate streams suppressed: 0
+- Unique candidate channels extracted: 0
+- Relevant candidate channels: 0
+- Probe attempts: 0
+- Probe PASS: 0
+- Review queue items: 0
 - Sports Source Engine candidates: 0
-- Pending review/engine candidates: 1
-- Private pending source packages: 1
+- Pending review/engine candidates: 0
+- Private pending source packages: 0
 
 ## Coverage Gaps
 
-- AFL: adequate (matches=1, probe_pass=1)
+- AFL: missing (matches=0, probe_pass=0)
 - AFLW: missing (matches=0, probe_pass=0)
 - Fox Footy: missing (matches=0, probe_pass=0)
 - Kayo: missing (matches=0, probe_pass=0)
 - Fox Sports: missing (matches=0, probe_pass=0)
-- Racing: adequate (matches=5, probe_pass=5)
-- Cricket: adequate (matches=1, probe_pass=1)
+- Racing: missing (matches=0, probe_pass=0)
+- Cricket: missing (matches=0, probe_pass=0)
 - NRL: missing (matches=0, probe_pass=0)
-- AU Free-To-Air Sports Adjacent: adequate (matches=8, probe_pass=3)
+- AU Free-To-Air Sports Adjacent: missing (matches=0, probe_pass=0)
 
 ## Safety
 
@@ -48,8 +51,10 @@ Updated UTC: 2026-06-15T14:00:58.5609750Z
 - D:\PlexTools\state\jasonos_prime\iptv\community_sports_discovery\mission002_community_source_index.private.json
 - D:\PlexTools\state\jasonos_prime\iptv\community_sports_discovery\mission002_community_review_queue.private.json
 - D:\PlexTools\state\jasonos_prime\iptv\community_sports_discovery\mission002_external_sports_sources.discovered.pending_private.json
+- D:\PlexTools\state\jasonos_prime\iptv\community_sports_discovery\mission002_community_source_graph.private.json
 - D:\PlexTools\public\latest\scarflix_v2\mission002_community_sports_coverage_gaps.redacted.json
+- D:\PlexTools\public\latest\scarflix_v2\mission002_community_sports_source_graph.redacted.json
 
 ## Next Safe Action
 
-Review the private pending package, copy selected entries into the governed external sports source config if accepted, then pass them through Invoke-Mission002SportsSourceEngine.ps1. Do not publish until that gate passes.
+Use the private graph and pending package to select only high-confidence entries for the governed Sports Source Engine. Recast, aggregator, or GitHub-discovered entries require burn-in and repeated PASS probes before any Threadfin/Plex promotion.
