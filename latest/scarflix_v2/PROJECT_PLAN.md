@@ -1,3 +1,15 @@
+## Mission 002 Transparency Reset - 2026-06-15T22:10Z
+
+User outcome focus: make AFL/sports source discovery transparent and stop hidden legality/DRM filtering from deciding candidate visibility.
+
+- Patched Sports Source Engine so legality_class and drm_status are informational annotations only.
+- Candidate reporting now includes technical score, probe evidence, relevance match, configured-denied-match flag, lineup state, publish state, and publish reason.
+- Patched Community Sports Discovery so recast/mirror/aggregator/source-policy signals are metadata, not hidden exclusions.
+- Patched Publish Overlay runner to require explicit -ApplyApproved; publishing without approval now cleanly holds.
+- Fresh Sports Engine: 100 external candidates, 96 technical-ready candidates, active Threadfin channels 37.
+- Fresh Discovery: 1694 unique candidate channels, 197 relevant candidates, 40 probes, 39 PASS / 1 FAIL.
+- No Threadfin/Plex mutation occurred during this reset.
+- Next step: review private technical candidate reports and explicitly approve any publish set before Threadfin/Plex apply.
 # TV-First Pilot 10 Probe + 3-Show Private Gate Refresh (2026-06-15T14:36:30Z)
 
 - Pilot-10 source availability refreshed: 10 active-2026 shows checked, 3 cached Plex-compatible PASS, 7 review/held.
