@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-15T22:25:49Z
-Instruction: phase0_record_tv_mission002_stabilisation_status_20260615_v218
+Updated UTC: 2026-06-15T22:42:19Z
+Instruction: phase0_record_mission002_tv_stabilisation_status_20260615_v219
 
-Current state: PAUSE_PUBLICATION active, materialized QA REVIEW, 19 TV episodes accepted-held, Mission 002 discovery PASS with 196 candidates. No publication or resolver expansion. All gates respect controlled materialized path only.
+Mission 002 transparency reset and TV pilot gate status recorded. 19 TV episodes accepted (Haunted Hotel 5, MobLand 9, The Institute 5). Sports discovery PASS with 196 candidates. All actions respect PAUSE_PUBLICATION and REVIEW QA. No publishing or legacy expansion.
