@@ -1,0 +1,57 @@
+{
+  "component": "jasonos_prime_tv_first_execution_batch_planner",
+  "schema_version": "jasonos.tv_first.execution_batch_plan_status.v1",
+  "status": "PASS_TV_FIRST_BATCHES_PREPARED",
+  "updated_utc": "2026-06-15T04:40:21Z",
+  "source_wave_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/held_year_waves_enriched/tv_active_2026_whole_show.enriched.held.json",
+  "source_wave_id": "tv_active_2026_whole_show",
+  "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
+  "total_candidates": 64,
+  "classification_counts": {
+    "held_language_review": 2,
+    "held_name_match_review": 8,
+    "large_show_hold": 20,
+    "medium_high_confidence": 15,
+    "pilot_small_high_confidence": 19
+  },
+  "first_executable_batch": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_execution_batches\\tv_active_2026_pilot_10_small_high_confidence.held.json",
+  "batches": [
+    {
+      "batch_id": "tv_active_2026_pilot_10_small_high_confidence",
+      "candidate_count": 10,
+      "path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_execution_batches\\tv_active_2026_pilot_10_small_high_confidence.held.json",
+      "execution_state": "HELD_PROTECTED_EXECUTION_REQUIRED",
+      "safe_to_execute": false
+    },
+    {
+      "batch_id": "tv_active_2026_next_25_medium_high_confidence",
+      "candidate_count": 25,
+      "path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_execution_batches\\tv_active_2026_next_25_medium_high_confidence.held.json",
+      "execution_state": "HELD_PROTECTED_EXECUTION_REQUIRED",
+      "safe_to_execute": false
+    },
+    {
+      "batch_id": "tv_active_2026_large_show_hold",
+      "candidate_count": 20,
+      "path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_execution_batches\\tv_active_2026_large_show_hold.held.json",
+      "execution_state": "HELD_PROTECTED_EXECUTION_REQUIRED",
+      "safe_to_execute": false
+    },
+    {
+      "batch_id": "tv_active_2026_review_hold",
+      "candidate_count": 10,
+      "path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_execution_batches\\tv_active_2026_review_hold.held.json",
+      "execution_state": "HELD_PROTECTED_EXECUTION_REQUIRED",
+      "safe_to_execute": false
+    }
+  ],
+  "safety": {
+    "no_publication_started": true,
+    "no_broad_expansion_started": true,
+    "no_plex_refresh_performed": true,
+    "no_source_mutation_performed": true,
+    "no_webdav_map_write_performed": true,
+    "no_path_rewrite_performed": true
+  },
+  "next_safe_action": "Use the pilot 10 TV-first batch as input to a protected additive TV source/staging runner after gates remain clean."
+}
