@@ -1,3 +1,17 @@
+## BLOCKER RESOLUTION UPDATE - VERIFIED MOVIE SURFACE CREATED
+
+**Updated UTC:** 2026-06-15T00:22:18Z  
+**Status:** PARTIAL_USER_VISIBLE_DELIVERY_WATCH_NOW_MOVIES_AVAILABLE  
+**Resolved:** Created Plex collection JasonOS Watch Now Verified in Streaming Films.  
+**Collection item count:** 126 PASS-only movies  
+**Collection rating key:** 50698  
+**Full catalogue go-live:** BLOCKED  
+**Remaining formal blocker:** Full ScarFLIX Materialized QA is not PASS: Materialized QA is not PASS: REVIEW 4/5 failed=1.  
+**Mission 002 IPTV:** PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE, Plex Live TV/DVR attach still pending  
+**Safety:** no scan, no new files, no source mutation, no broad expansion, publication remains blocked.  
+**Rollback backup:** D:\PlexTools\Backups\watch_now_verified_collection_20260615T002008Z
+
+**User-outcome interpretation:** Jason now has a Plex-side verified movie collection to use as the safer known-good path, but the whole catalogue is not live yet. Continue bounded QA, source/release replacement, and TV-safe surfacing next.
 ## GO-LIVE USER OUTCOME STATUS UPDATE - PLAYBACK-FIRST DELIVERY
 
 **Updated UTC:** 2026-06-14T22:11:15Z  
@@ -3025,6 +3039,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
