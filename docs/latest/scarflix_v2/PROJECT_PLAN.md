@@ -1,3 +1,12 @@
+# TV-First Pilot 10 Probe + 3-Show Private Gate Refresh (2026-06-15T14:36:30Z)
+
+- Pilot-10 source availability refreshed: 10 active-2026 shows checked, 3 cached Plex-compatible PASS, 7 review/held.
+- Prepared protected manifest for the 3 PASS shows: Haunted Hotel, MobLand, The Institute.
+- Whole-show private-stage evidence refreshed: 28 episodes enumerated; final validator PASS for 19 accepted private-stage episodes.
+- Publication gate: `PASS_TV_PUBLICATION_GATE_ACCEPTED_HELD`; 19 accepted, 9 held.
+- No Plex-visible publication or path mutation occurred.
+- Next engineering step: additive TV publication adapter for the 19 accepted candidates only, with rollback and post-publication Plex/WebDAV verification.
+
 # Mission 002 Multi-Source Sports Discovery V2 - PASS/HELD (2026-06-15T14:25:43Z)
 
 - Mission 002 source intelligence has moved from conservative community-only discovery to multi-source v2 discovery with strict promotion gates.
