@@ -1,12 +1,12 @@
 # ScarFLIX v2 Materialized QA Layered Streaming Status
 
 Status: RUNNING
-Updated UTC: 2026-06-15T02:35:21Z
-Total: 29
-Passed: 29
+Updated UTC: 2026-06-15T02:35:35Z
+Total: 30
+Passed: 30
 Review: 0
 Temporary buffering persisted: false
 Range bytes: 4194304
 
 Reason counts:
-- webdav_head_and_temporary_range_warm_passed: 29
+- webdav_head_and_temporary_range_warm_passed: 30
