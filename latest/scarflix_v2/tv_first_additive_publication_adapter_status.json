@@ -1,16 +1,16 @@
 {
   "component": "jasonos_prime_tv_first_additive_publication_adapter",
   "schema_version": "jasonos.tv_first.additive_publication_adapter.v1",
-  "started_utc": "2026-06-15T23:17:31Z",
-  "updated_utc": "2026-06-15T23:17:31Z",
-  "status": "HELD_FULL_SEASON_GATE_NOT_PASS",
-  "gate_status": "HELD_FULL_SEASON_INCOMPLETE",
+  "started_utc": "2026-06-15T23:41:08Z",
+  "updated_utc": "2026-06-15T23:41:10Z",
+  "status": "HELD_ACTIVE_OR_UNKNOWN_PLEX_SESSIONS",
+  "gate_status": "PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "private_manifest_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_publication_gate/tv_first_publication_candidates.accepted.private.json",
   "expected_count": 28,
-  "accepted_count": 24,
+  "accepted_count": 28,
   "mutated_count": 0,
   "rollback_performed": false,
   "mutation_manifest_path": "",
@@ -26,5 +26,11 @@
     "rollback_manifest_before_mutation": true,
     "tv_section_only_refresh": true
   },
-  "next_safe_action": "Keep TV publication held. Continue private source retry/monitoring until the full-season gate passes."
+  "active_plex_sessions": {
+    "ok": false,
+    "count": -1,
+    "status": 401,
+    "error": ""
+  },
+  "next_safe_action": "Wait for zero active Plex sessions before TV publication."
 }
