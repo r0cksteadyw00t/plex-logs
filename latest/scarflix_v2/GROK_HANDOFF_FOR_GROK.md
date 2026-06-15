@@ -1,3 +1,19 @@
+# FOR GROK PEER REVIEW - TV-FIRST WHOLE-SHOW PARALLEL LANE PASS/HELD (2026-06-15T12:47:07Z)
+
+- User request: continue progressing TV shows concurrently, including all seasons, while Mission 002 sports source work remains gated.
+- Built TV whole-show private staging runner: `JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js`.
+- Built TV retry repair runner: `JasonOS_Prime_TVFirstPrivateStageRetryRepair.js`.
+- Built TV-specific publication gate: `JasonOS_Prime_TVFirstPublicationGate.js`.
+- Scope executed: current protected TV pilot shows only: Haunted Hotel, MobLand, The Institute.
+- Whole-show enumeration: 28 episodes across 3 shows using TMDB season details.
+- Private staging result: 25 newly staged episodes plus 3 existing pilot episodes; then failed-source retry repair moved retryable failures to reversible retry-held folders.
+- Final private-stage validator: PASS for currently staged set, 21/21 validated direct media candidates, 0 review in the current staged set.
+- Publication gate result: `PASS_TV_PUBLICATION_GATE_ACCEPTED_HELD`, accepted 21 episodes, held 7 episodes for alternate-source retry/replacement.
+- Accepted counts: Haunted Hotel 7, MobLand 9, The Institute 5.
+- Held counts: Haunted Hotel 3, MobLand 1, The Institute 3.
+- Safety: private stage only; no Plex-visible publication, no Plex refresh, no webdav_map write, no path rewrite, no generic staged publisher, no legacy direct resolver, PAUSE_PUBLICATION preserved.
+- Next engineering action: build/run an additive TV publication adapter for accepted private candidates only, with rollback and post-publication Plex/WebDAV verification.
+
 # FOR GROK PEER REVIEW - MISSION 002 SPORTS SOURCE ENGINE FOUNDATION PASS (2026-06-15T12:22:39Z)
 
 - User-facing goal: move toward richer AFL/sports coverage inside Plex Live TV without breaking the current curated IPTV baseline.
