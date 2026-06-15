@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_stabilisation_status_20260615_v151",
-      "created_at": "2026-06-15T04:22:18Z",
-      "expires_at": "2026-06-16T04:22:18Z",
+      "instruction_id": "phase0_record_tv_first_qa_status_20260615_v152",
+      "created_at": "2026-06-15T04:37:48Z",
+      "expires_at": "2026-06-16T04:37:48Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -20,7 +20,8 @@
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "PAUSE_PUBLICATION active. Bounded Materialized QA in progress. Watch Now Verified collection stable at 126 items. No expansion, publishing, or source mutation. Continue recording only."
+            "summary": "TV-first priority enforced. Materialized QA at 110/122 checked (110 passed). PAUSE_PUBLICATION active. No expansion or publishing instructed. Record only.",
+            "source_instruction_id": "phase0_record_tv_first_qa_status_20260615_v152"
           }
         }
       ],
@@ -28,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T04:22:18Z",
+  "updated_utc": "2026-06-15T04:37:48Z",
   "source": "grok_api"
 }
