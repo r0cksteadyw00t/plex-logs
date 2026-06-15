@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-15T00:44:02Z",
-    "updated_utc":  "2026-06-15T00:44:09Z",
+    "started_utc":  "2026-06-15T00:49:02Z",
+    "updated_utc":  "2026-06-15T00:49:09Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -61,10 +61,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=REVIEW 2/3 failed=1 RetryHeld=8/19 Section5Visible=105 Section5Missing=0 WatchNowCollection=PASS_COLLECTION_AVAILABLE Movies=126 PausePublication=True"
+                                          "MaterializedQA=REVIEW 2/3 failed=1 RetryHeld=8/20 Section5Visible=105 Section5Missing=0 WatchNowCollection=PASS_COLLECTION_AVAILABLE Movies=126 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not full PASS: REVIEW 2/3 failed=1. retry_held=8 retry_tracked=19."
+                                          "Materialized QA is not full PASS: REVIEW 2/3 failed=1. retry_held=8 retry_tracked=20."
                                       ],
                          "next_safe_action":  "Keep the verified Watch Now collection available while bounded QA and held-source replacement continue; no broad expansion until QA reaches PASS.",
                          "requires_quiet_window":  true,
@@ -155,7 +155,7 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not full PASS: REVIEW 2/3 failed=1. retry_held=8 retry_tracked=19."
+                         "blocker":  "Materialized QA is not full PASS: REVIEW 2/3 failed=1. retry_held=8 retry_tracked=20."
                      }
                  ],
     "monitored_tasks":  [
