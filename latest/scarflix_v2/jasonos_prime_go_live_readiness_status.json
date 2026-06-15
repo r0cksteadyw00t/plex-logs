@@ -1,9 +1,9 @@
-﻿{
+{
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-15T00:19:32Z",
-    "updated_utc":  "2026-06-15T00:19:39Z",
+    "started_utc":  "2026-06-15T00:21:09Z",
+    "updated_utc":  "2026-06-15T00:21:16Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -39,18 +39,34 @@
                          "plex_disruptive_action_allowed":  false
                      },
                      {
+                         "outcome_id":  "O-WATCH-NOW-VERIFIED",
+                         "name":  "Verified Watch Now movie surface",
+                         "go_live_status":  "PASS_VERIFIED_MOVIE_COLLECTION_AVAILABLE",
+                         "progress_percent":  75,
+                         "summary":  "A Plex collection groups already-indexed PASS-only movie rows so users have a cleaner known-good starting point without broad publication.",
+                         "evidence":  [
+                                          "Collection=PASS_COLLECTION_AVAILABLE Movies=126 ResolvedRows=126 UnresolvedLaneItems=4"
+                                      ],
+                         "blockers":  [
+
+                                      ],
+                         "next_safe_action":  "Keep the collection updated from PASS-only evidence, then add a TV-safe equivalent after section 6 metadata lookup is stable.",
+                         "requires_quiet_window":  false,
+                         "plex_disruptive_action_allowed":  false
+                     },
+                     {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "name":  "ScarFLIX movies and TV playable in Plex",
                          "go_live_status":  "REVIEW_NOT_GO_LIVE_READY",
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=REVIEW 4/5 Section5Visible=105 Section5Missing=0 PausePublication=True"
+                                          "MaterializedQA=REVIEW 4/5 Section5Visible=105 Section5Missing=0 WatchNowCollection=PASS_COLLECTION_AVAILABLE Movies=126 PausePublication=True"
                                       ],
                          "blockers":  [
                                           "Materialized QA is not PASS: REVIEW 4/5 failed=1."
                                       ],
-                         "next_safe_action":  "Run only bounded playback/QA recovery when Plex is quiet; no broad expansion until QA reaches PASS and a verified Watch Now lane is stable.",
+                         "next_safe_action":  "Keep the verified Watch Now collection available while bounded QA and held-source replacement continue; no broad expansion until QA reaches PASS.",
                          "requires_quiet_window":  true,
                          "plex_disruptive_action_allowed":  false
                      },
