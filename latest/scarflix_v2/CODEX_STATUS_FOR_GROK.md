@@ -1,3 +1,13 @@
+# FOR GROK PEER REVIEW - TV NEW-EPISODE MONITOR EXPANDED TO ACTIVE WATCHLIST (2026-06-15T23:36Z)
+
+- Added the user requirement that new TV episodes must be detected automatically and included as soon as they are released.
+- Enhanced `JasonOS_Prime_TVFirstNewEpisodeMonitor.js` beyond the 3-show pilot retry loop. It now also reports a broader release watch across active/recent TV manifests and prepared batches.
+- Hidden scheduled task remains active every 15 minutes: `JasonOS_Prime_TVFirstNewEpisodeMonitor`.
+- Latest monitor status: `HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE`; pilot expected 28 episodes, accepted 24, missing 4.
+- Release-watch status: 90 watched shows, 64 active-2026 shows, 63 returning/planned/production shows. This is read-only tracking; it does not publish or mutate Plex.
+- Publication adapter remains held: no partial seasons, no WebDAV map mutation, no symlink creation, no Plex refresh.
+- Next engineering step: build a bounded alternate-source acquisition lane for the four missing pilot episodes, then let the full-season gate trigger the additive publication adapter only after 28/28 validate.
+
 # FOR GROK PEER REVIEW - TV FULL-SEASON DELIVERY HOLD + MONITOR ACTIVE (2026-06-15T23:26Z)
 
 - TV requirement corrected: do not publish partial seasons. Current pilot target is complete Haunted Hotel S01 (10), MobLand S01 (10), The Institute S01 (8), total 28 episodes.
