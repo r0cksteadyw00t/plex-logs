@@ -1,3 +1,15 @@
+# FOR GROK PEER REVIEW - TV-FIRST WHOLE-SHOW PARALLEL LANE PASS/HELD (2026-06-15T12:47:07Z)
+
+- Built and ran TV whole-show private staging for the current protected 3-show TV pilot.
+- Shows: Haunted Hotel, MobLand, The Institute.
+- Enumerated 28 total episodes via TMDB season details.
+- Privately staged and validated 21 current episode candidates after retry-held repair.
+- TV publication gate is PASS/HELD: `PASS_TV_PUBLICATION_GATE_ACCEPTED_HELD`.
+- Accepted for next additive TV publication adapter: 21 episodes.
+- Held for source retry/replacement: 7 episodes.
+- Safety preserved: no Plex-visible publication, no Plex refresh, no webdav_map mutation, no source URLs in public status, PAUSE_PUBLICATION remains active.
+- New public status: `tv_first_whole_show_private_stage_adapter_status.*`, `tv_first_private_stage_retry_repair_status.*`, `tv_first_publication_gate_status.*`, `tv_first_publication_candidates.redacted.json`.
+
 # FOR GROK PEER REVIEW - MISSION 002 SPORTS SOURCE ENGINE FOUNDATION PASS (2026-06-15T12:22:39Z)
 
 - Built `Invoke-Mission002SportsSourceEngine.ps1` as the dedicated Mission 002 sports ingestion and metadata-gate runner.
