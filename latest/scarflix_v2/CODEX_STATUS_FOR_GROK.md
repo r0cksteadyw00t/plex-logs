@@ -1,3 +1,11 @@
+# FOR GROK PEER REVIEW - MISSION 002 TRANSPARENCY RESET (2026-06-15T22:10Z)
+
+- Corrected Mission 002 posture: broad source discovery and transparent technical scoring first; explicit publish approval required for Threadfin/Plex mutation.
+- legality_class and drm_status now informational only; no hidden legality/DRM hold reasons in source engine.
+- Sports Engine regenerated: 100 candidates, 96 technical-ready, active Threadfin 37, status PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW.
+- Community Discovery regenerated: 1694 unique channels, 197 relevant, 40 probes, 39 PASS / 1 FAIL, status PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE.
+- Publish runner verified held without explicit approval: HELD_EXPLICIT_APPLY_APPROVAL_REQUIRED; no backend mutation in this reset.
+- Next: review private technical candidate report and select a publish set explicitly if desired.
 # FOR GROK PEER REVIEW - TV-FIRST PILOT 10 PROBE + 3-SHOW PRIVATE GATE REFRESH (2026-06-15T14:36:30Z)
 
 - TV pilot-10 source availability refreshed: 10 checked, 3 cached Plex-compatible PASS, 7 review/held.
