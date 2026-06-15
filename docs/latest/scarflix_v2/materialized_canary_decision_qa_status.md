@@ -1,14 +1,14 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
 Status: RUNNING_PLEX_DECISION_PROBES
-Updated UTC: 2026-06-15T03:56:27Z
+Updated UTC: 2026-06-15T04:00:56Z
 Targets: 229
 Rows found: 123
-Checked: 53
-Passed: 53
+Checked: 75
+Passed: 75
 Failed: 0
-Layered streaming checked: 53
-Layered streaming passed: 53
+Layered streaming checked: 75
+Layered streaming passed: 75
 Layered streaming review: 0
 Query errors: 0
 Next action: Materialized Plex decision QA is still running; stop or throttle if launch health degrades.
