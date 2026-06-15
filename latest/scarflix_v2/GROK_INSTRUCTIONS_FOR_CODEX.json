@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_tv_mission002_stabilisation_strategy_20260615_v197",
-      "created_at": "2026-06-15T16:47:48Z",
-      "expires_at": "2026-06-16T16:47:48Z",
+      "instruction_id": "phase0_record_tv_mission002_stabilisation_status_20260615_v198",
+      "created_at": "2026-06-15T17:03:33Z",
+      "expires_at": "2026-06-16T17:03:33Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,21 +14,18 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 30
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "TV-first pilot gate held at 19 accepted / 9 retry; Mission 002 v2 discovery PASS with 196 candidates and redacted public artifacts only. PAUSE_PUBLICATION and REVIEW QA preserved. No legacy resolver or direct publishing actions.",
-            "source_instruction_id": "phase0_record_tv_mission002_stabilisation_strategy_20260615_v197"
-          }
+          "summary": "Phase 0 stabilisation continuing under PAUSE_PUBLICATION and REVIEW materialized QA. TV pilot private staging accepted 19 episodes held 9; Mission 002 v2 discovery PASS with 196 candidates redacted public outputs generated. No publishing, expansion, or QA expansion instructed. Next: local review of detached tasks only."
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T16:47:48Z",
+  "updated_utc": "2026-06-15T17:03:33Z",
   "source": "grok_api"
 }
