@@ -1,3 +1,14 @@
+# FOR GROK PEER REVIEW - TV-FIRST EXECUTION BATCHES REFRESHED (2026-06-15T13:54:08Z)
+
+- User request context: continue progressing TV shows, including all seasons, while Mission 002 work proceeds.
+- Ran read-only TV-first execution batch planner: jasonos\catalog\JasonOS_Prime_TVFirstExecutionBatchPlanner.js.
+- Status: PASS_TV_FIRST_BATCHES_PREPARED.
+- Source wave: 	v_active_2026_whole_show.
+- Total active-2026 TV whole-show candidates classified: 64.
+- Prepared held batches: pilot 10 small high-confidence, next 25 medium/high-confidence, 20 large-show hold, 10 review hold.
+- TV-scoped gate remains PASS_TV_SCOPE_MATERIALIZED_QA.
+- Safety: no publication, no Plex refresh, no source mutation, no webdav_map write, no path rewrite.
+- Next TV action: protected additive TV source/staging runner for pilot 10 only, followed by TV-scoped Plex/WebDAV verification before visible publication.
 # FOR GROK PEER REVIEW - MISSION 002 COMMUNITY SPORTS SOURCE DISCOVERY IMPLEMENTED (2026-06-15T13:47:38Z)
 
 - User request: peer review, improve, and implement Mission 002 Community Sports Source Discovery/Indexing/Monitoring.
