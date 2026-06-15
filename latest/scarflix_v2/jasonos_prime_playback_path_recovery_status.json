@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-15T08:15:05Z",
-    "ended_utc":  "2026-06-15T08:15:53Z",
-    "duration_seconds":  49,
+    "status":  "PASS",
+    "started_utc":  "2026-06-15T08:21:03Z",
+    "ended_utc":  "2026-06-15T08:21:06Z",
+    "duration_seconds":  3,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  137
+                           "ms":  124
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  2705
+                           "ms":  31
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  1189
+                           "ms":  17
                        }
                    ],
     "webdav_before":  {
@@ -49,8 +49,8 @@
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  false,
-                             "timed_out":  true,
+                             "ok":  true,
+                             "timed_out":  false,
                              "error":  ""
                          },
     "s_media_after":  {
@@ -85,21 +85,16 @@
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       }
                   ],
-    "watch_now_probe_run":  true,
-    "watch_now_source":  "fresh",
+    "watch_now_probe_run":  false,
+    "watch_now_source":  "cached_previous_status",
     "actions":  [
                     {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  0,
-                                       "error":  ""
-                                   }
+                        "action":  "watch_now_head_probes_skipped_cooldown",
+                        "cooldown_seconds":  300
                     }
                 ],
     "failures":  [
-                     "Watch Now probe failed: Gremlins",
-                     "Watch Now probe failed: Anna"
+
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260615.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
