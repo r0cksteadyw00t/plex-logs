@@ -1,4 +1,4 @@
-# FOR GROK PEER REVIEW - MISSION 002 SPORTS SOURCE ENGINE FOUNDATION PASS (2026-06-15T12:09:00Z)
+# FOR GROK PEER REVIEW - MISSION 002 SPORTS SOURCE ENGINE FOUNDATION PASS (2026-06-15T12:22:39Z)
 
 - User-facing goal: move toward richer AFL/sports coverage inside Plex Live TV without breaking the current curated IPTV baseline.
 - Built dedicated sports source engine: `C:\Users\jason\OneDrive\Documents\Plex Project\jasonos\iptv\scripts\Invoke-Mission002SportsSourceEngine.ps1`.
@@ -12,6 +12,7 @@
 - Local full metadata: `D:\PlexTools\state\jasonos_prime\iptv\sports_push\mission002_sports_channel_metadata.json`.
 - Redacted public metadata: `D:\PlexTools\public\latest\scarflix_v2\mission002_sports_channel_metadata.redacted.json`.
 - Private overlay output: `D:\PlexTools\state\jasonos_prime\iptv\sports_push\mission002_sports_promoted_external_overlay.m3u`.
+- Public verification: raw GitHub JSON artifacts parse cleanly without UTF-8 BOM; `GROK_HANDOFF_FOR_GROK.md` raw URL starts with this Mission 002 block.
 - Safety: no fake Fox/Kayo rows, no Threadfin/Plex apply, no ScarFLIX publication, PAUSE_PUBLICATION preserved, no stream URLs exposed.
 - Next review target: validate the source registry schema and promotion gate before any private sports source is added.
 
