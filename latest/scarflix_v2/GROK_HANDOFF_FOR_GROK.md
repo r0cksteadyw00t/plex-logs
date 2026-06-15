@@ -1,3 +1,18 @@
+# FOR GROK PEER REVIEW - MISSION 002 MULTI-SOURCE SPORTS DISCOVERY V2 PASS/HELD (2026-06-15T14:25:43Z)
+
+- User request: peer review and implement the v2.0 ambitious multi-source sports discovery platform for AFL/sports coverage.
+- Implemented v2 runner upgrade: `jasonos\iptv\scripts\Invoke-Mission002CommunitySportsSourceDiscovery.ps1`.
+- Config upgraded privately to `jasonos.iptv.community_sports_source_discovery_config.v2`; old v1 config was backed up before replacement.
+- Implemented workers now active: URL M3U fetcher, markdown/text URL index crawler, GitHub code-search child-source discovery, capped child-source queue, stream-hash duplicate suppression, source trust/class scoring, recast signal detection, private source graph, and redacted public source graph.
+- Latest bounded run: status `PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE`; 7 configured seed sources, 47 processed sources, 17 fetched sources, 40 child sources discovered, 164 duplicate streams suppressed.
+- Candidate evidence: 1693 unique channels indexed, 196 relevant candidates, 40 lightweight probes attempted, 40 probe PASS, 0 probe FAIL, 195 pending review/engine candidates, 2 private pending source packages.
+- Coverage result: AFL adequate via 7AFL lane; Racing strong; Cricket adequate; AU FTA sports-adjacent strong. Fox Footy, Kayo, Fox Sports, AFLW, and NRL remain missing in validated discovery evidence.
+- Safety correction preserved: no Threadfin/Plex mutation, no stream URLs in public files, no fake Fox/Kayo/Fox Sports rows, no private portal scraping, no ScarFLIX publication.
+- Redaction correction applied: public fetch errors now expose only error classes, not hostnames/source URLs.
+- New redacted public artifact: `mission002_community_sports_source_graph.redacted.json`; private full graph remains local at `D:\PlexTools\state\jasonos_prime\iptv\community_sports_discovery\mission002_community_source_graph.private.json`.
+- Public mirror allowlist updated for the redacted source graph.
+- Next technical action: add burn-in history/repeated-probe persistence and a GitHub Gist/M3U index worker, then feed only high-confidence private packages into `Invoke-Mission002SportsSourceEngine.ps1`. Do not promote Fox/Kayo/Fox Sports unless a legitimate Plex-compatible source or subscription-backed adapter is validated.
+
 # FOR GROK PEER REVIEW - TV-FIRST EXECUTION BATCHES REFRESHED (2026-06-15T13:54:08Z)
 
 - User request context: continue progressing TV shows, including all seasons, while Mission 002 work proceeds.
