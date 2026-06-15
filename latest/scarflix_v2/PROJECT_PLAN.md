@@ -1,3 +1,16 @@
+## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST PRIVATE STAGE VALIDATED
+
+**Updated UTC:** 2026-06-15T04:56:33Z  
+**User priority applied:** TV remains primary over movies whenever concurrency is constrained.  
+**Private staging adapter:** JasonOS_Prime_TVFirstPrivateStageAdapter.js created, deployed, syntax-checked, and run against the 3 prepared TV pilot shows.  
+**Private stage result:** PASS_PRIVATE_STAGED_TV_PILOT, staged 3/3, review 0.  
+**Private validation:** JasonOS_Prime_TVFirstPrivateStageValidator.js created, deployed, syntax-checked, and run. Result PASS_PRIVATE_STAGE_VALIDATED, checked 3, passed 3, review 0.  
+**Validated TV pilot rows:** Haunted Hotel, MobLand, The Institute. Each private staged stream returned HEAD 200 and range 206 with byte-range support. Source URLs remain private and are not written to public status.  
+**Important gate:** These are private direct-stream staging artifacts only. They are not Plex-visible and must not be published as raw live .strm entries. Next implementation must bridge only through the materialized/WebDAV-safe TV path or an equivalent Plex-safe adapter.  
+**Safety:** No publication, broad expansion, Plex refresh, Real-Debrid mutation, generic pending write, webdav_map write, path rewrite, legacy direct resolver call, or generic publisher call occurred.
+
+**Next safe action:** build the TV materialized/WebDAV adapter or bridge for the 3 validated private-stage TV candidates, then run a TV-only post-bridge Plex/WebDAV verification gate before any user-visible TV surfacing.
+
 ## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST PROTECTED PILOT MANIFEST PREPARED
 
 **Updated UTC:** 2026-06-15T04:49:44Z  
