@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_tv_first_stabilisation_status_20260615_v154",
-      "created_at": "2026-06-15T05:10:20Z",
-      "expires_at": "2026-06-16T05:10:20Z",
+      "instruction_id": "phase0_record_tv_first_live_tv_status_20260615_v155",
+      "created_at": "2026-06-15T05:26:06Z",
+      "expires_at": "2026-06-16T05:26:06Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,15 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_record_tv_first_stabilisation_status_20260615_v154",
-            "auto_added_by_bridge": true
+            "summary": "TV-first priority and Live TV suppression status recorded. PAUSE_PUBLICATION active. Materialized QA remains REVIEW. No expansion or publishing actions executed.",
+            "source_instruction_id": "phase0_record_tv_first_live_tv_status_20260615_v155"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T05:10:20Z",
+  "updated_utc": "2026-06-15T05:26:06Z",
   "source": "grok_api"
 }
