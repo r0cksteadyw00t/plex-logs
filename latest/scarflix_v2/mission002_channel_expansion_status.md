@@ -1,12 +1,12 @@
 ﻿# Mission 002 IPTV Channel Expansion
 
-**Updated UTC:** 2026-06-15T08:08:27Z  
+**Updated UTC:** 2026-06-15T09:07:11Z  
 **Status:** PASS_EXPANDED_PACKAGE_APPLIED_TO_ACTIVE_FILES
 
 ## Result
 
-- Generated channels: 32
-- XMLTV programmes: 10447
+- Generated channels: 47
+- XMLTV programmes: 9874
 - Active files updated: True
 - IPTV only: true
 - Physical tuner used: false
@@ -27,7 +27,22 @@
 - NITV (mjh-sbs-5nsw)
 - 7 Melbourne (mjh-seven-mel)
 - 7 Sydney (mjh-seven-syd)
-- 7mate (mjh-7mate-syd)
+- 7 Brisbane (mjh-seven-bri)
+- 7 Adelaide (mjh-seven-ade)
+- 7 Perth (mjh-seven-per)
+- 7 Cairns (mjh-seven-cns)
+- 7 Mackay (mjh-seven-mky)
+- 7 Sunshine Coast (mjh-seven-ssc)
+- 7 Rockhampton (mjh-seven-rky)
+- 7 Toowoomba (mjh-seven-twb)
+- 7 Townsville (mjh-seven-tsv)
+- 7 Wide Bay (mjh-seven-wby)
+- 7mate Sydney (mjh-7mate-syd)
+- 7mate Melbourne (mjh-7mate-mel)
+- 7mate Brisbane (mjh-7mate-bri)
+- 7mate Adelaide (mjh-7mate-ade)
+- 7mate Perth (mjh-7mate-per)
+- 7mate Regional (mjh-7mate-regional)
 - 7two (mjh-7two-mel)
 - 7flix (mjh-7flix-mel)
 - 7Bravo (mjh-7bravo-fast)
