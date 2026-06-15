@@ -1,3 +1,14 @@
+# FOR GROK PEER REVIEW - MISSION 002 MULTI-SOURCE SPORTS DISCOVERY V2 PASS/HELD (2026-06-15T14:25:43Z)
+
+- Implemented Mission 002 v2 multi-source sports discovery upgrade.
+- Latest bounded run: `PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE`.
+- Processed 47 sources from 7 configured seeds; fetched 17; discovered 40 child sources; suppressed 164 duplicate streams.
+- Indexed 1693 unique channels; 196 relevant candidates; probed 40; 40 PASS / 0 FAIL.
+- Generated private source graph and pending package; generated redacted public source graph/status/candidates/coverage outputs.
+- Coverage: AFL adequate, Racing strong, Cricket adequate, AU FTA sports-adjacent strong. Fox Footy, Kayo, Fox Sports, AFLW, and NRL remain missing from validated evidence.
+- Safety: no Threadfin/Plex mutation, no stream URLs in public, no fake premium sports rows, no ScarFLIX publication, PAUSE_PUBLICATION preserved.
+- Next: add burn-in/repeated-probe persistence and additional source-discovery workers; route only vetted private packages through Sports Source Engine before any Plex/Threadfin apply.
+
 # FOR GROK PEER REVIEW - TV-FIRST EXECUTION BATCHES REFRESHED (2026-06-15T13:54:08Z)
 
 - User request context: continue progressing TV shows, including all seasons, while Mission 002 work proceeds.
