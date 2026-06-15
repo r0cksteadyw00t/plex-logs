@@ -2,7 +2,7 @@
 
 Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE
 
-Updated UTC: 2026-06-15T14:21:25.8307440Z
+Updated UTC: 2026-06-15T14:25:43.8453840Z
 
 ## Peer Review Outcome
 
@@ -18,12 +18,12 @@ Updated UTC: 2026-06-15T14:21:25.8307440Z
 - Child sources discovered: 40
 - Duplicate streams suppressed: 164
 - Unique candidate channels extracted: 1693
-- Relevant candidate channels: 195
+- Relevant candidate channels: 196
 - Probe attempts: 40
 - Probe PASS: 40
-- Review queue items: 20
+- Review queue items: 195
 - Sports Source Engine candidates: 1
-- Pending review/engine candidates: 20
+- Pending review/engine candidates: 195
 - Private pending source packages: 2
 
 ## Coverage Gaps
