@@ -1,20 +1,20 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-15T14:33:40Z
+Updated UTC: 2026-06-15T14:36:30Z
 Status: PASS_TV_PUBLICATION_GATE_ACCEPTED_HELD
-Accepted private-stage episodes: 21
-Held/missing episodes: 7
+Accepted private-stage episodes: 19
+Held/missing episodes: 9
 Validator: PASS_PRIVATE_STAGE_VALIDATED
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Sentinel: PASS/LOW
 
 ## Accepted Counts
-- Haunted Hotel: 7
+- Haunted Hotel: 5
 - MobLand: 9
 - The Institute: 5
 
 ## Held Counts
-- Haunted Hotel: 3
+- Haunted Hotel: 5
 - MobLand: 1
 - The Institute: 3
 
