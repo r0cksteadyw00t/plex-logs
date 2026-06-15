@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-15T05:00:02Z",
+  "updated_utc": "2026-06-15T05:05:01Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 2752,
-    "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-15T05:00:54Z",
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 2756,
+    "mirror_updated_age_minutes": 2,
+    "next_check_utc": "2026-06-15T05:05:56Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 2751,
+    "age_minutes": 2756,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-15T04:55:42Z",
+    "updated_utc": "2026-06-15T05:00:39Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-15T04:55:07Z",
+    "updated_utc": "2026-06-15T05:00:04Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,7 +376,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-15T04:55:45Z",
+      "utc": "2026-06-15T05:00:46Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-15T05:00:02Z",
+    "updated_utc": "2026-06-15T05:05:01Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -807,8 +807,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 606125,
-    "safe_pipeline_log_age_seconds": 663011,
+    "canary_status_age_seconds": 606416,
+    "safe_pipeline_log_age_seconds": 663301,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -819,13 +819,13 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=27844"
+        "detail": "pid=8344"
       }
     ],
     "blockers": []
