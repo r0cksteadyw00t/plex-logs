@@ -1,3 +1,13 @@
+## MISSION 002 LIVE TV CORRECTION - CURATED THREADFIN DVR ATTACHED
+
+**Updated UTC:** 2026-06-15T05:59:23Z  
+**User correction:** Keep Plex Live TV available for Channel 7 / curated IPTV; suppress Plex-owned/default channels only.  
+**Result:** Plex Live TV & DVR is now attached to Threadfin as JasonOS Mission 2 IPTV on http://127.0.0.1:35400. Plex reports setup complete, 4 enabled curated channels, and the Live TV guide opens under the MediaCentre server route.  
+**Curated channels:** 7 Sydney, 7 Melbourne, 7mate, 7plus AFL Live.  
+**Default Plex suppression:** Account Online Media Sources remain disabled for Plex-owned online Live TV / Movies & Shows / Discover / availability surfaces. Local hosts suppression for epg.provider.plex.tv remains defense in depth.  
+**Verification:** DVR source page showed Threadfin, 4 enabled channels, and setup complete. Plex Web Live TV guide opened and verified text contained no default Plex online channel indicators.  
+**Safety:** IPTV-only, no physical tuner, no Plex restart, no direct Plex DB edit, no ScarFLIX publication, no broad expansion.  
+**Status artifact:** mission002_plex_live_tv_corrected_cutover_status.json.
 ## MISSION 002 LIVE TV UPDATE - OFFICIAL PLEX ACCOUNT OPT-OUT APPLIED
 
 **Updated UTC:** 2026-06-15T05:33:23Z  
@@ -13,7 +23,7 @@
 **User report:** Codex Chrome Extension installed.  
 **Check result:** Installed=true, enabled=false in Chrome selected profile Default; native host correct=true; Chrome running=true.  
 **Impact:** Official Plex account-level Online Media Sources opt-out remains blocked because Codex cannot control the logged-in Plex account session until the extension is enabled.  
-**Current protection:** Local reversible hosts suppression for pg.provider.plex.tv remains active and Threadfin curated IPTV remains reachable.  
+**Current protection:** Local reversible hosts suppression for epg.provider.plex.tv remains active and Threadfin curated IPTV remains reachable.  
 **Next safe action:** Enable the Codex Chrome Extension, then retry Plex account Online Media Sources opt-outs for Live TV on Plex.
 ## MISSION 002 LIVE TV UPDATE - PLEX CHANNELS SUPPRESSION APPLIED
 
@@ -3145,6 +3155,8 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
+
 
 
 
