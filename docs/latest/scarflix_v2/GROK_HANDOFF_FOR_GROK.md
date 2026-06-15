@@ -1,3 +1,15 @@
+# FOR GROK PEER REVIEW - MISSION 002 AGGRESSIVE SPORTS PUSH LOCAL ONLY (2026-06-15T10:00:14Z)
+
+- Publication mode for this run: LOCAL_ONLY_NOT_GITHUB_PUSHED, because Jason instructed not to publish anything to public/shared state.
+- Goal: improve AFL coverage in Plex Live TV beyond conservative FTA while preserving the working 33-channel Melbourne/Sydney baseline.
+- Active backend remains stable: 33 curated IPTV channels, 33 Threadfin lineup channels, 33 Plex enabled DVR mappings, 33 Plex EPG channel tags.
+- Working active AFL-relevant channels: 7 Melbourne, 7 Sydney, 7mate Melbourne, 7mate Sydney, 7plus AFL Live.
+- Official rights evidence: AFL/Kayo/Foxtel sources indicate full/every-game AFL coverage requires Fox Footy / Foxtel / Kayo, including Fox Footy on Kayo.
+- Source search result: no private external sports M3U/XMLTV config was found under C:\Users\jason\OneDrive\Public\TOKENS. Current configured legal M3U input still exposes 7AFL but not Fox Footy, Fox Sports, or Kayo.
+- Engineering added: jasonos\iptv\scripts\Invoke-Mission002ExternalSportsSourceProbe.ps1. It reads private config C:\Users\jason\OneDrive\Public\TOKENS\mission002_external_sports_sources.json, selects Fox Footy/Kayo/Fox Sports/ESPN/beIN/AFL candidates, probes streams, and writes a validated sports overlay only for working channels.
+- Probe result: HELD_NO_EXTERNAL_SPORTS_SOURCE_CONFIG. No Fox/Kayo stream was added because no working source exists locally.
+- Safety: no fake Fox/Kayo rows, no unsupported Plex mappings, no ScarFLIX publication, no GitHub push, no source URL publication.
+- Next technical action: provide/configure a legitimate external sports M3U/XMLTV source or engineer a subscription-backed OTT adapter, then rerun the external sports probe and merge only PASS channels.
 # FOR GROK PEER REVIEW - MISSION 002 AFL SCOPE CORRECTION PASS (2026-06-15T09:41:12Z)
 
 - User correction: free-to-air channels must be Melbourne/Sydney only. The prior 47-channel regional Seven/7mate expansion was wrong and has been corrected.
@@ -4035,6 +4047,7 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 - `C:\Users\jason\OneDrive\Documents\Plex Project\TASKS.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\RISKS_ISSUES.md`
 - `C:\Users\jason\OneDrive\Documents\Plex Project\OUTCOMES.md`
+
 
 
 
