@@ -1,3 +1,11 @@
+# Mission 002 Sports Source Engine - Next Actions (2026-06-15T12:09:00Z)
+
+1. Use `Invoke-Mission002SportsSourceEngine.ps1` as the Mission 002 sports ingestion authority.
+2. Keep the 33-channel Plex Live TV baseline active; it is classified as live-safe/promoted.
+3. Add external sports only through the private governed registry at `C:\Users\jason\OneDrive\Public\TOKENS\mission002_external_sports_sources.json`.
+4. Promote only channels that pass the metadata gate: `plex_safe=true`, `live_ok=true`, reliability score >= 70, and no `held_reason`.
+5. Keep external overlay files private because they can contain stream URLs.
+
 # Mission 002 AFL Scope Correction - Next Actions (2026-06-15T09:41:27Z)
 
 1. Treat the corrected 33-channel IPTV lineup as the active Plex Live TV baseline.
