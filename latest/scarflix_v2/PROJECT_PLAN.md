@@ -1,3 +1,14 @@
+## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST PRIORITY NOW ENFORCED IN ACCELERATOR
+
+**Updated UTC:** 2026-06-15T04:35:25Z  
+**Materialized QA:** RUNNING_PLEX_DECISION_PROBES, checked 110/122, passed 110, failed 0, query errors 0.  
+**Priority decision:** TV shows now take precedence over movies whenever both lanes cannot safely run concurrently.  
+**Engineering change:** JasonOS_Prime_FastTrackAccelerator.js now writes a TV-first priority gate and blocks generic/movie/unscoped expansion even after QA PASS; next expansion must use the protected TV-first wave path.  
+**First TV wave:** tv_active_2026_whole_show, 64 active/returning 2026 whole-show candidates.  
+**Movies:** remain held as secondary year-backwards waves until TV-first lane is either running safely or no longer constrained.  
+**Safety:** PAUSE_PUBLICATION remains active; no publication, Plex restart, broad expansion, source mutation, or destructive cleanup occurred.
+
+**Next action:** let full Materialized QA finish; if it reaches PASS, run go-live readiness audit and then execute TV-first expansion through a protected TV runner before movie waves.
 ## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST EXPANSION QUEUE READY, QA RUNNING
 
 **Updated UTC:** 2026-06-15T04:25:06Z  
@@ -4177,6 +4188,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
