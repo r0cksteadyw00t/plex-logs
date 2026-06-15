@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-15T03:29:01Z",
-    "updated_utc":  "2026-06-15T03:29:10Z",
+    "started_utc":  "2026-06-15T03:34:03Z",
+    "updated_utc":  "2026-06-15T03:34:12Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -25,14 +25,14 @@
                      {
                          "outcome_id":  "O-PLAYBACK",
                          "name":  "Reliable Plex playback first",
-                         "go_live_status":  "REVIEW_NOT_GO_LIVE_READY",
+                         "go_live_status":  "PASS_INFRASTRUCTURE_READY_REQUIRES_CLIENT_CONFIRMATION",
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
                                           "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=PASS"
                                       ],
                          "blockers":  [
-                                          "Plex background scanner/analyzer pressure still detected: 1."
+
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
                          "requires_quiet_window":  false,
@@ -61,10 +61,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=RUNNING_PLEX_DECISION_PROBES 52/52 failed=0 RetryHeld=0/21 Section5Visible=105 Section5Missing=0 WatchNowCollection=PASS_COLLECTION_AVAILABLE Movies=126 PausePublication=True"
+                                          "MaterializedQA=RUNNING_PLEX_DECISION_PROBES 77/77 failed=0 RetryHeld=0/21 Section5Visible=105 Section5Missing=0 WatchNowCollection=PASS_COLLECTION_AVAILABLE Movies=126 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 52/52 failed=0. retry_held=0 retry_tracked=21."
+                                          "Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 77/77 failed=0. retry_held=0 retry_tracked=21."
                                       ],
                          "next_safe_action":  "Keep the verified Watch Now collection available while bounded QA and held-source replacement continue; no broad expansion until QA reaches PASS.",
                          "requires_quiet_window":  true,
@@ -154,12 +154,8 @@
                  ],
     "blockers":  [
                      {
-                         "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex background scanner/analyzer pressure still detected: 1."
-                     },
-                     {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 52/52 failed=0. retry_held=0 retry_tracked=21."
+                         "blocker":  "Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 77/77 failed=0. retry_held=0 retry_tracked=21."
                      }
                  ],
     "monitored_tasks":  [
