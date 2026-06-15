@@ -1,3 +1,14 @@
+## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST EXPANSION QUEUE READY, QA RUNNING
+
+**Updated UTC:** 2026-06-15T04:25:06Z  
+**Materialized QA:** RUNNING_PLEX_DECISION_PROBES, checked 65, passed 65, failed 0, rows found 122.  
+**Source cleanup:** retry-held backlog is 0; Twister failing source/release was quarantined with title kept wanted/retryable.  
+**TV-first expansion:** enriched 122 unique TV shows; first held wave is 64 active/returning 2026 whole-show candidates. Execution remains held until Materialized QA/playback gates pass.  
+**Movies:** year-backwards movie manifests exist but are lower priority than TV if concurrency is unsafe.  
+**Mission 2 IPTV:** Threadfin lineup is curated-only (4 channels: 7 Sydney, 7 Melbourne, 7mate, 7plus AFL Live). Plex default online channels are not from Threadfin; opt-out runner is blocked because local tokens are rejected by plex.tv account API and Chrome extension access is unavailable.  
+**Safety:** PAUSE_PUBLICATION remains active; no publication, broad expansion, Plex restart, physical tuner use, or destructive cleanup occurred.
+
+**Next action:** let full QA finish, then run readiness audit if PASS; if more QA failures appear, quarantine exact source/release rows only. Apply Plex Online Media Sources opt-out when a valid account session/token is available.
 ## URGENT BLOCKER RESOLUTION UPDATE - CURRENT USER OUTCOME SURFACE STABLE
 
 **Updated UTC:** 2026-06-15T00:33:38Z  
