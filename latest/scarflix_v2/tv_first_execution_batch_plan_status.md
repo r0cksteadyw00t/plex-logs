@@ -1,6 +1,6 @@
 # TV-First Execution Batch Plan
 
-Updated UTC: 2026-06-15T04:40:21Z
+Updated UTC: 2026-06-15T13:52:34Z
 Status: PASS_TV_FIRST_BATCHES_PREPARED
 Source wave: tv_active_2026_whole_show
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
