@@ -1,3 +1,17 @@
+## URGENT BLOCKER RESOLUTION UPDATE - CURRENT USER OUTCOME SURFACE STABLE
+
+**Updated UTC:** 2026-06-15T00:33:38Z  
+**User-visible delivery:** PASS - Plex collection JasonOS Watch Now Verified exists in Streaming Films with 126 PASS-only movies.  
+**Playback state:** PASS, active Plex sessions 0.  
+**Section 5 affected set:** 105 visible / 0 missing.  
+**Latest bounded Materialized QA:** RUNNING_PLEX_DECISION_PROBES, checked 1, passed 1, failed 0.  
+**Remaining formal blocker:** retry-held source/release backlog 11/19; full catalogue publication/expansion remains blocked.  
+**Automation change:** Go-live campaign runner now auto-refreshes the Watch Now collection and auto-starts a fresh campaign after expiry; continuation task is ready.  
+**Mission 002 IPTV:** Threadfin virtual adapter remains ready; Plex Live TV/DVR attach is still pending as a separate guarded config step.  
+**Safety:** PAUSE_PUBLICATION remains active; no Plex restart, no publication, no broad expansion, no source mutation, no path rewrite.
+
+**Next engineering action:** quarantine or replace held source/release rows only, keep title wanted/retryable, continue bounded QA batches until Materialized QA reaches full PASS, then prepare TV-safe Watch Now surface.
+
 ## BLOCKER RESOLUTION UPDATE - VERIFIED MOVIE SURFACE CREATED
 
 **Updated UTC:** 2026-06-15T00:22:18Z  
