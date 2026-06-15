@@ -1,33 +1,33 @@
 {
     "component":  "jasonos_mission002_community_sports_source_discovery",
     "schema_version":  "jasonos.iptv.community_sports_source_discovery_status.v2",
-    "status":  "REVIEW_SKIPPED_NETWORK_STATUS_ONLY",
+    "status":  "PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE",
     "discovery_scope":  "MULTI_SOURCE_V2_AGGRESSIVE_DISCOVERY_GATED_PROMOTION",
-    "started_utc":  "2026-06-15T14:20:04.9509207Z",
-    "updated_utc":  "2026-06-15T14:20:05.4335108Z",
+    "started_utc":  "2026-06-15T14:20:13.5623916Z",
+    "updated_utc":  "2026-06-15T14:21:25.8307440Z",
     "config_path":  "C:\\Users\\jason\\OneDrive\\Public\\TOKENS\\mission002_community_sports_source_discovery_config.json",
     "config_created":  false,
-    "config_upgraded_to_v2":  true,
+    "config_upgraded_to_v2":  false,
     "pause_publication_preserved":  true,
     "writes_threadfin":  false,
     "writes_plex":  false,
     "source_details_redacted_publicly":  true,
     "stream_urls_redacted_publicly":  true,
     "sources_configured":  7,
-    "sources_processed":  7,
-    "sources_fetched":  0,
-    "source_fetch_error_count":  0,
-    "child_sources_discovered":  0,
-    "duplicate_streams_suppressed":  0,
-    "channels_extracted_unique":  0,
-    "relevant_candidate_count":  0,
-    "probed_count":  0,
-    "probe_pass_count":  0,
+    "sources_processed":  47,
+    "sources_fetched":  17,
+    "source_fetch_error_count":  30,
+    "child_sources_discovered":  40,
+    "duplicate_streams_suppressed":  164,
+    "channels_extracted_unique":  1693,
+    "relevant_candidate_count":  195,
+    "probed_count":  40,
+    "probe_pass_count":  40,
     "probe_fail_count":  0,
-    "review_queue_count":  0,
-    "sports_source_engine_candidate_count":  0,
-    "pending_review_or_engine_candidate_count":  0,
-    "pending_private_source_count":  0,
+    "review_queue_count":  20,
+    "sports_source_engine_candidate_count":  1,
+    "pending_review_or_engine_candidate_count":  20,
+    "pending_private_source_count":  2,
     "private_index_path":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\community_sports_discovery\\mission002_community_source_index.private.json",
     "private_review_queue_path":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\community_sports_discovery\\mission002_community_review_queue.private.json",
     "private_pending_sports_source_package_path":  "D:\\PlexTools\\state\\jasonos_prime\\iptv\\community_sports_discovery\\mission002_external_sports_sources.discovered.pending_private.json",
@@ -36,13 +36,13 @@
     "public_redacted_coverage_gaps_path":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_community_sports_coverage_gaps.redacted.json",
     "public_redacted_source_graph_path":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_community_sports_source_graph.redacted.json",
     "worker_stats":  {
-                         "url_m3u":  4,
+                         "url_m3u":  44,
                          "markdown_url_index":  1,
                          "url_text":  0,
                          "github_code_search":  2,
                          "github_gist_search":  0,
-                         "child_sources_discovered":  0,
-                         "duplicate_streams_suppressed":  0
+                         "child_sources_discovered":  40,
+                         "duplicate_streams_suppressed":  164
                      },
     "source_class_counts":  [
                                 {
@@ -51,11 +51,15 @@
                                 },
                                 {
                                     "source_class":  "community_public_list",
-                                    "count":  3
+                                    "count":  10
                                 },
                                 {
                                     "source_class":  "github_code_search",
                                     "count":  2
+                                },
+                                {
+                                    "source_class":  "recast_or_mirror",
+                                    "count":  33
                                 }
                             ],
     "trust_tier_counts":  [
@@ -65,15 +69,50 @@
                               },
                               {
                                   "trust_tier":  "B",
-                                  "count":  3
+                                  "count":  10
                               },
                               {
                                   "trust_tier":  "D",
-                                  "count":  2
+                                  "count":  35
                               }
                           ],
     "recast_signal_counts":  [
-
+                                 {
+                                     "signal":  "/hls/",
+                                     "count":  45
+                                 },
+                                 {
+                                     "signal":  "cdn",
+                                     "count":  2
+                                 },
+                                 {
+                                     "signal":  "edge",
+                                     "count":  13
+                                 },
+                                 {
+                                     "signal":  "live/",
+                                     "count":  202
+                                 },
+                                 {
+                                     "signal":  "m3u8",
+                                     "count":  1689
+                                 },
+                                 {
+                                     "signal":  "proxy",
+                                     "count":  36
+                                 },
+                                 {
+                                     "signal":  "recast",
+                                     "count":  1497
+                                 },
+                                 {
+                                     "signal":  "source_class_recast_or_mirror",
+                                     "count":  1497
+                                 },
+                                 {
+                                     "signal":  "token=",
+                                     "count":  1
+                                 }
                              ],
     "implemented_workers":  [
                                 "Configured URL M3U fetcher",
@@ -100,6 +139,125 @@
                            },
     "next_safe_action":  "Use the private graph and pending package to select only high-confidence entries for the governed Sports Source Engine. Recast, aggregator, or GitHub-discovered entries require burn-in and repeated PASS probes before any Threadfin/Plex promotion.",
     "fetch_errors_redacted":  [
-
+                                  {
+                                      "source_ref":  "redacted-ff4570e86247",
+                                      "error":  "The remote server returned an error: (404) Not Found."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-0cc75042c1d7",
+                                      "error":  "The remote server returned an error: (403) Forbidden."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-b18a6a8cb1ff",
+                                      "error":  "Unable to connect to the remote server"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-d3a5b38f0aae",
+                                      "error":  "The remote server returned an error: (400) Bad Request."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-8445b0011811",
+                                      "error":  "The remote server returned an error: (400) Bad Request."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-9c6e0b53f1fc",
+                                      "error":  "The remote server returned an error: (400) Bad Request."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-bfbe7c805c82",
+                                      "error":  "The remote server returned an error: (400) Bad Request."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-bab1a0bad7f2",
+                                      "error":  "The remote name could not be resolved: \u0027wz7liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-c23d82072219",
+                                      "error":  "The remote name could not be resolved: \u0027wz3drp.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-807b02023f5c",
+                                      "error":  "The remote name could not be resolved: \u0027wz2liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-b34b29ddf2cb",
+                                      "error":  "The remote name could not be resolved: \u0027wz2liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-948f8ca9a777",
+                                      "error":  "The remote name could not be resolved: \u0027wz4liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-13c1f965ab2e",
+                                      "error":  "The remote name could not be resolved: \u0027wz2liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-227683943416",
+                                      "error":  "The remote name could not be resolved: \u0027wz2liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-378eb9fe18e3",
+                                      "error":  "The remote name could not be resolved: \u0027wz4liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-4f4847e83271",
+                                      "error":  "The remote name could not be resolved: \u0027wz4liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-a00caa90a2ad",
+                                      "error":  "The remote name could not be resolved: \u0027wz3liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-4d8b5e4239ab",
+                                      "error":  "The remote name could not be resolved: \u0027wz7liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-ec9fa5881a02",
+                                      "error":  "The remote name could not be resolved: \u0027wz2liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-fd6a4c90a684",
+                                      "error":  "The remote name could not be resolved: \u0027wz4liw.scahw.com.au\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-5589d31af0d3",
+                                      "error":  "The remote server returned an error: (404) Not Found."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-0cc75042c1d7",
+                                      "error":  "The remote server returned an error: (403) Forbidden."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-d0872eca6938",
+                                      "error":  "The remote server returned an error: (404) Not Found."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-2e9581c66e16",
+                                      "error":  "The remote name could not be resolved: \u0027lightning-actionhollywood-samsungaustralia.amagi.tv\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-47d1fc5f7c2b",
+                                      "error":  "The remote server returned an error: (400) Bad Request."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-71a13e18e37d",
+                                      "error":  "The remote server returned an error: (400) Bad Request."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-07d642c65e75",
+                                      "error":  "The remote name could not be resolved: \u0027bountyfilms-bounty-1-au.samsung.wurl.com\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-8cd8e6b68bde",
+                                      "error":  "The remote server returned an error: (404) Not Found."
+                                  },
+                                  {
+                                      "source_ref":  "redacted-df244fab014a",
+                                      "error":  "The remote name could not be resolved: \u0027drybar-drybarcomedy-1-au.samsung.wurl.com\u0027"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-72b2b8fcd4df",
+                                      "error":  "The remote name could not be resolved: \u0027dust-samsung-uk-au.samsung.wurl.com\u0027"
+                                  }
                               ]
 }
