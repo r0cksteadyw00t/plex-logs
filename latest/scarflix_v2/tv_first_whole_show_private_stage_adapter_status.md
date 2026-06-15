@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-15T12:44:01Z
+Updated UTC: 2026-06-15T14:33:31Z
 Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 3
 Episodes enumerated: 28
@@ -8,7 +8,7 @@ Episodes already staged: 21
 Episodes newly staged: 0
 Review: 7
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
 - Haunted Hotel: enumerated=10; staged=0; already=7; review=3; source=tmdb_season_details
