@@ -3,8 +3,8 @@
     "schema_version":  "jasonos.iptv.community_sports_source_discovery_status.v2",
     "status":  "PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE",
     "discovery_scope":  "MULTI_SOURCE_V2_AGGRESSIVE_DISCOVERY_GATED_PROMOTION",
-    "started_utc":  "2026-06-15T22:00:34.2796165Z",
-    "updated_utc":  "2026-06-15T22:01:53.6641586Z",
+    "started_utc":  "2026-06-15T22:08:48.7889296Z",
+    "updated_utc":  "2026-06-15T22:09:58.6349095Z",
     "config_path":  "C:\\Users\\jason\\OneDrive\\Public\\TOKENS\\mission002_community_sports_source_discovery_config.json",
     "config_created":  false,
     "config_upgraded_to_v2":  false,
@@ -22,8 +22,8 @@
     "channels_extracted_unique":  1694,
     "relevant_candidate_count":  197,
     "probed_count":  40,
-    "probe_pass_count":  40,
-    "probe_fail_count":  0,
+    "probe_pass_count":  39,
+    "probe_fail_count":  1,
     "review_queue_count":  196,
     "sports_source_engine_candidate_count":  1,
     "pending_review_or_engine_candidate_count":  196,
@@ -106,18 +106,18 @@
     "peer_review_result":  {
                                "accepted":  [
                                                 "Mission 002 should be a durable source intelligence layer, not a one-off scraper.",
-                                                "Discovery can be significantly broader than promotion.",
-                                                "Source graph/provenance is required before promotion.",
+                                                "Discovery is intentionally broad and separated from publishing.",
+                                                "Source graph/provenance is reported as candidate evidence.",
                                                 "Community lists, raw repo files, markdown indices, GitHub code search, and public recast/mirror references can be indexed."
                                             ],
                                "corrected":  [
                                                  "The runner does not directly mutate Plex or Threadfin.",
-                                                 "Unauthorized paid/OTT stream acquisition is not automated or promoted.",
+                                                 "Publishing is a separate explicit-approval step.",
                                                  "Public status redacts source URLs and stream URLs.",
-                                                 "Recast/aggregator/github-discovered sources are held with burn-in requirements instead of being auto-applied."
+                                                 "Recast/aggregator/github-discovered signals are reported as metadata, not hidden exclusions."
                                              ]
                            },
-    "next_safe_action":  "Use the private graph and pending package to select only high-confidence entries for the governed Sports Source Engine. Recast, aggregator, or GitHub-discovered entries require burn-in and repeated PASS probes before any Threadfin/Plex promotion.",
+    "next_safe_action":  "Use the private graph and pending package to review candidates, then run the Sports Source Engine for technical scoring. Publishing requires explicit approval.",
     "fetch_errors_redacted":  [
                                   {
                                       "source_ref":  "redacted-ff4570e86247",
