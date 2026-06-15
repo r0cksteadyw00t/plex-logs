@@ -1,0 +1,19 @@
+{
+  "component": "jasonos_prime_fast_track_tv_first_patch_report",
+  "status": "PASS_TV_FIRST_PRIORITY_ENFORCED",
+  "updated_utc": "2026-06-15T04:35:25Z",
+  "changed_file": "D:\\PlexTools\\Foundry\\workers\\JasonOS_Prime_FastTrackAccelerator.js",
+  "backup_file": "D:\\PlexTools\\backups\\jasonos_prime\\JasonOS_Prime_FastTrackAccelerator_20260615T143236.js",
+  "syntax_check": "PASS",
+  "behavior_change": "When Materialized QA passes, generic/movie/unscoped materialized expansion is held unless the TV-first protected wave path is used.",
+  "user_priority": "TV shows over movies when both cannot safely run concurrently.",
+  "first_tv_wave": "tv_active_2026_whole_show",
+  "first_tv_wave_count": 64,
+  "first_tv_wave_manifest": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\held_year_waves_enriched\\tv_active_2026_whole_show.enriched.held.json",
+  "generic_movie_or_unscoped_expansion_allowed": false,
+  "materialized_qa_status": "RUNNING_PLEX_DECISION_PROBES",
+  "materialized_qa_checked": 110,
+  "materialized_qa_passed": 110,
+  "materialized_qa_failed": 0,
+  "next_safe_action": "Let Materialized QA finish. If PASS, run go-live readiness audit, then use a protected TV-first executor against tv_active_2026_whole_show before movie waves."
+}
