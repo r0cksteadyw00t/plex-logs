@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_tv_first_qa_status_20260615_v152",
-      "created_at": "2026-06-15T04:37:48Z",
-      "expires_at": "2026-06-16T04:37:48Z",
+      "instruction_id": "phase0_record_tv_first_priority_status_20260615_v153",
+      "created_at": "2026-06-15T04:54:05Z",
+      "expires_at": "2026-06-16T04:54:05Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,15 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff": "immediate"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "TV-first priority enforced. Materialized QA at 110/122 checked (110 passed). PAUSE_PUBLICATION active. No expansion or publishing instructed. Record only.",
-            "source_instruction_id": "phase0_record_tv_first_qa_status_20260615_v152"
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_record_tv_first_priority_status_20260615_v153",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -29,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T04:37:48Z",
+  "updated_utc": "2026-06-15T04:54:05Z",
   "source": "grok_api"
 }
