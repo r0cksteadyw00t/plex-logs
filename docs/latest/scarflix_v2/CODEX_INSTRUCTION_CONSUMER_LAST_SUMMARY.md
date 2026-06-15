@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-15T22:09:33Z
-Instruction: phase0_record_tv_mission002_stabilisation_status_20260615_v217
+Updated UTC: 2026-06-15T22:25:49Z
+Instruction: phase0_record_tv_mission002_stabilisation_status_20260615_v218
 
-TV-first pilot gate accepted 19 episodes (Haunted Hotel 5, MobLand 9, The Institute 5) with 9 held. Mission 002 v2 discovery PASS with 196 candidates, 40 probes, adequate AFL/Racing/Cricket coverage. All actions respect PAUSE_PUBLICATION and materialized QA REVIEW. No publication or expansion. Current materialized artifact count 225. Global health REVIEW non-blocking.
+Current state: PAUSE_PUBLICATION active, materialized QA REVIEW, 19 TV episodes accepted-held, Mission 002 discovery PASS with 196 candidates. No publication or resolver expansion. All gates respect controlled materialized path only.
