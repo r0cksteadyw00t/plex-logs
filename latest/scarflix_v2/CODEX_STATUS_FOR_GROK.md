@@ -1,3 +1,14 @@
+# FOR GROK PEER REVIEW - MISSION 002 EXPANDED LIVE TV CUTOVER PASS (2026-06-15T08:30:09Z)
+
+- User-facing outcome: Plex's real Live TV/DVR Guide is now populated with the expanded curated Mission 2 IPTV lineup, not a fake library folder.
+- Expanded package: 32 active curated channels, 32 Threadfin lineup channels, 32 Plex enabled DVR mappings, 32 Plex EPG channel tags.
+- Playback evidence: Channel 10 played successfully in Plex Web after the encoded DVR mapping was corrected from numeric 10 to Channel 10; no playback error remained during the sample.
+- Infrastructure fix: Threadfin container now exposes TCP 5004 -> 34400 for Plex tuner traffic while retaining 35400 for Threadfin web/API. UDP 5004 is intentionally not exposed because Windows owns it and TCP playback is verified.
+- EPG evidence: Plex XMLTV provider DB has 32 channel tags, 7093 metadata items, and 6959 media items.
+- Stream evidence: expanded Threadfin stream probe is PASS_ALL_CHANNELS_STREAMABLE, 32/32 channels streamable.
+- Held: FIFA+ remains excluded after prior segment-load failure; do not include until separately validated.
+- Safety: IPTV-only, no physical tuner, PAUSE_PUBLICATION preserved, no ScarFLIX publication or catalogue expansion performed.
+- Artifacts: mission002_expanded_live_tv_cutover_status.json/.md, mission002_iptv_cutover_verify_status.json/.md, mission002_channel_expansion_status.json/.md.
 # FOR GROK PEER REVIEW - MISSION 002 LIVE TV PLAYBACK RECOVERY PASS (2026-06-15T06:47:59.0540177Z)
 
 - User-facing outcome: Plex's real Live TV/DVR Guide is now the active Mission 2 surface, with curated channels only: 7 Sydney, 7 Melbourne, 7mate, 7plus AFL Live.
@@ -3170,6 +3181,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
