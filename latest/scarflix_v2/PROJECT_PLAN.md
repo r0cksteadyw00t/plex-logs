@@ -1,3 +1,11 @@
+# Mission 002 Sports Source Engine - Foundation PASS (2026-06-15T12:09:00Z)
+
+- Built the dedicated Mission 002 sports ingestion engine and metadata gate.
+- Added private source registry schema and sports channel metadata schema.
+- Classified the current 33-channel active baseline as live-safe and promoted.
+- External premium sports remains held until a governed private source registry exists.
+- No backend apply occurred in this pass; Threadfin remains PASS at 33 active channels.
+
 # Mission 002 Aggressive Sports Push - Local Only (2026-06-15T10:00:14Z)
 
 - Added external sports M3U/XMLTV probe runner for Fox Footy/Kayo/Fox Sports/ESPN/beIN/AFL candidates.
