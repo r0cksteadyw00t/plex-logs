@@ -1,3 +1,17 @@
+## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST PROTECTED PILOT MANIFEST PREPARED
+
+**Updated UTC:** 2026-06-15T04:49:44Z  
+**User priority applied:** TV shows are now primary over movies whenever concurrency is constrained.  
+**New runner:** JasonOS_Prime_TVFirstProtectedPilotRunner.js created, deployed, syntax-checked, and run in prepare-only mode.  
+**Runner status:** PASS_PROTECTED_TV_PILOT_REQUEST_PREPARED.  
+**Prepared TV pilot:** 3 shows: Haunted Hotel, MobLand, The Institute.  
+**Prepared manifest:** D:\PlexTools\state\jasonos_prime\catalogue_expansion\tv_first_protected_pilot\tv_first_protected_pilot_request.prepared.json  
+**Rollback manifest:** D:\PlexTools\state\jasonos_prime\catalogue_expansion\tv_first_protected_pilot\rollback\tv_first_protected_pilot_rollback.prepared.json  
+**Adapter decision:** generic direct resolver and generic staged publisher remain out of path because they can move toward Plex-visible direct .strm publication. The TV-first path now requires a dedicated additive TV staging adapter with rollback and post-wave verification.  
+**Safety:** No publication, broad expansion, Plex refresh, Real-Debrid mutation, webdav_map write, path rewrite, legacy direct resolver call, or generic publisher call occurred.
+
+**Next safe action:** build the additive TV staging adapter for the 3 prepared shows only, then run it behind the TV-scoped QA gate and immediate post-pilot verification.
+
 ## ACTUAL GO-LIVE DELIVERY UPDATE - TV-FIRST PILOT SOURCE AVAILABILITY
 
 **Updated UTC:** 2026-06-15T04:44:59Z  
