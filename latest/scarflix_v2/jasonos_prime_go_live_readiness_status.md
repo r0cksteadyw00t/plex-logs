@@ -1,4 +1,4 @@
-# JasonOS Prime Go-Live Readiness Status
+﻿# JasonOS Prime Go-Live Readiness Status
 
 Updated UTC: 2026-06-15T00:21:16Z
 
