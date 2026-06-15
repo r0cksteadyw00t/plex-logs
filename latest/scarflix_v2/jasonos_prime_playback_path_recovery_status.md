@@ -1,7 +1,7 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-15T05:01:11Z  
-**Status:** PASS
+**Updated UTC:** 2026-06-15T05:05:28Z  
+**Status:** REVIEW
 
 ## Scope
 
@@ -13,7 +13,7 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 - WebDAV bridge after: True
 - Plex identity: True
 - rclone processes after: 1
-- S:\media after: ok=True, timed_out=False
+- S:\media after: ok=False, timed_out=True
 - S:\media\catalog after: ok=True, timed_out=False
 - Watch Now probe source: cached_previous_status
 
@@ -24,4 +24,4 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 ## Failures
 
-
+S: media/catalog path is not reliably ready
