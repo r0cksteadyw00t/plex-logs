@@ -1,6 +1,6 @@
 ﻿# Mission 002 IPTV Threadfin Virtual Adapter Verification
 
-**Updated UTC:** 2026-06-15T08:31:45Z  
+**Updated UTC:** 2026-06-15T08:56:54Z  
 **Status:** PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE
 
 ## Safety
@@ -18,31 +18,31 @@
 - Held M3U channel count: 4
 - Active M3U exists: True
 - Active XMLTV exists: True
-- Active M3U channel count: 32
+- Active M3U channel count: 47
 - Expanded M3U exists: True
 - Expanded XMLTV exists: True
-- Expanded M3U channel count: 32
+- Expanded M3U channel count: 47
 - Threadfin lineup parse status: PARSED
-- Threadfin lineup channel count: 32
+- Threadfin lineup channel count: 47
 - Plex tuner base URL: http://127.0.0.1:5004
 
 ## Container
 
 - Docker available: True
 - Container running: True
-- Container line: jasonos-mission002-threadfin|Up 15 minutes
+- Container line: jasonos-mission002-threadfin|Up 8 seconds
 - Error: 
 
 ## Endpoints
 
-- http://127.0.0.1:35400/web/: ok=True, http=200, ms=221, error=
-- http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=26, error=
-- http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=75, error=
-- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=41, error=
+- http://127.0.0.1:35400/web/: ok=True, http=200, ms=55, error=
+- http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=10, error=
+- http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=22, error=
+- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=12, error=
 
 ## Plex Tuner Entrypoint
 
-- http://127.0.0.1:5004/auto/v10: ok=True, http=200, ms=35, error=
+- http://127.0.0.1:5004/auto/v10: ok=True, http=200, ms=9, error=
 
 ## Decision
 
