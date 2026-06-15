@@ -1,3 +1,18 @@
+# Mission 002 AFL IPTV Expansion - PASS (2026-06-15T09:15:44Z)
+
+User outcome delivered: Plex real Live TV/DVR now includes the curated AFL-relevant Seven, 7mate, and 7plus IP streams that were missing from the earlier lineup.
+
+- Active curated M3U channels: 47.
+- Threadfin lineup channels: 47.
+- Plex enabled DVR mappings: 47.
+- Plex EPG channel tags: 47.
+- AFL-relevant Plex mappings: 19.
+- AFL stream probe: 17/17 PASS after targeted retry.
+- IPTV-only remains enforced. No physical tuner was used.
+- ScarFLIX PAUSE_PUBLICATION remains active; no ScarFLIX publication or catalogue expansion occurred.
+- FIFA+ remains held after the earlier segment-load failure.
+
+Next Mission 002 action: use this 47-channel curated package as the active Live TV baseline. If a Plex client still shows stale channels, refresh/reopen the Plex client or Live TV source; do not publish the raw all-provider catalogue into Plex.
 ## MISSION 002 LIVE TV CORRECTION - CURATED THREADFIN DVR ATTACHED
 
 **Updated UTC:** 2026-06-15T05:59:23Z  
@@ -4268,6 +4283,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
