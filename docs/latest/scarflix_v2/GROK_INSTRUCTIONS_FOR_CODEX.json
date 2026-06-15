@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_mission002_live_tv_stabilisation_status_20260615_v170",
-      "created_at": "2026-06-15T09:28:45Z",
-      "expires_at": "2026-06-16T09:28:45Z",
+      "instruction_id": "phase0_record_mission002_afl_scope_correction_and_stabilisation_20260615_v171",
+      "created_at": "2026-06-15T09:45:31Z",
+      "expires_at": "2026-06-16T09:45:31Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -16,12 +16,19 @@
         "max_retries": 2,
         "backoff_seconds": 30
       },
+      "action": {
+        "type": "write_status_summary",
+        "parameters": {
+          "summary": "Mission 002 AFL scope corrected to Melbourne/Sydney FTA only (33 channels active). Paid AFL (Fox Footy/Kayo) held. PAUSE_PUBLICATION active. No ScarFLIX publishing/expansion. Phase 0 stabilisation record only.",
+          "source_instruction_id": "phase0_record_mission002_afl_scope_correction_and_stabilisation_20260615_v171"
+        }
+      },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
             "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_record_mission002_live_tv_stabilisation_status_20260615_v170",
+            "source_instruction_id": "phase0_record_mission002_afl_scope_correction_and_stabilisation_20260615_v171",
             "auto_added_by_bridge": true
           }
         }
@@ -30,6 +37,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T09:28:45Z",
+  "updated_utc": "2026-06-15T09:45:31Z",
   "source": "grok_api"
 }
