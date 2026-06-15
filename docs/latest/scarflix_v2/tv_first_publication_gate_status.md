@@ -1,15 +1,15 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-15T12:47:07Z
-Status: PASS_TV_PUBLICATION_GATE_ACCEPTED_HELD
-Accepted private-stage episodes: 21
+Updated UTC: 2026-06-15T14:35:20Z
+Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
+Accepted private-stage episodes: 19
 Held/missing episodes: 7
-Validator: PASS_PRIVATE_STAGE_VALIDATED
+Validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Sentinel: PASS/LOW
 
 ## Accepted Counts
-- Haunted Hotel: 7
+- Haunted Hotel: 5
 - MobLand: 9
 - The Institute: 5
 
@@ -30,4 +30,4 @@ Sentinel: PASS/LOW
 - no_webdav_map_write_performed: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Build/run an additive TV publication adapter for accepted private candidates only, with rollback and post-publication Plex/WebDAV verification.
+Next safe action: Keep TV publication held until currently staged candidates validate cleanly.
