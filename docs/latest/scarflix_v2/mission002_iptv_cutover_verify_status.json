@@ -2,7 +2,7 @@
     "component":  "jasonos_mission002_iptv_cutover_verify",
     "schema_version":  "jasonos.iptv.threadfin_verify.v2",
     "status":  "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE",
-    "updated_utc":  "2026-06-15T08:31:45Z",
+    "updated_utc":  "2026-06-15T08:56:54Z",
     "iptv_only":  true,
     "physical_tuner_used":  false,
     "plex_touched":  false,
@@ -16,15 +16,15 @@
                     "held_m3u_channel_count":  4,
                     "active_m3u_exists":  true,
                     "active_xmltv_exists":  true,
-                    "active_m3u_channel_count":  32,
+                    "active_m3u_channel_count":  47,
                     "expanded_m3u_exists":  true,
                     "expanded_xmltv_exists":  true,
-                    "expanded_m3u_channel_count":  32
+                    "expanded_m3u_channel_count":  47
                 },
     "container":  {
                       "docker_available":  true,
                       "running":  true,
-                      "line":  "jasonos-mission002-threadfin|Up 15 minutes",
+                      "line":  "jasonos-mission002-threadfin|Up 8 seconds",
                       "error":  ""
                   },
     "endpoints":  [
@@ -32,7 +32,7 @@
                           "url":  "http://127.0.0.1:35400/web/",
                           "ok":  true,
                           "status_code":  200,
-                          "elapsed_ms":  221,
+                          "elapsed_ms":  55,
                           "bytes":  7118,
                           "error":  ""
                       },
@@ -40,7 +40,7 @@
                           "url":  "http://127.0.0.1:35400/discover.json",
                           "ok":  true,
                           "status_code":  200,
-                          "elapsed_ms":  26,
+                          "elapsed_ms":  10,
                           "bytes":  321,
                           "error":  ""
                       },
@@ -48,15 +48,15 @@
                           "url":  "http://127.0.0.1:35400/lineup.json",
                           "ok":  true,
                           "status_code":  200,
-                          "elapsed_ms":  75,
-                          "bytes":  4654,
+                          "elapsed_ms":  22,
+                          "bytes":  6949,
                           "error":  ""
                       },
                       {
                           "url":  "http://127.0.0.1:35400/lineup_status.json",
                           "ok":  true,
                           "status_code":  200,
-                          "elapsed_ms":  41,
+                          "elapsed_ms":  12,
                           "bytes":  102,
                           "error":  ""
                       }
@@ -65,13 +65,13 @@
                                 "url":  "http://127.0.0.1:5004/auto/v10",
                                 "ok":  true,
                                 "status_code":  200,
-                                "elapsed_ms":  35,
+                                "elapsed_ms":  9,
                                 "bytes":  0,
                                 "error":  ""
                             },
     "lineup":  {
                    "parse_status":  "PARSED",
-                   "channel_count":  32
+                   "channel_count":  47
                },
     "next_safe_action":  "If PASS and Plex Live TV/DVR is already attached, verify a small user-facing playback sample before broadening channel or EPG scope. If held, start Threadfin in a quiet Plex window."
 }
