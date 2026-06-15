@@ -1,7 +1,7 @@
 # JasonOS Prime Go-Live 16h Campaign Status
 
-- Status: RUNNING
-- Updated UTC: 2026-06-15T00:35:03Z
+- Status: HELD_DUPLICATE_RUNNER_LOCK
+- Updated UTC: 2026-06-15T00:38:58Z
 - Started UTC: 2026-06-13T13:22:00Z
 - Ends UTC: 2026-06-15T00:36:58Z
 - Cycle: 325
