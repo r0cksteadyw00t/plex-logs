@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_mission002_iptv_threadfin_apply",
     "schema_version":  "jasonos.iptv.threadfin_apply.v1",
-    "status":  "PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH",
-    "started_utc":  "2026-06-15T00:32:11Z",
-    "updated_utc":  "2026-06-15T00:32:42Z",
+    "status":  "FAIL_THREADFIN_COMPOSE_MISSING",
+    "started_utc":  "2026-06-15T00:40:23Z",
+    "updated_utc":  "2026-06-15T00:40:24Z",
     "iptv_only":  true,
     "physical_tuner_used":  false,
     "cutover_enabled":  false,
@@ -13,52 +13,24 @@
     "readiness_status":  "PASS_CUTOVER_PACKAGE_READY_HELD",
     "preflight_status":  "PASS_CUTOVER_PREFLIGHT_READY_HELD",
     "threadfin_base_url":  "http://127.0.0.1:35400",
-    "compose_path":  "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\jasonos\\iptv\\cutover\\docker-compose.threadfin.held.yml",
+    "compose_path":  "jasonos\\iptv\\cutover\\docker-compose.threadfin.held.yml",
     "docker":  {
-                   "ok":  true,
-                   "command":  "docker compose",
-                   "exit_code":  0,
-                   "output":  " Container jasonos-mission002-threadfin Running  | container_already_running_verified"
+                   "ok":  false,
+                   "command":  "",
+                   "exit_code":  -1,
+                   "output":  ""
                },
     "endpoints":  [
-                      {
-                          "url":  "http://127.0.0.1:35400/web/",
-                          "ok":  true,
-                          "status_code":  200,
-                          "elapsed_ms":  50,
-                          "error":  ""
-                      },
-                      {
-                          "url":  "http://127.0.0.1:35400/discover.json",
-                          "ok":  true,
-                          "status_code":  200,
-                          "elapsed_ms":  16,
-                          "error":  ""
-                      },
-                      {
-                          "url":  "http://127.0.0.1:35400/lineup.json",
-                          "ok":  true,
-                          "status_code":  200,
-                          "elapsed_ms":  20,
-                          "error":  ""
-                      },
-                      {
-                          "url":  "http://127.0.0.1:35400/lineup_status.json",
-                          "ok":  true,
-                          "status_code":  200,
-                          "elapsed_ms":  17,
-                          "error":  ""
-                      }
+
                   ],
     "actions":  [
-                    "active_m3u_xmltv_copied_from_held_package",
-                    "threadfin_container_start_requested"
+
                 ],
     "warnings":  [
-                     "docker_compose_reported_nonzero_but_container_is_running"
+
                  ],
     "errors":  [
-
+                   "threadfin_compose_missing"
                ],
     "next_safe_action":  "If PASS, attach Plex Live TV/DVR to the Threadfin virtual adapter in a quiet window. If HELD, wait for active Plex sessions to clear."
 }
