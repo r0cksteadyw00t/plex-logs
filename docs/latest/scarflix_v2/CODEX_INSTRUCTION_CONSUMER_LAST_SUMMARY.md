@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-15T14:54:50Z
-Instruction: phase0_record_tv_mission002_stabilisation_status_20260615_v190
+Updated UTC: 2026-06-15T15:10:51Z
+Instruction: phase0_record_tv_mission002_stabilisation_status_20260615_v191
 
-Phase 0 stabilisation continuing under PAUSE_PUBLICATION. TV pilot private staging accepted 19 episodes held 9. Mission 002 v2 discovery PASS with 196 candidates, AFL coverage adequate, premium sports missing. Materialized QA REVIEW. No publishing or legacy resolver actions.
+Phase 0 stabilisation continuing under PAUSE_PUBLICATION. TV pilot private staging and Mission 002 sports discovery both held at REVIEW gates. No publishing or resolver expansion. Materialized QA remains REVIEW. Record only.
