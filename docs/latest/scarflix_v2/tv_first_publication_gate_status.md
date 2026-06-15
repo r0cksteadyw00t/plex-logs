@@ -1,22 +1,30 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-15T14:36:30Z
-Status: PASS_TV_PUBLICATION_GATE_ACCEPTED_HELD
-Accepted private-stage episodes: 19
-Held/missing episodes: 9
+Updated UTC: 2026-06-15T23:14:26Z
+Status: HELD_FULL_SEASON_INCOMPLETE
+Accepted private-stage episodes: 24
+Expected pilot episodes: 28
+Full-season complete: false
+Full-season missing: 4
+Held/missing episodes: 4
 Validator: PASS_PRIVATE_STAGE_VALIDATED
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Sentinel: PASS/LOW
 
 ## Accepted Counts
-- Haunted Hotel: 5
+- Haunted Hotel: 8
 - MobLand: 9
-- The Institute: 5
+- The Institute: 7
 
 ## Held Counts
-- Haunted Hotel: 5
+- Haunted Hotel: 2
 - MobLand: 1
-- The Institute: 3
+- The Institute: 1
+
+## Full-Season Missing Counts
+- Haunted Hotel: 2
+- MobLand: 1
+- The Institute: 1
 
 ## Safety
 - gate_only: true
@@ -30,4 +38,4 @@ Sentinel: PASS/LOW
 - no_webdav_map_write_performed: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Build/run an additive TV publication adapter for accepted private candidates only, with rollback and post-publication Plex/WebDAV verification.
+Next safe action: Do not publish partial TV seasons. Continue private source retry/monitoring until every pilot episode validates, then rerun this gate.
