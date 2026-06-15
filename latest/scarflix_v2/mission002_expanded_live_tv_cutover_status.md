@@ -1,42 +1,53 @@
-# Mission 002 Expanded Live TV Cutover - PASS
+# Mission 002 Expanded AFL Live TV Cutover - PASS
 
-**Updated UTC:** 2026-06-15T08:30:09Z  
-**Status:** PASS_EXPANDED_CURATED_LIVE_TV_USER_VERIFIED
+Updated UTC: 2026-06-15T09:13:43Z
 
-## User Outcome
+Status: PASS_EXPANDED_AFL_CURATED_LIVE_TV_USER_VERIFIED
 
-Plex's real Live TV/DVR Guide is now populated with the expanded curated IPTV package. Channel 10 playback was verified through Plex Web after fixing the Plex DVR encoded channel mapping and exposing Threadfin's tuner path on TCP 5004.
+User outcome delivered: Plex's real Live TV/DVR guide is populated with the expanded 47-channel curated IPTV lineup, including 19 AFL-relevant Seven, 7mate, and 7plus channel mappings.
 
-## Current Numbers
+## Counts
 
-- Active curated channels: 32
-- Threadfin lineup channels: 32
-- Plex enabled DVR mappings: 32
-- Plex EPG channel tags: 32
-- Plex EPG metadata items: 7093
-- Plex EPG media items: 6959
-- Stream probe: 32 pass / 0 fail
-- Active Plex sessions after verification: 0
+- Active curated M3U channels: 47
+- Threadfin lineup channels: 47
+- Plex enabled DVR mappings: 47
+- Plex EPG channel tags: 47
+- AFL-relevant Plex mappings: 19
+- AFL stream probe: 17/17 PASS after targeted retry
 
-## Plex DVR Evidence
+## AFL Channels Now In Plex Mapping
 
-- Device status: alive
-- Device URI: http://127.0.0.1:35400
-- Advertised tuners: 4
-- Channel 10 device identifier: Channel 10
+- 7 Adelaide
+- 7 Brisbane
+- 7 Cairns
+- 7 Mackay
+- 7 Melbourne
+- 7 Perth
+- 7 Rockhampton
+- 7 Sunshine Coast
+- 7 Sydney
+- 7 Toowoomba
+- 7 Townsville
+- 7 Wide Bay
+- 7mate Adelaide
+- 7mate Brisbane
+- 7mate Melbourne
+- 7mate Perth
+- 7mate Regional
+- 7mate Sydney
+- 7plus AFL Live
 
-## Channel Tags
+## Verification
 
-mjh-10-vic Channel 10, mjh-10bold-vic 10 Drama, mjh-10peach-vic 10 Comedy, mjh-10shake-vic Nickelodeon, mjh-7afl-fast 7plus AFL Live, mjh-7bravo-fast 7Bravo, mjh-7flix-mel 7flix, mjh-7mate-syd 7mate, mjh-7now-fast 7now, mjh-7two-mel 7two, mjh-9crime-fast 9Crime, mjh-abc-kids ABC Kids, mjh-abc-me ABC Entertains, mjh-abc-news ABC NEWS, mjh-abc-tv-plus ABC Family, mjh-abc-vic ABC TV, mjh-channel-9-vic Channel 9, mjh-gem-vic 9Gem, mjh-go-vic 9Go!, mjh-life-vic 9Life, mjh-racing-fast Racing.com, mjh-racingwa-fast Racing WA, mjh-rush-vic 9Rush, mjh-sbs-2syd SBS VICELAND, mjh-sbs-3syd SBS Food, mjh-sbs-4syd SBS World Movies, mjh-sbs-5nsw NITV, mjh-sbs-6nat SBS WorldWatch, mjh-sbs-sbst SBS, mjh-seven-mel 7 Melbourne, mjh-seven-syd 7 Sydney, mjh-sky-news-now Sky News Now
+- Threadfin virtual tuner is reachable and reports 47 lineup channels.
+- Plex DVR mapping now has 47 enabled mappings and 19 AFL-relevant mappings.
+- Plex XMLTV provider DB has 47 channel tags and 19 AFL-relevant tags.
+- AFL stream probe status is PASS_AFL_CHANNELS_STREAMABLE_AFTER_RETRY.
 
 ## Safety
 
-- IPTV only: true
-- Physical tuner used: false
-- ScarFLIX publication touched: false
-- PAUSE_PUBLICATION preserved: true
-- TCP 5004 is exposed for Plex tuner traffic; UDP 5004 is intentionally not exposed because Windows owns that port and Plex playback is working over TCP.
+IPTV-only remains enforced. No physical tuner was used. PAUSE_PUBLICATION remains active for ScarFLIX. No ScarFLIX publication or catalogue expansion was performed. The raw all-provider channel catalogue is used only as input data; Plex receives the curated selection only.
 
 ## Held
 
-FIFA+ remains held because it previously failed segment-load validation. It should be tested separately before inclusion.
+FIFA+ remains held after the earlier ffmpeg segment-load failure and should not be added until separately validated.
