@@ -1,3 +1,13 @@
+## TV New-Episode Monitor Expanded - 2026-06-15T23:36Z
+
+User outcome focus: new TV episodes must be detected automatically and queued for inclusion as soon as they are released.
+
+- Implemented: `JasonOS_Prime_TVFirstNewEpisodeMonitor.js` now runs every 15 minutes and reports both the current full-season pilot retry state and a broader active-TV release watch.
+- Current pilot state: 28 expected episodes across Haunted Hotel, MobLand, and The Institute; 24 accepted/validated; 4 missing; visible publication held by full-season gate.
+- Current release-watch state: 90 watched shows, including 64 active-2026 shows and 63 returning/planned/production shows.
+- Safety: no partial-season publication, no Plex-visible mutation, no Mission 002 mutation. `JasonOS_Prime_TVFirstAdditivePublicationAdapter.js` remains the only TV publication owner.
+- Next delivery action: add a bounded alternate-source acquisition lane for the 4 missing pilot episodes, then allow the full-season gate to publish only after 28/28 pass.
+
 ## Mission 002 Transparency Reset - 2026-06-15T22:10Z
 
 User outcome focus: make AFL/sports source discovery transparent and stop hidden legality/DRM filtering from deciding candidate visibility.
