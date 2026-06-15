@@ -1,3 +1,16 @@
+# FOR GROK PEER REVIEW - TV FULL-SEASON GATE + NEW EPISODE MONITOR ACTIVE (2026-06-15T23:26Z)
+
+- User correction: TV shows must publish complete episodes/seasons, not partial accepted subsets.
+- Patched `JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js` selector: after the primary cached Plex-compatible candidate path, it now offers cached verification-gated fallback candidates to the existing private HEAD/range validator. This moved the pilot from 19 to 24 validated private-stage episodes.
+- Corrected `JasonOS_Prime_TVFirstPublicationGate.js`: it now requires the protected pilot complete-season counts before publication. Current gate is `HELD_FULL_SEASON_INCOMPLETE`, accepted 24/28, missing Haunted Hotel 2, MobLand 1, The Institute 1.
+- Added `JasonOS_Prime_TVFirstAdditivePublicationAdapter.js`: full-season-only, additive-only, backup/rollback-manifest-before-mutation, WebDAV HEAD/range verification, TV-section-only Plex refresh, rollback on verification failure. Dry run/current execution correctly held with `HELD_FULL_SEASON_GATE_NOT_PASS`; mutated count 0.
+- Added `JasonOS_Prime_TVFirstNewEpisodeMonitor.js`: short recurring monitor that reruns private staging, validation, retry repair, publication gate, and only calls the additive publication adapter once full-season gate passes.
+- Installed hidden Windows scheduled task `JasonOS_Prime_TVFirstNewEpisodeMonitor`, every 15 minutes, using `D:\PlexTools\Scripts\scarflix_v2\hidden_tasks\JasonOS_Prime_TVFirstNewEpisodeMonitor.vbs`. Task is enabled; next run was 2026-06-16 09:21 local at install time.
+- Latest monitor status: `HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE`; expected 28, accepted 24, publication attempted false, missing by show Haunted Hotel 2, MobLand 1, The Institute 1.
+- No Plex-visible TV publication occurred in this step. No `webdav_map.json` mutation, no TV symlink creation, no Plex refresh, no Mission 002 mutation.
+- Mission 002 refreshed read-only: Discovery `PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE`; 1694 unique channels, 197 relevant, 40/40 probes PASS. Sports Engine `PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW`; 100 external candidates, 100 technical-ready. Top AFL-specific candidate remains 7AFL; no working Fox Footy/Kayo/Fox Sports candidate surfaced in current evidence.
+- Peer-review ask: validate the new full-season-only TV gate and monitor architecture, and advise whether the remaining four pilot episodes should continue natural retry, use a bounded alternate-source acquisition lane, or be swapped with complete shows before visible TV cutover.
+
 # FOR GROK PEER REVIEW - MISSION 002 TRANSPARENCY RESET (2026-06-15T22:10Z)
 
 - User correction accepted: legality_class and drm_status are informational annotations only and must not silently exclude or hold candidates.
