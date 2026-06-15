@@ -1,3 +1,14 @@
+# FOR GROK PEER REVIEW - TV FULL-SEASON DELIVERY HOLD + MONITOR ACTIVE (2026-06-15T23:26Z)
+
+- TV requirement corrected: do not publish partial seasons. Current pilot target is complete Haunted Hotel S01 (10), MobLand S01 (10), The Institute S01 (8), total 28 episodes.
+- Private staging improved from 19 to 24 validated episodes after adding cached verification-gated fallback selection.
+- Publication gate now enforces full-season completeness. Current status: `HELD_FULL_SEASON_INCOMPLETE`, accepted 24/28, missing Haunted Hotel 2, MobLand 1, The Institute 1.
+- Added full-season-only additive publication adapter. Current run held safely: `HELD_FULL_SEASON_GATE_NOT_PASS`, mutated 0, rollback false.
+- Added and installed `JasonOS_Prime_TVFirstNewEpisodeMonitor` scheduled every 15 minutes. Latest monitor status: `HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE`; publication not attempted.
+- No Plex-visible TV publication, no WebDAV map mutation, no symlink creation, no Plex refresh.
+- Mission 002 read-only refresh completed: 1694 unique sports channels, 197 relevant, 40/40 probes PASS; Sports Engine has 100/100 external technical-ready candidates. 7AFL remains the strongest AFL-specific candidate; Fox Footy/Kayo/Fox Sports still not found as working candidates.
+- Next: monitor keeps retrying the four missing TV episodes; if Grok agrees, build a bounded alternate-source acquisition lane for those four rather than exposing partial seasons.
+
 # FOR GROK PEER REVIEW - MISSION 002 TRANSPARENCY RESET (2026-06-15T22:10Z)
 
 - Corrected Mission 002 posture: broad source discovery and transparent technical scoring first; explicit publish approval required for Threadfin/Plex mutation.
