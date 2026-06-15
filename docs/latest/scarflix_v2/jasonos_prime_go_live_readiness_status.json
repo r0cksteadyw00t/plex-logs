@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-15T01:24:02Z",
-    "updated_utc":  "2026-06-15T01:24:10Z",
+    "started_utc":  "2026-06-15T01:29:04Z",
+    "updated_utc":  "2026-06-15T01:29:11Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -61,10 +61,10 @@
                          "progress_percent":  45,
                          "summary":  "Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover.",
                          "evidence":  [
-                                          "MaterializedQA=RUNNING_PLEX_DECISION_PROBES 31/33 failed=2 RetryHeld=0/21 Section5Visible=105 Section5Missing=0 WatchNowCollection=PASS_COLLECTION_AVAILABLE Movies=126 PausePublication=True"
+                                          "MaterializedQA=RUNNING_PLEX_DECISION_PROBES 11/11 failed=0 RetryHeld=0/21 Section5Visible=105 Section5Missing=0 WatchNowCollection=PASS_COLLECTION_AVAILABLE Movies=126 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 31/33 failed=2. retry_held=0 retry_tracked=21."
+                                          "Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 11/11 failed=0. retry_held=0 retry_tracked=21."
                                       ],
                          "next_safe_action":  "Keep the verified Watch Now collection available while bounded QA and held-source replacement continue; no broad expansion until QA reaches PASS.",
                          "requires_quiet_window":  true,
@@ -155,7 +155,7 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 31/33 failed=2. retry_held=0 retry_tracked=21."
+                         "blocker":  "Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 11/11 failed=0. retry_held=0 retry_tracked=21."
                      }
                  ],
     "monitored_tasks":  [
