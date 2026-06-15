@@ -1,50 +1,66 @@
 {
-  "component": "jasonos_prime_blocker_resolution_status",
-  "status": "REVIEW_FULL_CATALOGUE_QA_BLOCKER_REMAINS",
-  "updated_utc": "2026-06-15T00:22:18Z",
-  "resolved_this_run": [
-    {
-      "blocker": "verified evidence not user-visible",
-      "resolution": "Created Plex collection JasonOS Watch Now Verified in Streaming Films",
-      "result": "PASS",
-      "count": 126
+  "component": "jasonos_prime_urgent_blocker_resolution",
+  "status": "REVIEW_FULL_CATALOGUE_RETRY_BACKLOG_REMAINS",
+  "updated_utc": "2026-06-15T00:33:38Z",
+  "user_visible_delivery": {
+    "status": "PASS_COLLECTION_AVAILABLE",
+    "plex_collection": "JasonOS Watch Now Verified",
+    "section": "Streaming Films",
+    "rating_key": "50698",
+    "movies": 126,
+    "unresolved_lane_items": 4
+  },
+  "playback": {
+    "status": "PASS",
+    "active_sessions": 0,
+    "plex_disruptive_action_allowed": false
+  },
+  "scarflix_catalogue": {
+    "readiness": "REVIEW_NOT_GO_LIVE_READY",
+    "section5_visible": "105",
+    "section5_missing": "0",
+    "materialized_qa_status": "RUNNING_PLEX_DECISION_PROBES",
+    "materialized_checked": 1,
+    "materialized_passed": 1,
+    "materialized_failed": 0,
+    "retry_held": 11,
+    "retry_tracked": 19,
+    "publication_allowed": false,
+    "broad_expansion_allowed": false
+  },
+  "autonomy": {
+    "go_live_runner_status": "RUNNING",
+    "continuation_task": {
+      "task_name": "JasonOS_Prime_GoLive16hCampaignRunner_Continuation",
+      "state": "Ready",
+      "next_run_time": "06/15/2026 10:38:38",
+      "last_result": 267011
     },
-    {
-      "blocker": "playback path uncertainty",
-      "resolution": "Ran playback path recovery/read-only verification",
-      "result": "PASS",
-      "details": "Plex identity, WebDAV bridge, rclone process, S:/media and S:/media/catalog OK"
-    }
-  ],
+    "runner_patched_watch_now_collection_publisher": true,
+    "runner_patched_fresh_campaign_auto_continue": true
+  },
+  "mission002_iptv": {
+    "apply_status": "PASS_THREADFIN_VIRTUAL_ADAPTER_READY_FOR_PLEX_ATTACH",
+    "verify_status": "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE",
+    "plex_attach_pending": true,
+    "physical_tuner_allowed": false
+  },
   "remaining_blockers": [
-    {
-      "blocker": "Full ScarFLIX catalogue QA is not PASS",
-      "evidence": "{\"outcome_id\":\"O-SCARFLIX-CATALOGUE\",\"blocker\":\"Materialized QA is not PASS: REVIEW 4/5 failed=1.\"}",
-      "action": "Continue bounded QA and source/release replacement; do not broad publish"
-    },
-    {
-      "blocker": "TV verified surface not yet created",
-      "evidence": "4 lane items unresolved by section 6 file lookup; movie collection created first",
-      "action": "Resolve section 6 metadata by show/episode mapping before TV surface"
-    }
+    "Full ScarFLIX catalogue remains held until retry-held source/release backlog is replaced or quarantined and bounded QA reaches full PASS.",
+    "TV Watch Now surface is not created yet; four verified lane items are TV episodes and need section 6-safe collection/surfacing logic.",
+    "Mission 002 IPTV Threadfin adapter is ready, but Plex Live TV/DVR attach remains pending and should be done as a separate guarded Plex config change."
   ],
   "safety": {
-    "publication_allowed": false,
-    "broad_expansion_allowed": false,
-    "no_scan": true,
-    "no_new_files": true,
-    "no_source_mutation": true,
-    "collection_rollback": {
-      "backup_root": "D:\\PlexTools\\Backups\\watch_now_verified_collection_20260615T002008Z",
-      "collection_can_be_removed": true,
-      "delete_endpoint": "DELETE /library/metadata/50698"
-    }
+    "pause_publication_active": true,
+    "no_publication_started": true,
+    "no_broad_expansion_started": true,
+    "no_plex_restart": true,
+    "no_source_mutation_this_step": true
   },
-  "current": {
-    "sentinel": "PASS/LOW",
-    "campaign_status": "RUNNING",
-    "active_sessions": 0,
-    "retry_held": 11,
-    "mission002_threadfin": "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE"
+  "public_urls": {
+    "grok_handoff": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/GROK_HANDOFF_FOR_GROK.md",
+    "readiness": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.json",
+    "blocker_status": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/jasonos_prime_blocker_resolution_status.json",
+    "watch_now_collection": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/watch_now_verified_plex_collection_status.json"
   }
 }
