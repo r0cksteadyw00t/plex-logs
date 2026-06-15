@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-15T21:17:52.824Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-15T21:23:01.817Z",
   "last_success_utc": "2026-06-15T21:17:52.824Z",
   "pat_present": true,
   "pushed": [
@@ -55,11 +55,11 @@
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/index.html",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_recent_updates.json",
@@ -615,19 +615,19 @@
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/CODEX_INSTRUCTION_CONSUMER_LAST_SUMMARY.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_lightweight_status_probe_status.json",
@@ -1002,10 +1002,6 @@
       "status": 304
     },
     {
-      "file": "docs/latest/scarflix_v2/playback_safe_architecture.md",
-      "status": 304
-    },
-    {
       "file": "latest/scarflix/index.html",
       "status": 200
     },
@@ -1183,13 +1179,20 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "docs/latest/scarflix_v2/playback_safe_architecture.md",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
