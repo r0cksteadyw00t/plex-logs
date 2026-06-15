@@ -1,7 +1,7 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
 Status: RUNNING_DISCOVERING_PLEX_ROWS
-Updated UTC: 2026-06-15T00:40:37Z
+Updated UTC: 2026-06-15T00:47:07Z
 Targets: 229
 Rows found: 0
 Checked: 0
