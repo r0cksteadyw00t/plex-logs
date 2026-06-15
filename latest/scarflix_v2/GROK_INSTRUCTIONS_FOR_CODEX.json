@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_mission002_live_tv_stabilisation_status_20260615_v161",
-      "created_at": "2026-06-15T07:02:24Z",
-      "expires_at": "2026-06-16T07:02:24Z",
+      "instruction_id": "phase0_record_mission002_live_tv_stabilisation_status_20260615_v162",
+      "created_at": "2026-06-15T07:18:25Z",
+      "expires_at": "2026-06-16T07:18:25Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,15 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 2,
-        "backoff": "exponential"
+        "max_retries": 1,
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Mission 002 Live TV/Threadfin stabilisation complete. Curated channels active via virtual tuner. PAUSE_PUBLICATION remains active. No ScarFLIX expansion or publishing. Record only.",
-            "source_instruction_id": "phase0_record_mission002_live_tv_stabilisation_status_20260615_v161",
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_record_mission002_live_tv_stabilisation_status_20260615_v162",
             "auto_added_by_bridge": true
           }
         }
@@ -30,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T07:02:24Z",
+  "updated_utc": "2026-06-15T07:18:25Z",
   "source": "grok_api"
 }
