@@ -1,0 +1,85 @@
+{
+    "component":  "jasonos_mission002_plex_online_channels_suppression",
+    "schema_version":  "jasonos.iptv.plex_online_channels_suppression.v1",
+    "status":  "PASS_STATUS_CAPTURED",
+    "updated_utc":  "2026-06-15T05:13:07Z",
+    "mode":  "Status",
+    "intent":  "Suppress Plex-owned free Live TV provider surface so the Live TV outcome is the curated Mission 2 IPTV/Threadfin source only.",
+    "safety":  {
+                   "iptv_only":  true,
+                   "physical_tuner_used":  false,
+                   "touches_plex_server_database":  false,
+                   "restarts_plex":  false,
+                   "blocks_metadata_provider":  false,
+                   "blocks_sign_in_or_account_domains":  false,
+                   "reversible":  true
+               },
+    "official_account_opt_out_status":  "BLOCKED_ACCOUNT_TOKEN_REQUIRED",
+    "threadfin_status":  "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE",
+    "threadfin_channel_count":  4,
+    "hosts":  {
+                  "exists":  true,
+                  "has_mission002_marker":  true,
+                  "blocks":  [
+                                 "epg.provider.plex.tv"
+                             ]
+              },
+    "pre_probe":  {
+                      "host":  "epg.provider.plex.tv",
+                      "dns":  [
+                                  {
+                                      "name":  "epg.provider.plex.tv",
+                                      "type":  "AAAA",
+                                      "ip_address":  "::1",
+                                      "name_host":  ""
+                                  },
+                                  {
+                                      "name":  "epg.provider.plex.tv",
+                                      "type":  "A",
+                                      "ip_address":  "0.0.0.0",
+                                      "name_host":  ""
+                                  }
+                              ],
+                      "http_ok":  false,
+                      "http_status":  0,
+                      "http_error":  "curl: (7) Failed to connect to epg.provider.plex.tv port 443 after 2559 ms: Could not connect to server",
+                      "http_probe":  "curl_no_proxy_head",
+                      "http_output_excerpt":  ""
+                  },
+    "post_probe":  {
+                       "host":  "epg.provider.plex.tv",
+                       "dns":  [
+                                   {
+                                       "name":  "epg.provider.plex.tv",
+                                       "type":  "AAAA",
+                                       "ip_address":  "::1",
+                                       "name_host":  ""
+                                   },
+                                   {
+                                       "name":  "epg.provider.plex.tv",
+                                       "type":  "A",
+                                       "ip_address":  "0.0.0.0",
+                                       "name_host":  ""
+                                   }
+                               ],
+                       "http_ok":  false,
+                       "http_status":  0,
+                       "http_error":  "curl: (7) Failed to connect to epg.provider.plex.tv port 443 after 2544 ms: Could not connect to server",
+                       "http_probe":  "curl_no_proxy_head",
+                       "http_output_excerpt":  ""
+                   },
+    "write_access":  {
+                         "ok":  true,
+                         "error":  ""
+                     },
+    "backup_path":  "D:\\PlexTools\\Backups\\mission002_plex_online_channels_suppression_20260615T051117Z\\hosts.bak",
+    "actions":  [
+
+                ],
+    "errors":  [
+
+               ],
+    "limitation":  "This local suppression blocks the Plex free-live-TV provider endpoint on this Windows/Plex host. Plex\u0027s official durable fix is still account-level Online Media Sources disablement; other client devices may need account opt-out or local/network DNS enforcement if they fetch Plex online channels directly.",
+    "rollback":  "Run this script with -Mode RollbackHostsBlock or restore the recorded hosts backup.",
+    "next_safe_action":  "Relaunch Plex clients and verify Live TV source list. If Plex Channels still appears on a non-Windows client, apply account-level Online Media Sources opt-out with a valid Plex account session or enforce this hostname block at the router/DNS level."
+}

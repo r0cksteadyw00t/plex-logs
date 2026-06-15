@@ -2,7 +2,7 @@
   "component": "jasonos_prime_actual_go_live_delivery_status",
   "schema_version": "jasonos.go_live_delivery.v1",
   "status": "REVIEW_TV_FIRST_PRIVATE_STAGE_VALIDATED_MOVIE_QA_HELD",
-  "updated_utc": "2026-06-15T04:56:33Z",
+  "updated_utc": "2026-06-15T05:14:17Z",
   "user_priority": "TV first if movies and TV cannot progress concurrently",
   "materialized_qa": {
     "status": "REVIEW",
@@ -69,7 +69,12 @@
       "7plus AFL Live"
     ],
     "plex_online_source_status": "BLOCKED_ACCOUNT_TOKEN_REQUIRED",
-    "blocker": "Plex account Online Media Sources opt-out requires valid account token or authenticated Chrome extension session"
+    "blocker": "Plex account Online Media Sources opt-out requires valid account token or authenticated Chrome extension session",
+    "plex_online_channels_suppression_status": "PASS_STATUS_CAPTURED",
+    "plex_online_channels_hosts_marker": true,
+    "plex_online_channels_blocked_endpoint": "epg.provider.plex.tv",
+    "plex_online_channels_rollback_backup": "D:\\PlexTools\\Backups\\mission002_plex_online_channels_suppression_20260615T051117Z\\hosts.bak",
+    "plex_online_channels_limitation": "This local suppression blocks the Plex free-live-TV provider endpoint on this Windows/Plex host. Plex's official durable fix is still account-level Online Media Sources disablement; other client devices may need account opt-out or local/network DNS enforcement if they fetch Plex online channels directly."
   },
   "safety": {
     "pause_publication_required": true,
