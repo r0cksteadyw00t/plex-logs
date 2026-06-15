@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_actual_go_live_delivery_status",
   "schema_version": "jasonos.go_live_delivery.v1",
-  "status": "REVIEW_TV_FIRST_PRIVATE_STAGE_VALIDATED_MOVIE_QA_HELD",
-  "updated_utc": "2026-06-15T05:33:23Z",
+  "status": "REVIEW_TV_FIRST_PRIVATE_STAGE_VALIDATED_MISSION002_LIVE_TV_ATTACHED_MOVIE_QA_HELD",
+  "updated_utc": "2026-06-15T05:59:23Z",
   "user_priority": "TV first if movies and TV cannot progress concurrently",
   "materialized_qa": {
     "status": "REVIEW",
@@ -68,20 +68,25 @@
       "7mate",
       "7plus AFL Live"
     ],
-    "plex_online_source_status": "BLOCKED_ACCOUNT_TOKEN_REQUIRED",
-    "blocker": "Plex account Online Media Sources opt-out requires valid account token or authenticated Chrome extension session",
+    "plex_online_source_status": "PASS_SUPPRESSED_DEFAULT_PLEX_ONLINE_SOURCES",
+    "blocker": "",
     "plex_online_channels_suppression_status": "PASS_STATUS_CAPTURED",
     "plex_online_channels_hosts_marker": true,
     "plex_online_channels_blocked_endpoint": "epg.provider.plex.tv",
     "plex_online_channels_rollback_backup": "D:\\PlexTools\\Backups\\mission002_plex_online_channels_suppression_20260615T051117Z\\hosts.bak",
-    "plex_online_channels_limitation": "This local suppression blocks the Plex free-live-TV provider endpoint on this Windows/Plex host. Plex's official durable fix is still account-level Online Media Sources disablement; other client devices may need account opt-out or local/network DNS enforcement if they fetch Plex online channels directly.",
+    "plex_online_channels_limitation": "Server Live TV/DVR is now attached to Threadfin. Account Online Media Sources remain disabled to suppress Plex-owned channels; hosts suppression for epg.provider.plex.tv remains defense in depth.",
     "codex_chrome_extension_installed": true,
-    "codex_chrome_extension_enabled": false,
-    "plex_account_optout_chrome_status": "PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED",
+    "codex_chrome_extension_enabled": true,
+    "plex_account_optout_chrome_status": "PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED_WITH_SERVER_DVR_LIVE_TV_AVAILABLE",
     "plex_online_live_tv_setting": "Disabled",
     "plex_online_movies_shows_setting": "Disabled",
     "plex_online_discover_setting": "Disabled",
-    "plex_home_online_indicators_present_after_optout": false
+    "plex_home_online_indicators_present_after_optout": false,
+    "plex_live_tv_dvr_status": "PASS_THREADFIN_DVR_ATTACHED_LIVE_TV_AVAILABLE",
+    "plex_live_tv_source": "JasonOS Mission 2 IPTV",
+    "plex_live_tv_channel_count": 4,
+    "plex_live_tv_available": true,
+    "default_plex_channels_visible_after_correction": false
   },
   "safety": {
     "pause_publication_required": true,
@@ -91,12 +96,9 @@
     "physical_tuner_used": false
   },
   "next_safe_actions": [
-    "Build the TV materialized/WebDAV adapter or bridge for the 3 validated private-stage TV candidates.",
-    "Do not publish the private direct-stream .strm artifacts directly to Plex.",
-    "Run a TV-only post-bridge Plex/WebDAV verification gate before any user-visible TV surfacing.",
-    "Keep the 7 REVIEW pilot TV rows held and retryable for cache/source review.",
-    "Keep movie remediation separate because current full Materialized QA REVIEW is movie-only Plex DB visibility.",
-    "Keep generic/movie/unscoped expansion blocked while TV and movies cannot safely run concurrently.",
-    "Apply Plex Online Media Sources opt-out once a valid account session/token is available so Plex Live TV shows only curated Threadfin/DVR channels."
+    "Use Plex Live TV for the curated Mission 2 channels and verify client-side guide playback on target devices.",
+    "Continue TV-first materialized/WebDAV bridge work for the 3 validated private-stage TV candidates before Plex-visible TV surfacing.",
+    "Do not publish private direct-stream .strm artifacts directly to Plex.",
+    "Keep generic/movie/unscoped expansion blocked while TV and movies cannot safely run concurrently."
   ]
 }

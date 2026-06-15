@@ -1,33 +1,19 @@
-# Mission 2 Plex Account Opt-Out Chrome Status
+# Mission 002 Plex Account Opt-Out Corrected Status
 
-**Updated UTC:** 2026-06-15T05:33:23Z  
-**Status:** PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED
+Updated UTC: 2026-06-15T05:58:51Z
 
-## Result
+Status: PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED_WITH_SERVER_DVR_LIVE_TV_AVAILABLE
 
-The Codex Chrome Extension bridge connected after a clean reset. Plex Web was opened through the local Plex session and the official account-level **Online Media Sources** settings were updated.
+Corrected interpretation:
+- Plex account Online Media Sources are disabled to suppress Plex-owned/free online content.
+- Plex server Live TV & DVR remains available through the curated Threadfin virtual IPTV adapter.
+- Live TV must stay visible to Jason for 7 Sydney, 7 Melbourne, 7mate, and 7plus AFL Live.
 
-## Applied Account Settings
+Verification:
+- Plex DVR setup complete for JasonOS Mission 2 IPTV.
+- Threadfin source: http://127.0.0.1:35400.
+- 4 curated channels enabled.
+- Plex Web Live TV guide opened successfully.
+- Default Plex online indicators were not present in the verified guide text.
 
-- Live TV: Disabled
-- Movies & Shows: Disabled
-- Discover Source: Disabled
-- Display "More Ways to Watch" search results: Disabled
-- Display availabilities from other streaming services on detail pages: Disabled
-
-## Verification
-
-After reloading Plex Home, the page no longer showed Live TV, Movies & Shows, Discover, Crunchyroll, Available on Plex, or More Ways to Watch indicators in the captured visible text.
-
-## Safety
-
-- IPTV only: true
-- Physical tuner used: false
-- Plex database touched: false
-- Plex restarted: false
-- Metadata/sign-in/account domains blocked: false
-- Existing hosts suppression remains active as defense in depth only.
-
-## Next Safe Action
-
-Relaunch Plex clients. If a client still shows Plex Channels, verify it is signed into the same 0cksteady account and has refreshed its sidebar cache.
+Safety: no Plex restart, no direct Plex DB edit, no physical tuner, no ScarFLIX publication or expansion.

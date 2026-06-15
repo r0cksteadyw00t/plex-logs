@@ -1,0 +1,55 @@
+{
+  "component": "jasonos_mission002_plex_live_tv_corrected_cutover",
+  "schema_version": "jasonos.iptv.plex_live_tv_corrected_cutover.v1",
+  "status": "PASS_THREADFIN_DVR_ATTACHED_LIVE_TV_AVAILABLE_DEFAULT_PLEX_SUPPRESSED",
+  "updated_utc": "2026-06-15T05:58:51Z",
+  "user_correction": "Keep Plex Live TV available for curated IPTV; suppress Plex-owned/default channels only.",
+  "plex_live_tv": {
+    "sidebar_available": true,
+    "guide_opened": true,
+    "guide_url": "http://127.0.0.1:32400/web/index.html#!/live-tv/3ebc9fbb279a583ac12325c3b815995472fd4701/tv.plex.providers.epg.xmltv:2",
+    "source_title": "JasonOS Mission 2 IPTV",
+    "server": "MediaCentre",
+    "model": "Threadfin",
+    "device_url": "http://127.0.0.1:35400",
+    "enabled_channels": 4,
+    "channels": [
+      "7 Sydney",
+      "7 Melbourne",
+      "7mate",
+      "7plus AFL Live"
+    ],
+    "setup_complete_banner_seen": true,
+    "physical_tuner_used": false,
+    "virtual_adapter": "Threadfin HDHomeRun-compatible IPTV adapter"
+  },
+  "xmltv": {
+    "corrected_plex_xmltv_path": "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\master.cutover.plex.xml",
+    "original_xmltv_preserved": "D:\\PlexTools\\state\\jasonos_prime\\iptv\\cutover_ready\\master.cutover.active.xml",
+    "channel_display_names_aligned": true,
+    "plex_matched_channels": 4,
+    "backup_root": "D:\\PlexTools\\Backups\\mission002_live_tv_corrected_cutover_20260615T055851Z"
+  },
+  "default_plex_channels_suppression": {
+    "account_online_media_sources_live_tv": "Disabled",
+    "account_online_movies_and_shows": "Disabled",
+    "account_discover_source": "Disabled",
+    "account_more_ways_to_watch": "Disabled",
+    "account_streaming_availabilities": "Disabled",
+    "local_hosts_suppression_active": true,
+    "blocked_provider_endpoint": "epg.provider.plex.tv",
+    "role": "Defense in depth for Plex-owned/free Live TV provider, while Plex server Live TV/DVR remains available through Threadfin.",
+    "default_plex_indicators_seen_in_guide": []
+  },
+  "safety": {
+    "publication_started": false,
+    "broad_expansion_started": false,
+    "plex_restarted": false,
+    "plex_database_directly_edited": false,
+    "scarflix_catalogue_modified": false,
+    "iptv_only": true,
+    "physical_tuner_used": false
+  },
+  "next_safe_action": "Use Plex Live TV for the 4 curated Mission 2 channels. Keep Plex-owned online media disabled. Continue Mission 2 guide/channel QA and expand curated IPTV only through the Threadfin package path.",
+  "raw_status_url": "https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/mission002_plex_live_tv_corrected_cutover_status.json"
+}

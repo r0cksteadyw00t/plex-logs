@@ -1,32 +1,46 @@
 {
   "component": "jasonos_mission002_plex_account_optout_chrome_bridge",
   "schema_version": "jasonos.iptv.plex_account_optout_chrome_bridge.v1",
-  "status": "PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED",
-  "updated_utc": "2026-06-15T05:33:23Z",
+  "status": "PASS_ACCOUNT_ONLINE_MEDIA_SOURCES_DISABLED_WITH_SERVER_DVR_LIVE_TV_AVAILABLE",
+  "updated_utc": "2026-06-15T05:58:51Z",
+  "corrected_interpretation": "Account Online Media Sources suppress Plex-owned online content; Plex server Live TV & DVR remains available through the curated Threadfin source.",
   "chrome_bridge_connected": true,
   "chrome_profile": "Person 2 via Codex extension bridge; local Plex session at 127.0.0.1:32400",
   "account_settings_applied": {
-    "live_tv": "Disabled",
+    "live_tv_online_media_source": "Disabled",
     "movies_and_shows": "Disabled",
     "discover_source": "Disabled",
     "more_ways_to_watch_search_results": "Disabled",
     "streaming_availabilities_on_detail_pages": "Disabled"
   },
+  "server_live_tv_dvr": {
+    "available": true,
+    "source_title": "JasonOS Mission 2 IPTV",
+    "source_type": "Threadfin virtual IPTV adapter",
+    "channel_count": 4,
+    "channels": [
+      "7 Sydney",
+      "7 Melbourne",
+      "7mate",
+      "7plus AFL Live"
+    ]
+  },
   "verification": {
-    "plex_home_reloaded": true,
-    "live_tv_text_present": false,
-    "plex_online_indicators_present": false,
+    "plex_dvr_source_page_reports_setup_complete": true,
+    "plex_live_tv_guide_opened": true,
+    "live_tv_sidebar_text_present": true,
+    "default_plex_online_indicators_present": false,
     "checked_indicators": [
-      "Live TV",
-      "Movies & Shows",
-      "Discover",
+      "Plex Channels",
+      "Plex Free",
       "Available on Plex",
       "Crunchyroll",
-      "More Ways to Watch"
+      "Movies & Shows",
+      "Discover"
     ]
   },
   "local_hosts_suppression_active": true,
-  "local_hosts_suppression_role": "Defense in depth only; account-level opt-out is now applied.",
+  "local_hosts_suppression_role": "Defense in depth only for Plex-owned provider endpoint; do not remove the server Live TV/DVR feature.",
   "safety": {
     "iptv_only": true,
     "physical_tuner_used": false,
@@ -35,5 +49,5 @@
     "metadata_domains_blocked": false,
     "account_settings_changed": true
   },
-  "next_safe_action": "Relaunch Plex clients. If Live TV returns, check whether the client is signed into the same r0cksteady account and whether it cached old sidebar state."
+  "next_safe_action": "Use Plex Live TV for curated Threadfin channels. Do not re-enable Plex-owned Online Media Sources unless Threadfin/DVR visibility breaks on a client and hosts/DNS suppression is confirmed active."
 }
