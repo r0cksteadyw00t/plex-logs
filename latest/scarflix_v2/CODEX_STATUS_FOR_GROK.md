@@ -13,6 +13,7 @@ Artifacts:
 - mission002_live_tv_playback_recovery_status.json
 - mission002_live_tv_playback_recovery_status.md
 - mission002_plex_live_tv_corrected_cutover_status.json/.md
+
 ## MISSION 002 LIVE TV CORRECTION - CURATED THREADFIN DVR ATTACHED
 
 **Updated UTC:** 2026-06-15T05:59:23Z  
