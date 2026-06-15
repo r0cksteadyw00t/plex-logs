@@ -1,6 +1,6 @@
 ﻿# Mission 002 IPTV Threadfin Virtual Adapter Verification
 
-**Updated UTC:** 2026-06-15T01:00:37Z  
+**Updated UTC:** 2026-06-15T08:26:54Z  
 **Status:** PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE
 
 ## Safety
@@ -16,23 +16,34 @@
 - Held XMLTV exists: True
 - Decision manifest exists: True
 - Held M3U channel count: 4
+- Active M3U exists: True
+- Active XMLTV exists: True
+- Active M3U channel count: 32
+- Expanded M3U exists: True
+- Expanded XMLTV exists: True
+- Expanded M3U channel count: 32
 - Threadfin lineup parse status: PARSED
-- Threadfin lineup channel count: 4
+- Threadfin lineup channel count: 32
+- Plex tuner base URL: http://127.0.0.1:5004
 
 ## Container
 
 - Docker available: True
 - Container running: True
-- Container line: jasonos-mission002-threadfin|Up 36 hours
+- Container line: jasonos-mission002-threadfin|Up 11 minutes
 - Error: 
 
 ## Endpoints
 
-- http://127.0.0.1:35400/web/: ok=True, http=200, ms=58, error=
-- http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=15, error=
-- http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=12, error=
-- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=14, error=
+- http://127.0.0.1:35400/web/: ok=True, http=200, ms=253, error=
+- http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=18, error=
+- http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=27, error=
+- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=12, error=
+
+## Plex Tuner Entrypoint
+
+- http://127.0.0.1:5004/auto/v10: ok=True, http=200, ms=9, error=
 
 ## Decision
 
-This verifier checks the IPTV virtual-adapter path only. Plex Live TV/DVR attachment is a later cutover step and was not changed here. PASS requires Threadfin to expose at least one channel in /lineup.json.
+This verifier checks the IPTV virtual-adapter path and Plex's local tuner stream entrypoint. Plex Live TV/DVR attachment is not changed here. PASS requires Threadfin to expose at least one channel in /lineup.json and TCP 5004 to answer a bounded tuner request.
