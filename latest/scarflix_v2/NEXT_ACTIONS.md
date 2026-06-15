@@ -1,3 +1,11 @@
+## TV-First Pilot 10 / 3-Show Gate - Current Next Actions (2026-06-15T14:36:30Z)
+
+1. Build/run the additive TV publication adapter for the 19 accepted private-stage candidates only.
+2. Before any visible write, create rollback manifest and backup any affected mapping/alias state.
+3. After adapter execution, run TV-scoped Plex/WebDAV verification for only the 19 accepted candidates.
+4. Keep 9 held episodes excluded and route them through alternate-source retry separately.
+5. Do not use the generic staged publisher or legacy direct resolver for this TV lane.
+
 ## Mission 002 Multi-Source Sports Discovery V2 - Current Next Actions (2026-06-15T14:25:43Z)
 
 1. Treat the v2 source graph as the upstream intelligence layer; do not publish discovered streams directly.
