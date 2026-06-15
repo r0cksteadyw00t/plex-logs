@@ -1,3 +1,9 @@
+# Mission 002 Aggressive Sports Push - Local Only (2026-06-15T10:00:14Z)
+
+- Added external sports M3U/XMLTV probe runner for Fox Footy/Kayo/Fox Sports/ESPN/beIN/AFL candidates.
+- Runner status: HELD_NO_EXTERNAL_SPORTS_SOURCE_CONFIG.
+- Active Plex backend unchanged and stable at 33 channels.
+- No GitHub/public remote push performed for this run.
 # Mission 002 AFL Scope Correction - PASS (2026-06-15T09:41:12Z)
 
 User correction applied: free-to-air channels must be Melbourne/Sydney only. The earlier 47-channel regional Seven/7mate expansion was incorrect and has been replaced.
@@ -4295,6 +4301,7 @@ Decision:
 Next required step:
 
 - Wait for process launch health to recover, then re-attempt only the stabilization gate first.
+
 
 
 
