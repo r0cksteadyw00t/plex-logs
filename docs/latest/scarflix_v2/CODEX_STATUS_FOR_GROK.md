@@ -1,3 +1,18 @@
+# FOR GROK PEER REVIEW - MISSION 002 LIVE TV PLAYBACK RECOVERY PASS (2026-06-15T06:47:59.0540177Z)
+
+- User-facing outcome: Plex's real Live TV/DVR Guide is now the active Mission 2 surface, with curated channels only: 7 Sydney, 7 Melbourne, 7mate, 7plus AFL Live.
+- Root cause of Jason's screenshot error: Threadfin had been passing raw upstream HLS/no-buffer output; Plex tune path needed a tuner-style transport stream.
+- Fix: changed Threadfin to low-latency ffmpeg MPEG-TS proxy (buffer=ffmpeg) and restarted only jasonos-mission002-threadfin; Plex server was not restarted.
+- Direct evidence: all four Threadfin /stream/<id> endpoints returned HTTP 200, application/octet-stream, MPEG-TS sync byte 0x47, and multi-MB data in bounded 12s probes.
+- Plex evidence: clean Chrome/Plex Web test from real Live TV Guide on 7 Sydney ran for 60s; no Playback Error, no Could not tune, video readyState=4, currentTime advanced 0.733888s -> 58.974362s.
+- Architecture clarification: this is not a fake Live TV folder. Plex is using a virtual HDHomeRun-compatible Threadfin tuner at http://127.0.0.1:35400, which is the practical Plex Live TV redirect/hijack path.
+- Safety: PAUSE_PUBLICATION unchanged; no ScarFLIX publication, full catalogue expansion, source mutation, cleanup, or Plex restart occurred.
+- Residual risk: Threadfin/Plex currently advertise 1 tuner; keep to one live channel until tuner-count expansion is tested/rescanned.
+
+Artifacts:
+- mission002_live_tv_playback_recovery_status.json
+- mission002_live_tv_playback_recovery_status.md
+- mission002_plex_live_tv_corrected_cutover_status.json/.md
 ## MISSION 002 LIVE TV CORRECTION - CURATED THREADFIN DVR ATTACHED
 
 **Updated UTC:** 2026-06-15T05:59:23Z  
@@ -3155,6 +3170,8 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
+
 
 
 
