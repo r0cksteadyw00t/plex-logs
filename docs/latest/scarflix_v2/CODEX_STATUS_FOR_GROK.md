@@ -1,3 +1,15 @@
+# FOR GROK PEER REVIEW - MISSION 002 AFL SCOPE CORRECTION PASS (2026-06-15T09:41:12Z)
+
+- User correction: free-to-air channels must be Melbourne/Sydney only. The prior 47-channel regional Seven/7mate expansion was wrong and has been corrected.
+- Current active package: 33 curated IPTV channels, 33 Threadfin lineup channels, 33 Plex enabled DVR mappings, 33 Plex EPG channel tags.
+- Active AFL-relevant entries now in Plex: 7 Melbourne, 7 Sydney, 7mate Melbourne, 7mate Sydney, 7plus AFL Live.
+- Removed from active Plex lineup: 7 Brisbane, 7 Adelaide, 7 Perth, 7 Cairns, 7 Mackay, 7 Sunshine Coast, 7 Rockhampton, 7 Toowoomba, 7 Townsville, 7 Wide Bay, 7mate Brisbane, 7mate Adelaide, 7mate Perth, 7mate Regional.
+- Corrected stream evidence: mission002_corrected_afl_stream_probe PASS_CORRECTED_AFL_CHANNELS_STREAMABLE, 5 checked, 5 passed, 0 failed.
+- EPG evidence: Plex XMLTV provider DB has 33 channel tags, 7067 metadata items, 7121 media items, and no forbidden regional Seven/7mate tags.
+- Paid/non-aerial AFL evidence: official AFL/Kayo sources show Fox Footy / Foxtel / Kayo are required for every-game AFL coverage, but the configured legal Plex-ready M3U/XMLTV inputs do not expose Fox Footy, Fox Sports, or Kayo channels.
+- Decision: Fox Footy/Fox Sports/Kayo are HELD_PAID_OTT_ADAPTER_REQUIRED. Do not publish fake or unsupported rows into Plex. Next work is a legal subscription-backed adapter feasibility spike.
+- Safety: IPTV-only, no physical tuner, PAUSE_PUBLICATION preserved, no ScarFLIX publication or catalogue expansion performed. Backup root: D:\PlexTools\Backups\mission002_correct_fta_scope_and_afl_paid_gap_20260615T093349Z.
+- Artifacts: mission002_afl_source_scope_correction_status.json/.md, mission002_corrected_afl_stream_probe.json/.md, mission002_expanded_live_tv_cutover_status.json/.md, mission002_channel_expansion_status.json/.md, mission002_iptv_cutover_verify_status.json/.md.
 # FOR GROK PEER REVIEW - MISSION 002 AFL IPTV EXPANSION PASS (2026-06-15T09:14:03Z)
 
 - User-facing outcome: Plex's real Live TV/DVR Guide now carries the curated AFL-relevant Seven, 7mate, and 7plus IP streams that were missing from the earlier 32-channel lineup.
@@ -3192,6 +3204,7 @@ If the file is in a different path or branch, use the correct raw URL.
 - Explicitly forbidden: publication, expansion, cleanup, deletion, source mutation, source quarantine, path rewrite, broad QA retry, Plex cache/database mutation, repeated scan loops.
 - No publication, expansion, cleanup, deletion, path rewrite, source mutation, broad QA retry, PlatformGate, PlexDecisionQA, ConcurrentQA, AutoGate, or publisher job was run.
 - Next required step: Grok review of the no-improvement Action A result before any further reconciliation action.
+
 
 
 
