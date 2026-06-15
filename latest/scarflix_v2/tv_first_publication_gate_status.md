@@ -1,6 +1,6 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-15T12:47:07Z
+Updated UTC: 2026-06-15T14:33:40Z
 Status: PASS_TV_PUBLICATION_GATE_ACCEPTED_HELD
 Accepted private-stage episodes: 21
 Held/missing episodes: 7
