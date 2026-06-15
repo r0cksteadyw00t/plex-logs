@@ -1,0 +1,65 @@
+{
+  "component": "jasonos_mission002_afl_source_scope_correction",
+  "schema_version": "jasonos.iptv.afl_scope_correction.v1",
+  "status": "PASS_CORRECTED_FTA_SCOPE_WITH_PAID_AFL_HELD",
+  "updated_utc": "2026-06-15T09:39:50Z",
+  "user_correction": "Free-to-air channels must be Melbourne/Sydney only; non-aerial AFL sources such as Fox Footy/Kayo must be handled as paid IP/OTT integrations, not regional FTA substitutions.",
+  "active_lineup": {
+    "active_m3u_channel_count": 33,
+    "threadfin_lineup_channel_count": 33,
+    "plex_enabled_mapping_count": 33,
+    "plex_epg_channel_tags": 33,
+    "active_afl_ip_or_relevant_channels": [
+      "7 Melbourne",
+      "7 Sydney",
+      "7mate Melbourne",
+      "7mate Sydney",
+      "7plus AFL Live"
+    ],
+    "forbidden_regional_fta_present": false
+  },
+  "verification": {
+    "threadfin_status": "PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE",
+    "corrected_afl_stream_probe": "PASS_CORRECTED_AFL_CHANNELS_STREAMABLE",
+    "corrected_afl_stream_probe_pass": "5/5",
+    "plex_epg_metadata_items": 7067,
+    "plex_epg_media_items": 7121,
+    "plex_epg_forbidden_regional_tags": []
+  },
+  "paid_afl_sources": {
+    "required_for_every_game": true,
+    "held_count": 3,
+    "held": [
+      {
+        "display_name": "Fox Footy",
+        "provider": "Foxtel / Kayo Sports",
+        "reason": "Required for every-game AFL coverage, but no configured legal Plex-compatible M3U/XMLTV source exposes it."
+      },
+      {
+        "display_name": "Kayo Sports AFL live events",
+        "provider": "Kayo Sports",
+        "reason": "Official paid OTT app/DRM lane; needs a subscription-backed legal adapter before Plex Live TV inclusion."
+      },
+      {
+        "display_name": "Foxtel / Fox Sports AFL live events",
+        "provider": "Foxtel / Fox Sports",
+        "reason": "Official paid broadcast lane; held until a Plex-compatible, ToS-compliant IP source adapter exists."
+      }
+    ],
+    "current_blocker": "No configured legal Plex-compatible M3U/XMLTV source for Fox Footy/Fox Sports/Kayo in the active inputs. The public MJH AU feed search found 7AFL and no Fox/Kayo/Fox Sports channels.",
+    "next_engineering_action": "Build a legal paid-OTT adapter feasibility spike for Kayo/Foxtel/Fox Footy. Do not publish fake or unsupported Fox rows into Plex."
+  },
+  "safety": {
+    "iptv_only": true,
+    "physical_tuner_used": false,
+    "pause_publication_preserved": true,
+    "scarflix_publication_touched": false,
+    "backup_root": "D:\\PlexTools\\Backups\\mission002_correct_fta_scope_and_afl_paid_gap_20260615T093349Z"
+  },
+  "sources": {
+    "afl_broadcast_rights": "https://www.afl.com.au/matches/broadcast-guide/broadcast-rights",
+    "afl_television_partners": "https://www.afl.com.au/matches/broadcast-guide/television-programs",
+    "kayo_australian_rules": "https://kayosports.com.au/en-AU/sport/Sport%3Apxf4y47kwth2g64m7wzo209y",
+    "mjh_all_feed": "https://i.mjh.nz/au/all/raw-tv.m3u8"
+  }
+}
