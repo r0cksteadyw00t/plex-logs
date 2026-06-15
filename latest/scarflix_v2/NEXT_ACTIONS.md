@@ -1,3 +1,10 @@
+# Mission 002 AFL Scope Correction - Next Actions (2026-06-15T09:41:27Z)
+
+1. Treat the corrected 33-channel IPTV lineup as the active Plex Live TV baseline.
+2. Keep free-to-air channels to Melbourne/Sydney only.
+3. Active AFL-relevant Plex entries are 7 Melbourne, 7 Sydney, 7mate Melbourne, 7mate Sydney, and 7plus AFL Live.
+4. Keep Fox Footy / Fox Sports / Kayo held until a legal Plex-compatible paid OTT adapter is engineered and validated.
+5. Do not add regional Seven/7mate variants or fake Fox/Kayo rows to Plex.
 # Next Actions
 
 ## Current Update - 2026-06-13 12:46
@@ -1305,3 +1312,4 @@ No manual run, paste, local status check, or service restart should be required.
 2. Hold controlled materialized/WebDAV new batches overnight.
 3. Do not install orchestrator or reduce scheduled tasks until Sentinel alert clears.
 4. Resume install/verification only after the machine is responsive and alert state is clear.
+
