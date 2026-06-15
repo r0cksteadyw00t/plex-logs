@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_tv_first_live_tv_stabilisation_status_20260615_v158",
-      "created_at": "2026-06-15T06:14:07Z",
-      "expires_at": "2026-06-16T06:14:07Z",
+      "instruction_id": "phase0_record_tv_first_live_tv_stabilisation_status_20260615_v159",
+      "created_at": "2026-06-15T06:30:23Z",
+      "expires_at": "2026-06-16T06:30:23Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,15 +13,16 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
+        "max_retries": 2,
         "backoff_seconds": 30
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Phase 0 stabilisation continuing. TV-first private stage validated (Haunted Hotel, MobLand, The Institute). Mission 002 Live TV/Threadfin attached with curated channels only; Plex-owned suppression active. Materialized QA remains REVIEW. PAUSE_PUBLICATION enforced. No legacy resolver or direct expansion. Record only.",
-            "source_instruction_id": "phase0_record_tv_first_live_tv_stabilisation_status_20260615_v158"
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_record_tv_first_live_tv_stabilisation_status_20260615_v159",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -29,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T06:14:07Z",
+  "updated_utc": "2026-06-15T06:30:23Z",
   "source": "grok_api"
 }
