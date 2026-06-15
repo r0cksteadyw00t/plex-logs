@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_tv_mission002_stabilisation_status_20260615_v215",
-      "created_at": "2026-06-15T21:37:12Z",
-      "expires_at": "2026-06-16T21:37:12Z",
+      "instruction_id": "phase0_record_tv_mission002_stabilisation_status_20260615_v216",
+      "created_at": "2026-06-15T21:52:43Z",
+      "expires_at": "2026-06-16T21:52:43Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,15 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "TV-first pilot gate accepted 19 episodes (Haunted Hotel 5, MobLand 9, The Institute 5) with 9 held. Mission 002 v2 discovery PASS with 196 candidates, 40 probes, adequate AFL/Racing/Cricket coverage. All actions respect PAUSE_PUBLICATION and materialized QA REVIEW. No publication or expansion. Dashboard shows materialized_webdav_artifact_count 225, global_health REVIEW non-blocking.",
-            "source_instruction_id": "phase0_record_tv_mission002_stabilisation_status_20260615_v215",
-            "auto_added_by_bridge": true
+            "summary": "TV-first pilot gate accepted 19 episodes (Haunted Hotel 5, MobLand 9, The Institute 5) with 9 held. Mission 002 v2 discovery PASS with 196 candidates, 40 probes, adequate AFL/Racing/Cricket coverage. All actions respect PAUSE_PUBLICATION and materialized QA REVIEW. No publication or expansion.",
+            "source_instruction_id": "phase0_record_tv_mission002_stabilisation_status_20260615_v216"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T21:37:12Z",
+  "updated_utc": "2026-06-15T21:52:43Z",
   "source": "grok_api"
 }
