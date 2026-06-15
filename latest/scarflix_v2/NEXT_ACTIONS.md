@@ -1,3 +1,9 @@
+## TV-First Whole-Show Execution Batches - Current Next Actions (2026-06-15T13:54:08Z)
+
+1. Use D:\PlexTools\state\jasonos_prime\catalogue_expansion\tv_first_execution_batches\tv_active_2026_pilot_10_small_high_confidence.held.json as the next protected TV input batch.
+2. Stage additively only; no generic publisher, no legacy direct resolver, no Plex refresh unless the TV-specific gate requires and active playback is clear.
+3. Keep the next 25, large-show, and review-hold batches held until pilot 10 verifies cleanly.
+4. After staging, run TV-scoped Plex/WebDAV verification before visible publication.
 ## Mission 002 Community Sports Source Discovery - Current Next Actions (2026-06-15T13:47:38Z)
 
 1. Treat Invoke-Mission002CommunitySportsSourceDiscovery.ps1 as the upstream source-intelligence runner for external sports discovery.
