@@ -1,21 +1,21 @@
 {
   "component": "scarflix_v2_streaming_layered_validator",
-  "updated_utc": "2026-06-15T00:55:03Z",
-  "status": "RUNNING",
+  "updated_utc": "2026-06-15T00:55:15Z",
+  "status": "REVIEW",
   "qa_component": "scarflix_v2_materialized_plex_decision_qa_node",
   "decision_probe_skip": 6,
   "decision_probe_limit": 3,
   "range_bytes": 4194304,
   "summary": {
-    "total": 2,
+    "total": 3,
     "passed": 1,
-    "review": 1,
+    "review": 2,
     "reasons": {
-      "webdav_head_upstream_server_error": 1,
+      "webdav_head_upstream_server_error": 2,
       "webdav_head_and_temporary_range_warm_passed": 1
     }
   },
-  "recent_results": [
+  "results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
       "updated_utc": "2026-06-15T00:54:51Z",
@@ -173,6 +173,93 @@
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
       "elapsed_ms": 9362
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-15T00:55:14Z",
+      "target_hash": "ScarFLIX_part-d8b22fb3f498688e",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-d8b22fb3f498688e/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-09T10:17:48Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\_ScarFLIXLive\\06 Discover Movies\\Annihilation (2018)\\ScarFLIX_part-d8b22fb3f498688e",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-d8b22fb3f498688e",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": false,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d8b22fb3f498688e/stream.mkv",
+          "status_code": 503,
+          "bytes_read": 0,
+          "content_length": "166",
+          "content_type": "text/plain; charset=utf-8",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 756,
+          "attempt": 2,
+          "reason": "upstream_server_error",
+          "attempts": 2
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d8b22fb3f498688e/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "166",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1672,
+            "attempt": 1,
+            "reason": "upstream_server_error"
+          },
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d8b22fb3f498688e/stream.mkv",
+            "status_code": 503,
+            "bytes_read": 0,
+            "content_length": "166",
+            "content_type": "text/plain; charset=utf-8",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 756,
+            "attempt": 2,
+            "reason": "upstream_server_error"
+          }
+        ],
+        "webdav_head_fallback_range": {
+          "ok": false,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-d8b22fb3f498688e/stream.mkv",
+          "status_code": 503,
+          "bytes_read": 166,
+          "content_length": "166",
+          "content_type": "text/plain; charset=utf-8",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 781,
+          "reason": "upstream_server_error"
+        }
+      },
+      "status": "REVIEW",
+      "reason": "webdav_head_upstream_server_error",
+      "elapsed_ms": 3972
     }
-  ]
+  ],
+  "next_action": "Inspect WebDAV/path/range failures before calling broad Plex decision QA."
 }
