@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_stabilisation_status_20260615_v141",
-      "created_at": "2026-06-15T01:41:26Z",
-      "expires_at": "2026-06-16T01:41:26Z",
+      "instruction_id": "phase0_record_stabilisation_status_20260615_v142",
+      "created_at": "2026-06-15T01:57:11Z",
+      "expires_at": "2026-06-16T01:57:11Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,7 +14,7 @@
       ],
       "retry_policy": {
         "max_retries": 2,
-        "backoff": "exponential"
+        "backoff_seconds": 60
       },
       "actions": [
         {
@@ -26,6 +26,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T01:41:26Z",
+  "updated_utc": "2026-06-15T01:57:11Z",
   "source": "grok_api"
 }
