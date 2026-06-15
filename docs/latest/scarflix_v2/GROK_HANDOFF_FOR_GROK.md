@@ -1,3 +1,12 @@
+## MISSION 002 LIVE TV UPDATE - OFFICIAL PLEX ACCOUNT OPT-OUT APPLIED
+
+**Updated UTC:** 2026-06-15T05:33:23Z  
+**User outcome:** Plex-owned Live TV / Plex Channels should no longer appear for the active Plex account; Plex should focus on Jason's own libraries and curated IPTV path.  
+**Action taken:** Connected through the Codex Chrome Extension bridge, opened Plex Web account Online Media Sources, and set Live TV, Movies & Shows, Discover Source, More Ways to Watch search results, and streaming-service availabilities to Disabled.  
+**Verification:** Plex Home reloaded after the change and visible text no longer contained Live TV, Discover, Movies & Shows, Crunchyroll, Available on Plex, or More Ways to Watch indicators.  
+**Threadfin/IPTV:** Threadfin remains curated-only and reachable; no physical tuner used.  
+**Safety:** No Plex DB write, no Plex restart, no publication, no ScarFLIX expansion, no metadata/sign-in/account domain block. Existing hosts block for epg.provider.plex.tv remains as defense in depth only.  
+**Next user-visible check:** Relaunch Plex clients; stale sidebars may need refresh/reopen.
 ## MISSION 002 LIVE TV UPDATE - CHROME EXTENSION INSTALLED BUT DISABLED
 
 **Updated UTC:** 2026-06-15T05:23:32Z  
