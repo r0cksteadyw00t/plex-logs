@@ -1,6 +1,6 @@
 # TV-First Additive Publication Adapter
 
-Updated UTC: 2026-06-15T23:44:55Z
+Updated UTC: 2026-06-15T23:51:45Z
 Status: ROLLBACK_COMPLETE_PUBLICATION_FAILED
 Gate status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
 Expected episodes: 28
