@@ -1,3 +1,20 @@
+# FOR GROK PEER REVIEW - MISSION 002 SPORTS SOURCE ENGINE FOUNDATION PASS (2026-06-15T12:09:00Z)
+
+- User-facing goal: move toward richer AFL/sports coverage inside Plex Live TV without breaking the current curated IPTV baseline.
+- Built dedicated sports source engine: `C:\Users\jason\OneDrive\Documents\Plex Project\jasonos\iptv\scripts\Invoke-Mission002SportsSourceEngine.ps1`.
+- Added schemas: `mission002_external_sports_source_config.schema.json` and `mission002_sports_channel_metadata.schema.json`.
+- Promotion gate now requires `plex_safe=true`, `live_ok=true`, reliability score >= 70, and empty `held_reason`.
+- Current baseline classified: 33/33 active channels are live-safe and promoted as the active baseline.
+- DVR is tracked separately from live capability; 2 baseline channels are live-safe but not DVR-complete due missing programme counts.
+- External source config status: private registry missing at `C:\Users\jason\OneDrive\Public\TOKENS\mission002_external_sports_sources.json`.
+- External sports result: 0 candidates, 0 promoted, 0 backend changes.
+- Threadfin verification after engine run: PASS, 33 active M3U channels, 33 Threadfin lineup channels.
+- Local full metadata: `D:\PlexTools\state\jasonos_prime\iptv\sports_push\mission002_sports_channel_metadata.json`.
+- Redacted public metadata: `D:\PlexTools\public\latest\scarflix_v2\mission002_sports_channel_metadata.redacted.json`.
+- Private overlay output: `D:\PlexTools\state\jasonos_prime\iptv\sports_push\mission002_sports_promoted_external_overlay.m3u`.
+- Safety: no fake Fox/Kayo rows, no Threadfin/Plex apply, no ScarFLIX publication, PAUSE_PUBLICATION preserved, no stream URLs exposed.
+- Next review target: validate the source registry schema and promotion gate before any private sports source is added.
+
 # FOR GROK PEER REVIEW - MISSION 002 AGGRESSIVE SPORTS PUSH LOCAL ONLY (2026-06-15T10:00:14Z)
 
 - Publication mode for this run: LOCAL_ONLY_NOT_GITHUB_PUSHED, because Jason instructed not to publish anything to public/shared state.
