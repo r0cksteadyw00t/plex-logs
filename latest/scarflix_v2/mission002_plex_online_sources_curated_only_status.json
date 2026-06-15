@@ -1,0 +1,68 @@
+{
+    "component":  "jasonos_mission002_plex_online_sources_curated_only",
+    "schema_version":  "jasonos.iptv.plex_online_sources.v1",
+    "status":  "BLOCKED_ACCOUNT_TOKEN_REQUIRED",
+    "updated_utc":  "2026-06-15T04:21:55Z",
+    "apply_requested":  false,
+    "safety":  {
+                   "iptv_only":  true,
+                   "physical_tuner_used":  false,
+                   "touches_plex_server_database":  false,
+                   "restarts_plex":  false,
+                   "threadfin_lineup_curated_only":  true
+               },
+    "intended_effect":  "Disable Plex-owned online Live TV, Movies \u0026 Shows, Discover, search availability, and detail-page availability sources so Plex Live TV shows the personal curated Threadfin/DVR source only.",
+    "token_checks":  [
+                         {
+                             "source":  "C:\\Users\\jason\\OneDrive\\Public\\TOKENS\\plex_token.txt",
+                             "status":  "FAIL_AUTH",
+                             "http_status":  401,
+                             "token_length":  20,
+                             "error":  "The remote server returned an error: (401) Unauthorized."
+                         },
+                         {
+                             "source":  "C:\\Users\\jason\\AppData\\Local\\Plex Media Server\\Preferences.xml:PlexOnlineToken",
+                             "status":  "FAIL_AUTH",
+                             "http_status":  401,
+                             "token_length":  31,
+                             "error":  "The remote server returned an error: (401) Unauthorized."
+                         }
+                     ],
+    "selected_token_source":  "",
+    "user_uuid_detected":  "",
+    "requested_settings":  [
+                               {
+                                   "key":  "tv.plex.provider.epg",
+                                   "value":  "opt_out",
+                                   "purpose":  "Disable Plex-owned free Live TV channels so only personal curated DVR/Threadfin channels remain."
+                               },
+                               {
+                                   "key":  "tv.plex.provider.vod",
+                                   "value":  "opt_out",
+                                   "purpose":  "Disable Plex-owned free Movies \u0026 Shows online source."
+                               },
+                               {
+                                   "key":  "includeDiscoverSource",
+                                   "value":  "opt_out",
+                                   "purpose":  "Disable Discover online source."
+                               },
+                               {
+                                   "key":  "includeMetadataInSearch",
+                                   "value":  "opt_out",
+                                   "purpose":  "Remove More Ways to Watch search results."
+                               },
+                               {
+                                   "key":  "includeAvailabilities",
+                                   "value":  "opt_out",
+                                   "purpose":  "Remove streaming-service availability rows from detail pages."
+                               }
+                           ],
+    "actions":  [
+
+                ],
+    "errors":  [
+                   "No available local token was accepted by plex.tv account endpoints. Local Plex server token may still be valid for server APIs but cannot change account online media source settings."
+               ],
+    "rollback":  "Re-run this worker with opt_in values for the same keys, or use Plex Web Account \u003e Online Media Sources to set Live TV / Movies \u0026 Shows / Discover back to Enabled.",
+    "next_safe_action":  "Use a valid Plex account token or logged-in browser session to apply Online Media Sources opt-outs; Threadfin itself is already curated-only."
+}
