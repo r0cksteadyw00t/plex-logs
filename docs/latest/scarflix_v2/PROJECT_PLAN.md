@@ -1,3 +1,13 @@
+# Mission 002 Multi-Source Sports Discovery V2 - PASS/HELD (2026-06-15T14:25:43Z)
+
+- Mission 002 source intelligence has moved from conservative community-only discovery to multi-source v2 discovery with strict promotion gates.
+- Implemented workers: URL M3U fetch, markdown/text index crawl, GitHub code-search child discovery, capped child queue, duplicate stream suppression, trust/class scoring, recast signal detection, private source graph, and redacted public source graph.
+- Latest bounded result: 47 sources processed, 17 fetched, 40 child sources discovered, 164 duplicate streams suppressed, 1693 unique channels indexed, 196 relevant candidates, 40/40 probe PASS.
+- Current user-facing Live TV baseline remains unchanged and protected; this runner did not mutate Threadfin or Plex.
+- Coverage state: AFL adequate via existing 7AFL lane, Racing strong, Cricket adequate, AU FTA sports-adjacent strong. Fox Footy, Kayo, Fox Sports, AFLW, and NRL are still not found as validated Plex-compatible candidates.
+- Promotion path remains: private pending package -> Sports Source Engine -> burn-in/repeated-probe gate -> Threadfin/Plex apply only after PASS.
+- Next engineering step: burn-in history/repeated probe persistence and additional discovery workers for GitHub Gists/M3U index sources; do not fabricate premium sports channels.
+
 # FOR GROK PEER REVIEW - TV-FIRST EXECUTION BATCHES REFRESHED (2026-06-15T13:54:08Z)
 
 - User request context: continue progressing TV shows, including all seasons, while Mission 002 work proceeds.
