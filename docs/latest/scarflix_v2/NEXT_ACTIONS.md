@@ -1,3 +1,11 @@
+# TV-First Whole-Show Next Actions (2026-06-15T12:47:07Z)
+
+1. Build the additive TV publication adapter for the 21 accepted private-stage episode candidates only.
+2. Adapter must create a rollback manifest before any visible write, avoid generic staged publisher/legacy resolver, and keep held episodes excluded.
+3. After publication, run a TV-scoped verification pass only for the accepted set and rollback on any Plex/WebDAV regression.
+4. Refresh source selection for the 7 held episodes separately; do not block the 21 accepted candidates on those residual source gaps.
+5. After the 3-show pilot passes visible verification, scale to the next TV-first batch before movie expansion.
+
 # Mission 002 Sports Source Engine - Next Actions (2026-06-15T12:09:00Z)
 
 1. Use `Invoke-Mission002SportsSourceEngine.ps1` as the Mission 002 sports ingestion authority.
