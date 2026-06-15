@@ -1,10 +1,10 @@
 # TV-First Additive Publication Adapter
 
-Updated UTC: 2026-06-15T23:17:31Z
-Status: HELD_FULL_SEASON_GATE_NOT_PASS
-Gate status: HELD_FULL_SEASON_INCOMPLETE
+Updated UTC: 2026-06-15T23:41:10Z
+Status: HELD_ACTIVE_OR_UNKNOWN_PLEX_SESSIONS
+Gate status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
 Expected episodes: 28
-Accepted episodes: 24
+Accepted episodes: 28
 Mutated entries: 0
 Rollback performed: false
 
@@ -17,4 +17,4 @@ Rollback performed: false
 - rollback_manifest_before_mutation: true
 - tv_section_only_refresh: true
 
-Next safe action: Keep TV publication held. Continue private source retry/monitoring until the full-season gate passes.
+Next safe action: Wait for zero active Plex sessions before TV publication.
