@@ -2,8 +2,8 @@
   "component": "jasonos_prime_tv_first_additive_publication_adapter",
   "schema_version": "jasonos.tv_first.additive_publication_adapter.v1",
   "started_utc": "2026-06-16T17:08:54Z",
-  "updated_utc": "2026-06-16T17:50:58Z",
-  "status": "RUNNING",
+  "updated_utc": "2026-06-16T17:55:57Z",
+  "status": "ROLLBACK_COMPLETE_PUBLICATION_FAILED",
   "gate_status": "PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
@@ -12,7 +12,7 @@
   "expected_count": 28,
   "accepted_count": 28,
   "mutated_count": 28,
-  "rollback_performed": false,
+  "rollback_performed": true,
   "mutation_manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_additive_publication\\runs\\20260616T170854Z\\mutation_manifest.json",
   "rollback_manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_first_additive_publication\\runs\\20260616T170854Z\\rollback_manifest.json",
   "backup_path": "D:\\PlexTools\\Backups\\tv_first_additive_publication_20260616T170854Z\\webdav_map.before.json",
@@ -621,8 +621,8 @@
       "error": ""
     }
   ],
-  "plex_verify_attempts": 66,
-  "plex_verify_elapsed_ms": 2428959,
+  "plex_verify_attempts": 74,
+  "plex_verify_elapsed_ms": 2697184,
   "plex_results": [
     {
       "part": "ScarFLIX_part-337e2c69f8b26678",
@@ -820,5 +820,7 @@
       "error": "",
       "method": "section_scan_fallback"
     }
-  ]
+  ],
+  "error": "PLEX_POST_PUBLICATION_VERIFY_FAILED",
+  "next_safe_action": "Inspect rollback manifest and failed verification evidence before retrying TV publication."
 }
