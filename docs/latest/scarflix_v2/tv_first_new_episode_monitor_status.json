@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-16T17:36:01Z",
-  "updated_utc": "2026-06-16T17:39:24Z",
-  "status": "HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE",
+  "started_utc": "2026-06-16T17:06:01Z",
+  "updated_utc": "2026-06-16T17:55:57Z",
+  "status": "REVIEW_MONITOR_PUBLICATION_NOT_COMPLETE",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
   "tracked_shows": [
@@ -393,10 +393,10 @@
   "new_episode_pending_event_count": 0,
   "new_episode_queue_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_new_episode_monitor/new_episode_events.json",
   "new_episode_recent_events": [],
-  "accepted_count": 27,
-  "full_season_complete": false,
-  "publication_attempted": false,
-  "publication_status": "NOT_ATTEMPTED_FULL_SEASON_GATE_HELD",
+  "accepted_count": 28,
+  "full_season_complete": true,
+  "publication_attempted": true,
+  "publication_status": "ROLLBACK_COMPLETE_PUBLICATION_FAILED",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
@@ -405,7 +405,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 2954,
+      "elapsed_ms": 2620,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -414,7 +414,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 104621,
+      "elapsed_ms": 93516,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -423,7 +423,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageRetryRepair.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 181,
+      "elapsed_ms": 192,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -432,7 +432,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 2252,
+      "elapsed_ms": 2198,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -441,7 +441,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 92066,
+      "elapsed_ms": 74101,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -450,10 +450,19 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 177,
+      "elapsed_ms": 118,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
+    },
+    {
+      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstAdditivePublicationAdapter.js",
+      "status": 1,
+      "signal": "",
+      "elapsed_ms": 2822976,
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "ok": false
     }
   ],
   "safety": {
@@ -464,11 +473,17 @@
     "full_season_gate_required": true
   },
   "whole_stage_status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
-  "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "gate_status": "HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS",
-  "full_season_missing_count": 1,
-  "full_season_missing_by_show": {
-    "Haunted Hotel": 1
+  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "gate_status": "PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD",
+  "full_season_missing_count": 0,
+  "full_season_missing_by_show": {},
+  "publication_retry_hold": {
+    "hold": false,
+    "previous_status": "ROLLBACK_COMPLETE_PUBLICATION_FAILED",
+    "previous_error": "PLEX_POST_PUBLICATION_VERIFY_FAILED",
+    "previous_updated_utc": "2026-06-16T09:41:28Z",
+    "previous_age_minutes": 447,
+    "cooldown_minutes": 360
   },
-  "next_safe_action": "Monitor will keep retrying private staging/validation. Missing episodes remain excluded from visible publication until the full-season gate passes."
+  "next_safe_action": "Inspect TV additive publication adapter status before retrying."
 }
