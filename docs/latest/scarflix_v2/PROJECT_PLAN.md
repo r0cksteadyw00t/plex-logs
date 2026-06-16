@@ -4462,3 +4462,14 @@ Next required step:
 
 
 
+## TV Monitor Active + Section 6 Publication Forensic Hold - 2026-06-16T01:12Z
+
+User outcome focus: automatically pick up new TV episodes while avoiding partial seasons and repeated Plex-visible mutation loops.
+
+- Monitor is active: `JasonOS_Prime_TVFirstNewEpisodeMonitor`, every 15 minutes.
+- Release event queue implemented: watches 90 shows, including 64 active-2026 shows, and records episode-count/season-count/last-air-date deltas.
+- Current event state: `PASS_NO_NEW_EPISODE_DELTAS`; pending event count 0.
+- Protected pilot is full-season private-ready: 28/28 accepted for Haunted Hotel S01, MobLand S01, The Institute S01.
+- Visible publication is held: both directory-symlink and file-symlink pilot attempts verified WebDAV but failed Plex Section 6 exposure before timeout and rolled back cleanly.
+- New control: publication retry cooldown prevents repeat 15-minute mutate/rollback loops while detection and private validation continue.
+- Next safe action: Grok/Plex scanner forensic review before another visible TV retry. Candidate fixes are longer scanner wait, explicit scanner lifecycle evidence, or adjusted TV Section 6 indexing model.
