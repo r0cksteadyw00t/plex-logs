@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-16T10:37:45Z  
+**Updated UTC:** 2026-06-16T10:42:57Z  
 **Status:** PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED
 
 ## Scope
@@ -25,8 +25,9 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Background Jobs
 
-- pid=25124 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=29612 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=4900 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=16180 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=40468 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
 
 ## Recent rclone/WebDAV Error Pressure
 
