@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-16T20:35:19.578Z",
+  "updated_utc": "2026-06-16T20:40:59.816Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,14 +119,14 @@
     "blocked_by": "none"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 5127,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-16T20:35:18Z",
-    "next_check_age_minutes": 0,
+    "controller_updated_age_minutes": 6,
+    "platform_child_progress_age_minutes": 5132,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-16T20:40:16Z",
+    "next_check_age_minutes": 1,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 5126,
+    "age_minutes": 5131,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-16T20:30:09Z",
+    "updated_utc": "2026-06-16T20:35:11Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-16T20:35:02Z",
+    "updated_utc": "2026-06-16T20:40:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -294,7 +294,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-16T20:30:13Z",
+      "utc": "2026-06-16T20:35:13Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
