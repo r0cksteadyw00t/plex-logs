@@ -1,16 +1,18 @@
 # TV-First Private Stage Retry Repair
 
-Updated UTC: 2026-06-16T21:37:38Z
+Updated UTC: 2026-06-16T21:53:29Z
 Status: PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD
 Validator status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Failed rows found: 4
-Moved to retry-held: 4
-Ledger failures tracked: 51
+Failed rows found: 6
+Moved to retry-held: 6
+Ledger failures tracked: 53
 
 ## Moved Rows
 - Haunted Hotel S01E02: PROVIDER_503_RETRYABLE
+- Haunted Hotel S01E03: PROVIDER_HEAD_TIMEOUT_OR_ERROR
 - Haunted Hotel S01E06: PROVIDER_503_RETRYABLE
-- Haunted Hotel S01E10: PROVIDER_HEAD_TIMEOUT_OR_ERROR
+- MobLand S01E01: PROVIDER_HEAD_TIMEOUT_OR_ERROR
+- MobLand S01E04: PROVIDER_HEAD_TIMEOUT_OR_ERROR
 - MobLand S01E09: PROVIDER_503_RETRYABLE
 
 ## Safety
