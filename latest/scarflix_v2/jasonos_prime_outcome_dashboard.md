@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-16T16:35:08.121Z
+Updated UTC: 2026-06-16T16:40:12.037Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,7 +21,7 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=117/117; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: resume controlled materialized/WebDAV publishing | Medium |
 
 Recent Achievements:
-- 2026-06-16T16:30:18Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-16T16:35:09Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-14T06:53:12.327Z - Cycle 156 Active Playback Hold - 2026-06-14T06:53:09Z: Status: HELD_ACTIVE_PLAYBACK_USER_STREAM_PROTECTED. Extended runner cycle 156: launch health 21 ms; Sentinel PASS / LOW; active sessions were 1. Runner actions: suppressed_noncritical_tasks, stopped_materialized_qa_due_active_playback. Runner blocker: active_plex_playback_detected.
 - 2026-06-14T06:45:12.423Z - Cycle 153 Clean Bounded QA Pass - 2026-06-14T06:37:38Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 153: launch health 21 ms; post-QA launch check 20 ms; Sentinel PASS / LOW; Plex identity status was not recorded in this campaign cycle; active sessions were 0. Bounded Materialized QA batch skip 88, limit 3: 3/3 PASS, 0 REVIEW. Passed ti...
 - 2026-06-14T06:30:12.042Z - Cycle 151 Clean Bounded QA Pass - 2026-06-14T06:23:50Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 151: launch health 19 ms; post-QA launch check 20 ms; Sentinel PASS / LOW; Plex identity status was not recorded in this campaign cycle; active sessions were 0. Bounded Materialized QA batch skip 79, limit 4: 4/4 PASS, 0 REVIEW. Passed ti...
@@ -31,7 +31,7 @@ Recent Achievements:
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 5 min ago
-- Platform child progress: 4886 min ago
+- Platform child progress: 4891 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
