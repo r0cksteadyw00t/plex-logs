@@ -4253,3 +4253,15 @@ The sampled files are present from user context, and Plex/WebDAV endpoints are c
 
 
 
+# FOR GROK PEER REVIEW - TV SECTION 6 PUBLICATION HELD, NEW-EPISODE MONITOR ACTIVE (2026-06-16T01:12Z)
+
+- User requirement: keep a monitor active to pick up new TV episodes as soon as they are released, while still publishing full seasons/complete episode sets only.
+- Monitor status: `JasonOS_Prime_TVFirstNewEpisodeMonitor` remains enabled every 15 minutes. It now persists release-watch state and emits a public new-episode event status. Current release watch covers 90 shows, including 64 active-2026 shows. Latest event state: `PASS_NO_NEW_EPISODE_DELTAS`.
+- Private TV pilot state: Haunted Hotel S01, MobLand S01, and The Institute S01 are now 28/28 accepted and validated privately. The full-season gate passes.
+- Visible publication attempts: both directory-symlink and file-symlink layouts created 28 aliases, verified WebDAV, failed Plex Section 6 hash exposure, and rolled back cleanly with `PLEX_POST_PUBLICATION_VERIFY_FAILED`.
+- New safety control: monitor now holds visible publication retries for 360 minutes after a recent rollback, while still running detection/staging/validation. This prevents 15-minute mutate/rollback loops.
+- Current evidence: Plex logs after the file-symlink rollback show Section 6 scanner activity lagged behind rollback; the scanner processed/skipped show/season folders after the aliases had already been removed, while the older MobLand S01E01 control was processed.
+- Leading hypothesis: scanner latency/backlog exceeded the previous 15-minute verification window; Plex TV scanner cache/symlink behavior remains secondary.
+- Code changes now live: direct file-symlink mode, persistent new-episode event queue, publication cooldown, longer next-attempt scanner patience (45-minute adapter verify / 60-minute monitor child timeout), mirror allowlist for new event/forensic status files.
+- Peer-review ask: advise whether the next safe attempt should be a longer file-symlink retry, an explicit scanner lifecycle wait before rollback, or a different TV Section 6 indexing strategy.
+- Dedicated evidence files: `tv_first_section6_publication_forensic_handoff.md/.json`, `tv_first_new_episode_events_status.md/.json`.
