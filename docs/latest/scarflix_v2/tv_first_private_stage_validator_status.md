@@ -1,6 +1,6 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-16T08:08:26Z
+Updated UTC: 2026-06-16T08:22:15Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 Checked: 28
 Passed: 26
@@ -11,7 +11,7 @@ Review: 2
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=video/mp4; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=; type=text/html; reason=PROVIDER_503_RETRYABLE
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
