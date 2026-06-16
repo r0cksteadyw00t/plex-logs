@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-16T20:53:45Z",
+  "updated_utc": "2026-06-16T21:07:23Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "safety": {
     "read_only_url_validation": true,
@@ -14,9 +14,9 @@
     "no_generic_pending_write": true,
     "source_urls_not_written_to_public_status": true
   },
-  "checked": 28,
-  "passed": 25,
-  "review": 3,
+  "checked": 22,
+  "passed": 20,
+  "review": 2,
   "results": [
     {
       "stage_id": "tv_haunted_hotel_255752_s01e01_ad579d8d7244",
@@ -128,19 +128,19 @@
       "title": "Haunted Hotel",
       "tmdb_id": 255752,
       "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_haunted_hotel_255752_s01e06_ad579d8d7244\\Haunted Hotel (2025) - S01E06.strm",
-      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
       "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "Range probe returned HTTP 503",
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
+        "reason": "HEAD and range probes passed.",
         "url_host": "torrentio.strem.fun",
         "head_status": 200,
-        "range_status": 503,
-        "content_type": "text/html",
+        "range_status": 206,
+        "content_type": "application/force-download",
         "content_length": 385432254,
-        "accept_ranges": "none",
-        "content_range": "",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/385432254",
         "source_url_redacted": true
       }
     },
@@ -479,134 +479,6 @@
         "content_range": "bytes 0-1/615224212",
         "source_url_redacted": true
       }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e03_66e7acbb58d4",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e03_66e7acbb58d4\\The Institute (2025) - S01E03.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 482918867,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/482918867",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e04_1fffe50cc22f",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e04_1fffe50cc22f\\The Institute (2025) - S01E04.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 510788912,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/510788912",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e05_771e330cc2af",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e05_771e330cc2af\\The Institute (2025) - S01E05.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 713720731,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/713720731",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e06_66e7acbb58d4",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e06_66e7acbb58d4\\The Institute (2025) - S01E06.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 601334529,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/601334529",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e07_66e7acbb58d4",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e07_66e7acbb58d4\\The Institute (2025) - S01E07.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 542375289,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/542375289",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e08_66e7acbb58d4",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e08_66e7acbb58d4\\The Institute (2025) - S01E08.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 595274464,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/595274464",
-        "source_url_redacted": true
-      }
     }
-  ],
-  "status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "next_safe_action": "Keep failed private-stage candidates held and refresh source selection only for failed rows."
+  ]
 }
