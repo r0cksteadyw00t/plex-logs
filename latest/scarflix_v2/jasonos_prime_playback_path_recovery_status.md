@@ -1,7 +1,7 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-16T22:35:52Z  
-**Status:** PASS
+**Updated UTC:** 2026-06-16T22:41:32Z  
+**Status:** REVIEW
 
 ## Scope
 
@@ -10,11 +10,11 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 ## Checks
 
 - WebDAV bridge before: True
-- WebDAV bridge after: True
+- WebDAV bridge after: False
 - Plex identity: True
 - rclone processes after: 1
 - S:\media after: ok=True, timed_out=False
-- S:\media\catalog after: ok=True, timed_out=False
+- S:\media\catalog after: ok=False, timed_out=True
 - Watch Now probe source: cached_previous_status
 
 ## Watch Now
@@ -24,4 +24,5 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 ## Failures
 
-
+WebDAV bridge health is not PASS
+S: media/catalog path is not reliably ready
