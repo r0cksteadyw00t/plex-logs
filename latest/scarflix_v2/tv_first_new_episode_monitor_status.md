@@ -1,6 +1,6 @@
 # TV-First New Episode Monitor
 
-Updated UTC: 2026-06-16T15:23:25Z
+Updated UTC: 2026-06-16T15:38:52Z
 Status: HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE
 Tracked shows: 3
 Expected episodes: 28
@@ -12,11 +12,11 @@ Release watch shows: 90
 Release watch active 2026 shows: 64
 
 ## Actions
-- JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js: status=0; elapsed_ms=2582
-- JasonOS_Prime_TVFirstPrivateStageValidator.js: status=0; elapsed_ms=72662
-- JasonOS_Prime_TVFirstPrivateStageRetryRepair.js: status=0; elapsed_ms=128
-- JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js: status=0; elapsed_ms=2549
-- JasonOS_Prime_TVFirstPrivateStageValidator.js: status=0; elapsed_ms=66396
-- JasonOS_Prime_TVFirstPublicationGate.js: status=0; elapsed_ms=94
+- JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js: status=0; elapsed_ms=2724
+- JasonOS_Prime_TVFirstPrivateStageValidator.js: status=0; elapsed_ms=90158
+- JasonOS_Prime_TVFirstPrivateStageRetryRepair.js: status=0; elapsed_ms=139
+- JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js: status=0; elapsed_ms=2096
+- JasonOS_Prime_TVFirstPrivateStageValidator.js: status=0; elapsed_ms=75415
+- JasonOS_Prime_TVFirstPublicationGate.js: status=0; elapsed_ms=88
 
 Next safe action: Monitor will keep retrying private staging/validation. Missing episodes remain excluded from visible publication until the full-season gate passes.
