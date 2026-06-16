@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-16T23:25:18Z",
+  "updated_utc": "2026-06-16T23:25:09Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -556,7 +556,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-16T23:20:12Z",
+    "updated_utc": "2026-06-16T23:25:09Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -815,8 +815,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 758553,
-    "safe_pipeline_log_age_seconds": 815445,
+    "canary_status_age_seconds": 758834,
+    "safe_pipeline_log_age_seconds": 815724,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -827,13 +827,13 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=37088"
+        "detail": "pid=35080"
       }
     ],
     "blockers": []
