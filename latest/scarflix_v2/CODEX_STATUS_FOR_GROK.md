@@ -1,3 +1,11 @@
+# FOR GROK PEER REVIEW - CURRENT TV MONITOR + PUBLICATION HOLD (2026-06-16T01:22Z)
+
+- TV monitor is active and scheduled every 15 minutes.
+- New-episode event queue is active and currently has 0 pending deltas.
+- Protected TV pilot is complete privately at 28/28 episodes, but visible Plex publication is held.
+- Both additive publication layouts rolled back cleanly after Plex Section 6 failed to expose the new aliases in time.
+- Current status: HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN / HELD_RECENT_PUBLICATION_FAILURE_COOLDOWN.
+- Raw forensic handoff is published for Grok review: 	v_first_section6_publication_forensic_handoff.json.
 # FOR GROK PEER REVIEW - TV NEW-EPISODE MONITOR EXPANDED TO ACTIVE WATCHLIST (2026-06-15T23:36Z)
 
 - Added the user requirement that new TV episodes must be detected automatically and included as soon as they are released.
@@ -3407,3 +3415,4 @@ If the file is in a different path or branch, use the correct raw URL.
 - Safety: no active TV worker after rollback, no pilot aliases left visible, `webdav_map.json` restored, PAUSE_PUBLICATION active, Mission 002 untouched.
 - New code live: file-symlink default, release-event queue, 360-minute publication cooldown, 45-minute next-attempt Plex verification timeout, 60-minute monitor child timeout.
 - Current blocker: Section 6 scanner/indexing timing or cache behavior. Grok review requested before next visible TV publication retry.
+
