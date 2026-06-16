@@ -1,10 +1,10 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-16T02:00:04Z
-Status: PASS
-Alert level: LOW
+Updated UTC: 2026-06-16T02:15:02Z
+Status: ALERT
+Alert level: HIGH
 Jason action required: false
-Codex action required: false
+Codex action required: true
 
 ## Signals
 - controller_status: PASS
@@ -16,15 +16,15 @@ Codex action required: false
 - dashboard_status: PASS
 - dashboard_age_minutes: 5
 - mirror_status: PASS
-- mirror_age_minutes: 2
+- mirror_age_minutes: 17
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 11561
-- durable_platform_gate_age_minutes: 11561
+- checkpoint_age_minutes: 11576
+- durable_platform_gate_age_minutes: 11576
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- None.
+- JasonOS_Prime_PublicMirrorPublisher: mirror_stale (PASS) skipped_orchestrator_owned job=run_public_mirror_publisher
 
 ## Notes
-- None.
+- Same unresolved sentinel signature repeated for three cycles.
