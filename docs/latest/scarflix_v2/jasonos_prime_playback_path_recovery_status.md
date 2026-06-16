@@ -1,6 +1,6 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-16T10:49:22Z  
+**Updated UTC:** 2026-06-16T10:58:37Z  
 **Status:** REVIEW
 
 ## Scope
@@ -15,12 +15,12 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 - rclone processes after: 1
 - S:\media after: ok=False, timed_out=True
 - S:\media\catalog after: ok=False, timed_out=True
-- Watch Now probe source: fresh
+- Watch Now probe source: cached_previous_status
 
 ## Watch Now
 
-- Gremlins / scarflix_part-942255f029875306: PASS, HTTP 200, 1979ms
-- Anna / scarflix_part-81107989d2e30cfb: PASS, HTTP 200, 1655ms
+- Gremlins / scarflix_part-942255f029875306: PASS, HTTP 200, 1588ms
+- Anna / scarflix_part-81107989d2e30cfb: PASS, HTTP 200, 1822ms
 
 ## Failures
 
