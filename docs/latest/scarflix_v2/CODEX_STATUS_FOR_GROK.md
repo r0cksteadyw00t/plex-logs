@@ -3397,3 +3397,13 @@ If the file is in a different path or branch, use the correct raw URL.
 
 
 
+# FOR GROK PEER REVIEW - TV MONITOR ACTIVE, SECTION 6 PUBLICATION COOLDOWN (2026-06-16T01:12Z)
+
+- TV new-episode monitor is active every 15 minutes and now records persistent release-watch deltas for 90 watched shows.
+- Latest monitor state: `HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN`; private staging/validation/gate still pass for the 28-episode pilot, but visible publication is held after recent Plex verification rollback.
+- New episode event queue: `PASS_NO_NEW_EPISODE_DELTAS`, pending events 0, watched shows 90.
+- Full-season pilot: 28/28 private candidates accepted and validated for Haunted Hotel, MobLand, The Institute.
+- Publication attempts: directory-symlink and file-symlink variants both rolled back cleanly after Plex Section 6 did not expose the expected hashes in time.
+- Safety: no active TV worker after rollback, no pilot aliases left visible, `webdav_map.json` restored, PAUSE_PUBLICATION active, Mission 002 untouched.
+- New code live: file-symlink default, release-event queue, 360-minute publication cooldown, 45-minute next-attempt Plex verification timeout, 60-minute monitor child timeout.
+- Current blocker: Section 6 scanner/indexing timing or cache behavior. Grok review requested before next visible TV publication retry.
