@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-16T05:36:05Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-16T05:37:31Z
+Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 3
 Episodes enumerated: 28
 Episodes already staged: 26
-Episodes newly staged: 2
-Review: 0
+Episodes newly staged: 0
+Review: 2
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Haunted Hotel: enumerated=10; staged=2; already=8; review=0; source=tmdb_season_details
+- Haunted Hotel: enumerated=10; staged=0; already=8; review=2; source=tmdb_season_details
 - MobLand: enumerated=10; staged=0; already=10; review=0; source=tmdb_season_details
 - The Institute: enumerated=8; staged=0; already=8; review=0; source=tmdb_season_details
 
