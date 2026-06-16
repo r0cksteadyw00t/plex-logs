@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-16T18:55:05Z",
+  "updated_utc": "2026-06-16T18:55:36.782Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,7 +14,7 @@
     "movie_strm_count": 0,
     "tv_strm_count": 0,
     "total_strm_count": 0,
-    "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
+    "primary_delivery_metric": "materialized_or_webdav_backed_plex_playback_success",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
     "legacy_resolver_default_allowed": false,
@@ -104,8 +104,7 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
-    "plex_safe_webdav_visible_rows": 1
+    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON"
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -124,9 +123,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 5022,
-    "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-16T18:50:57Z",
+    "platform_child_progress_age_minutes": 5027,
+    "mirror_updated_age_minutes": 2,
+    "next_check_utc": "2026-06-16T18:55:32Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -135,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 5021,
+    "age_minutes": 5026,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -144,7 +143,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-16T18:45:40Z",
+    "updated_utc": "2026-06-16T18:50:27Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -295,7 +294,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-16T18:45:44Z",
+      "utc": "2026-06-16T18:50:29Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -463,13 +462,5 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
-  },
-  "grokbuild_forensic_agent": {
-    "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-16T18:55:05Z",
-    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
-    "implementation": "node_native",
-    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
-    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
   }
 }
