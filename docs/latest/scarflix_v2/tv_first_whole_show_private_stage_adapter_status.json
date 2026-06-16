@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-16T19:21:05Z",
+  "updated_utc": "2026-06-16T19:22:43Z",
   "manifest_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_protected_pilot/tv_first_protected_pilot_request.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
@@ -27,9 +27,9 @@
   },
   "show_count": 3,
   "episodes_enumerated": 28,
-  "already_staged_count": 27,
-  "staged_count": 0,
-  "review_count": 1,
+  "already_staged_count": 25,
+  "staged_count": 1,
+  "review_count": 2,
   "shows": [
     {
       "title": "Haunted Hotel",
@@ -37,9 +37,9 @@
       "seasons_expected": 1,
       "episodes_expected": 10,
       "episodes_enumerated": 10,
-      "already_staged_count": 9,
-      "staged_count": 0,
-      "review_count": 1,
+      "already_staged_count": 7,
+      "staged_count": 1,
+      "review_count": 2,
       "episode_manifest_source": "tmdb_season_details",
       "error": ""
     },
@@ -81,7 +81,20 @@
       "tmdb_id": 255752,
       "season": 1,
       "episode": 2,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_haunted_hotel_255752_s01e02_ad579d8d7244",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n264p",
+        "title_excerpt": "Haunted Hotel S01 720x264 - Priimewire Haunted Hotel (2025) Season 1 Episode 2- Episode 2 - PrimeWire.mp4 👤 0 💾 350.41 MB ⚙️ 1337x",
+        "info_hash": "ad579d8d72440016712e6bca7d78c3cd8e4728fe",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     },
     {
       "title": "Haunted Hotel",
@@ -109,7 +122,9 @@
       "tmdb_id": 255752,
       "season": 1,
       "episode": 6,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
+      "stream_count": 7,
+      "rejected_hash_count": 1
     },
     {
       "title": "Haunted Hotel",
@@ -268,6 +283,6 @@
       "status": "PASS_ALREADY_PRIVATE_STAGED"
     }
   ],
-  "status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
+  "status": "REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
