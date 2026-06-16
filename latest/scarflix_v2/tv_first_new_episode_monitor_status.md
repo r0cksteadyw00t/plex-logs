@@ -1,6 +1,6 @@
 # TV-First New Episode Monitor
 
-Updated UTC: 2026-06-16T09:06:02Z
+Updated UTC: 2026-06-16T09:21:02Z
 Status: HELD_MONITOR_ALREADY_RUNNING
 Tracked shows: 3
 Expected episodes: 28
