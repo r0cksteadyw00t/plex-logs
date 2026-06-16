@@ -1,0 +1,33 @@
+{
+  "component": "tv_first_section6_publication_forensic_handoff",
+  "updated_utc": "2026-06-16T01:12:00Z",
+  "status": "REVIEW_GROK_SECTION6_PUBLICATION_FORENSIC",
+  "monitor_active": true,
+  "monitor_interval_minutes": 15,
+  "release_watch_show_count": 90,
+  "active_2026_watch_show_count": 64,
+  "new_episode_event_status": "PASS_NO_NEW_EPISODE_DELTAS",
+  "private_full_season_ready": true,
+  "accepted_episode_count": 28,
+  "expected_episode_count": 28,
+  "publication_attempts": [
+    {
+      "layout": "episode_directory_symlink",
+      "result": "ROLLBACK_COMPLETE_PUBLICATION_FAILED",
+      "error": "PLEX_POST_PUBLICATION_VERIFY_FAILED"
+    },
+    {
+      "layout": "episode_file_symlink",
+      "result": "ROLLBACK_COMPLETE_PUBLICATION_FAILED",
+      "error": "PLEX_POST_PUBLICATION_VERIFY_FAILED"
+    }
+  ],
+  "current_safety_mode": {
+    "visible_publication_cooldown_active": true,
+    "cooldown_minutes": 360,
+    "pause_publication_present": true,
+    "mission002_mutated": false
+  },
+  "leading_hypothesis": "Plex Section 6 scanner latency exceeded the previous verification window, so rollback removed aliases before queued scanner processing caught up; symlink scanner cache behavior remains a secondary hypothesis.",
+  "next_safe_action": "Grok review before another visible TV publication attempt; next attempt should use longer scanner patience and explicit scanner lifecycle evidence."
+}
