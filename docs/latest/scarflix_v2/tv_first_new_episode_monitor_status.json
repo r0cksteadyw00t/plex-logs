@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-16T00:41:35Z",
-  "updated_utc": "2026-06-16T01:00:47Z",
-  "status": "REVIEW_MONITOR_PUBLICATION_NOT_COMPLETE",
+  "started_utc": "2026-06-16T01:06:02Z",
+  "updated_utc": "2026-06-16T01:07:24Z",
+  "status": "HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
   "tracked_shows": [
@@ -395,8 +395,8 @@
   "new_episode_recent_events": [],
   "accepted_count": 28,
   "full_season_complete": true,
-  "publication_attempted": true,
-  "publication_status": "ROLLBACK_COMPLETE_PUBLICATION_FAILED",
+  "publication_attempted": false,
+  "publication_status": "HELD_RECENT_PUBLICATION_FAILURE_COOLDOWN",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
@@ -405,7 +405,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 2093,
+      "elapsed_ms": 2723,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -414,7 +414,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 126505,
+      "elapsed_ms": 79884,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -423,19 +423,10 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 247,
+      "elapsed_ms": 152,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstAdditivePublicationAdapter.js",
-      "status": 1,
-      "signal": "",
-      "elapsed_ms": 1023090,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": false
     }
   ],
   "safety": {
@@ -450,5 +441,13 @@
   "gate_status": "PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD",
   "full_season_missing_count": 0,
   "full_season_missing_by_show": {},
-  "next_safe_action": "Inspect TV additive publication adapter status before retrying."
+  "publication_retry_hold": {
+    "hold": true,
+    "previous_status": "ROLLBACK_COMPLETE_PUBLICATION_FAILED",
+    "previous_error": "PLEX_POST_PUBLICATION_VERIFY_FAILED",
+    "previous_updated_utc": "2026-06-16T01:00:47Z",
+    "previous_age_minutes": 7,
+    "cooldown_minutes": 360
+  },
+  "next_safe_action": "Keep new-episode monitor active; prepare Grok/Plex scanner forensic review before another visible TV publication attempt."
 }
