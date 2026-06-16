@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-16T07:31:35Z
-Instruction: phase0_tv_section6_forensic_strategy_note_20260616
+Updated UTC: 2026-06-16T07:47:14Z
+Instruction: phase0_maintain_tv_section6_hold_forensic_review_20260616_v252
 
-Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.
+TV Section 6 publication held for forensic review of scanner latency. Monitor active, no visible aliases or mutations. Recommend controlled retry strategy only after local review of tv_first_section6_publication_forensic_handoff.md/json.
