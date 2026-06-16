@@ -1,22 +1,21 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-16T21:26:12Z
+Updated UTC: 2026-06-16T21:39:35Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 28
-Passed: 21
-Review: 7
+Checked: 27
+Passed: 23
+Review: 4
 
 ## Results
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Haunted Hotel: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=; type=text/html; reason=PROVIDER_503_RETRYABLE
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Haunted Hotel: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=; type=text/html; reason=PROVIDER_503_RETRYABLE
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Haunted Hotel: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=503; type=text/html; reason=PROVIDER_503_RETRYABLE
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Haunted Hotel: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_HEAD_TIMEOUT_OR_ERROR
-- Haunted Hotel: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/force-download; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
@@ -24,8 +23,8 @@ Review: 7
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- MobLand: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/force-download; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- MobLand: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=; type=text/html; reason=PROVIDER_503_RETRYABLE
+- MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- MobLand: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_HEAD_TIMEOUT_OR_ERROR
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - The Institute: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/force-download; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
@@ -34,7 +33,7 @@ Review: 7
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Institute: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/force-download; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
+- The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
