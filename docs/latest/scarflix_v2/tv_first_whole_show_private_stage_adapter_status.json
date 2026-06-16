@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-16T21:06:04Z",
+  "updated_utc": "2026-06-16T21:07:58Z",
   "manifest_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_protected_pilot/tv_first_protected_pilot_request.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
@@ -27,8 +27,8 @@
   },
   "show_count": 3,
   "episodes_enumerated": 28,
-  "already_staged_count": 28,
-  "staged_count": 0,
+  "already_staged_count": 25,
+  "staged_count": 3,
   "review_count": 0,
   "shows": [
     {
@@ -37,8 +37,8 @@
       "seasons_expected": 1,
       "episodes_expected": 10,
       "episodes_enumerated": 10,
-      "already_staged_count": 10,
-      "staged_count": 0,
+      "already_staged_count": 9,
+      "staged_count": 1,
       "review_count": 0,
       "episode_manifest_source": "tmdb_season_details",
       "error": ""
@@ -49,8 +49,8 @@
       "seasons_expected": 1,
       "episodes_expected": 10,
       "episodes_enumerated": 10,
-      "already_staged_count": 10,
-      "staged_count": 0,
+      "already_staged_count": 9,
+      "staged_count": 1,
       "review_count": 0,
       "episode_manifest_source": "tmdb_season_details",
       "error": ""
@@ -61,8 +61,8 @@
       "seasons_expected": 1,
       "episodes_expected": 8,
       "episodes_enumerated": 8,
-      "already_staged_count": 8,
-      "staged_count": 0,
+      "already_staged_count": 7,
+      "staged_count": 1,
       "review_count": 0,
       "episode_manifest_source": "tmdb_season_details",
       "error": ""
@@ -81,7 +81,20 @@
       "tmdb_id": 255752,
       "season": 1,
       "episode": 2,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_haunted_hotel_255752_s01e02_ad579d8d7244",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n264p",
+        "title_excerpt": "Haunted Hotel S01 720x264 - Priimewire Haunted Hotel (2025) Season 1 Episode 2- Episode 2 - PrimeWire.mp4 👤 0 💾 350.41 MB ⚙️ 1337x",
+        "info_hash": "ad579d8d72440016712e6bca7d78c3cd8e4728fe",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     },
     {
       "title": "Haunted Hotel",
@@ -200,7 +213,20 @@
       "tmdb_id": 247718,
       "season": 1,
       "episode": 9,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mobland_247718_s01e09_b69de58f7532",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n720p",
+        "title_excerpt": "MobLand S01 720p x264 FENiX MobLand.S01E09.720p.x264-FENiX.mkv 👤 51 💾 423.13 MB ⚙️ TorrentGalaxy",
+        "info_hash": "b69de58f7532a2fa5816af28ddf60f41b2057967",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     },
     {
       "title": "MobLand",
@@ -263,9 +289,22 @@
       "tmdb_id": 253372,
       "season": 1,
       "episode": 8,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
+      "stage_id": "tv_the_institute_253372_s01e08_771e330cc2af",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "The.Institute.2025.S01.1080p.x265-ELiTE The.Institute.2025.S01E08.1080p.x265-ELiTE.mkv 👤 30 💾 722.61 MB ⚙️ 1337x",
+        "info_hash": "771e330cc2af71de6d35ee5a8726f9b63b2edd4b",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": false,
+        "selection_mode": "cached_verification_gated_fallback",
+        "fallback_requires_private_validation": true,
+        "fallback_requires_plex_decision": true,
+        "source_url_stored_private_only": true
+      }
     }
   ],
-  "status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
+  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
