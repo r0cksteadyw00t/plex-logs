@@ -2,7 +2,7 @@
 
 Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE
 
-Updated UTC: 2026-06-16T06:01:50.8045600Z
+Updated UTC: 2026-06-16T10:01:51.0087756Z
 
 ## Peer Review Outcome
 
@@ -20,7 +20,7 @@ Updated UTC: 2026-06-16T06:01:50.8045600Z
 - Unique candidate channels extracted: 1694
 - Relevant candidate channels: 197
 - Probe attempts: 40
-- Probe PASS: 40
+- Probe PASS: 39
 - Review queue items: 196
 - Sports Source Engine candidates: 1
 - Pending review/engine candidates: 196
@@ -36,7 +36,7 @@ Updated UTC: 2026-06-16T06:01:50.8045600Z
 - Racing: strong (matches=5, probe_pass=5)
 - Cricket: adequate (matches=1, probe_pass=1)
 - NRL: missing (matches=0, probe_pass=0)
-- AU Free-To-Air Sports Adjacent: strong (matches=8, probe_pass=3)
+- AU Free-To-Air Sports Adjacent: strong (matches=8, probe_pass=2)
 
 ## Privacy / Mutation Boundary
 
