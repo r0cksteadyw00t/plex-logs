@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "PASS",
-    "started_utc":  "2026-06-16T06:57:03Z",
-    "ended_utc":  "2026-06-16T06:57:10Z",
-    "duration_seconds":  7,
+    "started_utc":  "2026-06-16T07:01:07Z",
+    "ended_utc":  "2026-06-16T07:01:50Z",
+    "duration_seconds":  43,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  57
+                           "ms":  25
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  181
+                           "ms":  70
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  47
+                           "ms":  12
                        }
                    ],
     "webdav_before":  {
@@ -43,14 +43,14 @@
     "rclone_processes_after":  1,
     "s_media_before":  {
                            "path":  "S:\\media",
-                           "ok":  true,
-                           "timed_out":  false,
+                           "ok":  false,
+                           "timed_out":  true,
                            "error":  ""
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  true,
-                             "timed_out":  false,
+                             "ok":  false,
+                             "timed_out":  true,
                              "error":  ""
                          },
     "s_media_after":  {
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  1564,
+                          "ms":  1290,
                           "content_length":  "1714768887",
                           "error":  ""
                       },
@@ -80,17 +80,21 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  7076,
+                          "ms":  1326,
                           "content_length":  "1721714811",
                           "error":  ""
                       }
                   ],
-    "watch_now_probe_run":  false,
-    "watch_now_source":  "cached_previous_status",
+    "watch_now_probe_run":  true,
+    "watch_now_source":  "fresh",
     "actions":  [
                     {
-                        "action":  "watch_now_head_probes_skipped_cooldown",
-                        "cooldown_seconds":  300
+                        "action":  "run_rclone_mount_keepalive",
+                        "result":  {
+                                       "ran":  true,
+                                       "exit_code":  1,
+                                       "error":  ""
+                                   }
                     }
                 ],
     "failures":  [
