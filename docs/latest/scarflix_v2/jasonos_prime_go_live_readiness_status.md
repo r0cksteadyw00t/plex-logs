@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-16T21:54:46Z
+Updated UTC: 2026-06-16T22:14:11Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -8,7 +8,7 @@ Go-live ready: `False`
 
 Active Plex sessions: `0`
 
-Sentinel: `PASS / LOW`
+Sentinel: `REVIEW / MEDIUM`
 
 PAUSE_PUBLICATION active: `True`
 
@@ -34,7 +34,7 @@ PAUSE_PUBLICATION active: `True`
 
 | Task | Exists | State | Last Result |
 |---|---:|---:|---:|
-| `JasonOS_Prime_PlaybackFirstStabilityGuard` | `True` | `Running` | `267009` |
+| `JasonOS_Prime_PlaybackFirstStabilityGuard` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_PlaybackPathRecovery` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_PlexWatchdog` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_ProjectSafeProgressAudit` | `True` | `Ready` | `0` |
