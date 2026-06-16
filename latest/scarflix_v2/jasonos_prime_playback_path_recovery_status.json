@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "PASS",
-    "started_utc":  "2026-06-16T22:35:09Z",
-    "ended_utc":  "2026-06-16T22:35:52Z",
-    "duration_seconds":  43,
+    "status":  "REVIEW",
+    "started_utc":  "2026-06-16T22:39:18Z",
+    "ended_utc":  "2026-06-16T22:41:32Z",
+    "duration_seconds":  133,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  346
+                           "ms":  729
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  3847
+                           "ms":  312
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  1650
+                           "ms":  23
                        }
                    ],
     "webdav_before":  {
@@ -30,9 +30,9 @@
                           "error":  ""
                       },
     "webdav_after":  {
-                         "ok":  true,
-                         "status_code":  200,
-                         "error":  ""
+                         "ok":  false,
+                         "status_code":  0,
+                         "error":  "The operation has timed out."
                      },
     "plex_identity":  {
                           "ok":  true,
@@ -43,14 +43,14 @@
     "rclone_processes_after":  1,
     "s_media_before":  {
                            "path":  "S:\\media",
-                           "ok":  true,
-                           "timed_out":  false,
+                           "ok":  false,
+                           "timed_out":  true,
                            "error":  ""
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  true,
-                             "timed_out":  false,
+                             "ok":  false,
+                             "timed_out":  true,
                              "error":  ""
                          },
     "s_media_after":  {
@@ -61,8 +61,8 @@
                       },
     "s_catalog_after":  {
                             "path":  "S:\\media\\catalog",
-                            "ok":  true,
-                            "timed_out":  false,
+                            "ok":  false,
+                            "timed_out":  true,
                             "error":  ""
                         },
     "watch_now":  [
@@ -94,7 +94,8 @@
                     }
                 ],
     "failures":  [
-
+                     "WebDAV bridge health is not PASS",
+                     "S: media/catalog path is not reliably ready"
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260617.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
