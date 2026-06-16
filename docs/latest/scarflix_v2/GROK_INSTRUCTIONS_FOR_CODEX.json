@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_record_tv_new_episode_monitor_strategy_20260615_v223",
-      "created_at": "2026-06-15T23:46:17Z",
-      "expires_at": "2026-06-16T23:46:17Z",
+      "instruction_id": "phase0_record_stabilisation_status_20260616_v224",
+      "created_at": "2026-06-16T00:02:47Z",
+      "expires_at": "2026-06-17T00:02:47Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Validated dual-layer TV model: 15-minute pilot retry gate plus broader active-TV release watch. Full-season gate remains enforced. Bounded alternate-source lane for missing episodes may be considered after local review only. No direct publishing, no legacy resolver, no materialized expansion while PAUSE_PUBLICATION active.",
-            "source_instruction_id": "phase0_record_tv_new_episode_monitor_strategy_20260615_v223"
+            "summary": "Phase 0 stabilisation: maintain TV full-season gate and new-episode monitor; keep Mission 002 in transparent discovery mode. No publishing, no legacy resolver, no materialized expansion while QA remains REVIEW.",
+            "source_instruction_id": "phase0_record_stabilisation_status_20260616_v224"
           }
         }
       ],
@@ -29,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-15T23:46:17Z",
+  "updated_utc": "2026-06-16T00:02:47Z",
   "source": "grok_api"
 }
