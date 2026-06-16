@@ -1,3 +1,9 @@
+# Current TV Delivery Hold - 2026-06-16T01:22Z
+
+- Monitor for new TV episodes is live every 15 minutes and writes event queue status.
+- Full-season pilot is privately complete at 28/28 episodes.
+- Visible TV publication remains held after clean rollback from Plex Section 6 post-publication verification failure.
+- Next action is not another blind publication attempt; it is a controlled Section 6 scanner/indexing retry design after Grok forensic review.
 ## TV New-Episode Monitor Expanded - 2026-06-15T23:36Z
 
 User outcome focus: new TV episodes must be detected automatically and queued for inclusion as soon as they are released.
@@ -4473,3 +4479,4 @@ User outcome focus: automatically pick up new TV episodes while avoiding partial
 - Visible publication is held: both directory-symlink and file-symlink pilot attempts verified WebDAV but failed Plex Section 6 exposure before timeout and rolled back cleanly.
 - New control: publication retry cooldown prevents repeat 15-minute mutate/rollback loops while detection and private validation continue.
 - Next safe action: Grok/Plex scanner forensic review before another visible TV retry. Candidate fixes are longer scanner wait, explicit scanner lifecycle evidence, or adjusted TV Section 6 indexing model.
+
