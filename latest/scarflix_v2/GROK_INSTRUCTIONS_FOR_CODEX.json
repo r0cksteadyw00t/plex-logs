@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_review_strategy_20260616_v229",
-      "created_at": "2026-06-16T01:22:36Z",
-      "expires_at": "2026-06-17T01:22:36Z",
+      "instruction_id": "phase0_tv_section6_forensic_review_strategy_20260616_v230",
+      "created_at": "2026-06-16T01:39:22Z",
+      "expires_at": "2026-06-17T01:39:22Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "note": "Phase 0: maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN and full-season TV gate. Review v_first_section6_publication_forensic_handoff.md/json for Section 6 scanner latency hypothesis before any controlled retry. No visible TV publication, no WebDAV mutation, no partial seasons. Mission 002 remains read-only."
+            "note": "Phase 0: maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN and full-season TV gate. Review forensic handoff for Section 6 scanner latency before any controlled retry. No visible TV publication, no WebDAV mutation, no partial seasons. Mission 002 remains read-only."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-16T01:22:36Z",
+  "updated_utc": "2026-06-16T01:39:22Z",
   "source": "grok_api"
 }
