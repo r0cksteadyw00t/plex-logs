@@ -1,6 +1,6 @@
 # TV-First New Episode Monitor
 
-Updated UTC: 2026-06-16T02:52:39Z
+Updated UTC: 2026-06-16T03:07:29Z
 Status: HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN
 Tracked shows: 3
 Expected episodes: 28
@@ -12,8 +12,8 @@ Release watch shows: 90
 Release watch active 2026 shows: 64
 
 ## Actions
-- JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js: status=0; elapsed_ms=2377
-- JasonOS_Prime_TVFirstPrivateStageValidator.js: status=0; elapsed_ms=94787
-- JasonOS_Prime_TVFirstPublicationGate.js: status=0; elapsed_ms=254
+- JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js: status=0; elapsed_ms=2298
+- JasonOS_Prime_TVFirstPrivateStageValidator.js: status=0; elapsed_ms=84712
+- JasonOS_Prime_TVFirstPublicationGate.js: status=0; elapsed_ms=240
 
 Next safe action: Keep new-episode monitor active; prepare Grok/Plex scanner forensic review before another visible TV publication attempt.
