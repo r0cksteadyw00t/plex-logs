@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-16T22:51:21Z",
-  "updated_utc": "2026-06-16T22:51:22Z",
-  "status": "HELD_SENTINEL_ALERT_HIGH",
+  "started_utc": "2026-06-16T23:06:25Z",
+  "updated_utc": "2026-06-16T23:12:41Z",
+  "status": "HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
   "tracked_shows": [
@@ -393,14 +393,69 @@
   "new_episode_pending_event_count": 0,
   "new_episode_queue_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_new_episode_monitor/new_episode_events.json",
   "new_episode_recent_events": [],
-  "accepted_count": 0,
+  "accepted_count": 25,
   "full_season_complete": false,
   "publication_attempted": false,
-  "publication_status": "",
-  "sentinel_status": "ALERT",
-  "sentinel_alert_level": "HIGH",
+  "publication_status": "NOT_ATTEMPTED_FULL_SEASON_GATE_HELD",
+  "sentinel_status": "REVIEW",
+  "sentinel_alert_level": "MEDIUM",
   "pause_publication_present": true,
-  "actions": [],
+  "actions": [
+    {
+      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
+      "status": 0,
+      "signal": "",
+      "elapsed_ms": 14125,
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
+      "status": 0,
+      "signal": "",
+      "elapsed_ms": 147250,
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageRetryRepair.js",
+      "status": 0,
+      "signal": "",
+      "elapsed_ms": 2755,
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
+      "status": 0,
+      "signal": "",
+      "elapsed_ms": 10487,
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
+      "status": 0,
+      "signal": "",
+      "elapsed_ms": 186803,
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
+      "status": 0,
+      "signal": "",
+      "elapsed_ms": 9305,
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "ok": true
+    }
+  ],
   "safety": {
     "no_mission002_mutation": true,
     "no_generic_publisher_called": true,
@@ -408,5 +463,12 @@
     "publication_owned_by_additive_adapter": true,
     "full_season_gate_required": true
   },
-  "next_safe_action": "Retry TV monitor after Sentinel clears."
+  "whole_stage_status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
+  "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
+  "gate_status": "HELD_SENTINEL_ALERT_HIGH",
+  "full_season_missing_count": 3,
+  "full_season_missing_by_show": {
+    "MobLand": 3
+  },
+  "next_safe_action": "Monitor will keep retrying private staging/validation. Missing episodes remain excluded from visible publication until the full-season gate passes."
 }
