@@ -1,7 +1,7 @@
 # TV-First New Episode Monitor
 
-Updated UTC: 2026-06-17T00:06:04Z
-Status: HELD_SENTINEL_ALERT_HIGH
+Updated UTC: 2026-06-17T00:36:02Z
+Status: HELD_MONITOR_ALREADY_RUNNING
 Tracked shows: 3
 Expected episodes: 28
 Accepted episodes: 0
@@ -13,4 +13,4 @@ Release watch active 2026 shows: 64
 
 ## Actions
 
-Next safe action: Retry TV monitor after Sentinel clears.
+Next safe action: Wait for the current TV monitor cycle to finish.
