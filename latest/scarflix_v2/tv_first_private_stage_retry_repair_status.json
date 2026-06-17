@@ -1,54 +1,13 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_retry_repair",
   "schema_version": "jasonos.tv_first.private_stage_retry_repair.v1",
-  "updated_utc": "2026-06-17T12:37:25Z",
+  "updated_utc": "2026-06-17T19:24:39Z",
   "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "retry_hold_root": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260617T123725Z",
-  "failed_rows_found": 4,
-  "moved_count": 4,
-  "ledger_failure_count": 64,
-  "moved": [
-    {
-      "title": "Haunted Hotel",
-      "tmdb_id": 255752,
-      "season": 1,
-      "episode": 2,
-      "stage_id": "tv_haunted_hotel_255752_s01e02_ad579d8d7244",
-      "info_hash": "ad579d8d72440016712e6bca7d78c3cd8e4728fe",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260617T123725Z\\tv_haunted_hotel_255752_s01e02_ad579d8d7244"
-    },
-    {
-      "title": "Haunted Hotel",
-      "tmdb_id": 255752,
-      "season": 1,
-      "episode": 10,
-      "stage_id": "tv_haunted_hotel_255752_s01e10_ad579d8d7244",
-      "info_hash": "ad579d8d72440016712e6bca7d78c3cd8e4728fe",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260617T123725Z\\tv_haunted_hotel_255752_s01e10_ad579d8d7244"
-    },
-    {
-      "title": "MobLand",
-      "tmdb_id": 247718,
-      "season": 1,
-      "episode": 2,
-      "stage_id": "tv_mobland_247718_s01e02_789d36ae78d5",
-      "info_hash": "789d36ae78d539a40421beb9fd787ae5a978a072",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260617T123725Z\\tv_mobland_247718_s01e02_789d36ae78d5"
-    },
-    {
-      "title": "MobLand",
-      "tmdb_id": 247718,
-      "season": 1,
-      "episode": 5,
-      "stage_id": "tv_mobland_247718_s01e05_add38b5bc61a",
-      "info_hash": "add38b5bc61a0f970d661f35f0bd10152e2ca268",
-      "reason_code": "PROVIDER_503_RETRYABLE",
-      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260617T123725Z\\tv_mobland_247718_s01e05_add38b5bc61a"
-    }
-  ],
+  "retry_hold_root": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260617T192439Z",
+  "failed_rows_found": 1,
+  "moved_count": 0,
+  "ledger_failure_count": 65,
+  "moved": [],
   "safety": {
     "reversible_move_only": true,
     "private_stage_only": true,
@@ -61,6 +20,6 @@
     "no_path_rewrite_performed": true,
     "source_urls_not_written_to_public_status": true
   },
-  "status": "PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD",
-  "next_safe_action": "Rerun TV whole-show private stage adapter so failed episodes can select alternate sources."
+  "status": "PASS_NO_FAILED_PRIVATE_STAGE_ROWS_TO_MOVE",
+  "next_safe_action": "Continue to TV-specific publication gate only when validator is PASS."
 }
