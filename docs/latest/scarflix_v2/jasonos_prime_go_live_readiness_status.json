@@ -2,11 +2,11 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-17T10:12:57Z",
-    "updated_utc":  "2026-06-17T11:33:04Z",
+    "started_utc":  "2026-06-17T11:35:53Z",
+    "updated_utc":  "2026-06-17T11:36:47Z",
     "report_only":  false,
     "go_live_ready":  false,
-    "active_plex_sessions":  -1,
+    "active_plex_sessions":  0,
     "sentinel":  {
                      "status":  "ALERT",
                      "alert_level":  "HIGH"
@@ -29,7 +29,7 @@
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
-                                          "Guard=REVIEW_SESSION_DETECTION_UNAVAILABLE_BACKGROUND_SUPPRESSED ActiveSessions=-1 PlexWatchdog=PASS PlaybackPath=REVIEW"
+                                          "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
                                           "Playback path recovery is not PASS: REVIEW."
@@ -73,8 +73,8 @@
                      {
                          "outcome_id":  "O-MISSION-002-IPTV",
                          "name":  "IPTV-only Live TV ready for cutover",
-                         "go_live_status":  "HELD_READY_FOR_QUIET_WINDOW",
-                         "progress_percent":  80,
+                         "go_live_status":  "PASS_VIRTUAL_ADAPTER_READY_PLEX_ATTACH_PENDING",
+                         "progress_percent":  90,
                          "summary":  "IPTV-only package is ready and guarded; no physical tuner path is allowed.",
                          "evidence":  [
                                           "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=FAIL_THREADFIN_COMPOSE_MISSING Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=PASS_THREADFIN_ALREADY_READY_PLEX_ATTACH_HELD PhysicalTuner=false"
@@ -109,10 +109,10 @@
                          "progress_percent":  90,
                          "summary":  "Public mirror and Grok report delivery are operational; this audit adds the missing go-live verdict layer.",
                          "evidence":  [
-                                          "PublicMirror=PASS GrokDelivery=PASS_DELIVERED_TO_GROK_API Mode=REAL_API"
+                                          "PublicMirror=REVIEW GrokDelivery=PASS_DELIVERED_TO_GROK_API Mode=REAL_API"
                                       ],
                          "blockers":  [
-
+                                          "Public mirror is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Publish this readiness audit and keep top-of-file handoffs current after each material change.",
                          "requires_quiet_window":  false,
@@ -125,7 +125,7 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=MISSING QuietWatcherTask=Ready"
+                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Ready"
                                       ],
                          "blockers":  [
                                           "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
@@ -170,8 +170,8 @@
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackFirstStabilityGuard",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  267009
+                                "state":  "Ready",
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackPathRecovery",
@@ -187,9 +187,9 @@
                             },
                             {
                                 "task_name":  "JasonOS_Prime_ProjectSafeProgressAudit",
-                                "exists":  false,
-                                "state":  "MISSING",
-                                "last_result":  null
+                                "exists":  true,
+                                "state":  "Ready",
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_Mission002_QuietWindowCutoverWatcher",
