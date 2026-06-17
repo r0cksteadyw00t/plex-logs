@@ -1,46 +1,79 @@
 {
-  "updated_utc": "2026-06-17T12:34:13.983Z",
+  "updated_utc": "2026-06-17T19:30:12.151Z",
   "source": "live status merge",
   "updates": [
     {
-      "utc": "2026-06-17T09:20:09Z",
+      "utc": "2026-06-17T12:40:14Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
     {
-      "utc": "2026-06-14T06:53:12.327Z",
-      "title": "Cycle 156 Active Playback Hold - 2026-06-14T06:53:09Z",
-      "detail": "Status: HELD_ACTIVE_PLAYBACK_USER_STREAM_PROTECTED. Extended runner cycle 156: launch health 21 ms; Sentinel PASS / LOW; active sessions were 1. Runner actions: suppressed_noncritical_tasks, stopped_materialized_qa_due_active_playback. Runner blocker: active_plex_playback_detected."
+      "utc": "2026-06-13T07:08:43.775Z",
+      "title": "PlatformGate child QA active: Plex client decision QA",
+      "detail": "Latest child QA line: [2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity"
     },
     {
-      "utc": "2026-06-14T06:45:12.423Z",
-      "title": "Cycle 153 Clean Bounded QA Pass - 2026-06-14T06:37:38Z",
-      "detail": "Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 153: launch health 21 ms; post-QA launch check 20 ms; Sentinel PASS / LOW; Plex identity status was not recorded in this campaign cycle; active sessions were 0. Bounded Materialized QA batch skip 88, limit 3: 3/3 PASS, 0 REVIEW. Passed ti..."
+      "utc": "2026-06-08T01:18:52Z",
+      "title": "Durable PlatformGate runner PASS",
+      "detail": "Step platform_gate_pass; owner_pid=44064; child_pid="
     },
     {
-      "utc": "2026-06-14T06:30:12.042Z",
-      "title": "Cycle 151 Clean Bounded QA Pass - 2026-06-14T06:23:50Z",
-      "detail": "Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 151: launch health 19 ms; post-QA launch check 20 ms; Sentinel PASS / LOW; Plex identity status was not recorded in this campaign cycle; active sessions were 0. Bounded Materialized QA batch skip 79, limit 4: 4/4 PASS, 0 REVIEW. Passed ti..."
+      "utc": "2026-06-08T01:18:52Z",
+      "title": "PlatformGate checkpoint PASS",
+      "detail": "Step platform_gate_pass; visible=1; blockers=0"
     },
     {
-      "utc": "2026-06-14T06:15:11.731Z",
-      "title": "Cycle 149 Clean Pass - 2026-06-14T06:07:13Z",
-      "detail": "Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 149: launch health 50 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint. Bounded Materialized QA batch skip 72, limit 4: 3/4 PASS, 1 failed. Detailed row titles..."
+      "utc": "2026-06-06T10:55:00Z",
+      "title": "Watchdog-of-watchdog sentinel added",
+      "detail": "Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell."
     },
     {
-      "utc": "2026-06-14T06:00:11.898Z",
-      "title": "Cycle 147 Source Retry Added - 2026-06-14T05:54:33Z",
-      "detail": "Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 147: launch health 20 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 65, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Night at the Museum; 9ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ Weeks;..."
+      "utc": "2026-06-06T10:50:00Z",
+      "title": "Redundant sentinel added",
+      "detail": "Added JasonOS_Prime_Sentinel as watchdog-of-watchdog to re-enable stalled tasks, retrigger recovery, and publish alert state when self-heal cannot resolve."
     },
     {
-      "utc": "2026-06-14T05:45:18.425Z",
-      "title": "Cycle 145 Source Retry Added - 2026-06-14T05:40:42Z",
-      "detail": "Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 145: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 REVIEW. Passed title: Man on Fire."
+      "utc": "2026-06-06T10:41:34Z",
+      "title": "Dashboard stall recovered",
+      "detail": "Watchdog task was re-enabled, stale PlatformGate locks were backed up and removed, controller was retriggered, and InstantStatus was made non-recursive."
     },
     {
-      "utc": "2026-06-14T05:39:21.426Z",
-      "title": "Cycle 145 Clean Pass - 2026-06-14T05:39:21Z",
-      "detail": "Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 145: launch health 23 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 57, limit 5: 1/4 PASS, 3 failed. Detailed row titles for this completed batch were superseded by t..."
+      "utc": "2026-06-06T09:36:00Z",
+      "title": "Five-minute watchdog and retry hardening applied",
+      "detail": "Installed the watchdog scheduled task, added five-minute stall detection, and changed repeated transient PlatformGate reviews to retry/backoff instead of BLOCKED_LOOP."
+    },
+    {
+      "utc": "2026-06-06T08:25:00Z",
+      "title": "Watchdog and stall detector added",
+      "detail": "Created a persistent stall detector, dashboard-triggered fallback, watchdog status files, and Stall Risk dashboard column."
+    },
+    {
+      "utc": "2026-06-06T08:19:40Z",
+      "title": "Controller schedule re-enabled",
+      "detail": "Autonomous controller task was enabled and relaunched so future progress does not depend on Codex."
+    },
+    {
+      "utc": "2026-06-06T08:18:42Z",
+      "title": "Autonomous progress visibility added",
+      "detail": "Dashboard now shows recent achievements, heartbeat freshness, stall-watch state, and whether Codex is needed."
+    },
+    {
+      "utc": "2026-06-06T07:33:14Z",
+      "title": "Phone-readable dashboard published",
+      "detail": "Generated a rendered HTML dashboard and mirrored it to the public repository."
+    },
+    {
+      "utc": "2026-06-06T07:14:24Z",
+      "title": "Controller/PlatformGate reliability patched",
+      "detail": "Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added."
+    },
+    {
+      "utc": "2026-06-06T07:04:47Z",
+      "title": "PlatformGate cycle relaunched locally",
+      "detail": "Detached PlatformGate restarted with catalogue expansion still disabled."
+    }
+  ]
+}Detailed row titles for this completed batch were superseded by t..."
     },
     {
       "utc": "2026-06-14T05:30:11.813Z",
