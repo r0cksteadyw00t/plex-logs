@@ -1,6 +1,6 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-16T23:38:32Z
+Updated UTC: 2026-06-17T00:22:51Z
 Status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
 Accepted private-stage episodes: 28
 Expected pilot episodes: 28
@@ -9,7 +9,7 @@ Full-season missing: 0
 Held/missing episodes: 0
 Validator: PASS_PRIVATE_STAGE_VALIDATED
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Sentinel: PASS/LOW
+Sentinel: REVIEW/MEDIUM
 
 ## Accepted Counts
 - Haunted Hotel: 10
