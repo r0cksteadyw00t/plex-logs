@@ -1,10 +1,10 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-17T12:24:20Z
+Updated UTC: 2026-06-17T12:37:24Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 27
+Checked: 28
 Passed: 24
-Review: 3
+Review: 4
 
 ## Results
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
@@ -18,6 +18,7 @@ Review: 3
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=; type=text/html; reason=PROVIDER_503_RETRYABLE
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- MobLand: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=; type=text/html; reason=PROVIDER_503_RETRYABLE
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=; type=text/html; reason=PROVIDER_503_RETRYABLE
