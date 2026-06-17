@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "PASS",
-    "started_utc":  "2026-06-17T20:04:03Z",
-    "ended_utc":  "2026-06-17T20:04:16Z",
-    "duration_seconds":  13,
+    "status":  "REVIEW",
+    "started_utc":  "2026-06-17T20:09:03Z",
+    "ended_utc":  "2026-06-17T20:09:48Z",
+    "duration_seconds":  45,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  87
+                           "ms":  666
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  220
+                           "ms":  185
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  21
+                           "ms":  488
                        }
                    ],
     "webdav_before":  {
@@ -49,20 +49,20 @@
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  true,
-                             "timed_out":  false,
+                             "ok":  false,
+                             "timed_out":  true,
                              "error":  ""
                          },
     "s_media_after":  {
                           "path":  "S:\\media",
-                          "ok":  true,
-                          "timed_out":  false,
+                          "ok":  false,
+                          "timed_out":  true,
                           "error":  ""
                       },
     "s_catalog_after":  {
                             "path":  "S:\\media\\catalog",
-                            "ok":  true,
-                            "timed_out":  false,
+                            "ok":  false,
+                            "timed_out":  true,
                             "error":  ""
                         },
     "watch_now":  [
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  2699,
+                          "ms":  1314,
                           "content_length":  "1714768887",
                           "error":  ""
                       },
@@ -80,21 +80,25 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  3442,
+                          "ms":  1439,
                           "content_length":  "1721714811",
                           "error":  ""
                       }
                   ],
-    "watch_now_probe_run":  false,
-    "watch_now_source":  "cached_previous_status",
+    "watch_now_probe_run":  true,
+    "watch_now_source":  "fresh",
     "actions":  [
                     {
-                        "action":  "watch_now_head_probes_skipped_cooldown",
-                        "cooldown_seconds":  300
+                        "action":  "run_rclone_mount_keepalive",
+                        "result":  {
+                                       "ran":  true,
+                                       "exit_code":  0,
+                                       "error":  ""
+                                   }
                     }
                 ],
     "failures":  [
-
+                     "S: media/catalog path is not reliably ready"
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260618.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
