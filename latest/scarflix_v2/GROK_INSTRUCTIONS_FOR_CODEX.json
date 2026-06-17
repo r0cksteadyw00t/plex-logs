@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_tv_section6_hold_write_strategy_note_20260617_v30",
-      "created_at": "2026-06-17T08:50:11Z",
-      "expires_at": "2026-06-18T08:50:11Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_strategy_note_20260617_v31",
+      "created_at": "2026-06-17T09:05:45Z",
+      "expires_at": "2026-06-18T09:05:45Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -19,13 +19,15 @@
       "actions": [
         {
           "action_type": "write_strategy_note",
-          "note": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN for TV Section 6. Continue 15-minute monitor. No WebDAV mutations, symlink creation, Plex refresh, or publication adapter triggers until forensic logs validate scanner timing hypothesis. Recommend review of tv_first_section6_publication_forensic_handoff.md before any retry."
+          "parameters": {
+            "summary": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN for TV Section 6. Continue 15-minute monitor without WebDAV mutations, symlinks, Plex refresh or publication triggers pending forensic validation of scanner timing."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-17T08:50:11Z",
+  "updated_utc": "2026-06-17T09:05:45Z",
   "source": "grok_api"
 }
