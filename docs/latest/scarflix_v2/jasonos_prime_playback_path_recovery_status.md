@@ -1,6 +1,6 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-17T12:32:21Z  
+**Updated UTC:** 2026-06-17T12:33:25Z  
 **Status:** PASS
 
 ## Scope
@@ -15,7 +15,7 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 - rclone processes after: 1
 - S:\media after: ok=True, timed_out=False
 - S:\media\catalog after: ok=True, timed_out=False
-- Watch Now probe source: fresh
+- Watch Now probe source: cached_previous_status
 
 ## Watch Now
 
