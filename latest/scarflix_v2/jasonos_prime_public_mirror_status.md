@@ -1,11 +1,11 @@
 # JasonOS Prime Public Mirror
 
 Status: REVIEW_RECOVERABLE
-Updated UTC: 2026-06-17T06:18:29.007Z
-Pushed files: 289
+Updated UTC: 2026-06-17T06:19:48.556Z
+Pushed files: 310
 Skipped files: 0
-Failed files: 29
-Recoverable failures: 29
+Failed files: 8
+Recoverable failures: 8
 Hard failures: 0
 Last success UTC: 2026-06-17T06:08:20.028Z
 Raw base URL: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/
