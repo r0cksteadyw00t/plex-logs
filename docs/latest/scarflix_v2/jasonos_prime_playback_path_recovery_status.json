@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-17T08:19:22Z",
-    "ended_utc":  "2026-06-17T08:28:25Z",
-    "duration_seconds":  544,
+    "started_utc":  "2026-06-17T08:27:34Z",
+    "ended_utc":  "2026-06-17T08:34:47Z",
+    "duration_seconds":  432,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  6313
+                           "ms":  3414
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  10419
+                           "ms":  7240
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  768
+                           "ms":  1609
                        }
                    ],
     "webdav_before":  {
@@ -43,14 +43,14 @@
     "rclone_processes_after":  1,
     "s_media_before":  {
                            "path":  "S:\\media",
-                           "ok":  false,
-                           "timed_out":  true,
+                           "ok":  true,
+                           "timed_out":  false,
                            "error":  ""
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  true,
-                             "timed_out":  false,
+                             "ok":  false,
+                             "timed_out":  true,
                              "error":  ""
                          },
     "s_media_after":  {
@@ -71,18 +71,18 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  17013,
+                          "ms":  15010,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       },
                       {
                           "title":  "Anna",
                           "hash":  "scarflix_part-81107989d2e30cfb",
-                          "ok":  true,
-                          "status_code":  200,
-                          "ms":  13119,
-                          "content_length":  "1721714811",
-                          "error":  ""
+                          "ok":  false,
+                          "status_code":  0,
+                          "ms":  16962,
+                          "content_length":  "",
+                          "error":  "The operation has timed out."
                       }
                   ],
     "watch_now_probe_run":  true,
@@ -92,14 +92,15 @@
                         "action":  "run_rclone_mount_keepalive",
                         "result":  {
                                        "ran":  true,
-                                       "exit_code":  1,
+                                       "exit_code":  2,
                                        "error":  ""
                                    }
                     }
                 ],
     "failures":  [
                      "S: media/catalog path is not reliably ready",
-                     "Watch Now probe failed: Gremlins"
+                     "Watch Now probe failed: Gremlins",
+                     "Watch Now probe failed: Anna"
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260617.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
