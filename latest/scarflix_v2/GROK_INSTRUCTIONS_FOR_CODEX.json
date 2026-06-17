@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_maintain_hold_write_strategy_note_20260617_v20",
-      "created_at": "2026-06-17T05:50:55Z",
-      "expires_at": "2026-06-18T05:50:55Z",
+      "instruction_id": "phase0_tv_section6_forensic_maintain_hold_write_strategy_note_20260617_v21",
+      "created_at": "2026-06-17T06:07:40Z",
+      "expires_at": "2026-06-18T06:07:40Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 0
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Maintain current TV Section 6 publication hold. Continue 15-minute monitor cooldown. Recommend forensic inspection of Plex scanner timing before any retry of full-season pilot aliases. No visible publication, no WebDAV mutation."
+            "summary": "Maintain current HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN for TV Section 6. No publication or symlink mutation. Continue 15-minute monitor. Await local forensic review of Section 6 scanner timing before any retry of full-season pilot aliases."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-17T05:50:55Z",
+  "updated_utc": "2026-06-17T06:07:40Z",
   "source": "grok_api"
 }
