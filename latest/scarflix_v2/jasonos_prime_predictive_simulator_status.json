@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_predictive_simulator",
-  "status": "REVIEW",
-  "updated_utc": "2026-06-17T20:29:21.899Z",
+  "status": "PASS",
+  "updated_utc": "2026-06-17T21:29:41.423Z",
   "no_catalogue_publication": true,
-  "expansion_eligible": false,
+  "expansion_eligible": true,
   "visible": {
     "count": 1,
     "movies": 1,
@@ -18,21 +18,21 @@
     "visible_catalog_qa": "PASS",
     "controller": "PASS",
     "candidate_model": "PASS",
-    "rclone": "FAIL",
+    "rclone": "PASS",
     "health": "REVIEW"
   },
   "simulations": [
     {
       "id": "gate_first_hold",
       "description": "Hold visible expansion until same-snapshot PlatformGate and candidate-source model pass.",
-      "expected_result": "prevents broken Plex visibility",
-      "recommendation": "continue_detached_gate_or_repair_systemic_failure"
+      "expected_result": "not_needed",
+      "recommendation": "advance_to_controlled_expansion"
     },
     {
       "id": "controlled_small_batch",
       "description": "If eligible, run SafeWebDavExpansionPipeline with a small batch and immediate QA.",
-      "expected_visible_delta": 0,
-      "recommendation": "blocked_until_gate_pass"
+      "expected_visible_delta": 5,
+      "recommendation": "run_small_batch_expansion"
     },
     {
       "id": "provider_retry_backoff",
@@ -49,7 +49,7 @@
       "recommendation": "candidate_pool_sufficient_for_next_batch"
     }
   ],
-  "next_autonomous_action": "continue_platform_gate_and_candidate_model_path",
+  "next_autonomous_action": "start_controlled_safe_expansion",
   "status_file": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_predictive_simulator_status.json",
   "markdown_file": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_predictive_simulator_status.md",
   "log": "D:/PlexTools/logs/jasonos_prime_predictive_simulator.log"
