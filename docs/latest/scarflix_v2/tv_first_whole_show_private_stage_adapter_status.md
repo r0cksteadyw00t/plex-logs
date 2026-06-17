@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-17T09:53:52Z
+Updated UTC: 2026-06-17T11:34:48Z
 Status: HELD_SENTINEL_ALERT_HIGH
 Shows requested: 0
 Episodes enumerated: 0
@@ -8,7 +8,7 @@ Episodes already staged: 0
 Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: UNKNOWN
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
 
