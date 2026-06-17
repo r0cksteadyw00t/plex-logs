@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-17T11:35:26Z",
+  "updated_utc": "2026-06-17T11:35:22Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -548,7 +548,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-17T10:10:32Z",
+    "updated_utc": "2026-06-17T11:35:22Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -558,7 +558,7 @@
       "plex_safe_webdav_visible_rows": 1
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
-    "grok_peer_bridge_status": "UNKNOWN",
+    "grok_peer_bridge_status": "PASS_REVIEW_RECEIVED",
     "platform_gate_status": "PASS",
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
@@ -807,25 +807,25 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 797668,
-    "safe_pipeline_log_age_seconds": 854985,
+    "canary_status_age_seconds": 802649,
+    "safe_pipeline_log_age_seconds": 859539,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
       {
         "action": "refresh_grokbuild",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_GrokBuild_Agent.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=39588"
+        "detail": "pid=39168"
       }
     ],
     "blockers": []
