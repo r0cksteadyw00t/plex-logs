@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-17T09:57:23Z
+Updated UTC: 2026-06-17T10:19:47Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -27,6 +27,7 @@ PAUSE_PUBLICATION active: `True`
 
 ## Blocking Items
 
+- `O-PLAYBACK`: Plex watchdog is not PASS: REVIEW_PLEX_STARTED_HTTP_NOT_READY.
 - `O-PLAYBACK`: Playback path recovery is not PASS: REVIEW.
 - `O-SCARFLIX-CATALOGUE`: Materialized QA is not full PASS: REVIEW 117/117 failed=0. retry_held=0 retry_tracked=21.
 - `O-AUTONOMY-STABILITY`: Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED.
@@ -36,11 +37,11 @@ PAUSE_PUBLICATION active: `True`
 | Task | Exists | State | Last Result |
 |---|---:|---:|---:|
 | `JasonOS_Prime_PlaybackFirstStabilityGuard` | `True` | `Running` | `267009` |
-| `JasonOS_Prime_PlaybackPathRecovery` | `True` | `Running` | `2147946720` |
-| `JasonOS_Prime_PlexWatchdog` | `True` | `Running` | `2147946720` |
-| `JasonOS_Prime_ProjectSafeProgressAudit` | `True` | `Ready` | `0` |
+| `JasonOS_Prime_PlaybackPathRecovery` | `True` | `Ready` | `0` |
+| `JasonOS_Prime_PlexWatchdog` | `True` | `Ready` | `0` |
+| `JasonOS_Prime_ProjectSafeProgressAudit` | `True` | `Running` | `267009` |
 | `JasonOS_Prime_Mission002_QuietWindowCutoverWatcher` | `True` | `Ready` | `0` |
-| `JasonOS_Prime_GoLiveReadinessAudit` | `True` | `Ready` | `0` |
+| `JasonOS_Prime_GoLiveReadinessAudit` | `True` | `Running` | `267009` |
 
 ## Public URLs
 
