@@ -3,8 +3,8 @@
     "schema_version":  "jasonos.iptv.community_sports_source_discovery_status.v2",
     "status":  "PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE",
     "discovery_scope":  "MULTI_SOURCE_V2_AGGRESSIVE_DISCOVERY_GATED_PROMOTION",
-    "started_utc":  "2026-06-17T11:32:17.8644656Z",
-    "updated_utc":  "2026-06-17T11:55:57.0465373Z",
+    "started_utc":  "2026-06-17T22:00:31.5172734Z",
+    "updated_utc":  "2026-06-17T22:01:53.1410144Z",
     "config_path":  "C:\\Users\\jason\\OneDrive\\Public\\TOKENS\\mission002_community_sports_source_discovery_config.json",
     "config_created":  false,
     "config_upgraded_to_v2":  false,
@@ -14,12 +14,12 @@
     "source_details_redacted_publicly":  true,
     "stream_urls_redacted_publicly":  true,
     "sources_configured":  7,
-    "sources_processed":  14,
-    "sources_fetched":  7,
-    "source_fetch_error_count":  7,
-    "child_sources_discovered":  7,
+    "sources_processed":  47,
+    "sources_fetched":  22,
+    "source_fetch_error_count":  25,
+    "child_sources_discovered":  40,
     "duplicate_streams_suppressed":  164,
-    "channels_extracted_unique":  196,
+    "channels_extracted_unique":  1693,
     "relevant_candidate_count":  196,
     "probed_count":  40,
     "probe_pass_count":  40,
@@ -36,12 +36,12 @@
     "public_redacted_coverage_gaps_path":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_community_sports_coverage_gaps.redacted.json",
     "public_redacted_source_graph_path":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\mission002_community_sports_source_graph.redacted.json",
     "worker_stats":  {
-                         "url_m3u":  11,
+                         "url_m3u":  44,
                          "markdown_url_index":  1,
                          "url_text":  0,
                          "github_code_search":  2,
                          "github_gist_search":  0,
-                         "child_sources_discovered":  7,
+                         "child_sources_discovered":  40,
                          "duplicate_streams_suppressed":  164
                      },
     "source_class_counts":  [
@@ -56,6 +56,10 @@
                                 {
                                     "source_class":  "github_code_search",
                                     "count":  2
+                                },
+                                {
+                                    "source_class":  "recast_or_mirror",
+                                    "count":  33
                                 }
                             ],
     "trust_tier_counts":  [
@@ -69,11 +73,26 @@
                               },
                               {
                                   "trust_tier":  "D",
-                                  "count":  2
+                                  "count":  35
                               }
                           ],
     "recast_signal_counts":  [
-
+                                 {
+                                     "signal":  "proxy",
+                                     "count":  36
+                                 },
+                                 {
+                                     "signal":  "recast",
+                                     "count":  1497
+                                 },
+                                 {
+                                     "signal":  "source_class_recast_or_mirror",
+                                     "count":  1497
+                                 },
+                                 {
+                                     "signal":  "token=",
+                                     "count":  1
+                                 }
                              ],
     "implemented_workers":  [
                                 "Configured URL M3U fetcher",
@@ -127,6 +146,78 @@
                                   {
                                       "source_ref":  "redacted-bfbe7c805c82",
                                       "error_class":  "HTTP_400_BAD_REQUEST"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-bab1a0bad7f2",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-c23d82072219",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-807b02023f5c",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-b34b29ddf2cb",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-948f8ca9a777",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-13c1f965ab2e",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-227683943416",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-378eb9fe18e3",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-4f4847e83271",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-a00caa90a2ad",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-4d8b5e4239ab",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-ec9fa5881a02",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-fd6a4c90a684",
+                                      "error_class":  "DNS_RESOLUTION_FAILED"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-0a839ae4adad",
+                                      "error_class":  "HTTP_404_NOT_FOUND"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-3b15e0274325",
+                                      "error_class":  "HTTP_403_FORBIDDEN"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-949eb531bb23",
+                                      "error_class":  "HTTP_404_NOT_FOUND"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-9717ee4e7dfa",
+                                      "error_class":  "HTTP_403_FORBIDDEN"
+                                  },
+                                  {
+                                      "source_ref":  "redacted-2608b306df59",
+                                      "error_class":  "HTTP_403_FORBIDDEN"
                                   }
                               ]
 }
