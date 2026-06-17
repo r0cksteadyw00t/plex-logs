@@ -1,6 +1,6 @@
 # TV-First Additive Publication Adapter
 
-Updated UTC: 2026-06-17T06:01:47Z
+Updated UTC: 2026-06-17T06:06:53Z
 Status: RUNNING
 Gate status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
 Expected episodes: 28
