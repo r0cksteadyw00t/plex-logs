@@ -1,6 +1,6 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-17T09:08:07Z  
+**Updated UTC:** 2026-06-17T09:17:35Z  
 **Status:** REVIEW
 
 ## Scope
@@ -9,8 +9,8 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 ## Checks
 
-- WebDAV bridge before: False
-- WebDAV bridge after: False
+- WebDAV bridge before: True
+- WebDAV bridge after: True
 - Plex identity: False
 - rclone processes after: 1
 - S:\media after: ok=False, timed_out=True
@@ -19,12 +19,11 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 ## Watch Now
 
-- Gremlins / scarflix_part-942255f029875306: FAIL, HTTP 0, 17162ms
-- Anna / scarflix_part-81107989d2e30cfb: FAIL, HTTP 0, 14989ms
+- Gremlins / scarflix_part-942255f029875306: FAIL, HTTP 0, 15160ms
+- Anna / scarflix_part-81107989d2e30cfb: FAIL, HTTP 0, 15166ms
 
 ## Failures
 
-WebDAV bridge health is not PASS
 S: media/catalog path is not reliably ready
 Plex identity is not PASS
 Watch Now probe failed: Gremlins
