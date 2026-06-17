@@ -1,7 +1,7 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-17T12:38:18Z  
-**Status:** PASS
+**Updated UTC:** 2026-06-17T12:42:28Z  
+**Status:** REVIEW
 
 ## Scope
 
@@ -11,7 +11,7 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 - WebDAV bridge before: True
 - WebDAV bridge after: True
-- Plex identity: True
+- Plex identity: False
 - rclone processes after: 1
 - S:\media after: ok=True, timed_out=False
 - S:\media\catalog after: ok=True, timed_out=False
@@ -24,4 +24,4 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 ## Failures
 
-
+Plex identity is not PASS
