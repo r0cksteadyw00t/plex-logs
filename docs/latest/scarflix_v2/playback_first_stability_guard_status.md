@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-17T11:35:36Z  
+**Updated UTC:** 2026-06-17T11:36:38Z  
 **Status:** PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED
 
 ## Scope
@@ -17,7 +17,7 @@ Playback quality and stability only. No publication, no expansion, no source mut
 - Session detection OK: True
 - Active Plex sessions: 0
 - Plex base used: http://192.168.1.184:32400
-- Token source used: Plex Preferences.xml
+- Token source used: plex_token.txt
 - Off-peak window: 2:00-6:00
 - In off-peak window: False
 - Background work suppressed: True
