@@ -1,14 +1,14 @@
 # TV-First Private Stage Retry Repair
 
-Updated UTC: 2026-06-16T23:23:31Z
+Updated UTC: 2026-06-17T01:07:46Z
 Status: PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD
 Validator status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 Failed rows found: 1
 Moved to retry-held: 1
-Ledger failures tracked: 54
+Ledger failures tracked: 55
 
 ## Moved Rows
-- Haunted Hotel S01E10: PROVIDER_HEAD_TIMEOUT_OR_ERROR
+- The Institute S01E07: PROVIDER_503_RETRYABLE
 
 ## Safety
 - no_broad_expansion_started: true
