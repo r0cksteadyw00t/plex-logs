@@ -1,6 +1,6 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-17T11:36:45Z
+Updated UTC: 2026-06-17T11:41:26Z
 Status: HELD_SENTINEL_ALERT_HIGH
 Accepted private-stage episodes: 18
 Expected pilot episodes: 28
