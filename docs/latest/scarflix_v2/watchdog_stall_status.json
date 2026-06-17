@@ -2,18 +2,18 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-17T09:07:31Z",
-    "started_utc":  "2026-06-17T08:58:21Z",
-    "duration_seconds":  550,
+    "updated_utc":  "2026-06-17T09:19:12Z",
+    "started_utc":  "2026-06-17T09:04:34Z",
+    "duration_seconds":  879,
     "will_progress_without_codex":  true,
     "current_milestone":  "CANDIDATE_SOURCE_MODEL_PASS",
     "signals":  {
-                    "controller_age_minutes":  26,
-                    "platform_checkpoint_age_minutes":  13420,
-                    "durable_platform_gate_age_minutes":  13420,
+                    "controller_age_minutes":  32,
+                    "platform_checkpoint_age_minutes":  13427,
+                    "durable_platform_gate_age_minutes":  13427,
                     "platform_progress_fresh":  false,
-                    "dashboard_age_minutes":  18,
-                    "mirror_age_minutes":  5,
+                    "dashboard_age_minutes":  14,
+                    "mirror_age_minutes":  12,
                     "movie_strm_count":  0,
                     "tv_strm_count":  0,
                     "total_strm_count":  0,
@@ -26,9 +26,9 @@
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Running",
-                                     "last_run_time":  "17/06/2026 7:00:01 PM",
-                                     "next_run_time":  "17/06/2026 7:05:00 PM",
-                                     "last_result":  "267009"
+                                     "last_run_time":  "17/06/2026 7:05:01 PM",
+                                     "next_run_time":  "17/06/2026 7:10:00 PM",
+                                     "last_result":  "-2147020576"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
@@ -41,10 +41,10 @@
                   "dashboard":  {
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
-                                    "status":  "Running",
-                                    "last_run_time":  "17/06/2026 7:00:59 PM",
-                                    "next_run_time":  "17/06/2026 7:05:00 PM",
-                                    "last_result":  "-2147020576"
+                                    "status":  "Ready",
+                                    "last_run_time":  "17/06/2026 7:05:50 PM",
+                                    "next_run_time":  "17/06/2026 7:10:00 PM",
+                                    "last_result":  "0"
                                 },
                   "mirror":  {
                                  "name":  "JasonOS_Prime_PublicMirrorPublisher",
@@ -56,12 +56,6 @@
                              }
               },
     "actions":  [
-                    {
-                        "task":  "autonomous_controller.lock",
-                        "changed":  true,
-                        "ran":  false,
-                        "note":  "removed_stale_lock_age_8_min_backup_D:\\PlexTools\\state\\scarflix_v2\\autonomous_controller.lock.stale_20260617_185929.bak"
-                    },
                     {
                         "task":  "ScarFLIX_v2_AutonomousController",
                         "changed":  false,
@@ -88,7 +82,6 @@
                     }
                 ],
     "notes":  [
-                  "Stale lock recovered: removed_stale_lock_age_8_min_backup_D:\\PlexTools\\state\\scarflix_v2\\autonomous_controller.lock.stale_20260617_185929.bak",
                   "Controller status is stale or missing; watchdog triggered controller task.",
                   "Dashboard status was disabled or stale; watchdog triggered dashboard task.",
                   "Public mirror status was disabled or stale; watchdog triggered mirror task.",
