@@ -1,18 +1,18 @@
 {
   "component": "jasonos_prime_tv_first_publication_gate",
   "schema_version": "jasonos.tv_first.publication_gate.v1",
-  "updated_utc": "2026-06-17T00:22:51Z",
-  "status": "PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD",
-  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "updated_utc": "2026-06-17T00:34:38Z",
+  "status": "HELD_SENTINEL_ALERT_HIGH",
+  "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
-  "sentinel_status": "REVIEW",
-  "sentinel_alert_level": "MEDIUM",
+  "sentinel_status": "ALERT",
+  "sentinel_alert_level": "HIGH",
   "pause_publication_present": true,
-  "accepted_count": 28,
+  "accepted_count": 27,
   "accepted_by_show": {
     "Haunted Hotel": 10,
     "MobLand": 10,
-    "The Institute": 8
+    "The Institute": 7
   },
   "expected_count": 28,
   "expected_by_show": {
@@ -20,9 +20,11 @@
     "MobLand": 10,
     "The Institute": 8
   },
-  "full_season_complete": true,
-  "full_season_missing_count": 0,
-  "full_season_missing_by_show": {},
+  "full_season_complete": false,
+  "full_season_missing_count": 1,
+  "full_season_missing_by_show": {
+    "The Institute": 1
+  },
   "held_episode_count": 0,
   "held_by_show": {},
   "private_manifest_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_publication_gate/tv_first_publication_candidates.accepted.private.json",
@@ -44,5 +46,5 @@
     "no_legacy_direct_resolver_called": true,
     "source_urls_not_written_to_public_status": true
   },
-  "next_safe_action": "Run the full-season-only additive TV publication adapter with rollback and post-publication Plex/WebDAV verification."
+  "next_safe_action": "Keep TV publication held until Sentinel clears."
 }
