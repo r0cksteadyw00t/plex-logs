@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-17T09:06:57Z",
-    "ended_utc":  "2026-06-17T09:36:46Z",
-    "duration_seconds":  1789,
+    "started_utc":  "2026-06-17T09:38:55Z",
+    "ended_utc":  "2026-06-17T09:58:07Z",
+    "duration_seconds":  1152,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,28 +11,28 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  7884
+                           "ms":  234
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  34972
+                           "ms":  128
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  67241
+                           "ms":  67
                        }
                    ],
     "webdav_before":  {
-                          "ok":  true,
-                          "status_code":  200,
-                          "error":  ""
+                          "ok":  false,
+                          "status_code":  0,
+                          "error":  "The request was aborted: The request was canceled."
                       },
     "webdav_after":  {
-                         "ok":  true,
-                         "status_code":  200,
-                         "error":  ""
+                         "ok":  false,
+                         "status_code":  0,
+                         "error":  "The operation has timed out."
                      },
     "plex_identity":  {
                           "ok":  false,
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  18835,
+                          "ms":  77565,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       },
@@ -80,7 +80,7 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  45672,
+                          "ms":  22756,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       }
@@ -89,15 +89,12 @@
     "watch_now_source":  "fresh",
     "actions":  [
                     {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  1,
-                                       "error":  ""
-                                   }
+                        "action":  "node_webdav_bridge_process_present",
+                        "count":  1
                     }
                 ],
     "failures":  [
+                     "WebDAV bridge health is not PASS",
                      "S: media/catalog path is not reliably ready",
                      "Plex identity is not PASS",
                      "Watch Now probe failed: Gremlins",
