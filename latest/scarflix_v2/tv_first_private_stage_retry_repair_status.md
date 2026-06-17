@@ -1,11 +1,11 @@
 # TV-First Private Stage Retry Repair
 
-Updated UTC: 2026-06-17T20:34:44Z
+Updated UTC: 2026-06-17T20:39:28Z
 Status: PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD
 Validator status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 Failed rows found: 1
 Moved to retry-held: 1
-Ledger failures tracked: 68
+Ledger failures tracked: 69
 
 ## Moved Rows
 - MobLand S01E04: PROVIDER_503_RETRYABLE
