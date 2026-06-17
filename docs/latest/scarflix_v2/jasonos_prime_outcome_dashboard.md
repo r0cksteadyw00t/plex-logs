@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-17T19:30:25.317Z
+Updated UTC: 2026-06-17T19:36:23.279Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,18 +21,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=117/117; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: resume controlled materialized/WebDAV publishing | Medium |
 
 Recent Achievements:
-- 2026-06-17T12:40:14Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
-- 2026-06-14T06:53:12.327Z - Cycle 156 Active Playback Hold - 2026-06-14T06:53:09Z: Status: HELD_ACTIVE_PLAYBACK_USER_STREAM_PROTECTED. Extended runner cycle 156: launch health 21 ms; Sentinel PASS / LOW; active sessions were 1. Runner actions: suppressed_noncritical_tasks, stopped_materialized_qa_due_active_playback. Runner blocker: active_plex_playback_detected.
-- 2026-06-14T06:45:12.423Z - Cycle 153 Clean Bounded QA Pass - 2026-06-14T06:37:38Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 153: launch health 21 ms; post-QA launch check 20 ms; Sentinel PASS / LOW; Plex identity status was not recorded in this campaign cycle; active sessions were 0. Bounded Materialized QA batch skip 88, limit 3: 3/3 PASS, 0 REVIEW. Passed ti...
-- 2026-06-14T06:30:12.042Z - Cycle 151 Clean Bounded QA Pass - 2026-06-14T06:23:50Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 151: launch health 19 ms; post-QA launch check 20 ms; Sentinel PASS / LOW; Plex identity status was not recorded in this campaign cycle; active sessions were 0. Bounded Materialized QA batch skip 79, limit 4: 4/4 PASS, 0 REVIEW. Passed ti...
-- 2026-06-14T06:15:11.731Z - Cycle 149 Clean Pass - 2026-06-14T06:07:13Z: Status: ACTUAL_DELIVERY_BOUNDED_QA_CLEAN_PASS_CONTINUES. Extended runner cycle 149: launch health 50 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active session count was unavailable from the Plex sessions endpoint. Bounded Materialized QA batch skip 72, limit 4: 3/4 PASS, 1 failed. Detailed row titles...
-- 2026-06-14T06:00:11.898Z - Cycle 147 Source Retry Added - 2026-06-14T05:54:33Z: Status: ACTUAL_DELIVERY_CONTINUES_SOURCE_BACKLOG_TRACKED. Extended runner cycle 147: launch health 20 ms; Sentinel PASS / LOW; Plex identity healthy (HTTP 200); active sessions were 0. Bounded Materialized QA batch skip 65, limit 4: 3/4 PASS, 1 REVIEW. Passed titles: Night at the Museum; 9ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ Weeks;...
+- 2026-06-17T19:30:45Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-13T07:08:43.775Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
+- 2026-06-08T01:18:52Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=44064; child_pid=
+- 2026-06-08T01:18:52Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
+- 2026-06-06T10:55:00Z - Watchdog-of-watchdog sentinel added: Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell.
+- 2026-06-06T10:50:00Z - Redundant sentinel added: Added JasonOS_Prime_Sentinel as watchdog-of-watchdog to re-enable stalled tasks, retrigger recovery, and publish alert state when self-heal cannot resolve.
 
 Heartbeat / Stall Check:
 - Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 410 min ago
-- Platform child progress: 6501 min ago
-- Mirror updated: 407 min ago
+- Controller updated: 6 min ago
+- Platform child progress: 6508 min ago
+- Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
 
