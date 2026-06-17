@@ -2,7 +2,7 @@
 
 Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE
 
-Updated UTC: 2026-06-17T02:01:49.1094347Z
+Updated UTC: 2026-06-17T06:01:58.7564924Z
 
 ## Peer Review Outcome
 
@@ -20,7 +20,7 @@ Updated UTC: 2026-06-17T02:01:49.1094347Z
 - Unique candidate channels extracted: 1694
 - Relevant candidate channels: 197
 - Probe attempts: 40
-- Probe PASS: 39
+- Probe PASS: 40
 - Review queue items: 196
 - Sports Source Engine candidates: 1
 - Pending review/engine candidates: 196
