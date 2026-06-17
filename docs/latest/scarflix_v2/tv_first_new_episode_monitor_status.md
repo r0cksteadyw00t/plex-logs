@@ -1,6 +1,6 @@
 # TV-First New Episode Monitor
 
-Updated UTC: 2026-06-17T09:42:36Z
+Updated UTC: 2026-06-17T09:53:55Z
 Status: HELD_SENTINEL_ALERT_HIGH
 Tracked shows: 3
 Expected episodes: 28
