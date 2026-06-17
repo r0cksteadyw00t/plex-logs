@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-17T08:18:15Z",
-    "ended_utc":  "2026-06-17T08:27:38Z",
-    "duration_seconds":  564,
+    "started_utc":  "2026-06-17T08:25:27Z",
+    "ended_utc":  "2026-06-17T08:32:42Z",
+    "duration_seconds":  435,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,46 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  10902
+                           "ms":  26873
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  8628
+                           "ms":  29355
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  3176
+                           "ms":  45279
+                       }
+                   ],
+    "webdav_before":  {
+                          "ok":  true,
+                          "status_code":  200,
+                    {
+    "component":  "jasonos_prime_playback_path_recovery",
+    "status":  "REVIEW",
+    "started_utc":  "2026-06-17T08:16:21Z",
+    "ended_utc":  "2026-06-17T08:32:43Z",
+    "duration_seconds":  982,
+    "no_publication_started":  true,
+    "no_expansion_started":  true,
+    "no_plex_db_mutation":  true,
+    "cmd_checks":  [
+                       {
+                           "check":  1,
+                           "ok":  true,
+                           "ms":  12466
+                       },
+                       {
+                           "check":  2,
+                           "ok":  true,
+                           "ms":  1525
+                       },
+                       {
+                           "check":  3,
+                           "ok":  true,
+                           "ms":  2889
                        }
                    ],
     "webdav_before":  {
@@ -43,8 +72,8 @@
     "rclone_processes_after":  1,
     "s_media_before":  {
                            "path":  "S:\\media",
-                           "ok":  true,
-                           "timed_out":  false,
+                           "ok":  false,
+                           "timed_out":  true,
                            "error":  ""
                        },
     "s_catalog_before":  {
@@ -71,16 +100,16 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  12125,
+                          "ms":  16017,
                           "content_length":  "",
-                          "error":  "The remote server returned an error: (502) Bad Gateway."
+                          "error":  "The operation has timed out."
                       },
                       {
                           "title":  "Anna",
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  15052,
+                          "ms":  15196,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       }
@@ -92,7 +121,7 @@
                         "action":  "run_rclone_mount_keepalive",
                         "result":  {
                                        "ran":  true,
-                                       "exit_code":  1,
+                                       "exit_code":  2,
                                        "error":  ""
                                    }
                     }
