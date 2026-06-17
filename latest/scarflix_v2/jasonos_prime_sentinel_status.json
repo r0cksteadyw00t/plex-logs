@@ -1,12 +1,12 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "PASS",
-  "alert_level": "LOW",
-  "updated_utc": "2026-06-17T00:55:05Z",
+  "status": "ALERT",
+  "alert_level": "HIGH",
+  "updated_utc": "2026-06-17T01:15:02Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": false,
-  "repeat_count": 5,
+  "codex_action_required": true,
+  "repeat_count": 4,
   "signals": {
     "controller_status": "PASS",
     "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
@@ -15,17 +15,26 @@
     "watchdog_risk": "Medium",
     "watchdog_age_minutes": 5,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 1,
+    "dashboard_age_minutes": 4,
     "mirror_status": "PASS",
-    "mirror_age_minutes": 2,
+    "mirror_age_minutes": 22,
     "checkpoint_status": "PASS",
     "checkpoint_step": "platform_gate_pass",
-    "checkpoint_age_minutes": 12936,
-    "durable_platform_gate_age_minutes": 12936,
+    "checkpoint_age_minutes": 12956,
+    "durable_platform_gate_age_minutes": 12956,
     "platform_progress_fresh": false
   },
-  "recovery_actions": [],
-  "notes": [],
+  "recovery_actions": [
+    {
+      "task": "JasonOS_Prime_PublicMirrorPublisher",
+      "reason": "mirror_stale",
+      "result": "PASS",
+      "note": "skipped_orchestrator_owned job=run_public_mirror_publisher"
+    }
+  ],
+  "notes": [
+    "Same unresolved sentinel signature repeated for three cycles."
+  ],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
