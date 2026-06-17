@@ -1,7 +1,7 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-17T00:34:38Z
-Status: HELD_SENTINEL_ALERT_HIGH
+Updated UTC: 2026-06-17T01:09:17Z
+Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
 Accepted private-stage episodes: 27
 Expected pilot episodes: 28
 Full-season complete: false
@@ -9,7 +9,7 @@ Full-season missing: 1
 Held/missing episodes: 0
 Validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Sentinel: ALERT/HIGH
+Sentinel: REVIEW/MEDIUM
 
 ## Accepted Counts
 - Haunted Hotel: 10
@@ -33,4 +33,4 @@ Sentinel: ALERT/HIGH
 - no_webdav_map_write_performed: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Keep TV publication held until Sentinel clears.
+Next safe action: Keep TV publication held until currently staged candidates validate cleanly.
