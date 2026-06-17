@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-17T09:56:29Z",
-    "ended_utc":  "2026-06-17T10:14:45Z",
-    "duration_seconds":  1097,
+    "started_utc":  "2026-06-17T09:22:46Z",
+    "ended_utc":  "2026-06-17T11:32:25Z",
+    "duration_seconds":  7779,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,33 +11,33 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  67361
+                           "ms":  18478
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  13558
+                           "ms":  20522
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  11859
+                           "ms":  3311
                        }
                    ],
     "webdav_before":  {
-                          "ok":  false,
-                          "status_code":  0,
-                          "error":  "The operation has timed out."
+                          "ok":  true,
+                          "status_code":  200,
+                          "error":  ""
                       },
     "webdav_after":  {
-                         "ok":  false,
-                         "status_code":  0,
-                         "error":  "The request was aborted: The request was canceled."
+                         "ok":  true,
+                         "status_code":  200,
+                         "error":  ""
                      },
     "plex_identity":  {
                           "ok":  false,
                           "status_code":  0,
-                          "error":  "The operation has timed out."
+                          "error":  "Unable to connect to the remote server"
                       },
     "rclone_processes_before":  1,
     "rclone_processes_after":  1,
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  24422,
+                          "ms":  15004,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       },
@@ -80,7 +80,7 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  83153,
+                          "ms":  16398,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       }
@@ -89,12 +89,15 @@
     "watch_now_source":  "fresh",
     "actions":  [
                     {
-                        "action":  "node_webdav_bridge_process_present",
-                        "count":  1
+                        "action":  "run_rclone_mount_keepalive",
+                        "result":  {
+                                       "ran":  true,
+                                       "exit_code":  2,
+                                       "error":  ""
+                                   }
                     }
                 ],
     "failures":  [
-                     "WebDAV bridge health is not PASS",
                      "S: media/catalog path is not reliably ready",
                      "Plex identity is not PASS",
                      "Watch Now probe failed: Gremlins",
