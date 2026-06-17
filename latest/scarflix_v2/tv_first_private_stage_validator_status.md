@@ -1,6 +1,6 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-17T20:11:14Z
+Updated UTC: 2026-06-17T20:24:40Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 Checked: 27
 Passed: 26
@@ -20,7 +20,7 @@ Review: 1
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=; type=text/html; reason=PROVIDER_503_RETRYABLE
-- MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=video/mp4; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - MobLand: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
