@@ -1,16 +1,18 @@
 {
   "component": "jasonos_prime_tv_first_publication_gate",
   "schema_version": "jasonos.tv_first.publication_gate.v1",
-  "updated_utc": "2026-06-17T08:41:19Z",
-  "status": "HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS",
-  "validator_status": "UNKNOWN",
+  "updated_utc": "2026-06-17T09:25:50Z",
+  "status": "HELD_SENTINEL_ALERT_HIGH",
+  "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
-  "sentinel_status": "REVIEW",
-  "sentinel_alert_level": "MEDIUM",
+  "sentinel_status": "ALERT",
+  "sentinel_alert_level": "HIGH",
   "pause_publication_present": true,
-  "accepted_count": 6,
+  "accepted_count": 18,
   "accepted_by_show": {
-    "Haunted Hotel": 6
+    "Haunted Hotel": 7,
+    "MobLand": 7,
+    "The Institute": 4
   },
   "expected_count": 28,
   "expected_by_show": {
@@ -19,20 +21,20 @@
     "The Institute": 8
   },
   "full_season_complete": false,
-  "full_season_missing_count": 22,
+  "full_season_missing_count": 10,
   "full_season_missing_by_show": {
-    "Haunted Hotel": 4,
-    "MobLand": 10,
-    "The Institute": 8
+    "Haunted Hotel": 3,
+    "MobLand": 3,
+    "The Institute": 4
   },
   "held_episode_count": 0,
   "held_by_show": {},
   "private_manifest_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_publication_gate/tv_first_publication_candidates.accepted.private.json",
   "public_redacted_manifest_path": "D:/PlexTools/public/latest/scarflix_v2/tv_first_publication_candidates.redacted.json",
   "upstream": {
-    "whole_show_stage_status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
+    "whole_show_stage_status": "HELD_SENTINEL_ALERT_HIGH",
     "retry_repair_status": "PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD",
-    "retry_ledger_failure_count": 58
+    "retry_ledger_failure_count": 59
   },
   "safety": {
     "gate_only": true,
@@ -46,5 +48,5 @@
     "no_legacy_direct_resolver_called": true,
     "source_urls_not_written_to_public_status": true
   },
-  "next_safe_action": "Keep TV publication held until currently staged candidates validate cleanly."
+  "next_safe_action": "Keep TV publication held until Sentinel clears."
 }
