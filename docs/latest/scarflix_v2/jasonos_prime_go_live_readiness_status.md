@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-17T00:29:23Z
+Updated UTC: 2026-06-17T00:34:21Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -8,7 +8,7 @@ Go-live ready: `False`
 
 Active Plex sessions: `0`
 
-Sentinel: `REVIEW / MEDIUM`
+Sentinel: `ALERT / HIGH`
 
 PAUSE_PUBLICATION active: `True`
 
