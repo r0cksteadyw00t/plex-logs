@@ -1,13 +1,14 @@
 # TV-First Private Stage Retry Repair
 
-Updated UTC: 2026-06-17T07:37:45Z
+Updated UTC: 2026-06-17T07:52:24Z
 Status: PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD
 Validator status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Failed rows found: 1
-Moved to retry-held: 1
-Ledger failures tracked: 57
+Failed rows found: 2
+Moved to retry-held: 2
+Ledger failures tracked: 58
 
 ## Moved Rows
+- The Institute S01E02: PROVIDER_503_RETRYABLE
 - The Institute S01E07: PROVIDER_503_RETRYABLE
 
 ## Safety
