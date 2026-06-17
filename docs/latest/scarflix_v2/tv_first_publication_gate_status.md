@@ -1,6 +1,6 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-17T21:35:54Z
+Updated UTC: 2026-06-17T21:41:09Z
 Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
 Accepted private-stage episodes: 27
 Expected pilot episodes: 28
