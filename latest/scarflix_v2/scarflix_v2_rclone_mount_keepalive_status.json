@@ -1,32 +1,32 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
-    "status":  "FAIL",
-    "started_utc":  "2026-06-17T09:18:06Z",
-    "ended_utc":  "2026-06-17T09:31:44Z",
+    "status":  "REVIEW",
+    "started_utc":  "2026-06-17T09:41:03Z",
+    "ended_utc":  "2026-06-17T10:00:26Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
-                          "ok":  true,
-                          "status":  "200",
-                          "error":  ""
+                          "ok":  false,
+                          "status":  "",
+                          "error":  "The operation has timed out."
                       },
     "rclone_exe_present":  true,
     "rclone_config_present":  true,
-    "drive_s_present":  true,
+    "drive_s_present":  false,
     "initial_mount_probe":  {
                                 "ready":  false,
                                 "media":  {
                                               "path":  "S:\\media",
                                               "ok":  false,
                                               "timed_out":  true,
-                                              "ms":  94141,
+                                              "ms":  178256,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
                                                 "timed_out":  true,
-                                                "ms":  116673,
+                                                "ms":  26795,
                                                 "error":  ""
                                             }
                             },
@@ -36,14 +36,14 @@
                                             "path":  "S:\\media",
                                             "ok":  false,
                                             "timed_out":  true,
-                                            "ms":  80801,
+                                            "ms":  12511,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
                                               "timed_out":  true,
-                                              "ms":  113792,
+                                              "ms":  137899,
                                               "error":  ""
                                           }
                           },
@@ -83,7 +83,7 @@
 
                 ],
     "failures":  [
-                     "S: exists but does not expose ScarFLIX media path"
+                     "WebDAV node bridge health failed"
                  ],
     "status_file":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
     "log":  "D:\\PlexTools\\logs\\scarflix_v2_rclone_mount_keepalive_20260617.log",
