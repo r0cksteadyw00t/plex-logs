@@ -2,58 +2,40 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "ALERT",
   "alert_level": "HIGH",
-  "updated_utc": "2026-06-17T09:17:15Z",
-  "duration_seconds": 7,
+  "updated_utc": "2026-06-17T09:18:52Z",
+  "duration_seconds": 2,
   "jason_action_required": false,
   "codex_action_required": true,
-  "repeat_count": 13,
+  "repeat_count": 14,
   "signals": {
     "controller_status": "PASS",
     "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-    "controller_age_minutes": 43,
+    "controller_age_minutes": 29,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 10,
+    "watchdog_age_minutes": 11,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 15,
-    "mirror_status": "PASS",
-    "mirror_age_minutes": 23,
+    "dashboard_age_minutes": 5,
+    "mirror_status": "REVIEW",
+    "mirror_age_minutes": 1,
     "checkpoint_status": "PASS",
     "checkpoint_step": "platform_gate_pass",
-    "checkpoint_age_minutes": 13438,
-    "durable_platform_gate_age_minutes": 13438,
+    "checkpoint_age_minutes": 13440,
+    "durable_platform_gate_age_minutes": 13440,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
     {
-      "task": "autonomous_controller.lock",
-      "reason": "stale_lock",
-      "result": "PASS",
-      "note": "removed age_min=5 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260617091708.bak"
-    },
-    {
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "watchdog_stale_or_failed",
       "result": "PASS",
-      "note": "enable pid=29016; run pid=42048"
+      "note": "enable pid=37376; run pid=42256"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "controller_stale_or_blocked",
       "result": "PASS",
-      "note": "enable pid=42060; run pid=42068"
-    },
-    {
-      "task": "JasonOS_Prime_OutcomeDashboard",
-      "reason": "dashboard_stale",
-      "result": "PASS",
-      "note": "enable pid=42080; run pid=42104"
-    },
-    {
-      "task": "JasonOS_Prime_PublicMirrorPublisher",
-      "reason": "mirror_stale",
-      "result": "PASS",
-      "note": "skipped_orchestrator_owned job=run_public_mirror_publisher"
+      "note": "enable pid=16108; run pid=40296"
     }
   ],
   "notes": [
