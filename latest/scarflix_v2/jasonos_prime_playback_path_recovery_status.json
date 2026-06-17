@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-17T09:22:46Z",
-    "ended_utc":  "2026-06-17T11:32:25Z",
-    "duration_seconds":  7779,
+    "started_utc":  "2026-06-17T09:20:27Z",
+    "ended_utc":  "2026-06-17T11:35:37Z",
+    "duration_seconds":  8109,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,23 +11,23 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  18478
+                           "ms":  36041
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  20522
+                           "ms":  16118
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  3311
+                           "ms":  12717
                        }
                    ],
     "webdav_before":  {
-                          "ok":  true,
-                          "status_code":  200,
-                          "error":  ""
+                          "ok":  false,
+                          "status_code":  0,
+                          "error":  "The request was aborted: The request was canceled."
                       },
     "webdav_after":  {
                          "ok":  true,
@@ -35,9 +35,9 @@
                          "error":  ""
                      },
     "plex_identity":  {
-                          "ok":  false,
-                          "status_code":  0,
-                          "error":  "Unable to connect to the remote server"
+                          "ok":  true,
+                          "status_code":  200,
+                          "error":  ""
                       },
     "rclone_processes_before":  1,
     "rclone_processes_after":  1,
@@ -69,25 +69,29 @@
                       {
                           "title":  "Gremlins",
                           "hash":  "scarflix_part-942255f029875306",
-                          "ok":  false,
-                          "status_code":  0,
-                          "ms":  15004,
-                          "content_length":  "",
-                          "error":  "The operation has timed out."
+                          "ok":  true,
+                          "status_code":  200,
+                          "ms":  11398,
+                          "content_length":  "1714768887",
+                          "error":  ""
                       },
                       {
                           "title":  "Anna",
                           "hash":  "scarflix_part-81107989d2e30cfb",
-                          "ok":  false,
-                          "status_code":  0,
-                          "ms":  16398,
-                          "content_length":  "",
-                          "error":  "The operation has timed out."
+                          "ok":  true,
+                          "status_code":  200,
+                          "ms":  4692,
+                          "content_length":  "1721714811",
+                          "error":  ""
                       }
                   ],
     "watch_now_probe_run":  true,
     "watch_now_source":  "fresh",
     "actions":  [
+                    {
+                        "action":  "node_webdav_bridge_process_present",
+                        "count":  1
+                    },
                     {
                         "action":  "run_rclone_mount_keepalive",
                         "result":  {
@@ -98,10 +102,7 @@
                     }
                 ],
     "failures":  [
-                     "S: media/catalog path is not reliably ready",
-                     "Plex identity is not PASS",
-                     "Watch Now probe failed: Gremlins",
-                     "Watch Now probe failed: Anna"
+                     "S: media/catalog path is not reliably ready"
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260617.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
