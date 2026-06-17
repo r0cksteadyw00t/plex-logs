@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-17T09:20:27Z",
-    "ended_utc":  "2026-06-17T11:35:37Z",
-    "duration_seconds":  8109,
+    "started_utc":  "2026-06-17T10:12:10Z",
+    "ended_utc":  "2026-06-17T11:38:19Z",
+    "duration_seconds":  5169,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,28 +11,28 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  36041
+                           "ms":  6568
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  16118
+                           "ms":  7695
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  12717
+                           "ms":  26046
                        }
                    ],
     "webdav_before":  {
                           "ok":  false,
                           "status_code":  0,
-                          "error":  "The request was aborted: The request was canceled."
+                          "error":  "The operation has timed out."
                       },
     "webdav_after":  {
-                         "ok":  true,
-                         "status_code":  200,
-                         "error":  ""
+                         "ok":  false,
+                         "status_code":  0,
+                         "error":  "The operation has timed out."
                      },
     "plex_identity":  {
                           "ok":  true,
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  11398,
+                          "ms":  9648,
                           "content_length":  "1714768887",
                           "error":  ""
                       },
@@ -80,7 +80,7 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  4692,
+                          "ms":  7122,
                           "content_length":  "1721714811",
                           "error":  ""
                       }
@@ -91,17 +91,10 @@
                     {
                         "action":  "node_webdav_bridge_process_present",
                         "count":  1
-                    },
-                    {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  2,
-                                       "error":  ""
-                                   }
                     }
                 ],
     "failures":  [
+                     "WebDAV bridge health is not PASS",
                      "S: media/catalog path is not reliably ready"
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260617.log",
