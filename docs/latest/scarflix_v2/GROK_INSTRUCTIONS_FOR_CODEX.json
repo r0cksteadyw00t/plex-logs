@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_maintain_hold_write_strategy_note_20260617_v12",
-      "created_at": "2026-06-17T03:41:21Z",
-      "expires_at": "2026-06-18T03:41:21Z",
+      "instruction_id": "phase0_tv_section6_forensic_maintain_hold_write_strategy_note_20260617_v13",
+      "created_at": "2026-06-17T03:57:21Z",
+      "expires_at": "2026-06-18T03:57:21Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,18 +14,20 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 0
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
-          "note": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN for TV Section 6. No symlink, WebDAV mutation, Plex refresh or publishing permitted. Continue 15-minute monitor for natural retry only. Await forensic review outcome."
+          "parameters": {
+            "summary": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN for TV Section 6 forensic review. No symlink, WebDAV, Plex refresh or publishing actions. Continue 15-minute monitor for natural retry only."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-17T03:41:21Z",
+  "updated_utc": "2026-06-17T03:57:21Z",
   "source": "grok_api"
 }
