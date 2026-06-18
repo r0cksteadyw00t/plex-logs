@@ -1,12 +1,12 @@
 # TV-First Additive Publication Adapter
 
-Updated UTC: 2026-06-18T07:26:07Z
-Status: RUNNING
+Updated UTC: 2026-06-18T08:39:23Z
+Status: ROLLBACK_COMPLETE_PUBLICATION_FAILED
 Gate status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
 Expected episodes: 28
 Accepted episodes: 28
 Mutated entries: 28
-Rollback performed: false
+Rollback performed: true
 
 ## Safety
 - additive_only: true
@@ -21,4 +21,4 @@ Rollback performed: false
 - strm_targets_local_webdav_materialized_path: true
 - tv_section_only_refresh: true
 
-Next safe action: undefined
+Next safe action: Inspect rollback manifest and failed verification evidence before retrying TV publication.
