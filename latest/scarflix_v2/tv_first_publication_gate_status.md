@@ -1,15 +1,15 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T13:23:57Z
-Status: HELD_FULL_SEASON_INCOMPLETE
+Updated UTC: 2026-06-18T13:30:32Z
+Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
 Accepted private-stage episodes: 27
 Expected pilot episodes: 28
 Full-season complete: false
 Full-season missing: 1
-Held/missing episodes: 1
-Validator: PASS_PRIVATE_STAGE_VALIDATED
+Held/missing episodes: 0
+Validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Sentinel: REVIEW/MEDIUM
+Sentinel: PASS/LOW
 Duplicate accepted private-stage rows: 1
 
 ## Accepted Counts
@@ -18,7 +18,6 @@ Duplicate accepted private-stage rows: 1
 - The Institute: 8
 
 ## Held Counts
-- MobLand: 1
 
 ## Full-Season Missing Counts
 - MobLand: 1
@@ -36,4 +35,4 @@ Duplicate accepted private-stage rows: 1
 - source_urls_not_written_to_public_status: true
 - unique_episode_gate: true
 
-Next safe action: Do not publish partial TV seasons. Continue private source retry/monitoring until every pilot episode validates, then rerun this gate.
+Next safe action: Keep TV publication held until currently staged candidates validate cleanly.
