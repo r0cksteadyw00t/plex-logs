@@ -1,11 +1,11 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T20:25:07Z
+Updated UTC: 2026-06-18T20:26:05Z
 Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
-Accepted private-stage episodes: 27
+Accepted private-stage episodes: 42
 Expected pilot episodes: 28
 Full-season complete: false
-Full-season missing: 28
+Full-season missing: 15
 Held/missing episodes: 0
 Validator: UNKNOWN
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
@@ -14,13 +14,15 @@ Duplicate accepted private-stage rows: 0
 
 ## Accepted Counts
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: 20
-- Dark Matter: 7
+- Dark Matter: 9
+- Haunted Hotel: 9
+- MobLand: 4
 
 ## Held Counts
 
 ## Full-Season Missing Counts
-- Haunted Hotel: 10
-- MobLand: 10
+- Haunted Hotel: 1
+- MobLand: 6
 - The Institute: 8
 
 ## Safety
