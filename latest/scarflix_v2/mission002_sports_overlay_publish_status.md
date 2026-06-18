@@ -1,23 +1,26 @@
 # Mission 002 Sports Overlay Publish
 
-Updated UTC: 2026-06-15T22:10:26Z
+Updated UTC: 2026-06-18T10:50:35Z
 
-Status: HELD_EXPLICIT_APPLY_APPROVAL_REQUIRED
+Status: PASS_SPORTS_OVERLAY_PREFLIGHT_READY
 
 ## Result
 
 - Active backend changed: False
-- Promoted overlay rows reviewed: 96
-- Clean sports channels added: 0
-- Already covered by active base: 0
+- Preflight only: True
+- Promoted overlay rows reviewed: 5
+- Clean sports channels added: 3
+- Already covered by active base: 2
 - Held by publish filter: 0
 - Active M3U channels after publish: 37
-- Threadfin lineup before: -1
-- Threadfin lineup after: -1
+- Threadfin lineup before: 37
+- Threadfin lineup after: 37
 
 ## Added Channels
 
-- none
+- 10 Sport 3
+- ABC Sport in 90 Seconds
+- Anglers Paradise
 
 ## Premium Sports Still Held
 
