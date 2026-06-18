@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-18T21:35:47Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-18T21:38:03Z
+Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
 Shows requested: 1
-Episodes enumerated: 4
+Episodes enumerated: 55
 Episodes already staged: 0
-Episodes newly staged: 4
-Review: 0
+Episodes newly staged: 13
+Review: 42
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Rafa: enumerated=4; staged=4; already=0; review=0; source=request_episode_targets
+- Tracker: enumerated=55; staged=13; already=0; review=42; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
