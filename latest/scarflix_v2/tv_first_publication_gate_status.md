@@ -1,29 +1,30 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T02:26:38Z
-Status: HELD_FULL_SEASON_INCOMPLETE
-Accepted private-stage episodes: 23
+Updated UTC: 2026-06-18T02:34:09Z
+Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
+Accepted private-stage episodes: 18
 Expected pilot episodes: 28
 Full-season complete: false
-Full-season missing: 5
+Full-season missing: 10
 Held/missing episodes: 5
-Validator: PASS_PRIVATE_STAGE_VALIDATED
+Validator: UNKNOWN
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Sentinel: PASS/LOW
 Duplicate accepted private-stage rows: 1
 
 ## Accepted Counts
-- Haunted Hotel: 7
-- MobLand: 8
-- The Institute: 8
+- Haunted Hotel: 8
+- MobLand: 7
+- The Institute: 3
 
 ## Held Counts
 - Haunted Hotel: 3
 - MobLand: 2
 
 ## Full-Season Missing Counts
-- Haunted Hotel: 3
-- MobLand: 2
+- Haunted Hotel: 2
+- MobLand: 3
+- The Institute: 5
 
 ## Safety
 - gate_only: true
@@ -38,4 +39,4 @@ Duplicate accepted private-stage rows: 1
 - source_urls_not_written_to_public_status: true
 - unique_episode_gate: true
 
-Next safe action: Do not publish partial TV seasons. Continue private source retry/monitoring until every pilot episode validates, then rerun this gate.
+Next safe action: Keep TV publication held until currently staged candidates validate cleanly.
