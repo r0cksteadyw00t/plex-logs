@@ -1,6 +1,6 @@
 # Mission 002 Sports Source Engine
 
-Updated UTC: 2026-06-18T13:45:46Z
+Updated UTC: 2026-06-18T13:49:30Z
 
 Status: PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW
 
@@ -10,7 +10,8 @@ Status: PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW
 - Plex-compatible format is scored: true
 - live_ok required: true
 - reliability threshold: 70
-- publish requires explicit user approval: true
+- publish requires explicit user approval: false
+- publish requires delegated auto-publisher gates: true
 
 ## Current Active Lineup Classification
 
