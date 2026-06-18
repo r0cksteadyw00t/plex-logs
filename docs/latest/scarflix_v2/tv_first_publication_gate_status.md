@@ -1,26 +1,28 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T00:05:52Z
+Updated UTC: 2026-06-18T00:10:52Z
 Status: HELD_FULL_SEASON_INCOMPLETE
-Accepted private-stage episodes: 26
+Accepted private-stage episodes: 25
 Expected pilot episodes: 28
 Full-season complete: false
-Full-season missing: 2
-Held/missing episodes: 2
+Full-season missing: 3
+Held/missing episodes: 3
 Validator: PASS_PRIVATE_STAGE_VALIDATED
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Sentinel: PASS/LOW
 
 ## Accepted Counts
 - Haunted Hotel: 8
-- MobLand: 10
+- MobLand: 9
 - The Institute: 8
 
 ## Held Counts
 - Haunted Hotel: 2
+- MobLand: 1
 
 ## Full-Season Missing Counts
 - Haunted Hotel: 2
+- MobLand: 1
 
 ## Safety
 - gate_only: true
