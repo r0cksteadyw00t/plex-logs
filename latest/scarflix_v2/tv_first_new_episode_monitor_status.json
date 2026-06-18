@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-18T08:36:02Z",
-  "updated_utc": "2026-06-18T08:39:23Z",
+  "started_utc": "2026-06-18T08:51:02Z",
+  "updated_utc": "2026-06-18T08:52:50Z",
   "status": "REVIEW_MONITOR_PUBLICATION_NOT_COMPLETE",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
@@ -396,7 +396,7 @@
   "accepted_count": 28,
   "full_season_complete": true,
   "publication_attempted": true,
-  "publication_status": "ROLLBACK_COMPLETE_PUBLICATION_FAILED",
+  "publication_status": "HELD_FIRST_TV_PUBLICATION_ALREADY_COMPLETE",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
@@ -405,7 +405,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 3094,
+      "elapsed_ms": 2530,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -414,7 +414,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 98884,
+      "elapsed_ms": 104813,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -423,19 +423,19 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 191,
+      "elapsed_ms": 81,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
     },
     {
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstAdditivePublicationAdapter.js",
-      "status": 1,
+      "status": 0,
       "signal": "",
-      "elapsed_ms": 98283,
+      "elapsed_ms": 69,
       "stdout_tail": "",
       "stderr_tail": "",
-      "ok": false
+      "ok": true
     }
   ],
   "safety": {
@@ -453,9 +453,9 @@
   "publication_retry_hold": {
     "hold": false,
     "previous_status": "PASS_TV_FIRST_ADDITIVE_PUBLICATION_COMPLETE",
-    "previous_error": "",
-    "previous_updated_utc": "2026-06-18T08:31:08.809Z",
-    "previous_age_minutes": 7,
+    "previous_error": "WEBDAV_POST_PUBLICATION_VERIFY_FAILED",
+    "previous_updated_utc": "2026-06-18T08:44:47Z",
+    "previous_age_minutes": 8,
     "cooldown_minutes": 360
   },
   "next_safe_action": "Inspect TV additive publication adapter status before retrying."
