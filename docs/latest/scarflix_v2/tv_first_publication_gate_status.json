@@ -1,12 +1,12 @@
 {
   "component": "jasonos_prime_tv_first_publication_gate",
   "schema_version": "jasonos.tv_first.publication_gate.v1",
-  "updated_utc": "2026-06-18T07:09:41Z",
-  "status": "PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD",
+  "updated_utc": "2026-06-18T07:24:42Z",
+  "status": "HELD_SENTINEL_ALERT_HIGH",
   "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
-  "sentinel_status": "PASS",
-  "sentinel_alert_level": "LOW",
+  "sentinel_status": "ALERT",
+  "sentinel_alert_level": "HIGH",
   "pause_publication_present": true,
   "accepted_count": 28,
   "accepted_raw_count": 29,
@@ -47,5 +47,5 @@
     "unique_episode_gate": true,
     "source_urls_not_written_to_public_status": true
   },
-  "next_safe_action": "Run the full-season-only additive TV publication adapter with rollback and post-publication Plex/WebDAV verification."
+  "next_safe_action": "Keep TV publication held until Sentinel clears."
 }
