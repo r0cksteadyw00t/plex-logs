@@ -1,12 +1,12 @@
 # TV-First Additive Publication Adapter
 
-Updated UTC: 2026-06-18T08:39:23Z
-Status: ROLLBACK_COMPLETE_PUBLICATION_FAILED
+Updated UTC: 2026-06-18T08:52:50Z
+Status: HELD_FIRST_TV_PUBLICATION_ALREADY_COMPLETE
 Gate status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
 Expected episodes: 28
 Accepted episodes: 28
-Mutated entries: 28
-Rollback performed: true
+Mutated entries: 0
+Rollback performed: false
 
 ## Safety
 - additive_only: true
@@ -21,4 +21,4 @@ Rollback performed: true
 - strm_targets_local_webdav_materialized_path: true
 - tv_section_only_refresh: true
 
-Next safe action: Inspect rollback manifest and failed verification evidence before retrying TV publication.
+Next safe action: Do not republish the completed first TV pilot unless JASONOS_TV_FORCE_REPUBLISH=1 is explicitly set after a fresh rollback/snapshot decision.
