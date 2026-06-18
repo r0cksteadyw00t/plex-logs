@@ -1,6 +1,6 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-18T13:52:09Z  
+**Updated UTC:** 2026-06-18T13:57:13Z  
 **Status:** PASS
 
 ## Scope
@@ -19,8 +19,8 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 ## Watch Now
 
-- Gremlins / scarflix_part-942255f029875306: PASS, HTTP 200, 9307ms
-- Anna / scarflix_part-81107989d2e30cfb: PASS, HTTP 200, 2669ms
+- Gremlins / scarflix_part-942255f029875306: PASS, HTTP 200, 1600ms
+- Anna / scarflix_part-81107989d2e30cfb: PASS, HTTP 200, 1546ms
 
 ## Failures
 
