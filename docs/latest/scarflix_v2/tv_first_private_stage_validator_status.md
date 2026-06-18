@@ -1,16 +1,17 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-18T21:36:08Z
+Updated UTC: 2026-06-18T22:15:39Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 4
-Passed: 4
+Checked: 5
+Passed: 5
 Review: 0
 
 ## Results
-- Rafa: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Rafa: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Rafa: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Rafa: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- U.S. Against the World: Four Years with the Men's National Soccer Team: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- U.S. Against the World: Four Years with the Men's National Soccer Team: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- U.S. Against the World: Four Years with the Men's National Soccer Team: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- U.S. Against the World: Four Years with the Men's National Soccer Team: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- U.S. Against the World: Four Years with the Men's National Soccer Team: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=video/mp4; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
