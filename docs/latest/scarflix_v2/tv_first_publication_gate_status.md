@@ -1,15 +1,15 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T10:57:18Z
-Status: HELD_SENTINEL_ALERT_HIGH
+Updated UTC: 2026-06-18T11:07:24Z
+Status: HELD_FULL_SEASON_INCOMPLETE
 Accepted private-stage episodes: 27
 Expected pilot episodes: 28
 Full-season complete: false
 Full-season missing: 1
-Held/missing episodes: 0
+Held/missing episodes: 1
 Validator: PASS_PRIVATE_STAGE_VALIDATED
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Sentinel: ALERT/HIGH
+Sentinel: PASS/LOW
 Duplicate accepted private-stage rows: 1
 
 ## Accepted Counts
@@ -18,6 +18,7 @@ Duplicate accepted private-stage rows: 1
 - The Institute: 7
 
 ## Held Counts
+- The Institute: 1
 
 ## Full-Season Missing Counts
 - The Institute: 1
@@ -35,4 +36,4 @@ Duplicate accepted private-stage rows: 1
 - source_urls_not_written_to_public_status: true
 - unique_episode_gate: true
 
-Next safe action: Keep TV publication held until Sentinel clears.
+Next safe action: Do not publish partial TV seasons. Continue private source retry/monitoring until every pilot episode validates, then rerun this gate.
