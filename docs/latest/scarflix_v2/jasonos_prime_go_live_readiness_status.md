@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-18T09:24:09Z
+Updated UTC: 2026-06-18T09:29:13Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -28,6 +28,7 @@ PAUSE_PUBLICATION active: `True`
 ## Blocking Items
 
 - `O-SCARFLIX-CATALOGUE`: Materialized QA is not full PASS: REVIEW 117/117 failed=0. retry_held=0 retry_tracked=21.
+- `O-AUTONOMY-STABILITY`: Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED.
 
 ## Monitored Tasks
 
