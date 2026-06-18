@@ -1,58 +1,40 @@
 {
-    "component":  "jasonos_mission002_sports_overlay_publish",
-    "schema_version":  "jasonos.iptv.sports_overlay_publish_status.redacted.v1",
-    "status":  "PASS_SPORTS_OVERLAY_PUBLISHED",
-    "updated_utc":  "2026-06-18T10:52:39Z",
-    "active_backend_changed":  true,
-    "preflight_only":  false,
-    "pause_publication_preserved":  true,
-    "publish_filter":  "clean AFL/sports delta only; existing Melbourne/Sydney FTA preserved; non-sports/regional duplicates held",
-    "promoted_overlay_count":  5,
-    "added_count":  3,
-    "skipped_existing_count":  2,
-    "held_count":  0,
-    "active_m3u_channel_count":  40,
-    "threadfin_lineup_before":  37,
-    "threadfin_lineup_after":  40,
-    "added_channels":  [
-                           {
-                               "channel_id":  "mjh-10-tensport3",
-                               "display_name":  "10 Sport 3"
-                           },
-                           {
-                               "channel_id":  "mjh-abc-90-seconds-sport",
-                               "display_name":  "ABC Sport in 90 Seconds"
-                           },
-                           {
-                               "channel_id":  "mjh-anglersparadise-fast",
-                               "display_name":  "Anglers Paradise"
-                           }
-                       ],
-    "unavailable_premium_channels":  [
-                                         {
-                                             "display_name":  "Fox Footy",
-                                             "reason":  "No legal Plex-compatible stream source configured or discovered."
-                                         },
-                                         {
-                                             "display_name":  "Kayo Sports",
-                                             "reason":  "OTT/DRM/browser-session source requires a separate user-authorized adapter; no direct Plex-safe stream configured."
-                                         },
-                                         {
-                                             "display_name":  "Fox Sports",
-                                             "reason":  "No legal Plex-compatible stream source configured or discovered."
-                                         }
-                                     ],
-    "errors":  [
-
-               ],
-    "warnings":  [
-
-                 ],
-    "actions":  [
-                    "backup_created",
-                    "active_m3u_merged",
-                    "active_xml_augmented",
-                    "threadfin_container_restarted"
-                ],
-    "stream_urls_redacted":  true
+  "component": "jasonos_mission002_sports_overlay_publish",
+  "schema_version": "jasonos.iptv.sports_overlay_publish_status.redacted.v1",
+  "status": "PASS_FTA_FAST_EXPANSION_ROLLED_BACK",
+  "updated_utc": "2026-06-18T11:00:18Z",
+  "active_backend_changed": true,
+  "preflight_only": false,
+  "pause_publication_preserved": true,
+  "publish_filter": "non-FTA sports gaps only; FTA/FAST expansion held out of scope; existing core Australian FTA baseline preserved pending separate cull",
+  "added_count": 0,
+  "removed_count": 3,
+  "active_m3u_channel_count": 37,
+  "threadfin_lineup_after": 37,
+  "removed_channels": [
+    "10 Sport 3 - IPTV",
+    "ABC Sport in 90 Seconds - IPTV",
+    "Anglers Paradise - IPTV"
+  ],
+  "unavailable_premium_channels": [
+    {
+      "display_name": "Fox Footy",
+      "reason": "No legal Plex-compatible stream source configured or discovered."
+    },
+    {
+      "display_name": "Kayo Sports",
+      "reason": "OTT/DRM/browser-session source requires a separate user-authorized adapter; no direct Plex-safe stream configured."
+    },
+    {
+      "display_name": "Fox Sports",
+      "reason": "No legal Plex-compatible stream source configured or discovered."
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "actions": [
+    "restored_pre_expansion_backup",
+    "threadfin_container_restarted"
+  ],
+  "stream_urls_redacted": true
 }
