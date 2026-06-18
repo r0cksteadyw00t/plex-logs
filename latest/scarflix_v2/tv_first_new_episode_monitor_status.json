@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-18T03:06:04Z",
-  "updated_utc": "2026-06-18T03:09:40Z",
+  "started_utc": "2026-06-18T03:21:02Z",
+  "updated_utc": "2026-06-18T03:22:53Z",
   "status": "HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
@@ -397,15 +397,15 @@
   "full_season_complete": false,
   "publication_attempted": false,
   "publication_status": "NOT_ATTEMPTED_FULL_SEASON_GATE_HELD",
-  "sentinel_status": "PASS",
-  "sentinel_alert_level": "LOW",
+  "sentinel_status": "REVIEW",
+  "sentinel_alert_level": "MEDIUM",
   "pause_publication_present": true,
   "actions": [
     {
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 4634,
+      "elapsed_ms": 6662,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -414,34 +414,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 117366,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageRetryRepair.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 2704,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 3195,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 85698,
+      "elapsed_ms": 103771,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -450,7 +423,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 263,
+      "elapsed_ms": 468,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -463,9 +436,9 @@
     "publication_owned_by_additive_adapter": true,
     "full_season_gate_required": true
   },
-  "whole_stage_status": "REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE",
-  "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "gate_status": "HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS",
+  "whole_stage_status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
+  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "gate_status": "HELD_FULL_SEASON_INCOMPLETE",
   "full_season_missing_count": 4,
   "full_season_missing_by_show": {
     "Haunted Hotel": 2,
