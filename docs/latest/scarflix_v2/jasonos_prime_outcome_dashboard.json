@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-18T00:30:05Z",
+  "updated_utc": "2026-06-18T00:35:45.700Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -14,7 +14,7 @@
     "movie_strm_count": 0,
     "tv_strm_count": 0,
     "total_strm_count": 0,
-    "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
+    "primary_delivery_metric": "materialized_or_webdav_backed_plex_playback_success",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
     "legacy_resolver_default_allowed": false,
@@ -104,9 +104,7 @@
     "platform_gate_blocked_by": "none",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON",
-    "staged_candidate_count": 43,
-    "plex_safe_webdav_visible_rows": 1
+    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON"
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -125,9 +123,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 6802,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-18T00:30:23Z",
+    "platform_child_progress_age_minutes": 6807,
+    "mirror_updated_age_minutes": 3,
+    "next_check_utc": "2026-06-18T00:35:24Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +134,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 6801,
+    "age_minutes": 6806,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-18T00:25:19Z",
+    "updated_utc": "2026-06-18T00:30:18Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-18T00:30:05Z",
+    "updated_utc": "2026-06-18T00:35:05Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -165,37 +163,13 @@
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
-    "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-13T07:10:01Z",
     "updated_utc": "2026-06-13T07:10:05Z",
-    "ended_utc": "2026-06-13T07:10:05Z",
-    "dry_run": false,
-    "jason_action_required": false,
-    "title_not_rejected": true,
-    "source_only_quarantine": true,
-    "probe_timeout_ms": 12000,
-    "range_timeout_ms": 16000,
-    "concurrency": 3,
-    "counts_before": {
-      "movies": 0,
-      "tv": 0,
-      "total": 0
-    },
-    "counts_after": {
-      "movies": 0,
-      "tv": 0,
-      "total": 0
-    },
     "checked_visible": 0,
     "passed_visible": 0,
     "failed_visible": 0,
     "quarantined_this_run": 0,
-    "restored_this_run": 0,
     "retry_held_count": 1,
-    "permanent_quarantine_count": 1,
-    "raw_live_proxy_visible_count": 0,
-    "direct_https_visible_count": 0,
     "top_reason_codes": [
       {
         "code": "PROVIDER_503_RETRYABLE",
@@ -206,79 +180,23 @@
         "count": 1
       }
     ],
-    "recent_quarantined": [],
-    "retry_queue_items": [
-      {
-        "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "retry_after_utc": "2026-06-13T07:20:05Z",
-        "url_host": "192.168.1.184:18788",
-        "is_local_live_proxy": true
-      }
-    ],
-    "sample_passed": [],
-    "plex_scan_triggered": {
-      "ok": true,
-      "reason": "no visible changes"
-    },
-    "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260613.log",
-    "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
-    "retry_queue_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_retry_queue.json"
+    "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json"
   },
   "staged_candidate_publisher": {
-    "component": "scarflix_v2_staged_candidate_publisher",
     "status": "PAUSED_PLAYBACK_FIX",
     "updated_utc": "2026-06-08T07:41:22Z",
-    "jason_action_required": false,
-    "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-    "pause": {
-      "component": "scarflix_v2_expansion_pause",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "paused": true,
-      "updated_utc": "2026-06-08T07:41:00Z",
-      "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-      "trigger_titles": [
-        "The Maze Runner (2014)",
-        "Saw (2004)"
-      ],
-      "allowed_while_paused": [
-        "materialized_playback_canary",
-        "direct_strm_admission_gate",
-        "playback_qa_controller",
-        "dashboard",
-        "public_mirror",
-        "watchdog_status_only"
-      ],
-      "blocked_while_paused": [
-        "canary_expansion",
-        "safe_webdav_expansion_pipeline",
-        "stage_only_seeder",
-        "staged_candidate_publisher",
-        "direct_strm_mirror",
-        "direct_resolver_default_publish"
-      ],
-      "jason_action_required": false
-    },
-    "counts_before": {
-      "movies": 74,
-      "tv": 39,
-      "staged": 0
-    },
-    "counts_after": {
-      "movies": 74,
-      "tv": 39,
-      "staged": 0
-    },
     "candidate_dirs_found": 0,
+    "pending_count": 43,
     "processed": 0,
     "published": 0,
     "retry_held": 0,
     "rejected": 0,
     "skipped": 0,
-    "legacy_resolver_default_allowed": false,
-    "primary_playback_architecture": "materialized_webdav_symlink",
-    "publication_gate": "Plex decision QA after materialized/WebDAV canary",
-    "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
+    "direct_counts_after": {
+      "movies": 0,
+      "tv": 0,
+      "total": 0
+    },
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
   },
   "fast_track_accelerator": {
@@ -376,7 +294,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-18T00:25:20Z",
+      "utc": "2026-06-18T00:30:21Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -461,7 +379,7 @@
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
       "last_change": "2026-06-18T00:27:19Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
-      "progress": 70,
+      "progress": 75,
       "eta": "active every 15 minutes with Grok API",
       "stall_risk": "Low"
     },
@@ -479,7 +397,7 @@
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
       "last_change": "2026-06-10T00:27:02Z - CONTROLLED_MATERIALIZED_QA_HOLD",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=0.",
-      "progress": 25,
+      "progress": 30,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
     },
@@ -515,25 +433,25 @@
       "target": "Parallel local workers for simulations, status, planning and future missions.",
       "last_change": "2026-06-06T08:25:00Z - watchdog swarm escalation marker added",
       "current": "Short scheduled workers active; broader worker swarm pending.",
-      "progress": 28,
+      "progress": 32,
       "eta": "2-4 days",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     },
     {
       "outcome": "Phone/Multi-Device Federation",
       "target": "Stable remote status/control through public mirror plus tunnel/federation layer.",
       "last_change": "2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated",
-      "current": "Public mirror REVIEW; raw status base available.",
-      "progress": 38,
+      "current": "Public mirror PASS; raw status base available.",
+      "progress": 50,
       "eta": "1-3 days",
-      "stall_risk": "Medium"
+      "stall_risk": "Low"
     },
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
       "last_change": "2026-06-08T01:18:52Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=117/117; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
-      "progress": 15,
+      "progress": 18,
       "eta": "next: resume controlled materialized/WebDAV publishing",
       "stall_risk": "Medium"
     }
@@ -544,386 +462,5 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
-  },
-  "node_watchdog_5min": {
-    "component": "jasonos_prime_node_watchdog_5min",
-    "status": "ACTIVE",
-    "updated_utc": "2026-06-18T00:30:05Z",
-    "jason_action_required": false,
-    "cadence": "every 5 minutes",
-    "counts": {
-      "legacy_movie_strm": 0,
-      "legacy_tv_strm": 0,
-      "legacy_total_strm": 0,
-      "plex_safe_webdav_visible_rows": 1
-    },
-    "grokbuild_status": "REVIEW_STALE_PROGRESS",
-    "grok_peer_bridge_status": "PASS_REVIEW_RECEIVED",
-    "platform_gate_status": "PASS",
-    "direct_strm_mirror_status": {
-      "component": "scarflix_v2_direct_strm_mirror",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "updated_utc": "2026-06-08T07:41:22Z",
-      "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-      "pause": {
-        "component": "scarflix_v2_expansion_pause",
-        "status": "PAUSED_PLAYBACK_FIX",
-        "paused": true,
-        "updated_utc": "2026-06-08T07:41:00Z",
-        "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-        "trigger_titles": [
-          "The Maze Runner (2014)",
-          "Saw (2004)"
-        ],
-        "allowed_while_paused": [
-          "materialized_playback_canary",
-          "direct_strm_admission_gate",
-          "playback_qa_controller",
-          "dashboard",
-          "public_mirror",
-          "watchdog_status_only"
-        ],
-        "blocked_while_paused": [
-          "canary_expansion",
-          "safe_webdav_expansion_pipeline",
-          "stage_only_seeder",
-          "staged_candidate_publisher",
-          "direct_strm_mirror",
-          "direct_resolver_default_publish"
-        ],
-        "jason_action_required": false
-      },
-      "counts_before": {
-        "movies": 74,
-        "tv": 39
-      },
-      "counts_after": {
-        "movies": 74,
-        "tv": 39
-      },
-      "delivered_total": 113,
-      "created": 0,
-      "updated": 0,
-      "written_count": 0,
-      "skipped_count": 0,
-      "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260608.log"
-    },
-    "direct_strm_admission_gate_status": {
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-13T07:10:01Z",
-      "updated_utc": "2026-06-13T07:10:05Z",
-      "ended_utc": "2026-06-13T07:10:05Z",
-      "dry_run": false,
-      "jason_action_required": false,
-      "title_not_rejected": true,
-      "source_only_quarantine": true,
-      "probe_timeout_ms": 12000,
-      "range_timeout_ms": 16000,
-      "concurrency": 3,
-      "counts_before": {
-        "movies": 0,
-        "tv": 0,
-        "total": 0
-      },
-      "counts_after": {
-        "movies": 0,
-        "tv": 0,
-        "total": 0
-      },
-      "checked_visible": 0,
-      "passed_visible": 0,
-      "failed_visible": 0,
-      "quarantined_this_run": 0,
-      "restored_this_run": 0,
-      "retry_held_count": 1,
-      "permanent_quarantine_count": 1,
-      "raw_live_proxy_visible_count": 0,
-      "direct_https_visible_count": 0,
-      "top_reason_codes": [
-        {
-          "code": "PROVIDER_503_RETRYABLE",
-          "count": 1
-        },
-        {
-          "code": "SOURCE_EXPIRED_OR_GONE",
-          "count": 1
-        }
-      ],
-      "recent_quarantined": [],
-      "retry_queue_items": [
-        {
-          "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-          "reason_code": "PROVIDER_503_RETRYABLE",
-          "retry_after_utc": "2026-06-13T07:20:05Z",
-          "url_host": "192.168.1.184:18788",
-          "is_local_live_proxy": true
-        }
-      ],
-      "sample_passed": [],
-      "plex_scan_triggered": {
-        "ok": true,
-        "reason": "no visible changes"
-      },
-      "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260613.log",
-      "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
-      "retry_queue_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_retry_queue.json"
-    },
-    "staged_candidate_count": 43,
-    "staged_candidate_publisher_status": {
-      "component": "scarflix_v2_staged_candidate_publisher",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "updated_utc": "2026-06-08T07:41:22Z",
-      "jason_action_required": false,
-      "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-      "pause": {
-        "component": "scarflix_v2_expansion_pause",
-        "status": "PAUSED_PLAYBACK_FIX",
-        "paused": true,
-        "updated_utc": "2026-06-08T07:41:00Z",
-        "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-        "trigger_titles": [
-          "The Maze Runner (2014)",
-          "Saw (2004)"
-        ],
-        "allowed_while_paused": [
-          "materialized_playback_canary",
-          "direct_strm_admission_gate",
-          "playback_qa_controller",
-          "dashboard",
-          "public_mirror",
-          "watchdog_status_only"
-        ],
-        "blocked_while_paused": [
-          "canary_expansion",
-          "safe_webdav_expansion_pipeline",
-          "stage_only_seeder",
-          "staged_candidate_publisher",
-          "direct_strm_mirror",
-          "direct_resolver_default_publish"
-        ],
-        "jason_action_required": false
-      },
-      "counts_before": {
-        "movies": 74,
-        "tv": 39,
-        "staged": 0
-      },
-      "counts_after": {
-        "movies": 74,
-        "tv": 39,
-        "staged": 0
-      },
-      "candidate_dirs_found": 0,
-      "processed": 0,
-      "published": 0,
-      "retry_held": 0,
-      "rejected": 0,
-      "skipped": 0,
-      "legacy_resolver_default_allowed": false,
-      "primary_playback_architecture": "materialized_webdav_symlink",
-      "publication_gate": "Plex decision QA after materialized/WebDAV canary",
-      "log": "D:/PlexTools/logs/scarflix_v2_staged_candidate_publisher_20260608.log",
-      "status_file": "D:/PlexTools/public/latest/scarflix_v2/staged_candidate_publisher_status.json"
-    },
-    "expansion_paused": true,
-    "expansion_pause": {
-      "component": "scarflix_v2_expansion_pause",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "paused": true,
-      "updated_utc": "2026-06-08T07:57:48Z",
-      "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-      "trigger_titles": [
-        "The Maze Runner (2014)",
-        "Saw (2004)",
-        "The Green Mile (1999)"
-      ],
-      "allowed_while_paused": [
-        "materialized_playback_canary",
-        "direct_strm_admission_gate",
-        "playback_qa_controller",
-        "dashboard",
-        "public_mirror",
-        "watchdog_status_only"
-      ],
-      "blocked_while_paused": [
-        "canary_expansion",
-        "safe_webdav_expansion_pipeline",
-        "stage_only_seeder",
-        "staged_candidate_publisher",
-        "direct_strm_mirror",
-        "direct_resolver_default_publish"
-      ],
-      "jason_action_required": false,
-      "latest_user_playback_failure": "The Green Mile (1999)",
-      "latest_user_playback_failure_note": "Jason reported same Plex HTTP playback failure; file is legacy resolver STRM pointing at 18788/live."
-    },
-    "playback_qa_controller_status": {
-      "component": "jasonos_prime_playback_qa_controller",
-      "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-13T07:10:01Z",
-      "current_step": "materialized_decision_failed",
-      "jason_action_required": false,
-      "counts": {
-        "movies": 0,
-        "tv": 0,
-        "total": 0
-      },
-      "canary_status": "PAUSED_PLAYBACK_FIX",
-      "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
-      "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-      "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-      "direct_strm_admission_checked_visible": 0,
-      "direct_strm_admission_passed_visible": 0,
-      "direct_strm_admission_quarantined_this_run": 0,
-      "direct_strm_retry_held_count": 1,
-      "materialized_primary": true,
-      "materialized_visible_verified": 18,
-      "materialized_decision_qa_status": "REVIEW",
-      "materialized_decision_qa_target_count": 229,
-      "materialized_decision_qa_passed": 119,
-      "materialized_decision_qa_failed": 110,
-      "decision_qa_status": "PASS",
-      "concurrent_stream_qa_status": "REVIEW",
-      "ignored_overlap": [],
-      "overlap_running": [],
-      "actions": [
-        {
-          "action": "trigger_plex_scans_materialized",
-          "result": [
-            {
-              "ok": true,
-              "section": "5",
-              "pid": 28472
-            },
-            {
-              "ok": true,
-              "section": "6",
-              "pid": 12924
-            }
-          ]
-        }
-      ],
-      "next_action": "Quarantine failed materialized source/release and keep title retryable."
-    },
-    "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 849126,
-    "safe_pipeline_log_age_seconds": 906010,
-    "safe_pipeline_lock_age_seconds": null,
-    "stale_running_canary": false,
-    "actions": [
-      {
-        "action": "refresh_grokbuild",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
-      },
-      {
-        "action": "trigger_public_mirror",
-        "ok": true,
-        "detail": "pid=12024"
-      }
-    ],
-    "blockers": []
-  },
-  "direct_strm_mirror": {
-    "component": "scarflix_v2_direct_strm_mirror",
-    "status": "PAUSED_PLAYBACK_FIX",
-    "updated_utc": "2026-06-08T07:41:22Z",
-    "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-    "pause": {
-      "component": "scarflix_v2_expansion_pause",
-      "status": "PAUSED_PLAYBACK_FIX",
-      "paused": true,
-      "updated_utc": "2026-06-08T07:41:00Z",
-      "reason": "Expansion remains paused for broad catalogue publishing while the direct resolver playback model is replaced by a materialized/WebDAV-backed canary.",
-      "trigger_titles": [
-        "The Maze Runner (2014)",
-        "Saw (2004)"
-      ],
-      "allowed_while_paused": [
-        "materialized_playback_canary",
-        "direct_strm_admission_gate",
-        "playback_qa_controller",
-        "dashboard",
-        "public_mirror",
-        "watchdog_status_only"
-      ],
-      "blocked_while_paused": [
-        "canary_expansion",
-        "safe_webdav_expansion_pipeline",
-        "stage_only_seeder",
-        "staged_candidate_publisher",
-        "direct_strm_mirror",
-        "direct_resolver_default_publish"
-      ],
-      "jason_action_required": false
-    },
-    "counts_before": {
-      "movies": 74,
-      "tv": 39
-    },
-    "counts_after": {
-      "movies": 74,
-      "tv": 39
-    },
-    "delivered_total": 113,
-    "created": 0,
-    "updated": 0,
-    "written_count": 0,
-    "skipped_count": 0,
-    "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260608.log"
-  },
-  "playback_qa_controller": {
-    "component": "jasonos_prime_playback_qa_controller",
-    "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-13T07:10:01Z",
-    "current_step": "materialized_decision_failed",
-    "jason_action_required": false,
-    "counts": {
-      "movies": 0,
-      "tv": 0,
-      "total": 0
-    },
-    "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
-    "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-    "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-    "direct_strm_admission_checked_visible": 0,
-    "direct_strm_admission_passed_visible": 0,
-    "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_retry_held_count": 1,
-    "materialized_primary": true,
-    "materialized_visible_verified": 18,
-    "materialized_decision_qa_status": "REVIEW",
-    "materialized_decision_qa_target_count": 229,
-    "materialized_decision_qa_passed": 119,
-    "materialized_decision_qa_failed": 110,
-    "decision_qa_status": "PASS",
-    "concurrent_stream_qa_status": "REVIEW",
-    "ignored_overlap": [],
-    "overlap_running": [],
-    "actions": [
-      {
-        "action": "trigger_plex_scans_materialized",
-        "result": [
-          {
-            "ok": true,
-            "section": "5",
-            "pid": 28472
-          },
-          {
-            "ok": true,
-            "section": "6",
-            "pid": 12924
-          }
-        ]
-      }
-    ],
-    "next_action": "Quarantine failed materialized source/release and keep title retryable."
   }
 }
