@@ -1,18 +1,18 @@
 {
   "component": "jasonos_prime_tv_first_publication_gate",
   "schema_version": "jasonos.tv_first.publication_gate.v1",
-  "updated_utc": "2026-06-18T03:42:02Z",
-  "status": "HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS",
-  "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
+  "updated_utc": "2026-06-18T03:54:11Z",
+  "status": "HELD_FULL_SEASON_INCOMPLETE",
+  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
-  "accepted_count": 24,
-  "accepted_raw_count": 25,
+  "accepted_count": 25,
+  "accepted_raw_count": 26,
   "duplicate_accepted_count": 1,
   "accepted_by_show": {
-    "Haunted Hotel": 8,
+    "Haunted Hotel": 9,
     "MobLand": 8,
     "The Institute": 8
   },
@@ -23,20 +23,21 @@
     "The Institute": 8
   },
   "full_season_complete": false,
-  "full_season_missing_count": 4,
+  "full_season_missing_count": 3,
   "full_season_missing_by_show": {
-    "Haunted Hotel": 2,
+    "Haunted Hotel": 1,
     "MobLand": 2
   },
-  "held_episode_count": 1,
+  "held_episode_count": 3,
   "held_by_show": {
-    "MobLand": 1
+    "Haunted Hotel": 1,
+    "MobLand": 2
   },
   "private_manifest_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_publication_gate/tv_first_publication_candidates.accepted.private.json",
   "public_redacted_manifest_path": "D:/PlexTools/public/latest/scarflix_v2/tv_first_publication_candidates.redacted.json",
   "upstream": {
     "whole_show_stage_status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
-    "retry_repair_status": "PASS_NO_FAILED_PRIVATE_STAGE_ROWS_TO_MOVE",
+    "retry_repair_status": "PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD",
     "retry_ledger_failure_count": 82
   },
   "safety": {
@@ -52,5 +53,5 @@
     "unique_episode_gate": true,
     "source_urls_not_written_to_public_status": true
   },
-  "next_safe_action": "Keep TV publication held until currently staged candidates validate cleanly."
+  "next_safe_action": "Do not publish partial TV seasons. Continue private source retry/monitoring until every pilot episode validates, then rerun this gate."
 }
