@@ -1,6 +1,6 @@
 # Mission 002 Sports Source Engine
 
-Updated UTC: 2026-06-18T10:42:05Z
+Updated UTC: 2026-06-18T11:40:39Z
 
 Status: PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW
 
@@ -14,24 +14,21 @@ Status: PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW
 
 ## Current Active Lineup Classification
 
-- Active baseline channels classified: 37
-- Active baseline promoted: 37
+- Active baseline channels classified: 9
+- Active baseline promoted: 9
 - Backend changed: false
 
 Sample promoted baseline channels:
 
-- ABC TV
+- ABC
 - ABC NEWS
-- ABC Kids
-- ABC Family
-- ABC Entertains
 - SBS
-- SBS VICELAND
-- SBS Food
-- SBS World Movies
-- SBS WorldWatch
-- NITV
-- 7 Melbourne
+- 7HD
+- 7mate NSW
+- 7mate
+- 7AFL
+- 9HD
+- 10HD
 
 ## External Sports Sources
 
