@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-18T20:53:07Z
+Updated UTC: 2026-06-18T21:01:17Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 8
+Episodes enumerated: 40
 Episodes already staged: 0
-Episodes newly staged: 8
+Episodes newly staged: 40
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Every Year After: enumerated=8; staged=8; already=0; review=0; source=request_episode_targets
+- Clarkson's Farm: enumerated=40; staged=40; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
