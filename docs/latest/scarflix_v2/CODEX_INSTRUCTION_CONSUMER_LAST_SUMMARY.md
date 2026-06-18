@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-18T12:55:29Z
-Instruction: phase0_maintain_tv_section6_hold_write_status_summary_20260618_v46
+Updated UTC: 2026-06-18T13:12:00Z
+Instruction: phase0_maintain_tv_section6_hold_write_status_summary_20260618_v47
 
-TV Section 6 publication hold maintained. 15-minute monitor active with 0 pending events. No Plex-visible changes, no WebDAV mutations, no legacy resolver expansion. Materialized QA remains REVIEW. All gates preserved under current constraints.
+Maintain TV Section 6 publication hold. Continue 15-minute monitor without visible Plex changes. Record forensic status only. No publishing, expansion, or source movement permitted under current REVIEW and PAUSE constraints.
