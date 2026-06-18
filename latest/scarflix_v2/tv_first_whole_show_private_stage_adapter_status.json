@@ -1,16 +1,16 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-18T04:25:25Z",
+  "updated_utc": "2026-06-18T04:37:23Z",
   "manifest_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_protected_pilot/tv_first_protected_pilot_request.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
-  "prior_private_stage_validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "max_shows": 3,
-  "max_episodes": 60,
+  "max_episodes": 500,
   "safety": {
     "private_stage_only": true,
     "no_publication_started": true,
@@ -28,8 +28,8 @@
   },
   "show_count": 3,
   "episodes_enumerated": 28,
-  "already_staged_count": 25,
-  "staged_count": 0,
+  "already_staged_count": 24,
+  "staged_count": 1,
   "review_count": 3,
   "shows": [
     {
@@ -38,8 +38,8 @@
       "seasons_expected": 1,
       "episodes_expected": 10,
       "episodes_enumerated": 10,
-      "already_staged_count": 9,
-      "staged_count": 0,
+      "already_staged_count": 8,
+      "staged_count": 1,
       "review_count": 1,
       "episode_manifest_source": "tmdb_season_details",
       "error": ""
@@ -133,7 +133,20 @@
       "tmdb_id": 255752,
       "season": 1,
       "episode": 9,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
+      "stage_id": "tv_haunted_hotel_255752_s01e09_8d59dc6c4f98",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n720p",
+        "title_excerpt": "Haunted Hotel S01E09 720p HEVC x265-MeGusta 👤 2 💾 302.33 MB ⚙️ EZTV",
+        "info_hash": "8d59dc6c4f98c325d30dba8c9ed258843af3aa90",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": false,
+        "selection_mode": "cached_verification_gated_fallback",
+        "fallback_requires_private_validation": true,
+        "fallback_requires_plex_decision": true,
+        "source_url_stored_private_only": true
+      }
     },
     {
       "title": "Haunted Hotel",
@@ -273,6 +286,6 @@
       "status": "PASS_ALREADY_PRIVATE_STAGED"
     }
   ],
-  "status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
+  "status": "REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
