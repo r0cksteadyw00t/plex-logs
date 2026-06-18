@@ -2,7 +2,7 @@
 
 Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE
 
-Updated UTC: 2026-06-18T10:01:47.4879580Z
+Updated UTC: 2026-06-18T14:04:58.8603783Z
 
 ## Peer Review Outcome
 
@@ -12,31 +12,31 @@ Updated UTC: 2026-06-18T10:01:47.4879580Z
 
 ## Current Run
 
-- Sources configured: 7
-- Sources processed: 47
-- Sources fetched: 17
+- Sources configured: 10
+- Sources processed: 50
+- Sources fetched: 11
 - Child sources discovered: 40
-- Duplicate streams suppressed: 164
-- Unique candidate channels extracted: 1693
-- Relevant candidate channels: 196
+- Duplicate streams suppressed: 165
+- Unique candidate channels extracted: 3197
+- Relevant candidate channels: 199
 - Probe attempts: 40
 - Probe PASS: 40
-- Review queue items: 195
+- Review queue items: 196
 - Sports Source Engine candidates: 1
-- Pending review/engine candidates: 195
+- Pending review/engine candidates: 196
 - Private pending source packages: 2
 
 ## Coverage Gaps
 
-- AFL: adequate (matches=1, probe_pass=1)
+- AFL: adequate (matches=11, probe_pass=1)
 - AFLW: missing (matches=0, probe_pass=0)
 - Fox Footy: missing (matches=0, probe_pass=0)
 - Kayo: missing (matches=0, probe_pass=0)
-- Fox Sports: missing (matches=0, probe_pass=0)
-- Racing: strong (matches=5, probe_pass=5)
-- Cricket: adequate (matches=1, probe_pass=1)
+- Fox Sports: weak (matches=12, probe_pass=0)
+- Racing: strong (matches=11, probe_pass=6)
+- Cricket: adequate (matches=4, probe_pass=1)
 - NRL: missing (matches=0, probe_pass=0)
-- AU Free-To-Air Sports Adjacent: strong (matches=8, probe_pass=3)
+- AU Free-To-Air Sports Adjacent: strong (matches=9, probe_pass=3)
 
 ## Privacy / Mutation Boundary
 
@@ -57,4 +57,4 @@ Updated UTC: 2026-06-18T10:01:47.4879580Z
 
 ## Next Safe Action
 
-Use the private graph and pending package to review candidates, then run the Sports Source Engine for technical scoring. Publishing requires explicit approval.
+Use the private graph and pending package as source-engine input. Publishing remains separate and automatic only after the delegated AFL auto-publisher hard gates pass.
