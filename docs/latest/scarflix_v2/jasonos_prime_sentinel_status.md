@@ -1,30 +1,30 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-18T10:55:05Z
-Status: ALERT
-Alert level: HIGH
+Updated UTC: 2026-06-18T11:00:18Z
+Status: PASS
+Alert level: LOW
 Jason action required: false
-Codex action required: true
+Codex action required: false
 
 ## Signals
 - controller_status: PASS
 - controller_milestone: CANDIDATE_SOURCE_MODEL_PASS
-- controller_age_minutes: 5
+- controller_age_minutes: 4
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 5
+- watchdog_age_minutes: 4
 - dashboard_status: PASS
-- dashboard_age_minutes: 5
+- dashboard_age_minutes: 4
 - mirror_status: PASS
 - mirror_age_minutes: 1
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 14976
-- durable_platform_gate_age_minutes: 14976
+- checkpoint_age_minutes: 14981
+- durable_platform_gate_age_minutes: 14981
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- autonomous_controller.lock: stale_lock (FAIL) ENOENT: no such file or directory, unlink 'D:\PlexTools\state\scarflix_v2\autonomous_controller.lock'
+- None.
 
 ## Notes
-- One or more detached recovery launches failed.
+- None.
