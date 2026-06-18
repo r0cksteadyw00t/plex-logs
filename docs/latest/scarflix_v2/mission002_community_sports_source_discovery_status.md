@@ -2,7 +2,7 @@
 
 Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE
 
-Updated UTC: 2026-06-18T18:04:38.5403775Z
+Updated UTC: 2026-06-18T22:04:47.6903966Z
 
 ## Peer Review Outcome
 
@@ -16,14 +16,14 @@ Updated UTC: 2026-06-18T18:04:38.5403775Z
 - Sources processed: 50
 - Sources fetched: 11
 - Child sources discovered: 40
-- Duplicate streams suppressed: 166
-- Unique candidate channels extracted: 3198
-- Relevant candidate channels: 200
+- Duplicate streams suppressed: 165
+- Unique candidate channels extracted: 3197
+- Relevant candidate channels: 199
 - Probe attempts: 40
 - Probe PASS: 40
-- Review queue items: 197
+- Review queue items: 196
 - Sports Source Engine candidates: 1
-- Pending review/engine candidates: 197
+- Pending review/engine candidates: 196
 - Private pending source packages: 2
 
 ## Coverage Gaps
@@ -33,7 +33,7 @@ Updated UTC: 2026-06-18T18:04:38.5403775Z
 - Fox Footy: missing (matches=0, probe_pass=0)
 - Kayo: missing (matches=0, probe_pass=0)
 - Fox Sports: weak (matches=12, probe_pass=0)
-- Racing: strong (matches=11, probe_pass=6)
+- Racing: strong (matches=10, probe_pass=5)
 - Cricket: adequate (matches=4, probe_pass=1)
 - NRL: missing (matches=0, probe_pass=0)
 - AU Free-To-Air Sports Adjacent: strong (matches=9, probe_pass=3)
