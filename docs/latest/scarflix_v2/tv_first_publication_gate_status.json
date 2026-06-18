@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_tv_first_publication_gate",
   "schema_version": "jasonos.tv_first.publication_gate.v1",
-  "updated_utc": "2026-06-17T23:55:59Z",
-  "status": "HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS",
-  "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
+  "updated_utc": "2026-06-17T23:58:33Z",
+  "status": "HELD_FULL_SEASON_INCOMPLETE",
+  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
@@ -31,7 +31,7 @@
   "public_redacted_manifest_path": "D:/PlexTools/public/latest/scarflix_v2/tv_first_publication_candidates.redacted.json",
   "upstream": {
     "whole_show_stage_status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
-    "retry_repair_status": "PASS_NO_FAILED_PRIVATE_STAGE_ROWS_TO_MOVE",
+    "retry_repair_status": "PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD",
     "retry_ledger_failure_count": 75
   },
   "safety": {
@@ -46,5 +46,5 @@
     "no_legacy_direct_resolver_called": true,
     "source_urls_not_written_to_public_status": true
   },
-  "next_safe_action": "Keep TV publication held until currently staged candidates validate cleanly."
+  "next_safe_action": "Do not publish partial TV seasons. Continue private source retry/monitoring until every pilot episode validates, then rerun this gate."
 }
