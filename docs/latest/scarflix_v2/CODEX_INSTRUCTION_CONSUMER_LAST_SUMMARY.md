@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-18T00:27:19Z
-Instruction: phase0_tv_section6_forensic_hold_write_status_summary_20260618_v2
+Updated UTC: 2026-06-18T00:44:05Z
+Instruction: phase0_maintain_tv_section6_hold_write_status_summary_20260618_v3
 
-TV Section 6 publication remains held pending forensic scanner review. Monitor active, 0 pending events, full-season gate enforced. No visible Plex mutation or WebDAV changes. Materialized QA in REVIEW state. Continue stabilization phase only.
+Maintaining TV Section 6 publication hold pending forensic review of Plex scanner/indexing latency. No visible aliases, no webdav_map mutation, no partial-season publication. Monitor remains active with HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Materialized QA remains REVIEW; controlled materialized path only.
