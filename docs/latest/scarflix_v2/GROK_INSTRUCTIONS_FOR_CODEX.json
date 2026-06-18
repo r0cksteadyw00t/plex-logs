@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_strategy_note_20260618_v76",
-      "created_at": "2026-06-18T20:57:22Z",
-      "expires_at": "2026-06-19T20:57:22Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_strategy_note_20260618_v77",
+      "created_at": "2026-06-18T21:13:52Z",
+      "expires_at": "2026-06-19T21:13:52Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "note": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Leading hypothesis is Plex scanner latency post-rollback. No visible aliases, no webdav_map mutation, full-season gate enforced. Recommend continued natural retry monitoring only; no alternate-source lane or publication until forensic review complete."
+            "summary": "TV Section 6 publication remains held. Maintain natural retry monitoring only; no alternate-source acquisition, no publication attempts, no WebDAV mutations until forensic review complete. Current materialized QA REVIEW status respected."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-18T20:57:22Z",
+  "updated_utc": "2026-06-18T21:13:52Z",
   "source": "grok_api"
 }
