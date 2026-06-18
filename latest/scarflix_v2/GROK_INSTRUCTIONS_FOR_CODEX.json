@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v10",
-      "created_at": "2026-06-18T02:36:05Z",
-      "expires_at": "2026-06-19T02:36:05Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v11",
+      "created_at": "2026-06-18T02:52:36Z",
+      "expires_at": "2026-06-19T02:52:36Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,14 +13,16 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 60
+        "max_retries": 2,
+        "backoff": "fixed"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Maintain TV Section 6 publication hold. 15-minute monitor continues with HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No WebDAV mutations, no Plex refresh, no legacy resolver expansion. Materialized QA remains REVIEW. Record forensic status only."
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v11",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -28,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-18T02:36:05Z",
+  "updated_utc": "2026-06-18T02:52:36Z",
   "source": "grok_api"
 }
