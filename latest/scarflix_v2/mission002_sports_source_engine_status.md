@@ -1,6 +1,6 @@
 # Mission 002 Sports Source Engine
 
-Updated UTC: 2026-06-18T18:46:06Z
+Updated UTC: 2026-06-18T20:46:56Z
 
 Status: PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW
 
@@ -36,8 +36,8 @@ Sample promoted baseline channels:
 - Private config present: True
 - External source count: 2
 - External candidates: 100
-- External technical-ready candidates: 100
-- External review candidates: 0
+- External technical-ready candidates: 96
+- External review candidates: 4
 - Current hold reason: none
 
 ## Outputs
