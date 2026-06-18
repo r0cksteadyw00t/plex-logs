@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-18T20:21:01Z",
-  "updated_utc": "2026-06-18T20:25:07Z",
-  "status": "HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE",
+  "started_utc": "2026-06-18T20:31:14Z",
+  "updated_utc": "2026-06-18T20:31:14Z",
+  "status": "PASS_FIRST_PILOT_FINALIZED_RELEASE_WATCH_ONLY",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
   "tracked_shows": [
@@ -393,42 +393,22 @@
   "new_episode_pending_event_count": 0,
   "new_episode_queue_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_new_episode_monitor/new_episode_events.json",
   "new_episode_recent_events": [],
-  "accepted_count": 27,
-  "full_season_complete": false,
+  "accepted_count": 28,
+  "full_season_complete": true,
   "publication_attempted": false,
-  "publication_status": "NOT_ATTEMPTED_FULL_SEASON_GATE_HELD",
+  "publication_status": "PASS_TV_FIRST_PUBLICATION_FINALIZED",
+  "final_publication": {
+    "finalized": true,
+    "status": "PASS_TV_FIRST_PUBLICATION_FINALIZED",
+    "expected_count": 28,
+    "verified_count": 28,
+    "plex_total": 28,
+    "updated_utc": "2026-06-18T08:44:47Z"
+  },
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
-  "actions": [
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 2719,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
-      "status": null,
-      "signal": "SIGTERM",
-      "elapsed_ms": 240507,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": false
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 2880,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    }
-  ],
+  "actions": [],
   "safety": {
     "no_mission002_mutation": true,
     "no_generic_publisher_called": true,
@@ -437,18 +417,6 @@
     "full_season_gate_required": true,
     "global_heavy_single_flight_required": true
   },
-  "heavy_work_lock": {
-    "acquired": true
-  },
-  "heavy_work_lock_acquired": true,
-  "whole_stage_status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
-  "validator_status": "UNKNOWN",
-  "gate_status": "HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS",
-  "full_season_missing_count": 28,
-  "full_season_missing_by_show": {
-    "Haunted Hotel": 10,
-    "MobLand": 10,
-    "The Institute": 8
-  },
-  "next_safe_action": "Monitor will keep retrying private staging/validation. Missing episodes remain excluded from visible publication until the full-season gate passes."
+  "heavy_work_lock_acquired": false,
+  "next_safe_action": "First TV pilot is finalized; monitor keeps release-watch telemetry only. Next-wave publication is owned by TVScopeNextWave workers."
 }
