@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-18T06:39:46Z",
+  "updated_utc": "2026-06-18T06:54:34Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "safety": {
     "read_only_url_validation": true,
@@ -225,34 +225,17 @@
       "probe": {
         "ok": true,
         "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED",
-        "reason": "Direct range probe returned HTTP 503; ephemeral loopback relay fallback validated streaming pass-through.",
+        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
+        "reason": "HEAD and range probes passed.",
         "url_host": "torrentio.strem.fun",
         "head_status": 200,
         "range_status": 206,
         "content_type": "application/force-download",
         "content_length": 434364521,
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-65535/434364521",
+        "content_range": "bytes 0-1/434364521",
         "source_url_redacted": true,
-        "relay_fallback": {
-          "attempted": true,
-          "ok": true,
-          "loopback_only": true,
-          "ephemeral_relay_only": true,
-          "no_media_artifacts_created": true,
-          "relay_shutdown_before_return": true,
-          "head_status": 200,
-          "range_status": 206,
-          "range_bytes": 65536,
-          "content_type": "application/force-download",
-          "content_length": 434364521,
-          "content_range": "bytes 0-65535/434364521",
-          "reason_code": "PASS_RELAY_FALLBACK_VALIDATED",
-          "reason": "Ephemeral loopback relay validated HEAD and bounded ranged GET without disk media."
-        },
-        "direct_range_status": 503,
-        "direct_range_reason_code": "PROVIDER_503_RETRYABLE"
+        "relay_fallback": null
       }
     },
     {
@@ -572,34 +555,17 @@
       "probe": {
         "ok": true,
         "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED",
-        "reason": "Direct range probe returned HTTP 503; ephemeral loopback relay fallback validated streaming pass-through.",
+        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
+        "reason": "HEAD and range probes passed.",
         "url_host": "torrentio.strem.fun",
         "head_status": 200,
         "range_status": 206,
         "content_type": "application/force-download",
         "content_length": 709112939,
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-65535/709112939",
+        "content_range": "bytes 0-1/709112939",
         "source_url_redacted": true,
-        "relay_fallback": {
-          "attempted": true,
-          "ok": true,
-          "loopback_only": true,
-          "ephemeral_relay_only": true,
-          "no_media_artifacts_created": true,
-          "relay_shutdown_before_return": true,
-          "head_status": 200,
-          "range_status": 206,
-          "range_bytes": 65536,
-          "content_type": "application/force-download",
-          "content_length": 709112939,
-          "content_range": "bytes 0-65535/709112939",
-          "reason_code": "PASS_RELAY_FALLBACK_VALIDATED",
-          "reason": "Ephemeral loopback relay validated HEAD and bounded ranged GET without disk media."
-        },
-        "direct_range_status": 503,
-        "direct_range_reason_code": "PROVIDER_503_RETRYABLE"
+        "relay_fallback": null
       }
     },
     {
