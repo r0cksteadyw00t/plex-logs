@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-18T01:06:21Z",
-  "updated_utc": "2026-06-18T01:08:19Z",
+  "started_utc": "2026-06-18T01:21:04Z",
+  "updated_utc": "2026-06-18T01:22:45Z",
   "status": "HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
@@ -393,7 +393,7 @@
   "new_episode_pending_event_count": 0,
   "new_episode_queue_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_new_episode_monitor/new_episode_events.json",
   "new_episode_recent_events": [],
-  "accepted_count": 3,
+  "accepted_count": 26,
   "full_season_complete": false,
   "publication_attempted": false,
   "publication_status": "NOT_ATTEMPTED_FULL_SEASON_GATE_HELD",
@@ -405,7 +405,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 5808,
+      "elapsed_ms": 2403,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -414,7 +414,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 108405,
+      "elapsed_ms": 98746,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -423,7 +423,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 3620,
+      "elapsed_ms": 301,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -437,13 +437,11 @@
     "full_season_gate_required": true
   },
   "whole_stage_status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
-  "validator_status": "UNKNOWN",
-  "gate_status": "HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS",
-  "full_season_missing_count": 25,
+  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "gate_status": "HELD_FULL_SEASON_INCOMPLETE",
+  "full_season_missing_count": 2,
   "full_season_missing_by_show": {
-    "Haunted Hotel": 7,
-    "MobLand": 10,
-    "The Institute": 8
+    "Haunted Hotel": 2
   },
   "next_safe_action": "Monitor will keep retrying private staging/validation. Missing episodes remain excluded from visible publication until the full-season gate passes."
 }
