@@ -1,6 +1,6 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T12:07:23Z
+Updated UTC: 2026-06-18T12:22:22Z
 Status: HELD_FULL_SEASON_INCOMPLETE
 Accepted private-stage episodes: 26
 Expected pilot episodes: 28
@@ -9,7 +9,7 @@ Full-season missing: 2
 Held/missing episodes: 2
 Validator: PASS_PRIVATE_STAGE_VALIDATED
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Sentinel: PASS/LOW
+Sentinel: REVIEW/MEDIUM
 Duplicate accepted private-stage rows: 1
 
 ## Accepted Counts
