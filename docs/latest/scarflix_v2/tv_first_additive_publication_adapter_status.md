@@ -1,10 +1,10 @@
 # TV-First Additive Publication Adapter
 
-Updated UTC: 2026-06-18T08:52:50Z
+Updated UTC: 2026-06-18T15:23:39Z
 Status: HELD_FIRST_TV_PUBLICATION_ALREADY_COMPLETE
 Gate status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
 Expected episodes: 28
-Accepted episodes: 28
+Accepted episodes: 47
 Mutated entries: 0
 Rollback performed: false
 
