@@ -1,18 +1,16 @@
 {
   "component": "jasonos_prime_tv_first_publication_gate",
   "schema_version": "jasonos.tv_first.publication_gate.v1",
-  "updated_utc": "2026-06-18T01:07:17Z",
-  "status": "HELD_FULL_SEASON_INCOMPLETE",
-  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "updated_utc": "2026-06-18T01:08:19Z",
+  "status": "HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS",
+  "validator_status": "UNKNOWN",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
-  "accepted_count": 26,
+  "accepted_count": 3,
   "accepted_by_show": {
-    "Haunted Hotel": 8,
-    "MobLand": 10,
-    "The Institute": 8
+    "Haunted Hotel": 3
   },
   "expected_count": 28,
   "expected_by_show": {
@@ -21,9 +19,11 @@
     "The Institute": 8
   },
   "full_season_complete": false,
-  "full_season_missing_count": 2,
+  "full_season_missing_count": 25,
   "full_season_missing_by_show": {
-    "Haunted Hotel": 2
+    "Haunted Hotel": 7,
+    "MobLand": 10,
+    "The Institute": 8
   },
   "held_episode_count": 2,
   "held_by_show": {
@@ -48,5 +48,5 @@
     "no_legacy_direct_resolver_called": true,
     "source_urls_not_written_to_public_status": true
   },
-  "next_safe_action": "Do not publish partial TV seasons. Continue private source retry/monitoring until every pilot episode validates, then rerun this gate."
+  "next_safe_action": "Keep TV publication held until currently staged candidates validate cleanly."
 }
