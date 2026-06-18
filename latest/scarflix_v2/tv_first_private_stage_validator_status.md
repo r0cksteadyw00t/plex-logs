@@ -1,10 +1,10 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-18T20:17:50Z
+Updated UTC: 2026-06-18T20:22:15Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 Checked: 21
-Passed: 20
-Review: 1
+Passed: 19
+Review: 2
 
 ## Results
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
@@ -14,16 +14,16 @@ Review: 1
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/force-download; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=503; type=text/html; reason=PROVIDER_503_RETRYABLE
-- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
