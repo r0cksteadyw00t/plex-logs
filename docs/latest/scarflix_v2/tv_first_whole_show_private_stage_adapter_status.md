@@ -1,16 +1,19 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-18T10:55:39Z
-Status: HELD_SENTINEL_ALERT_HIGH
-Shows requested: 0
-Episodes enumerated: 0
-Episodes already staged: 0
+Updated UTC: 2026-06-18T11:06:04Z
+Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Shows requested: 3
+Episodes enumerated: 28
+Episodes already staged: 27
 Episodes newly staged: 0
-Review: 0
+Review: 1
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: UNKNOWN
 
 ## Shows
+- Haunted Hotel: enumerated=10; staged=0; already=10; review=0; source=tmdb_season_details
+- MobLand: enumerated=10; staged=0; already=10; review=0; source=tmdb_season_details
+- The Institute: enumerated=8; staged=0; already=7; review=1; source=tmdb_season_details
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
@@ -27,4 +30,4 @@ Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 - source_urls_not_written_to_public_status: true
 - whole_show_intent: true
 
-Next safe action: Keep TV whole-show staging held until Sentinel clears.
+Next safe action: Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes.
