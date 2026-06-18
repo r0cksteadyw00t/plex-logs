@@ -1,9 +1,9 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-18T16:06:15Z
+Updated UTC: 2026-06-18T16:10:26Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 47
-Passed: 46
+Checked: 48
+Passed: 47
 Review: 1
 
 ## Results
@@ -17,6 +17,7 @@ Review: 1
 - Dark Matter: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Dark Matter: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Haunted Hotel: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=503; range=503; type=text/html; reason=PROVIDER_503_RETRYABLE
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Haunted Hotel: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
@@ -44,8 +45,8 @@ Review: 1
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Widow's Bay: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- Widow's Bay: PASS_PRIVATE_STAGE_VALIDATED; head=; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Widow's Bay: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Widow's Bay: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Widow's Bay: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Widow's Bay: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Widow's Bay: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
