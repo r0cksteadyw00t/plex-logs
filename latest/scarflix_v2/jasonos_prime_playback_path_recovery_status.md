@@ -1,7 +1,7 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-18T04:21:04Z  
-**Status:** REVIEW
+**Updated UTC:** 2026-06-18T04:21:32Z  
+**Status:** PASS
 
 ## Scope
 
@@ -15,7 +15,7 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 - rclone processes after: 1
 - S:\media after: ok=True, timed_out=False
 - S:\media\catalog after: ok=True, timed_out=False
-- Watch Now probe source: fresh
+- Watch Now probe source: cached_previous_status
 
 ## Watch Now
 
@@ -24,5 +24,4 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 ## Failures
 
-Watch Now probe failed: Gremlins
-Watch Now probe failed: Anna
+
