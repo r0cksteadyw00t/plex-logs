@@ -1,6 +1,6 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T11:06:11Z
+Updated UTC: 2026-06-18T11:07:24Z
 Status: HELD_FULL_SEASON_INCOMPLETE
 Accepted private-stage episodes: 27
 Expected pilot episodes: 28
