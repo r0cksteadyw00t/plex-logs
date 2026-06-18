@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-18T15:51:03Z",
+  "updated_utc": "2026-06-18T15:53:37Z",
   "manifest_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_protected_pilot/tv_first_protected_pilot_request.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
@@ -28,9 +28,9 @@
   },
   "show_count": 3,
   "episodes_enumerated": 28,
-  "already_staged_count": 28,
-  "staged_count": 0,
-  "review_count": 0,
+  "already_staged_count": 26,
+  "staged_count": 1,
+  "review_count": 1,
   "shows": [
     {
       "title": "Haunted Hotel",
@@ -38,9 +38,9 @@
       "seasons_expected": 1,
       "episodes_expected": 10,
       "episodes_enumerated": 10,
-      "already_staged_count": 10,
+      "already_staged_count": 9,
       "staged_count": 0,
-      "review_count": 0,
+      "review_count": 1,
       "episode_manifest_source": "tmdb_season_details",
       "error": ""
     },
@@ -50,8 +50,8 @@
       "seasons_expected": 1,
       "episodes_expected": 10,
       "episodes_enumerated": 10,
-      "already_staged_count": 10,
-      "staged_count": 0,
+      "already_staged_count": 9,
+      "staged_count": 1,
       "review_count": 0,
       "episode_manifest_source": "tmdb_season_details",
       "error": ""
@@ -82,7 +82,9 @@
       "tmdb_id": 255752,
       "season": 1,
       "episode": 2,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
+      "stream_count": 8,
+      "rejected_hash_count": 3
     },
     {
       "title": "Haunted Hotel",
@@ -180,7 +182,23 @@
       "tmdb_id": 247718,
       "season": 1,
       "episode": 6,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mobland_247718_s01e06_e44af479797c",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n720p",
+        "title_excerpt": "MobLand 2025 Season 1 Complete 720p WEB x264 [i_c] MobLand - S01E06 - Antwerp Blues.mkv 👤 5 💾 555.86 MB ⚙️ ThePirateBay",
+        "info_hash": "e44af479797c805f46a3594a1cbc4fddc8be18a3",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     },
     {
       "title": "MobLand",
@@ -267,6 +285,6 @@
       "status": "PASS_ALREADY_PRIVATE_STAGED"
     }
   ],
-  "status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
+  "status": "REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
