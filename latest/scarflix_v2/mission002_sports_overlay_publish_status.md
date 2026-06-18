@@ -1,20 +1,20 @@
 # Mission 002 Sports Overlay Publish
 
-Updated UTC: 2026-06-18T10:50:35Z
+Updated UTC: 2026-06-18T10:52:39Z
 
-Status: PASS_SPORTS_OVERLAY_PREFLIGHT_READY
+Status: PASS_SPORTS_OVERLAY_PUBLISHED
 
 ## Result
 
-- Active backend changed: False
-- Preflight only: True
+- Active backend changed: True
+- Preflight only: False
 - Promoted overlay rows reviewed: 5
 - Clean sports channels added: 3
 - Already covered by active base: 2
 - Held by publish filter: 0
-- Active M3U channels after publish: 37
+- Active M3U channels after publish: 40
 - Threadfin lineup before: 37
-- Threadfin lineup after: 37
+- Threadfin lineup after: 40
 
 ## Added Channels
 
