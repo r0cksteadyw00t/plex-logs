@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-18T10:40:10Z",
+  "updated_utc": "2026-06-18T10:45:04Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,11 +124,11 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 9,
-    "platform_child_progress_age_minutes": 7405,
-    "mirror_updated_age_minutes": 5,
-    "next_check_utc": "2026-06-18T10:30:17Z",
-    "next_check_age_minutes": 4,
+    "controller_updated_age_minutes": 14,
+    "platform_child_progress_age_minutes": 7415,
+    "mirror_updated_age_minutes": 15,
+    "next_check_utc": "2026-06-18T10:35:12Z",
+    "next_check_age_minutes": 9,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 7401,
+    "age_minutes": 7406,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-18T10:25:10Z",
+    "updated_utc": "2026-06-18T10:30:06Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-18T10:30:01Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-18T10:35:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -376,7 +376,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-18T10:25:14Z",
+      "utc": "2026-06-18T10:30:08Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -547,7 +547,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-18T10:40:15Z",
+    "updated_utc": "2026-06-18T10:45:08Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -556,7 +556,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-18T10:40:10Z",
+    "updated_utc": "2026-06-18T10:45:04Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -815,8 +815,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 885745,
-    "safe_pipeline_log_age_seconds": 942629,
+    "canary_status_age_seconds": 886032,
+    "safe_pipeline_log_age_seconds": 942917,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -833,7 +833,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=14552"
+        "detail": "pid=23888"
       }
     ],
     "blockers": []
