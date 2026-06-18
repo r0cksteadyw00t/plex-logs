@@ -1,13 +1,16 @@
 # TV-First Private Stage Retry Repair
 
-Updated UTC: 2026-06-18T00:09:30Z
-Status: PASS_NO_FAILED_PRIVATE_STAGE_ROWS_TO_MOVE
-Validator status: PASS_PRIVATE_STAGE_VALIDATED
-Failed rows found: 0
-Moved to retry-held: 0
-Ledger failures tracked: 75
+Updated UTC: 2026-06-18T00:18:37Z
+Status: PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD
+Validator status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Failed rows found: 3
+Moved to retry-held: 3
+Ledger failures tracked: 77
 
 ## Moved Rows
+- MobLand S01E04: PROVIDER_503_RETRYABLE
+- MobLand S01E05: PROVIDER_RANGE_TIMEOUT_OR_ERROR
+- MobLand S01E09: PROVIDER_RANGE_TIMEOUT_OR_ERROR
 
 ## Safety
 - no_broad_expansion_started: true
@@ -21,4 +24,4 @@ Ledger failures tracked: 75
 - reversible_move_only: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Continue to TV-specific publication gate only when validator is PASS.
+Next safe action: Rerun TV whole-show private stage adapter so failed episodes can select alternate sources.
