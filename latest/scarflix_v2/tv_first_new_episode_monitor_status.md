@@ -1,6 +1,6 @@
 # TV-First New Episode Monitor
 
-Updated UTC: 2026-06-18T13:51:03Z
+Updated UTC: 2026-06-18T14:06:04Z
 Status: HELD_HEAVY_WORK_LOCK_BUSY
 Tracked shows: 3
 Expected episodes: 28
