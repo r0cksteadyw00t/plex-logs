@@ -1,19 +1,19 @@
 {
     "component":  "jasonos_mission002_sports_overlay_publish",
     "schema_version":  "jasonos.iptv.sports_overlay_publish_status.redacted.v1",
-    "status":  "PASS_SPORTS_OVERLAY_PREFLIGHT_READY",
-    "updated_utc":  "2026-06-18T10:50:35Z",
-    "active_backend_changed":  false,
-    "preflight_only":  true,
+    "status":  "PASS_SPORTS_OVERLAY_PUBLISHED",
+    "updated_utc":  "2026-06-18T10:52:39Z",
+    "active_backend_changed":  true,
+    "preflight_only":  false,
     "pause_publication_preserved":  true,
     "publish_filter":  "clean AFL/sports delta only; existing Melbourne/Sydney FTA preserved; non-sports/regional duplicates held",
     "promoted_overlay_count":  5,
     "added_count":  3,
     "skipped_existing_count":  2,
     "held_count":  0,
-    "active_m3u_channel_count":  37,
+    "active_m3u_channel_count":  40,
     "threadfin_lineup_before":  37,
-    "threadfin_lineup_after":  37,
+    "threadfin_lineup_after":  40,
     "added_channels":  [
                            {
                                "channel_id":  "mjh-10-tensport3",
@@ -49,7 +49,10 @@
 
                  ],
     "actions":  [
-                    "preflight_only_no_backend_change"
+                    "backup_created",
+                    "active_m3u_merged",
+                    "active_xml_augmented",
+                    "threadfin_container_restarted"
                 ],
     "stream_urls_redacted":  true
 }
