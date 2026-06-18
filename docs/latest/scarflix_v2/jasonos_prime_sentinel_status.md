@@ -1,8 +1,8 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-18T14:10:03Z
-Status: PASS
-Alert level: LOW
+Updated UTC: 2026-06-18T14:20:03Z
+Status: REVIEW
+Alert level: MEDIUM
 Jason action required: false
 Codex action required: false
 
@@ -14,17 +14,17 @@ Codex action required: false
 - watchdog_risk: Medium
 - watchdog_age_minutes: 5
 - dashboard_status: PASS
-- dashboard_age_minutes: 5
+- dashboard_age_minutes: 0
 - mirror_status: REVIEW
-- mirror_age_minutes: 1
+- mirror_age_minutes: 11
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 15171
-- durable_platform_gate_age_minutes: 15171
+- checkpoint_age_minutes: 15181
+- durable_platform_gate_age_minutes: 15181
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- None.
+- JasonOS_Prime_PublicMirrorPublisher: mirror_stale (PASS) skipped_orchestrator_owned job=run_public_mirror_publisher
 
 ## Notes
 - None.
