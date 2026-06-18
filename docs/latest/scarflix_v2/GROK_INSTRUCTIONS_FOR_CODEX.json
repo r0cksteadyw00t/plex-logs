@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v11",
-      "created_at": "2026-06-18T02:52:36Z",
-      "expires_at": "2026-06-19T02:52:36Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v12",
+      "created_at": "2026-06-18T03:08:11Z",
+      "expires_at": "2026-06-19T03:08:11Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,16 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 2,
-        "backoff": "fixed"
+        "max_retries": 1,
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v11",
-            "auto_added_by_bridge": true
+            "summary": "Maintain TV Section 6 publication hold. Continue 15-minute monitor without visible Plex changes or any expansion. Record forensic status only. No legacy resolver activity permitted.",
+            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v12"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-18T02:52:36Z",
+  "updated_utc": "2026-06-18T03:08:11Z",
   "source": "grok_api"
 }
