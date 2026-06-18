@@ -2,14 +2,14 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-18T03:54:02Z",
-    "updated_utc":  "2026-06-18T03:54:15Z",
+    "started_utc":  "2026-06-18T04:19:07Z",
+    "updated_utc":  "2026-06-18T04:19:26Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
     "sentinel":  {
-                     "status":  "PASS",
-                     "alert_level":  "LOW"
+                     "status":  "ALERT",
+                     "alert_level":  "HIGH"
                  },
     "safety":  {
                    "pause_publication_active":  true,
@@ -109,10 +109,10 @@
                          "progress_percent":  90,
                          "summary":  "Public mirror and Grok report delivery are operational; this audit adds the missing go-live verdict layer.",
                          "evidence":  [
-                                          "PublicMirror=PASS GrokDelivery=PASS_DELIVERED_TO_GROK_API Mode=REAL_API"
+                                          "PublicMirror=REVIEW_RECOVERABLE GrokDelivery=PASS_DELIVERED_TO_GROK_API Mode=REAL_API"
                                       ],
                          "blockers":  [
-
+                                          "Public mirror is not PASS: REVIEW_RECOVERABLE."
                                       ],
                          "next_safe_action":  "Publish this readiness audit and keep top-of-file handoffs current after each material change.",
                          "requires_quiet_window":  false,
