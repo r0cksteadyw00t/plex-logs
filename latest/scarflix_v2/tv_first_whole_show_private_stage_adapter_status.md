@@ -1,17 +1,19 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-18T20:15:41Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
-Shows requested: 1
-Episodes enumerated: 21
-Episodes already staged: 19
-Episodes newly staged: 2
+Updated UTC: 2026-06-18T20:21:04Z
+Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Shows requested: 3
+Episodes enumerated: 28
+Episodes already staged: 28
+Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: UNKNOWN
 
 ## Shows
-- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: enumerated=21; staged=2; already=19; review=0; source=request_episode_targets
+- Haunted Hotel: enumerated=10; staged=0; already=10; review=0; source=tmdb_season_details
+- MobLand: enumerated=10; staged=0; already=10; review=0; source=tmdb_season_details
+- The Institute: enumerated=8; staged=0; already=8; review=0; source=tmdb_season_details
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
