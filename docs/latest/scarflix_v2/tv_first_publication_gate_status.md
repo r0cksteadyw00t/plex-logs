@@ -1,13 +1,13 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-17T23:55:59Z
-Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
+Updated UTC: 2026-06-17T23:58:33Z
+Status: HELD_FULL_SEASON_INCOMPLETE
 Accepted private-stage episodes: 26
 Expected pilot episodes: 28
 Full-season complete: false
 Full-season missing: 2
 Held/missing episodes: 0
-Validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Validator: PASS_PRIVATE_STAGE_VALIDATED
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Sentinel: PASS/LOW
 
@@ -33,4 +33,4 @@ Sentinel: PASS/LOW
 - no_webdav_map_write_performed: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Keep TV publication held until currently staged candidates validate cleanly.
+Next safe action: Do not publish partial TV seasons. Continue private source retry/monitoring until every pilot episode validates, then rerun this gate.
