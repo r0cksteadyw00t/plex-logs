@@ -1,27 +1,27 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T20:08:45Z
-Status: PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD
-Accepted private-stage episodes: 47
+Updated UTC: 2026-06-18T20:25:07Z
+Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
+Accepted private-stage episodes: 27
 Expected pilot episodes: 28
-Full-season complete: true
-Full-season missing: 0
+Full-season complete: false
+Full-season missing: 28
 Held/missing episodes: 0
-Validator: PASS_PRIVATE_STAGE_VALIDATED
+Validator: UNKNOWN
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Sentinel: PASS/LOW
-Duplicate accepted private-stage rows: 1
+Duplicate accepted private-stage rows: 0
 
 ## Accepted Counts
-- Dark Matter: 9
-- Haunted Hotel: 10
-- MobLand: 10
-- The Institute: 8
-- Widow's Bay: 10
+- AMERICA'S SWEETHEARTS: Dallas Cowboys Cheerleaders: 20
+- Dark Matter: 7
 
 ## Held Counts
 
 ## Full-Season Missing Counts
+- Haunted Hotel: 10
+- MobLand: 10
+- The Institute: 8
 
 ## Safety
 - gate_only: true
@@ -36,4 +36,4 @@ Duplicate accepted private-stage rows: 1
 - source_urls_not_written_to_public_status: true
 - unique_episode_gate: true
 
-Next safe action: Run the full-season-only additive TV publication adapter with rollback and post-publication Plex/WebDAV verification.
+Next safe action: Keep TV publication held until currently staged candidates validate cleanly.
