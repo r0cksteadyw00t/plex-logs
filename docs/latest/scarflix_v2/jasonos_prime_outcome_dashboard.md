@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-18T10:43:52.382Z
+Updated UTC: 2026-06-18T10:48:54.079Z
 Status: PASS
 Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 Jason action required: false
@@ -21,7 +21,7 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-08T01:18:52Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=117/117; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 18% | next: resume controlled materialized/WebDAV publishing | Medium |
 
 Recent Achievements:
-- 2026-06-18T10:30:08Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-18T10:35:51Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T07:08:43.775Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
 - 2026-06-08T01:18:52Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=44064; child_pid=
 - 2026-06-08T01:18:52Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
@@ -30,9 +30,9 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 14 min ago
-- Platform child progress: 7415 min ago
-- Mirror updated: 15 min ago
+- Controller updated: 13 min ago
+- Platform child progress: 7420 min ago
+- Mirror updated: 10 min ago
 - Platform runner running: false
 - Platform child active: true
 
