@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v68",
-      "created_at": "2026-06-18T18:49:03Z",
-      "expires_at": "2026-06-19T18:49:03Z",
+      "instruction_id": "phase0_stabilize_tv_hold_status_20260618_v69",
+      "created_at": "2026-06-18T19:05:33Z",
+      "expires_at": "2026-06-19T19:05:33Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,21 +14,17 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff": "none"
       },
       "actions": [
         {
-          "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Maintaining TV Section 6 publication hold per forensic review. Materialized QA remains REVIEW. No legacy resolver expansion, no publishing, no source movement. Controlled materialized pipeline paused pending local safety clearance.",
-            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v68"
-          }
+          "action_type": "write_status_summary"
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-18T18:49:03Z",
+  "updated_utc": "2026-06-18T19:05:33Z",
   "source": "grok_api"
 }
