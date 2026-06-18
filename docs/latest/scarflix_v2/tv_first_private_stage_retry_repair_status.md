@@ -1,8 +1,8 @@
 # TV-First Private Stage Retry Repair
 
-Updated UTC: 2026-06-18T06:34:42Z
+Updated UTC: 2026-06-18T06:38:05Z
 Status: PASS_NO_FAILED_PRIVATE_STAGE_ROWS_TO_MOVE
-Validator status: PASS_PRIVATE_STAGE_VALIDATED
+Validator status: MISSING
 Failed rows found: 0
 Moved to retry-held: 0
 Ledger failures tracked: 83
