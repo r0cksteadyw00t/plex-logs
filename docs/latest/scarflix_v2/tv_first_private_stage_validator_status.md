@@ -1,6 +1,6 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-18T10:22:45Z
+Updated UTC: 2026-06-18T10:24:28Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
 Checked: 26
 Passed: 26
@@ -31,7 +31,7 @@ Review: 0
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=503; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED
 - The Institute: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
