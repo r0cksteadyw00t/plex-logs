@@ -1,10 +1,11 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-18T04:53:28Z",
+  "updated_utc": "2026-06-18T05:11:36Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "safety": {
     "read_only_url_validation": true,
+    "stable_materialized_artifact_validation_enabled": true,
     "no_publication_started": true,
     "no_broad_expansion_started": true,
     "no_plex_refresh_performed": true,
@@ -14,9 +15,9 @@
     "no_generic_pending_write": true,
     "source_urls_not_written_to_public_status": true
   },
-  "checked": 24,
-  "passed": 23,
-  "review": 1,
+  "checked": 29,
+  "passed": 27,
+  "review": 2,
   "results": [
     {
       "stage_id": "tv_haunted_hotel_255752_s01e01_681ddf13b746",
@@ -36,6 +37,26 @@
         "content_length": 347307859,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/347307859",
+        "source_url_redacted": true
+      }
+    },
+    {
+      "stage_id": "tv_haunted_hotel_255752_s01e02_ad579d8d7244",
+      "title": "Haunted Hotel",
+      "tmdb_id": 255752,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_haunted_hotel_255752_s01e02_ad579d8d7244\\Haunted Hotel (2025) - S01E02.strm",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STABLE_MATERIALIZED_ARTIFACT_VALIDATED",
+        "reason": "Stable materialized artifact exists, has content proof, and passed local byte validation.",
+        "validation_mode": "stable_materialized_artifact",
+        "artifact_path": "D:\\PlexMedia\\stable_artifacts\\tv\\255752\\Season 01\\tv_haunted_hotel_255752_s01e02_ad579d8d7244\\media.mkv",
+        "artifact_root": "D:/PlexMedia/stable_artifacts/tv",
+        "content_proof_passed": true,
+        "size_bytes": 367435958,
+        "byte_probe_count": 3,
         "source_url_redacted": true
       }
     },
@@ -124,6 +145,26 @@
       }
     },
     {
+      "stage_id": "tv_haunted_hotel_255752_s01e07_ad579d8d7244",
+      "title": "Haunted Hotel",
+      "tmdb_id": 255752,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_haunted_hotel_255752_s01e07_ad579d8d7244\\Haunted Hotel (2025) - S01E07.strm",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STABLE_MATERIALIZED_ARTIFACT_VALIDATED",
+        "reason": "Stable materialized artifact exists, has content proof, and passed local byte validation.",
+        "validation_mode": "stable_materialized_artifact",
+        "artifact_path": "D:\\PlexMedia\\stable_artifacts\\tv\\255752\\Season 01\\tv_haunted_hotel_255752_s01e07_ad579d8d7244\\media.mkv",
+        "artifact_root": "D:/PlexMedia/stable_artifacts/tv",
+        "content_proof_passed": true,
+        "size_bytes": 223462722,
+        "byte_probe_count": 3,
+        "source_url_redacted": true
+      }
+    },
+    {
       "stage_id": "tv_haunted_hotel_255752_s01e08_ad579d8d7244",
       "title": "Haunted Hotel",
       "tmdb_id": 255752,
@@ -166,6 +207,27 @@
       }
     },
     {
+      "stage_id": "tv_haunted_hotel_255752_s01e10_ad579d8d7244",
+      "title": "Haunted Hotel",
+      "tmdb_id": 255752,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_haunted_hotel_255752_s01e10_ad579d8d7244\\Haunted Hotel (2025) - S01E10.strm",
+      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "Range probe returned HTTP 503",
+        "url_host": "torrentio.strem.fun",
+        "head_status": 503,
+        "range_status": 503,
+        "content_type": "text/html",
+        "content_length": 2251,
+        "accept_ranges": "none",
+        "content_range": "",
+        "source_url_redacted": true
+      }
+    },
+    {
       "stage_id": "tv_mobland_247718_s01e01_1e07306d36a6",
       "title": "MobLand",
       "tmdb_id": 247718,
@@ -183,6 +245,26 @@
         "content_length": 587526877,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/587526877",
+        "source_url_redacted": true
+      }
+    },
+    {
+      "stage_id": "tv_mobland_247718_s01e02_789d36ae78d5",
+      "title": "MobLand",
+      "tmdb_id": 247718,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_mobland_247718_s01e02_789d36ae78d5\\MobLand (2025) - S01E02.strm",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STABLE_MATERIALIZED_ARTIFACT_VALIDATED",
+        "reason": "Stable materialized artifact exists, has content proof, and passed local byte validation.",
+        "validation_mode": "stable_materialized_artifact",
+        "artifact_path": "D:\\PlexMedia\\stable_artifacts\\tv\\247718\\Season 01\\tv_mobland_247718_s01e02_789d36ae78d5\\media.mkv",
+        "artifact_root": "D:/PlexMedia/stable_artifacts/tv",
+        "content_proof_passed": true,
+        "size_bytes": 1192600813,
+        "byte_probe_count": 3,
         "source_url_redacted": true
       }
     },
@@ -288,6 +370,26 @@
         "content_length": 397249936,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/397249936",
+        "source_url_redacted": true
+      }
+    },
+    {
+      "stage_id": "tv_mobland_247718_s01e08_b69de58f7532",
+      "title": "MobLand",
+      "tmdb_id": 247718,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_mobland_247718_s01e08_b69de58f7532\\MobLand (2025) - S01E08.strm",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_STABLE_MATERIALIZED_ARTIFACT_VALIDATED",
+        "reason": "Stable materialized artifact exists, has content proof, and passed local byte validation.",
+        "validation_mode": "stable_materialized_artifact",
+        "artifact_path": "D:\\PlexMedia\\stable_artifacts\\tv\\247718\\Season 01\\tv_mobland_247718_s01e08_b69de58f7532\\media.mp4",
+        "artifact_root": "D:/PlexMedia/stable_artifacts/tv",
+        "content_proof_passed": true,
+        "size_bytes": 408354168,
+        "byte_probe_count": 3,
         "source_url_redacted": true
       }
     },
