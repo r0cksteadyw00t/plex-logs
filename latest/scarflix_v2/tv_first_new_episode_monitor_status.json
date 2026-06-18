@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-18T07:06:02Z",
-  "updated_utc": "2026-06-18T07:07:34Z",
-  "status": "REVIEW_MONITOR_PUBLICATION_NOT_COMPLETE",
+  "started_utc": "2026-06-18T07:21:05Z",
+  "updated_utc": "2026-06-18T07:21:05Z",
+  "status": "HELD_SENTINEL_ALERT_HIGH",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
   "tracked_shows": [
@@ -393,51 +393,14 @@
   "new_episode_pending_event_count": 0,
   "new_episode_queue_path": "D:/PlexTools/state/jasonos_prime/catalogue_expansion/tv_first_new_episode_monitor/new_episode_events.json",
   "new_episode_recent_events": [],
-  "accepted_count": 28,
-  "full_season_complete": true,
-  "publication_attempted": true,
-  "publication_status": "HELD_HEAVY_WORK_IN_PROGRESS",
-  "sentinel_status": "PASS",
-  "sentinel_alert_level": "LOW",
+  "accepted_count": 0,
+  "full_season_complete": false,
+  "publication_attempted": false,
+  "publication_status": "",
+  "sentinel_status": "ALERT",
+  "sentinel_alert_level": "HIGH",
   "pause_publication_present": true,
-  "actions": [
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 3436,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 86456,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 184,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstAdditivePublicationAdapter.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 1619,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    }
-  ],
+  "actions": [],
   "safety": {
     "no_mission002_mutation": true,
     "no_generic_publisher_called": true,
@@ -445,18 +408,5 @@
     "publication_owned_by_additive_adapter": true,
     "full_season_gate_required": true
   },
-  "whole_stage_status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
-  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
-  "gate_status": "PASS_TV_PUBLICATION_GATE_FULL_SEASON_ACCEPTED_HELD",
-  "full_season_missing_count": 0,
-  "full_season_missing_by_show": {},
-  "publication_retry_hold": {
-    "hold": false,
-    "previous_status": "RUNNING",
-    "previous_error": "",
-    "previous_updated_utc": "2026-06-18T07:07:19Z",
-    "previous_age_minutes": 0,
-    "cooldown_minutes": 360
-  },
-  "next_safe_action": "Inspect TV additive publication adapter status before retrying."
+  "next_safe_action": "Retry TV monitor after Sentinel clears."
 }
