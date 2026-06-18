@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-18T06:26:34Z",
+  "updated_utc": "2026-06-18T06:37:41Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "safety": {
     "read_only_url_validation": true,
@@ -14,8 +14,8 @@
     "no_generic_pending_write": true,
     "source_urls_not_written_to_public_status": true
   },
-  "checked": 29,
-  "passed": 28,
+  "checked": 24,
+  "passed": 23,
   "review": 1,
   "results": [
     {
@@ -36,7 +36,8 @@
         "content_length": 347307859,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/347307859",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -57,7 +58,8 @@
         "content_length": 367435958,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/367435958",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -78,7 +80,8 @@
         "content_length": 395739413,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/395739413",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -99,7 +102,8 @@
         "content_length": 359109147,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/359109147",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -120,7 +124,8 @@
         "content_length": 340482025,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/340482025",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -141,7 +146,8 @@
         "content_length": 385432254,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/385432254",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -162,7 +168,8 @@
         "content_length": 223462722,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/223462722",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -183,7 +190,8 @@
         "content_length": 201077955,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/201077955",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -204,7 +212,8 @@
         "content_length": 310740160,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/310740160",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -212,20 +221,38 @@
       "title": "Haunted Hotel",
       "tmdb_id": 255752,
       "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_haunted_hotel_255752_s01e10_ad579d8d7244\\Haunted Hotel (2025) - S01E10.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
+      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
       "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "Range probe returned HTTP 503",
         "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 434364521,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/434364521",
-        "source_url_redacted": true
+        "head_status": 503,
+        "range_status": 503,
+        "content_type": "text/html",
+        "content_length": 2251,
+        "accept_ranges": "none",
+        "content_range": "",
+        "source_url_redacted": true,
+        "relay_fallback": {
+          "attempted": true,
+          "ok": false,
+          "loopback_only": true,
+          "ephemeral_relay_only": true,
+          "no_media_artifacts_created": true,
+          "relay_shutdown_before_return": true,
+          "head_status": 200,
+          "range_status": 503,
+          "range_bytes": 2251,
+          "content_type": "application/force-download",
+          "content_length": 434364521,
+          "content_range": "",
+          "reason_code": "RELAY_FALLBACK_RANGE_NOT_206",
+          "reason": "Relay fallback range did not return usable byte content."
+        },
+        "direct_range_status": 503,
+        "direct_range_reason_code": "PROVIDER_503_RETRYABLE"
       }
     },
     {
@@ -246,7 +273,8 @@
         "content_length": 587526877,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/587526877",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -267,7 +295,8 @@
         "content_length": 1192600813,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/1192600813",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -288,7 +317,8 @@
         "content_length": 637585724,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/637585724",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -309,7 +339,8 @@
         "content_length": 385915079,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/385915079",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -317,20 +348,21 @@
       "title": "MobLand",
       "tmdb_id": 247718,
       "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_mobland_247718_s01e05_add38b5bc61a\\MobLand (2025) - S01E05.strm",
-      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
       "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_5XX_RETRYABLE",
-        "reason": "Range probe returned HTTP 500",
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
+        "reason": "HEAD and range probes passed.",
         "url_host": "torrentio.strem.fun",
         "head_status": 200,
-        "range_status": 500,
+        "range_status": 206,
         "content_type": "application/force-download",
         "content_length": 1263419342,
         "accept_ranges": "bytes",
-        "content_range": "",
-        "source_url_redacted": true
+        "content_range": "bytes 0-1/1263419342",
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -351,7 +383,8 @@
         "content_length": 493194244,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/493194244",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -372,7 +405,8 @@
         "content_length": 397249936,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/397249936",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -393,7 +427,8 @@
         "content_length": 408354168,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/408354168",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -414,7 +449,8 @@
         "content_length": 443683851,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/443683851",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -435,7 +471,8 @@
         "content_length": 511875627,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/511875627",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -456,7 +493,8 @@
         "content_length": 752484125,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/752484125",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -477,7 +515,8 @@
         "content_length": 547869112,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/547869112",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -498,7 +537,8 @@
         "content_length": 615224212,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/615224212",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     },
     {
@@ -519,115 +559,9 @@
         "content_length": 569615525,
         "accept_ranges": "bytes",
         "content_range": "bytes 0-1/569615525",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e04_771e330cc2af",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e04_771e330cc2af\\The Institute (2025) - S01E04.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 709112939,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/709112939",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e05_771e330cc2af",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e05_771e330cc2af\\The Institute (2025) - S01E05.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 713720731,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/713720731",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e06_66e7acbb58d4",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e06_66e7acbb58d4\\The Institute (2025) - S01E06.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 601334529,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/601334529",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e07_66e7acbb58d4",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e07_66e7acbb58d4\\The Institute (2025) - S01E07.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 542375289,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/542375289",
-        "source_url_redacted": true
-      }
-    },
-    {
-      "stage_id": "tv_the_institute_253372_s01e08_771e330cc2af",
-      "title": "The Institute",
-      "tmdb_id": 253372,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_institute_253372_s01e08_771e330cc2af\\The Institute (2025) - S01E08.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 757715957,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/757715957",
-        "source_url_redacted": true
+        "source_url_redacted": true,
+        "relay_fallback": null
       }
     }
-  ],
-  "status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "next_safe_action": "Keep failed private-stage candidates held and refresh source selection only for failed rows."
+  ]
 }
