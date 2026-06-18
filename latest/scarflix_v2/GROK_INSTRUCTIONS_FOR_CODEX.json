@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_hold_write_status_summary_20260618_v2",
-      "created_at": "2026-06-18T00:27:14Z",
-      "expires_at": "2026-06-19T00:27:14Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v3",
+      "created_at": "2026-06-18T00:44:00Z",
+      "expires_at": "2026-06-19T00:44:00Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -20,8 +20,8 @@
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "TV Section 6 publication remains held pending forensic scanner review. Monitor active, 0 pending events, full-season gate enforced. No visible Plex mutation or WebDAV changes. Materialized QA in REVIEW state. Continue stabilization phase only.",
-            "source_instruction_id": "phase0_tv_section6_forensic_hold_write_status_summary_20260618_v2"
+            "summary": "Maintaining TV Section 6 publication hold pending forensic review of Plex scanner/indexing latency. No visible aliases, no webdav_map mutation, no partial-season publication. Monitor remains active with HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Materialized QA remains REVIEW; controlled materialized path only.",
+            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260618_v3"
           }
         }
       ],
@@ -29,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-18T00:27:14Z",
+  "updated_utc": "2026-06-18T00:44:00Z",
   "source": "grok_api"
 }
