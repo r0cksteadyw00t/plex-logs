@@ -1,13 +1,24 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_retry_repair",
   "schema_version": "jasonos.tv_first.private_stage_retry_repair.v1",
-  "updated_utc": "2026-06-18T02:34:22Z",
-  "validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
-  "retry_hold_root": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260618T023422Z",
-  "failed_rows_found": 0,
-  "moved_count": 0,
+  "updated_utc": "2026-06-18T02:39:15Z",
+  "validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
+  "retry_hold_root": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260618T023915Z",
+  "failed_rows_found": 1,
+  "moved_count": 1,
   "ledger_failure_count": 81,
-  "moved": [],
+  "moved": [
+    {
+      "title": "Haunted Hotel",
+      "tmdb_id": 255752,
+      "season": 1,
+      "episode": 4,
+      "stage_id": "tv_haunted_hotel_255752_s01e04_ad579d8d7244",
+      "info_hash": "ad579d8d72440016712e6bca7d78c3cd8e4728fe",
+      "reason_code": "PROVIDER_503_RETRYABLE",
+      "moved_to": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\retry_held\\20260618T023915Z\\tv_haunted_hotel_255752_s01e04_ad579d8d7244"
+    }
+  ],
   "safety": {
     "reversible_move_only": true,
     "private_stage_only": true,
@@ -20,6 +31,6 @@
     "no_path_rewrite_performed": true,
     "source_urls_not_written_to_public_status": true
   },
-  "status": "PASS_NO_FAILED_PRIVATE_STAGE_ROWS_TO_MOVE",
-  "next_safe_action": "Continue to TV-specific publication gate only when validator is PASS."
+  "status": "PASS_FAILED_PRIVATE_STAGE_ROWS_RETRY_HELD",
+  "next_safe_action": "Rerun TV whole-show private stage adapter so failed episodes can select alternate sources."
 }
