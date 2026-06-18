@@ -1,11 +1,11 @@
 # TV-First Publication Gate
 
-Updated UTC: 2026-06-18T18:40:33Z
+Updated UTC: 2026-06-18T18:41:42Z
 Status: HELD_PRIVATE_STAGE_VALIDATOR_NOT_PASS
-Accepted private-stage episodes: 45
+Accepted private-stage episodes: 44
 Expected pilot episodes: 28
 Full-season complete: false
-Full-season missing: 2
+Full-season missing: 3
 Held/missing episodes: 2
 Validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
@@ -14,7 +14,7 @@ Duplicate accepted private-stage rows: 1
 
 ## Accepted Counts
 - Dark Matter: 9
-- Haunted Hotel: 8
+- Haunted Hotel: 7
 - MobLand: 10
 - The Institute: 8
 - Widow's Bay: 10
@@ -23,7 +23,7 @@ Duplicate accepted private-stage rows: 1
 - Haunted Hotel: 2
 
 ## Full-Season Missing Counts
-- Haunted Hotel: 2
+- Haunted Hotel: 3
 
 ## Safety
 - gate_only: true
