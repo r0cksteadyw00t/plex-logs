@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-18T17:25:33Z",
+  "updated_utc": "2026-06-18T17:40:55Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
@@ -19,8 +19,8 @@
     "no_generic_pending_write": true,
     "source_urls_not_written_to_public_status": true
   },
-  "checked": 48,
-  "passed": 48,
+  "checked": 45,
+  "passed": 45,
   "review": 0,
   "results": [
     {
@@ -275,45 +275,6 @@
           "content_type": "application/force-download",
           "content_length": 367435958,
           "content_range": "bytes 0-65535/367435958",
-          "reason_code": "PASS_RELAY_FALLBACK_VALIDATED",
-          "reason": "Ephemeral loopback relay validated HEAD and bounded ranged GET without disk media."
-        },
-        "direct_range_status": 503,
-        "direct_range_reason_code": "PROVIDER_503_RETRYABLE"
-      }
-    },
-    {
-      "stage_id": "tv_haunted_hotel_255752_s01e03_ad579d8d7244",
-      "title": "Haunted Hotel",
-      "tmdb_id": 255752,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_haunted_hotel_255752_s01e03_ad579d8d7244\\Haunted Hotel (2025) - S01E03.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED",
-        "reason": "Direct range probe returned HTTP 503; ephemeral loopback relay fallback validated streaming pass-through.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 395739413,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-65535/395739413",
-        "source_url_redacted": true,
-        "relay_fallback": {
-          "attempted": true,
-          "ok": true,
-          "loopback_only": true,
-          "ephemeral_relay_only": true,
-          "no_media_artifacts_created": true,
-          "relay_shutdown_before_return": true,
-          "head_status": 200,
-          "range_status": 206,
-          "range_bytes": 65536,
-          "content_type": "application/force-download",
-          "content_length": 395739413,
-          "content_range": "bytes 0-65535/395739413",
           "reason_code": "PASS_RELAY_FALLBACK_VALIDATED",
           "reason": "Ephemeral loopback relay validated HEAD and bounded ranged GET without disk media."
         },
@@ -1068,52 +1029,6 @@
         "source_url_redacted": true,
         "relay_fallback": null
       }
-    },
-    {
-      "stage_id": "tv_widow_s_bay_270476_s01e09_dc5aef94383c",
-      "title": "Widow's Bay",
-      "tmdb_id": 270476,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_widow_s_bay_270476_s01e09_dc5aef94383c\\Widow's Bay (2026) - S01E09.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 343125135,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/343125135",
-        "source_url_redacted": true,
-        "relay_fallback": null
-      }
-    },
-    {
-      "stage_id": "tv_widow_s_bay_270476_s01e10_e60d9ad18de2",
-      "title": "Widow's Bay",
-      "tmdb_id": 270476,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_widow_s_bay_270476_s01e10_e60d9ad18de2\\Widow's Bay (2026) - S01E10.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
-      "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "HEAD and range probes passed.",
-        "url_host": "torrentio.strem.fun",
-        "head_status": 200,
-        "range_status": 206,
-        "content_type": "application/force-download",
-        "content_length": 4033972469,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/4033972469",
-        "source_url_redacted": true,
-        "relay_fallback": null
-      }
     }
-  ],
-  "status": "PASS_PRIVATE_STAGE_VALIDATED",
-  "next_safe_action": "Proceed to a TV-specific publication gate design for these validated private-stage candidates only."
+  ]
 }
