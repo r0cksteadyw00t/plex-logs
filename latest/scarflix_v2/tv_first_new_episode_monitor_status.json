@@ -1,9 +1,9 @@
 {
   "component": "jasonos_prime_tv_first_new_episode_monitor",
   "schema_version": "jasonos.tv_first.new_episode_monitor.v1",
-  "started_utc": "2026-06-18T06:36:05Z",
-  "updated_utc": "2026-06-18T06:39:48Z",
-  "status": "HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN",
+  "started_utc": "2026-06-18T06:51:02Z",
+  "updated_utc": "2026-06-18T06:52:41Z",
+  "status": "REVIEW_MONITOR_PUBLICATION_NOT_COMPLETE",
   "monitor_interval_recommendation_minutes": 15,
   "tracked_show_count": 3,
   "tracked_shows": [
@@ -395,17 +395,17 @@
   "new_episode_recent_events": [],
   "accepted_count": 28,
   "full_season_complete": true,
-  "publication_attempted": false,
-  "publication_status": "HELD_RECENT_PUBLICATION_FAILURE_COOLDOWN",
-  "sentinel_status": "PASS",
-  "sentinel_alert_level": "LOW",
+  "publication_attempted": true,
+  "publication_status": "HELD_HEAVY_WORK_IN_PROGRESS",
+  "sentinel_status": "REVIEW",
+  "sentinel_alert_level": "MEDIUM",
   "pause_publication_present": true,
   "actions": [
     {
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 9824,
+      "elapsed_ms": 2705,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -414,34 +414,7 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 108329,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageRetryRepair.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 2418,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstWholeShowPrivateStageAdapter.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 4177,
-      "stdout_tail": "",
-      "stderr_tail": "",
-      "ok": true
-    },
-    {
-      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPrivateStageValidator.js",
-      "status": 0,
-      "signal": "",
-      "elapsed_ms": 96690,
+      "elapsed_ms": 91987,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -450,7 +423,16 @@
       "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstPublicationGate.js",
       "status": 0,
       "signal": "",
-      "elapsed_ms": 1398,
+      "elapsed_ms": 343,
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "script": "D:/PlexTools/Foundry/workers/JasonOS_Prime_TVFirstAdditivePublicationAdapter.js",
+      "status": 0,
+      "signal": "",
+      "elapsed_ms": 3355,
       "stdout_tail": "",
       "stderr_tail": "",
       "ok": true
@@ -469,12 +451,12 @@
   "full_season_missing_count": 0,
   "full_season_missing_by_show": {},
   "publication_retry_hold": {
-    "hold": true,
-    "previous_status": "PASS_TV_FIRST_ADDITIVE_PUBLICATION_CANARY_ROLLBACK_COMPLETE",
+    "hold": false,
+    "previous_status": "RUNNING",
     "previous_error": "",
-    "previous_updated_utc": "2026-06-18T06:07:51Z",
-    "previous_age_minutes": 32,
+    "previous_updated_utc": "2026-06-18T06:45:19Z",
+    "previous_age_minutes": 7,
     "cooldown_minutes": 360
   },
-  "next_safe_action": "Keep new-episode monitor active; prepare Grok/Plex scanner forensic review before another visible TV publication attempt."
+  "next_safe_action": "Inspect TV additive publication adapter status before retrying."
 }
