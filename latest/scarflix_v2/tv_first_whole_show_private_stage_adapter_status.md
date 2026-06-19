@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T03:34:32Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-19T03:42:37Z
+Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
 Episodes enumerated: 1
 Episodes already staged: 0
-Episodes newly staged: 1
-Review: 0
+Episodes newly staged: 0
+Review: 1
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- My Reno Rules: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
+- House of Villains: enumerated=1; staged=0; already=0; review=1; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
