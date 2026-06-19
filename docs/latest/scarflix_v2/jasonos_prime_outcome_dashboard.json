@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-19T07:10:04Z",
+  "updated_utc": "2026-06-19T07:20:03Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 8642,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-19T07:10:28Z",
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 8652,
+    "mirror_updated_age_minutes": 12,
+    "next_check_utc": "2026-06-19T07:20:53Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 8641,
+    "age_minutes": 8651,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-19T07:05:20Z",
+    "updated_utc": "2026-06-19T07:15:37Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-19T07:10:01Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-19T07:20:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-19T07:00:16Z",
-    "updated_utc": "2026-06-19T07:00:33Z",
-    "ended_utc": "2026-06-19T07:00:33Z",
+    "started_utc": "2026-06-19T07:10:23Z",
+    "updated_utc": "2026-06-19T07:10:37Z",
+    "ended_utc": "2026-06-19T07:10:37Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -214,12 +214,12 @@
     "retry_queue_items": [],
     "sample_passed": [
       {
-        "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
+        "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
+        "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
@@ -229,27 +229,22 @@
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Perfect Days (2023)/Perfect Days (2023) - ScarFLIX_part-fcf833934c5f2669.strm",
-        "reason_code": "PASS_DIRECT_URL_ADMITTED",
-        "is_local_live_proxy": false
-      },
-      {
         "relative_path": "Over Your Dead Body (2026)/Over Your Dead Body (2026) - ScarFLIX_part-7d05efc74f835f9b.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Project Hail Mary (2026)/Project Hail Mary (2026) - ScarFLIX_part-db27bc51c98cffdc.strm",
-        "reason_code": "PASS_DIRECT_URL_ADMITTED",
-        "is_local_live_proxy": false
-      },
-      {
-        "relative_path": "Shelter (2026)/Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
-        "reason_code": "PASS_DIRECT_URL_ADMITTED",
-        "is_local_live_proxy": false
-      },
-      {
         "relative_path": "Parasite (2019)/Parasite (2019) - ScarFLIX_part-ffc0dec3a81cd59b.strm",
+        "reason_code": "PASS_DIRECT_URL_ADMITTED",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "Perfect Days (2023)/Perfect Days (2023) - ScarFLIX_part-fcf833934c5f2669.strm",
+        "reason_code": "PASS_DIRECT_URL_ADMITTED",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "Project Hail Mary (2026)/Project Hail Mary (2026) - ScarFLIX_part-db27bc51c98cffdc.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
@@ -260,6 +255,11 @@
       },
       {
         "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
+        "reason_code": "PASS_DIRECT_URL_ADMITTED",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "Shelter (2026)/Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
@@ -428,7 +428,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-19T07:05:22Z",
+      "utc": "2026-06-19T07:15:45Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -600,7 +600,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-19T07:10:04Z",
+    "updated_utc": "2026-06-19T07:20:03Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -663,9 +663,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-19T07:00:16Z",
-      "updated_utc": "2026-06-19T07:00:33Z",
-      "ended_utc": "2026-06-19T07:00:33Z",
+      "started_utc": "2026-06-19T07:10:23Z",
+      "updated_utc": "2026-06-19T07:10:37Z",
+      "ended_utc": "2026-06-19T07:10:37Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -710,12 +710,12 @@
       "retry_queue_items": [],
       "sample_passed": [
         {
-          "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
+          "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
+          "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
@@ -725,27 +725,22 @@
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Perfect Days (2023)/Perfect Days (2023) - ScarFLIX_part-fcf833934c5f2669.strm",
-          "reason_code": "PASS_DIRECT_URL_ADMITTED",
-          "is_local_live_proxy": false
-        },
-        {
           "relative_path": "Over Your Dead Body (2026)/Over Your Dead Body (2026) - ScarFLIX_part-7d05efc74f835f9b.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Project Hail Mary (2026)/Project Hail Mary (2026) - ScarFLIX_part-db27bc51c98cffdc.strm",
-          "reason_code": "PASS_DIRECT_URL_ADMITTED",
-          "is_local_live_proxy": false
-        },
-        {
-          "relative_path": "Shelter (2026)/Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
-          "reason_code": "PASS_DIRECT_URL_ADMITTED",
-          "is_local_live_proxy": false
-        },
-        {
           "relative_path": "Parasite (2019)/Parasite (2019) - ScarFLIX_part-ffc0dec3a81cd59b.strm",
+          "reason_code": "PASS_DIRECT_URL_ADMITTED",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "Perfect Days (2023)/Perfect Days (2023) - ScarFLIX_part-fcf833934c5f2669.strm",
+          "reason_code": "PASS_DIRECT_URL_ADMITTED",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "Project Hail Mary (2026)/Project Hail Mary (2026) - ScarFLIX_part-db27bc51c98cffdc.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
@@ -756,6 +751,11 @@
         },
         {
           "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
+          "reason_code": "PASS_DIRECT_URL_ADMITTED",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "Shelter (2026)/Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
@@ -865,7 +865,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-19T07:10:23Z",
+      "updated_utc": "2026-06-19T07:20:23Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -898,12 +898,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 3404
+              "pid": 22524
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 35672
+              "pid": 30488
             }
           ]
         }
@@ -911,8 +911,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 959524,
-    "safe_pipeline_log_age_seconds": 1016408,
+    "canary_status_age_seconds": 960122,
+    "safe_pipeline_log_age_seconds": 1017006,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -929,7 +929,7 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=38008"
+        "detail": "pid=28884"
       },
       {
         "action": "run_playback_qa_controller",
@@ -939,7 +939,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=33804"
+        "detail": "pid=20616"
       }
     ],
     "blockers": []
@@ -995,7 +995,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-19T07:10:23Z",
+    "updated_utc": "2026-06-19T07:20:23Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -1028,12 +1028,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 3404
+            "pid": 22524
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 35672
+            "pid": 30488
           }
         ]
       }
