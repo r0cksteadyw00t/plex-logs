@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-19T16:33:12Z  
+**Updated UTC:** 2026-06-19T16:40:45Z  
 **Status:** PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED
 
 ## Scope
@@ -27,8 +27,9 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 - pid=6272 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=6660 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
-- pid=7248 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
+- pid=7152 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=9008 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
+- pid=14164 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=15976 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=23756 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=23860 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
@@ -43,7 +44,8 @@ Playback quality and stability only. No publication, no expansion, no source mut
 - pid=36576 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=36920 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=37488 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
-- pid=38644 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
+- pid=37860 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
+- pid=39564 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=40920 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 
 ## Recent rclone/WebDAV Error Pressure
