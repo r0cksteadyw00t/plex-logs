@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-19T17:22:14Z",
-    "ended_utc":  "2026-06-19T17:25:04Z",
-    "duration_seconds":  170,
+    "status":  "PASS",
+    "started_utc":  "2026-06-19T17:28:07Z",
+    "ended_utc":  "2026-06-19T17:28:23Z",
+    "duration_seconds":  16,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  2345
+                           "ms":  84
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  488
+                           "ms":  194
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  951
+                           "ms":  199
                        }
                    ],
     "webdav_before":  {
@@ -49,8 +49,8 @@
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  false,
-                             "timed_out":  true,
+                             "ok":  true,
+                             "timed_out":  false,
                              "error":  ""
                          },
     "s_media_after":  {
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  15160,
+                          "ms":  15048,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       },
@@ -80,26 +80,21 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  15343,
+                          "ms":  15017,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       }
                   ],
-    "watch_now_probe_run":  true,
-    "watch_now_source":  "fresh",
+    "watch_now_probe_run":  false,
+    "watch_now_source":  "cached_previous_status",
     "actions":  [
                     {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  0,
-                                       "error":  ""
-                                   }
+                        "action":  "watch_now_head_probes_skipped_cooldown",
+                        "cooldown_seconds":  300
                     }
                 ],
     "failures":  [
-                     "Watch Now probe failed: Gremlins",
-                     "Watch Now probe failed: Anna"
+
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260620.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
