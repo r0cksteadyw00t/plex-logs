@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T12:40:49Z
-Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
+Updated UTC: 2026-06-19T12:48:33Z
+Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 5
-Episodes already staged: 0
+Episodes enumerated: 40
+Episodes already staged: 40
 Episodes newly staged: 0
-Review: 5
+Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Forensics: Catching the Killer: enumerated=5; staged=0; already=0; review=5; source=request_episode_targets
+- Clarkson's Farm: enumerated=40; staged=0; already=40; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
