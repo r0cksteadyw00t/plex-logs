@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "PASS",
-    "started_utc":  "2026-06-19T16:55:01Z",
-    "ended_utc":  "2026-06-19T16:57:17Z",
-    "duration_seconds":  135,
+    "status":  "REVIEW",
+    "started_utc":  "2026-06-19T16:54:27Z",
+    "ended_utc":  "2026-06-19T16:58:26Z",
+    "duration_seconds":  239,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,46 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  9627
+                           "ms":  8234
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  651
+                           "ms":  3097
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  2024
+                           "ms":  963
+                       }
+                   ],
+    "webdav_before":  {
+                          "ok":  true,
+                          "status_code":  200,
+                        {
+    "component":  "jasonos_prime_playback_path_recovery",
+    "status":  "REVIEW",
+    "started_utc":  "2026-06-19T16:54:15Z",
+    "ended_utc":  "2026-06-19T16:58:26Z",
+    "duration_seconds":  251,
+    "no_publication_started":  true,
+    "no_expansion_started":  true,
+    "no_plex_db_mutation":  true,
+    "cmd_checks":  [
+                       {
+                           "check":  1,
+                           "ok":  true,
+                           "ms":  4081
+                       },
+                       {
+                           "check":  2,
+                           "ok":  true,
+                           "ms":  8241
+                       },
+                       {
+                           "check":  3,
+                           "ok":  true,
+                           "ms":  5731
                        }
                    ],
     "webdav_before":  {
@@ -49,8 +78,8 @@
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  false,
-                             "timed_out":  true,
+                             "ok":  true,
+                             "timed_out":  false,
                              "error":  ""
                          },
     "s_media_after":  {
@@ -69,36 +98,30 @@
                       {
                           "title":  "Gremlins",
                           "hash":  "scarflix_part-942255f029875306",
-                          "ok":  true,
-                          "status_code":  200,
-                          "ms":  6378,
-                          "content_length":  "1714768887",
-                          "error":  ""
+                          "ok":  false,
+                          "status_code":  0,
+                          "ms":  15031,
+                          "content_length":  "",
+                          "error":  "The operation has timed out."
                       },
                       {
                           "title":  "Anna",
                           "hash":  "scarflix_part-81107989d2e30cfb",
-                          "ok":  true,
-                          "status_code":  200,
-                          "ms":  7978,
-                          "content_length":  "1721714811",
-                          "error":  ""
+                          "ok":  false,
+                          "status_code":  0,
+                          "ms":  15025,
+                          "content_length":  "",
+                          "error":  "The operation has timed out."
                       }
                   ],
     "watch_now_probe_run":  true,
     "watch_now_source":  "fresh",
     "actions":  [
-                    {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  0,
-                                       "error":  ""
-                                   }
-                    }
+
                 ],
     "failures":  [
-
+                     "Watch Now probe failed: Gremlins",
+                     "Watch Now probe failed: Anna"
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260620.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
