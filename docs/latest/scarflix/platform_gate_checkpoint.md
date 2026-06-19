@@ -1,13 +1,13 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-19T22:58:46Z
+Generated UTC: 2026-06-19T23:12:08Z
 
-Status: PASS
-Started UTC: 2026-06-08T04:25:44Z
-Ended UTC: 2026-06-08T04:26:57Z
-Snapshot ID: 20260608T042559Z
-Snapshot hash: b8aea5514e0ee28986a1ac39db603371544823deda3180a2a9ce2e0479b64798
-Same-snapshot confirmed: True
+Status: REVIEW
+Started UTC: 2026-06-19T23:11:26Z
+Ended UTC: 2026-06-19T23:12:01Z
+Snapshot ID: 20260619T231147Z
+Snapshot hash: 0e27a141832b0a0bc2661d3dcbe62914effd20ad47fa04f7806726bdde32ece3
+Same-snapshot confirmed: False
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
 
 ## Visible Catalogue
@@ -16,23 +16,23 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - tv: 0
 
 ## QA
-- WebDAV active gate: PASS, checked=1
-- Plex visible/HLS QA: PASS, checked=1
-- Plex client decision QA: PASS, checked=1
-- 5-concurrent stream QA: REVIEW, target=5, map_tested=5, visible_tested=5
-- Health: REVIEW
+- WebDAV active gate: REVIEW, checked=1
+- Plex visible/HLS QA: UNKNOWN, checked=-1
+- Plex client decision QA: UNKNOWN, checked=-1
+- 5-concurrent stream QA: UNKNOWN, target=, map_tested=, visible_tested=
+- Health: UNKNOWN
 
 ## Source Handling
-- quarantined/rejected sources: 1275
-- transient/retry-held count: 1023
-- prunable/permanent count: 252
+- quarantined/rejected sources: 1325
+- transient/retry-held count: 1064
+- prunable/permanent count: 261
 - seeder rejected-stage skipped: 41
 - publisher rejected-stage skipped: 0
 - top reason codes:
-  - PROVIDER_503: 724
-  - PROVIDER_TIMEOUT: 262
-  - PLEX_INVISIBLE_AFTER_SCAN: 236
-  - PROVIDER_503_RETRYABLE: 30
+  - PROVIDER_503: 738
+  - PROVIDER_TIMEOUT: 264
+  - PLEX_INVISIBLE_AFTER_SCAN: 245
+  - PROVIDER_503_RETRYABLE: 55
   - PLEX_HLS_TIMEOUT: 7
   - PLEX_PROFILE_FAILED: 7
   - PLEX_CODEC_BLOCKED: 5
@@ -41,8 +41,8 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
   - PLEX_HLS_PROBE_FAILED: 1
 
 ## Schedules
-- schedules safely re-enabled by PlatformGate: True
-- ScarFLIX_v2_SafeWebDavExpansionPipeline: Ready
+- schedules safely re-enabled by PlatformGate: False
+- ScarFLIX_v2_SafeWebDavExpansionPipeline: Disabled
 - ScarFLIX_v2_LiveCatalogSeeder: Disabled
 - ScarFLIX_v2_WebDavVirtualCatalogPublisher: Disabled
 - ScarFLIX_v2_AutoGate: Disabled
@@ -51,4 +51,4 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - ScarFLIX_v2_CatalogVisibilityGate: Disabled
 
 ## Blockers
-- none
+- active_gate status=REVIEW
