@@ -3,7 +3,7 @@
 Status: FAIL_ENGINEERING
 Milestone state: BLOCKED_DECISION
 Milestone: PlatformGate and candidate-source retry/quarantine model complete
-Updated UTC: 2026-06-19T16:55:05Z
+Updated UTC: 2026-06-19T16:55:09Z
 Current step: controller_exception
 Jason action required: False
 
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: PlatformGate PASS; candidate-source retry/quarantine model verified
-- next_check_utc: 2026-06-19T17:01:21Z
+- next_check_utc: 2026-06-19T17:01:22Z
 
 ## Blockers
 - Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
