@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-19T05:54:08Z",
-    "updated_utc":  "2026-06-19T05:54:24Z",
+    "started_utc":  "2026-06-19T06:09:02Z",
+    "updated_utc":  "2026-06-19T06:09:10Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -125,10 +125,10 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=PASS_ACTIVE_TRUE_HANDS_OFF SafeAuditTask=Ready QuietWatcherTask=Ready"
+                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Ready"
                                       ],
                          "blockers":  [
-
+                                          "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
                                       ],
                          "next_safe_action":  "Keep orchestration alive, reduce high-churn work during playback, and treat repeated no-progress cycles as Grok review triggers.",
                          "requires_quiet_window":  false,
@@ -156,6 +156,10 @@
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "blocker":  "Materialized QA is not full PASS: REVIEW 103/124 failed=21. retry_held=0 retry_tracked=21."
+                     },
+                     {
+                         "outcome_id":  "O-AUTONOMY-STABILITY",
+                         "blocker":  "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
                      }
                  ],
     "monitored_tasks":  [
