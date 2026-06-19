@@ -1,14 +1,14 @@
 # ScarFLIX v2 Materialized Plex Decision QA
 
-Status: REVIEW
-Updated UTC: 2026-06-15T04:36:26Z
-Targets: 229
-Rows found: 122
-Checked: 117
-Passed: 117
+Status: RUNNING_PLEX_DECISION_PROBES
+Updated UTC: 2026-06-19T04:07:54Z
+Targets: 249
+Rows found: 143
+Checked: 0
+Passed: 0
 Failed: 0
-Layered streaming checked: 117
-Layered streaming passed: 117
+Layered streaming checked: 0
+Layered streaming passed: 0
 Layered streaming review: 0
 Query errors: 0
-Next action: Some materialized targets are not visible in Plex DB after scan.
+Next action: Materialized Plex decision QA is running bounded client-style decision probes.
