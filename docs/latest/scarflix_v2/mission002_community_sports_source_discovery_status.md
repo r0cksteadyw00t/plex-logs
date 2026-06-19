@@ -2,7 +2,7 @@
 
 Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_LIVE_ENGINE
 
-Updated UTC: 2026-06-19T10:12:37.1953335Z
+Updated UTC: 2026-06-19T14:15:00.2110245Z
 
 ## Peer Review Outcome
 
@@ -33,7 +33,7 @@ Updated UTC: 2026-06-19T10:12:37.1953335Z
 - Fox Footy: missing (matches=0, probe_pass=0)
 - Kayo: missing (matches=0, probe_pass=0)
 - Fox Sports: weak (matches=41, probe_pass=0)
-- Racing: strong (matches=14, probe_pass=5)
+- Racing: strong (matches=15, probe_pass=6)
 - Cricket: adequate (matches=21, probe_pass=1)
 - NRL: missing (matches=0, probe_pass=0)
 - AU Free-To-Air Sports Adjacent: strong (matches=11, probe_pass=5)
