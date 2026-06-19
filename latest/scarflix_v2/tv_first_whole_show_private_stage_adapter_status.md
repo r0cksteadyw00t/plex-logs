@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T00:15:05Z
+Updated UTC: 2026-06-19T00:35:30Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 8
+Episodes enumerated: 2
 Episodes already staged: 0
-Episodes newly staged: 8
+Episodes newly staged: 2
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Margo's Got Money Troubles: enumerated=8; staged=8; already=0; review=0; source=request_episode_targets
+- The Nightmare Upstairs: What Happened to Ty and Bryn?: enumerated=2; staged=2; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
