@@ -2,18 +2,18 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-19T04:47:39Z",
-    "started_utc":  "2026-06-19T04:47:05Z",
-    "duration_seconds":  34,
+    "updated_utc":  "2026-06-19T04:55:16Z",
+    "started_utc":  "2026-06-19T04:55:07Z",
+    "duration_seconds":  9,
     "will_progress_without_codex":  true,
     "current_milestone":  "CANDIDATE_SOURCE_MODEL_PASS",
     "signals":  {
-                    "controller_age_minutes":  6,
-                    "platform_checkpoint_age_minutes":  16048,
-                    "durable_platform_gate_age_minutes":  16048,
+                    "controller_age_minutes":  4,
+                    "platform_checkpoint_age_minutes":  16056,
+                    "durable_platform_gate_age_minutes":  16056,
                     "platform_progress_fresh":  false,
-                    "dashboard_age_minutes":  7,
-                    "mirror_age_minutes":  4,
+                    "dashboard_age_minutes":  0,
+                    "mirror_age_minutes":  3,
                     "movie_strm_count":  10,
                     "tv_strm_count":  1,
                     "total_strm_count":  11,
@@ -26,8 +26,8 @@
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "19/06/2026 2:46:56 PM",
-                                     "next_run_time":  "19/06/2026 2:50:00 PM",
+                                     "last_run_time":  "19/06/2026 2:55:01 PM",
+                                     "next_run_time":  "19/06/2026 3:00:00 PM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
@@ -42,8 +42,8 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "19/06/2026 2:46:56 PM",
-                                    "next_run_time":  "19/06/2026 2:50:00 PM",
+                                    "last_run_time":  "19/06/2026 2:55:01 PM",
+                                    "next_run_time":  "19/06/2026 3:00:00 PM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
@@ -56,18 +56,6 @@
                              }
               },
     "actions":  [
-                    {
-                        "task":  "ScarFLIX_v2_AutonomousController",
-                        "changed":  false,
-                        "ran":  true,
-                        "note":  "run_triggered"
-                    },
-                    {
-                        "task":  "JasonOS_Prime_OutcomeDashboard",
-                        "changed":  false,
-                        "ran":  true,
-                        "note":  "run_triggered"
-                    },
                     {
                         "task":  "JasonOS_Prime_PublicMirrorPublisher",
                         "changed":  false,
@@ -82,11 +70,8 @@
                     }
                 ],
     "notes":  [
-                  "Controller status is stale or missing; watchdog triggered controller task.",
-                  "Dashboard status was disabled or stale; watchdog triggered dashboard task.",
                   "Public mirror status was disabled or stale; watchdog triggered mirror task.",
-                  "Catalogue count has not changed during expansion/candidate milestone; watchdog triggered controller.",
-                  "Swarm escalation requested: multiple recovery actions were needed in one watchdog cycle."
+                  "Catalogue count has not changed during expansion/candidate milestone; watchdog triggered controller."
               ],
     "files":  {
                   "log":  "D:\\PlexTools\\logs\\scarflix_v2_watchdog_stall_20260619.log",
