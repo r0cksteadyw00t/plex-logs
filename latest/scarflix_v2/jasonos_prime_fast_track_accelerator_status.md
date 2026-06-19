@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-19T23:00:08Z
+Updated UTC: 2026-06-19T23:05:05Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CONTROLLED_MATERIALIZED_QA_HOLD
@@ -29,11 +29,11 @@ TV-first generic/movie expansion allowed: false
 - controller_transient_retry_count: 0
 - repeated_transient_review: false
 - candidate_source_model: PASS
-- controller: RUNNING
+- controller: PASS
 - predictive_simulator: PASS
 - self_evolution: REVIEW
 - dashboard: PASS
-- public_mirror: PASS
+- public_mirror: REVIEW
 
 ## Next 4 Hours
 - Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.
