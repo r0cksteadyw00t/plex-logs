@@ -1,108 +1,23 @@
 {
   "component": "scarflix_v2_streaming_layered_validator",
-  "updated_utc": "2026-06-19T04:11:52Z",
+  "updated_utc": "2026-06-19T04:12:13Z",
   "status": "RUNNING",
   "qa_component": "scarflix_v2_materialized_plex_decision_qa_node",
   "decision_probe_skip": 0,
   "decision_probe_limit": 0,
   "range_bytes": 4194304,
   "summary": {
-    "total": 11,
-    "passed": 11,
+    "total": 14,
+    "passed": 14,
     "review": 0,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 11
+      "webdav_head_and_temporary_range_warm_passed": 14
     }
   },
   "recent_results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:08:56Z",
-      "target_hash": "ScarFLIX_part-85e03dae432eebab",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Casino Royale (2006)\\ScarFLIX_part-85e03dae432eebab",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-85e03dae432eebab/stream.mkv",
-      "map_loaded": true,
-      "map_generated_utc": "2026-06-19T04:05:39Z",
-      "map_entry_found": true,
-      "temporary_buffering": {
-        "enabled": true,
-        "persisted": false,
-        "range_bytes_requested": 4194304
-      },
-      "layers": {
-        "local_symlink_metadata": {
-          "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Casino Royale (2006)\\ScarFLIX_part-85e03dae432eebab",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\Casino Royale (2006)\\ScarFLIX_part-85e03dae432eebab",
-          "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-85e03dae432eebab",
-          "error": "",
-          "blocking": false,
-          "exists": true,
-          "is_directory": false,
-          "is_file": false
-        },
-        "webdav_head": {
-          "ok": true,
-          "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-85e03dae432eebab/stream.mkv",
-          "status_code": 200,
-          "bytes_read": 0,
-          "content_length": "2958753769",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 5762,
-          "attempt": 2,
-          "reason": "ok",
-          "attempts": 2
-        },
-        "webdav_head_attempts": [
-          {
-            "ok": false,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-85e03dae432eebab/stream.mkv",
-            "status_code": 0,
-            "bytes_read": 0,
-            "timed_out": true,
-            "error": "timeout",
-            "elapsed_ms": 8018,
-            "attempt": 1,
-            "reason": "timeout"
-          },
-          {
-            "ok": true,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-85e03dae432eebab/stream.mkv",
-            "status_code": 200,
-            "bytes_read": 0,
-            "content_length": "2958753769",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 5762,
-            "attempt": 2,
-            "reason": "ok"
-          }
-        ],
-        "webdav_range_warm": {
-          "ok": true,
-          "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-85e03dae432eebab/stream.mkv",
-          "status_code": 206,
-          "bytes_read": 4194304,
-          "content_length": "4194304",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 4136,
-          "reason": "ok"
-        }
-      },
-      "status": "PASS",
-      "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 18688
-    },
-    {
-      "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:09:29Z",
+      "updated_utc": "2026-06-19T04:09:36Z",
       "target_hash": "ScarFLIX_part-0882bcbae45a0737",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Exhuma (2024)\\Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-0882bcbae45a0737/stream.mkv",
@@ -134,7 +49,7 @@
           "content_length": "3698838766",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1366,
+          "elapsed_ms": 1480,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -149,7 +64,7 @@
             "content_length": "3698838766",
             "content_type": "application/force-download",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1366,
+            "elapsed_ms": 1480,
             "attempt": 1,
             "reason": "ok"
           }
@@ -163,17 +78,17 @@
           "content_length": "4194304",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3906,
+          "elapsed_ms": 3817,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5275
+      "elapsed_ms": 5328
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:09:52Z",
+      "updated_utc": "2026-06-19T04:09:56Z",
       "target_hash": "ScarFLIX_part-446ae9e09a1ba27c",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Free Guy (2021)\\ScarFLIX_part-446ae9e09a1ba27c",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-446ae9e09a1ba27c/stream.mkv",
@@ -207,7 +122,7 @@
           "content_length": "4136924601",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1714,
+          "elapsed_ms": 7015,
           "attempt": 2,
           "reason": "ok",
           "attempts": 2
@@ -221,7 +136,7 @@
             "bytes_read": 0,
             "timed_out": true,
             "error": "timeout",
-            "elapsed_ms": 8011,
+            "elapsed_ms": 8117,
             "attempt": 1,
             "reason": "timeout"
           },
@@ -234,7 +149,7 @@
             "content_length": "4136924601",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1714,
+            "elapsed_ms": 7015,
             "attempt": 2,
             "reason": "ok"
           }
@@ -248,17 +163,17 @@
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4804,
+          "elapsed_ms": 4932,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 15452
+      "elapsed_ms": 20833
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:10:26Z",
+      "updated_utc": "2026-06-19T04:10:06Z",
       "target_hash": "ScarFLIX_part-8b8e1a86c766f359",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Greenland 2 Migration (2026)\\Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-8b8e1a86c766f359/stream.mkv",
@@ -290,7 +205,7 @@
           "content_length": "6501584236",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1446,
+          "elapsed_ms": 1283,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -305,7 +220,7 @@
             "content_length": "6501584236",
             "content_type": "application/force-download",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1446,
+            "elapsed_ms": 1283,
             "attempt": 1,
             "reason": "ok"
           }
@@ -319,13 +234,13 @@
           "content_length": "4194304",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 6687,
+          "elapsed_ms": 3672,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 8140
+      "elapsed_ms": 4959
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
@@ -361,7 +276,7 @@
           "content_length": "1996230",
           "content_type": "video/mp4",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1573,
+          "elapsed_ms": 1621,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -376,7 +291,7 @@
             "content_length": "1996230",
             "content_type": "video/mp4",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1573,
+            "elapsed_ms": 1621,
             "attempt": 1,
             "reason": "ok"
           }
@@ -390,17 +305,17 @@
           "content_length": "1996230",
           "content_type": "video/mp4",
           "accept_ranges": "bytes",
-          "elapsed_ms": 752,
+          "elapsed_ms": 922,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 2330
+      "elapsed_ms": 2550
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:10:58Z",
+      "updated_utc": "2026-06-19T04:10:49Z",
       "target_hash": "ScarFLIX_part-1d3c996807019969",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Mulan (1998)\\ScarFLIX_part-1d3c996807019969",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-1d3c996807019969/stream.mkv",
@@ -434,12 +349,24 @@
           "content_length": "733661347",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1415,
-          "attempt": 1,
+          "elapsed_ms": 2608,
+          "attempt": 2,
           "reason": "ok",
-          "attempts": 1
+          "attempts": 2
         },
         "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-1d3c996807019969/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8740,
+            "attempt": 1,
+            "reason": "timeout"
+          },
           {
             "ok": true,
             "method": "HEAD",
@@ -449,8 +376,8 @@
             "content_length": "733661347",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1415,
-            "attempt": 1,
+            "elapsed_ms": 2608,
+            "attempt": 2,
             "reason": "ok"
           }
         ],
@@ -463,17 +390,17 @@
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4101,
+          "elapsed_ms": 4097,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5517
+      "elapsed_ms": 16418
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:11:27Z",
+      "updated_utc": "2026-06-19T04:10:58Z",
       "target_hash": "ScarFLIX_part-7d05efc74f835f9b",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Over Your Dead Body (2026)\\Over Your Dead Body (2026) - ScarFLIX_part-7d05efc74f835f9b.strm",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-7d05efc74f835f9b/stream.mkv",
@@ -505,7 +432,7 @@
           "content_length": "7240007507",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1430,
+          "elapsed_ms": 1283,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -520,7 +447,7 @@
             "content_length": "7240007507",
             "content_type": "application/force-download",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1430,
+            "elapsed_ms": 1283,
             "attempt": 1,
             "reason": "ok"
           }
@@ -534,17 +461,17 @@
           "content_length": "4194304",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 6328,
+          "elapsed_ms": 4403,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 7762
+      "elapsed_ms": 5688
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:11:36Z",
+      "updated_utc": "2026-06-19T04:11:26Z",
       "target_hash": "ScarFLIX_part-ffc0dec3a81cd59b",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Parasite (2019)\\Parasite (2019) - ScarFLIX_part-ffc0dec3a81cd59b.strm",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-ffc0dec3a81cd59b/stream.mkv",
@@ -576,7 +503,7 @@
           "content_length": "2703029590",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1547,
+          "elapsed_ms": 1638,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -591,7 +518,7 @@
             "content_length": "2703029590",
             "content_type": "application/force-download",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1547,
+            "elapsed_ms": 1638,
             "attempt": 1,
             "reason": "ok"
           }
@@ -605,17 +532,17 @@
           "content_length": "4194304",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4269,
+          "elapsed_ms": 6609,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5817
+      "elapsed_ms": 8249
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:11:42Z",
+      "updated_utc": "2026-06-19T04:11:36Z",
       "target_hash": "ScarFLIX_part-fcf833934c5f2669",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Perfect Days (2023)\\Perfect Days (2023) - ScarFLIX_part-fcf833934c5f2669.strm",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-fcf833934c5f2669/stream.mkv",
@@ -647,7 +574,7 @@
           "content_length": "19107007879",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1244,
+          "elapsed_ms": 1501,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -662,7 +589,7 @@
             "content_length": "19107007879",
             "content_type": "application/force-download",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1244,
+            "elapsed_ms": 1501,
             "attempt": 1,
             "reason": "ok"
           }
@@ -676,17 +603,17 @@
           "content_length": "4194304",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4161,
+          "elapsed_ms": 3851,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5407
+      "elapsed_ms": 5354
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:11:48Z",
+      "updated_utc": "2026-06-19T04:12:03Z",
       "target_hash": "ScarFLIX_part-db27bc51c98cffdc",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Project Hail Mary (2026)\\Project Hail Mary (2026) - ScarFLIX_part-db27bc51c98cffdc.strm",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-db27bc51c98cffdc/stream.mkv",
@@ -718,7 +645,7 @@
           "content_length": "9765757967",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1693,
+          "elapsed_ms": 1552,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -733,7 +660,7 @@
             "content_length": "9765757967",
             "content_type": "application/force-download",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1693,
+            "elapsed_ms": 1552,
             "attempt": 1,
             "reason": "ok"
           }
@@ -747,13 +674,84 @@
           "content_length": "4194304",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3823,
+          "elapsed_ms": 3955,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5517
+      "elapsed_ms": 5509
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-19T04:12:09Z",
+      "target_hash": "ScarFLIX_part-46f7d340332eeada",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Shelter (2026)\\Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-46f7d340332eeada/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-19T04:05:39Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "REVIEW",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Shelter (2026)\\Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
+          "stream_path": "",
+          "is_symbolic_link": false,
+          "link_target": "",
+          "error": "ENOENT: no such file or directory, lstat 'D:\\StremioCatalog\\_Hybrid\\Movies\\Shelter (2026)\\Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm'",
+          "blocking": false,
+          "exists": false
+        },
+        "webdav_head": {
+          "ok": true,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-46f7d340332eeada/stream.mkv",
+          "status_code": 200,
+          "bytes_read": 0,
+          "content_length": "8577191634",
+          "content_type": "application/force-download",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 1380,
+          "attempt": 1,
+          "reason": "ok",
+          "attempts": 1
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-46f7d340332eeada/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "8577191634",
+            "content_type": "application/force-download",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1380,
+            "attempt": 1,
+            "reason": "ok"
+          }
+        ],
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-46f7d340332eeada/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/force-download",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 3890,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_and_temporary_range_warm_passed",
+      "elapsed_ms": 5271
     }
   ]
 }
