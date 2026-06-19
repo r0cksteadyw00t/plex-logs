@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-19T05:15:10Z",
+  "updated_utc": "2026-06-19T05:20:21Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -12,8 +12,8 @@
   "jason_action_required": false,
   "truth_metrics": {
     "movie_strm_count": 10,
-    "tv_strm_count": 1,
-    "total_strm_count": 11,
+    "tv_strm_count": 0,
+    "total_strm_count": 10,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
@@ -166,10 +166,10 @@
   },
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
-    "status": "REVIEW_RETRY_HELD",
-    "started_utc": "2026-06-19T05:10:25Z",
-    "updated_utc": "2026-06-19T05:10:37Z",
-    "ended_utc": "2026-06-19T05:10:37Z",
+    "status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+    "started_utc": "2026-06-19T05:15:34Z",
+    "updated_utc": "2026-06-19T05:16:33Z",
+    "ended_utc": "2026-06-19T05:16:33Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -178,28 +178,32 @@
     "range_timeout_ms": 16000,
     "concurrency": 3,
     "counts_before": {
-      "movies": 8,
+      "movies": 10,
       "tv": 1,
-      "total": 9
+      "total": 11
     },
     "counts_after": {
-      "movies": 8,
-      "tv": 1,
-      "total": 9
+      "movies": 10,
+      "tv": 0,
+      "total": 10
     },
-    "checked_visible": 9,
-    "passed_visible": 9,
-    "failed_visible": 0,
-    "quarantined_this_run": 0,
+    "checked_visible": 11,
+    "passed_visible": 10,
+    "failed_visible": 1,
+    "quarantined_this_run": 1,
     "restored_this_run": 0,
-    "retry_held_count": 2,
-    "permanent_quarantine_count": 21,
+    "retry_held_count": 1,
+    "permanent_quarantine_count": 23,
     "raw_live_proxy_visible_count": 1,
     "direct_https_visible_count": 0,
     "top_reason_codes": [
       {
         "code": "INVALID_URL",
         "count": 20
+      },
+      {
+        "code": "PASS_DIRECT_URL_ADMITTED",
+        "count": 2
       },
       {
         "code": "PROVIDER_TIMEOUT_RETRYABLE",
@@ -210,21 +214,23 @@
         "count": 1
       }
     ],
-    "recent_quarantined": [],
+    "recent_quarantined": [
+      {
+        "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "Range probe timed out",
+        "retryable": true,
+        "url_host": "192.168.1.184:18788",
+        "is_local_live_proxy": true
+      }
+    ],
     "retry_queue_items": [
       {
-        "relative_path": "Shelter (2026)/Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
+        "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
         "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "retry_after_utc": "2026-06-19T05:11:07Z",
-        "url_host": "127.0.0.1:18789",
-        "is_local_live_proxy": false
-      },
-      {
-        "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
-        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "retry_after_utc": "2026-06-19T05:11:08Z",
-        "url_host": "127.0.0.1:18789",
-        "is_local_live_proxy": false
+        "retry_after_utc": "2026-06-19T05:26:15Z",
+        "url_host": "192.168.1.184:18788",
+        "is_local_live_proxy": true
       }
     ],
     "sample_passed": [
@@ -234,12 +240,12 @@
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Exhuma (2024)/Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
+        "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
+        "relative_path": "Exhuma (2024)/Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
@@ -269,14 +275,30 @@
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-        "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-        "is_local_live_proxy": true
+        "relative_path": "Shelter (2026)/Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
+        "reason_code": "PASS_DIRECT_URL_ADMITTED",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
+        "reason_code": "PASS_DIRECT_URL_ADMITTED",
+        "is_local_live_proxy": false
       }
     ],
     "plex_scan_triggered": {
       "ok": true,
-      "reason": "no visible changes"
+      "sections": [
+        {
+          "ok": true,
+          "section": "5",
+          "pid": 24000
+        },
+        {
+          "ok": true,
+          "section": "6",
+          "pid": 11188
+        }
+      ]
     },
     "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260619.log",
     "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
@@ -605,13 +627,13 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-19T05:15:10Z",
+    "updated_utc": "2026-06-19T05:20:21Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
       "legacy_movie_strm": 10,
-      "legacy_tv_strm": 1,
-      "legacy_total_strm": 11,
+      "legacy_tv_strm": 0,
+      "legacy_total_strm": 10,
       "plex_safe_webdav_visible_rows": 1
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
@@ -667,10 +689,10 @@
     },
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
-      "status": "REVIEW_RETRY_HELD",
-      "started_utc": "2026-06-19T05:10:25Z",
-      "updated_utc": "2026-06-19T05:10:37Z",
-      "ended_utc": "2026-06-19T05:10:37Z",
+      "status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+      "started_utc": "2026-06-19T05:15:34Z",
+      "updated_utc": "2026-06-19T05:16:33Z",
+      "ended_utc": "2026-06-19T05:16:33Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -679,28 +701,32 @@
       "range_timeout_ms": 16000,
       "concurrency": 3,
       "counts_before": {
-        "movies": 8,
+        "movies": 10,
         "tv": 1,
-        "total": 9
+        "total": 11
       },
       "counts_after": {
-        "movies": 8,
-        "tv": 1,
-        "total": 9
+        "movies": 10,
+        "tv": 0,
+        "total": 10
       },
-      "checked_visible": 9,
-      "passed_visible": 9,
-      "failed_visible": 0,
-      "quarantined_this_run": 0,
+      "checked_visible": 11,
+      "passed_visible": 10,
+      "failed_visible": 1,
+      "quarantined_this_run": 1,
       "restored_this_run": 0,
-      "retry_held_count": 2,
-      "permanent_quarantine_count": 21,
+      "retry_held_count": 1,
+      "permanent_quarantine_count": 23,
       "raw_live_proxy_visible_count": 1,
       "direct_https_visible_count": 0,
       "top_reason_codes": [
         {
           "code": "INVALID_URL",
           "count": 20
+        },
+        {
+          "code": "PASS_DIRECT_URL_ADMITTED",
+          "count": 2
         },
         {
           "code": "PROVIDER_TIMEOUT_RETRYABLE",
@@ -711,21 +737,23 @@
           "count": 1
         }
       ],
-      "recent_quarantined": [],
+      "recent_quarantined": [
+        {
+          "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "reason": "Range probe timed out",
+          "retryable": true,
+          "url_host": "192.168.1.184:18788",
+          "is_local_live_proxy": true
+        }
+      ],
       "retry_queue_items": [
         {
-          "relative_path": "Shelter (2026)/Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
+          "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
           "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-          "retry_after_utc": "2026-06-19T05:11:07Z",
-          "url_host": "127.0.0.1:18789",
-          "is_local_live_proxy": false
-        },
-        {
-          "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
-          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-          "retry_after_utc": "2026-06-19T05:11:08Z",
-          "url_host": "127.0.0.1:18789",
-          "is_local_live_proxy": false
+          "retry_after_utc": "2026-06-19T05:26:15Z",
+          "url_host": "192.168.1.184:18788",
+          "is_local_live_proxy": true
         }
       ],
       "sample_passed": [
@@ -735,12 +763,12 @@
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Exhuma (2024)/Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
+          "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
+          "relative_path": "Exhuma (2024)/Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
@@ -770,14 +798,30 @@
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "9-1-1 Lone Star (2020)/Season 01/9-1-1 Lone Star (2020) - S01E01.strm",
-          "reason_code": "PASS_LOCAL_PROXY_ADMITTED",
-          "is_local_live_proxy": true
+          "relative_path": "Shelter (2026)/Shelter (2026) - ScarFLIX_part-46f7d340332eeada.strm",
+          "reason_code": "PASS_DIRECT_URL_ADMITTED",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
+          "reason_code": "PASS_DIRECT_URL_ADMITTED",
+          "is_local_live_proxy": false
         }
       ],
       "plex_scan_triggered": {
         "ok": true,
-        "reason": "no visible changes"
+        "sections": [
+          {
+            "ok": true,
+            "section": "5",
+            "pid": 24000
+          },
+          {
+            "ok": true,
+            "section": "6",
+            "pid": 11188
+          }
+        ]
       },
       "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260619.log",
       "status_file": "D:/PlexTools/public/latest/scarflix_v2/direct_strm_admission_gate_status.json",
@@ -875,22 +919,22 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-19T05:15:35Z",
+      "updated_utc": "2026-06-19T05:22:00Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
         "movies": 10,
-        "tv": 1,
-        "total": 11
+        "tv": 0,
+        "total": 10
       },
       "canary_status": "PAUSED_PLAYBACK_FIX",
       "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
       "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-      "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-      "direct_strm_admission_checked_visible": 9,
-      "direct_strm_admission_passed_visible": 9,
-      "direct_strm_admission_quarantined_this_run": 0,
-      "direct_strm_retry_held_count": 2,
+      "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+      "direct_strm_admission_checked_visible": 11,
+      "direct_strm_admission_passed_visible": 10,
+      "direct_strm_admission_quarantined_this_run": 1,
+      "direct_strm_retry_held_count": 1,
       "materialized_primary": true,
       "materialized_visible_verified": 18,
       "materialized_decision_qa_status": "REVIEW",
@@ -908,12 +952,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 11200
+              "pid": 20840
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 37600
+              "pid": 37804
             }
           ]
         }
@@ -921,25 +965,25 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 952628,
-    "safe_pipeline_log_age_seconds": 1009518,
+    "canary_status_age_seconds": 952956,
+    "safe_pipeline_log_age_seconds": 1009903,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
       {
         "action": "refresh_grokbuild",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_GrokBuild_Agent.js\n"
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
       },
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=28396"
+        "detail": "pid=15724"
       },
       {
         "action": "run_playback_qa_controller",
@@ -949,7 +993,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=25416"
+        "detail": "pid=38140"
       }
     ],
     "blockers": []
@@ -1005,22 +1049,22 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-19T05:15:35Z",
+    "updated_utc": "2026-06-19T05:22:00Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
       "movies": 10,
-      "tv": 1,
-      "total": 11
+      "tv": 0,
+      "total": 10
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
     "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
     "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-    "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-    "direct_strm_admission_checked_visible": 9,
-    "direct_strm_admission_passed_visible": 9,
-    "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_retry_held_count": 2,
+    "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+    "direct_strm_admission_checked_visible": 11,
+    "direct_strm_admission_passed_visible": 10,
+    "direct_strm_admission_quarantined_this_run": 1,
+    "direct_strm_retry_held_count": 1,
     "materialized_primary": true,
     "materialized_visible_verified": 18,
     "materialized_decision_qa_status": "REVIEW",
@@ -1038,12 +1082,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 11200
+            "pid": 20840
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 37600
+            "pid": 37804
           }
         ]
       }
