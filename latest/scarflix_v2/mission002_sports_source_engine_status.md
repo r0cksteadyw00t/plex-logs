@@ -1,6 +1,6 @@
 # Mission 002 Live Source Engine
 
-Updated UTC: 2026-06-19T10:46:03Z
+Updated UTC: 2026-06-19T12:46:04Z
 
 Status: PASS_EXTERNAL_LIVE_CANDIDATES_READY_FOR_REVIEW
 
@@ -15,8 +15,8 @@ Status: PASS_EXTERNAL_LIVE_CANDIDATES_READY_FOR_REVIEW
 
 ## Current Active Lineup Classification
 
-- Active baseline channels classified: 9
-- Active baseline promoted: 9
+- Active baseline channels classified: 10
+- Active baseline promoted: 10
 - Backend changed: false
 
 Sample promoted baseline channels:
@@ -30,14 +30,15 @@ Sample promoted baseline channels:
 - 7AFL
 - 9HD
 - 10HD
+- ABC Business in 90 Seconds
 
 ## External Sports Sources
 
 - Private config present: True
 - External source count: 3
 - External live candidates: 100
-- External live technical-ready candidates: 100
-- External live review candidates: 0
+- External live technical-ready candidates: 98
+- External live review candidates: 2
 - Current hold reason: none
 
 ## Outputs
