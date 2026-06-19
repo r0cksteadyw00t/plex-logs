@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_lightweight_status_probe",
   "status": "REVIEW",
-  "updated_utc": "2026-06-19T13:22:03Z",
-  "duration_ms": 75,
+  "updated_utc": "2026-06-19T13:30:01Z",
+  "duration_ms": 28,
   "probe_contract": "Node-only bounded read of current public status JSON; no long validation and no schtasks/process scans.",
   "counts": {
     "direct_movies": 13,
@@ -13,7 +13,7 @@
     "staged_pending": 43
   },
   "statuses": {
-    "public_mirror": "PASS",
+    "public_mirror": "REVIEW_RECOVERABLE",
     "materialized_decision_qa": "REVIEW",
     "playback_qa_controller": "REVIEW_MATERIALIZED_DECISION_FAILURE",
     "fast_track": "PASS",
@@ -22,7 +22,7 @@
     "direct_strm_mirror": "PAUSED_PLAYBACK_FIX",
     "canary": "PAUSED_PLAYBACK_FIX",
     "node_watchdog": "ACTIVE",
-    "sentinel": "REVIEW",
+    "sentinel": "PASS",
     "candidate_source_model": "PASS",
     "autonomous_controller": "PASS",
     "ai_8791": "PASS",
@@ -42,17 +42,19 @@
     "expansion_started_this_cycle": false,
     "staged_pending_count": 43,
     "materialized_decision_qa_status": "REVIEW",
-    "updated_utc": "2026-06-19T13:21:05Z"
+    "updated_utc": "2026-06-19T13:29:00Z"
   },
   "mirror": {
-    "status": "PASS",
-    "updated_utc": "2026-06-19T13:08:55.748Z",
+    "status": "REVIEW_RECOVERABLE",
+    "updated_utc": "2026-06-19T13:28:29.010Z",
     "last_success_utc": "2026-06-19T13:08:55.748Z",
-    "failed_count": 0,
+    "failed_count": 1,
     "failure_summary": {
-      "recoverable": 0,
+      "recoverable": 1,
       "hard": 0,
-      "by_status": {}
+      "by_status": {
+        "409": 1
+      }
     }
   },
   "maze_runner": {
@@ -66,8 +68,8 @@
     "ready_to_test": false
   },
   "file_mtimes": {
-    "dashboard": "2026-06-19T13:21:13.780Z",
-    "mirror": "2026-06-19T13:08:55.749Z",
+    "dashboard": "2026-06-19T13:29:06.424Z",
+    "mirror": "2026-06-19T13:28:29.012Z",
     "materialized_qa": "2026-06-19T04:57:14.856Z"
   },
   "files": {
