@@ -3,7 +3,7 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-19T23:29:00Z
+Updated UTC: 2026-06-19T23:30:38Z
 Current step: PLATFORM_GATE_CHILD_ACTIVE
 Jason action required: False
 
@@ -12,7 +12,7 @@ Jason action required: False
 - status: RUNNING
 - stage: PLATFORM_GATE_CHILD_ACTIVE
 - visible: 1
-- transient_failures: 0
+- transient_failures: 1
 - prunable_failures: 0
 
 ## Candidate Source Model
@@ -20,14 +20,14 @@ Jason action required: False
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: FAIL
+- rclone_mount_status: UNKNOWN
 - s_media_ready: True
 - s_catalog_ready: True
 - mount_selfheal_attempted: False
 
 ## Action
 - action_taken: PlatformGate child QA activity is fresh; no duplicate runner launch
-- next_check_utc: 2026-06-19T23:34:08Z
+- next_check_utc: 2026-06-19T23:36:32Z
 
 ## Blockers
 - none
