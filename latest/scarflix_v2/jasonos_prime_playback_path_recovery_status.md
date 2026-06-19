@@ -1,6 +1,6 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-19T05:15:54Z  
+**Updated UTC:** 2026-06-19T05:22:20Z  
 **Status:** REVIEW
 
 ## Scope
@@ -11,17 +11,17 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 - WebDAV bridge before: True
 - WebDAV bridge after: True
-- Plex identity: True
+- Plex identity: False
 - rclone processes after: 1
 - S:\media after: ok=True, timed_out=False
 - S:\media\catalog after: ok=True, timed_out=False
-- Watch Now probe source: fresh
+- Watch Now probe source: cached_previous_status
 
 ## Watch Now
 
-- Gremlins / scarflix_part-942255f029875306: PASS, HTTP 200, 2448ms
-- Anna / scarflix_part-81107989d2e30cfb: FAIL, HTTP 0, 4018ms
+- Gremlins / scarflix_part-942255f029875306: PASS, HTTP 200, 8758ms
+- Anna / scarflix_part-81107989d2e30cfb: FAIL, HTTP 0, 4708ms
 
 ## Failures
 
-Watch Now probe failed: Anna
+Plex identity is not PASS
