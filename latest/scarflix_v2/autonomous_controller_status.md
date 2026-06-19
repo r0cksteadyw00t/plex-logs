@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: PASS
-Milestone state: CANDIDATE_SOURCE_MODEL_PASS
+Status: FAIL_ENGINEERING
+Milestone state: BLOCKED_DECISION
 Milestone: PlatformGate and candidate-source retry/quarantine model complete
-Updated UTC: 2026-06-19T18:00:18Z
-Current step: candidate_source_model_pass
+Updated UTC: 2026-06-19T18:00:11Z
+Current step: controller_exception
 Jason action required: False
 
 ## PlatformGate
@@ -30,4 +30,4 @@ Jason action required: False
 - next_check_utc: 2026-06-19T18:05:27Z
 
 ## Blockers
-- none
+- Controller exception: Exception of type 'System.OutOfMemoryException' was thrown.
