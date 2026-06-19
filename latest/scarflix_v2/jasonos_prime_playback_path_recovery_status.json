@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-19T23:33:03Z",
-    "ended_utc":  "2026-06-19T23:33:37Z",
-    "duration_seconds":  34,
+    "started_utc":  "2026-06-19T23:39:04Z",
+    "ended_utc":  "2026-06-19T23:41:04Z",
+    "duration_seconds":  120,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  429
+                           "ms":  352
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  332
+                           "ms":  1268
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  210
+                           "ms":  18
                        }
                    ],
     "webdav_before":  {
@@ -49,20 +49,20 @@
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  false,
-                             "timed_out":  true,
+                             "ok":  true,
+                             "timed_out":  false,
                              "error":  ""
                          },
     "s_media_after":  {
                           "path":  "S:\\media",
-                          "ok":  true,
-                          "timed_out":  false,
+                          "ok":  false,
+                          "timed_out":  true,
                           "error":  ""
                       },
     "s_catalog_after":  {
                             "path":  "S:\\media\\catalog",
-                            "ok":  true,
-                            "timed_out":  false,
+                            "ok":  false,
+                            "timed_out":  true,
                             "error":  ""
                         },
     "watch_now":  [
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  788,
+                          "ms":  1442,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       },
@@ -80,7 +80,7 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  1738,
+                          "ms":  1038,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       }
@@ -92,12 +92,13 @@
                         "action":  "run_rclone_mount_keepalive",
                         "result":  {
                                        "ran":  true,
-                                       "exit_code":  0,
+                                       "exit_code":  1,
                                        "error":  ""
                                    }
                     }
                 ],
     "failures":  [
+                     "S: media/catalog path is not reliably ready",
                      "Watch Now probe failed: Gremlins",
                      "Watch Now probe failed: Anna"
                  ],
