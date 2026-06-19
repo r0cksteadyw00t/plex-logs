@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T00:35:30Z
+Updated UTC: 2026-06-19T00:36:05Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 2
+Episodes enumerated: 12
 Episodes already staged: 0
-Episodes newly staged: 2
+Episodes newly staged: 12
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- The Nightmare Upstairs: What Happened to Ty and Bryn?: enumerated=2; staged=2; already=0; review=0; source=request_episode_targets
+- CIA: enumerated=12; staged=12; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
