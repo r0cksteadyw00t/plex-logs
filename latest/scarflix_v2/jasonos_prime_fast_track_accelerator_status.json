@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-10T00:27:02Z",
-  "duration_seconds": 1,
+  "updated_utc": "2026-06-19T09:25:01Z",
+  "duration_seconds": 0,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
   "next_autonomous_action": "Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.",
@@ -14,6 +14,25 @@
   "controlled_materialized_webdav_expansion_allowed": true,
   "primary_playback_architecture": "materialized_webdav_symlink",
   "materialized_decision_qa_status": "REVIEW",
+  "tv_first_priority_gate_status": "HELD_MATERIALIZED_QA_REQUIRED",
+  "tv_first_priority_gate": {
+    "component": "jasonos_prime_tv_first_expansion_priority_gate",
+    "status": "HELD_MATERIALIZED_QA_REQUIRED",
+    "updated_utc": "2026-06-19T09:25:00Z",
+    "user_priority": "TV first if movies and TV cannot progress concurrently",
+    "enforce_tv_first_when_concurrency_limited": true,
+    "generic_movie_or_unscoped_expansion_allowed": false,
+    "reason": "User priority is TV shows over movies when catalogue expansion cannot safely run both lanes concurrently.",
+    "materialized_decision_qa_pass": false,
+    "tv_metadata_enrichment_status": "PASS_ENRICHED_TV_YEAR_WAVES_CREATED",
+    "tv_enriched_unique": 122,
+    "active_2026_unique": 64,
+    "first_wave_id": "tv_active_2026_whole_show",
+    "first_wave_count": 64,
+    "first_wave_manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\held_year_waves_enriched\\tv_active_2026_whole_show.enriched.held.json",
+    "first_wave_manifest_exists": true,
+    "next_safe_action": "Finish Materialized QA and keep all expansion held until the TV-first wave can be executed safely."
+  },
   "staged_pending_count": 43,
   "expansion_pause": {
     "component": "scarflix_v2_expansion_pause",
@@ -56,9 +75,9 @@
     }
   },
   "actual_strm_counts": {
-    "movies": 0,
-    "tv": 0,
-    "total": 0,
+    "movies": 16,
+    "tv": 1,
+    "total": 17,
     "count_probe_timed_out": false,
     "staged_pending_probe_timed_out": false
   },
@@ -79,13 +98,13 @@
     "predictive_simulator": "PASS",
     "self_evolution": "REVIEW",
     "dashboard": "PASS",
-    "public_mirror": "PASS"
+    "public_mirror": "REVIEW_RECOVERABLE"
   },
   "next_4_hour_actions": [
     "Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.",
     "Refresh predictive simulation, self-evolution, worker mesh, dashboard, mirror, and 8805 keepalive every 5 minutes.",
     "If PlatformGate completes PASS, run candidate-source retry/quarantine verification immediately.",
-    "If candidate-source model completes PASS, launch controlled safe WebDAV expansion immediately.",
+    "If candidate-source model completes PASS, keep generic/movie expansion held and execute TV-first whole-show waves before movie waves.",
     "Publish updated dashboard and mirror artifacts after each cycle so phone status shows whether progress is real or stalled."
   ],
   "actions": [
@@ -94,14 +113,16 @@
       "task": "JasonOS_Prime_PredictiveSimulator",
       "reason": "fast_track_parallel_simulation",
       "status": "PASS",
-      "error": " "
+      "skipped": true,
+      "error": "skipped_orchestrator_owned job=run_predictive_simulator"
     },
     {
       "action": "task_run",
       "task": "JasonOS_Prime_SelfEvolutionCycle",
       "reason": "fast_track_reflective_planning",
       "status": "PASS",
-      "error": " "
+      "skipped": true,
+      "error": "skipped_orchestrator_owned job=run_self_evolution_cycle"
     },
     {
       "action": "task_run",
@@ -115,7 +136,8 @@
       "task": "JasonOS_Prime_PublicMirrorPublisher",
       "reason": "fast_track_public_status",
       "status": "PASS",
-      "error": " "
+      "skipped": true,
+      "error": "skipped_orchestrator_owned job=run_public_mirror_publisher"
     },
     {
       "action": "task_run",
@@ -129,12 +151,13 @@
       "task": "JasonOS_Prime_Real_AI_8805_Keepalive",
       "reason": "fast_track_daily_ai_keepalive",
       "status": "PASS",
-      "error": " "
+      "skipped": true,
+      "error": "skipped_orchestrator_owned job=run_ai_keepalive_check"
     },
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 2200,
+      "pid": 11020,
       "error": ""
     },
     {
