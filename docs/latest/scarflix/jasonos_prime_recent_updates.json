@@ -1,11 +1,46 @@
 {
-  "updated_utc": "2026-06-19T22:53:15.277Z",
+  "updated_utc": "2026-06-19T23:08:10.455Z",
   "source": "live status merge",
   "updates": [
     {
-      "utc": "2026-06-19T22:52:26Z",
+      "utc": "2026-06-19T23:07:46.663Z",
+      "title": "PlatformGate child QA active: WebDAV active gate",
+      "detail": "Latest child QA line: [2026-06-19T23:07:46Z] [INFO] Running concurrent WebDAV active gate worker for 1 entries."
+    },
+    {
+      "utc": "2026-06-19T23:07:16Z",
+      "title": "Durable PlatformGate runner RUNNING",
+      "detail": "Step running_platform_gate_attempt_1; owner_pid=5468; child_pid=23088"
+    },
+    {
+      "utc": "2026-06-19T23:07:16Z",
+      "title": "PlatformGate checkpoint RUNNING",
+      "detail": "Step running_platform_gate_attempt_1; visible=1; blockers=0"
+    },
+    {
+      "utc": "2026-06-19T23:07:15Z",
+      "title": "Autonomous controller: PLATFORM_GATE_RUNNING",
+      "detail": "PlatformGate runner already running; no inline wait"
+    },
+    {
+      "utc": "2026-06-19T23:05:18Z",
+      "title": "Autonomous controller: controller_already_running",
+      "detail": "existing controller lock is active"
+    },
+    {
+      "utc": "2026-06-19T23:00:09Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
+    },
+    {
+      "utc": "2026-06-19T22:58:51Z",
+      "title": "Durable PlatformGate runner PASS",
+      "detail": "Step platform_gate_pass; owner_pid=35428; child_pid="
+    },
+    {
+      "utc": "2026-06-19T22:58:51Z",
+      "title": "PlatformGate checkpoint PASS",
+      "detail": "Step platform_gate_pass; visible=1; blockers=0"
     },
     {
       "utc": "2026-06-19T16:55:02Z",
@@ -16,16 +51,6 @@
       "utc": "2026-06-13T07:08:43.775Z",
       "title": "PlatformGate child QA active: Plex client decision QA",
       "detail": "Latest child QA line: [2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity"
-    },
-    {
-      "utc": "2026-06-08T01:18:52Z",
-      "title": "Durable PlatformGate runner PASS",
-      "detail": "Step platform_gate_pass; owner_pid=44064; child_pid="
-    },
-    {
-      "utc": "2026-06-08T01:18:52Z",
-      "title": "PlatformGate checkpoint PASS",
-      "detail": "Step platform_gate_pass; visible=1; blockers=0"
     },
     {
       "utc": "2026-06-06T10:55:00Z",
@@ -46,31 +71,6 @@
       "utc": "2026-06-06T09:36:00Z",
       "title": "Five-minute watchdog and retry hardening applied",
       "detail": "Installed the watchdog scheduled task, added five-minute stall detection, and changed repeated transient PlatformGate reviews to retry/backoff instead of BLOCKED_LOOP."
-    },
-    {
-      "utc": "2026-06-06T08:25:00Z",
-      "title": "Watchdog and stall detector added",
-      "detail": "Created a persistent stall detector, dashboard-triggered fallback, watchdog status files, and Stall Risk dashboard column."
-    },
-    {
-      "utc": "2026-06-06T08:19:40Z",
-      "title": "Controller schedule re-enabled",
-      "detail": "Autonomous controller task was enabled and relaunched so future progress does not depend on Codex."
-    },
-    {
-      "utc": "2026-06-06T08:18:42Z",
-      "title": "Autonomous progress visibility added",
-      "detail": "Dashboard now shows recent achievements, heartbeat freshness, stall-watch state, and whether Codex is needed."
-    },
-    {
-      "utc": "2026-06-06T07:33:14Z",
-      "title": "Phone-readable dashboard published",
-      "detail": "Generated a rendered HTML dashboard and mirrored it to the public repository."
-    },
-    {
-      "utc": "2026-06-06T07:14:24Z",
-      "title": "Controller/PlatformGate reliability patched",
-      "detail": "Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added."
     }
   ]
 }
