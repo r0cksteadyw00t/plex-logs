@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-19T16:54:27Z",
-    "ended_utc":  "2026-06-19T16:58:26Z",
-    "duration_seconds":  239,
+    "status":  "PASS",
+    "started_utc":  "2026-06-19T17:07:08Z",
+    "ended_utc":  "2026-06-19T17:07:31Z",
+    "duration_seconds":  23,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,46 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  8234
+                           "ms":  1435
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  3097
+                           "ms":  1001
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  963
-                       }
-                   ],
-    "webdav_before":  {
-                          "ok":  true,
-                          "status_code":  200,
-                        {
-    "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-19T16:54:15Z",
-    "ended_utc":  "2026-06-19T16:58:26Z",
-    "duration_seconds":  251,
-    "no_publication_started":  true,
-    "no_expansion_started":  true,
-    "no_plex_db_mutation":  true,
-    "cmd_checks":  [
-                       {
-                           "check":  1,
-                           "ok":  true,
-                           "ms":  4081
-                       },
-                       {
-                           "check":  2,
-                           "ok":  true,
-                           "ms":  8241
-                       },
-                       {
-                           "check":  3,
-                           "ok":  true,
-                           "ms":  5731
+                           "ms":  241
                        }
                    ],
     "webdav_before":  {
@@ -100,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  15031,
+                          "ms":  15050,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       },
@@ -109,19 +80,21 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  15025,
+                          "ms":  15017,
                           "content_length":  "",
                           "error":  "The operation has timed out."
                       }
                   ],
-    "watch_now_probe_run":  true,
-    "watch_now_source":  "fresh",
+    "watch_now_probe_run":  false,
+    "watch_now_source":  "cached_previous_status",
     "actions":  [
-
+                    {
+                        "action":  "watch_now_head_probes_skipped_cooldown",
+                        "cooldown_seconds":  300
+                    }
                 ],
     "failures":  [
-                     "Watch Now probe failed: Gremlins",
-                     "Watch Now probe failed: Anna"
+
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260620.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
