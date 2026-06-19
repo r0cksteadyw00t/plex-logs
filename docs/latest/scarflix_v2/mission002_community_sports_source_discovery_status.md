@@ -2,7 +2,7 @@
 
 Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_LIVE_ENGINE
 
-Updated UTC: 2026-06-19T06:17:26.8991474Z
+Updated UTC: 2026-06-19T10:12:37.1953335Z
 
 ## Peer Review Outcome
 
@@ -16,14 +16,14 @@ Updated UTC: 2026-06-19T06:17:26.8991474Z
 - Sources processed: 176
 - Sources fetched: 64
 - Child sources discovered: 160
-- Duplicate streams suppressed: 224
-- Unique candidate channels extracted: 2632
-- Relevant candidate channels: 2632
+- Duplicate streams suppressed: 223
+- Unique candidate channels extracted: 2631
+- Relevant candidate channels: 2631
 - Probe attempts: 80
-- Probe PASS: 77
+- Probe PASS: 79
 - Review queue items: 200
-- Live source-engine candidates: 77
-- Pending review/engine candidates: 2632
+- Live source-engine candidates: 79
+- Pending review/engine candidates: 2631
 - Private pending source packages: 9
 
 ## Coverage Gaps
