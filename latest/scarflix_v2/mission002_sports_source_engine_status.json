@@ -1,8 +1,8 @@
 {
     "component":  "jasonos_mission002_sports_source_engine",
     "schema_version":  "jasonos.iptv.sports_source_engine_status.redacted.v1",
-    "status":  "PASS_EXTERNAL_SPORTS_CANDIDATES_READY_FOR_REVIEW",
-    "updated_utc":  "2026-06-19T02:46:11Z",
+    "status":  "PASS_EXTERNAL_LIVE_CANDIDATES_READY_FOR_REVIEW",
+    "updated_utc":  "2026-06-19T04:47:07Z",
     "active_backend_changed":  false,
     "pause_publication_preserved":  true,
     "private_config_present":  true,
@@ -21,8 +21,15 @@
                                        "live_ok_required":  true,
                                        "reliability_threshold":  70,
                                        "publish_requires_explicit_user_approval":  false,
-                                       "publish_requires_delegated_autopublisher_gates":  true
+                                       "publish_requires_delegated_autopublisher_gates":  true,
+                                       "unrestricted_live_mode":  true,
+                                       "target_policy_required":  false
                                    },
+    "non_regression_assertions":  {
+                                      "valid_non_target_channels_not_blocked_by_target_policy":  true,
+                                      "fallback_include_matches_all_live_channels":  true,
+                                      "denied_adult_spam_patterns_remain_active":  true
+                                  },
     "source_details_redacted":  true,
-    "next_safe_action":  "Let the gated AFL auto-publisher consume this report; it may publish only after policy, legitimacy, burn-in, idle Plex, backup, Threadfin, and Plex DVR gates pass."
+    "next_safe_action":  "Let the gated live auto-publisher consume this report; it may publish one channel only after readiness, dedupe, burn-in, idle Plex, backup, Threadfin, and Plex DVR gates pass."
 }
