@@ -1,34 +1,6 @@
-# JasonOS Prime Worker Mesh
+# JasonOS Prime WorkerMesh
 
-Status: PASS
-Updated UTC: 2026-06-10T01:08:03.104Z
-Mode: autonomous local worker mesh
-Processed commands this run: 0
-JasonOS short-worker tasks: JasonOS_Prime_PredictiveSimulator=Disabled, JasonOS_Prime_SelfEvolutionCycle=Disabled, JasonOS_Prime_PublicMirrorPublisher=Disabled, JasonOS_Prime_OutcomeDashboard=Ready, JasonOS_Prime_FastTrackAccelerator=Disabled, JasonOS_Prime_CommandCentre_8791_Keepalive=Disabled
-
-## Live Status
-- controller: PASS
-- milestone: CANDIDATE_SOURCE_MODEL_PASS
-- platform_gate: PASS
-- platform_step: platform_gate_pass
-- rclone: PASS
-- health: REVIEW
-- visible_parts: 1
-- predictive_simulator: PASS
-- self_evolution: REVIEW
-- public_mirror: PASS
-- outcome_dashboard: PASS
-- fast_track: PASS
-
-## Plugins
-- status_reporter: Summarise live JasonOS, ScarFLIX, rclone, PlatformGate and AI status.
-- scarflix_mission_control: Route ScarFLIX commands into safe gate, candidate model and expansion stages.
-- platform_gate_supervisor: Repair disabled detached gate tasks, clear stale state when no runner exists, and relaunch validation detached.
-- reflective_memory: Write concise local reflection notes from completed worker cycles.
-- plugin_scaffolder: Create dormant plugin manifests for future local skills without executing generated code.
-- predictive_simulator: Model the next ScarFLIX actions from current gate, source, and candidate status without publishing Plex rows.
-- self_evolution_planner: Generate reflective engineering proposals and local memory from current JasonOS and ScarFLIX telemetry.
-- command_centre_bridge: Bridge 8805 natural language commands into worker mesh actions and status outputs.
-- public_mirror_publisher: Publish JasonOS and ScarFLIX status JSON/Markdown to the existing GitHub telemetry mirror without exposing secrets.
-- outcome_dashboard: Generate the JasonOS Prime outcome dashboard and progress tracking artifacts from local status files.
-- fast_track_accelerator: Push short local status, prediction, candidate, and safe expansion actions every five minutes without running long validation inline.
+- Updated UTC: 2026-06-19T09:25:01.217Z
+- Status: RETIRED_ORCHESTRATOR_OWNED
+- Reason: Recurring task creation and repair ownership moved to JasonOS Prime Orchestrator.
+- No task mutation performed: true
