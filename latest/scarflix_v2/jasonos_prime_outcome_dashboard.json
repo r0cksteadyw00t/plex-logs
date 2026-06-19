@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-19T18:35:02Z",
+  "updated_utc": "2026-06-19T18:40:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,9 +11,9 @@
   "current_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 38,
+    "movie_strm_count": 0,
     "tv_strm_count": 0,
-    "total_strm_count": 38,
+    "total_strm_count": 0,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
-    "started_utc": "2026-06-19T18:25:16Z",
-    "updated_utc": "2026-06-19T18:26:16Z",
-    "ended_utc": "2026-06-19T18:26:16Z",
+    "started_utc": "2026-06-19T18:30:29Z",
+    "updated_utc": "2026-06-19T18:31:49Z",
+    "ended_utc": "2026-06-19T18:31:49Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -183,35 +183,35 @@
       "total": 44
     },
     "counts_after": {
-      "movies": 43,
+      "movies": 38,
       "tv": 0,
-      "total": 43
+      "total": 38
     },
     "checked_visible": 44,
-    "passed_visible": 43,
-    "failed_visible": 1,
-    "quarantined_this_run": 1,
+    "passed_visible": 38,
+    "failed_visible": 6,
+    "quarantined_this_run": 6,
     "restored_this_run": 0,
-    "retry_held_count": 42,
-    "permanent_quarantine_count": 24,
+    "retry_held_count": 40,
+    "permanent_quarantine_count": 26,
     "raw_live_proxy_visible_count": 0,
     "direct_https_visible_count": 0,
     "top_reason_codes": [
       {
         "code": "PROVIDER_429_RETRYABLE",
-        "count": 40
+        "count": 33
       },
       {
         "code": "INVALID_URL",
         "count": 20
       },
       {
-        "code": "PASS_DIRECT_URL_ADMITTED",
-        "count": 3
+        "code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "count": 12
       },
       {
-        "code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "count": 2
+        "code": "PASS_DIRECT_URL_ADMITTED",
+        "count": 5
       },
       {
         "code": "PROVIDER_503_RETRYABLE",
@@ -226,20 +226,53 @@
       {
         "relative_path": "Under the Stars (2025)/Under the Stars (2025) - ScarFLIX_part-0e650a334075a2ab.strm",
         "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "reason": "HEAD timed out",
+        "reason": "HEAD failed",
+        "retryable": true,
+        "url_host": "127.0.0.1:18789",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "Witches (2024)/Witches (2024) - ScarFLIX_part-0b7a32236f7c33ae.strm",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD failed",
+        "retryable": true,
+        "url_host": "127.0.0.1:18789",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD failed",
+        "retryable": true,
+        "url_host": "127.0.0.1:18789",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "We Are Your Friends (2015)/We Are Your Friends (2015) - ScarFLIX_part-334750992d0ea972.strm",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD failed",
+        "retryable": true,
+        "url_host": "127.0.0.1:18789",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "World War Z (2013)/World War Z (2013) - ScarFLIX_part-b3d2c9ec0d52670b.strm",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD failed",
+        "retryable": true,
+        "url_host": "127.0.0.1:18789",
+        "is_local_live_proxy": false
+      },
+      {
+        "relative_path": "Your Lucky Day (2023)/Your Lucky Day (2023) - ScarFLIX_part-c475e8d3d12ed21e.strm",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "reason": "HEAD failed",
         "retryable": true,
         "url_host": "127.0.0.1:18789",
         "is_local_live_proxy": false
       }
     ],
     "retry_queue_items": [
-      {
-        "relative_path": "Exhuma (2024)/Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
-        "reason_code": "PROVIDER_429_RETRYABLE",
-        "retry_after_utc": "2026-06-19T18:25:33Z",
-        "url_host": "127.0.0.1:18789",
-        "is_local_live_proxy": false
-      },
       {
         "relative_path": "No Escape (2015)/No Escape (2015) - ScarFLIX_part-776ba93e5fe98e73.strm",
         "reason_code": "PROVIDER_429_RETRYABLE",
@@ -305,8 +338,8 @@
       },
       {
         "relative_path": "World War Z (2013)/World War Z (2013) - ScarFLIX_part-b3d2c9ec0d52670b.strm",
-        "reason_code": "PROVIDER_429_RETRYABLE",
-        "retry_after_utc": "2026-06-19T18:30:54Z",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "retry_after_utc": "2026-06-19T18:41:47Z",
         "url_host": "127.0.0.1:18789",
         "is_local_live_proxy": false
       },
@@ -326,8 +359,8 @@
       },
       {
         "relative_path": "Your Lucky Day (2023)/Your Lucky Day (2023) - ScarFLIX_part-c475e8d3d12ed21e.strm",
-        "reason_code": "PROVIDER_429_RETRYABLE",
-        "retry_after_utc": "2026-06-19T18:30:54Z",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "retry_after_utc": "2026-06-19T18:41:47Z",
         "url_host": "127.0.0.1:18789",
         "is_local_live_proxy": false
       },
@@ -368,8 +401,8 @@
       },
       {
         "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
-        "reason_code": "PROVIDER_429_RETRYABLE",
-        "retry_after_utc": "2026-06-19T18:30:54Z",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "retry_after_utc": "2026-06-19T18:41:37Z",
         "url_host": "127.0.0.1:18789",
         "is_local_live_proxy": false
       },
@@ -389,8 +422,8 @@
       },
       {
         "relative_path": "We Are Your Friends (2015)/We Are Your Friends (2015) - ScarFLIX_part-334750992d0ea972.strm",
-        "reason_code": "PROVIDER_429_RETRYABLE",
-        "retry_after_utc": "2026-06-19T18:30:54Z",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "retry_after_utc": "2026-06-19T18:41:46Z",
         "url_host": "127.0.0.1:18789",
         "is_local_live_proxy": false
       },
@@ -423,13 +456,6 @@
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Brooklyn 45 (2023)/Brooklyn 45 (2023) - ScarFLIX_part-b6792ca4b07cc951.strm",
-        "reason_code": "PROVIDER_429_RETRYABLE",
-        "retry_after_utc": "2026-06-19T18:25:33Z",
-        "url_host": "127.0.0.1:18789",
-        "is_local_live_proxy": false
-      },
-      {
         "relative_path": "Trouble Man (2025)/Trouble Man (2025) - ScarFLIX_part-4d9b43102e6964a2.strm",
         "reason_code": "PROVIDER_429_RETRYABLE",
         "retry_after_utc": "2026-06-19T18:30:54Z",
@@ -446,7 +472,7 @@
       {
         "relative_path": "Under the Stars (2025)/Under the Stars (2025) - ScarFLIX_part-0e650a334075a2ab.strm",
         "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-        "retry_after_utc": "2026-06-19T18:36:13Z",
+        "retry_after_utc": "2026-06-19T18:41:32Z",
         "url_host": "127.0.0.1:18789",
         "is_local_live_proxy": false
       },
@@ -487,8 +513,8 @@
       },
       {
         "relative_path": "Witches (2024)/Witches (2024) - ScarFLIX_part-0b7a32236f7c33ae.strm",
-        "reason_code": "PROVIDER_429_RETRYABLE",
-        "retry_after_utc": "2026-06-19T18:30:54Z",
+        "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+        "retry_after_utc": "2026-06-19T18:41:33Z",
         "url_host": "127.0.0.1:18789",
         "is_local_live_proxy": false
       },
@@ -530,12 +556,12 @@
     ],
     "sample_passed": [
       {
-        "relative_path": "Bone Tomahawk (2015)/Bone Tomahawk (2015) - ScarFLIX_part-aca00ecd54a8c2dd.strm",
+        "relative_path": "Alvin and the Chipmunks The Road Chip (2015)/Alvin and the Chipmunks The Road Chip (2015) - ScarFLIX_part-97e87c999e0b180a.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Alvin and the Chipmunks The Road Chip (2015)/Alvin and the Chipmunks The Road Chip (2015) - ScarFLIX_part-97e87c999e0b180a.strm",
+        "relative_path": "Bone Tomahawk (2015)/Bone Tomahawk (2015) - ScarFLIX_part-aca00ecd54a8c2dd.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
@@ -550,22 +576,17 @@
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Frozen (2013)/Frozen (2013) - ScarFLIX_part-f80197bfdba7ee92.strm",
-        "reason_code": "PASS_DIRECT_URL_ADMITTED",
-        "is_local_live_proxy": false
-      },
-      {
         "relative_path": "Exhuma (2024)/Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Gravity (2013)/Gravity (2013) - ScarFLIX_part-47ca2230fe9b29d8.strm",
+        "relative_path": "Frozen (2013)/Frozen (2013) - ScarFLIX_part-f80197bfdba7ee92.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
+        "relative_path": "Gravity (2013)/Gravity (2013) - ScarFLIX_part-47ca2230fe9b29d8.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
@@ -585,6 +606,11 @@
         "is_local_live_proxy": false
       },
       {
+        "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
+        "reason_code": "PASS_DIRECT_URL_ADMITTED",
+        "is_local_live_proxy": false
+      },
+      {
         "relative_path": "Magic Mike XXL (2015)/Magic Mike XXL (2015) - ScarFLIX_part-6e6594ad431ad52a.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
@@ -600,12 +626,12 @@
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "No Escape (2015)/No Escape (2015) - ScarFLIX_part-776ba93e5fe98e73.strm",
+        "relative_path": "Non-Stop (2014)/Non-Stop (2014) - ScarFLIX_part-3008098892d8ec4a.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Non-Stop (2014)/Non-Stop (2014) - ScarFLIX_part-3008098892d8ec4a.strm",
+        "relative_path": "No Escape (2015)/No Escape (2015) - ScarFLIX_part-776ba93e5fe98e73.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
@@ -625,7 +651,7 @@
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Parasite (2019)/Parasite (2019) - ScarFLIX_part-ffc0dec3a81cd59b.strm",
+        "relative_path": "Percy Jackson Sea of Monsters (2013)/Percy Jackson Sea of Monsters (2013) - ScarFLIX_part-379cd8b10a205008.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       }
@@ -636,12 +662,12 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 25056
+          "pid": 45012
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 45948
+          "pid": 44504
         }
       ]
     },
@@ -971,7 +997,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-19T18:35:02Z",
+    "updated_utc": "2026-06-19T18:40:02Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -980,13 +1006,13 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-19T18:30:01Z",
+    "updated_utc": "2026-06-19T18:35:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
-      "legacy_movie_strm": 44,
+      "legacy_movie_strm": 38,
       "legacy_tv_strm": 0,
-      "legacy_total_strm": 44,
+      "legacy_total_strm": 38,
       "plex_safe_webdav_visible_rows": 1
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
@@ -1043,9 +1069,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
-      "started_utc": "2026-06-19T18:25:16Z",
-      "updated_utc": "2026-06-19T18:26:16Z",
-      "ended_utc": "2026-06-19T18:26:16Z",
+      "started_utc": "2026-06-19T18:30:29Z",
+      "updated_utc": "2026-06-19T18:31:49Z",
+      "ended_utc": "2026-06-19T18:31:49Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -1059,35 +1085,35 @@
         "total": 44
       },
       "counts_after": {
-        "movies": 43,
+        "movies": 38,
         "tv": 0,
-        "total": 43
+        "total": 38
       },
       "checked_visible": 44,
-      "passed_visible": 43,
-      "failed_visible": 1,
-      "quarantined_this_run": 1,
+      "passed_visible": 38,
+      "failed_visible": 6,
+      "quarantined_this_run": 6,
       "restored_this_run": 0,
-      "retry_held_count": 42,
-      "permanent_quarantine_count": 24,
+      "retry_held_count": 40,
+      "permanent_quarantine_count": 26,
       "raw_live_proxy_visible_count": 0,
       "direct_https_visible_count": 0,
       "top_reason_codes": [
         {
           "code": "PROVIDER_429_RETRYABLE",
-          "count": 40
+          "count": 33
         },
         {
           "code": "INVALID_URL",
           "count": 20
         },
         {
-          "code": "PASS_DIRECT_URL_ADMITTED",
-          "count": 3
+          "code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "count": 12
         },
         {
-          "code": "PROVIDER_TIMEOUT_RETRYABLE",
-          "count": 2
+          "code": "PASS_DIRECT_URL_ADMITTED",
+          "count": 5
         },
         {
           "code": "PROVIDER_503_RETRYABLE",
@@ -1102,20 +1128,53 @@
         {
           "relative_path": "Under the Stars (2025)/Under the Stars (2025) - ScarFLIX_part-0e650a334075a2ab.strm",
           "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-          "reason": "HEAD timed out",
+          "reason": "HEAD failed",
+          "retryable": true,
+          "url_host": "127.0.0.1:18789",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "Witches (2024)/Witches (2024) - ScarFLIX_part-0b7a32236f7c33ae.strm",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "reason": "HEAD failed",
+          "retryable": true,
+          "url_host": "127.0.0.1:18789",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "reason": "HEAD failed",
+          "retryable": true,
+          "url_host": "127.0.0.1:18789",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "We Are Your Friends (2015)/We Are Your Friends (2015) - ScarFLIX_part-334750992d0ea972.strm",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "reason": "HEAD failed",
+          "retryable": true,
+          "url_host": "127.0.0.1:18789",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "World War Z (2013)/World War Z (2013) - ScarFLIX_part-b3d2c9ec0d52670b.strm",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "reason": "HEAD failed",
+          "retryable": true,
+          "url_host": "127.0.0.1:18789",
+          "is_local_live_proxy": false
+        },
+        {
+          "relative_path": "Your Lucky Day (2023)/Your Lucky Day (2023) - ScarFLIX_part-c475e8d3d12ed21e.strm",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "reason": "HEAD failed",
           "retryable": true,
           "url_host": "127.0.0.1:18789",
           "is_local_live_proxy": false
         }
       ],
       "retry_queue_items": [
-        {
-          "relative_path": "Exhuma (2024)/Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
-          "reason_code": "PROVIDER_429_RETRYABLE",
-          "retry_after_utc": "2026-06-19T18:25:33Z",
-          "url_host": "127.0.0.1:18789",
-          "is_local_live_proxy": false
-        },
         {
           "relative_path": "No Escape (2015)/No Escape (2015) - ScarFLIX_part-776ba93e5fe98e73.strm",
           "reason_code": "PROVIDER_429_RETRYABLE",
@@ -1181,8 +1240,8 @@
         },
         {
           "relative_path": "World War Z (2013)/World War Z (2013) - ScarFLIX_part-b3d2c9ec0d52670b.strm",
-          "reason_code": "PROVIDER_429_RETRYABLE",
-          "retry_after_utc": "2026-06-19T18:30:54Z",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "retry_after_utc": "2026-06-19T18:41:47Z",
           "url_host": "127.0.0.1:18789",
           "is_local_live_proxy": false
         },
@@ -1202,8 +1261,8 @@
         },
         {
           "relative_path": "Your Lucky Day (2023)/Your Lucky Day (2023) - ScarFLIX_part-c475e8d3d12ed21e.strm",
-          "reason_code": "PROVIDER_429_RETRYABLE",
-          "retry_after_utc": "2026-06-19T18:30:54Z",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "retry_after_utc": "2026-06-19T18:41:47Z",
           "url_host": "127.0.0.1:18789",
           "is_local_live_proxy": false
         },
@@ -1244,8 +1303,8 @@
         },
         {
           "relative_path": "War Machine (2026)/War Machine (2026) - ScarFLIX_part-f999e2b09e1a3461.strm",
-          "reason_code": "PROVIDER_429_RETRYABLE",
-          "retry_after_utc": "2026-06-19T18:30:54Z",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "retry_after_utc": "2026-06-19T18:41:37Z",
           "url_host": "127.0.0.1:18789",
           "is_local_live_proxy": false
         },
@@ -1265,8 +1324,8 @@
         },
         {
           "relative_path": "We Are Your Friends (2015)/We Are Your Friends (2015) - ScarFLIX_part-334750992d0ea972.strm",
-          "reason_code": "PROVIDER_429_RETRYABLE",
-          "retry_after_utc": "2026-06-19T18:30:54Z",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "retry_after_utc": "2026-06-19T18:41:46Z",
           "url_host": "127.0.0.1:18789",
           "is_local_live_proxy": false
         },
@@ -1299,13 +1358,6 @@
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Brooklyn 45 (2023)/Brooklyn 45 (2023) - ScarFLIX_part-b6792ca4b07cc951.strm",
-          "reason_code": "PROVIDER_429_RETRYABLE",
-          "retry_after_utc": "2026-06-19T18:25:33Z",
-          "url_host": "127.0.0.1:18789",
-          "is_local_live_proxy": false
-        },
-        {
           "relative_path": "Trouble Man (2025)/Trouble Man (2025) - ScarFLIX_part-4d9b43102e6964a2.strm",
           "reason_code": "PROVIDER_429_RETRYABLE",
           "retry_after_utc": "2026-06-19T18:30:54Z",
@@ -1322,7 +1374,7 @@
         {
           "relative_path": "Under the Stars (2025)/Under the Stars (2025) - ScarFLIX_part-0e650a334075a2ab.strm",
           "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
-          "retry_after_utc": "2026-06-19T18:36:13Z",
+          "retry_after_utc": "2026-06-19T18:41:32Z",
           "url_host": "127.0.0.1:18789",
           "is_local_live_proxy": false
         },
@@ -1363,8 +1415,8 @@
         },
         {
           "relative_path": "Witches (2024)/Witches (2024) - ScarFLIX_part-0b7a32236f7c33ae.strm",
-          "reason_code": "PROVIDER_429_RETRYABLE",
-          "retry_after_utc": "2026-06-19T18:30:54Z",
+          "reason_code": "PROVIDER_TIMEOUT_RETRYABLE",
+          "retry_after_utc": "2026-06-19T18:41:33Z",
           "url_host": "127.0.0.1:18789",
           "is_local_live_proxy": false
         },
@@ -1406,12 +1458,12 @@
       ],
       "sample_passed": [
         {
-          "relative_path": "Bone Tomahawk (2015)/Bone Tomahawk (2015) - ScarFLIX_part-aca00ecd54a8c2dd.strm",
+          "relative_path": "Alvin and the Chipmunks The Road Chip (2015)/Alvin and the Chipmunks The Road Chip (2015) - ScarFLIX_part-97e87c999e0b180a.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Alvin and the Chipmunks The Road Chip (2015)/Alvin and the Chipmunks The Road Chip (2015) - ScarFLIX_part-97e87c999e0b180a.strm",
+          "relative_path": "Bone Tomahawk (2015)/Bone Tomahawk (2015) - ScarFLIX_part-aca00ecd54a8c2dd.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
@@ -1426,22 +1478,17 @@
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Frozen (2013)/Frozen (2013) - ScarFLIX_part-f80197bfdba7ee92.strm",
-          "reason_code": "PASS_DIRECT_URL_ADMITTED",
-          "is_local_live_proxy": false
-        },
-        {
           "relative_path": "Exhuma (2024)/Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Gravity (2013)/Gravity (2013) - ScarFLIX_part-47ca2230fe9b29d8.strm",
+          "relative_path": "Frozen (2013)/Frozen (2013) - ScarFLIX_part-f80197bfdba7ee92.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
+          "relative_path": "Gravity (2013)/Gravity (2013) - ScarFLIX_part-47ca2230fe9b29d8.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
@@ -1461,6 +1508,11 @@
           "is_local_live_proxy": false
         },
         {
+          "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
+          "reason_code": "PASS_DIRECT_URL_ADMITTED",
+          "is_local_live_proxy": false
+        },
+        {
           "relative_path": "Magic Mike XXL (2015)/Magic Mike XXL (2015) - ScarFLIX_part-6e6594ad431ad52a.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
@@ -1476,12 +1528,12 @@
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "No Escape (2015)/No Escape (2015) - ScarFLIX_part-776ba93e5fe98e73.strm",
+          "relative_path": "Non-Stop (2014)/Non-Stop (2014) - ScarFLIX_part-3008098892d8ec4a.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Non-Stop (2014)/Non-Stop (2014) - ScarFLIX_part-3008098892d8ec4a.strm",
+          "relative_path": "No Escape (2015)/No Escape (2015) - ScarFLIX_part-776ba93e5fe98e73.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
@@ -1501,7 +1553,7 @@
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Parasite (2019)/Parasite (2019) - ScarFLIX_part-ffc0dec3a81cd59b.strm",
+          "relative_path": "Percy Jackson Sea of Monsters (2013)/Percy Jackson Sea of Monsters (2013) - ScarFLIX_part-379cd8b10a205008.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         }
@@ -1512,12 +1564,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 25056
+            "pid": 45012
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 45948
+            "pid": 44504
           }
         ]
       },
@@ -1617,22 +1669,22 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-19T18:30:29Z",
+      "updated_utc": "2026-06-19T18:35:25Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
-        "movies": 44,
+        "movies": 38,
         "tv": 0,
-        "total": 44
+        "total": 38
       },
       "canary_status": "PAUSED_PLAYBACK_FIX",
       "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
       "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
       "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
       "direct_strm_admission_checked_visible": 44,
-      "direct_strm_admission_passed_visible": 43,
-      "direct_strm_admission_quarantined_this_run": 1,
-      "direct_strm_retry_held_count": 42,
+      "direct_strm_admission_passed_visible": 38,
+      "direct_strm_admission_quarantined_this_run": 6,
+      "direct_strm_retry_held_count": 40,
       "materialized_primary": true,
       "materialized_visible_verified": 18,
       "materialized_decision_qa_status": "REVIEW",
@@ -1650,12 +1702,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 41196
+              "pid": 17028
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 40132
+              "pid": 9404
             }
           ]
         }
@@ -1663,8 +1715,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1000331,
-    "safe_pipeline_log_age_seconds": 1057215,
+    "canary_status_age_seconds": 1000626,
+    "safe_pipeline_log_age_seconds": 1057510,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -1681,7 +1733,7 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=12364"
+        "detail": "pid=8912"
       },
       {
         "action": "run_playback_qa_controller",
@@ -1691,7 +1743,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=30460"
+        "detail": "pid=28692"
       }
     ],
     "blockers": []
@@ -1747,22 +1799,22 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-19T18:30:29Z",
+    "updated_utc": "2026-06-19T18:35:25Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
-      "movies": 44,
+      "movies": 38,
       "tv": 0,
-      "total": 44
+      "total": 38
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
     "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
     "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
     "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
     "direct_strm_admission_checked_visible": 44,
-    "direct_strm_admission_passed_visible": 43,
-    "direct_strm_admission_quarantined_this_run": 1,
-    "direct_strm_retry_held_count": 42,
+    "direct_strm_admission_passed_visible": 38,
+    "direct_strm_admission_quarantined_this_run": 6,
+    "direct_strm_retry_held_count": 40,
     "materialized_primary": true,
     "materialized_visible_verified": 18,
     "materialized_decision_qa_status": "REVIEW",
@@ -1780,12 +1832,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 41196
+            "pid": 17028
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 40132
+            "pid": 9404
           }
         ]
       }
