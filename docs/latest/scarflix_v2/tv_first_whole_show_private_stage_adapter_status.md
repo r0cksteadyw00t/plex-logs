@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T11:56:11Z
+Updated UTC: 2026-06-19T12:15:25Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 1
+Episodes enumerated: 8
 Episodes already staged: 0
-Episodes newly staged: 1
+Episodes newly staged: 8
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Murder: Suspect No.1: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
+- Run Away: enumerated=8; staged=8; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
