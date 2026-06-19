@@ -1,16 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T09:22:18Z
-Status: HELD_SENTINEL_ALERT_HIGH
-Shows requested: 0
-Episodes enumerated: 0
-Episodes already staged: 0
+Updated UTC: 2026-06-19T09:25:11Z
+Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Shows requested: 1
+Episodes enumerated: 40
+Episodes already staged: 40
 Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
+- Clarkson's Farm: enumerated=40; staged=0; already=40; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
@@ -27,4 +28,4 @@ Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 - source_urls_not_written_to_public_status: true
 - whole_show_intent: true
 
-Next safe action: Keep TV whole-show staging held until Sentinel clears.
+Next safe action: Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes.
