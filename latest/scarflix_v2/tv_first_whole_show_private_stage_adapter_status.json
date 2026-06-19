@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-19T12:48:33Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\clarkson_s_farm_117648_private_stage_manifest_20260619T124823Z.prepared.json",
+  "updated_utc": "2026-06-19T13:05:26Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\clarkson_s_farm_117648_private_stage_manifest_20260619T130521Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
-  "prior_private_stage_validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
@@ -28,8 +28,8 @@
   },
   "show_count": 1,
   "episodes_enumerated": 40,
-  "already_staged_count": 40,
-  "staged_count": 0,
+  "already_staged_count": 38,
+  "staged_count": 2,
   "review_count": 0,
   "shows": [
     {
@@ -38,8 +38,8 @@
       "seasons_expected": 5,
       "episodes_expected": 40,
       "episodes_enumerated": 40,
-      "already_staged_count": 40,
-      "staged_count": 0,
+      "already_staged_count": 38,
+      "staged_count": 2,
       "review_count": 0,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
@@ -58,7 +58,23 @@
       "tmdb_id": 117648,
       "season": 1,
       "episode": 2,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_clarkson_s_farm_117648_s01e02_166dd7d489e2",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n720p",
+        "title_excerpt": "Clarkson's Farm 2021 Seasons 1 to 4 Complete 720p WEB x264 [i_c] Season 1/Clarkson's Farm - S01E02 - Sheeping.mkv 👤 11 💾 1.23 GB ⚙️ ThePirateBay",
+        "info_hash": "166dd7d489e2a671ed23a80d81f015239f4b182e",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     },
     {
       "title": "Clarkson's Farm",
@@ -247,7 +263,23 @@
       "tmdb_id": 117648,
       "season": 4,
       "episode": 5,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_clarkson_s_farm_117648_s04e05_166dd7d489e2",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n720p",
+        "title_excerpt": "Clarkson's Farm 2021 Seasons 1 to 4 Complete 720p WEB x264 [i_c] Season 4/Clarkson's Farm - S04E05 - Endgaming.mkv 👤 11 💾 854.92 MB ⚙️ ThePirateBay",
+        "info_hash": "166dd7d489e2a671ed23a80d81f015239f4b182e",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     },
     {
       "title": "Clarkson's Farm",
@@ -327,6 +359,6 @@
       "status": "PASS_ALREADY_PRIVATE_STAGED"
     }
   ],
-  "status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
+  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
