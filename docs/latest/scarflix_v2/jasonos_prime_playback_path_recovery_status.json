@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-19T05:36:07Z",
-    "ended_utc":  "2026-06-19T05:38:31Z",
-    "duration_seconds":  144,
+    "status":  "PASS",
+    "started_utc":  "2026-06-19T05:42:02Z",
+    "ended_utc":  "2026-06-19T05:42:20Z",
+    "duration_seconds":  18,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  451
+                           "ms":  100
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  3867
+                           "ms":  63
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  4128
+                           "ms":  93
                        }
                    ],
     "webdav_before":  {
@@ -43,14 +43,14 @@
     "rclone_processes_after":  1,
     "s_media_before":  {
                            "path":  "S:\\media",
-                           "ok":  false,
-                           "timed_out":  true,
+                           "ok":  true,
+                           "timed_out":  false,
                            "error":  ""
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  false,
-                             "timed_out":  true,
+                             "ok":  true,
+                             "timed_out":  false,
                              "error":  ""
                          },
     "s_media_after":  {
@@ -61,8 +61,8 @@
                       },
     "s_catalog_after":  {
                             "path":  "S:\\media\\catalog",
-                            "ok":  false,
-                            "timed_out":  true,
+                            "ok":  true,
+                            "timed_out":  false,
                             "error":  ""
                         },
     "watch_now":  [
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  1805,
+                          "ms":  1399,
                           "content_length":  "1714768887",
                           "error":  ""
                       },
@@ -80,26 +80,21 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  1735,
+                          "ms":  4447,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       }
                   ],
-    "watch_now_probe_run":  true,
-    "watch_now_source":  "fresh",
+    "watch_now_probe_run":  false,
+    "watch_now_source":  "cached_previous_status",
     "actions":  [
                     {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  2,
-                                       "error":  ""
-                                   }
+                        "action":  "watch_now_head_probes_skipped_cooldown",
+                        "cooldown_seconds":  300
                     }
                 ],
     "failures":  [
-                     "S: media/catalog path is not reliably ready",
-                     "Watch Now probe failed: Anna"
+
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260619.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
