@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_tv_section6_hold_write_strategy_note_20260619_v37",
-      "created_at": "2026-06-19T09:50:11Z",
-      "expires_at": "2026-06-20T09:50:11Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_strategy_note_20260619_v38",
+      "created_at": "2026-06-19T10:06:41Z",
+      "expires_at": "2026-06-20T10:06:41Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,26 +14,18 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
-      },
-      "action": {
-        "type": "write_strategy_note",
-        "note": "Maintain TV Section 6 publication hold. Monitor remains active. No visible Plex publication or WebDAV mutation permitted until forensic review complete. Record status only."
+        "backoff": "none"
       },
       "actions": [
         {
-          "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_strategy_note_20260619_v37",
-            "auto_added_by_bridge": true
-          }
+          "action_type": "write_strategy_note",
+          "note": "Current TV Section 6 publication remains held pending forensic review of scanner latency. Phase 0 stabilisation continues with materialized/WebDAV primary architecture. No legacy resolver expansion. Monitor active every 15 minutes with full-season gate enforced. Next controlled steps limited to status recording only."
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-19T09:50:11Z",
+  "updated_utc": "2026-06-19T10:06:41Z",
   "source": "grok_api"
 }
