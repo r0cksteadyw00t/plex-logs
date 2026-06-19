@@ -1,31 +1,40 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "PASS",
-  "alert_level": "LOW",
-  "updated_utc": "2026-06-19T09:00:01Z",
+  "status": "ALERT",
+  "alert_level": "HIGH",
+  "updated_utc": "2026-06-19T09:22:10Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": false,
-  "repeat_count": 11,
+  "codex_action_required": true,
+  "repeat_count": 3,
   "signals": {
     "controller_status": "PASS",
     "controller_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
-    "controller_age_minutes": 5,
+    "controller_age_minutes": 2,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 5,
+    "watchdog_age_minutes": 2,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 5,
+    "dashboard_age_minutes": 2,
     "mirror_status": "PASS",
-    "mirror_age_minutes": 2,
+    "mirror_age_minutes": 19,
     "checkpoint_status": "PASS",
     "checkpoint_step": "platform_gate_pass",
-    "checkpoint_age_minutes": 16301,
-    "durable_platform_gate_age_minutes": 16301,
+    "checkpoint_age_minutes": 16323,
+    "durable_platform_gate_age_minutes": 16323,
     "platform_progress_fresh": false
   },
-  "recovery_actions": [],
-  "notes": [],
+  "recovery_actions": [
+    {
+      "task": "JasonOS_Prime_PublicMirrorPublisher",
+      "reason": "mirror_stale",
+      "result": "PASS",
+      "note": "skipped_orchestrator_owned job=run_public_mirror_publisher"
+    }
+  ],
+  "notes": [
+    "Same unresolved sentinel signature repeated for three cycles."
+  ],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
