@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-19T23:22:06.223Z
+Updated UTC: 2026-06-19T23:26:04.062Z
 Source: live status merge
 
+- 2026-06-19T23:25:36Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=33576; child_pid=5808
+- 2026-06-19T23:25:36Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=1; blockers=0
+- 2026-06-19T23:25:04.249Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-19T23:25:04Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=1 passed=0 failed_detected=1 pruned=0
 - 2026-06-19T23:21:24Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=31916; child_pid=
 - 2026-06-19T23:21:24Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
-- 2026-06-19T23:20:36.818Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-19T23:20:36Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=1 passed=0 failed_detected=1 pruned=0
 - 2026-06-19T23:20:30Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-19T23:19:24Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=31916; child_pid=11784
-- 2026-06-19T23:19:24Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=1; blockers=0
 - 2026-06-19T23:15:16Z - Autonomous controller: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED: transient-only REVIEW; relaunched detached PlatformGate runner
 - 2026-06-19T23:10:12Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-19T23:05:18Z - Autonomous controller: controller_already_running: existing controller lock is active
