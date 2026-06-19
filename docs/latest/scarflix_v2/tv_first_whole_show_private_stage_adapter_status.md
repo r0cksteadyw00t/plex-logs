@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T09:25:11Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Updated UTC: 2026-06-19T09:29:06Z
+Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 40
-Episodes already staged: 40
+Episodes enumerated: 25
+Episodes already staged: 0
 Episodes newly staged: 0
-Review: 0
+Review: 25
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Clarkson's Farm: enumerated=40; staged=0; already=40; review=0; source=request_episode_targets
+- Re:ZERO -Starting Life in Another World-: enumerated=25; staged=0; already=0; review=25; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
