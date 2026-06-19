@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T14:56:14Z
+Updated UTC: 2026-06-19T14:57:47Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 7
+Episodes enumerated: 1
 Episodes already staged: 0
-Episodes newly staged: 7
+Episodes newly staged: 1
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Ghosts Australia: enumerated=7; staged=7; already=0; review=0; source=request_episode_targets
+- Transformers: EarthSpark: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
