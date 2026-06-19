@@ -3,7 +3,7 @@
 Status: FAIL_ENGINEERING
 Milestone state: BLOCKED_DECISION
 Milestone: PlatformGate and candidate-source retry/quarantine model complete
-Updated UTC: 2026-06-19T16:55:09Z
+Updated UTC: 2026-06-19T16:55:04Z
 Current step: controller_exception
 Jason action required: False
 
