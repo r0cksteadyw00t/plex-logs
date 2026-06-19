@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
-    "status":  "REVIEW_SESSION_DETECTION_UNAVAILABLE_BACKGROUND_SUPPRESSED",
-    "started_utc":  "2026-06-19T05:16:40Z",
-    "ended_utc":  "2026-06-19T05:17:12Z",
-    "duration_seconds":  32,
+    "status":  "PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED",
+    "started_utc":  "2026-06-19T05:23:32Z",
+    "ended_utc":  "2026-06-19T05:23:33Z",
+    "duration_seconds":  1,
     "report_only":  false,
     "no_publication_started":  true,
     "no_expansion_started":  true,
@@ -13,64 +13,56 @@
     "cmd_health_skip_reason":  "guard default path avoids spawning cmd.exe during playback contention",
     "cmd_avg_ms":  0,
     "plex_session_state":  {
-                               "ok":  false,
-                               "active_count":  -1,
-                               "base_used":  "",
-                               "token_source":  "",
+                               "ok":  true,
+                               "active_count":  0,
+                               "base_used":  "http://192.168.1.184:32400",
+                               "token_source":  "plex_token.txt",
                                "attempts":  [
                                                 {
                                                     "base":  "http://127.0.0.1:32400",
                                                     "token_source":  "plex_token.txt",
                                                     "ok":  false,
-                                                    "status_code":  0,
+                                                    "status_code":  401,
                                                     "active_count":  -1,
-                                                    "error":  "The operation has timed out."
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
                                                 },
                                                 {
                                                     "base":  "http://127.0.0.1:32400",
                                                     "token_source":  "Plex Preferences.xml",
                                                     "ok":  false,
-                                                    "status_code":  0,
+                                                    "status_code":  401,
                                                     "active_count":  -1,
-                                                    "error":  "The operation has timed out."
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
                                                 },
                                                 {
                                                     "base":  "http://localhost:32400",
                                                     "token_source":  "plex_token.txt",
                                                     "ok":  false,
-                                                    "status_code":  0,
+                                                    "status_code":  401,
                                                     "active_count":  -1,
-                                                    "error":  "The operation has timed out."
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
                                                 },
                                                 {
                                                     "base":  "http://localhost:32400",
                                                     "token_source":  "Plex Preferences.xml",
                                                     "ok":  false,
-                                                    "status_code":  0,
+                                                    "status_code":  401,
                                                     "active_count":  -1,
-                                                    "error":  "The operation has timed out."
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
                                                 },
                                                 {
                                                     "base":  "http://192.168.1.184:32400",
                                                     "token_source":  "plex_token.txt",
-                                                    "ok":  false,
-                                                    "status_code":  0,
-                                                    "active_count":  -1,
-                                                    "error":  "The operation has timed out."
-                                                },
-                                                {
-                                                    "base":  "http://192.168.1.184:32400",
-                                                    "token_source":  "Plex Preferences.xml",
-                                                    "ok":  false,
-                                                    "status_code":  0,
-                                                    "active_count":  -1,
-                                                    "error":  "The operation has timed out."
+                                                    "ok":  true,
+                                                    "status_code":  200,
+                                                    "active_count":  0,
+                                                    "error":  ""
                                                 }
                                             ],
-                               "error":  "No Plex session endpoint candidate returned HTTP 200."
+                               "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-19T15:17:12+10:00",
+                            "local_time":  "2026-06-19T15:23:33+10:00",
                             "hour":  15,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
@@ -78,7 +70,7 @@
                             "off_peak_maintenance_allowed":  false
                         },
     "suppress_background_work":  true,
-    "quiet_reason":  "session_detection_unavailable_background_suppressed",
+    "quiet_reason":  "idle_outside_off_peak_window",
     "plex_background_jobs_found":  0,
     "plex_background_jobs":  {
 
@@ -97,7 +89,7 @@
                                     "reason":  "default_guard_path_keeps_log_analysis_off_to_avoid_contention"
                                 },
     "reasons":  [
-                    "Plex active-session detection did not return HTTP 200; background scanner suppression remains conservative."
+                    "Plex is idle, but the local time is outside the off-peak maintenance window."
                 ],
     "next_action":  "Keep QA/expansion held; verify Plex-client playback only after rclone/WebDAV error pressure falls and background scanner/analyzer load is quiet.",
     "files":  {
