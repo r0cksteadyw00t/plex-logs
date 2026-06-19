@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T13:55:50Z
+Updated UTC: 2026-06-19T14:14:43Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 8
+Episodes enumerated: 5
 Episodes already staged: 0
-Episodes newly staged: 8
+Episodes newly staged: 5
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- IT: Welcome to Derry: enumerated=8; staged=8; already=0; review=0; source=request_episode_targets
+- Celebrity Race Across the World: enumerated=5; staged=5; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
