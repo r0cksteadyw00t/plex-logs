@@ -1,30 +1,41 @@
 {
     "component":  "scarflix_v2_durable_platform_gate_runner",
-    "status":  "RUNNING",
-    "current_step":  "running_platform_gate_attempt_1",
+    "status":  "REVIEW",
+    "current_step":  "platform_gate_review",
     "started_utc":  "2026-06-19T23:10:07Z",
-    "last_progress_utc":  "2026-06-19T23:10:11Z",
-    "ended_utc":  "",
-    "duration_seconds":  35,
+    "last_progress_utc":  "2026-06-19T23:12:01Z",
+    "ended_utc":  "2026-06-19T23:12:02Z",
+    "duration_seconds":  115,
     "no_catalogue_expansion":  true,
     "single_owner":  true,
     "owner_pid":  23716,
-    "child_pid":  664,
-    "child_start_utc":  "2026-06-19T23:10:12Z",
-    "child_exit_code":  null,
-    "child_qa_last_progress_utc":  "2026-06-19T23:10:37Z",
+    "child_pid":  0,
+    "child_start_utc":  "2026-06-19T23:11:17Z",
+    "child_exit_code":  2,
+    "child_qa_last_progress_utc":  "2026-06-19T23:11:56Z",
     "child_qa_last_progress_path":  "D:\\PlexTools\\logs\\scarflix_v2_webdav_active_gate_20260620.log",
     "child_qa_stale_minutes":  0.1,
     "child_qa_stale_threshold_minutes":  5,
     "bounded_orphan_kill_minutes":  5,
     "child_qa_stall_count":  0,
     "attempts":  [
-
+                     {
+                         "attempt":  1,
+                         "exit_code":  2,
+                         "platform_status":  "REVIEW",
+                         "ended_utc":  "2026-06-19T23:10:46Z"
+                     },
+                     {
+                         "attempt":  2,
+                         "exit_code":  2,
+                         "platform_status":  "REVIEW",
+                         "ended_utc":  "2026-06-19T23:12:01Z"
+                     }
                  ],
     "stale_minutes":  5,
     "heartbeat_seconds":  30,
-    "heartbeat_updated_utc":  "2026-06-19T23:10:42Z",
-    "heartbeat_sequence":  5,
+    "heartbeat_updated_utc":  "2026-06-19T23:12:02Z",
+    "heartbeat_sequence":  14,
     "lock_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable.lock",
     "heartbeat_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable_heartbeat.json",
     "checkpoint_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.json",
@@ -50,19 +61,19 @@
     "platform_gate":  {
                           "component":  "scarflix_v2_platform_gate",
                           "status":  "REVIEW",
-                          "started_utc":  "2026-06-19T23:09:05Z",
-                          "ended_utc":  "2026-06-19T23:09:48Z",
-                          "duration_seconds":  43,
+                          "started_utc":  "2026-06-19T23:11:26Z",
+                          "ended_utc":  "2026-06-19T23:12:01Z",
+                          "duration_seconds":  35,
                           "visible":  {
                                           "count":  1,
                                           "movies":  1,
                                           "tv":  0
                                       },
                           "snapshot":  {
-                                           "id":  "20260619T230930Z",
+                                           "id":  "20260619T231147Z",
                                            "hash":  "0e27a141832b0a0bc2661d3dcbe62914effd20ad47fa04f7806726bdde32ece3",
-                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260619T230930Z.txt",
-                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260619T230930Z.json"
+                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260619T231147Z.txt",
+                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260619T231147Z.json"
                                        },
                           "qa":  {
                                      "active_gate":  {
