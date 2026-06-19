@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
     "status":  "PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED",
-    "started_utc":  "2026-06-19T07:55:30Z",
-    "ended_utc":  "2026-06-19T07:55:35Z",
-    "duration_seconds":  5,
+    "started_utc":  "2026-06-19T08:00:31Z",
+    "ended_utc":  "2026-06-19T08:00:37Z",
+    "duration_seconds":  7,
     "report_only":  false,
     "no_publication_started":  true,
     "no_expansion_started":  true,
@@ -62,8 +62,8 @@
                                "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-19T17:55:32+10:00",
-                            "hour":  17,
+                            "local_time":  "2026-06-19T18:00:34+10:00",
+                            "hour":  18,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
                             "in_off_peak_window":  false,
@@ -74,13 +74,13 @@
     "plex_background_jobs_found":  2,
     "plex_background_jobs":  [
                                  {
-                                     "pid":  20816,
+                                     "pid":  37584,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
                                  },
                                  {
-                                     "pid":  29436,
+                                     "pid":  38508,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
@@ -88,7 +88,18 @@
                              ],
     "stopped_jobs":  [
                          {
-                             "pid":  20816,
+                             "pid":  37584,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "plex_background_scanner_or_analyzer",
+                             "stopped":  true,
+                             "verified_gone":  false,
+                             "verification_state":  "stale_process_record_taskkill_no_running_instance",
+                             "taskkill_exit_code":  1,
+                             "taskkill_output":  "ERROR: The process with PID 37584 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
+                             "error":  "taskkill_reported_no_running_instance"
+                         },
+                         {
+                             "pid":  38508,
                              "name":  "Plex Media Scanner",
                              "reason":  "plex_background_scanner_or_analyzer",
                              "stopped":  true,
@@ -97,17 +108,6 @@
                              "taskkill_exit_code":  null,
                              "taskkill_output":  "",
                              "error":  ""
-                         },
-                         {
-                             "pid":  29436,
-                             "name":  "Plex Media Scanner",
-                             "reason":  "plex_background_scanner_or_analyzer",
-                             "stopped":  true,
-                             "verified_gone":  false,
-                             "verification_state":  "stale_process_record_taskkill_no_running_instance",
-                             "taskkill_exit_code":  1,
-                             "taskkill_output":  "ERROR: The process with PID 29436 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
-                             "error":  "taskkill_reported_no_running_instance"
                          }
                      ],
     "playback_error_pressure":  {
