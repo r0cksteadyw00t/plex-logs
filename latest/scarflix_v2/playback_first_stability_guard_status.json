@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
-    "status":  "REVIEW_SESSION_DETECTION_UNAVAILABLE_BACKGROUND_SUPPRESSED",
-    "started_utc":  "2026-06-19T07:10:31Z",
-    "ended_utc":  "2026-06-19T07:10:33Z",
-    "duration_seconds":  2,
+    "status":  "PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED",
+    "started_utc":  "2026-06-19T07:21:30Z",
+    "ended_utc":  "2026-06-19T07:21:37Z",
+    "duration_seconds":  7,
     "report_only":  false,
     "no_publication_started":  true,
     "no_expansion_started":  true,
@@ -13,64 +13,56 @@
     "cmd_health_skip_reason":  "guard default path avoids spawning cmd.exe during playback contention",
     "cmd_avg_ms":  0,
     "plex_session_state":  {
-                               "ok":  false,
-                               "active_count":  -1,
-                               "base_used":  "",
-                               "token_source":  "",
+                               "ok":  true,
+                               "active_count":  0,
+                               "base_used":  "http://192.168.1.184:32400",
+                               "token_source":  "plex_token.txt",
                                "attempts":  [
                                                 {
                                                     "base":  "http://127.0.0.1:32400",
                                                     "token_source":  "plex_token.txt",
                                                     "ok":  false,
-                                                    "status_code":  503,
+                                                    "status_code":  401,
                                                     "active_count":  -1,
-                                                    "error":  "The remote server returned an error: (503) Server Unavailable."
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
                                                 },
                                                 {
                                                     "base":  "http://127.0.0.1:32400",
                                                     "token_source":  "Plex Preferences.xml",
                                                     "ok":  false,
-                                                    "status_code":  503,
+                                                    "status_code":  401,
                                                     "active_count":  -1,
-                                                    "error":  "The remote server returned an error: (503) Server Unavailable."
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
                                                 },
                                                 {
                                                     "base":  "http://localhost:32400",
                                                     "token_source":  "plex_token.txt",
                                                     "ok":  false,
-                                                    "status_code":  503,
+                                                    "status_code":  401,
                                                     "active_count":  -1,
-                                                    "error":  "The remote server returned an error: (503) Server Unavailable."
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
                                                 },
                                                 {
                                                     "base":  "http://localhost:32400",
                                                     "token_source":  "Plex Preferences.xml",
                                                     "ok":  false,
-                                                    "status_code":  503,
+                                                    "status_code":  401,
                                                     "active_count":  -1,
-                                                    "error":  "The remote server returned an error: (503) Server Unavailable."
+                                                    "error":  "The remote server returned an error: (401) Unauthorized."
                                                 },
                                                 {
                                                     "base":  "http://192.168.1.184:32400",
                                                     "token_source":  "plex_token.txt",
-                                                    "ok":  false,
-                                                    "status_code":  503,
-                                                    "active_count":  -1,
-                                                    "error":  "The remote server returned an error: (503) Server Unavailable."
-                                                },
-                                                {
-                                                    "base":  "http://192.168.1.184:32400",
-                                                    "token_source":  "Plex Preferences.xml",
-                                                    "ok":  false,
-                                                    "status_code":  503,
-                                                    "active_count":  -1,
-                                                    "error":  "The remote server returned an error: (503) Server Unavailable."
+                                                    "ok":  true,
+                                                    "status_code":  200,
+                                                    "active_count":  0,
+                                                    "error":  ""
                                                 }
                                             ],
-                               "error":  "No Plex session endpoint candidate returned HTTP 200."
+                               "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-19T17:10:32+10:00",
+                            "local_time":  "2026-06-19T17:21:33+10:00",
                             "hour":  17,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
@@ -78,14 +70,46 @@
                             "off_peak_maintenance_allowed":  false
                         },
     "suppress_background_work":  true,
-    "quiet_reason":  "session_detection_unavailable_background_suppressed",
-    "plex_background_jobs_found":  0,
-    "plex_background_jobs":  {
-
-                             },
-    "stopped_jobs":  {
-
-                     },
+    "quiet_reason":  "idle_outside_off_peak_window",
+    "plex_background_jobs_found":  2,
+    "plex_background_jobs":  [
+                                 {
+                                     "pid":  22524,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
+                                 {
+                                     "pid":  30488,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 }
+                             ],
+    "stopped_jobs":  [
+                         {
+                             "pid":  22524,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "plex_background_scanner_or_analyzer",
+                             "stopped":  true,
+                             "verified_gone":  false,
+                             "verification_state":  "stale_process_record_taskkill_no_running_instance",
+                             "taskkill_exit_code":  1,
+                             "taskkill_output":  "ERROR: The process with PID 22524 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
+                             "error":  "taskkill_reported_no_running_instance"
+                         },
+                         {
+                             "pid":  30488,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "plex_background_scanner_or_analyzer",
+                             "stopped":  true,
+                             "verified_gone":  false,
+                             "verification_state":  "stale_process_record_taskkill_no_running_instance",
+                             "taskkill_exit_code":  1,
+                             "taskkill_output":  "ERROR: The process with PID 30488 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
+                             "error":  "taskkill_reported_no_running_instance"
+                         }
+                     ],
     "playback_error_pressure":  {
                                     "recent_error_count":  0,
                                     "top_hashes":  [
@@ -97,7 +121,10 @@
                                     "reason":  "default_guard_path_keeps_log_analysis_off_to_avoid_contention"
                                 },
     "reasons":  [
-                    "Plex active-session detection did not return HTTP 200; background scanner suppression remains conservative."
+                    "Plex is idle, but the local time is outside the off-peak maintenance window.",
+                    "Plex background scanner/analyzer work was active during playback-first mode.",
+                    "A Plex background scanner/analyzer process record remained visible, but taskkill reported no running instance; repeated stop attempts are suppressed.",
+                    "A Plex background scanner/analyzer process record remained visible, but taskkill reported no running instance; repeated stop attempts are suppressed."
                 ],
     "next_action":  "Keep QA/expansion held; verify Plex-client playback only after rclone/WebDAV error pressure falls and background scanner/analyzer load is quiet.",
     "files":  {
