@@ -1,10 +1,10 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-19T18:00:05Z
-Status: ALERT
-Alert level: HIGH
+Updated UTC: 2026-06-19T18:20:16Z
+Status: REVIEW
+Alert level: MEDIUM
 Jason action required: false
-Codex action required: true
+Codex action required: false
 
 ## Signals
 - controller_status: PASS
@@ -14,18 +14,17 @@ Codex action required: true
 - watchdog_risk: Medium
 - watchdog_age_minutes: 5
 - dashboard_status: PASS
-- dashboard_age_minutes: 10
+- dashboard_age_minutes: 5
 - mirror_status: PASS
-- mirror_age_minutes: 4
+- mirror_age_minutes: 25
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 16841
-- durable_platform_gate_age_minutes: 16841
+- checkpoint_age_minutes: 16861
+- durable_platform_gate_age_minutes: 16861
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- autonomous_controller.lock: stale_lock (PASS) removed age_min=5 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260619180005.bak
-- JasonOS_Prime_OutcomeDashboard: dashboard_stale (PASS) enable pid=30664; run pid=39688
+- JasonOS_Prime_PublicMirrorPublisher: mirror_stale (PASS) skipped_orchestrator_owned job=run_public_mirror_publisher
 
 ## Notes
-- Same unresolved sentinel signature repeated for three cycles.
+- None.
