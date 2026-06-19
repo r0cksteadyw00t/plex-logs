@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-19T18:45:02Z",
+  "updated_utc": "2026-06-19T18:50:01Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,9 +11,9 @@
   "current_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 0,
+    "movie_strm_count": 44,
     "tv_strm_count": 0,
-    "total_strm_count": 0,
+    "total_strm_count": 44,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
@@ -1115,7 +1115,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-19T18:45:02Z",
+    "updated_utc": "2026-06-19T18:50:01Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
@@ -1124,13 +1124,13 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-19T18:45:02Z",
+    "updated_utc": "2026-06-19T18:50:01Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
-      "legacy_movie_strm": 0,
+      "legacy_movie_strm": 44,
       "legacy_tv_strm": 0,
-      "legacy_total_strm": 0,
+      "legacy_total_strm": 44,
       "plex_safe_webdav_visible_rows": 1
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
@@ -1905,22 +1905,22 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-19T18:35:25Z",
+      "updated_utc": "2026-06-19T18:50:15Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
-        "movies": 38,
+        "movies": 44,
         "tv": 0,
-        "total": 38
+        "total": 44
       },
       "canary_status": "PAUSED_PLAYBACK_FIX",
       "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
       "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
       "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
-      "direct_strm_admission_checked_visible": 44,
-      "direct_strm_admission_passed_visible": 38,
-      "direct_strm_admission_quarantined_this_run": 6,
-      "direct_strm_retry_held_count": 40,
+      "direct_strm_admission_checked_visible": 38,
+      "direct_strm_admission_passed_visible": 0,
+      "direct_strm_admission_quarantined_this_run": 38,
+      "direct_strm_retry_held_count": 45,
       "materialized_primary": true,
       "materialized_visible_verified": 18,
       "materialized_decision_qa_status": "REVIEW",
@@ -1938,12 +1938,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 17028
+              "pid": 26616
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 9404
+              "pid": 43288
             }
           ]
         }
@@ -1951,8 +1951,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1001211,
-    "safe_pipeline_log_age_seconds": 1058095,
+    "canary_status_age_seconds": 1001518,
+    "safe_pipeline_log_age_seconds": 1058402,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -1967,9 +1967,19 @@
         "detail": "ok"
       },
       {
+        "action": "run_direct_strm_admission_gate",
+        "ok": true,
+        "detail": "pid=33324"
+      },
+      {
+        "action": "run_playback_qa_controller",
+        "ok": true,
+        "detail": "ok"
+      },
+      {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=3724"
+        "detail": "pid=30400"
       }
     ],
     "blockers": []
@@ -2025,22 +2035,22 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-19T18:35:25Z",
+    "updated_utc": "2026-06-19T18:50:15Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
-      "movies": 38,
+      "movies": 44,
       "tv": 0,
-      "total": 38
+      "total": 44
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
     "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
     "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
     "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
-    "direct_strm_admission_checked_visible": 44,
-    "direct_strm_admission_passed_visible": 38,
-    "direct_strm_admission_quarantined_this_run": 6,
-    "direct_strm_retry_held_count": 40,
+    "direct_strm_admission_checked_visible": 38,
+    "direct_strm_admission_passed_visible": 0,
+    "direct_strm_admission_quarantined_this_run": 38,
+    "direct_strm_retry_held_count": 45,
     "materialized_primary": true,
     "materialized_visible_verified": 18,
     "materialized_decision_qa_status": "REVIEW",
@@ -2058,12 +2068,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 17028
+            "pid": 26616
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 9404
+            "pid": 43288
           }
         ]
       }
