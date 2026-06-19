@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-19T23:41:07Z",
-    "ended_utc":  "2026-06-19T23:41:56Z",
-    "duration_seconds":  49,
+    "started_utc":  "2026-06-19T23:45:04Z",
+    "ended_utc":  "2026-06-19T23:47:14Z",
+    "duration_seconds":  130,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  74
+                           "ms":  902
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  50
+                           "ms":  266
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  15
+                           "ms":  72
                        }
                    ],
     "webdav_before":  {
@@ -43,8 +43,8 @@
     "rclone_processes_after":  1,
     "s_media_before":  {
                            "path":  "S:\\media",
-                           "ok":  false,
-                           "timed_out":  true,
+                           "ok":  true,
+                           "timed_out":  false,
                            "error":  ""
                        },
     "s_catalog_before":  {
@@ -61,8 +61,8 @@
                       },
     "s_catalog_after":  {
                             "path":  "S:\\media\\catalog",
-                            "ok":  true,
-                            "timed_out":  false,
+                            "ok":  false,
+                            "timed_out":  true,
                             "error":  ""
                         },
     "watch_now":  [
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  2145,
+                          "ms":  789,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       },
@@ -80,7 +80,7 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  677,
+                          "ms":  1589,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       }
@@ -92,12 +92,13 @@
                         "action":  "run_rclone_mount_keepalive",
                         "result":  {
                                        "ran":  true,
-                                       "exit_code":  0,
+                                       "exit_code":  1,
                                        "error":  ""
                                    }
                     }
                 ],
     "failures":  [
+                     "S: media/catalog path is not reliably ready",
                      "Watch Now probe failed: Gremlins",
                      "Watch Now probe failed: Anna"
                  ],
