@@ -1,6 +1,6 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-19T21:50:02Z
+Updated UTC: 2026-06-19T21:55:01Z
 Status: REVIEW
 Alert level: MEDIUM
 Jason action required: false
@@ -19,12 +19,12 @@ Codex action required: false
 - mirror_age_minutes: 2
 - checkpoint_status: PASS
 - checkpoint_step: platform_gate_pass
-- checkpoint_age_minutes: 17071
-- durable_platform_gate_age_minutes: 17071
+- checkpoint_age_minutes: 17076
+- durable_platform_gate_age_minutes: 17076
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- autonomous_controller.lock: stale_lock (PASS) removed age_min=5 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260619215002.bak
+- autonomous_controller.lock: stale_lock (PASS) removed age_min=5 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260619215501.bak
 
 ## Notes
 - None.
