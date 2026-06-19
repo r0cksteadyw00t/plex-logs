@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T05:18:34Z
+Updated UTC: 2026-06-19T05:35:19Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 11
+Episodes enumerated: 1
 Episodes already staged: 0
-Episodes newly staged: 11
+Episodes newly staged: 1
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- To Your Eternity: enumerated=11; staged=11; already=0; review=0; source=request_episode_targets
+- Celebrity Jeopardy!: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
