@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T04:55:56Z
+Updated UTC: 2026-06-19T05:15:41Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 1
+Episodes enumerated: 13
 Episodes already staged: 0
-Episodes newly staged: 1
+Episodes newly staged: 13
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- The Dog House: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
+- Hell's Paradise: enumerated=13; staged=13; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
