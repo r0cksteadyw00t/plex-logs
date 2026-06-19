@@ -1,19 +1,19 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-19T23:04:28.617Z
+Updated UTC: 2026-06-19T23:10:12.970Z
 Source: live status merge
 
-- 2026-06-19T22:52:26Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-19T23:09:53Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=5468; child_pid=
+- 2026-06-19T23:09:53Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
+- 2026-06-19T23:09:45.079Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-19T23:09:45Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=1 passed=0 failed_detected=1 pruned=0
+- 2026-06-19T23:09:02Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_2; owner_pid=5468; child_pid=
+- 2026-06-19T23:09:02Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_2; visible=1; blockers=0
+- 2026-06-19T23:07:15Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
+- 2026-06-19T23:05:18Z - Autonomous controller: controller_already_running: existing controller lock is active
+- 2026-06-19T23:00:09Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
+- 2026-06-19T22:58:51Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=35428; child_pid=
+- 2026-06-19T22:58:51Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
 - 2026-06-19T16:55:02Z - Autonomous controller: controller_exception: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-13T07:08:43.775Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity
-- 2026-06-08T01:18:52Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=44064; child_pid=
-- 2026-06-08T01:18:52Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
 - 2026-06-06T10:55:00Z - Watchdog-of-watchdog sentinel added: Added Node sentinel triggered by dashboard and mirror workers so disabled watchdogs, stale locks, stale checkpoints, and stale dashboard/mirror status self-detect and recover without blocking on PowerShell.
 - 2026-06-06T10:50:00Z - Redundant sentinel added: Added JasonOS_Prime_Sentinel as watchdog-of-watchdog to re-enable stalled tasks, retrigger recovery, and publish alert state when self-heal cannot resolve.
-- 2026-06-06T10:41:34Z - Dashboard stall recovered: Watchdog task was re-enabled, stale PlatformGate locks were backed up and removed, controller was retriggered, and InstantStatus was made non-recursive.
-- 2026-06-06T09:36:00Z - Five-minute watchdog and retry hardening applied: Installed the watchdog scheduled task, added five-minute stall detection, and changed repeated transient PlatformGate reviews to retry/backoff instead of BLOCKED_LOOP.
-- 2026-06-06T08:25:00Z - Watchdog and stall detector added: Created a persistent stall detector, dashboard-triggered fallback, watchdog status files, and Stall Risk dashboard column.
-- 2026-06-06T08:19:40Z - Controller schedule re-enabled: Autonomous controller task was enabled and relaunched so future progress does not depend on Codex.
-- 2026-06-06T08:18:42Z - Autonomous progress visibility added: Dashboard now shows recent achievements, heartbeat freshness, stall-watch state, and whether Codex is needed.
-- 2026-06-06T07:33:14Z - Phone-readable dashboard published: Generated a rendered HTML dashboard and mirrored it to the public repository.
-- 2026-06-06T07:14:24Z - Controller/PlatformGate reliability patched: Bounded checkpoint publishing, child-active detection, orphan-lock recovery, and 15-minute stale-progress recovery were added.
