@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v24",
-      "created_at": "2026-06-19T06:21:46Z",
-      "expires_at": "2026-06-20T06:21:46Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v25",
+      "created_at": "2026-06-19T06:37:32Z",
+      "expires_at": "2026-06-20T06:37:32Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,22 +13,19 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 2,
-        "backoff": "fixed"
+        "max_retries": 3,
+        "backoff": "exponential"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Maintaining TV Section 6 publication hold per forensic review. Materialized QA remains REVIEW. No legacy resolver expansion, no publishing, no source movement. Controlled materialized pipeline on pause pending local review.",
-            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v24"
-          }
+          "summary": "Phase 0 stabilisation: TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No Plex-visible TV mutations, no webdav_map changes, no partial-season publication. Monitor continues 15-minute cycle with 0 pending events. Materialized QA REVIEW; controlled materialized allowed only. Legacy resolver expansion paused."
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-19T06:21:46Z",
+  "updated_utc": "2026-06-19T06:37:32Z",
   "source": "grok_api"
 }
