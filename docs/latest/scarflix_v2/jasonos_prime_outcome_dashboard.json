@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-19T04:10:07Z",
+  "updated_utc": "2026-06-19T04:20:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,15 +11,15 @@
   "current_milestone": "CANDIDATE_SOURCE_MODEL_PASS",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 0,
+    "movie_strm_count": 10,
     "tv_strm_count": 0,
-    "total_strm_count": 0,
+    "total_strm_count": 10,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
     "legacy_resolver_default_allowed": false,
     "legacy_resolver_strm_count": 0,
-    "materialized_or_webdav_strm_count": 0,
+    "materialized_or_webdav_strm_count": 10,
     "materialized_webdav_file_count": 225,
     "materialized_webdav_artifact_count": 225,
     "materialized_current_publisher_visible_links": 0,
@@ -27,22 +27,22 @@
     "materialized_current_publisher_hashes": [],
     "materialized_canary_decision_qa_status": "RUNNING_PLEX_DECISION_PROBES",
     "materialized_canary_decision_qa_target_count": 249,
-    "materialized_canary_decision_qa_checked": 6,
+    "materialized_canary_decision_qa_checked": 38,
     "materialized_canary_decision_qa_rows_found": 143,
-    "materialized_canary_decision_qa_passed": 5,
-    "materialized_canary_decision_qa_failed": 1,
+    "materialized_canary_decision_qa_passed": 34,
+    "materialized_canary_decision_qa_failed": 4,
     "materialized_canary_target_count": 2,
     "materialized_canary_published": 2,
     "materialized_canary_hls_pass": 2,
     "materialized_canary_decision_pass": 7,
-    "materialized_playback_success_rate": 83,
+    "materialized_playback_success_rate": 89,
     "materialized_visibility_cleanup_status": "PASS_NO_VISIBLE_FAILURES_MOVED",
     "materialized_visibility_cleanup_quarantined_this_run": 0,
     "materialized_visibility_cleanup_skipped": 0,
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-19T03:57:31Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-19T04:13:17Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -125,9 +125,9 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 8462,
-    "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-19T04:10:31Z",
+    "platform_child_progress_age_minutes": 8471,
+    "mirror_updated_age_minutes": 12,
+    "next_check_utc": "2026-06-19T04:20:27Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 8461,
+    "age_minutes": 8471,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-19T04:05:27Z",
+    "updated_utc": "2026-06-19T04:15:18Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-19T04:05:05Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-19T04:20:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -538,11 +538,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-19T03:57:31Z",
-    "last_successful_grok_instruction_utc": "2026-06-19T03:57:31Z",
+    "bridge_updated_utc": "2026-06-19T04:13:17Z",
+    "last_successful_grok_instruction_utc": "2026-06-19T04:13:17Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-19T03:57:40Z",
+    "consumer_updated_utc": "2026-06-19T04:13:24Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -552,7 +552,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-19T04:05:12Z",
+      "utc": "2026-06-19T04:15:23Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -635,7 +635,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-19T03:57:40Z - structured instruction loop",
+      "last_change": "2026-06-19T04:13:24Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
@@ -645,8 +645,8 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-13T07:08:43.775Z - materialized canary Plex decision QA",
-      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=RUNNING_PLEX_DECISION_PROBES, targets=249, rows_found=143, checked=6, decision=5/6, failed=1, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=0; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=0, tv=0, total=0. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=0/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_QUARANTINED_VISIBLE_FAILURES, checked=20, passed_visible=0, quarantined_this_run=20, retry_held=1. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
-      "progress": 28,
+      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=RUNNING_PLEX_DECISION_PROBES, targets=249, rows_found=143, checked=38, decision=34/38, failed=4, success_rate=89%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=10; materialized visible links=225 (publisher=0, scan=225). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=10, tv=0, total=10. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=0/5, decision=0/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_QUARANTINED_VISIBLE_FAILURES, checked=20, passed_visible=0, quarantined_this_run=20, retry_held=1. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=PASS; global health=REVIEW (blocking=false); blocked_by=none. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=PASS/PASS; durable=PASS; owner_pid=44064; child_pid=.",
+      "progress": 33,
       "eta": "after all-visible materialized QA passes",
       "stall_risk": "Medium"
     },
@@ -654,7 +654,7 @@
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
       "last_change": "2026-06-10T00:27:02Z - CONTROLLED_MATERIALIZED_QA_HOLD",
-      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=0.",
+      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=10.",
       "progress": 30,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
@@ -708,7 +708,7 @@
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
       "last_change": "2026-06-08T01:18:52Z - Durable PlatformGate ownership active",
-      "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=0; all-visible materialized decision=5/6; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
+      "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=10; all-visible materialized decision=34/38; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 18,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
       "stall_risk": "Medium"
@@ -724,13 +724,13 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-19T04:10:07Z",
+    "updated_utc": "2026-06-19T04:20:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
-      "legacy_movie_strm": 0,
+      "legacy_movie_strm": 10,
       "legacy_tv_strm": 0,
-      "legacy_total_strm": 0,
+      "legacy_total_strm": 10,
       "plex_safe_webdav_visible_rows": 1
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
@@ -1112,9 +1112,9 @@
     },
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
-      "status": "RUNNING",
-      "updated_utc": "2026-06-19T04:05:26Z",
-      "current_step": "materialized_plex_decision_qa_started",
+      "status": "WAITING_OVERLAP",
+      "updated_utc": "2026-06-19T04:20:17Z",
+      "current_step": "validation_overlap_running",
       "jason_action_required": false,
       "counts": {
         "movies": 10,
@@ -1124,21 +1124,31 @@
       "canary_status": "PAUSED_PLAYBACK_FIX",
       "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
       "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-      "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-      "direct_strm_admission_checked_visible": 0,
+      "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+      "direct_strm_admission_checked_visible": 20,
       "direct_strm_admission_passed_visible": 0,
-      "direct_strm_admission_quarantined_this_run": 0,
+      "direct_strm_admission_quarantined_this_run": 20,
       "direct_strm_retry_held_count": 1,
       "materialized_primary": true,
       "materialized_visible_verified": 18,
-      "materialized_decision_qa_status": "REVIEW",
-      "materialized_decision_qa_target_count": 229,
-      "materialized_decision_qa_passed": 117,
-      "materialized_decision_qa_failed": 0,
+      "materialized_decision_qa_status": "RUNNING_PLEX_DECISION_PROBES",
+      "materialized_decision_qa_target_count": 239,
+      "materialized_decision_qa_passed": 32,
+      "materialized_decision_qa_failed": 5,
       "decision_qa_status": "PASS",
       "concurrent_stream_qa_status": "REVIEW",
       "ignored_overlap": [],
-      "overlap_running": [],
+      "overlap_running": [
+        {
+          "name": "ScarFLIX_v2_MaterializedPlexDecisionQA",
+          "ok": true,
+          "status": "Running",
+          "scheduled_state": "Enabled",
+          "last_run": "19/06/2026 2:05:29 PM",
+          "last_result": "267009",
+          "next_run": "N/A"
+        }
+      ],
       "actions": [
         {
           "action": "trigger_plex_scans_materialized",
@@ -1146,39 +1156,21 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 10612
+              "pid": 26532
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 3160
+              "pid": 27520
             }
           ]
-        },
-        {
-          "action": "start_materialized_plex_decision_qa_task",
-          "result": {
-            "task": "ScarFLIX_v2_MaterializedPlexDecisionQA",
-            "enable_ok": true,
-            "run_ok": true,
-            "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" have been changed.",
-            "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\"."
-          }
-        },
-        {
-          "action": "start_materialized_plex_decision_qa_node_fallback",
-          "result": {
-            "ok": true,
-            "pid": 20736,
-            "script": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js"
-          }
         }
       ],
-      "next_action": "Detached materialized/WebDAV Plex decision QA is running or queued."
+      "next_action": "Wait for current ScarFLIX validation task to finish."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 948730,
-    "safe_pipeline_log_age_seconds": 1005621,
+    "canary_status_age_seconds": 949319,
+    "safe_pipeline_log_age_seconds": 1006203,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -1189,13 +1181,23 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
+      },
+      {
+        "action": "run_direct_strm_admission_gate",
+        "ok": true,
+        "detail": "pid=35488"
+      },
+      {
+        "action": "run_playback_qa_controller",
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=25220"
+        "detail": "pid=33928"
       }
     ],
     "blockers": []
@@ -1250,9 +1252,9 @@
   },
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
-    "status": "RUNNING",
-    "updated_utc": "2026-06-19T04:05:26Z",
-    "current_step": "materialized_plex_decision_qa_started",
+    "status": "WAITING_OVERLAP",
+    "updated_utc": "2026-06-19T04:20:17Z",
+    "current_step": "validation_overlap_running",
     "jason_action_required": false,
     "counts": {
       "movies": 10,
@@ -1262,21 +1264,31 @@
     "canary_status": "PAUSED_PLAYBACK_FIX",
     "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
     "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-    "direct_strm_admission_status": "REVIEW_RETRY_HELD",
-    "direct_strm_admission_checked_visible": 0,
+    "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+    "direct_strm_admission_checked_visible": 20,
     "direct_strm_admission_passed_visible": 0,
-    "direct_strm_admission_quarantined_this_run": 0,
+    "direct_strm_admission_quarantined_this_run": 20,
     "direct_strm_retry_held_count": 1,
     "materialized_primary": true,
     "materialized_visible_verified": 18,
-    "materialized_decision_qa_status": "REVIEW",
-    "materialized_decision_qa_target_count": 229,
-    "materialized_decision_qa_passed": 117,
-    "materialized_decision_qa_failed": 0,
+    "materialized_decision_qa_status": "RUNNING_PLEX_DECISION_PROBES",
+    "materialized_decision_qa_target_count": 239,
+    "materialized_decision_qa_passed": 32,
+    "materialized_decision_qa_failed": 5,
     "decision_qa_status": "PASS",
     "concurrent_stream_qa_status": "REVIEW",
     "ignored_overlap": [],
-    "overlap_running": [],
+    "overlap_running": [
+      {
+        "name": "ScarFLIX_v2_MaterializedPlexDecisionQA",
+        "ok": true,
+        "status": "Running",
+        "scheduled_state": "Enabled",
+        "last_run": "19/06/2026 2:05:29 PM",
+        "last_result": "267009",
+        "next_run": "N/A"
+      }
+    ],
     "actions": [
       {
         "action": "trigger_plex_scans_materialized",
@@ -1284,34 +1296,16 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 10612
+            "pid": 26532
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 3160
+            "pid": 27520
           }
         ]
-      },
-      {
-        "action": "start_materialized_plex_decision_qa_task",
-        "result": {
-          "task": "ScarFLIX_v2_MaterializedPlexDecisionQA",
-          "enable_ok": true,
-          "run_ok": true,
-          "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" have been changed.",
-          "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\"."
-        }
-      },
-      {
-        "action": "start_materialized_plex_decision_qa_node_fallback",
-        "result": {
-          "ok": true,
-          "pid": 20736,
-          "script": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js"
-        }
       }
     ],
-    "next_action": "Detached materialized/WebDAV Plex decision QA is running or queued."
+    "next_action": "Wait for current ScarFLIX validation task to finish."
   }
 }
