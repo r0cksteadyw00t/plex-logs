@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v27",
-      "created_at": "2026-06-19T07:09:34Z",
-      "expires_at": "2026-06-20T07:09:34Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v28",
+      "created_at": "2026-06-19T07:24:50Z",
+      "expires_at": "2026-06-20T07:24:50Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,15 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v27",
-            "auto_added_by_bridge": true
+            "summary": "TV Section 6 publication hold maintained. No Plex-visible TV mutations, no WebDAV changes, monitor active on 15-minute schedule. Materialized QA remains REVIEW. No legacy resolver or publishing actions executed.",
+            "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v28"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-19T07:09:34Z",
+  "updated_utc": "2026-06-19T07:24:50Z",
   "source": "grok_api"
 }
