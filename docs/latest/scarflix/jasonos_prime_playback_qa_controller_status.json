@@ -1,42 +1,32 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-19T04:55:39Z",
-  "current_step": "validation_overlap_running",
+  "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
+  "updated_utc": "2026-06-19T05:00:40Z",
+  "current_step": "materialized_decision_failed",
   "jason_action_required": false,
   "counts": {
     "movies": 10,
-    "tv": 1,
-    "total": 11
+    "tv": 0,
+    "total": 10
   },
   "canary_status": "PAUSED_PLAYBACK_FIX",
   "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
   "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-  "direct_strm_admission_status": "PASS",
+  "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
   "direct_strm_admission_checked_visible": 11,
-  "direct_strm_admission_passed_visible": 11,
-  "direct_strm_admission_quarantined_this_run": 0,
-  "direct_strm_retry_held_count": 0,
+  "direct_strm_admission_passed_visible": 10,
+  "direct_strm_admission_quarantined_this_run": 1,
+  "direct_strm_retry_held_count": 1,
   "materialized_primary": true,
   "materialized_visible_verified": 18,
-  "materialized_decision_qa_status": "RUNNING_PLEX_DECISION_PROBES",
+  "materialized_decision_qa_status": "REVIEW",
   "materialized_decision_qa_target_count": 249,
   "materialized_decision_qa_passed": 103,
-  "materialized_decision_qa_failed": 18,
+  "materialized_decision_qa_failed": 21,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
-  "overlap_running": [
-    {
-      "name": "ScarFLIX_v2_MaterializedPlexDecisionQA",
-      "ok": true,
-      "status": "Running",
-      "scheduled_state": "Enabled",
-      "last_run": "19/06/2026 2:05:29 PM",
-      "last_result": "267009",
-      "next_run": "N/A"
-    }
-  ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans_materialized",
@@ -44,15 +34,15 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 2356
+          "pid": 38516
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 35400
+          "pid": 15716
         }
       ]
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Quarantine failed materialized source/release and keep title retryable."
 }
