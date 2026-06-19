@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_strategy_note_20260619_v1",
-      "created_at": "2026-06-19T00:12:14Z",
-      "expires_at": "2026-06-20T00:12:14Z",
+      "instruction_id": "phase0_tv_section6_forensic_status_summary_20260619_v2",
+      "created_at": "2026-06-19T00:28:14Z",
+      "expires_at": "2026-06-20T00:28:14Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,26 +14,19 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 300
-      },
-      "action": {
-        "type": "write_strategy_note",
-        "note": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No publication, symlink, or Plex mutation. Recommend local review of Section 6 scanner timing before any retry. Full-season gate remains enforced."
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_tv_section6_forensic_strategy_note_20260619_v1",
-            "auto_added_by_bridge": true
-          }
+          "summary": "TV Section 6 publication remains HELD per forensic review. Materialized QA REVIEW. No legacy expansion. Monitor active. Dashboard truth authoritative.",
+          "source_instruction_id": "phase0_tv_section6_forensic_status_summary_20260619_v2"
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-19T00:12:14Z",
+  "updated_utc": "2026-06-19T00:28:14Z",
   "source": "grok_api"
 }
