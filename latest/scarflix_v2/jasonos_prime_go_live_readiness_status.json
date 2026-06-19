@@ -2,11 +2,11 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-19T05:19:03Z",
-    "updated_utc":  "2026-06-19T05:19:17Z",
+    "started_utc":  "2026-06-19T05:24:03Z",
+    "updated_utc":  "2026-06-19T05:24:16Z",
     "report_only":  false,
     "go_live_ready":  false,
-    "active_plex_sessions":  -1,
+    "active_plex_sessions":  0,
     "sentinel":  {
                      "status":  "PASS",
                      "alert_level":  "LOW"
@@ -25,15 +25,14 @@
                      {
                          "outcome_id":  "O-PLAYBACK",
                          "name":  "Reliable Plex playback first",
-                         "go_live_status":  "REVIEW_NOT_GO_LIVE_READY",
+                         "go_live_status":  "PASS_INFRASTRUCTURE_READY_REQUIRES_CLIENT_CONFIRMATION",
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
-                                          "Guard=REVIEW_SESSION_DETECTION_UNAVAILABLE_BACKGROUND_SUPPRESSED ActiveSessions=-1 PlexWatchdog=REVIEW_PLEX_PROCESS_RUNNING_HTTP_UNREACHABLE PlaybackPath=REVIEW"
+                                          "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=PASS"
                                       ],
                          "blockers":  [
-                                          "Plex watchdog is not PASS: REVIEW_PLEX_PROCESS_RUNNING_HTTP_UNREACHABLE.",
-                                          "Playback path recovery is not PASS: REVIEW."
+
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
                          "requires_quiet_window":  false,
@@ -74,8 +73,8 @@
                      {
                          "outcome_id":  "O-MISSION-002-IPTV",
                          "name":  "IPTV-only Live TV ready for cutover",
-                         "go_live_status":  "HELD_READY_FOR_QUIET_WINDOW",
-                         "progress_percent":  80,
+                         "go_live_status":  "PASS_VIRTUAL_ADAPTER_READY_PLEX_ATTACH_PENDING",
+                         "progress_percent":  90,
                          "summary":  "IPTV-only package is ready and guarded; no physical tuner path is allowed.",
                          "evidence":  [
                                           "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=FAIL_THREADFIN_COMPOSE_MISSING Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=PASS_THREADFIN_ALREADY_READY_PLEX_ATTACH_HELD PhysicalTuner=false"
@@ -155,14 +154,6 @@
                  ],
     "blockers":  [
                      {
-                         "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex watchdog is not PASS: REVIEW_PLEX_PROCESS_RUNNING_HTTP_UNREACHABLE."
-                     },
-                     {
-                         "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Playback path recovery is not PASS: REVIEW."
-                     },
-                     {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "blocker":  "Materialized QA is not full PASS: REVIEW 103/124 failed=21. retry_held=0 retry_tracked=21."
                      }
@@ -171,7 +162,7 @@
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackFirstStabilityGuard",
                                 "exists":  true,
-                                "state":  "Disabled",
+                                "state":  "Ready",
                                 "last_result":  0
                             },
                             {
