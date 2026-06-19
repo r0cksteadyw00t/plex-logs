@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-19T03:42:37Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\house_of_villains_233815_private_stage_manifest_20260619T034224Z.prepared.json",
+  "updated_utc": "2026-06-19T03:54:42Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\rich_holiday_poor_holiday_99669_private_stage_manifest_20260619T035402Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "prior_private_stage_validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
@@ -10,7 +10,7 @@
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "max_shows": 1,
-  "max_episodes": 1,
+  "max_episodes": 2,
   "safety": {
     "private_stage_only": true,
     "no_publication_started": true,
@@ -27,34 +27,72 @@
     "current_retry_held_hashes_block_restage": true
   },
   "show_count": 1,
-  "episodes_enumerated": 1,
+  "episodes_enumerated": 2,
   "already_staged_count": 0,
-  "staged_count": 0,
-  "review_count": 1,
+  "staged_count": 2,
+  "review_count": 0,
   "shows": [
     {
-      "title": "House of Villains",
-      "tmdb_id": 233815,
-      "seasons_expected": 3,
-      "episodes_expected": 1,
-      "episodes_enumerated": 1,
+      "title": "Rich Holiday, Poor Holiday",
+      "tmdb_id": 99669,
+      "seasons_expected": 6,
+      "episodes_expected": 2,
+      "episodes_enumerated": 2,
       "already_staged_count": 0,
-      "staged_count": 0,
-      "review_count": 1,
+      "staged_count": 2,
+      "review_count": 0,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
     }
   ],
   "results_redacted": [
     {
-      "title": "House of Villains",
-      "tmdb_id": 233815,
-      "season": 1,
+      "title": "Rich Holiday, Poor Holiday",
+      "tmdb_id": 99669,
+      "season": 6,
       "episode": 1,
-      "status": "REVIEW_STREMIO_LOOKUP_FAILED",
-      "reason": "HTTP_429"
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_rich_holiday_poor_holiday_99669_s06e01_4ad75b354b15",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Rich Holiday Poor Holiday S06E01 1080p HDTV H264-DARKFLiX 👤 0 💾 2.76 GB ⚙️ EZTV",
+        "info_hash": "4ad75b354b153e4b314847d3eb273a4dfd23c5fe",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Rich Holiday, Poor Holiday",
+      "tmdb_id": 99669,
+      "season": 6,
+      "episode": 2,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_rich_holiday_poor_holiday_99669_s06e02_0a22bc012462",
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n720p",
+        "title_excerpt": "Rich Holiday Poor Holiday S06E02 720p WEB H264-JFF 👤 2 💾 991.7 MB ⚙️ EZTV",
+        "info_hash": "0a22bc01246282decb4bb6b7f8efa22c773a333f",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     }
   ],
-  "status": "REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED",
+  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
