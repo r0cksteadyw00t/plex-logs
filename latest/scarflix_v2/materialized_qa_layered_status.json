@@ -1,193 +1,23 @@
 {
   "component": "scarflix_v2_streaming_layered_validator",
-  "updated_utc": "2026-06-19T04:10:37Z",
+  "updated_utc": "2026-06-19T04:11:03Z",
   "status": "RUNNING",
   "qa_component": "scarflix_v2_materialized_plex_decision_qa_node",
   "decision_probe_skip": 0,
   "decision_probe_limit": 0,
   "range_bytes": 4194304,
   "summary": {
-    "total": 8,
-    "passed": 8,
+    "total": 7,
+    "passed": 7,
     "review": 0,
     "reasons": {
-      "webdav_head_and_temporary_range_warm_passed": 8
+      "webdav_head_and_temporary_range_warm_passed": 7
     }
   },
   "recent_results": [
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:08:05Z",
-      "target_hash": "ScarFLIX_part-5efdbdcf716997a3",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Aladdin (1992)\\ScarFLIX_part-5efdbdcf716997a3",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-5efdbdcf716997a3/stream.mkv",
-      "map_loaded": true,
-      "map_generated_utc": "2026-06-19T04:05:39Z",
-      "map_entry_found": true,
-      "temporary_buffering": {
-        "enabled": true,
-        "persisted": false,
-        "range_bytes_requested": 4194304
-      },
-      "layers": {
-        "local_symlink_metadata": {
-          "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Aladdin (1992)\\ScarFLIX_part-5efdbdcf716997a3",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\Aladdin (1992)\\ScarFLIX_part-5efdbdcf716997a3",
-          "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-5efdbdcf716997a3",
-          "error": "",
-          "blocking": false,
-          "exists": true,
-          "is_directory": false,
-          "is_file": false
-        },
-        "webdav_head": {
-          "ok": true,
-          "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-5efdbdcf716997a3/stream.mkv",
-          "status_code": 200,
-          "bytes_read": 0,
-          "content_length": "681829239",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 1633,
-          "attempt": 2,
-          "reason": "ok",
-          "attempts": 2
-        },
-        "webdav_head_attempts": [
-          {
-            "ok": false,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-5efdbdcf716997a3/stream.mkv",
-            "status_code": 0,
-            "bytes_read": 0,
-            "timed_out": true,
-            "error": "timeout",
-            "elapsed_ms": 8892,
-            "attempt": 1,
-            "reason": "timeout"
-          },
-          {
-            "ok": true,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-5efdbdcf716997a3/stream.mkv",
-            "status_code": 200,
-            "bytes_read": 0,
-            "content_length": "681829239",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 1633,
-            "attempt": 2,
-            "reason": "ok"
-          }
-        ],
-        "webdav_range_warm": {
-          "ok": true,
-          "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-5efdbdcf716997a3/stream.mkv",
-          "status_code": 206,
-          "bytes_read": 4194304,
-          "content_length": "4194304",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 5680,
-          "reason": "ok"
-        }
-      },
-      "status": "PASS",
-      "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 16992
-    },
-    {
-      "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:08:35Z",
-      "target_hash": "ScarFLIX_part-68622350745833c8",
-      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Alice in Wonderland (2010)\\ScarFLIX_part-68622350745833c8",
-      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-68622350745833c8/stream.mkv",
-      "map_loaded": true,
-      "map_generated_utc": "2026-06-19T04:05:39Z",
-      "map_entry_found": true,
-      "temporary_buffering": {
-        "enabled": true,
-        "persisted": false,
-        "range_bytes_requested": 4194304
-      },
-      "layers": {
-        "local_symlink_metadata": {
-          "status": "PASS",
-          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Alice in Wonderland (2010)\\ScarFLIX_part-68622350745833c8",
-          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\Alice in Wonderland (2010)\\ScarFLIX_part-68622350745833c8",
-          "is_symbolic_link": true,
-          "link_target": "S:\\media\\ScarFLIX_part-68622350745833c8",
-          "error": "",
-          "blocking": false,
-          "exists": true,
-          "is_directory": false,
-          "is_file": false
-        },
-        "webdav_head": {
-          "ok": true,
-          "method": "HEAD",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68622350745833c8/stream.mkv",
-          "status_code": 200,
-          "bytes_read": 0,
-          "content_length": "6964607448",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 2182,
-          "attempt": 2,
-          "reason": "ok",
-          "attempts": 2
-        },
-        "webdav_head_attempts": [
-          {
-            "ok": false,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68622350745833c8/stream.mkv",
-            "status_code": 0,
-            "bytes_read": 0,
-            "timed_out": true,
-            "error": "timeout",
-            "elapsed_ms": 8024,
-            "attempt": 1,
-            "reason": "timeout"
-          },
-          {
-            "ok": true,
-            "method": "HEAD",
-            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68622350745833c8/stream.mkv",
-            "status_code": 200,
-            "bytes_read": 0,
-            "content_length": "6964607448",
-            "content_type": "application/octet-stream",
-            "accept_ranges": "bytes",
-            "elapsed_ms": 2182,
-            "attempt": 2,
-            "reason": "ok"
-          }
-        ],
-        "webdav_range_warm": {
-          "ok": true,
-          "method": "GET",
-          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-68622350745833c8/stream.mkv",
-          "status_code": 206,
-          "bytes_read": 4194304,
-          "content_length": "4194304",
-          "content_type": "application/octet-stream",
-          "accept_ranges": "bytes",
-          "elapsed_ms": 3782,
-          "reason": "ok"
-        }
-      },
-      "status": "PASS",
-      "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 14755
-    },
-    {
-      "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:08:43Z",
+      "updated_utc": "2026-06-19T04:07:56Z",
       "target_hash": "ScarFLIX_part-9b942da731478213",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Black Panther (2018)\\ScarFLIX_part-9b942da731478213",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-9b942da731478213/stream.mkv",
@@ -221,12 +51,24 @@
           "content_length": "1598863547",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1436,
-          "attempt": 1,
+          "elapsed_ms": 1908,
+          "attempt": 2,
           "reason": "ok",
-          "attempts": 1
+          "attempts": 2
         },
         "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-9b942da731478213/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8016,
+            "attempt": 1,
+            "reason": "timeout"
+          },
           {
             "ok": true,
             "method": "HEAD",
@@ -236,8 +78,8 @@
             "content_length": "1598863547",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1436,
-            "attempt": 1,
+            "elapsed_ms": 1908,
+            "attempt": 2,
             "reason": "ok"
           }
         ],
@@ -250,17 +92,17 @@
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3809,
+          "elapsed_ms": 3948,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5246
+      "elapsed_ms": 14639
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:09:30Z",
+      "updated_utc": "2026-06-19T04:08:56Z",
       "target_hash": "ScarFLIX_part-85e03dae432eebab",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Casino Royale (2006)\\ScarFLIX_part-85e03dae432eebab",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-85e03dae432eebab/stream.mkv",
@@ -294,12 +136,24 @@
           "content_length": "2958753769",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1504,
-          "attempt": 1,
+          "elapsed_ms": 5762,
+          "attempt": 2,
           "reason": "ok",
-          "attempts": 1
+          "attempts": 2
         },
         "webdav_head_attempts": [
+          {
+            "ok": false,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-85e03dae432eebab/stream.mkv",
+            "status_code": 0,
+            "bytes_read": 0,
+            "timed_out": true,
+            "error": "timeout",
+            "elapsed_ms": 8018,
+            "attempt": 1,
+            "reason": "timeout"
+          },
           {
             "ok": true,
             "method": "HEAD",
@@ -309,8 +163,8 @@
             "content_length": "2958753769",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1504,
-            "attempt": 1,
+            "elapsed_ms": 5762,
+            "attempt": 2,
             "reason": "ok"
           }
         ],
@@ -323,17 +177,17 @@
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3602,
+          "elapsed_ms": 4136,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5114
+      "elapsed_ms": 18688
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:09:36Z",
+      "updated_utc": "2026-06-19T04:09:29Z",
       "target_hash": "ScarFLIX_part-0882bcbae45a0737",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Exhuma (2024)\\Exhuma (2024) - ScarFLIX_part-0882bcbae45a0737.strm",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-0882bcbae45a0737/stream.mkv",
@@ -365,7 +219,7 @@
           "content_length": "3698838766",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1480,
+          "elapsed_ms": 1366,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -380,7 +234,7 @@
             "content_length": "3698838766",
             "content_type": "application/force-download",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1480,
+            "elapsed_ms": 1366,
             "attempt": 1,
             "reason": "ok"
           }
@@ -394,17 +248,17 @@
           "content_length": "4194304",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3817,
+          "elapsed_ms": 3906,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 5328
+      "elapsed_ms": 5275
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:09:56Z",
+      "updated_utc": "2026-06-19T04:09:52Z",
       "target_hash": "ScarFLIX_part-446ae9e09a1ba27c",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Free Guy (2021)\\ScarFLIX_part-446ae9e09a1ba27c",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-446ae9e09a1ba27c/stream.mkv",
@@ -438,7 +292,7 @@
           "content_length": "4136924601",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 7015,
+          "elapsed_ms": 1714,
           "attempt": 2,
           "reason": "ok",
           "attempts": 2
@@ -452,7 +306,7 @@
             "bytes_read": 0,
             "timed_out": true,
             "error": "timeout",
-            "elapsed_ms": 8117,
+            "elapsed_ms": 8011,
             "attempt": 1,
             "reason": "timeout"
           },
@@ -465,7 +319,7 @@
             "content_length": "4136924601",
             "content_type": "application/octet-stream",
             "accept_ranges": "bytes",
-            "elapsed_ms": 7015,
+            "elapsed_ms": 1714,
             "attempt": 2,
             "reason": "ok"
           }
@@ -479,17 +333,17 @@
           "content_length": "4194304",
           "content_type": "application/octet-stream",
           "accept_ranges": "bytes",
-          "elapsed_ms": 4932,
+          "elapsed_ms": 4804,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 20833
+      "elapsed_ms": 15452
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
-      "updated_utc": "2026-06-19T04:10:06Z",
+      "updated_utc": "2026-06-19T04:10:26Z",
       "target_hash": "ScarFLIX_part-8b8e1a86c766f359",
       "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Greenland 2 Migration (2026)\\Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
       "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-8b8e1a86c766f359/stream.mkv",
@@ -521,7 +375,7 @@
           "content_length": "6501584236",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1283,
+          "elapsed_ms": 1446,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -536,7 +390,7 @@
             "content_length": "6501584236",
             "content_type": "application/force-download",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1283,
+            "elapsed_ms": 1446,
             "attempt": 1,
             "reason": "ok"
           }
@@ -550,13 +404,13 @@
           "content_length": "4194304",
           "content_type": "application/force-download",
           "accept_ranges": "bytes",
-          "elapsed_ms": 3672,
+          "elapsed_ms": 6687,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 4959
+      "elapsed_ms": 8140
     },
     {
       "component": "scarflix_v2_streaming_layered_validator",
@@ -592,7 +446,7 @@
           "content_length": "1996230",
           "content_type": "video/mp4",
           "accept_ranges": "bytes",
-          "elapsed_ms": 1621,
+          "elapsed_ms": 1573,
           "attempt": 1,
           "reason": "ok",
           "attempts": 1
@@ -607,7 +461,7 @@
             "content_length": "1996230",
             "content_type": "video/mp4",
             "accept_ranges": "bytes",
-            "elapsed_ms": 1621,
+            "elapsed_ms": 1573,
             "attempt": 1,
             "reason": "ok"
           }
@@ -621,13 +475,86 @@
           "content_length": "1996230",
           "content_type": "video/mp4",
           "accept_ranges": "bytes",
-          "elapsed_ms": 922,
+          "elapsed_ms": 752,
           "reason": "ok"
         }
       },
       "status": "PASS",
       "reason": "webdav_head_and_temporary_range_warm_passed",
-      "elapsed_ms": 2550
+      "elapsed_ms": 2330
+    },
+    {
+      "component": "scarflix_v2_streaming_layered_validator",
+      "updated_utc": "2026-06-19T04:10:58Z",
+      "target_hash": "ScarFLIX_part-1d3c996807019969",
+      "target_link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Mulan (1998)\\ScarFLIX_part-1d3c996807019969",
+      "webdav_url": "http://127.0.0.1:18789/media/ScarFLIX_part-1d3c996807019969/stream.mkv",
+      "map_loaded": true,
+      "map_generated_utc": "2026-06-19T04:05:39Z",
+      "map_entry_found": true,
+      "temporary_buffering": {
+        "enabled": true,
+        "persisted": false,
+        "range_bytes_requested": 4194304
+      },
+      "layers": {
+        "local_symlink_metadata": {
+          "status": "PASS",
+          "link": "D:\\StremioCatalog\\_Hybrid\\Movies\\Mulan (1998)\\ScarFLIX_part-1d3c996807019969",
+          "stream_path": "D:\\StremioCatalog\\_Hybrid\\Movies\\Mulan (1998)\\ScarFLIX_part-1d3c996807019969",
+          "is_symbolic_link": true,
+          "link_target": "S:\\media\\ScarFLIX_part-1d3c996807019969",
+          "error": "",
+          "blocking": false,
+          "exists": true,
+          "is_directory": false,
+          "is_file": false
+        },
+        "webdav_head": {
+          "ok": true,
+          "method": "HEAD",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-1d3c996807019969/stream.mkv",
+          "status_code": 200,
+          "bytes_read": 0,
+          "content_length": "733661347",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 1415,
+          "attempt": 1,
+          "reason": "ok",
+          "attempts": 1
+        },
+        "webdav_head_attempts": [
+          {
+            "ok": true,
+            "method": "HEAD",
+            "url": "http://127.0.0.1:18789/media/ScarFLIX_part-1d3c996807019969/stream.mkv",
+            "status_code": 200,
+            "bytes_read": 0,
+            "content_length": "733661347",
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "elapsed_ms": 1415,
+            "attempt": 1,
+            "reason": "ok"
+          }
+        ],
+        "webdav_range_warm": {
+          "ok": true,
+          "method": "GET",
+          "url": "http://127.0.0.1:18789/media/ScarFLIX_part-1d3c996807019969/stream.mkv",
+          "status_code": 206,
+          "bytes_read": 4194304,
+          "content_length": "4194304",
+          "content_type": "application/octet-stream",
+          "accept_ranges": "bytes",
+          "elapsed_ms": 4101,
+          "reason": "ok"
+        }
+      },
+      "status": "PASS",
+      "reason": "webdav_head_and_temporary_range_warm_passed",
+      "elapsed_ms": 5517
     }
   ]
 }
