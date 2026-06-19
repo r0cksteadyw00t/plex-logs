@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-19T06:55:03Z",
+  "updated_utc": "2026-06-19T07:00:03Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-19T06:37:32Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-19T06:53:48Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -124,10 +124,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 8621,
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 8626,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-19T06:50:55Z",
+    "next_check_utc": "2026-06-19T06:55:24Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -136,7 +136,7 @@
     "stage": "Plex client decision QA",
     "file": "D:/PlexTools/logs/scarflix_v2_plex_client_decision_qa_20260613.log",
     "last_progress_utc": "2026-06-13T07:08:43.775Z",
-    "age_minutes": 8621,
+    "age_minutes": 8626,
     "last_line": "[2026-06-13T07:08:43Z] [PASS] Decision passed: metadata=46093 title=The Bourne Identity",
     "pass_lines": 2,
     "review_lines": 7,
@@ -145,7 +145,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-19T06:45:43Z",
+    "updated_utc": "2026-06-19T06:50:14Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -167,9 +167,9 @@
   "direct_strm_admission_gate": {
     "component": "scarflix_v2_direct_strm_admission_gate",
     "status": "PASS",
-    "started_utc": "2026-06-19T06:40:16Z",
-    "updated_utc": "2026-06-19T06:40:33Z",
-    "ended_utc": "2026-06-19T06:40:33Z",
+    "started_utc": "2026-06-19T06:50:21Z",
+    "updated_utc": "2026-06-19T06:50:34Z",
+    "ended_utc": "2026-06-19T06:50:34Z",
     "dry_run": false,
     "jason_action_required": false,
     "title_not_rejected": true,
@@ -214,12 +214,12 @@
     "retry_queue_items": [],
     "sample_passed": [
       {
-        "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
+        "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
       {
-        "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
+        "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
         "reason_code": "PASS_DIRECT_URL_ADMITTED",
         "is_local_live_proxy": false
       },
@@ -414,11 +414,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-19T06:37:32Z",
-    "last_successful_grok_instruction_utc": "2026-06-19T06:37:32Z",
+    "bridge_updated_utc": "2026-06-19T06:53:48Z",
+    "last_successful_grok_instruction_utc": "2026-06-19T06:53:48Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-19T06:37:40Z",
+    "consumer_updated_utc": "2026-06-19T06:53:55Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -428,7 +428,7 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-19T06:45:49Z",
+      "utc": "2026-06-19T06:50:21Z",
       "title": "Autonomous controller: candidate_source_model_pass",
       "detail": "PlatformGate PASS; candidate-source retry/quarantine model verified"
     },
@@ -511,7 +511,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-19T06:37:40Z - structured instruction loop",
+      "last_change": "2026-06-19T06:53:55Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
@@ -600,7 +600,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-19T06:50:03Z",
+    "updated_utc": "2026-06-19T06:55:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -663,9 +663,9 @@
     "direct_strm_admission_gate_status": {
       "component": "scarflix_v2_direct_strm_admission_gate",
       "status": "PASS",
-      "started_utc": "2026-06-19T06:40:16Z",
-      "updated_utc": "2026-06-19T06:40:33Z",
-      "ended_utc": "2026-06-19T06:40:33Z",
+      "started_utc": "2026-06-19T06:50:21Z",
+      "updated_utc": "2026-06-19T06:50:34Z",
+      "ended_utc": "2026-06-19T06:50:34Z",
       "dry_run": false,
       "jason_action_required": false,
       "title_not_rejected": true,
@@ -710,12 +710,12 @@
       "retry_queue_items": [],
       "sample_passed": [
         {
-          "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
+          "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
         {
-          "relative_path": "Im Still Here (2024)/Im Still Here (2024) - ScarFLIX_part-80f5caa338192458.strm",
+          "relative_path": "Greenland 2 Migration (2026)/Greenland 2 Migration (2026) - ScarFLIX_part-8b8e1a86c766f359.strm",
           "reason_code": "PASS_DIRECT_URL_ADMITTED",
           "is_local_live_proxy": false
         },
@@ -865,7 +865,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-19T06:50:21Z",
+      "updated_utc": "2026-06-19T06:55:14Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -898,12 +898,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 23132
+              "pid": 9172
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 5936
+              "pid": 28500
             }
           ]
         }
@@ -911,8 +911,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 958323,
-    "safe_pipeline_log_age_seconds": 1015207,
+    "canary_status_age_seconds": 958617,
+    "safe_pipeline_log_age_seconds": 1015501,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -927,11 +927,6 @@
         "detail": "ok"
       },
       {
-        "action": "run_direct_strm_admission_gate",
-        "ok": true,
-        "detail": "pid=17404"
-      },
-      {
         "action": "run_playback_qa_controller",
         "ok": true,
         "detail": "ok"
@@ -939,7 +934,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=36716"
+        "detail": "pid=25720"
       }
     ],
     "blockers": []
@@ -995,7 +990,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-19T06:50:21Z",
+    "updated_utc": "2026-06-19T06:55:14Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -1028,12 +1023,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 23132
+            "pid": 9172
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 5936
+            "pid": 28500
           }
         ]
       }
@@ -1042,7 +1037,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-19T06:55:03Z",
+    "updated_utc": "2026-06-19T07:00:03Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
