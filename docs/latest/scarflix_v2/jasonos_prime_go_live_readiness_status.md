@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-19T04:34:17Z
+Updated UTC: 2026-06-19T04:39:19Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -16,7 +16,7 @@ PAUSE_PUBLICATION active: `True`
 
 | Outcome | Status | Progress | Summary | Next Safe Action |
 |---|---:|---:|---|---|
-| Reliable Plex playback first | `PASS_INFRASTRUCTURE_READY_REQUIRES_CLIENT_CONFIRMATION` | 65% | Plex remains the playback front end; current priority is no scanner/indexer contention during viewing. | Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet. |
+| Reliable Plex playback first | `REVIEW_NOT_GO_LIVE_READY` | 65% | Plex remains the playback front end; current priority is no scanner/indexer contention during viewing. | Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet. |
 | Verified Watch Now movie surface | `PASS_VERIFIED_MOVIE_COLLECTION_AVAILABLE` | 75% | A Plex collection groups already-indexed PASS-only movie rows so users have a cleaner known-good starting point without broad publication. | Keep the collection updated from PASS-only evidence, then add a TV-safe equivalent after section 6 metadata lookup is stable. |
 | ScarFLIX movies and TV playable in Plex | `REVIEW_NOT_GO_LIVE_READY` | 45% | Catalogue expansion is intentionally blocked until playback reliability and Materialized QA recover. | Keep the verified Watch Now collection available while bounded QA and held-source replacement continue; no broad expansion until QA reaches PASS. |
 | IPTV-only Live TV ready for cutover | `PASS_VIRTUAL_ADAPTER_READY_PLEX_ATTACH_PENDING` | 90% | IPTV-only package is ready and guarded; no physical tuner path is allowed. | Threadfin virtual adapter is ready. Hold Plex Live TV/DVR attach until there are no active sessions, then verify guide/playback and rollback if unstable. |
@@ -27,7 +27,8 @@ PAUSE_PUBLICATION active: `True`
 
 ## Blocking Items
 
-- `O-SCARFLIX-CATALOGUE`: Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 67/76 failed=9. retry_held=0 retry_tracked=21.
+- `O-PLAYBACK`: Plex background scanner/analyzer pressure still detected: 1.
+- `O-SCARFLIX-CATALOGUE`: Materialized QA is not full PASS: RUNNING_PLEX_DECISION_PROBES 80/91 failed=11. retry_held=0 retry_tracked=21.
 
 ## Monitored Tasks
 
