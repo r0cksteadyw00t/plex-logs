@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_lightweight_status_probe",
   "status": "REVIEW",
-  "updated_utc": "2026-06-19T17:00:12Z",
-  "duration_ms": 30147,
+  "updated_utc": "2026-06-19T17:07:09Z",
+  "duration_ms": 16368,
   "probe_contract": "Node-only bounded read of current public status JSON; no long validation and no schtasks/process scans.",
   "counts": {
     "direct_movies": 44,
@@ -13,7 +13,7 @@
     "staged_pending": 43
   },
   "statuses": {
-    "public_mirror": "PASS",
+    "public_mirror": "REVIEW",
     "materialized_decision_qa": "REVIEW",
     "playback_qa_controller": "REVIEW_MATERIALIZED_DECISION_FAILURE",
     "fast_track": "PASS",
@@ -22,11 +22,11 @@
     "direct_strm_mirror": "PAUSED_PLAYBACK_FIX",
     "canary": "PAUSED_PLAYBACK_FIX",
     "node_watchdog": "ACTIVE",
-    "sentinel": "PASS",
+    "sentinel": "REVIEW",
     "candidate_source_model": "PASS",
     "autonomous_controller": "PASS",
     "ai_8791": "PASS",
-    "ai_8805": "PASS"
+    "ai_8805": "REVIEW"
   },
   "materialized_decision_qa": {
     "target_count": 249,
@@ -42,17 +42,19 @@
     "expansion_started_this_cycle": false,
     "staged_pending_count": 43,
     "materialized_decision_qa_status": "REVIEW",
-    "updated_utc": "2026-06-19T16:58:16Z"
+    "updated_utc": "2026-06-19T17:06:41Z"
   },
   "mirror": {
-    "status": "PASS",
-    "updated_utc": "2026-06-19T16:52:57.973Z",
+    "status": "REVIEW",
+    "updated_utc": "2026-06-19T17:03:46.134Z",
     "last_success_utc": "2026-06-19T16:52:57.973Z",
-    "failed_count": 0,
+    "failed_count": 3,
     "failure_summary": {
       "recoverable": 0,
-      "hard": 0,
-      "by_status": {}
+      "hard": 3,
+      "by_status": {
+        "422": 3
+      }
     }
   },
   "maze_runner": {
@@ -66,8 +68,8 @@
     "ready_to_test": false
   },
   "file_mtimes": {
-    "dashboard": "2026-06-19T16:56:07.804Z",
-    "mirror": "2026-06-19T16:52:57.974Z",
+    "dashboard": "2026-06-19T17:02:05.501Z",
+    "mirror": "2026-06-19T17:03:46.137Z",
     "materialized_qa": "2026-06-19T04:57:14.856Z"
   },
   "files": {
