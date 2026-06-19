@@ -1,19 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-19T14:57:20Z
+Updated UTC: 2026-06-19T14:57:51Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 7
-Passed: 6
+Checked: 1
+Passed: 0
 Review: 1
 
 ## Results
-- Ghosts Australia: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Ghosts Australia: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Ghosts Australia: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=404; range=; type=text/html; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- Ghosts Australia: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Ghosts Australia: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Ghosts Australia: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Ghosts Australia: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Transformers: EarthSpark: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=404; range=404; type=text/html; reason=SOURCE_EXPIRED_OR_GONE
 
 ## Safety
 - no_broad_expansion_started: true
