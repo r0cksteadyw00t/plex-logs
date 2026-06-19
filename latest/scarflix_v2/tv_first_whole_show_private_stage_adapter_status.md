@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T02:54:23Z
+Updated UTC: 2026-06-19T03:14:28Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 4
+Episodes enumerated: 2
 Episodes already staged: 0
-Episodes newly staged: 4
+Episodes newly staged: 2
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Million Dollar Secret: enumerated=4; staged=4; already=0; review=0; source=request_episode_targets
+- Celebrity Sabotage: enumerated=2; staged=2; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
