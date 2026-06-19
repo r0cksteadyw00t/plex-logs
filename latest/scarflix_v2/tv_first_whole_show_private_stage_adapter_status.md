@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T09:36:00Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-19T09:55:21Z
+Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
 Shows requested: 1
-Episodes enumerated: 10
+Episodes enumerated: 16
 Episodes already staged: 0
-Episodes newly staged: 10
-Review: 0
+Episodes newly staged: 9
+Review: 7
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Spartacus: House of Ashur: enumerated=10; staged=10; already=0; review=0; source=request_episode_targets
+- Fallout: enumerated=16; staged=9; already=0; review=7; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
