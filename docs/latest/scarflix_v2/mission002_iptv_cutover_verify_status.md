@@ -24,7 +24,7 @@
 - Expanded M3U channel count: 33
 - Threadfin lineup parse status: PARSED
 - Threadfin lineup channel count: 33
-- Plex tuner base URL: http://127.0.0.1:5004
+- Plex tuner base URL: redacted-url-9867f906ad99
 
 ## Container
 
@@ -35,15 +35,18 @@
 
 ## Endpoints
 
-- http://127.0.0.1:35400/web/: ok=True, http=200, ms=58, error=
-- http://127.0.0.1:35400/discover.json: ok=True, http=200, ms=10, error=
-- http://127.0.0.1:35400/lineup.json: ok=True, http=200, ms=26, error=
-- http://127.0.0.1:35400/lineup_status.json: ok=True, http=200, ms=13, error=
+- redacted-url-efcfbe8382e6 ok=True, http=200, ms=58, error=
+- redacted-url-386a3beb9592 ok=True, http=200, ms=10, error=
+- redacted-url-1e2bd938c1b7 ok=True, http=200, ms=26, error=
+- redacted-url-bc5c634221c0 ok=True, http=200, ms=13, error=
 
 ## Plex Tuner Entrypoint
 
-- http://127.0.0.1:5004/auto/v10: ok=True, http=200, ms=13, error=
+- redacted-url-7a92281e03ce ok=True, http=200, ms=13, error=
 
 ## Decision
 
 This verifier checks the IPTV virtual-adapter path and Plex's local tuner stream entrypoint. Plex Live TV/DVR attachment is not changed here. PASS requires Threadfin to expose at least one channel in /lineup.json and TCP 5004 to answer a bounded tuner request.
+
+
+Public redaction applied: 2026-06-19T23:34:31.258Z
