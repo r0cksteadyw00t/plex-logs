@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-18T23:54:17Z
+Updated UTC: 2026-06-19T00:15:05Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
 Episodes enumerated: 8
@@ -11,7 +11,7 @@ TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- The Boroughs: enumerated=8; staged=8; already=0; review=0; source=request_episode_targets
+- Margo's Got Money Troubles: enumerated=8; staged=8; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
