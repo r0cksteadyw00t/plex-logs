@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "PASS",
-    "started_utc":  "2026-06-19T12:56:07Z",
-    "ended_utc":  "2026-06-19T12:56:22Z",
-    "duration_seconds":  14,
+    "started_utc":  "2026-06-19T13:00:05Z",
+    "ended_utc":  "2026-06-19T13:01:35Z",
+    "duration_seconds":  90,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  51
+                           "ms":  1926
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  735
+                           "ms":  465
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  331
+                           "ms":  243
                        }
                    ],
     "webdav_before":  {
@@ -43,8 +43,8 @@
     "rclone_processes_after":  1,
     "s_media_before":  {
                            "path":  "S:\\media",
-                           "ok":  true,
-                           "timed_out":  false,
+                           "ok":  false,
+                           "timed_out":  true,
                            "error":  ""
                        },
     "s_catalog_before":  {
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  1335,
+                          "ms":  2087,
                           "content_length":  "1714768887",
                           "error":  ""
                       },
@@ -80,17 +80,21 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  true,
                           "status_code":  200,
-                          "ms":  1418,
+                          "ms":  1283,
                           "content_length":  "1721714811",
                           "error":  ""
                       }
                   ],
-    "watch_now_probe_run":  false,
-    "watch_now_source":  "cached_previous_status",
+    "watch_now_probe_run":  true,
+    "watch_now_source":  "fresh",
     "actions":  [
                     {
-                        "action":  "watch_now_head_probes_skipped_cooldown",
-                        "cooldown_seconds":  300
+                        "action":  "run_rclone_mount_keepalive",
+                        "result":  {
+                                       "ran":  true,
+                                       "exit_code":  2,
+                                       "error":  ""
+                                   }
                     }
                 ],
     "failures":  [
