@@ -1,6 +1,6 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-19T23:19:54Z  
+**Updated UTC:** 2026-06-19T23:26:05Z  
 **Status:** REVIEW
 
 ## Scope
@@ -15,13 +15,15 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 - rclone processes after: 1
 - S:\media after: ok=False, timed_out=True
 - S:\media\catalog after: ok=False, timed_out=True
-- Watch Now probe source: cached_previous_status
+- Watch Now probe source: fresh
 
 ## Watch Now
 
-- Gremlins / scarflix_part-942255f029875306: FAIL, HTTP 0, 729ms
-- Anna / scarflix_part-81107989d2e30cfb: FAIL, HTTP 0, 692ms
+- Gremlins / scarflix_part-942255f029875306: FAIL, HTTP 0, 675ms
+- Anna / scarflix_part-81107989d2e30cfb: FAIL, HTTP 0, 1898ms
 
 ## Failures
 
 S: media/catalog path is not reliably ready
+Watch Now probe failed: Gremlins
+Watch Now probe failed: Anna
