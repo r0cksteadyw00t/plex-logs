@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-  "updated_utc": "2026-06-13T07:10:01Z",
-  "current_step": "materialized_decision_failed",
+  "status": "RUNNING",
+  "updated_utc": "2026-06-19T04:05:26Z",
+  "current_step": "materialized_plex_decision_qa_started",
   "jason_action_required": false,
   "counts": {
-    "movies": 0,
+    "movies": 10,
     "tv": 0,
-    "total": 0
+    "total": 10
   },
   "canary_status": "PAUSED_PLAYBACK_FIX",
   "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
@@ -21,8 +21,8 @@
   "materialized_visible_verified": 18,
   "materialized_decision_qa_status": "REVIEW",
   "materialized_decision_qa_target_count": 229,
-  "materialized_decision_qa_passed": 119,
-  "materialized_decision_qa_failed": 110,
+  "materialized_decision_qa_passed": 117,
+  "materialized_decision_qa_failed": 0,
   "decision_qa_status": "PASS",
   "concurrent_stream_qa_status": "REVIEW",
   "ignored_overlap": [],
@@ -34,15 +34,33 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 28472
+          "pid": 10612
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 12924
+          "pid": 3160
         }
       ]
+    },
+    {
+      "action": "start_materialized_plex_decision_qa_task",
+      "result": {
+        "task": "ScarFLIX_v2_MaterializedPlexDecisionQA",
+        "enable_ok": true,
+        "run_ok": true,
+        "enable_text": "INFO: Scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" has already been enabled.\r\nSUCCESS: The parameters of scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\" have been changed.",
+        "run_text": "SUCCESS: Attempted to run the scheduled task \"ScarFLIX_v2_MaterializedPlexDecisionQA\"."
+      }
+    },
+    {
+      "action": "start_materialized_plex_decision_qa_node_fallback",
+      "result": {
+        "ok": true,
+        "pid": 20736,
+        "script": "D:/PlexTools/Foundry/workers/ScarFLIX_v2_MaterializedPlexDecisionQA_Node.js"
+      }
     }
   ],
-  "next_action": "Quarantine failed materialized source/release and keep title retryable."
+  "next_action": "Detached materialized/WebDAV Plex decision QA is running or queued."
 }
