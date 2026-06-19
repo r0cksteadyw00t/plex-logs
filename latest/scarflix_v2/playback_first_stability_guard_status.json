@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
     "status":  "PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED",
-    "started_utc":  "2026-06-19T04:10:51Z",
-    "ended_utc":  "2026-06-19T04:11:06Z",
-    "duration_seconds":  14,
+    "started_utc":  "2026-06-19T04:20:31Z",
+    "ended_utc":  "2026-06-19T04:20:37Z",
+    "duration_seconds":  6,
     "report_only":  false,
     "no_publication_started":  true,
     "no_expansion_started":  true,
@@ -62,7 +62,7 @@
                                "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-19T14:10:57+10:00",
+                            "local_time":  "2026-06-19T14:20:32+10:00",
                             "hour":  14,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
@@ -71,22 +71,34 @@
                         },
     "suppress_background_work":  true,
     "quiet_reason":  "idle_outside_off_peak_window",
-    "plex_background_jobs_found":  3,
+    "plex_background_jobs_found":  5,
     "plex_background_jobs":  [
                                  {
-                                     "pid":  12612,
+                                     "pid":  3876,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
                                  },
                                  {
-                                     "pid":  29180,
+                                     "pid":  20004,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
                                  },
                                  {
-                                     "pid":  32096,
+                                     "pid":  25564,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
+                                 {
+                                     "pid":  26532,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
+                                 {
+                                     "pid":  27520,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
@@ -94,18 +106,7 @@
                              ],
     "stopped_jobs":  [
                          {
-                             "pid":  12612,
-                             "name":  "Plex Media Scanner",
-                             "reason":  "plex_background_scanner_or_analyzer",
-                             "stopped":  true,
-                             "verified_gone":  false,
-                             "verification_state":  "stale_process_record_taskkill_no_running_instance",
-                             "taskkill_exit_code":  1,
-                             "taskkill_output":  "ERROR: The process with PID 12612 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
-                             "error":  "taskkill_reported_no_running_instance"
-                         },
-                         {
-                             "pid":  29180,
+                             "pid":  3876,
                              "name":  "Plex Media Scanner",
                              "reason":  "plex_background_scanner_or_analyzer",
                              "stopped":  true,
@@ -116,15 +117,48 @@
                              "error":  ""
                          },
                          {
-                             "pid":  32096,
+                             "pid":  20004,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "plex_background_scanner_or_analyzer",
+                             "stopped":  true,
+                             "verified_gone":  true,
+                             "verification_state":  "gone",
+                             "taskkill_exit_code":  null,
+                             "taskkill_output":  "",
+                             "error":  ""
+                         },
+                         {
+                             "pid":  25564,
                              "name":  "Plex Media Scanner",
                              "reason":  "plex_background_scanner_or_analyzer",
                              "stopped":  true,
                              "verified_gone":  false,
                              "verification_state":  "stale_process_record_taskkill_no_running_instance",
                              "taskkill_exit_code":  1,
-                             "taskkill_output":  "ERROR: The process with PID 32096 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
+                             "taskkill_output":  "ERROR: The process with PID 25564 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
                              "error":  "taskkill_reported_no_running_instance"
+                         },
+                         {
+                             "pid":  26532,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "plex_background_scanner_or_analyzer",
+                             "stopped":  true,
+                             "verified_gone":  true,
+                             "verification_state":  "gone",
+                             "taskkill_exit_code":  null,
+                             "taskkill_output":  "",
+                             "error":  ""
+                         },
+                         {
+                             "pid":  27520,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "plex_background_scanner_or_analyzer",
+                             "stopped":  true,
+                             "verified_gone":  true,
+                             "verification_state":  "gone",
+                             "taskkill_exit_code":  null,
+                             "taskkill_output":  "",
+                             "error":  ""
                          }
                      ],
     "playback_error_pressure":  {
@@ -140,7 +174,6 @@
     "reasons":  [
                     "Plex is idle, but the local time is outside the off-peak maintenance window.",
                     "Plex background scanner/analyzer work was active during playback-first mode.",
-                    "A Plex background scanner/analyzer process record remained visible, but taskkill reported no running instance; repeated stop attempts are suppressed.",
                     "A Plex background scanner/analyzer process record remained visible, but taskkill reported no running instance; repeated stop attempts are suppressed."
                 ],
     "next_action":  "Keep QA/expansion held; verify Plex-client playback only after rclone/WebDAV error pressure falls and background scanner/analyzer load is quiet.",
