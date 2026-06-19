@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T07:28:07Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-19T08:21:47Z
+Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
 Shows requested: 1
-Episodes enumerated: 8
-Episodes already staged: 6
-Episodes newly staged: 2
-Review: 0
+Episodes enumerated: 32
+Episodes already staged: 0
+Episodes newly staged: 20
+Review: 12
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Scarpetta: enumerated=8; staged=2; already=6; review=0; source=request_episode_targets
+- Bridgerton: enumerated=32; staged=20; already=0; review=12; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
