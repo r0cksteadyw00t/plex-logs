@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v19",
-      "created_at": "2026-06-19T05:00:26Z",
-      "expires_at": "2026-06-20T05:00:26Z",
+      "instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v20",
+      "created_at": "2026-06-19T05:16:31Z",
+      "expires_at": "2026-06-20T05:16:31Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,19 +14,20 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "summary": "TV Section 6 publication remains HELD pending forensic review of scanner latency. Monitor active, 0 pending events, full-season pilot staged privately at 28/28. No visible aliases or mutations. Recommend controlled retry strategy only after local review of tv_first_section6_publication_forensic_handoff.md/json. PAUSE_PUBLICATION and REVIEW QA state maintained.",
-          "source_instruction_id": "phase0_maintain_tv_section6_hold_write_status_summary_20260619_v19"
+          "parameters": {
+            "note": "Maintain TV Section 6 publication hold. Current materialized QA remains REVIEW. No expansion, publishing, source movement, or long QA instructed."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-19T05:00:26Z",
+  "updated_utc": "2026-06-19T05:16:31Z",
   "source": "grok_api"
 }
