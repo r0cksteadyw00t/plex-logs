@@ -1,8 +1,8 @@
-# Mission 002 Multi-Source Sports Source Discovery
+# Mission 002 Unrestricted Live Source Discovery
 
-Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_SPORTS_ENGINE
+Status: PASS_DISCOVERY_INDEX_READY_HELD_FOR_LIVE_ENGINE
 
-Updated UTC: 2026-06-19T02:43:09.4972414Z
+Updated UTC: 2026-06-19T06:17:26.8991474Z
 
 ## Peer Review Outcome
 
@@ -12,31 +12,31 @@ Updated UTC: 2026-06-19T02:43:09.4972414Z
 
 ## Current Run
 
-- Sources configured: 11
-- Sources processed: 51
-- Sources fetched: 12
-- Child sources discovered: 40
-- Duplicate streams suppressed: 166
-- Unique candidate channels extracted: 3198
-- Relevant candidate channels: 200
-- Probe attempts: 40
-- Probe PASS: 40
-- Review queue items: 197
-- Sports Source Engine candidates: 1
-- Pending review/engine candidates: 197
-- Private pending source packages: 2
+- Sources configured: 16
+- Sources processed: 176
+- Sources fetched: 64
+- Child sources discovered: 160
+- Duplicate streams suppressed: 224
+- Unique candidate channels extracted: 2632
+- Relevant candidate channels: 2632
+- Probe attempts: 80
+- Probe PASS: 77
+- Review queue items: 200
+- Live source-engine candidates: 77
+- Pending review/engine candidates: 2632
+- Private pending source packages: 9
 
 ## Coverage Gaps
 
-- AFL: adequate (matches=11, probe_pass=1)
+- AFL: adequate (matches=1, probe_pass=1)
 - AFLW: missing (matches=0, probe_pass=0)
 - Fox Footy: missing (matches=0, probe_pass=0)
 - Kayo: missing (matches=0, probe_pass=0)
-- Fox Sports: weak (matches=12, probe_pass=0)
-- Racing: strong (matches=10, probe_pass=5)
-- Cricket: strong (matches=5, probe_pass=2)
+- Fox Sports: weak (matches=41, probe_pass=0)
+- Racing: strong (matches=14, probe_pass=5)
+- Cricket: adequate (matches=21, probe_pass=1)
 - NRL: missing (matches=0, probe_pass=0)
-- AU Free-To-Air Sports Adjacent: strong (matches=9, probe_pass=3)
+- AU Free-To-Air Sports Adjacent: strong (matches=11, probe_pass=5)
 
 ## Privacy / Mutation Boundary
 
@@ -57,4 +57,4 @@ Updated UTC: 2026-06-19T02:43:09.4972414Z
 
 ## Next Safe Action
 
-Use the private graph and pending package as source-engine input. Publishing remains separate and automatic only after the delegated AFL auto-publisher hard gates pass.
+Use the private graph and pending package as source-engine input. Publishing remains separate and automatic only after live readiness, dedupe, burn-in, backup, Threadfin, and Plex gates pass.
