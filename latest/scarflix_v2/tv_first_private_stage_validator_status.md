@@ -1,13 +1,14 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-19T03:34:36Z
+Updated UTC: 2026-06-19T03:54:54Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 1
-Passed: 1
+Checked: 2
+Passed: 2
 Review: 0
 
 ## Results
-- My Reno Rules: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Rich Holiday, Poor Holiday: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Rich Holiday, Poor Holiday: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
