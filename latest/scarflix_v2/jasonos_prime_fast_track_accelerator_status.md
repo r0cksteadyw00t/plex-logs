@@ -1,17 +1,20 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-10T00:27:02Z
+Updated UTC: 2026-06-19T09:25:01Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: CONTROLLED_MATERIALIZED_QA_HOLD
 Next autonomous action: Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.
 Expansion eligible: false
 Expansion started this cycle: false
+TV-first priority gate: HELD_MATERIALIZED_QA_REQUIRED
+TV-first first wave: tv_active_2026_whole_show (64)
+TV-first generic/movie expansion allowed: false
 
 ## Actual STRM Counts
-- movies: 0
-- tv: 0
-- total: 0
+- movies: 16
+- tv: 1
+- total: 17
 
 ## Inputs
 - platform_gate: PASS
@@ -30,13 +33,13 @@ Expansion started this cycle: false
 - predictive_simulator: PASS
 - self_evolution: REVIEW
 - dashboard: PASS
-- public_mirror: PASS
+- public_mirror: REVIEW_RECOVERABLE
 
 ## Next 4 Hours
 - Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.
 - Refresh predictive simulation, self-evolution, worker mesh, dashboard, mirror, and 8805 keepalive every 5 minutes.
 - If PlatformGate completes PASS, run candidate-source retry/quarantine verification immediately.
-- If candidate-source model completes PASS, launch controlled safe WebDAV expansion immediately.
+- If candidate-source model completes PASS, keep generic/movie expansion held and execute TV-first whole-show waves before movie waves.
 - Publish updated dashboard and mirror artifacts after each cycle so phone status shows whether progress is real or stalled.
 
 ## Actions
