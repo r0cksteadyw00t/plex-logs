@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-19T00:12:20Z
-Instruction: phase0_tv_section6_forensic_strategy_note_20260619_v1
+Updated UTC: 2026-06-19T00:28:20Z
+Instruction: phase0_tv_section6_forensic_status_summary_20260619_v2
 
-Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.
+TV Section 6 publication remains HELD per forensic review. Materialized QA REVIEW. No legacy expansion. Monitor active. Dashboard truth authoritative.
