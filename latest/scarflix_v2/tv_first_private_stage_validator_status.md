@@ -1,16 +1,16 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-19T01:54:26Z
+Updated UTC: 2026-06-19T02:16:17Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
 Checked: 4
 Passed: 4
 Review: 0
 
 ## Results
-- Twenty Twenty Six: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Twenty Twenty Six: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Twenty Twenty Six: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Twenty Twenty Six: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Duck Dynasty: The Revival: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Duck Dynasty: The Revival: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Duck Dynasty: The Revival: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=video/mp4; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Duck Dynasty: The Revival: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
