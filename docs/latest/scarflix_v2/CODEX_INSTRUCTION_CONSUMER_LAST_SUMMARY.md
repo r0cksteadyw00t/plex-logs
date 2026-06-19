@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-19T07:09:39Z
-Instruction: phase0_maintain_tv_section6_hold_write_status_summary_20260619_v27
+Updated UTC: 2026-06-19T07:24:56Z
+Instruction: phase0_maintain_tv_section6_hold_write_status_summary_20260619_v28
 
-Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.
+TV Section 6 publication hold maintained. No Plex-visible TV mutations, no WebDAV changes, monitor active on 15-minute schedule. Materialized QA remains REVIEW. No legacy resolver or publishing actions executed.
