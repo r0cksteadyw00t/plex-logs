@@ -1,16 +1,14 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-19T02:54:39Z
+Updated UTC: 2026-06-19T03:14:39Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 4
-Passed: 4
+Checked: 2
+Passed: 2
 Review: 0
 
 ## Results
-- Million Dollar Secret: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Million Dollar Secret: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Million Dollar Secret: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Million Dollar Secret: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Celebrity Sabotage: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Celebrity Sabotage: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
