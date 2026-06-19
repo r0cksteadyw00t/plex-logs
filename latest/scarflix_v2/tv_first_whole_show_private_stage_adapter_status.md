@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-19T11:34:54Z
+Updated UTC: 2026-06-19T11:54:43Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 5
+Episodes enumerated: 11
 Episodes already staged: 0
-Episodes newly staged: 5
+Episodes newly staged: 11
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- 90 Day Diaries: enumerated=5; staged=5; already=0; review=0; source=request_episode_targets
+- Ancient Aliens: Origins: enumerated=11; staged=11; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
