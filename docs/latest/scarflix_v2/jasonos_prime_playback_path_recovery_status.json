@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-19T18:49:08Z",
-    "ended_utc":  "2026-06-19T18:56:33Z",
-    "duration_seconds":  444,
+    "status":  "PASS",
+    "started_utc":  "2026-06-19T19:02:15Z",
+    "ended_utc":  "2026-06-19T19:02:18Z",
+    "duration_seconds":  2,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,23 +11,23 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  27
+                           "ms":  10
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  53
+                           "ms":  9
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  16
+                           "ms":  8
                        }
                    ],
     "webdav_before":  {
-                          "ok":  false,
-                          "status_code":  0,
-                          "error":  "Unable to connect to the remote server"
+                          "ok":  true,
+                          "status_code":  200,
+                          "error":  ""
                       },
     "webdav_after":  {
                          "ok":  true,
@@ -49,20 +49,20 @@
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  false,
-                             "timed_out":  true,
+                             "ok":  true,
+                             "timed_out":  false,
                              "error":  ""
                          },
     "s_media_after":  {
                           "path":  "S:\\media",
-                          "ok":  false,
-                          "timed_out":  true,
+                          "ok":  true,
+                          "timed_out":  false,
                           "error":  ""
                       },
     "s_catalog_after":  {
                             "path":  "S:\\media\\catalog",
-                            "ok":  false,
-                            "timed_out":  true,
+                            "ok":  true,
+                            "timed_out":  false,
                             "error":  ""
                         },
     "watch_now":  [
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  1139,
+                          "ms":  2463,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       },
@@ -80,35 +80,21 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  1912,
+                          "ms":  692,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       }
                   ],
-    "watch_now_probe_run":  true,
-    "watch_now_source":  "fresh",
+    "watch_now_probe_run":  false,
+    "watch_now_source":  "cached_previous_status",
     "actions":  [
                     {
-                        "action":  "start_node_webdav_bridge",
-                        "result":  {
-                                       "started":  true,
-                                       "pid":  22484,
-                                       "error":  ""
-                                   }
-                    },
-                    {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  1,
-                                       "error":  ""
-                                   }
+                        "action":  "watch_now_head_probes_skipped_cooldown",
+                        "cooldown_seconds":  300
                     }
                 ],
     "failures":  [
-                     "S: media/catalog path is not reliably ready",
-                     "Watch Now probe failed: Gremlins",
-                     "Watch Now probe failed: Anna"
+
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260620.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
