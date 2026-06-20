@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T05:47:12Z
-Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
+Updated UTC: 2026-06-20T06:22:54Z
+Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 24
+Episodes enumerated: 1
 Episodes already staged: 0
-Episodes newly staged: 1
-Review: 23
+Episodes newly staged: 0
+Review: 1
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Blood of Zeus: enumerated=24; staged=1; already=0; review=23; source=request_episode_targets
+- Mighty Monsterwheelies: enumerated=1; staged=0; already=0; review=1; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
