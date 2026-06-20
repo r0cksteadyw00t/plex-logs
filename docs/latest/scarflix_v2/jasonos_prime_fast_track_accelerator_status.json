@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-20T03:26:01Z",
+  "updated_utc": "2026-06-20T03:31:01Z",
   "duration_seconds": 1,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "PLATFORM_GATE_RUNNING",
@@ -18,7 +18,7 @@
   "tv_first_priority_gate": {
     "component": "jasonos_prime_tv_first_expansion_priority_gate",
     "status": "HELD_MATERIALIZED_QA_REQUIRED",
-    "updated_utc": "2026-06-20T03:26:01Z",
+    "updated_utc": "2026-06-20T03:31:01Z",
     "user_priority": "TV first if movies and TV cannot progress concurrently",
     "enforce_tv_first_when_concurrency_limited": true,
     "generic_movie_or_unscoped_expansion_allowed": false,
@@ -75,21 +75,21 @@
     }
   },
   "actual_strm_counts": {
-    "movies": 42,
+    "movies": 43,
     "tv": 0,
-    "total": 42,
+    "total": 43,
     "count_probe_timed_out": false,
     "staged_pending_probe_timed_out": false
   },
   "status_inputs": {
     "platform_gate": "REVIEW",
     "checkpoint": "RUNNING",
-    "checkpoint_step": "running_platform_gate_attempt_1",
+    "checkpoint_step": "running_platform_gate_attempt_2",
     "durable_runner": "RUNNING",
-    "durable_step": "running_platform_gate_attempt_1",
-    "durable_owner_pid": 6764,
-    "durable_child_pid": "",
-    "active_gate_transient_failures": 1,
+    "durable_step": "running_platform_gate_attempt_2",
+    "durable_owner_pid": 40176,
+    "durable_child_pid": 23948,
+    "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
     "controller_transient_retry_count": 2,
     "repeated_transient_review": false,
@@ -98,7 +98,7 @@
     "predictive_simulator": "REVIEW",
     "self_evolution": "REVIEW",
     "dashboard": "PASS",
-    "public_mirror": "REVIEW_RECOVERABLE"
+    "public_mirror": "PASS"
   },
   "next_4_hour_actions": [
     "Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.",
@@ -157,7 +157,7 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 9452,
+      "pid": 10428,
       "error": ""
     }
   ],
