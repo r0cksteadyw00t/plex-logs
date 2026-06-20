@@ -1,13 +1,13 @@
 # JasonOS Prime Playback QA Controller
 
-Status: REVIEW_MATERIALIZED_DECISION_FAILURE
-Updated UTC: 2026-06-20T08:15:26Z
-Current step: materialized_decision_failed
-Direct STRM total: 44
+Status: WAITING_OVERLAP
+Updated UTC: 2026-06-20T10:15:24Z
+Current step: validation_overlap_running
+Direct STRM total: 7
 Materialized/WebDAV primary: true
 Materialized visible verified: 18
 Materialized decision QA: REVIEW
 Direct STRM admission: REVIEW_QUARANTINED_VISIBLE_FAILURES
 Decision QA: UNKNOWN
 Concurrent QA: UNKNOWN
-Next action: Quarantine failed materialized source/release and keep title retryable.
+Next action: Wait for current ScarFLIX validation task to finish.
