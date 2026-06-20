@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-20T08:01:53Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\genghis_khan_the_secret_history_of_the_mongols_285283_private_stage_manifest_20260620T075405Z.prepared.json",
+  "updated_utc": "2026-06-20T08:41:35Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\yolo_106925_private_stage_manifest_20260620T083424Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "sentinel_status": "PASS",
-  "sentinel_alert_level": "LOW",
+  "sentinel_status": "ALERT",
+  "sentinel_alert_level": "HIGH",
   "pause_publication_present": true,
   "max_shows": 1,
   "max_episodes": 3,
@@ -33,102 +33,13 @@
     "whole_show_intent": true,
     "current_retry_held_hashes_block_restage": true
   },
-  "show_count": 1,
-  "episodes_enumerated": 3,
+  "show_count": 0,
+  "episodes_enumerated": 0,
   "already_staged_count": 0,
-  "staged_count": 3,
+  "staged_count": 0,
   "review_count": 0,
-  "shows": [
-    {
-      "title": "Genghis Khan: The Secret History of the Mongols",
-      "tmdb_id": 285283,
-      "seasons_expected": 1,
-      "episodes_expected": 3,
-      "episodes_enumerated": 3,
-      "already_staged_count": 0,
-      "staged_count": 3,
-      "review_count": 0,
-      "episode_manifest_source": "request_episode_targets",
-      "error": ""
-    }
-  ],
-  "results_redacted": [
-    {
-      "title": "Genghis Khan: The Secret History of the Mongols",
-      "tmdb_id": 285283,
-      "season": 1,
-      "episode": 1,
-      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
-      "stage_id": "tv_genghis_khan_the_secret_history_of_the_mongols_285283_s01e01_19d4e39db250",
-      "provider_ref": "torrentio.strem.fun",
-      "provider_attempt_count": 3,
-      "stream_evidence_redacted": {
-        "name": "[RD+] Torrentio\n1080p",
-        "title_excerpt": "Genghis Khan The Secret History of the Mongols S01E01 1080p HEVC x265-MeGusta 👤 0 💾 263.75 MB ⚙️ EZTV",
-        "info_hash": "19d4e39db2505d16dff284bdf7ae6b74c1ae16b3",
-        "url_host": "torrentio.strem.fun",
-        "cached_debrid": true,
-        "plex_compatible": false,
-        "canonical_title_signal": true,
-        "season_episode_signal": true,
-        "non_english_source_signal": false,
-        "selection_mode": "cached_verification_gated_fallback",
-        "fallback_requires_private_validation": true,
-        "fallback_requires_plex_decision": true,
-        "source_url_stored_private_only": true
-      }
-    },
-    {
-      "title": "Genghis Khan: The Secret History of the Mongols",
-      "tmdb_id": 285283,
-      "season": 1,
-      "episode": 2,
-      "status": "PASS_PRIVATE_STAGED_HELD",
-      "stage_id": "tv_genghis_khan_the_secret_history_of_the_mongols_285283_s01e02_542c1b85d224",
-      "provider_ref": "mediafusion.elfhosted.com",
-      "provider_attempt_count": 1,
-      "stream_evidence_redacted": {
-        "name": "MediaFusion | ElfHosted 🧲 RD ⚡️ 1080I",
-        "title_excerpt": "",
-        "info_hash": "",
-        "url_host": "mediafusion.elfhosted.com",
-        "cached_debrid": true,
-        "plex_compatible": true,
-        "canonical_title_signal": true,
-        "season_episode_signal": true,
-        "non_english_source_signal": false,
-        "selection_mode": "cached_plex_compatible_primary",
-        "fallback_requires_private_validation": false,
-        "fallback_requires_plex_decision": false,
-        "source_url_stored_private_only": true
-      }
-    },
-    {
-      "title": "Genghis Khan: The Secret History of the Mongols",
-      "tmdb_id": 285283,
-      "season": 1,
-      "episode": 3,
-      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
-      "stage_id": "tv_genghis_khan_the_secret_history_of_the_mongols_285283_s01e03_ca26e44abb32",
-      "provider_ref": "mediafusion.elfhosted.com",
-      "provider_attempt_count": 1,
-      "stream_evidence_redacted": {
-        "name": "MediaFusion | ElfHosted 🧲 RD ⚡️ 720P",
-        "title_excerpt": "",
-        "info_hash": "",
-        "url_host": "mediafusion.elfhosted.com",
-        "cached_debrid": true,
-        "plex_compatible": false,
-        "canonical_title_signal": true,
-        "season_episode_signal": true,
-        "non_english_source_signal": false,
-        "selection_mode": "cached_verification_gated_fallback",
-        "fallback_requires_private_validation": true,
-        "fallback_requires_plex_decision": true,
-        "source_url_stored_private_only": true
-      }
-    }
-  ],
-  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
-  "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
+  "shows": [],
+  "results_redacted": [],
+  "status": "HELD_SENTINEL_ALERT_HIGH",
+  "next_safe_action": "Keep TV whole-show staging held until Sentinel clears."
 }
