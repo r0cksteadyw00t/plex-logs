@@ -1,6 +1,6 @@
 ﻿# ScarFLIX v2 Watchdog + Stall Detector
 
-Updated UTC: 2026-06-20T03:50:15Z
+Updated UTC: 2026-06-20T03:55:38Z
 Status: REVIEW
 Stall risk: Medium
 Will progress without Codex: True
@@ -8,7 +8,7 @@ Current milestone: PLATFORM_GATE_RUNNING
 
 ## Signals
 - Controller age minutes: 5
-- Platform checkpoint age minutes: 0
+- Platform checkpoint age minutes: 1
 - Dashboard age minutes: 0
 - Mirror age minutes: 2
 - Movie STRM count: 44
@@ -20,4 +20,3 @@ Current milestone: PLATFORM_GATE_RUNNING
 
 ## Notes
 - Public mirror status was disabled or stale; watchdog triggered mirror task.
-- Transient provider/WebDAV failures are being held for retry, not pruned: 1
