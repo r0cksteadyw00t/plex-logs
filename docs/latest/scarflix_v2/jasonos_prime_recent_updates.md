@@ -1,17 +1,17 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-20T20:06:09.655Z
+Updated UTC: 2026-06-20T20:24:19.814Z
 Source: live status merge
 
-- 2026-06-20T20:05:55Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=31248; child_pid=
-- 2026-06-20T20:05:55Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-20T20:04:51Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=31248; child_pid=16124
-- 2026-06-20T20:04:51Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
+- 2026-06-20T20:24:02Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39992; child_pid=
+- 2026-06-20T20:24:02Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-20T20:23:53.581Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-20T20:23:53Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-20T20:20:15Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
+- 2026-06-20T20:15:34Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=12908; child_pid=28584
+- 2026-06-20T20:15:34Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
 - 2026-06-20T20:02:24Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-20T19:59:50Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
-- 2026-06-20T19:53:18Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-20T19:47:17Z - Autonomous controller: PLATFORM_GATE_RUNNING: relaunched stale PlatformGate detached runner once
-- 2026-06-20T19:11:15.204Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-20T19:11:15Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-20T09:50:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-20T09:48:26Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=43560; child_pid=
 - 2026-06-20T09:48:26Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
