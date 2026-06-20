@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-20T19:31:06.338Z
+Updated UTC: 2026-06-20T19:36:09.040Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -12,7 +12,7 @@ Will progress without Codex: true
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-10T02:27:50Z - daily AI usability smoke test | Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true. | 45% | next: integrate 8805 tool traces into 8791 daily UI | Low |
 | Grok-Codex Autonomous Instruction Loop | 15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions. | 2026-06-20T19:29:48Z - structured instruction loop | Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1. | 70% | active every 15 minutes with Grok API | Low |
 | ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-19T04:57:13Z - materialized canary Plex decision QA | Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=249, rows_found=143, checked=124, decision=103/124, failed=21, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=7; materialized visible links=0 (publisher=0, scan=0). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=7, tv=0, total=7. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=4/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_RETRY_HELD, checked=7, passed_visible=7, quarantined_this_run=0, retry_held=3. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=REVIEW/REVIEW; durable=REVIEW; owner_pid=4164; child_pid=. | 23% | after all-visible materialized QA passes | Medium |
-| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-20T19:30:02Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=7. | 20% | runs every 5 minutes | Low |
+| Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-20T19:35:01Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=7. | 20% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-19T09:23:47Z - scheduled task wrappers refreshed | Status RETIRED_ORCHESTRATOR_OWNED; tasks_updated=0; blockers=0. | 80% | active now | Medium |
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh RETIRED_ORCHESTRATOR_OWNED; plugins=0. | 45% | 1 day | Medium |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
@@ -30,8 +30,8 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 8 min ago
-- Platform child progress: 20 min ago
+- Controller updated: 13 min ago
+- Platform child progress: 25 min ago
 - Mirror updated: under 1 min ago
 - Platform runner running: false
 - Platform child active: true
