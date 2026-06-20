@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T06:26:36Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Updated UTC: 2026-06-20T08:01:53Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 24
-Episodes already staged: 24
-Episodes newly staged: 0
+Episodes enumerated: 3
+Episodes already staged: 0
+Episodes newly staged: 3
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Blood of Zeus: enumerated=24; staged=0; already=24; review=0; source=request_episode_targets
+- Genghis Khan: The Secret History of the Mongols: enumerated=3; staged=3; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
