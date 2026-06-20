@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-20T09:25:42.129Z
+Updated UTC: 2026-06-20T09:27:25.631Z
 Source: live status merge
 
-- 2026-06-20T09:25:32Z - Autonomous controller: controller_already_running: existing controller lock is active
-- 2026-06-20T09:23:56Z - Durable PlatformGate runner RUNNING: Step starting; owner_pid=22460; child_pid=
-- 2026-06-20T09:23:56Z - PlatformGate checkpoint RUNNING: Step starting; visible=1; blockers=0
-- 2026-06-20T09:00:53Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=42048; child_pid=
-- 2026-06-20T09:00:53Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
-- 2026-06-20T08:57:42Z - Autonomous controller: PLATFORM_GATE_RUNNING: relaunched stale PlatformGate detached runner once
+- 2026-06-20T09:27:09Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=38864; child_pid=
+- 2026-06-20T09:27:09Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
+- 2026-06-20T09:26:33Z - Autonomous controller: controller_already_running: existing controller lock is active
+- 2026-06-20T09:25:51Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=22460; child_pid=26276
+- 2026-06-20T09:25:51Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=1; blockers=0
+- 2026-06-20T09:25:20Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-20T08:45:58Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-20T08:07:52.488Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-20T08:07:52Z] [PASS] WebDAV active gate finished status=PASS checked=1 passed=1 failed_detected=0 pruned=0
 - 2026-06-20T08:07:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
