@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T19:25:36Z
+Updated UTC: 2026-06-20T19:30:42Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 23
+Episodes enumerated: 1
 Episodes already staged: 0
-Episodes newly staged: 23
+Episodes newly staged: 1
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- The Strange Chores: enumerated=23; staged=23; already=0; review=0; source=request_episode_targets
+- The Madness: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
