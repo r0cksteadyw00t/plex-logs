@@ -1,10 +1,10 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-20T05:27:02Z
+Updated UTC: 2026-06-20T05:31:05Z
 Status: PASS
 Mode: fast_track_safe_acceleration
-Current milestone: CONTROLLED_MATERIALIZED_QA_HOLD
-Next autonomous action: Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.
+Current milestone: PLATFORM_GATE_RUNNING
+Next autonomous action: Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.
 Expansion eligible: false
 Expansion started this cycle: false
 TV-first priority gate: HELD_MATERIALIZED_QA_REQUIRED
@@ -12,18 +12,18 @@ TV-first first wave: tv_active_2026_whole_show (64)
 TV-first generic/movie expansion allowed: false
 
 ## Actual STRM Counts
-- movies: 42
+- movies: 44
 - tv: 1
-- total: 43
+- total: 45
 
 ## Inputs
-- platform_gate: PASS
-- checkpoint: PASS
-- checkpoint_step: platform_gate_pass
-- durable_runner: PASS
-- durable_step: platform_gate_pass
-- durable_owner_pid: 5920
-- durable_child_pid: 
+- platform_gate: REVIEW
+- checkpoint: RUNNING
+- checkpoint_step: running_platform_gate_attempt_1
+- durable_runner: RUNNING
+- durable_step: running_platform_gate_attempt_1
+- durable_owner_pid: 12984
+- durable_child_pid: 5920
 - active_gate_transient_failures: 0
 - active_gate_prunable_failures: 0
 - controller_transient_retry_count: 0
@@ -33,7 +33,7 @@ TV-first generic/movie expansion allowed: false
 - predictive_simulator: REVIEW
 - self_evolution: REVIEW
 - dashboard: PASS
-- public_mirror: REVIEW_RECOVERABLE
+- public_mirror: PASS
 
 ## Next 4 Hours
 - Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.
@@ -50,4 +50,3 @@ TV-first generic/movie expansion allowed: false
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
 - lightweight_status_probe: PASS 
-- controlled_materialized_qa_hold: PASS 
