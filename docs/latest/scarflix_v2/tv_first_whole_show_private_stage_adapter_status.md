@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T19:09:52Z
+Updated UTC: 2026-06-20T19:25:36Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 6
+Episodes enumerated: 23
 Episodes already staged: 0
-Episodes newly staged: 6
+Episodes newly staged: 23
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Black Doves: enumerated=6; staged=6; already=0; review=0; source=request_episode_targets
+- The Strange Chores: enumerated=23; staged=23; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
