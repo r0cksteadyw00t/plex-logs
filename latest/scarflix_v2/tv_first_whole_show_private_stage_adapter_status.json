@@ -1,16 +1,23 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-20T05:49:59Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\the_flipping_el_moussas_221582_private_stage_manifest_20260620T053410Z.prepared.json",
+  "updated_utc": "2026-06-20T06:05:57Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\blood_of_zeus_111111_private_stage_manifest_20260620T060507Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
-  "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "sentinel_status": "REVIEW",
-  "sentinel_alert_level": "MEDIUM",
+  "prior_private_stage_validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "sentinel_status": "ALERT",
+  "sentinel_alert_level": "HIGH",
   "pause_publication_present": true,
   "max_shows": 1,
-  "max_episodes": 1,
+  "max_episodes": 24,
+  "provider_candidate_count": 4,
+  "provider_refs": [
+    "mediafusion.elfhosted.com",
+    "comet.elfhosted.com",
+    "torrentio.strem.fun",
+    "aiostreams.elfhosted.com"
+  ],
   "safety": {
     "private_stage_only": true,
     "no_publication_started": true,
@@ -26,36 +33,13 @@
     "whole_show_intent": true,
     "current_retry_held_hashes_block_restage": true
   },
-  "show_count": 1,
-  "episodes_enumerated": 1,
+  "show_count": 0,
+  "episodes_enumerated": 0,
   "already_staged_count": 0,
   "staged_count": 0,
-  "review_count": 1,
-  "shows": [
-    {
-      "title": "The Flipping El Moussas",
-      "tmdb_id": 221582,
-      "seasons_expected": 2,
-      "episodes_expected": 1,
-      "episodes_enumerated": 1,
-      "already_staged_count": 0,
-      "staged_count": 0,
-      "review_count": 1,
-      "episode_manifest_source": "request_episode_targets",
-      "error": ""
-    }
-  ],
-  "results_redacted": [
-    {
-      "title": "The Flipping El Moussas",
-      "tmdb_id": 221582,
-      "season": 1,
-      "episode": 8,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 1,
-      "rejected_hash_count": 0
-    }
-  ],
-  "status": "REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED",
-  "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
+  "review_count": 0,
+  "shows": [],
+  "results_redacted": [],
+  "status": "HELD_SENTINEL_ALERT_HIGH",
+  "next_safe_action": "Keep TV whole-show staging held until Sentinel clears."
 }
