@@ -1,6 +1,6 @@
 ﻿# JasonOS Prime Go-Live Readiness Status
 
-Updated UTC: 2026-06-20T08:41:08Z
+Updated UTC: 2026-06-20T08:46:46Z
 
 Overall status: `REVIEW_NOT_GO_LIVE_READY`
 
@@ -8,7 +8,7 @@ Go-live ready: `False`
 
 Active Plex sessions: `0`
 
-Sentinel: `REVIEW / MEDIUM`
+Sentinel: `ALERT / HIGH`
 
 PAUSE_PUBLICATION active: `True`
 
@@ -35,11 +35,11 @@ PAUSE_PUBLICATION active: `True`
 | Task | Exists | State | Last Result |
 |---|---:|---:|---:|
 | `JasonOS_Prime_PlaybackFirstStabilityGuard` | `True` | `Running` | `267009` |
-| `JasonOS_Prime_PlaybackPathRecovery` | `True` | `Running` | `2147946720` |
-| `JasonOS_Prime_PlexWatchdog` | `True` | `Running` | `2147946720` |
-| `JasonOS_Prime_ProjectSafeProgressAudit` | `True` | `Running` | `267009` |
+| `JasonOS_Prime_PlaybackPathRecovery` | `True` | `Ready` | `0` |
+| `JasonOS_Prime_PlexWatchdog` | `True` | `Ready` | `0` |
+| `JasonOS_Prime_ProjectSafeProgressAudit` | `True` | `Ready` | `0` |
 | `JasonOS_Prime_Mission002_QuietWindowCutoverWatcher` | `True` | `Disabled` | `0` |
-| `JasonOS_Prime_GoLiveReadinessAudit` | `True` | `Running` | `267009` |
+| `JasonOS_Prime_GoLiveReadinessAudit` | `True` | `Ready` | `0` |
 
 ## Public URLs
 
