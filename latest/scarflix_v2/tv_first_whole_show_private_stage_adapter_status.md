@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T11:27:59Z
+Updated UTC: 2026-06-20T11:32:50Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
 Episodes enumerated: 4
@@ -11,7 +11,7 @@ TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- OKITSURA: Fell in Love with an Okinawan Girl, but I Just Wish I Know What She's Saying: enumerated=4; staged=4; already=0; review=0; source=request_episode_targets
+- Tiny Toons Looniversity: enumerated=4; staged=4; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
