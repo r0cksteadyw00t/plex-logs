@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-20T14:07:32Z
+Updated UTC: 2026-06-20T14:24:19Z
 Source: grok_api
 
 ## Summary
@@ -20,4 +20,4 @@ PASS
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-21T14:07:32Z`
+- Expires: `2026-06-21T14:24:19Z`
