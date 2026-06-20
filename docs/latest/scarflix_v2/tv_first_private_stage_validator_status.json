@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-20T13:42:01Z",
+  "updated_utc": "2026-06-20T14:00:01Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
-    "tmdb_id": "236994",
+    "tmdb_id": "55270",
     "title_regex": ""
   },
   "scoped": true,
@@ -24,29 +24,46 @@
   "checked": 1,
   "passed": 1,
   "review": 0,
-  "relay_fallback_attempted": 0,
-  "relay_fallback_passed": 0,
+  "relay_fallback_attempted": 1,
+  "relay_fallback_passed": 1,
   "results": [
     {
-      "stage_id": "tv_dragon_ball_daima_236994_s01e01_e6803defb2e5",
-      "title": "Dragon Ball DAIMA",
-      "tmdb_id": 236994,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_dragon_ball_daima_236994_s01e01_e6803defb2e5\\Dragon Ball DAIMA (2024) - S01E01.strm",
+      "stage_id": "tv_the_sandhamn_murders_55270_s01e01_90ef1a00c9a6",
+      "title": "The Sandhamn Murders",
+      "tmdb_id": 55270,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_sandhamn_murders_55270_s01e01_90ef1a00c9a6\\The Sandhamn Murders (2010) - S01E01.strm",
       "status": "PASS_PRIVATE_STAGE_VALIDATED",
       "probe": {
         "ok": true,
         "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "Range probe passed; HEAD did not provide a usable media response.",
-        "url_host": "mediafusion-dev.elfhosted.com",
-        "head_status": null,
+        "reason_code": "PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED",
+        "reason": "Direct range probe returned HTTP 503; ephemeral loopback relay fallback validated streaming pass-through.",
+        "url_host": "torrentio.strem.fun",
+        "head_status": 200,
         "range_status": 206,
         "content_type": "application/force-download",
-        "content_length": null,
+        "content_length": 517741631,
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/9339455593",
+        "content_range": "bytes 0-65535/517741631",
         "source_url_redacted": true,
-        "relay_fallback": null
+        "relay_fallback": {
+          "attempted": true,
+          "ok": true,
+          "loopback_only": true,
+          "ephemeral_relay_only": true,
+          "no_media_artifacts_created": true,
+          "relay_shutdown_before_return": true,
+          "head_status": 200,
+          "range_status": 206,
+          "range_bytes": 65536,
+          "content_type": "application/force-download",
+          "content_length": 517741631,
+          "content_range": "bytes 0-65535/517741631",
+          "reason_code": "PASS_RELAY_FALLBACK_VALIDATED",
+          "reason": "Ephemeral loopback relay validated HEAD and bounded ranged GET without disk media."
+        },
+        "direct_range_status": 503,
+        "direct_range_reason_code": "PROVIDER_503_RETRYABLE"
       }
     }
   ],
