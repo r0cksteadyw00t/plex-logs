@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T11:23:33Z
+Updated UTC: 2026-06-20T11:27:59Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 3
+Episodes enumerated: 4
 Episodes already staged: 0
-Episodes newly staged: 3
+Episodes newly staged: 4
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Blue Exorcist: enumerated=3; staged=3; already=0; review=0; source=request_episode_targets
+- OKITSURA: Fell in Love with an Okinawan Girl, but I Just Wish I Know What She's Saying: enumerated=4; staged=4; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
