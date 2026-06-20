@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T20:40:06Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-20T20:48:24Z
+Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
 Shows requested: 1
-Episodes enumerated: 3
+Episodes enumerated: 9
 Episodes already staged: 0
-Episodes newly staged: 3
-Review: 0
+Episodes newly staged: 8
+Review: 1
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Outer Banks: enumerated=3; staged=3; already=0; review=0; source=request_episode_targets
+- A House Through Time: enumerated=9; staged=8; already=0; review=1; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
