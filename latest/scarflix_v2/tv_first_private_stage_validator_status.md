@@ -1,16 +1,32 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T11:56:16Z
+Updated UTC: 2026-06-20T13:13:31Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 4
-Passed: 4
+Checked: 20
+Passed: 20
 Review: 0
 
 ## Results
-- Win or Lose: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Win or Lose: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Win or Lose: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Win or Lose: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=503; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
