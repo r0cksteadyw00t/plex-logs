@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T11:36:32Z
+Updated UTC: 2026-06-20T12:19:12Z
 Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 4
+Episodes enumerated: 7
 Episodes already staged: 0
 Episodes newly staged: 0
-Review: 4
+Review: 7
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Beck: enumerated=4; staged=0; already=0; review=4; source=request_episode_targets
+- Expedition Bigfoot: enumerated=7; staged=0; already=0; review=7; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
