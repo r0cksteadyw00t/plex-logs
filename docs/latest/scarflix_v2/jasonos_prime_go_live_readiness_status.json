@@ -2,14 +2,14 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-20T08:24:15Z",
-    "updated_utc":  "2026-06-20T08:24:48Z",
+    "started_utc":  "2026-06-20T08:32:51Z",
+    "updated_utc":  "2026-06-20T08:41:08Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
     "sentinel":  {
-                     "status":  "PASS",
-                     "alert_level":  "LOW"
+                     "status":  "REVIEW",
+                     "alert_level":  "MEDIUM"
                  },
     "safety":  {
                    "pause_publication_active":  true,
@@ -25,14 +25,14 @@
                      {
                          "outcome_id":  "O-PLAYBACK",
                          "name":  "Reliable Plex playback first",
-                         "go_live_status":  "REVIEW_NOT_GO_LIVE_READY",
+                         "go_live_status":  "PASS_INFRASTRUCTURE_READY_REQUIRES_CLIENT_CONFIRMATION",
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
                                           "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=PASS"
                                       ],
                          "blockers":  [
-                                          "Plex background scanner/analyzer pressure still detected: 12."
+
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
                          "requires_quiet_window":  false,
@@ -109,10 +109,10 @@
                          "progress_percent":  90,
                          "summary":  "Public mirror and Grok report delivery are operational; this audit adds the missing go-live verdict layer.",
                          "evidence":  [
-                                          "PublicMirror=RUNNING GrokDelivery=PASS_DELIVERED_TO_GROK_API Mode=REAL_API"
+                                          "PublicMirror=PASS GrokDelivery=PASS_DELIVERED_TO_GROK_API Mode=REAL_API"
                                       ],
                          "blockers":  [
-                                          "Public mirror is not PASS: RUNNING."
+
                                       ],
                          "next_safe_action":  "Publish this readiness audit and keep top-of-file handoffs current after each material change.",
                          "requires_quiet_window":  false,
@@ -125,7 +125,7 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Disabled"
+                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Running QuietWatcherTask=Disabled"
                                       ],
                          "blockers":  [
                                           "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
@@ -154,10 +154,6 @@
                  ],
     "blockers":  [
                      {
-                         "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex background scanner/analyzer pressure still detected: 12."
-                     },
-                     {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "blocker":  "Materialized QA is not full PASS: REVIEW 103/124 failed=21. retry_held=0 retry_tracked=21."
                      },
@@ -170,26 +166,26 @@
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackFirstStabilityGuard",
                                 "exists":  true,
-                                "state":  "Ready",
-                                "last_result":  0
+                                "state":  "Running",
+                                "last_result":  267009
                             },
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackPathRecovery",
                                 "exists":  true,
-                                "state":  "Ready",
-                                "last_result":  0
+                                "state":  "Running",
+                                "last_result":  2147946720
                             },
                             {
                                 "task_name":  "JasonOS_Prime_PlexWatchdog",
                                 "exists":  true,
-                                "state":  "Ready",
-                                "last_result":  0
+                                "state":  "Running",
+                                "last_result":  2147946720
                             },
                             {
                                 "task_name":  "JasonOS_Prime_ProjectSafeProgressAudit",
                                 "exists":  true,
-                                "state":  "Ready",
-                                "last_result":  0
+                                "state":  "Running",
+                                "last_result":  267009
                             },
                             {
                                 "task_name":  "JasonOS_Prime_Mission002_QuietWindowCutoverWatcher",
@@ -200,8 +196,8 @@
                             {
                                 "task_name":  "JasonOS_Prime_GoLiveReadinessAudit",
                                 "exists":  true,
-                                "state":  "Ready",
-                                "last_result":  0
+                                "state":  "Running",
+                                "last_result":  267009
                             }
                         ],
     "next_safe_actions":  [
