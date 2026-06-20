@@ -3,7 +3,7 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-20T00:20:12Z
+Updated UTC: 2026-06-20T00:25:06Z
 Current step: PLATFORM_GATE_RUNNING
 Jason action required: False
 
@@ -20,14 +20,14 @@ Jason action required: False
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: FAIL
+- rclone_mount_status: REVIEW
 - s_media_ready: True
 - s_catalog_ready: True
 - mount_selfheal_attempted: False
 
 ## Action
 - action_taken: PlatformGate runner already running; no inline wait
-- next_check_utc: 2026-06-20T00:25:22Z
+- next_check_utc: 2026-06-20T00:30:08Z
 
 ## Blockers
 - none
