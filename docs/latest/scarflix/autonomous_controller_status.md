@@ -1,16 +1,16 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: WAITING_RETRY
-Milestone state: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
+Status: RUNNING
+Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-20T00:50:10Z
-Current step: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
+Updated UTC: 2026-06-20T00:55:09Z
+Current step: PLATFORM_GATE_CHILD_ACTIVE
 Jason action required: False
 
 ## PlatformGate
 - runner_running: True
-- status: REVIEW
-- stage: platform_gate_review
+- status: RUNNING
+- stage: PLATFORM_GATE_CHILD_ACTIVE
 - visible: 1
 - transient_failures: 1
 - prunable_failures: 0
@@ -20,14 +20,14 @@ Jason action required: False
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: REVIEW
+- rclone_mount_status: PASS
 - s_media_ready: True
 - s_catalog_ready: True
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: waiting for transient retry backoff
-- next_check_utc: 2026-06-20T00:50:32Z
+- action_taken: PlatformGate child QA activity is fresh; no duplicate runner launch
+- next_check_utc: 2026-06-20T01:00:19Z
 
 ## Blockers
 - none
