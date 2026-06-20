@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-20T12:41:22.353Z
+Updated UTC: 2026-06-20T12:46:20.580Z
 Source: live status merge
 
-- 2026-06-20T12:41:04.017Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-20T12:41:03Z] [INFO] WebDAV active gate starting MaxItems=0 Retries=3 PruneFailed=False VisibleOnly=True
-- 2026-06-20T12:40:32Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=34988; child_pid=31816
-- 2026-06-20T12:40:32Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
+- 2026-06-20T12:45:29Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=15696; child_pid=
+- 2026-06-20T12:45:29Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-20T12:45:00.405Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-20T12:45:00Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-20T12:44:33Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=15696; child_pid=42568
+- 2026-06-20T12:44:33Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
 - 2026-06-20T12:40:14Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-20T12:39:51Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=43488; child_pid=
-- 2026-06-20T12:39:51Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-20T12:35:18Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-20T12:20:18Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-20T09:55:38Z - Autonomous controller: controller_already_running: existing controller lock is active
