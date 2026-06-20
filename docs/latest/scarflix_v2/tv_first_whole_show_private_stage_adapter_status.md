@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T12:33:52Z
+Updated UTC: 2026-06-20T12:38:06Z
 Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 6
+Episodes enumerated: 2
 Episodes already staged: 0
 Episodes newly staged: 0
-Review: 6
+Review: 2
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- The Tiny Chef Show: enumerated=6; staged=0; already=0; review=6; source=request_episode_targets
+- Prime Target: enumerated=2; staged=0; already=0; review=2; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
