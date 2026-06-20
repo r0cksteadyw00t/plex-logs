@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-20T03:26:01Z
+Updated UTC: 2026-06-20T03:31:01Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: PLATFORM_GATE_RUNNING
@@ -12,19 +12,19 @@ TV-first first wave: tv_active_2026_whole_show (64)
 TV-first generic/movie expansion allowed: false
 
 ## Actual STRM Counts
-- movies: 42
+- movies: 43
 - tv: 0
-- total: 42
+- total: 43
 
 ## Inputs
 - platform_gate: REVIEW
 - checkpoint: RUNNING
-- checkpoint_step: running_platform_gate_attempt_1
+- checkpoint_step: running_platform_gate_attempt_2
 - durable_runner: RUNNING
-- durable_step: running_platform_gate_attempt_1
-- durable_owner_pid: 6764
-- durable_child_pid: 
-- active_gate_transient_failures: 1
+- durable_step: running_platform_gate_attempt_2
+- durable_owner_pid: 40176
+- durable_child_pid: 23948
+- active_gate_transient_failures: 0
 - active_gate_prunable_failures: 0
 - controller_transient_retry_count: 2
 - repeated_transient_review: false
@@ -33,7 +33,7 @@ TV-first generic/movie expansion allowed: false
 - predictive_simulator: REVIEW
 - self_evolution: REVIEW
 - dashboard: PASS
-- public_mirror: REVIEW_RECOVERABLE
+- public_mirror: PASS
 
 ## Next 4 Hours
 - Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.
