@@ -2,14 +2,14 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-20T08:32:51Z",
-    "updated_utc":  "2026-06-20T08:41:08Z",
+    "started_utc":  "2026-06-20T08:44:23Z",
+    "updated_utc":  "2026-06-20T08:45:20Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
     "sentinel":  {
-                     "status":  "REVIEW",
-                     "alert_level":  "MEDIUM"
+                     "status":  "ALERT",
+                     "alert_level":  "HIGH"
                  },
     "safety":  {
                    "pause_publication_active":  true,
@@ -125,7 +125,7 @@
                          "progress_percent":  70,
                          "summary":  "Orchestrator is active, but hands-off status is still escalating no-progress cycles.",
                          "evidence":  [
-                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Running QuietWatcherTask=Disabled"
+                                          "Orchestrator=PASS HandsOff=REVIEW_ESCALATION_REQUIRED SafeAuditTask=Ready QuietWatcherTask=Disabled"
                                       ],
                          "blockers":  [
                                           "Hands-off operation is not PASS: REVIEW_ESCALATION_REQUIRED."
@@ -166,26 +166,26 @@
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackFirstStabilityGuard",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  267009
+                                "state":  "Ready",
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackPathRecovery",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  2147946720
+                                "state":  "Ready",
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_PlexWatchdog",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  2147946720
+                                "state":  "Ready",
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_ProjectSafeProgressAudit",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  267009
+                                "state":  "Ready",
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_Mission002_QuietWindowCutoverWatcher",
@@ -196,8 +196,8 @@
                             {
                                 "task_name":  "JasonOS_Prime_GoLiveReadinessAudit",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  267009
+                                "state":  "Ready",
+                                "last_result":  0
                             }
                         ],
     "next_safe_actions":  [
