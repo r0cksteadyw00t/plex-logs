@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-20T19:41:01Z
+Updated UTC: 2026-06-20T19:46:01Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: PLATFORM_GATE_RUNNING
@@ -12,9 +12,9 @@ TV-first first wave: tv_active_2026_whole_show (64)
 TV-first generic/movie expansion allowed: false
 
 ## Actual STRM Counts
-- movies: 7
+- movies: 6
 - tv: 0
-- total: 7
+- total: 6
 
 ## Inputs
 - platform_gate: REVIEW
