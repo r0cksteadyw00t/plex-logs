@@ -1,14 +1,15 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T10:51:45Z
+Updated UTC: 2026-06-20T11:23:44Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 2
-Passed: 2
+Checked: 3
+Passed: 3
 Review: 0
 
 ## Results
-- Good Cop/Bad Cop: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Good Cop/Bad Cop: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Blue Exorcist: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Blue Exorcist: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Blue Exorcist: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
