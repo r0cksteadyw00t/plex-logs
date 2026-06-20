@@ -1,7 +1,7 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-20T07:26:50Z  
-**Status:** PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED
+**Updated UTC:** 2026-06-20T07:31:33Z  
+**Status:** REVIEW_SESSION_DETECTION_UNAVAILABLE_BACKGROUND_SUPPRESSED
 
 ## Scope
 
@@ -14,23 +14,19 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Playback Priority
 
-- Session detection OK: True
-- Active Plex sessions: 0
-- Plex base used: http://192.168.1.184:32400
-- Token source used: plex_token.txt
+- Session detection OK: False
+- Active Plex sessions: -1
+- Plex base used: 
+- Token source used: 
 - Off-peak window: 2:00-6:00
 - In off-peak window: False
 - Background work suppressed: True
-- Reason: idle_outside_off_peak_window
+- Reason: session_detection_unavailable_background_suppressed
 
 ## Plex Background Jobs
 
-- pid=1940 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=7448 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=14404 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=39908 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=40152 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=40552 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=20560 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
+- pid=35184 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
 
 ## Recent rclone/WebDAV Error Pressure
 
