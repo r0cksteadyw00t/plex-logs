@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_strategy_note_20260620_v2",
-      "created_at": "2026-06-20T01:27:39Z",
-      "expires_at": "2026-06-21T01:27:39Z",
+      "instruction_id": "phase0_tv_section6_forensic_hold_status_20260620_v3",
+      "created_at": "2026-06-20T01:43:24Z",
+      "expires_at": "2026-06-21T01:43:24Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,22 +14,18 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_tv_section6_forensic_strategy_note_20260620_v2",
-            "auto_added_by_bridge": true
-          }
+          "summary": "Maintaining TV Section 6 publication hold per forensic handoff. Monitor active, 0 pending events, full-season gate enforced, no Plex-visible mutations. Materialized QA remains REVIEW. Expansion limited to controlled materialized only."
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-20T01:27:39Z",
+  "updated_utc": "2026-06-20T01:43:24Z",
   "source": "grok_api"
 }
