@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-20T04:09:02Z
-Instruction: phase0_tv_section6_forensic_hold_status_summary_20260620_v12
+Updated UTC: 2026-06-20T04:25:04Z
+Instruction: phase0_stabilization_foundation_status_20260620_v13
 
-TV Section 6 forensic hold remains active. Monitor continues every 15 minutes with 0 pending deltas. Full-season pilot (28/28) privately validated but Plex visibility blocked by scanner timing. No WebDAV mutation, no publication, no expansion. Next controlled retry strategy pending Grok peer review of forensic handoff.
+Phase 0 stabilization ongoing. TV Section 6 forensic hold remains active with HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No expansion, publishing, or legacy resolver actions permitted. Materialized QA in REVIEW state. Monitor continues 15-minute cycles without mutation.
