@@ -1,10 +1,10 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-20T06:56:02Z
+Updated UTC: 2026-06-20T07:01:02Z
 Status: PASS
 Mode: fast_track_safe_acceleration
-Current milestone: CONTROLLED_MATERIALIZED_QA_HOLD
-Next autonomous action: Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.
+Current milestone: PLATFORM_GATE_RUNNING
+Next autonomous action: Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.
 Expansion eligible: false
 Expansion started this cycle: false
 TV-first priority gate: HELD_MATERIALIZED_QA_REQUIRED
@@ -17,12 +17,12 @@ TV-first generic/movie expansion allowed: false
 - total: 42
 
 ## Inputs
-- platform_gate: PASS
-- checkpoint: PASS
-- checkpoint_step: platform_gate_pass
-- durable_runner: PASS
-- durable_step: platform_gate_pass
-- durable_owner_pid: 24892
+- platform_gate: REVIEW
+- checkpoint: REVIEW
+- checkpoint_step: platform_gate_review
+- durable_runner: REVIEW
+- durable_step: platform_gate_review
+- durable_owner_pid: 17952
 - durable_child_pid: 
 - active_gate_transient_failures: 0
 - active_gate_prunable_failures: 0
@@ -50,4 +50,4 @@ TV-first generic/movie expansion allowed: false
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
 - lightweight_status_probe: PASS 
-- controlled_materialized_qa_hold: PASS 
+- ScarFLIX_v2_DurablePlatformGateRunner: PASS platform_gate_not_pass
