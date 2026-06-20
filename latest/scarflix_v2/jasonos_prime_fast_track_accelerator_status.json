@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-20T04:25:01Z",
-  "duration_seconds": 0,
+  "updated_utc": "2026-06-20T04:30:10Z",
+  "duration_seconds": 5,
   "mode": "fast_track_safe_acceleration",
-  "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
-  "next_autonomous_action": "Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.",
+  "current_milestone": "PLATFORM_GATE_RUNNING",
+  "next_autonomous_action": "Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.",
   "no_secret_access": true,
   "expansion_eligible": false,
   "expansion_started_this_cycle": false,
@@ -18,7 +18,7 @@
   "tv_first_priority_gate": {
     "component": "jasonos_prime_tv_first_expansion_priority_gate",
     "status": "HELD_MATERIALIZED_QA_REQUIRED",
-    "updated_utc": "2026-06-20T04:25:00Z",
+    "updated_utc": "2026-06-20T04:30:10Z",
     "user_priority": "TV first if movies and TV cannot progress concurrently",
     "enforce_tv_first_when_concurrency_limited": true,
     "generic_movie_or_unscoped_expansion_allowed": false,
@@ -82,23 +82,23 @@
     "staged_pending_probe_timed_out": false
   },
   "status_inputs": {
-    "platform_gate": "PASS",
-    "checkpoint": "PASS",
-    "checkpoint_step": "platform_gate_pass",
-    "durable_runner": "PASS",
-    "durable_step": "platform_gate_pass",
-    "durable_owner_pid": 24640,
-    "durable_child_pid": "",
+    "platform_gate": "REVIEW",
+    "checkpoint": "RUNNING",
+    "checkpoint_step": "running_platform_gate_attempt_1",
+    "durable_runner": "RUNNING",
+    "durable_step": "running_platform_gate_attempt_1",
+    "durable_owner_pid": 13848,
+    "durable_child_pid": 35260,
     "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
     "controller_transient_retry_count": 0,
     "repeated_transient_review": false,
     "candidate_source_model": "PASS",
-    "controller": "PASS",
+    "controller": "RUNNING",
     "predictive_simulator": "REVIEW",
     "self_evolution": "REVIEW",
     "dashboard": "PASS",
-    "public_mirror": "REVIEW_RECOVERABLE"
+    "public_mirror": "PASS"
   },
   "next_4_hour_actions": [
     "Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.",
@@ -157,14 +157,8 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 11928,
+      "pid": 2140,
       "error": ""
-    },
-    {
-      "action": "controlled_materialized_qa_hold",
-      "status": "PASS",
-      "materialized_decision_qa_status": "REVIEW",
-      "staged_pending_count": 43
     }
   ],
   "files": {
