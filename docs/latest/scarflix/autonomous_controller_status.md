@@ -1,16 +1,16 @@
 # ScarFLIX v2 Autonomous Controller
 
 Status: RUNNING
-Milestone state: PLATFORM_GATE_RUNNING
+Milestone state: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-20T00:40:15Z
-Current step: PLATFORM_GATE_RUNNING
+Updated UTC: 2026-06-20T00:45:19Z
+Current step: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
 Jason action required: False
 
 ## PlatformGate
 - runner_running: True
-- status: RUNNING
-- stage: running_platform_gate_attempt_1
+- status: REVIEW
+- stage: platform_gate_review
 - visible: 1
 - transient_failures: 1
 - prunable_failures: 0
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: PlatformGate runner already running; no inline wait
-- next_check_utc: 2026-06-20T00:45:32Z
+- action_taken: transient-only REVIEW; relaunched detached PlatformGate runner
+- next_check_utc: 2026-06-20T00:50:33Z
 
 ## Blockers
 - none
