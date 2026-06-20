@@ -1,19 +1,19 @@
 {
   "component": "jasonos_prime_lightweight_status_probe",
   "status": "REVIEW",
-  "updated_utc": "2026-06-20T04:25:01Z",
-  "duration_ms": 18,
+  "updated_utc": "2026-06-20T04:30:11Z",
+  "duration_ms": 60,
   "probe_contract": "Node-only bounded read of current public status JSON; no long validation and no schtasks/process scans.",
   "counts": {
-    "direct_movies": 41,
+    "direct_movies": 44,
     "direct_tv": 1,
-    "direct_total": 42,
+    "direct_total": 45,
     "materialized_webdav_artifacts": 6,
     "materialized_webdav_files": 6,
     "staged_pending": 43
   },
   "statuses": {
-    "public_mirror": "REVIEW_RECOVERABLE",
+    "public_mirror": "PASS",
     "materialized_decision_qa": "REVIEW",
     "playback_qa_controller": "REVIEW_MATERIALIZED_DECISION_FAILURE",
     "fast_track": "PASS",
@@ -22,9 +22,9 @@
     "direct_strm_mirror": "PAUSED_PLAYBACK_FIX",
     "canary": "PAUSED_PLAYBACK_FIX",
     "node_watchdog": "ACTIVE",
-    "sentinel": "REVIEW",
+    "sentinel": "PASS",
     "candidate_source_model": "PASS",
-    "autonomous_controller": "PASS",
+    "autonomous_controller": "RUNNING",
     "ai_8791": "PASS",
     "ai_8805": "PASS"
   },
@@ -37,24 +37,22 @@
     "updated_utc": "2026-06-19T04:57:13Z"
   },
   "fast_track": {
-    "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
+    "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
     "staged_pending_count": 43,
     "materialized_decision_qa_status": "REVIEW",
-    "updated_utc": "2026-06-20T04:24:04Z"
+    "updated_utc": "2026-06-20T04:30:10Z"
   },
   "mirror": {
-    "status": "REVIEW_RECOVERABLE",
-    "updated_utc": "2026-06-20T04:24:57.471Z",
-    "last_success_utc": "2026-06-20T03:58:27.401Z",
-    "failed_count": 67,
+    "status": "PASS",
+    "updated_utc": "2026-06-20T04:28:19.463Z",
+    "last_success_utc": "2026-06-20T04:28:19.463Z",
+    "failed_count": 0,
     "failure_summary": {
-      "recoverable": 67,
+      "recoverable": 0,
       "hard": 0,
-      "by_status": {
-        "403": 67
-      }
+      "by_status": {}
     }
   },
   "maze_runner": {
@@ -68,8 +66,8 @@
     "ready_to_test": false
   },
   "file_mtimes": {
-    "dashboard": "2026-06-20T04:24:12.546Z",
-    "mirror": "2026-06-20T04:24:57.473Z",
+    "dashboard": "2026-06-20T04:30:07.526Z",
+    "mirror": "2026-06-20T04:28:19.465Z",
     "materialized_qa": "2026-06-19T04:57:14.856Z"
   },
   "files": {
