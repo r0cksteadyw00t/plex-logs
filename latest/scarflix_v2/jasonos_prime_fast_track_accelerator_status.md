@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-20T21:50:07Z
+Updated UTC: 2026-06-20T22:25:09Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: PLATFORM_GATE_RUNNING
@@ -22,7 +22,7 @@ TV-first generic/movie expansion allowed: false
 - checkpoint_step: platform_gate_review
 - durable_runner: REVIEW
 - durable_step: platform_gate_review
-- durable_owner_pid: 32096
+- durable_owner_pid: 48704
 - durable_child_pid: 
 - active_gate_transient_failures: 0
 - active_gate_prunable_failures: 0
