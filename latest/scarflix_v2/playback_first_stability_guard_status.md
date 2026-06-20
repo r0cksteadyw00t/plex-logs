@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-20T04:55:43Z  
+**Updated UTC:** 2026-06-20T05:22:46Z  
 **Status:** PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED
 
 ## Scope
@@ -25,26 +25,13 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Background Jobs
 
-- pid=1684 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=7632 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=9900 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=12268 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=14568 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=16472 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=18144 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=18516 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=20988 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=26764 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=27108 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=27356 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=29660 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=30408 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=33024 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=36488 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=36972 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=38300 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=38464 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
-- pid=40632 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=7968 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=11532 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=25116 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=32920 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=35476 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=38440 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=40352 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
 
 ## Recent rclone/WebDAV Error Pressure
 
