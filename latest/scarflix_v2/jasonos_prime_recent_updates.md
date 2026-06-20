@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-20T07:00:09.280Z
+Updated UTC: 2026-06-20T07:05:08.081Z
 Source: live status merge
 
-- 2026-06-20T06:59:46.239Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-20T06:59:46Z] [INFO] Rows selected for Plex decision QA: 1
-- 2026-06-20T06:59:16Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=17952; child_pid=19004
-- 2026-06-20T06:59:16Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=1; blockers=0
-- 2026-06-20T06:58:22Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=35104; child_pid=
-- 2026-06-20T06:58:22Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
-- 2026-06-20T06:57:07Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
+- 2026-06-20T07:04:25Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=40152; child_pid=
+- 2026-06-20T07:04:25Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
+- 2026-06-20T07:04:15.283Z - PlatformGate child QA active: Plex client decision QA: Latest child QA line: [2026-06-20T07:04:15Z] [REVIEW] Decision failed: metadata=46093 title=The Bourne Identity reason=The operation has timed out.
+- 2026-06-20T07:03:17Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=40152; child_pid=39952
+- 2026-06-20T07:03:17Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=1; blockers=0
+- 2026-06-20T07:00:11Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-20T06:55:20Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-20T06:50:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-20T06:45:40Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=24892; child_pid=
