@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-20T08:42:38Z
-Instruction: phase0_stabilization_foundation_status_summary_20260620_v29
+Updated UTC: 2026-06-20T10:20:47Z
+Instruction: phase0_stabilization_foundation_write_status_summary_20260620_v33
 
-Phase 0 stabilization ongoing. TV Section 6 forensic hold remains active with HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No visible publication, no legacy resolver activity, materialized QA in REVIEW. Monitor continues 15-min cycle with 0 pending deltas. Primary architecture remains materialized_webdav_symlink.
+Phase 0 stabilization baseline: TV Section 6 publication held pending forensic review; materialized QA in REVIEW; no legacy resolver activity; controlled materialized path remains primary but paused for publication.
