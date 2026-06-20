@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
     "status":  "PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED",
-    "started_utc":  "2026-06-20T02:55:30Z",
-    "ended_utc":  "2026-06-20T02:55:36Z",
-    "duration_seconds":  7,
+    "started_utc":  "2026-06-20T03:00:29Z",
+    "ended_utc":  "2026-06-20T03:00:43Z",
+    "duration_seconds":  14,
     "report_only":  false,
     "no_publication_started":  true,
     "no_expansion_started":  true,
@@ -22,9 +22,9 @@
                                                     "base":  "http://127.0.0.1:32400",
                                                     "token_source":  "plex_token.txt",
                                                     "ok":  false,
-                                                    "status_code":  401,
+                                                    "status_code":  0,
                                                     "active_count":  -1,
-                                                    "error":  "The remote server returned an error: (401) Unauthorized."
+                                                    "error":  "The operation has timed out."
                                                 },
                                                 {
                                                     "base":  "http://127.0.0.1:32400",
@@ -62,8 +62,8 @@
                                "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-20T12:55:31+10:00",
-                            "hour":  12,
+                            "local_time":  "2026-06-20T13:00:39+10:00",
+                            "hour":  13,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
                             "in_off_peak_window":  false,
@@ -74,19 +74,19 @@
     "plex_background_jobs_found":  3,
     "plex_background_jobs":  [
                                  {
-                                     "pid":  6336,
+                                     "pid":  17336,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
                                  },
                                  {
-                                     "pid":  7020,
+                                     "pid":  24740,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
                                  },
                                  {
-                                     "pid":  12908,
+                                     "pid":  37328,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
@@ -94,36 +94,36 @@
                              ],
     "stopped_jobs":  [
                          {
-                             "pid":  6336,
+                             "pid":  17336,
                              "name":  "Plex Media Scanner",
                              "reason":  "plex_background_scanner_or_analyzer",
                              "stopped":  true,
                              "verified_gone":  false,
                              "verification_state":  "stale_process_record_taskkill_no_running_instance",
                              "taskkill_exit_code":  1,
-                             "taskkill_output":  "ERROR: The process with PID 6336 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
+                             "taskkill_output":  "ERROR: The process with PID 17336 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
                              "error":  "taskkill_reported_no_running_instance"
                          },
                          {
-                             "pid":  7020,
+                             "pid":  24740,
                              "name":  "Plex Media Scanner",
                              "reason":  "plex_background_scanner_or_analyzer",
                              "stopped":  true,
                              "verified_gone":  false,
                              "verification_state":  "stale_process_record_taskkill_no_running_instance",
                              "taskkill_exit_code":  1,
-                             "taskkill_output":  "ERROR: The process with PID 7020 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
+                             "taskkill_output":  "ERROR: The process with PID 24740 could not be terminated. Reason: There is no running instance of the task. System.Management.Automation.RemoteException",
                              "error":  "taskkill_reported_no_running_instance"
                          },
                          {
-                             "pid":  12908,
+                             "pid":  37328,
                              "name":  "Plex Media Scanner",
                              "reason":  "plex_background_scanner_or_analyzer",
                              "stopped":  true,
                              "verified_gone":  true,
                              "verification_state":  "gone",
-                             "taskkill_exit_code":  128,
-                             "taskkill_output":  "ERROR: The process \"12908\" not found.",
+                             "taskkill_exit_code":  null,
+                             "taskkill_output":  "",
                              "error":  ""
                          }
                      ],
