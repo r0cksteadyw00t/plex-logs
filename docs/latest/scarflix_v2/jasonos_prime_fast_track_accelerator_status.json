@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-20T06:23:03Z",
-  "duration_seconds": 2,
+  "updated_utc": "2026-06-20T06:32:00Z",
+  "duration_seconds": 0,
   "mode": "fast_track_safe_acceleration",
-  "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
-  "next_autonomous_action": "Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.",
+  "current_milestone": "PLATFORM_GATE_RUNNING",
+  "next_autonomous_action": "Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.",
   "no_secret_access": true,
   "expansion_eligible": false,
   "expansion_started_this_cycle": false,
@@ -18,7 +18,7 @@
   "tv_first_priority_gate": {
     "component": "jasonos_prime_tv_first_expansion_priority_gate",
     "status": "HELD_MATERIALIZED_QA_REQUIRED",
-    "updated_utc": "2026-06-20T06:23:02Z",
+    "updated_utc": "2026-06-20T06:32:00Z",
     "user_priority": "TV first if movies and TV cannot progress concurrently",
     "enforce_tv_first_when_concurrency_limited": true,
     "generic_movie_or_unscoped_expansion_allowed": false,
@@ -75,26 +75,26 @@
     }
   },
   "actual_strm_counts": {
-    "movies": 42,
+    "movies": 44,
     "tv": 1,
-    "total": 43,
+    "total": 45,
     "count_probe_timed_out": false,
     "staged_pending_probe_timed_out": false
   },
   "status_inputs": {
-    "platform_gate": "PASS",
-    "checkpoint": "PASS",
-    "checkpoint_step": "platform_gate_pass",
-    "durable_runner": "PASS",
-    "durable_step": "platform_gate_pass",
-    "durable_owner_pid": 41812,
+    "platform_gate": "REVIEW",
+    "checkpoint": "REVIEW",
+    "checkpoint_step": "platform_gate_review",
+    "durable_runner": "REVIEW",
+    "durable_step": "platform_gate_review",
+    "durable_owner_pid": 11848,
     "durable_child_pid": "",
     "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
     "controller_transient_retry_count": 0,
     "repeated_transient_review": false,
     "candidate_source_model": "PASS",
-    "controller": "PASS",
+    "controller": "RUNNING",
     "predictive_simulator": "REVIEW",
     "self_evolution": "REVIEW",
     "dashboard": "PASS",
@@ -157,14 +157,15 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 38788,
+      "pid": 12240,
       "error": ""
     },
     {
-      "action": "controlled_materialized_qa_hold",
+      "action": "task_run",
+      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
+      "reason": "platform_gate_not_pass",
       "status": "PASS",
-      "materialized_decision_qa_status": "REVIEW",
-      "staged_pending_count": 43
+      "error": " "
     }
   ],
   "files": {
