@@ -1,17 +1,18 @@
 # JasonOS Prime Self-Evolution Cycle
 
 Status: REVIEW
-Updated UTC: 2026-06-19T00:36:05.839Z
+Updated UTC: 2026-06-20T00:37:41.145Z
 Mode: proposal generation and reflective memory
 Direct self modification: false
 
 ## Input Status
-- PlatformGate: PASS
+- PlatformGate: RUNNING
 - Candidate source model: PASS
-- Controller: PASS
-- Worker mesh: PASS
-- Predictive simulator: PASS
+- Controller: RUNNING
+- Worker mesh: RETIRED_ORCHESTRATOR_OWNED
+- Predictive simulator: REVIEW
 - Rclone mount: PASS
 
 ## Proposals
-- high / controlled_expansion_ready_check: Predictive simulator reports expansion eligibility; run only controlled safe expansion path.
+- high / platform_gate_first: Keep expansion disabled until same-snapshot PlatformGate is PASS.
+- high / repair_worker_mesh: Repair worker mesh before relying on autonomous natural-language execution.
