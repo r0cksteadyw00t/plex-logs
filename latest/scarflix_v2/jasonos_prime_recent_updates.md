@@ -1,8 +1,9 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-20T07:25:16.761Z
+Updated UTC: 2026-06-20T07:30:11.870Z
 Source: live status merge
 
+- 2026-06-20T07:25:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-20T07:23:26Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=24104; child_pid=
 - 2026-06-20T07:23:26Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
 - 2026-06-20T07:23:18.205Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-20T07:23:17Z] [PASS] WebDAV active gate finished status=PASS checked=1 passed=1 failed_detected=0 pruned=0
@@ -10,7 +11,6 @@ Source: live status merge
 - 2026-06-20T07:22:31Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=1; blockers=0
 - 2026-06-20T07:22:21Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-20T07:20:32Z - Autonomous controller: controller_already_running: existing controller lock is active
-- 2026-06-20T07:15:09Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-20T07:10:16Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-20T07:10:02.228Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-20T07:10:01Z] [INFO] Health status publishing
 - 2026-06-20T07:08:22.072Z - PlatformGate child QA active: 5-concurrent stream QA: Latest child QA line: [2026-06-20T07:08:22.072Z] start materialized target_concurrency=5
