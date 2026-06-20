@@ -2,14 +2,14 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-20T09:14:24Z",
-    "updated_utc":  "2026-06-20T09:20:40Z",
+    "started_utc":  "2026-06-20T09:25:10Z",
+    "updated_utc":  "2026-06-20T09:26:09Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
     "sentinel":  {
-                     "status":  "REVIEW",
-                     "alert_level":  "MEDIUM"
+                     "status":  "PASS",
+                     "alert_level":  "LOW"
                  },
     "safety":  {
                    "pause_publication_active":  true,
@@ -32,6 +32,7 @@
                                           "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
+                                          "Plex background scanner/analyzer pressure still detected: 2.",
                                           "Playback path recovery is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
@@ -155,6 +156,10 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-PLAYBACK",
+                         "blocker":  "Plex background scanner/analyzer pressure still detected: 2."
+                     },
+                     {
+                         "outcome_id":  "O-PLAYBACK",
                          "blocker":  "Playback path recovery is not PASS: REVIEW."
                      },
                      {
@@ -175,19 +180,19 @@
                                 "task_name":  "JasonOS_Prime_PlaybackFirstStabilityGuard",
                                 "exists":  true,
                                 "state":  "Running",
-                                "last_result":  2147946720
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_PlaybackPathRecovery",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  267009
+                                "state":  "Ready",
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_PlexWatchdog",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  2147946720
+                                "state":  "Ready",
+                                "last_result":  0
                             },
                             {
                                 "task_name":  "JasonOS_Prime_ProjectSafeProgressAudit",
@@ -204,8 +209,8 @@
                             {
                                 "task_name":  "JasonOS_Prime_GoLiveReadinessAudit",
                                 "exists":  true,
-                                "state":  "Running",
-                                "last_result":  2147946720
+                                "state":  "Ready",
+                                "last_result":  0
                             }
                         ],
     "next_safe_actions":  [
