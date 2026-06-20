@@ -1,13 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T13:40:21Z
-Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Updated UTC: 2026-06-20T13:42:01Z
+Status: PASS_PRIVATE_STAGE_VALIDATED
 Checked: 1
-Passed: 0
-Review: 1
+Passed: 1
+Review: 0
 
 ## Results
-- The Sandhamn Murders: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=503; type=text/html; reason=PROVIDER_503_RETRYABLE
+- Dragon Ball DAIMA: PASS_PRIVATE_STAGE_VALIDATED; head=; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
@@ -20,4 +20,4 @@ Review: 1
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
+Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
