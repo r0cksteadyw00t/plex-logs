@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-20T14:40:03Z
+Updated UTC: 2026-06-20T15:12:34Z
 Source: grok_api
 
 ## Summary
@@ -14,10 +14,10 @@ PASS
 
 ## Instructions
 
-### phase0_stabilization_foundation_write_strategy_note_20260620_tv_section6_passive_monitor_v2
+### phase0_stabilization_foundation_write_status_summary_20260620_tv_hold_review
 
 - Target: `status_dashboard`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-21T14:40:03Z`
+- Expires: `2026-06-21T15:12:34Z`
