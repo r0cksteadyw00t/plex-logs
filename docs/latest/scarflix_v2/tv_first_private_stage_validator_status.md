@@ -1,15 +1,15 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T08:02:03Z
-Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Updated UTC: 2026-06-20T10:15:46Z
+Status: PASS_PRIVATE_STAGE_VALIDATED
 Checked: 3
-Passed: 2
-Review: 1
+Passed: 3
+Review: 0
 
 ## Results
-- Genghis Khan: The Secret History of the Mongols: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Genghis Khan: The Secret History of the Mongols: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Genghis Khan: The Secret History of the Mongols: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
+- Jane: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Jane: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Jane: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
@@ -22,4 +22,4 @@ Review: 1
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
+Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
