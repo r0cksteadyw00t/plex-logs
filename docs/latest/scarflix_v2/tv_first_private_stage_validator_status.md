@@ -1,13 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T13:42:01Z
+Updated UTC: 2026-06-20T14:00:01Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
 Checked: 1
 Passed: 1
 Review: 0
 
 ## Results
-- Dragon Ball DAIMA: PASS_PRIVATE_STAGE_VALIDATED; head=; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Sandhamn Murders: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
