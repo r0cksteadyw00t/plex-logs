@@ -1,13 +1,13 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-20T03:53:53Z
+Generated UTC: 2026-06-20T03:58:16Z
 
-Status: REVIEW
-Started UTC: 2026-06-20T03:53:15Z
-Ended UTC: 2026-06-20T03:53:52Z
-Snapshot ID: 20260620T035340Z
+Status: PASS
+Started UTC: 2026-06-20T03:54:21Z
+Ended UTC: 2026-06-20T03:58:13Z
+Snapshot ID: 20260620T035443Z
 Snapshot hash: 0e27a141832b0a0bc2661d3dcbe62914effd20ad47fa04f7806726bdde32ece3
-Same-snapshot confirmed: False
+Same-snapshot confirmed: True
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
 
 ## Visible Catalogue
@@ -16,11 +16,11 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - tv: 0
 
 ## QA
-- WebDAV active gate: REVIEW, checked=1
-- Plex visible/HLS QA: UNKNOWN, checked=-1
-- Plex client decision QA: UNKNOWN, checked=-1
-- 5-concurrent stream QA: UNKNOWN, target=, map_tested=, visible_tested=
-- Health: UNKNOWN
+- WebDAV active gate: PASS, checked=1
+- Plex visible/HLS QA: PASS, checked=1
+- Plex client decision QA: PASS, checked=1
+- 5-concurrent stream QA: REVIEW, target=5, map_tested=5, visible_tested=5
+- Health: REVIEW
 
 ## Source Handling
 - quarantined/rejected sources: 1325
@@ -51,4 +51,4 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - ScarFLIX_v2_CatalogVisibilityGate: Disabled
 
 ## Blockers
-- active_gate status=REVIEW
+- none
