@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_hold_status_20260620_v3",
-      "created_at": "2026-06-20T01:43:24Z",
-      "expires_at": "2026-06-21T01:43:24Z",
+      "instruction_id": "phase0_tv_section6_forensic_hold_status_20260620_v4",
+      "created_at": "2026-06-20T02:00:10Z",
+      "expires_at": "2026-06-21T02:00:10Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,18 +14,20 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "summary": "Maintaining TV Section 6 publication hold per forensic handoff. Monitor active, 0 pending events, full-season gate enforced, no Plex-visible mutations. Materialized QA remains REVIEW. Expansion limited to controlled materialized only."
+          "parameters": {
+            "note": "TV Section 6 forensic hold remains active. Materialized/WebDAV pipeline in REVIEW. No publication, no legacy expansion, no partial seasons. Monitor continues 15-min cadence with HELD_FULL_SEASON_INCOMPLETE_MONITOR_ACTIVE."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-20T01:43:24Z",
+  "updated_utc": "2026-06-20T02:00:10Z",
   "source": "grok_api"
 }
