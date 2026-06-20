@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-20T09:23:58Z",
-  "duration_seconds": 454,
+  "updated_utc": "2026-06-20T09:25:36Z",
+  "duration_seconds": 56,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
   "next_autonomous_action": "Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.",
@@ -18,7 +18,7 @@
   "tv_first_priority_gate": {
     "component": "jasonos_prime_tv_first_expansion_priority_gate",
     "status": "HELD_MATERIALIZED_QA_REQUIRED",
-    "updated_utc": "2026-06-20T09:23:54Z",
+    "updated_utc": "2026-06-20T09:25:35Z",
     "user_priority": "TV first if movies and TV cannot progress concurrently",
     "enforce_tv_first_when_concurrency_limited": true,
     "generic_movie_or_unscoped_expansion_allowed": false,
@@ -75,19 +75,19 @@
     }
   },
   "actual_strm_counts": {
-    "movies": 0,
+    "movies": 7,
     "tv": 0,
-    "total": 0,
+    "total": 7,
     "count_probe_timed_out": false,
     "staged_pending_probe_timed_out": false
   },
   "status_inputs": {
     "platform_gate": "PASS",
-    "checkpoint": "PASS",
-    "checkpoint_step": "platform_gate_pass",
-    "durable_runner": "PASS",
-    "durable_step": "platform_gate_pass",
-    "durable_owner_pid": 42048,
+    "checkpoint": "RUNNING",
+    "checkpoint_step": "starting",
+    "durable_runner": "RUNNING",
+    "durable_step": "starting",
+    "durable_owner_pid": 22460,
     "durable_child_pid": "",
     "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
@@ -128,8 +128,8 @@
       "action": "task_run",
       "task": "JasonOS_Prime_OutcomeDashboard",
       "reason": "fast_track_dashboard_refresh",
-      "status": "REVIEW",
-      "error": "spawnSync schtasks.exe ETIMEDOUT spawnSync schtasks.exe ETIMEDOUT"
+      "status": "PASS",
+      "error": " "
     },
     {
       "action": "task_run",
@@ -143,8 +143,8 @@
       "action": "task_run",
       "task": "JasonOS_Prime_WorkerMesh",
       "reason": "fast_track_worker_mesh",
-      "status": "REVIEW",
-      "error": "spawnSync schtasks.exe ETIMEDOUT spawnSync schtasks.exe ETIMEDOUT"
+      "status": "PASS",
+      "error": " "
     },
     {
       "action": "task_run",
@@ -157,7 +157,7 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 10448,
+      "pid": 48812,
       "error": ""
     },
     {
