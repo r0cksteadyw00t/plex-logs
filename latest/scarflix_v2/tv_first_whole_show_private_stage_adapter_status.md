@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T12:38:06Z
-Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
+Updated UTC: 2026-06-20T13:11:51Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 2
+Episodes enumerated: 20
 Episodes already staged: 0
-Episodes newly staged: 0
-Review: 2
+Episodes newly staged: 20
+Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Prime Target: enumerated=2; staged=0; already=0; review=2; source=request_episode_targets
+- Is It Wrong to Try to Pick Up Girls in a Dungeon?: enumerated=20; staged=20; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
