@@ -1,30 +1,35 @@
 {
     "component":  "scarflix_v2_durable_platform_gate_runner",
-    "status":  "RUNNING",
-    "current_step":  "running_platform_gate_attempt_1",
+    "status":  "PASS",
+    "current_step":  "platform_gate_pass",
     "started_utc":  "2026-06-20T04:32:06Z",
-    "last_progress_utc":  "2026-06-20T04:32:28Z",
-    "ended_utc":  "",
-    "duration_seconds":  204,
+    "last_progress_utc":  "2026-06-20T04:35:55Z",
+    "ended_utc":  "2026-06-20T04:35:55Z",
+    "duration_seconds":  229,
     "no_catalogue_expansion":  true,
     "single_owner":  true,
     "owner_pid":  2716,
-    "child_pid":  11364,
+    "child_pid":  0,
     "child_start_utc":  "2026-06-20T04:32:28Z",
-    "child_exit_code":  null,
+    "child_exit_code":  0,
     "child_qa_last_progress_utc":  "2026-06-20T04:35:00Z",
     "child_qa_last_progress_path":  "D:\\PlexTools\\logs\\scarflix_v2_health_status_20260620.log",
-    "child_qa_stale_minutes":  0.5,
+    "child_qa_stale_minutes":  0.9,
     "child_qa_stale_threshold_minutes":  5,
     "bounded_orphan_kill_minutes":  5,
     "child_qa_stall_count":  0,
     "attempts":  [
-
+                     {
+                         "attempt":  1,
+                         "exit_code":  0,
+                         "platform_status":  "PASS",
+                         "ended_utc":  "2026-06-20T04:35:55Z"
+                     }
                  ],
     "stale_minutes":  5,
     "heartbeat_seconds":  30,
-    "heartbeat_updated_utc":  "2026-06-20T04:35:29Z",
-    "heartbeat_sequence":  10,
+    "heartbeat_updated_utc":  "2026-06-20T04:35:55Z",
+    "heartbeat_sequence":  13,
     "lock_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable.lock",
     "heartbeat_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable_heartbeat.json",
     "checkpoint_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.json",
@@ -49,20 +54,20 @@
                             ],
     "platform_gate":  {
                           "component":  "scarflix_v2_platform_gate",
-                          "status":  "REVIEW",
-                          "started_utc":  "2026-06-20T04:29:33Z",
-                          "ended_utc":  "2026-06-20T04:31:02Z",
-                          "duration_seconds":  88,
+                          "status":  "PASS",
+                          "started_utc":  "2026-06-20T04:32:30Z",
+                          "ended_utc":  "2026-06-20T04:35:55Z",
+                          "duration_seconds":  205,
                           "visible":  {
                                           "count":  1,
                                           "movies":  1,
                                           "tv":  0
                                       },
                           "snapshot":  {
-                                           "id":  "20260620T042954Z",
+                                           "id":  "20260620T043251Z",
                                            "hash":  "0e27a141832b0a0bc2661d3dcbe62914effd20ad47fa04f7806726bdde32ece3",
-                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260620T042954Z.txt",
-                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260620T042954Z.json"
+                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260620T043251Z.txt",
+                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260620T043251Z.json"
                                        },
                           "qa":  {
                                      "active_gate":  {
@@ -84,38 +89,60 @@
                                                                 "blocking":  true
                                                             },
                                      "plex_client_decision_qa":  {
-                                                                     "status":  "FAIL",
-                                                                     "exit_code":  1,
+                                                                     "status":  "PASS",
+                                                                     "exit_code":  0,
                                                                      "fresh":  true,
                                                                      "checked":  1,
                                                                      "status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\plex_client_decision_qa_status.json",
                                                                      "scope":  "snapshot",
                                                                      "blocking":  true
-                                                                 }
+                                                                 },
+                                     "concurrent_stream_qa":  {
+                                                                  "status":  "REVIEW",
+                                                                  "exit_code":  1,
+                                                                  "fresh":  true,
+                                                                  "checked":  null,
+                                                                  "status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\concurrent_stream_qa_status.json",
+                                                                  "target_concurrency":  5,
+                                                                  "map_entries_tested":  5,
+                                                                  "visible_rows_tested":  5,
+                                                                  "scope":  "capability_verification",
+                                                                  "blocking":  false,
+                                                                  "non_blocking_reason":  "5-concurrent QA is ongoing capability verification and does not block PlatformGate/Canary publishing."
+                                                              },
+                                     "health":  {
+                                                    "status":  "REVIEW",
+                                                    "exit_code":  0,
+                                                    "fresh":  true,
+                                                    "checked":  null,
+                                                    "status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\scarflix_v2_health.json",
+                                                    "scope":  "global_visibility",
+                                                    "blocking":  false
+                                                }
                                  },
                           "snapshot_scoped_health":  {
-                                                         "status":  "REVIEW",
+                                                         "status":  "PASS",
                                                          "blocking":  true,
-                                                         "blocker_count":  1,
+                                                         "blocker_count":  0,
                                                          "blockers":  [
-                                                                          "plex_client_decision_qa status=FAIL"
+
                                                                       ]
                                                      },
                           "global_health":  {
-                                                "status":  "UNKNOWN",
-                                                "fresh":  false,
+                                                "status":  "REVIEW",
+                                                "fresh":  true,
                                                 "blocking":  false,
                                                 "reason":  "visibility_only_non_blocking",
                                                 "status_file":  "D:\\PlexTools\\public\\latest\\scarflix\\scarflix_v2_health.json",
-                                                "client_safe_live_parts":  null,
-                                                "expected_client_safe_live_parts":  0,
-                                                "snapshot_count_match":  null
+                                                "client_safe_live_parts":  7,
+                                                "expected_client_safe_live_parts":  1,
+                                                "snapshot_count_match":  false
                                             },
                           "health_contract":  {
                                                   "platform_gate_requires":  "core_snapshot_qa",
                                                   "concurrent_stream_qa_blocking":  false,
                                                   "global_health_blocking":  false,
-                                                  "blocked_by":  "snapshot_scoped_qa"
+                                                  "blocked_by":  "none"
                                               },
                           "quarantine":  {
                                              "count":  1325,
@@ -194,7 +221,7 @@
                                                   }
                                               ],
                           "blockers":  [
-                                           "plex_client_decision_qa status=FAIL"
+
                                        ],
                           "files":  {
                                         "status":  "D:\\PlexTools\\public\\latest\\scarflix\\platform_gate_status.json",
