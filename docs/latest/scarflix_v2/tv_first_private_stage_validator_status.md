@@ -1,18 +1,15 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T21:37:19Z
+Updated UTC: 2026-06-20T21:40:37Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 6
-Passed: 0
-Review: 6
+Checked: 3
+Passed: 2
+Review: 1
 
 ## Results
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
+- Joan: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Joan: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Joan: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
 
 ## Safety
 - no_broad_expansion_started: true
