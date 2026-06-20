@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "PASS",
-    "started_utc":  "2026-06-20T07:05:08Z",
-    "ended_utc":  "2026-06-20T07:05:39Z",
-    "duration_seconds":  31,
+    "status":  "REVIEW",
+    "started_utc":  "2026-06-20T07:21:04Z",
+    "ended_utc":  "2026-06-20T07:21:39Z",
+    "duration_seconds":  35,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,21 +11,21 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  878,
+                           "ms":  296,
                            "error":  "",
                            "no_window":  true
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  2104,
+                           "ms":  146,
                            "error":  "",
                            "no_window":  true
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  702,
+                           "ms":  645,
                            "error":  "",
                            "no_window":  true
                        }
@@ -55,8 +55,8 @@
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  true,
-                             "timed_out":  false,
+                             "ok":  false,
+                             "timed_out":  true,
                              "error":  ""
                          },
     "s_media_after":  {
@@ -77,7 +77,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  1791,
+                          "ms":  2080,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       },
@@ -86,21 +86,26 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  771,
+                          "ms":  2709,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       }
                   ],
-    "watch_now_probe_run":  false,
-    "watch_now_source":  "cached_previous_status",
+    "watch_now_probe_run":  true,
+    "watch_now_source":  "fresh",
     "actions":  [
                     {
-                        "action":  "watch_now_head_probes_skipped_cooldown",
-                        "cooldown_seconds":  300
+                        "action":  "run_rclone_mount_keepalive",
+                        "result":  {
+                                       "ran":  true,
+                                       "exit_code":  0,
+                                       "error":  ""
+                                   }
                     }
                 ],
     "failures":  [
-
+                     "Watch Now probe failed: Gremlins",
+                     "Watch Now probe failed: Anna"
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260620.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
