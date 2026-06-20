@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T15:19:19Z
+Updated UTC: 2026-06-20T15:43:31Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 12
+Episodes enumerated: 2
 Episodes already staged: 0
-Episodes newly staged: 12
+Episodes newly staged: 2
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- SAS Rogue Heroes: enumerated=12; staged=12; already=0; review=0; source=request_episode_targets
+- Pompeii: The New Dig: enumerated=2; staged=2; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
