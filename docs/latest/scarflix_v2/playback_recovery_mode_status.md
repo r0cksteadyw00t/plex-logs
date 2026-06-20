@@ -1,7 +1,7 @@
 ﻿# Playback Recovery Mode Status
 
-**Updated UTC:** 2026-06-20T03:24:13Z  
-**Status:** PASS
+**Updated UTC:** 2026-06-20T03:27:34Z  
+**Status:** REVIEW
 
 Playback path recovery worker ran. See jasonos_prime_playback_path_recovery_status.md for details.
 
