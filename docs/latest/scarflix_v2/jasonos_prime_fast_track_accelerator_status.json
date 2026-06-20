@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-20T07:23:05Z",
-  "duration_seconds": 4,
+  "updated_utc": "2026-06-20T07:26:02Z",
+  "duration_seconds": 1,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
   "next_autonomous_action": "Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.",
@@ -18,7 +18,7 @@
   "tv_first_priority_gate": {
     "component": "jasonos_prime_tv_first_expansion_priority_gate",
     "status": "HELD_MATERIALIZED_QA_REQUIRED",
-    "updated_utc": "2026-06-20T07:23:04Z",
+    "updated_utc": "2026-06-20T07:26:01Z",
     "user_priority": "TV first if movies and TV cannot progress concurrently",
     "enforce_tv_first_when_concurrency_limited": true,
     "generic_movie_or_unscoped_expansion_allowed": false,
@@ -75,26 +75,26 @@
     }
   },
   "actual_strm_counts": {
-    "movies": 41,
+    "movies": 42,
     "tv": 1,
-    "total": 42,
+    "total": 43,
     "count_probe_timed_out": false,
     "staged_pending_probe_timed_out": false
   },
   "status_inputs": {
     "platform_gate": "PASS",
-    "checkpoint": "RUNNING",
-    "checkpoint_step": "running_platform_gate_attempt_1",
-    "durable_runner": "RUNNING",
-    "durable_step": "running_platform_gate_attempt_1",
+    "checkpoint": "PASS",
+    "checkpoint_step": "platform_gate_pass",
+    "durable_runner": "PASS",
+    "durable_step": "platform_gate_pass",
     "durable_owner_pid": 24104,
-    "durable_child_pid": 40556,
+    "durable_child_pid": "",
     "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
     "controller_transient_retry_count": 0,
     "repeated_transient_review": false,
     "candidate_source_model": "PASS",
-    "controller": "RUNNING",
+    "controller": "PASS",
     "predictive_simulator": "REVIEW",
     "self_evolution": "REVIEW",
     "dashboard": "PASS",
@@ -157,7 +157,7 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 19516,
+      "pid": 4440,
       "error": ""
     },
     {
