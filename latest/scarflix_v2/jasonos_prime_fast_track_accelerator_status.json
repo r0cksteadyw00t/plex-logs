@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-20T09:26:36Z",
-  "duration_seconds": 12,
+  "updated_utc": "2026-06-20T09:29:09Z",
+  "duration_seconds": 6,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "CONTROLLED_MATERIALIZED_QA_HOLD",
   "next_autonomous_action": "Hold controlled expansion until materialized/WebDAV decision QA is PASS; do not fall back to legacy SafeWebDAV/direct-resolver expansion.",
@@ -18,7 +18,7 @@
   "tv_first_priority_gate": {
     "component": "jasonos_prime_tv_first_expansion_priority_gate",
     "status": "HELD_MATERIALIZED_QA_REQUIRED",
-    "updated_utc": "2026-06-20T09:26:36Z",
+    "updated_utc": "2026-06-20T09:29:09Z",
     "user_priority": "TV first if movies and TV cannot progress concurrently",
     "enforce_tv_first_when_concurrency_limited": true,
     "generic_movie_or_unscoped_expansion_allowed": false,
@@ -83,11 +83,11 @@
   },
   "status_inputs": {
     "platform_gate": "PASS",
-    "checkpoint": "RUNNING",
-    "checkpoint_step": "running_platform_gate_attempt_1",
-    "durable_runner": "RUNNING",
-    "durable_step": "running_platform_gate_attempt_1",
-    "durable_owner_pid": 22460,
+    "checkpoint": "PASS",
+    "checkpoint_step": "platform_gate_pass",
+    "durable_runner": "PASS",
+    "durable_step": "platform_gate_pass",
+    "durable_owner_pid": 38864,
     "durable_child_pid": "",
     "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
@@ -98,7 +98,7 @@
     "predictive_simulator": "REVIEW",
     "self_evolution": "REVIEW",
     "dashboard": "PASS",
-    "public_mirror": "RUNNING"
+    "public_mirror": "REVIEW_RECOVERABLE"
   },
   "next_4_hour_actions": [
     "Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.",
@@ -157,7 +157,7 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 17704,
+      "pid": 27968,
       "error": ""
     },
     {
