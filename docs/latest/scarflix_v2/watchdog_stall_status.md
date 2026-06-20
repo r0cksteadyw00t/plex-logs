@@ -1,22 +1,24 @@
 ﻿# ScarFLIX v2 Watchdog + Stall Detector
 
-Updated UTC: 2026-06-20T08:26:50Z
+Updated UTC: 2026-06-20T08:41:48Z
 Status: REVIEW
 Stall risk: Medium
 Will progress without Codex: True
-Current milestone: PLATFORM_GATE_RUNNING
+Current milestone: CANDIDATE_SOURCE_MODEL_PASS
 
 ## Signals
-- Controller age minutes: 5
-- Platform checkpoint age minutes: 3
+- Controller age minutes: 8
+- Platform checkpoint age minutes: 12
 - Dashboard age minutes: 0
-- Mirror age minutes: 0
-- Movie STRM count: 44
+- Mirror age minutes: 4
+- Movie STRM count: 7
 - TV STRM count: 0
-- Total STRM count: 44
+- Total STRM count: 7
 
 ## Actions
+- ScarFLIX_v2_AutonomousController: run_triggered
 - JasonOS_Prime_PublicMirrorPublisher: skipped_orchestrator_owned
 
 ## Notes
+- Controller status is stale or missing; watchdog triggered controller task.
 - Public mirror status was disabled or stale; watchdog triggered mirror task.
