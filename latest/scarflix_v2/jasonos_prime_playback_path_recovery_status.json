@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-20T03:35:03Z",
-    "ended_utc":  "2026-06-20T03:35:24Z",
-    "duration_seconds":  21,
+    "status":  "PASS",
+    "started_utc":  "2026-06-20T03:41:03Z",
+    "ended_utc":  "2026-06-20T03:41:11Z",
+    "duration_seconds":  8,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,17 +11,17 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  272
+                           "ms":  16
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  321
+                           "ms":  22
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  145
+                           "ms":  24
                        }
                    ],
     "webdav_before":  {
@@ -49,7 +49,7 @@
                        },
     "s_catalog_before":  {
                              "path":  "S:\\media\\catalog",
-                             "ok":  false,
+                             "ok":  true,
                              "timed_out":  false,
                              "error":  ""
                          },
@@ -71,7 +71,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  1790,
+                          "ms":  1367,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       },
@@ -80,26 +80,21 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  2026,
+                          "ms":  667,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (503) Server Unavailable."
                       }
                   ],
-    "watch_now_probe_run":  true,
-    "watch_now_source":  "fresh",
+    "watch_now_probe_run":  false,
+    "watch_now_source":  "cached_previous_status",
     "actions":  [
                     {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  0,
-                                       "error":  ""
-                                   }
+                        "action":  "watch_now_head_probes_skipped_cooldown",
+                        "cooldown_seconds":  300
                     }
                 ],
     "failures":  [
-                     "Watch Now probe failed: Gremlins",
-                     "Watch Now probe failed: Anna"
+
                  ],
     "log":  "D:\\PlexTools\\logs\\jasonos_prime_playback_path_recovery_20260620.log",
     "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_playback_path_recovery_status.json"
