@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-20T00:41:13Z
+Updated UTC: 2026-06-20T00:46:04Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: PLATFORM_GATE_RUNNING
@@ -12,21 +12,21 @@ TV-first first wave: tv_active_2026_whole_show (64)
 TV-first generic/movie expansion allowed: false
 
 ## Actual STRM Counts
-- movies: 43
+- movies: 42
 - tv: 0
-- total: 43
+- total: 42
 
 ## Inputs
 - platform_gate: REVIEW
 - checkpoint: RUNNING
-- checkpoint_step: running_platform_gate_attempt_2
+- checkpoint_step: running_platform_gate_attempt_1
 - durable_runner: RUNNING
-- durable_step: running_platform_gate_attempt_2
-- durable_owner_pid: 38168
-- durable_child_pid: 32740
+- durable_step: running_platform_gate_attempt_1
+- durable_owner_pid: 37304
+- durable_child_pid: 2172
 - active_gate_transient_failures: 1
 - active_gate_prunable_failures: 0
-- controller_transient_retry_count: 1
+- controller_transient_retry_count: 2
 - repeated_transient_review: false
 - candidate_source_model: PASS
 - controller: RUNNING
