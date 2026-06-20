@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-20T19:30:55Z",
+  "updated_utc": "2026-06-20T19:49:31Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
-    "tmdb_id": "220056",
+    "tmdb_id": "121040",
     "title_regex": ""
   },
   "scoped": true,
@@ -24,46 +24,29 @@
   "checked": 1,
   "passed": 1,
   "review": 0,
-  "relay_fallback_attempted": 1,
-  "relay_fallback_passed": 1,
+  "relay_fallback_attempted": 0,
+  "relay_fallback_passed": 0,
   "results": [
     {
-      "stage_id": "tv_the_madness_220056_s01e02_d79058ca7b0d",
-      "title": "The Madness",
-      "tmdb_id": 220056,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_madness_220056_s01e02_d79058ca7b0d\\The Madness (2024) - S01E02.strm",
+      "stage_id": "tv_fisk_121040_s02e06_4f4944550f09",
+      "title": "Fisk",
+      "tmdb_id": 121040,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_fisk_121040_s02e06_4f4944550f09\\Fisk (2021) - S02E06.strm",
       "status": "PASS_PRIVATE_STAGE_VALIDATED",
       "probe": {
         "ok": true,
         "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED",
-        "reason": "Direct range probe returned HTTP 503; ephemeral loopback relay fallback validated streaming pass-through.",
-        "url_host": "mediafusion.elfhosted.com",
+        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
+        "reason": "HEAD and range probes passed.",
+        "url_host": "torrentio.strem.fun",
         "head_status": 200,
         "range_status": 206,
         "content_type": "application/force-download",
-        "content_length": 537987885,
+        "content_length": 601772275,
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-65535/537987885",
+        "content_range": "bytes 0-1/601772275",
         "source_url_redacted": true,
-        "relay_fallback": {
-          "attempted": true,
-          "ok": true,
-          "loopback_only": true,
-          "ephemeral_relay_only": true,
-          "no_media_artifacts_created": true,
-          "relay_shutdown_before_return": true,
-          "head_status": 200,
-          "range_status": 206,
-          "range_bytes": 65536,
-          "content_type": "application/force-download",
-          "content_length": 537987885,
-          "content_range": "bytes 0-65535/537987885",
-          "reason_code": "PASS_RELAY_FALLBACK_VALIDATED",
-          "reason": "Ephemeral loopback relay validated HEAD and bounded ranged GET without disk media."
-        },
-        "direct_range_status": 503,
-        "direct_range_reason_code": "PROVIDER_503_RETRYABLE"
+        "relay_fallback": null
       }
     }
   ],
