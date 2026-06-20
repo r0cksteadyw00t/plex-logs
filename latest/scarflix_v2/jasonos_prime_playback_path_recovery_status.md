@@ -1,6 +1,6 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-20T07:21:39Z  
+**Updated UTC:** 2026-06-20T07:23:36Z  
 **Status:** REVIEW
 
 ## Scope
@@ -14,8 +14,8 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 - Plex identity: True
 - rclone processes after: 1
 - S:\media after: ok=True, timed_out=False
-- S:\media\catalog after: ok=True, timed_out=False
-- Watch Now probe source: fresh
+- S:\media\catalog after: ok=False, timed_out=True
+- Watch Now probe source: cached_previous_status
 
 ## Watch Now
 
@@ -24,5 +24,4 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 
 ## Failures
 
-Watch Now probe failed: Gremlins
-Watch Now probe failed: Anna
+S: media/catalog path is not reliably ready
