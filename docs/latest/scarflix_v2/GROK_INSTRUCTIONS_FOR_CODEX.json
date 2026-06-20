@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_tv_section6_forensic_hold_strategy_note_20260620_v25",
-      "created_at": "2026-06-20T07:38:14Z",
-      "expires_at": "2026-06-21T07:38:14Z",
+      "instruction_id": "phase0_tv_section6_forensic_hold_strategy_note_20260620_v26",
+      "created_at": "2026-06-20T07:54:45Z",
+      "expires_at": "2026-06-21T07:54:45Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -20,7 +20,7 @@
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "note_content": "TV Section 6 publication remains held pending scanner/indexing forensic review. Monitor active with 0 pending events. Full-season pilot (28/28) privately validated. Recommend continued natural retry monitoring before any bounded alternate-source lane or visible publication."
+            "note_content": "TV Section 6 forensic hold remains active. Monitor continues every 15min with 0 pending events. Full-season pilot (28/28) privately validated but Plex visibility failed post-symlink. Leading hypothesis: scanner latency. Recommend continued cooldown and local review of tv_first_section6_publication_forensic_handoff.md before any retry. No expansion or publishing actions."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-20T07:38:14Z",
+  "updated_utc": "2026-06-20T07:54:45Z",
   "source": "grok_api"
 }
