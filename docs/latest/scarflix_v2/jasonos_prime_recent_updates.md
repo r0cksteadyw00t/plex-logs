@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-20T01:36:05.523Z
+Updated UTC: 2026-06-20T01:41:05.687Z
 Source: live status merge
 
-- 2026-06-20T01:35:38Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=25696; child_pid=
-- 2026-06-20T01:35:38Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=1; blockers=0
-- 2026-06-20T01:35:36.085Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-20T01:35:36Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=1 passed=0 failed_detected=1 pruned=0
+- 2026-06-20T01:40:45Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=6168; child_pid=
+- 2026-06-20T01:40:45Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
+- 2026-06-20T01:40:37.226Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-20T01:40:37Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=1 passed=0 failed_detected=1 pruned=0
+- 2026-06-20T01:40:05Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
+- 2026-06-20T01:39:37Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=6168; child_pid=
+- 2026-06-20T01:39:37Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=1; blockers=0
 - 2026-06-20T01:35:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
-- 2026-06-20T01:34:46Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=37344; child_pid=
-- 2026-06-20T01:34:46Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=1; blockers=0
-- 2026-06-20T01:30:09Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-20T00:50:10Z - Autonomous controller: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED: waiting for transient retry backoff
 - 2026-06-19T23:05:18Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-19T23:00:09Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
