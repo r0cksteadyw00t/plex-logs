@@ -1,15 +1,16 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T11:23:44Z
+Updated UTC: 2026-06-20T11:28:11Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 3
-Passed: 3
+Checked: 4
+Passed: 4
 Review: 0
 
 ## Results
-- Blue Exorcist: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Blue Exorcist: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Blue Exorcist: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- OKITSURA: Fell in Love with an Okinawan Girl, but I Just Wish I Know What She's Saying: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- OKITSURA: Fell in Love with an Okinawan Girl, but I Just Wish I Know What She's Saying: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- OKITSURA: Fell in Love with an Okinawan Girl, but I Just Wish I Know What She's Saying: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- OKITSURA: Fell in Love with an Okinawan Girl, but I Just Wish I Know What She's Saying: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
