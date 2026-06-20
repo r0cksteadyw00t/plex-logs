@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-20T12:25:35Z
+Updated UTC: 2026-06-20T12:32:45Z
 Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 18
+Episodes enumerated: 16
 Episodes already staged: 0
 Episodes newly staged: 0
-Review: 18
+Review: 16
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Is It Wrong to Try to Pick Up Girls in a Dungeon?: enumerated=18; staged=0; already=0; review=18; source=request_episode_targets
+- Jellystone!: enumerated=16; staged=0; already=0; review=16; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
