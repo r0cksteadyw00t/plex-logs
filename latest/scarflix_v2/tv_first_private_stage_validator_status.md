@@ -1,13 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T19:30:55Z
+Updated UTC: 2026-06-20T19:49:31Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
 Checked: 1
 Passed: 1
 Review: 0
 
 ## Results
-- The Madness: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED
+- Fisk: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
