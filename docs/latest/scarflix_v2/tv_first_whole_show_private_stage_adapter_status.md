@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T13:38:42Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-21T14:27:05Z
+Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
 Shows requested: 1
-Episodes enumerated: 5
+Episodes enumerated: 10
 Episodes already staged: 0
-Episodes newly staged: 5
-Review: 0
+Episodes newly staged: 1
+Review: 9
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Lessons in Chemistry: enumerated=5; staged=5; already=0; review=0; source=request_episode_targets
+- Surviving Summer: enumerated=10; staged=1; already=0; review=9; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
