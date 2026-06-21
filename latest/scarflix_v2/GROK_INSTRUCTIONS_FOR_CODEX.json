@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260621_tv_section6_forensic_review_safe_v111",
-      "created_at": "2026-06-21T21:49:21Z",
-      "expires_at": "2026-06-22T21:49:21Z",
+      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260621_tv_section6_forensic_review_safe_v113",
+      "created_at": "2026-06-21T22:20:37Z",
+      "expires_at": "2026-06-22T22:20:37Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,15 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff": "none"
+        "max_retries": 2,
+        "backoff": "fixed"
       },
       "actions": [
         {
-          "action_type": "write_status_summary",
+          "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Materialized QA is REVIEW. No expansion, publishing, or source movement permitted. Monitor active with 0 pending events. Full-season gate enforced at 28/28.",
-            "source_instruction_id": "phase0_stabilization_foundation_write_status_summary_20260621_tv_section6_forensic_review_safe_v111"
+            "topic": "tv_section6_forensic_review",
+            "summary": "Current TV pilot publication held due to Section 6 scanner timing; recommend continued monitor cooldown and bounded retry analysis only after local review."
           }
         }
       ],
@@ -29,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-21T21:49:21Z",
+  "updated_utc": "2026-06-21T22:20:37Z",
   "source": "grok_api"
 }
