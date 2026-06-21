@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T04:34:27Z
+Updated UTC: 2026-06-21T04:38:36Z
 Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
 Episodes enumerated: 6
@@ -11,7 +11,7 @@ TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- SAS Rogue Heroes: enumerated=6; staged=0; already=6; review=0; source=request_episode_targets
+- The Edge of Sleep: enumerated=6; staged=0; already=6; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
