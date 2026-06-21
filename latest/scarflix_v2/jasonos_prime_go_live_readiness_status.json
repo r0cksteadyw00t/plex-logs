@@ -1,12 +1,12 @@
 ﻿{
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
-    "status":  "HELD_ACTIVE_PLEX_PLAYBACK_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-21T04:44:04Z",
-    "updated_utc":  "2026-06-21T04:44:18Z",
+    "status":  "REVIEW_NOT_GO_LIVE_READY",
+    "started_utc":  "2026-06-21T04:49:05Z",
+    "updated_utc":  "2026-06-21T04:49:21Z",
     "report_only":  false,
     "go_live_ready":  false,
-    "active_plex_sessions":  1,
+    "active_plex_sessions":  0,
     "sentinel":  {
                      "status":  "PASS",
                      "alert_level":  "LOW"
@@ -29,15 +29,13 @@
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
-                                          "Guard=PASS_PLAYBACK_PRIORITY_ACTIVE ActiveSessions=1 PlexWatchdog=PASS PlaybackPath=REVIEW"
+                                          "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
-                                          "Active Plex sessions: 1. No disruptive action allowed.",
-                                          "Plex background scanner/analyzer pressure still detected: 1.",
                                           "Playback path recovery is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
-                         "requires_quiet_window":  true,
+                         "requires_quiet_window":  false,
                          "plex_disruptive_action_allowed":  false
                      },
                      {
@@ -66,8 +64,7 @@
                                           "MaterializedQA=REVIEW 103/124 failed=21 RetryHeld=0/21 Section5Visible=105 Section5Missing=0 WatchNowCollection=PASS_COLLECTION_AVAILABLE Movies=126 PausePublication=True"
                                       ],
                          "blockers":  [
-                                          "Materialized QA is not full PASS: REVIEW 103/124 failed=21. retry_held=0 retry_tracked=21.",
-                                          "Active Plex playback prevents safe focused QA/expansion work."
+                                          "Materialized QA is not full PASS: REVIEW 103/124 failed=21. retry_held=0 retry_tracked=21."
                                       ],
                          "next_safe_action":  "Keep the verified Watch Now collection available while bounded QA and held-source replacement continue; no broad expansion until QA reaches PASS.",
                          "requires_quiet_window":  true,
@@ -76,14 +73,14 @@
                      {
                          "outcome_id":  "O-MISSION-002-IPTV",
                          "name":  "IPTV-only Live TV ready for cutover",
-                         "go_live_status":  "PASS_VIRTUAL_ADAPTER_READY_PLEX_ATTACH_HELD_ACTIVE_PLAYBACK",
+                         "go_live_status":  "PASS_VIRTUAL_ADAPTER_READY_PLEX_ATTACH_PENDING",
                          "progress_percent":  90,
                          "summary":  "IPTV-only package is ready and guarded; no physical tuner path is allowed.",
                          "evidence":  [
                                           "Readiness=PASS_CUTOVER_PACKAGE_READY_HELD Apply=FAIL_THREADFIN_COMPOSE_MISSING Verify=PASS_THREADFIN_VIRTUAL_ADAPTER_REACHABLE Watcher=PASS_THREADFIN_ALREADY_READY_PLEX_ATTACH_HELD PhysicalTuner=false"
                                       ],
                          "blockers":  [
-                                          "Active Plex sessions hold Threadfin start and all Plex Live TV/DVR attach work."
+
                                       ],
                          "next_safe_action":  "Threadfin virtual adapter is ready. Hold Plex Live TV/DVR attach until there are no active sessions, then verify guide/playback and rollback if unstable.",
                          "requires_quiet_window":  true,
@@ -158,23 +155,11 @@
     "blockers":  [
                      {
                          "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Active Plex sessions: 1. No disruptive action allowed."
-                     },
-                     {
-                         "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex background scanner/analyzer pressure still detected: 1."
-                     },
-                     {
-                         "outcome_id":  "O-PLAYBACK",
                          "blocker":  "Playback path recovery is not PASS: REVIEW."
                      },
                      {
                          "outcome_id":  "O-SCARFLIX-CATALOGUE",
                          "blocker":  "Materialized QA is not full PASS: REVIEW 103/124 failed=21. retry_held=0 retry_tracked=21."
-                     },
-                     {
-                         "outcome_id":  "O-SCARFLIX-CATALOGUE",
-                         "blocker":  "Active Plex playback prevents safe focused QA/expansion work."
                      },
                      {
                          "outcome_id":  "O-AUTONOMY-STABILITY",
