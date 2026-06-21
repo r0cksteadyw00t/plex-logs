@@ -1,15 +1,20 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-20T21:40:37Z
+Updated UTC: 2026-06-21T00:35:53Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 3
-Passed: 2
+Checked: 8
+Passed: 7
 Review: 1
 
 ## Results
-- Joan: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Joan: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Joan: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
+- A House Through Time: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- A House Through Time: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- A House Through Time: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- A House Through Time: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- A House Through Time: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
+- A House Through Time: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- A House Through Time: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- A House Through Time: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
