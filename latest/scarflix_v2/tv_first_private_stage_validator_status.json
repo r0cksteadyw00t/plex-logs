@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-21T01:56:02Z",
+  "updated_utc": "2026-06-21T02:01:14Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
-    "tmdb_id": "100757",
+    "tmdb_id": "220564",
     "title_regex": ""
   },
   "scoped": true,
@@ -22,38 +22,16 @@
     "source_urls_not_written_to_public_status": true
   },
   "checked": 3,
-  "passed": 1,
-  "review": 2,
+  "passed": 3,
+  "review": 0,
   "relay_fallback_attempted": 0,
   "relay_fallback_passed": 0,
   "results": [
     {
-      "stage_id": "tv_outer_banks_100757_s01e06_677c80bd20f7",
-      "title": "Outer Banks",
-      "tmdb_id": 100757,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_outer_banks_100757_s01e06_677c80bd20f7\\Outer Banks (2020) - S01E06.strm",
-      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
-      "probe": {
-        "ok": false,
-        "retryable": false,
-        "reason_code": "RANGE_NOT_206",
-        "reason": "Range probe did not return HTTP 206.",
-        "url_host": "comet.elfhosted.com",
-        "head_status": 405,
-        "range_status": 200,
-        "content_type": "application/vnd.apple.mpegurl",
-        "content_length": 31,
-        "accept_ranges": "",
-        "content_range": "",
-        "source_url_redacted": true,
-        "relay_fallback": null
-      }
-    },
-    {
-      "stage_id": "tv_outer_banks_100757_s02e01_5f0812e5d0d0",
-      "title": "Outer Banks",
-      "tmdb_id": 100757,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_outer_banks_100757_s02e01_5f0812e5d0d0\\Outer Banks (2020) - S02E01.strm",
+      "stage_id": "tv_the_perfect_couple_220564_s01e01_80638f47edb9",
+      "title": "The Perfect Couple",
+      "tmdb_id": 220564,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_perfect_couple_220564_s01e01_80638f47edb9\\The Perfect Couple (2024) - S01E01.strm",
       "status": "PASS_PRIVATE_STAGE_VALIDATED",
       "probe": {
         "ok": true,
@@ -66,34 +44,54 @@
         "content_type": "application/force-download",
         "content_length": 31,
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/1346375723",
+        "content_range": "bytes 0-1/463028674",
         "source_url_redacted": true,
         "relay_fallback": null
       }
     },
     {
-      "stage_id": "tv_outer_banks_100757_s03e04_9865c6605ba6",
-      "title": "Outer Banks",
-      "tmdb_id": 100757,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_outer_banks_100757_s03e04_9865c6605ba6\\Outer Banks (2020) - S03E04.strm",
-      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "stage_id": "tv_the_perfect_couple_220564_s01e02_c147f1468b0e",
+      "title": "The Perfect Couple",
+      "tmdb_id": 220564,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_perfect_couple_220564_s01e02_c147f1468b0e\\The Perfect Couple (2024) - S01E02.strm",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
       "probe": {
-        "ok": false,
+        "ok": true,
         "retryable": false,
-        "reason_code": "RANGE_NOT_206",
-        "reason": "Range probe did not return HTTP 206.",
+        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
+        "reason": "Range probe passed; HEAD did not provide a usable media response.",
         "url_host": "comet.elfhosted.com",
         "head_status": 405,
-        "range_status": 200,
-        "content_type": "application/vnd.apple.mpegurl",
+        "range_status": 206,
+        "content_type": "application/force-download",
         "content_length": 31,
-        "accept_ranges": "",
-        "content_range": "",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/316975640",
+        "source_url_redacted": true,
+        "relay_fallback": null
+      }
+    },
+    {
+      "stage_id": "tv_the_perfect_couple_220564_s01e03_8e07f4bccee1",
+      "title": "The Perfect Couple",
+      "tmdb_id": 220564,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_perfect_couple_220564_s01e03_8e07f4bccee1\\The Perfect Couple (2024) - S01E03.strm",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
+      "probe": {
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
+        "reason": "Range probe passed; HEAD did not provide a usable media response.",
+        "url_host": "comet.elfhosted.com",
+        "head_status": 405,
+        "range_status": 206,
+        "content_type": "application/force-download",
+        "content_length": 31,
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-1/351016787",
         "source_url_redacted": true,
         "relay_fallback": null
       }
     }
-  ],
-  "status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "next_safe_action": "Keep failed private-stage candidates held and refresh source selection only for failed rows."
+  ]
 }
