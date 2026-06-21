@@ -1,6 +1,13 @@
 # JasonOS Prime Public Mirror
 
-Status: RUNNING
-Updated UTC: 2026-06-21T00:26:38.159Z
-Phase: raw_latest
-Progress: 100/318
+Status: REVIEW_RECOVERABLE
+Updated UTC: 2026-06-21T00:28:38.901Z
+Pushed files: 317
+Skipped files: 0
+Failed files: 1
+Recoverable failures: 1
+Hard failures: 0
+Last success UTC: 2026-06-20T23:48:33.889Z
+Raw base URL: https://raw.githubusercontent.com/r0cksteadyw00t/plex-logs/main/latest/scarflix_v2/
+Pages source: main:/docs
+Rendered dashboard: https://r0cksteadyw00t.github.io/plex-logs/latest/scarflix/
