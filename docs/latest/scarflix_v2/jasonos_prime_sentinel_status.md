@@ -1,22 +1,22 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-21T16:50:04Z
+Updated UTC: 2026-06-21T16:57:01Z
 Status: PASS
 Alert level: LOW
 Jason action required: false
 Codex action required: false
 
 ## Signals
-- controller_status: WAITING_RETRY
+- controller_status: RUNNING
 - controller_milestone: PLATFORM_GATE_RUNNING
-- controller_age_minutes: 9
+- controller_age_minutes: 1
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 4
+- watchdog_age_minutes: 1
 - dashboard_status: PASS
 - dashboard_age_minutes: 1
-- mirror_status: PASS
-- mirror_age_minutes: 2
+- mirror_status: RUNNING
+- mirror_age_minutes: 0
 - checkpoint_status: RUNNING
 - checkpoint_step: running_platform_gate_attempt_1
 - checkpoint_age_minutes: 3
@@ -27,4 +27,4 @@ Codex action required: false
 - None.
 
 ## Notes
-- Controller status is stale, but durable PlatformGate progress is fresh.
+- None.
