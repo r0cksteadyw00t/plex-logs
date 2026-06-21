@@ -1,15 +1,15 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-21T19:37:56Z
-Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Updated UTC: 2026-06-21T19:55:15Z
+Status: PASS_PRIVATE_STAGE_VALIDATED
 Checked: 9
-Passed: 7
-Review: 2
+Passed: 9
+Review: 0
 
 ## Results
-- Saint Cecilia and Pastor Lawrence: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=; type=application/json; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
 - Saint Cecilia and Pastor Lawrence: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Saint Cecilia and Pastor Lawrence: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=; type=application/json; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
+- Saint Cecilia and Pastor Lawrence: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Saint Cecilia and Pastor Lawrence: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Saint Cecilia and Pastor Lawrence: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Saint Cecilia and Pastor Lawrence: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Saint Cecilia and Pastor Lawrence: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
@@ -28,4 +28,4 @@ Review: 2
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
+Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
