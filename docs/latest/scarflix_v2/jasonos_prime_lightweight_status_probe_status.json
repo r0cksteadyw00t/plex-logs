@@ -1,19 +1,19 @@
 {
   "component": "jasonos_prime_lightweight_status_probe",
   "status": "REVIEW",
-  "updated_utc": "2026-06-21T04:24:01Z",
-  "duration_ms": 111,
+  "updated_utc": "2026-06-21T04:27:01Z",
+  "duration_ms": 40,
   "probe_contract": "Node-only bounded read of current public status JSON; no long validation and no schtasks/process scans.",
   "counts": {
-    "direct_movies": 18,
+    "direct_movies": 19,
     "direct_tv": 0,
-    "direct_total": 18,
+    "direct_total": 19,
     "materialized_webdav_artifacts": 0,
     "materialized_webdav_files": 0,
     "staged_pending": 43
   },
   "statuses": {
-    "public_mirror": "RUNNING",
+    "public_mirror": "REVIEW_RECOVERABLE",
     "materialized_decision_qa": "REVIEW",
     "playback_qa_controller": "WAITING_OVERLAP",
     "fast_track": "PASS",
@@ -24,7 +24,7 @@
     "node_watchdog": "ACTIVE",
     "sentinel": "PASS",
     "candidate_source_model": "PASS",
-    "autonomous_controller": "RUNNING",
+    "autonomous_controller": "WAITING_RETRY",
     "ai_8791": "PASS",
     "ai_8805": "PASS"
   },
@@ -42,14 +42,20 @@
     "expansion_started_this_cycle": false,
     "staged_pending_count": 43,
     "materialized_decision_qa_status": "REVIEW",
-    "updated_utc": "2026-06-21T04:23:03Z"
+    "updated_utc": "2026-06-21T04:26:03Z"
   },
   "mirror": {
-    "status": "RUNNING",
-    "updated_utc": "2026-06-21T04:23:59.065Z",
+    "status": "REVIEW_RECOVERABLE",
+    "updated_utc": "2026-06-21T04:26:55.659Z",
     "last_success_utc": "2026-06-21T04:01:43.691Z",
-    "failed_count": null,
-    "failure_summary": null
+    "failed_count": 47,
+    "failure_summary": {
+      "recoverable": 47,
+      "hard": 0,
+      "by_status": {
+        "403": 47
+      }
+    }
   },
   "maze_runner": {
     "direct_visible_legacy_path": false,
@@ -62,8 +68,8 @@
     "ready_to_test": false
   },
   "file_mtimes": {
-    "dashboard": "2026-06-21T04:23:10.380Z",
-    "mirror": "2026-06-21T04:23:59.066Z",
+    "dashboard": "2026-06-21T04:26:14.418Z",
+    "mirror": "2026-06-21T04:26:55.660Z",
     "materialized_qa": "2026-06-19T04:57:14.856Z"
   },
   "files": {
