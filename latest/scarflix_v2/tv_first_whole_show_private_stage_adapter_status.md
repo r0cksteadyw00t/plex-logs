@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T16:55:21Z
-Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
+Updated UTC: 2026-06-21T17:35:07Z
+Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 12
+Episodes enumerated: 7
 Episodes already staged: 0
-Episodes newly staged: 9
-Review: 3
+Episodes newly staged: 0
+Review: 7
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Mayans M.C.: enumerated=12; staged=9; already=0; review=3; source=request_episode_targets
+- BanG Dream! It's MyGO!!!!!: enumerated=7; staged=0; already=0; review=7; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
