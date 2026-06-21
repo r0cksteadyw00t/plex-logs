@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T02:21:14Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Updated UTC: 2026-06-21T02:30:31Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 3
-Episodes already staged: 3
-Episodes newly staged: 0
+Episodes enumerated: 18
+Episodes already staged: 0
+Episodes newly staged: 18
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Joan: enumerated=3; staged=0; already=3; review=0; source=request_episode_targets
+- The Misfit of Demon King Academy: enumerated=18; staged=18; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
