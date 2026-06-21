@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T16:20:00Z
+Updated UTC: 2026-06-21T16:55:21Z
 Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
 Shows requested: 1
-Episodes enumerated: 9
+Episodes enumerated: 12
 Episodes already staged: 0
-Episodes newly staged: 2
-Review: 7
+Episodes newly staged: 9
+Review: 3
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Saint Cecilia and Pastor Lawrence: enumerated=9; staged=2; already=0; review=7; source=request_episode_targets
+- Mayans M.C.: enumerated=12; staged=9; already=0; review=3; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
