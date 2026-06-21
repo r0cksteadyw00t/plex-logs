@@ -1,18 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-21T09:18:55Z
-Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 6
-Passed: 3
-Review: 3
+Updated UTC: 2026-06-21T09:31:04Z
+Status: PASS_PRIVATE_STAGE_VALIDATED
+Checked: 1
+Passed: 1
+Review: 0
 
 ## Results
-- The Edge of Sleep: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- The Edge of Sleep: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/vnd.apple.mpegurl; reason=HLS_PLAYLIST_TIMEOUT_OR_ERROR; hls_segment=; hls_bytes=0
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/vnd.apple.mpegurl; reason=HLS_PLAYLIST_TIMEOUT_OR_ERROR; hls_segment=; hls_bytes=0
-- The Edge of Sleep: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/vnd.apple.mpegurl; reason=HLS_PLAYLIST_TIMEOUT_OR_ERROR; hls_segment=; hls_bytes=0
-- The Edge of Sleep: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
+- The Program: Cons, Cults, and Kidnapping: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 
 ## Safety
 - no_broad_expansion_started: true
@@ -25,4 +20,4 @@ Review: 3
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
+Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
