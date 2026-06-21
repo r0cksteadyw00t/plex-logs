@@ -1,7 +1,7 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-21T04:41:34Z  
-**Status:** PASS_PLAYBACK_PRIORITY_ACTIVE
+**Updated UTC:** 2026-06-21T04:46:41Z  
+**Status:** PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED
 
 ## Scope
 
@@ -15,17 +15,17 @@ Playback quality and stability only. No publication, no expansion, no source mut
 ## Plex Playback Priority
 
 - Session detection OK: True
-- Active Plex sessions: 1
+- Active Plex sessions: 0
 - Plex base used: http://192.168.1.184:32400
 - Token source used: plex_token.txt
 - Off-peak window: 2:00-6:00
 - In off-peak window: False
 - Background work suppressed: True
-- Reason: active_plex_stream_detected
+- Reason: idle_outside_off_peak_window
 
 ## Plex Background Jobs
 
-- pid=39436 Plex Media Scanner stopped=True verified_gone=False reason=plex_background_scanner_or_analyzer error=taskkill_reported_no_running_instance
+- pid=7296 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
 
 ## Recent rclone/WebDAV Error Pressure
 
