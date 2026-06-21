@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T14:27:05Z
-Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
+Updated UTC: 2026-06-21T14:31:25Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 10
+Episodes enumerated: 2
 Episodes already staged: 0
-Episodes newly staged: 1
-Review: 9
+Episodes newly staged: 2
+Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Surviving Summer: enumerated=10; staged=1; already=0; review=9; source=request_episode_targets
+- Kung Fu Panda: The Dragon Knight: enumerated=2; staged=2; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
