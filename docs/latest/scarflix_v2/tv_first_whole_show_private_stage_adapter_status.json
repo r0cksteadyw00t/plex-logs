@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-21T16:20:00Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\saint_cecilia_and_pastor_lawrence_204148_private_stage_manifest_20260621T161402Z.prepared.json",
+  "updated_utc": "2026-06-21T16:55:21Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\mayans_m_c_76231_private_stage_manifest_20260621T165404Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
@@ -10,7 +10,7 @@
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "max_shows": 1,
-  "max_episodes": 9,
+  "max_episodes": 12,
   "provider_candidate_count": 4,
   "provider_refs": [
     "mediafusion.elfhosted.com",
@@ -34,80 +34,63 @@
     "current_retry_held_hashes_block_restage": true
   },
   "show_count": 1,
-  "episodes_enumerated": 9,
+  "episodes_enumerated": 12,
   "already_staged_count": 0,
-  "staged_count": 2,
-  "review_count": 7,
+  "staged_count": 9,
+  "review_count": 3,
   "shows": [
     {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
-      "seasons_expected": 1,
-      "episodes_expected": 9,
-      "episodes_enumerated": 9,
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "seasons_expected": 5,
+      "episodes_expected": 12,
+      "episodes_enumerated": 12,
       "already_staged_count": 0,
-      "staged_count": 2,
-      "review_count": 7,
+      "staged_count": 9,
+      "review_count": 3,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
     }
   ],
   "results_redacted": [
     {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
       "season": 1,
       "episode": 2,
-      "status": "PASS_PRIVATE_STAGED_HELD",
-      "stage_id": "tv_saint_cecilia_and_pastor_lawrence_204148_s01e02_160795f6b65b",
-      "provider_ref": "comet.elfhosted.com",
-      "provider_attempt_count": 2,
-      "stream_evidence_redacted": {
-        "name": "[RD⚡] Comet unknown",
-        "title_excerpt": "",
-        "info_hash": "160795f6b65bfdc6ad7894fff891fb54de26c42f",
-        "url_host": "comet.elfhosted.com",
-        "cached_debrid": true,
-        "plex_compatible": true,
-        "canonical_title_signal": true,
-        "season_episode_signal": true,
-        "non_english_source_signal": false,
-        "selection_mode": "cached_plex_compatible_primary",
-        "fallback_requires_private_validation": false,
-        "fallback_requires_plex_decision": false,
-        "source_url_stored_private_only": true
-      }
+      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
+      "stream_count": 0,
+      "rejected_hash_count": 0,
+      "provider_attempts_redacted": [
+        {
+          "provider_ref": "mediafusion.elfhosted.com",
+          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
+          "stream_count": 0,
+          "reason": "REQUEST_TIMEOUT"
+        },
+        {
+          "provider_ref": "comet.elfhosted.com",
+          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
+          "stream_count": 1
+        },
+        {
+          "provider_ref": "torrentio.strem.fun",
+          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
+          "stream_count": 12
+        },
+        {
+          "provider_ref": "aiostreams.elfhosted.com",
+          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
+          "stream_count": 1
+        }
+      ],
+      "provider_pool_exhausted": true
     },
     {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
       "season": 1,
       "episode": 3,
-      "status": "PASS_PRIVATE_STAGED_HELD",
-      "stage_id": "tv_saint_cecilia_and_pastor_lawrence_204148_s01e03_160795f6b65b",
-      "provider_ref": "comet.elfhosted.com",
-      "provider_attempt_count": 2,
-      "stream_evidence_redacted": {
-        "name": "[RD⚡] Comet unknown",
-        "title_excerpt": "",
-        "info_hash": "160795f6b65bfdc6ad7894fff891fb54de26c42f",
-        "url_host": "comet.elfhosted.com",
-        "cached_debrid": true,
-        "plex_compatible": true,
-        "canonical_title_signal": true,
-        "season_episode_signal": true,
-        "non_english_source_signal": false,
-        "selection_mode": "cached_plex_compatible_primary",
-        "fallback_requires_private_validation": false,
-        "fallback_requires_plex_decision": false,
-        "source_url_stored_private_only": true
-      }
-    },
-    {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
-      "season": 1,
-      "episode": 4,
       "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
       "stream_count": 0,
       "rejected_hash_count": 0,
@@ -125,7 +108,7 @@
         {
           "provider_ref": "torrentio.strem.fun",
           "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 22
+          "stream_count": 9
         },
         {
           "provider_ref": "aiostreams.elfhosted.com",
@@ -136,104 +119,8 @@
       "provider_pool_exhausted": true
     },
     {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
-      "season": 1,
-      "episode": 5,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 0,
-      "rejected_hash_count": 0,
-      "provider_attempts_redacted": [
-        {
-          "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "comet.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "torrentio.strem.fun",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 22
-        },
-        {
-          "provider_ref": "aiostreams.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        }
-      ],
-      "provider_pool_exhausted": true
-    },
-    {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
-      "season": 1,
-      "episode": 6,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 0,
-      "rejected_hash_count": 0,
-      "provider_attempts_redacted": [
-        {
-          "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "comet.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "torrentio.strem.fun",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 21
-        },
-        {
-          "provider_ref": "aiostreams.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        }
-      ],
-      "provider_pool_exhausted": true
-    },
-    {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
-      "season": 1,
-      "episode": 7,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 0,
-      "rejected_hash_count": 0,
-      "provider_attempts_redacted": [
-        {
-          "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "comet.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "torrentio.strem.fun",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 6
-        },
-        {
-          "provider_ref": "aiostreams.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        }
-      ],
-      "provider_pool_exhausted": true
-    },
-    {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
       "season": 1,
       "episode": 8,
       "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
@@ -253,7 +140,7 @@
         {
           "provider_ref": "torrentio.strem.fun",
           "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 23
+          "stream_count": 10
         },
         {
           "provider_ref": "aiostreams.elfhosted.com",
@@ -264,68 +151,229 @@
       "provider_pool_exhausted": true
     },
     {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
-      "season": 1,
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 3,
+      "episode": 6,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s03e06_6eafb1bd1f51",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans.M.C.S03.SweSub-EngSub.1080p.x264-Justiso Mayans.M.C.S03e06.mkv 👤 2 💾 1007.36 MB ⚙️ ThePirateBay 🇬🇧 / 🇸🇪",
+        "info_hash": "6eafb1bd1f51eaa30b58776ee0d72706b7059365",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 3,
+      "episode": 8,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s03e08_6eafb1bd1f51",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans.M.C.S03.SweSub-EngSub.1080p.x264-Justiso Mayans.M.C.S03e08.mkv 👤 2 💾 1.06 GB ⚙️ ThePirateBay 🇬🇧 / 🇸🇪",
+        "info_hash": "6eafb1bd1f51eaa30b58776ee0d72706b7059365",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 3,
       "episode": 9,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 0,
-      "rejected_hash_count": 0,
-      "provider_attempts_redacted": [
-        {
-          "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "comet.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "torrentio.strem.fun",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 23
-        },
-        {
-          "provider_ref": "aiostreams.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        }
-      ],
-      "provider_pool_exhausted": true
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s03e09_6eafb1bd1f51",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans.M.C.S03.SweSub-EngSub.1080p.x264-Justiso Mayans.M.C.S03e09.mkv 👤 2 💾 1.14 GB ⚙️ ThePirateBay 🇬🇧 / 🇸🇪",
+        "info_hash": "6eafb1bd1f51eaa30b58776ee0d72706b7059365",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     },
     {
-      "title": "Saint Cecilia and Pastor Lawrence",
-      "tmdb_id": 204148,
-      "season": 1,
-      "episode": 11,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 0,
-      "rejected_hash_count": 0,
-      "provider_attempts_redacted": [
-        {
-          "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "comet.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "torrentio.strem.fun",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 22
-        },
-        {
-          "provider_ref": "aiostreams.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        }
-      ],
-      "provider_pool_exhausted": true
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 3,
+      "episode": 10,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s03e10_6eafb1bd1f51",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans.M.C.S03.SweSub-EngSub.1080p.x264-Justiso Mayans.M.C.S03e10.mkv 👤 2 💾 1.44 GB ⚙️ ThePirateBay 🇬🇧 / 🇸🇪",
+        "info_hash": "6eafb1bd1f51eaa30b58776ee0d72706b7059365",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 4,
+      "episode": 1,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s04e01_004cda7f7342",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans.M.C.S04E01-05.DLMux.1080p.E-AC3-AC3.ITA.ENG.SUBS Mayans M.C. S04E01 La purificazione del tempio DLMux 1080p E-AC3+AC3 ITA ENG SUBS.mkv 👤 0 💾 3.06 GB ⚙️ 1337x 🇬🇧 / 🇮🇹",
+        "info_hash": "004cda7f73421323df568034675a291120576e66",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 4,
+      "episode": 5,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s04e05_004cda7f7342",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans.M.C.S04E01-05.DLMux.1080p.E-AC3-AC3.ITA.ENG.SUBS Mayans M.C. S04E05 Un sacrificio doloroso DLMux 1080p E-AC3+AC3 ITA ENG SUBS.mkv 👤 0 💾 3.98 GB ⚙️ 1337x 🇬🇧 / 🇮🇹",
+        "info_hash": "004cda7f73421323df568034675a291120576e66",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 4,
+      "episode": 7,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s04e07_c19998499841",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans M.C. S04E07 Parlare allo specchio DLMux 1080p E-AC3 AC3 ITA ENG SUBS.mkv 👤 0 💾 3.15 GB ⚙️ 1337x 🇬🇧 / 🇮🇹",
+        "info_hash": "c19998499841d734b98ba670e86c761d818cce0a",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 5,
+      "episode": 5,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s05e05_d90c308f3a3c",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans.M.C.S05.SweSub-EngSub.1080p.x264-Justiso Mayans.M.C.S05e05.mkv 👤 4 💾 1.22 GB ⚙️ ThePirateBay 🇬🇧 / 🇸🇪",
+        "info_hash": "d90c308f3a3cf87694feedeb02947ada4327bf0f",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Mayans M.C.",
+      "tmdb_id": 76231,
+      "season": 5,
+      "episode": 10,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_mayans_m.c._76231_s05e10_d90c308f3a3c",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Mayans.M.C.S05.SweSub-EngSub.1080p.x264-Justiso Mayans.M.C.S05e10.mkv 👤 4 💾 1.4 GB ⚙️ ThePirateBay 🇬🇧 / 🇸🇪",
+        "info_hash": "d90c308f3a3cf87694feedeb02947ada4327bf0f",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     }
   ],
   "status": "REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE",
