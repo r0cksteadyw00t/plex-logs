@@ -1,22 +1,23 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-21T01:24:46Z
-Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 10
-Passed: 1
-Review: 9
+Updated UTC: 2026-06-21T01:29:35Z
+Status: PASS_PRIVATE_STAGE_VALIDATED
+Checked: 11
+Passed: 11
+Review: 0
 
 ## Results
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- Star Trek: Lower Decks: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Seirei Gensouki: Spirit Chronicles: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
@@ -29,4 +30,4 @@ Review: 9
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
+Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
