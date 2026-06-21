@@ -1,16 +1,16 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-21T03:40:34Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\date_a_live_46004_private_stage_manifest_20260621T033401Z.prepared.json",
+  "updated_utc": "2026-06-21T03:54:25Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\sas_rogue_heroes_93870_private_stage_manifest_20260621T035401Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
-  "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
+  "prior_private_stage_validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "max_shows": 1,
-  "max_episodes": 1,
+  "max_episodes": 6,
   "provider_candidate_count": 4,
   "provider_refs": [
     "mediafusion.elfhosted.com",
@@ -34,19 +34,19 @@
     "current_retry_held_hashes_block_restage": true
   },
   "show_count": 1,
-  "episodes_enumerated": 1,
-  "already_staged_count": 0,
-  "staged_count": 1,
+  "episodes_enumerated": 6,
+  "already_staged_count": 6,
+  "staged_count": 0,
   "review_count": 0,
   "shows": [
     {
-      "title": "Date A Live",
-      "tmdb_id": 46004,
-      "seasons_expected": 5,
-      "episodes_expected": 1,
-      "episodes_enumerated": 1,
-      "already_staged_count": 0,
-      "staged_count": 1,
+      "title": "SAS Rogue Heroes",
+      "tmdb_id": 93870,
+      "seasons_expected": 2,
+      "episodes_expected": 6,
+      "episodes_enumerated": 6,
+      "already_staged_count": 6,
+      "staged_count": 0,
       "review_count": 0,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
@@ -54,31 +54,48 @@
   ],
   "results_redacted": [
     {
-      "title": "Date A Live",
-      "tmdb_id": 46004,
-      "season": 1,
+      "title": "SAS Rogue Heroes",
+      "tmdb_id": 93870,
+      "season": 2,
       "episode": 1,
-      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
-      "stage_id": "tv_date_a_live_46004_s01e01_0b48fb46c72b",
-      "provider_ref": "mediafusion.elfhosted.com",
-      "provider_attempt_count": 1,
-      "stream_evidence_redacted": {
-        "name": "MediaFusion | ElfHosted 🧲 RD ⚡️ 1080P",
-        "title_excerpt": "",
-        "info_hash": "",
-        "url_host": "mediafusion.elfhosted.com",
-        "cached_debrid": true,
-        "plex_compatible": false,
-        "canonical_title_signal": true,
-        "season_episode_signal": true,
-        "non_english_source_signal": false,
-        "selection_mode": "cached_verification_gated_fallback",
-        "fallback_requires_private_validation": true,
-        "fallback_requires_plex_decision": true,
-        "source_url_stored_private_only": true
-      }
+      "status": "PASS_ALREADY_PRIVATE_STAGED"
+    },
+    {
+      "title": "SAS Rogue Heroes",
+      "tmdb_id": 93870,
+      "season": 2,
+      "episode": 2,
+      "status": "PASS_ALREADY_PRIVATE_STAGED"
+    },
+    {
+      "title": "SAS Rogue Heroes",
+      "tmdb_id": 93870,
+      "season": 2,
+      "episode": 3,
+      "status": "PASS_ALREADY_PRIVATE_STAGED"
+    },
+    {
+      "title": "SAS Rogue Heroes",
+      "tmdb_id": 93870,
+      "season": 2,
+      "episode": 4,
+      "status": "PASS_ALREADY_PRIVATE_STAGED"
+    },
+    {
+      "title": "SAS Rogue Heroes",
+      "tmdb_id": 93870,
+      "season": 2,
+      "episode": 5,
+      "status": "PASS_ALREADY_PRIVATE_STAGED"
+    },
+    {
+      "title": "SAS Rogue Heroes",
+      "tmdb_id": 93870,
+      "season": 2,
+      "episode": 6,
+      "status": "PASS_ALREADY_PRIVATE_STAGED"
     }
   ],
-  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
+  "status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
