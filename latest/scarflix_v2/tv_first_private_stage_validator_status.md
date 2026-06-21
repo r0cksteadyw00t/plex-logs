@@ -1,14 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-21T00:42:56Z
+Updated UTC: 2026-06-21T00:56:08Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 2
-Passed: 2
+Checked: 1
+Passed: 1
 Review: 0
 
 ## Results
-- The Sticky: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Sticky: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Madness: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
