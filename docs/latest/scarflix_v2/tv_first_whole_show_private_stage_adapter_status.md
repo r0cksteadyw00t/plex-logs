@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T05:43:46Z
+Updated UTC: 2026-06-21T06:20:22Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
 Episodes enumerated: 1
@@ -11,7 +11,7 @@ TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- A Gentleman in Moscow: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
+- The Program: Cons, Cults, and Kidnapping: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
