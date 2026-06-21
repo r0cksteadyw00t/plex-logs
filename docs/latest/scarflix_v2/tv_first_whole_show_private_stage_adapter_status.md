@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T20:20:03Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-21T20:34:08Z
+Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 8
-Episodes already staged: 0
-Episodes newly staged: 8
+Episodes enumerated: 6
+Episodes already staged: 6
+Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Titans: enumerated=8; staged=8; already=0; review=0; source=request_episode_targets
+- The Great: enumerated=6; staged=0; already=6; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
