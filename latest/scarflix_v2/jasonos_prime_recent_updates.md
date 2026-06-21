@@ -1,17 +1,17 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-21T18:04:38.919Z
+Updated UTC: 2026-06-21T18:05:24.788Z
 Source: live status merge
 
+- 2026-06-21T18:04:43Z - Durable PlatformGate runner RUNNING: Step starting; owner_pid=43160; child_pid=
+- 2026-06-21T18:04:43Z - PlatformGate checkpoint RUNNING: Step starting; visible=unknown; blockers=0
 - 2026-06-21T18:04:00Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-21T18:03:51Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=49384; child_pid=
 - 2026-06-21T18:03:51Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-21T18:03:28Z - Durable PlatformGate runner RUNNING: Step existing_durable_owner_active; owner_pid=44516; child_pid=
-- 2026-06-21T18:03:28Z - PlatformGate checkpoint RUNNING: Step existing_durable_owner_active; visible=unknown; blockers=0
+- 2026-06-21T17:50:31Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-21T17:44:52.357Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-21T17:44:52Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-21T17:43:59Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-21T17:32:42Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-21T17:25:22Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-20T09:50:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-20T09:48:26Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=43560; child_pid=
 - 2026-06-20T09:48:26Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
