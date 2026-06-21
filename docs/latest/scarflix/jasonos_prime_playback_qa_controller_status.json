@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-21T10:25:40Z",
-  "current_step": "validation_overlap_running",
+  "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
+  "updated_utc": "2026-06-21T10:40:33Z",
+  "current_step": "materialized_decision_failed",
   "jason_action_required": false,
   "counts": {
-    "movies": 36,
+    "movies": 37,
     "tv": 1,
-    "total": 37
+    "total": 38
   },
   "canary_status": "PAUSED_PLAYBACK_FIX",
   "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
@@ -16,7 +16,7 @@
   "direct_strm_admission_checked_visible": 37,
   "direct_strm_admission_passed_visible": 27,
   "direct_strm_admission_quarantined_this_run": 10,
-  "direct_strm_retry_held_count": 1,
+  "direct_strm_retry_held_count": 0,
   "materialized_primary": true,
   "materialized_visible_verified": 18,
   "materialized_decision_qa_status": "REVIEW",
@@ -26,17 +26,7 @@
   "decision_qa_status": "UNKNOWN",
   "concurrent_stream_qa_status": "UNKNOWN",
   "ignored_overlap": [],
-  "overlap_running": [
-    {
-      "name": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "ok": true,
-      "status": "Running",
-      "scheduled_state": "Enabled",
-      "last_run": "21/06/2026 8:24:07 PM",
-      "last_result": "267009",
-      "next_run": "N/A"
-    }
-  ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans_materialized",
@@ -44,15 +34,15 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 36052
+          "pid": 47460
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 28852
+          "pid": 32412
         }
       ]
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Quarantine failed materialized source/release and keep title retryable."
 }
