@@ -1,10 +1,10 @@
 # JasonOS Prime Lightweight Status Probe
 
 Status: REVIEW
-Updated UTC: 2026-06-21T21:56:25Z
-Duration ms: 357
+Updated UTC: 2026-06-21T22:24:03Z
+Duration ms: 38
 Public mirror: RUNNING
 Materialized QA: REVIEW 103/124
 Materialized artifacts: 0
-Direct legacy STRM total: 22
+Direct legacy STRM total: 18
 Maze Runner ready: false
