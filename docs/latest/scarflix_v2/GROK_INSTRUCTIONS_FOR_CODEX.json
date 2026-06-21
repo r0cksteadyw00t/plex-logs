@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260621_section6_hold_safe_v69",
-      "created_at": "2026-06-21T10:34:53Z",
-      "expires_at": "2026-06-22T10:34:53Z",
+      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260621_section6_hold_safe_v70",
+      "created_at": "2026-06-21T10:51:04Z",
+      "expires_at": "2026-06-22T10:51:04Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,15 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 0
+        "backoff_seconds": 60
       },
       "actions": [
         {
-          "action_type": "write_status_summary",
+          "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260621_section6_hold_safe_v69",
-            "auto_added_by_bridge": true
+            "summary": "Section 6 TV publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Monitor active every 15 minutes with 0 pending deltas. Full-season pilot at 28/28 privately validated. No visible Plex mutation. Continue read-only tracking and forensic review before any retry.",
+            "source_instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260621_section6_hold_safe_v70"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-21T10:34:53Z",
+  "updated_utc": "2026-06-21T10:51:04Z",
   "source": "grok_api"
 }
