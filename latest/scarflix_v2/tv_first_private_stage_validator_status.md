@@ -1,15 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-21T01:23:26Z
+Updated UTC: 2026-06-21T01:24:07Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 3
+Checked: 1
 Passed: 0
-Review: 3
+Review: 1
 
 ## Results
-- FAIRY TAIL 100 YEARS QUEST: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- FAIRY TAIL 100 YEARS QUEST: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
-- FAIRY TAIL 100 YEARS QUEST: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
+- Tonbo!: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
 
 ## Safety
 - no_broad_expansion_started: true
