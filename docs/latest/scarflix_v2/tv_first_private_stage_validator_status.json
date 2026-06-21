@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-21T15:37:19Z",
+  "updated_utc": "2026-06-21T15:38:01Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
@@ -21,12 +21,12 @@
     "no_generic_pending_write": true,
     "source_urls_not_written_to_public_status": true
   },
-  "checked": 11,
+  "checked": 12,
   "passed": 9,
-  "review": 2,
+  "review": 3,
   "relay_fallback_attempted": 0,
   "relay_fallback_passed": 0,
-  "hls_validation_attempted": 9,
+  "hls_validation_attempted": 10,
   "hls_validation_passed": 7,
   "results": [
     {
@@ -434,6 +434,48 @@
           "no_media_artifacts_created": true
         }
       }
+    },
+    {
+      "stage_id": "tv_sas_rogue_heroes_93870_s02e06_793283a3511a",
+      "title": "SAS Rogue Heroes",
+      "tmdb_id": 93870,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_sas_rogue_heroes_93870_s02e06_793283a3511a\\SAS Rogue Heroes (2022) - S02E06.strm",
+      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "HLS_PLAYLIST_TIMEOUT_OR_ERROR",
+        "reason": "HLS playlist timed out.",
+        "url_host": "mediafusion-dev.elfhosted.com",
+        "head_status": 200,
+        "range_status": null,
+        "content_type": "application/vnd.apple.mpegurl",
+        "content_length": null,
+        "accept_ranges": "",
+        "content_range": "",
+        "source_url_redacted": true,
+        "relay_fallback": null,
+        "hls_validation": {
+          "attempted": true,
+          "ok": false,
+          "reason_code": "HLS_PLAYLIST_TIMEOUT_OR_ERROR",
+          "reason": "HLS playlist timed out.",
+          "playlist_status": null,
+          "playlist_content_type": "",
+          "playlist_bytes": 0,
+          "variant_followed": false,
+          "variant_status": null,
+          "segment_status": null,
+          "segment_bytes": 0,
+          "segment_content_type": "",
+          "segment_host_sha256": "",
+          "retryable": true,
+          "source_url_redacted": true,
+          "no_media_artifacts_created": true
+        }
+      }
     }
-  ]
+  ],
+  "status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
+  "next_safe_action": "Keep failed private-stage candidates held and refresh source selection only for failed rows."
 }
