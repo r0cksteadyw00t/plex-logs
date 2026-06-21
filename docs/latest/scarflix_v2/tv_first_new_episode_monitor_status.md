@@ -1,6 +1,6 @@
 # TV-First New Episode Monitor
 
-Updated UTC: 2026-06-21T03:51:04Z
+Updated UTC: 2026-06-21T04:21:03Z
 Status: PASS_FIRST_PILOT_FINALIZED_RELEASE_WATCH_ONLY
 Tracked shows: 3
 Expected episodes: 28
