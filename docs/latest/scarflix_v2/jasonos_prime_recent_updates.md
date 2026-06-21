@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-21T18:41:20.845Z
+Updated UTC: 2026-06-21T18:46:34.570Z
 Source: live status merge
 
-- 2026-06-21T18:40:46Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=7476; child_pid=
-- 2026-06-21T18:40:46Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-21T18:45:53Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=9000; child_pid=42096
+- 2026-06-21T18:45:53Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
+- 2026-06-21T18:44:32Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=46152; child_pid=
+- 2026-06-21T18:44:32Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-21T18:43:54.589Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-21T18:43:54Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-21T18:40:27Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-21T18:40:26.089Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-21T18:40:26Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
-- 2026-06-21T18:39:37Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=7476; child_pid=16796
-- 2026-06-21T18:39:37Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
 - 2026-06-21T18:30:58Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-21T18:20:25Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-21T18:05:28Z - Autonomous controller: controller_already_running: existing controller lock is active
