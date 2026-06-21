@@ -3,7 +3,7 @@
 Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-21T23:20:53Z
+Updated UTC: 2026-06-21T23:25:23Z
 Current step: PLATFORM_GATE_RUNNING
 Jason action required: False
 
@@ -26,8 +26,8 @@ Jason action required: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: PlatformGate runner already running; no inline wait
-- next_check_utc: 2026-06-21T23:27:50Z
+- action_taken: relaunched stale PlatformGate detached runner once
+- next_check_utc: 2026-06-21T23:30:46Z
 
 ## Blockers
 - none
