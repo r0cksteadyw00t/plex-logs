@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_project_safe_progress_audit",
     "schema_version":  "jasonos.project_safe_progress.v1",
-    "status":  "PASS_SAFE_STATUS_ONLY_PROGRESS",
-    "updated_utc":  "2026-06-21T04:38:06Z",
-    "active_plex_sessions":  0,
+    "status":  "HELD_ACTIVE_PLEX_PLAYBACK_NON_DISRUPTIVE_WORK_ONLY",
+    "updated_utc":  "2026-06-21T04:43:07Z",
+    "active_plex_sessions":  1,
     "sentinel_status":  "PASS",
     "sentinel_alert_level":  "LOW",
     "plex_watchdog_status":  "PASS",
@@ -23,14 +23,13 @@
     "allowed_work":  {
                          "status_only_work":  true,
                          "public_grok_updates":  true,
-                         "mission2_virtual_adapter_auto_start":  true,
-                         "mission2_plex_live_attach":  true,
+                         "mission2_virtual_adapter_auto_start":  false,
+                         "mission2_plex_live_attach":  false,
                          "scarflix_expansion":  false,
                          "plex_restart_or_stop":  false
                      },
     "reasons":  [
-                    "mission2_virtual_adapter_can_start_when_armed",
-                    "scarflix_expansion_held_materialized_qa:UNKNOWN"
+                    "active_plex_sessions:1"
                 ],
     "next_safe_action":  "Continue status-only/docs/Grok work while active playback exists. When sessions clear, allow Mission 2 virtual adapter start through the quiet-window watcher."
 }
