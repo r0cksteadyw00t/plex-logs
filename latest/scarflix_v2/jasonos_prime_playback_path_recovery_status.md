@@ -1,6 +1,6 @@
 ﻿# Playback Path Recovery Status
 
-**Updated UTC:** 2026-06-21T17:29:26Z  
+**Updated UTC:** 2026-06-21T17:41:23Z  
 **Status:** REVIEW
 
 ## Scope
@@ -13,7 +13,7 @@ Playback infrastructure only. No publication, no expansion, no Plex DB mutation,
 - WebDAV bridge after: True
 - Plex identity: True
 - rclone processes after: 1
-- S:\media after: ok=True, timed_out=False
+- S:\media after: ok=False, timed_out=True
 - S:\media\catalog after: ok=False, timed_out=True
 - Watch Now probe source: fresh
 
