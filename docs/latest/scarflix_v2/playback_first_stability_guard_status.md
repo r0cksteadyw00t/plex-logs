@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-21T12:31:36Z  
+**Updated UTC:** 2026-06-21T12:36:39Z  
 **Status:** PASS_PLAYBACK_PRIORITY_ACTIVE
 
 ## Scope
@@ -25,8 +25,7 @@ Playback quality and stability only. No publication, no expansion, no source mut
 
 ## Plex Background Jobs
 
-- pid=46440 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
-- pid=47556 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
+- pid=24456 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
 
 ## Recent rclone/WebDAV Error Pressure
 
