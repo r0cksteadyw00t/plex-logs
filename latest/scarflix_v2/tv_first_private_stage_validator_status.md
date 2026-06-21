@@ -1,15 +1,14 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-21T14:30:26Z
+Updated UTC: 2026-06-21T14:31:38Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 3
-Passed: 3
+Checked: 2
+Passed: 2
 Review: 0
 
 ## Results
-- Annika: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Annika: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Annika: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Kung Fu Panda: The Dragon Knight: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Kung Fu Panda: The Dragon Knight: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
