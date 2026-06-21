@@ -1,9 +1,9 @@
 # ScarFLIX v2 Durable PlatformGate Runner
 
-Updated UTC: 2026-06-21T16:48:42Z
+Updated UTC: 2026-06-21T16:54:41Z
 Status: RUNNING
 Current step: existing_durable_owner_active
-Owner PID: 17404
+Owner PID: 16672
 Child PID: 0
 Child QA last progress UTC: 
 Child QA stale minutes: 
@@ -14,7 +14,7 @@ No catalogue expansion: True
 - none
 
 ## Actions
-- Existing durable owner is active pid=31696; duplicate runner exits
+- Existing durable owner is active pid=16268; duplicate runner exits
 
 ## Blockers
 - none
