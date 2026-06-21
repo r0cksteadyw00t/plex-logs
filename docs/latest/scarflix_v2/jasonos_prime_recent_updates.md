@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-21T14:41:36.866Z
+Updated UTC: 2026-06-21T15:24:10.808Z
 Source: live status merge
 
-- 2026-06-21T14:40:41Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=17520; child_pid=4240
-- 2026-06-21T14:40:41Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
-- 2026-06-21T14:40:15Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-21T14:39:51Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=6680; child_pid=
-- 2026-06-21T14:39:51Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-21T14:39:42.556Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-21T14:39:42Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
-- 2026-06-21T14:35:15Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
+- 2026-06-21T15:23:41Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=36924; child_pid=
+- 2026-06-21T15:23:41Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-21T15:23:36.678Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-21T15:23:36Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-21T15:20:08Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
+- 2026-06-21T15:10:40Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=33244; child_pid=43760
+- 2026-06-21T15:10:40Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
+- 2026-06-21T15:05:07Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-21T12:50:36Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-20T20:02:24Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-20T09:50:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
