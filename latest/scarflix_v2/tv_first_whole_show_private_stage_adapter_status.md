@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T02:01:06Z
+Updated UTC: 2026-06-21T02:21:14Z
 Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 6
-Episodes already staged: 6
+Episodes enumerated: 3
+Episodes already staged: 3
 Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- The Perfect Couple: enumerated=6; staged=0; already=6; review=0; source=request_episode_targets
+- Joan: enumerated=3; staged=0; already=3; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
