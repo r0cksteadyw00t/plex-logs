@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T01:28:24Z
+Updated UTC: 2026-06-21T01:34:47Z
 Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 11
-Episodes already staged: 11
+Episodes enumerated: 2
+Episodes already staged: 2
 Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Seirei Gensouki: Spirit Chronicles: enumerated=11; staged=0; already=11; review=0; source=request_episode_targets
+- Outer Banks: enumerated=2; staged=0; already=2; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
