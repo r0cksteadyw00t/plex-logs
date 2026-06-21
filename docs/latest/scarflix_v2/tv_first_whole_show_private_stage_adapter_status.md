@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T15:18:50Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Updated UTC: 2026-06-21T15:24:50Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 3
-Episodes already staged: 3
-Episodes newly staged: 0
+Episodes enumerated: 12
+Episodes already staged: 0
+Episodes newly staged: 12
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- The Edge of Sleep: enumerated=3; staged=0; already=3; review=0; source=request_episode_targets
+- Baki Hanma: enumerated=12; staged=12; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
