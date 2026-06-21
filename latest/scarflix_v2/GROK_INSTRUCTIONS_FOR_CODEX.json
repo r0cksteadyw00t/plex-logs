@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260621_section6_hold_safe_v92",
-      "created_at": "2026-06-21T16:44:50Z",
-      "expires_at": "2026-06-22T16:44:50Z",
+      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260621_tv_section6_hold_safe_v94",
+      "created_at": "2026-06-21T17:17:21Z",
+      "expires_at": "2026-06-22T17:17:21Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,15 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff": "none"
+        "max_retries": 2,
+        "backoff_seconds": 30
       },
       "actions": [
         {
-          "action_type": "write_strategy_note",
+          "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Section 6 scanner latency hypothesis remains leading cause of TV pilot visibility failure after clean rollback. Monitor active with HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Recommend continued natural retry on 4 missing episodes before considering bounded alternate-source lane. No visible publication, no WebDAV mutation, no Plex refresh permitted until full forensic review complete.",
-            "source_instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260621_section6_hold_safe_v92"
+            "summary": "TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. 15-minute monitor running with 0 pending events. Full-season pilot at 28/28 privately validated but no visible Plex mutation. No expansion or publishing actions permitted.",
+            "source_instruction_id": "phase0_stabilization_foundation_write_status_summary_20260621_tv_section6_hold_safe_v94"
           }
         }
       ],
@@ -29,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-21T16:44:50Z",
+  "updated_utc": "2026-06-21T17:17:21Z",
   "source": "grok_api"
 }
