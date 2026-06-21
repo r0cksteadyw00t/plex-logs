@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T14:31:25Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-21T15:18:50Z
+Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 2
-Episodes already staged: 0
-Episodes newly staged: 2
+Episodes enumerated: 3
+Episodes already staged: 3
+Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Kung Fu Panda: The Dragon Knight: enumerated=2; staged=2; already=0; review=0; source=request_episode_targets
+- The Edge of Sleep: enumerated=3; staged=0; already=3; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
