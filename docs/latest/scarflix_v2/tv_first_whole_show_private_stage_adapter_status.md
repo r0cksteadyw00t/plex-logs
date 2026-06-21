@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T07:30:24Z
+Updated UTC: 2026-06-21T07:32:35Z
 Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 2
-Episodes already staged: 2
+Episodes enumerated: 10
+Episodes already staged: 10
 Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Outer Banks: enumerated=2; staged=0; already=2; review=0; source=request_episode_targets
+- Star Trek: Lower Decks: enumerated=10; staged=0; already=10; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
