@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-21T03:00:58Z",
+  "updated_utc": "2026-06-21T03:20:00Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
@@ -21,9 +21,9 @@
     "no_generic_pending_write": true,
     "source_urls_not_written_to_public_status": true
   },
-  "checked": 3,
+  "checked": 6,
   "passed": 0,
-  "review": 3,
+  "review": 6,
   "relay_fallback_attempted": 0,
   "relay_fallback_passed": 0,
   "results": [
@@ -92,6 +92,74 @@
         "source_url_redacted": true,
         "relay_fallback": null
       }
+    },
+    {
+      "stage_id": "tv_the_edge_of_sleep_221585_s01e04_4a45d6d2d7ad",
+      "title": "The Edge of Sleep",
+      "tmdb_id": 221585,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_edge_of_sleep_221585_s01e04_4a45d6d2d7ad\\The Edge of Sleep (2024) - S01E04.strm",
+      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_RANGE_TIMEOUT_OR_ERROR",
+        "reason": "Range probe timed out.",
+        "url_host": "mediafusion-dev.elfhosted.com",
+        "head_status": 200,
+        "range_status": null,
+        "content_type": "application/vnd.apple.mpegurl",
+        "content_length": null,
+        "accept_ranges": "",
+        "content_range": "",
+        "source_url_redacted": true,
+        "relay_fallback": null
+      }
+    },
+    {
+      "stage_id": "tv_the_edge_of_sleep_221585_s01e05_4a45d6d2d7ad",
+      "title": "The Edge of Sleep",
+      "tmdb_id": 221585,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_edge_of_sleep_221585_s01e05_4a45d6d2d7ad\\The Edge of Sleep (2024) - S01E05.strm",
+      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "probe": {
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_RANGE_TIMEOUT_OR_ERROR",
+        "reason": "Range probe timed out.",
+        "url_host": "mediafusion-dev.elfhosted.com",
+        "head_status": 200,
+        "range_status": null,
+        "content_type": "application/vnd.apple.mpegurl",
+        "content_length": null,
+        "accept_ranges": "",
+        "content_range": "",
+        "source_url_redacted": true,
+        "relay_fallback": null
+      }
+    },
+    {
+      "stage_id": "tv_the_edge_of_sleep_221585_s01e06_44b44cd1b3ec",
+      "title": "The Edge of Sleep",
+      "tmdb_id": 221585,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_edge_of_sleep_221585_s01e06_44b44cd1b3ec\\The Edge of Sleep (2024) - S01E06.strm",
+      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "probe": {
+        "ok": false,
+        "retryable": false,
+        "reason_code": "RANGE_NOT_206",
+        "reason": "Range probe did not return HTTP 206.",
+        "url_host": "mediafusion.elfhosted.com",
+        "head_status": 200,
+        "range_status": 200,
+        "content_type": "application/vnd.apple.mpegurl",
+        "content_length": null,
+        "accept_ranges": "",
+        "content_range": "",
+        "source_url_redacted": true,
+        "relay_fallback": null
+      }
     }
-  ]
+  ],
+  "status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
+  "next_safe_action": "Keep failed private-stage candidates held and refresh source selection only for failed rows."
 }
