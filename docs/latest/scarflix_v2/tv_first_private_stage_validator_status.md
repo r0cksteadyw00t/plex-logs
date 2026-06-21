@@ -1,13 +1,15 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-21T07:35:58Z
+Updated UTC: 2026-06-21T07:47:25Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 1
+Checked: 3
 Passed: 0
-Review: 1
+Review: 3
 
 ## Results
-- The Program: Cons, Cults, and Kidnapping: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
+- Outer Banks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
+- Outer Banks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
+- Outer Banks: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=RANGE_NOT_206
 
 ## Safety
 - no_broad_expansion_started: true
