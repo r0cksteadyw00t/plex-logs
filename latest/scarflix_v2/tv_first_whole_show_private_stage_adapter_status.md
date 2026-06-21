@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T00:40:31Z
+Updated UTC: 2026-06-21T00:42:51Z
 Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 12
-Episodes already staged: 12
+Episodes enumerated: 2
+Episodes already staged: 2
 Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Jentry Chau vs the Underworld: enumerated=12; staged=0; already=12; review=0; source=request_episode_targets
+- The Sticky: enumerated=2; staged=0; already=2; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
