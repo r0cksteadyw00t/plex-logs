@@ -3,12 +3,12 @@
 Status: WAITING_RETRY
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-22T16:30:26Z
+Updated UTC: 2026-06-22T16:35:12Z
 Current step: rclone_mount_selfheal_waiting_retry
 Jason action required: False
 
 ## PlatformGate
-- runner_running: True
+- runner_running: False
 - status: REVIEW
 - stage: platform_gate_review
 - visible: 0
@@ -20,14 +20,14 @@ Jason action required: False
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: REVIEW
+- rclone_mount_status: FAIL
 - s_media_ready: True
 - s_catalog_ready: False
 - mount_selfheal_attempted: True
 
 ## Action
 - action_taken: attempted rclone mount self-heal; mount not ready yet
-- next_check_utc: 2026-06-22T16:36:58Z
+- next_check_utc: 2026-06-22T16:42:06Z
 
 ## Blockers
-- rclone mount not ready: REVIEW
+- rclone mount not ready: FAIL
