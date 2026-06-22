@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_forensic_cooldown_safe_v9",
-      "created_at": "2026-06-22T11:25:02Z",
-      "expires_at": "2026-06-23T11:25:02Z",
+      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_forensic_cooldown_safe_v10",
+      "created_at": "2026-06-22T11:40:32Z",
+      "expires_at": "2026-06-23T11:40:32Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,18 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
+      },
+      "action": {
+        "type": "write_status_summary",
+        "summary": "TV Section 6 publication remains in HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season pilot (28/28) privately validated. No visible Plex mutation. Continue 15-minute monitor with no further publication attempts until forensic review complete. PAUSE_PUBLICATION active."
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
             "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_forensic_cooldown_safe_v9",
+            "source_instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_forensic_cooldown_safe_v10",
             "auto_added_by_bridge": true
           }
         }
@@ -30,6 +34,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-22T11:25:02Z",
+  "updated_utc": "2026-06-22T11:40:32Z",
   "source": "grok_api"
 }
