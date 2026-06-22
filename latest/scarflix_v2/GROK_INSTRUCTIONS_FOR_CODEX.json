@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260622_tv_section6_forensic_cooldown_safe_v12",
-      "created_at": "2026-06-22T12:11:32Z",
-      "expires_at": "2026-06-23T12:11:32Z",
+      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260622_tv_section6_forensic_cooldown_safe_v13",
+      "created_at": "2026-06-22T12:27:33Z",
+      "expires_at": "2026-06-23T12:27:33Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,16 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 2,
-        "backoff_seconds": 300
+        "max_retries": 0,
+        "backoff_seconds": 0
       },
       "actions": [
         {
-          "action_type": "write_status_summary",
+          "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260622_tv_section6_forensic_cooldown_safe_v12",
-            "auto_added_by_bridge": true
+            "note": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN pending forensic review of scanner latency. No visible aliases, no webdav_map mutation, full-season gate enforced at 28/28. Monitor continues 15-min cycle read-only. Materialized QA REVIEW; controlled expansion paused for visibility fix.",
+            "source_instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260622_tv_section6_forensic_cooldown_safe_v13"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-22T12:11:32Z",
+  "updated_utc": "2026-06-22T12:27:33Z",
   "source": "grok_api"
 }
