@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-22T03:41:14Z
-Instruction: phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_hold_safe_v132
+Updated UTC: 2026-06-22T04:44:31Z
+Instruction: phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_hold_safe_v136
 
-Current state: TV Section 6 publication hold active with HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Materialized QA in REVIEW. No legacy resolver expansion. Phase 0 stabilization ongoing with controlled materialized architecture only. No publishing, mutation, or expansion actions executed.
+TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Monitor active every 15 minutes with 0 pending deltas. Full-season pilot (28/28) privately validated but Plex visibility blocked pending scanner timing review. No WebDAV mutations, no symlinks, no Plex refresh. Continue read-only monitoring only.
