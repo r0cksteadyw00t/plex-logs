@@ -1,9 +1,30 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
     "status":  "PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED",
-    "started_utc":  "2026-06-22T18:42:39Z",
-    "ended_utc":  "2026-06-22T18:42:41Z",
-    "duration_seconds":  1,
+    "started_utc":  "2026-06-22T18:50:51Z",
+    "ended_utc":  "2026-06-22T18:50:54Z",
+    "duration_seconds":  3,
+    "report_only":  false,
+    "no_publication_started":  true,
+    "no_expansion_started":  true,
+    "no_source_mutation":  true,
+    "no_path_rewrite":  true,
+    "cmd_health_skipped":  true,
+    "cmd_health_skip_reason":  "guard default path avoids spawning cmd.exe during playback contention",
+    "cmd_avg_ms":  0,
+    "plex_session_state":  {
+                               "ok":  true,
+                               "active_count":  0,
+                               "base_used":  "http://192.168.1.184:32400",
+                               "token_source":  "plex_token.txt",
+                               "attempts":  [
+                                                {
+                                                    "base":  "http://127.0.0.1:3{
+    "component":  "jasonos_prime_playback_first_stability_guard",
+    "status":  "PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED",
+    "started_utc":  "2026-06-22T18:50:51Z",
+    "ended_utc":  "2026-06-22T18:50:54Z",
+    "duration_seconds":  3,
     "report_only":  false,
     "no_publication_started":  true,
     "no_expansion_started":  true,
@@ -62,7 +83,7 @@
                                "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-23T04:42:41+10:00",
+                            "local_time":  "2026-06-23T04:50:54+10:00",
                             "hour":  4,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
@@ -71,8 +92,14 @@
                         },
     "suppress_background_work":  false,
     "quiet_reason":  "idle_off_peak_maintenance_allowed",
-    "plex_background_jobs_found":  29,
+    "plex_background_jobs_found":  34,
     "plex_background_jobs":  [
+                                 {
+                                     "pid":  6212,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
                                  {
                                      "pid":  6704,
                                      "name":  "Plex Media Scanner",
@@ -99,6 +126,12 @@
                                  },
                                  {
                                      "pid":  12668,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
+                                 {
+                                     "pid":  16036,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
@@ -182,6 +215,12 @@
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
                                  },
                                  {
+                                     "pid":  38276,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
+                                 {
                                      "pid":  39044,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
@@ -246,9 +285,28 @@
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
+                                 {
+                                     "pid":  54124,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
+                                 {
+                                     "pid":  54676,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
                                  }
                              ],
     "stopped_jobs":  [
+                         {
+                             "pid":  6212,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "off_peak_maintenance_allowed",
+                             "stopped":  false,
+                             "error":  "maintenance_allowed"
+                         },
                          {
                              "pid":  6704,
                              "name":  "Plex Media Scanner",
@@ -279,6 +337,13 @@
                          },
                          {
                              "pid":  12668,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "off_peak_maintenance_allowed",
+                             "stopped":  false,
+                             "error":  "maintenance_allowed"
+                         },
+                         {
+                             "pid":  16036,
                              "name":  "Plex Media Scanner",
                              "reason":  "off_peak_maintenance_allowed",
                              "stopped":  false,
@@ -376,6 +441,13 @@
                              "error":  "maintenance_allowed"
                          },
                          {
+                             "pid":  38276,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "off_peak_maintenance_allowed",
+                             "stopped":  false,
+                             "error":  "maintenance_allowed"
+                         },
+                         {
                              "pid":  39044,
                              "name":  "Plex Media Scanner",
                              "reason":  "off_peak_maintenance_allowed",
@@ -447,6 +519,20 @@
                          },
                          {
                              "pid":  51648,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "off_peak_maintenance_allowed",
+                             "stopped":  false,
+                             "error":  "maintenance_allowed"
+                         },
+                         {
+                             "pid":  54124,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "off_peak_maintenance_allowed",
+                             "stopped":  false,
+                             "error":  "maintenance_allowed"
+                         },
+                         {
+                             "pid":  54676,
                              "name":  "Plex Media Scanner",
                              "reason":  "off_peak_maintenance_allowed",
                              "stopped":  false,
