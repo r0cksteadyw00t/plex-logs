@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-22T01:39:52Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\city_on_fire_155534_private_stage_manifest_20260622T013405Z.prepared.json",
+  "updated_utc": "2026-06-22T03:21:31Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\servant_88055_private_stage_manifest_20260622T021405Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
@@ -36,58 +36,49 @@
   "show_count": 1,
   "episodes_enumerated": 1,
   "already_staged_count": 0,
-  "staged_count": 0,
-  "review_count": 1,
+  "staged_count": 1,
+  "review_count": 0,
   "shows": [
     {
-      "title": "City on Fire",
-      "tmdb_id": 155534,
-      "seasons_expected": 1,
+      "title": "Servant",
+      "tmdb_id": 88055,
+      "seasons_expected": 4,
       "episodes_expected": 1,
       "episodes_enumerated": 1,
       "already_staged_count": 0,
-      "staged_count": 0,
-      "review_count": 1,
+      "staged_count": 1,
+      "review_count": 0,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
     }
   ],
   "results_redacted": [
     {
-      "title": "City on Fire",
-      "tmdb_id": 155534,
-      "season": 1,
-      "episode": 2,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 0,
-      "rejected_hash_count": 0,
-      "provider_attempts_redacted": [
-        {
-          "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
-          "stream_count": 0,
-          "reason": "REQUEST_TIMEOUT"
-        },
-        {
-          "provider_ref": "comet.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "torrentio.strem.fun",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 2
-        },
-        {
-          "provider_ref": "aiostreams.elfhosted.com",
-          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
-          "stream_count": 0,
-          "reason": "Unexpected token '<', \"<!doctype \"... is not valid JSON"
-        }
-      ],
-      "provider_pool_exhausted": true
+      "title": "Servant",
+      "tmdb_id": 88055,
+      "season": 3,
+      "episode": 1,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_servant_88055_s03e01_cfefe42a5eb2",
+      "provider_ref": "mediafusion.elfhosted.com",
+      "provider_attempt_count": 1,
+      "stream_evidence_redacted": {
+        "name": "MediaFusion DEV | ElfHosted 🧲 RD ⚡️ 1080p",
+        "title_excerpt": "",
+        "info_hash": "cfefe42a5eb2d1fbfc72e2b6d9f6f577ceaa87e8",
+        "url_host": "mediafusion-dev.elfhosted.com",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     }
   ],
-  "status": "REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED",
+  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
