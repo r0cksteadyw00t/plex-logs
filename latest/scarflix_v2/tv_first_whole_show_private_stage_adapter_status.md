@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-22T16:56:21Z
+Updated UTC: 2026-06-22T17:20:02Z
 Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 1
+Episodes enumerated: 7
 Episodes already staged: 0
 Episodes newly staged: 0
-Review: 1
+Review: 7
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Australian Ninja Warrior: enumerated=1; staged=0; already=0; review=1; source=request_episode_targets
+- BanG Dream! It's MyGO!!!!!: enumerated=7; staged=0; already=0; review=7; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
