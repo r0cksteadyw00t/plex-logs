@@ -1,17 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-22T03:22:49Z
+Updated UTC: 2026-06-22T04:20:52Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 5
-Passed: 2
-Review: 3
+Checked: 1
+Passed: 0
+Review: 1
 
 ## Results
-- Servant: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=; type=application/json; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- Servant: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Servant: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=; type=application/json; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- Servant: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=; type=application/json; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
-- Servant: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Love Flops: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=; type=application/json; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
 
 ## Safety
 - no_broad_expansion_started: true
