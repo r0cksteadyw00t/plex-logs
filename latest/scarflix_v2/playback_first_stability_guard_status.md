@@ -1,7 +1,7 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-22T15:55:36Z  
-**Status:** PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED
+**Updated UTC:** 2026-06-22T16:00:31Z  
+**Status:** PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED
 
 ## Scope
 
@@ -19,14 +19,14 @@ Playback quality and stability only. No publication, no expansion, no source mut
 - Plex base used: http://192.168.1.184:32400
 - Token source used: plex_token.txt
 - Off-peak window: 2:00-6:00
-- In off-peak window: False
-- Background work suppressed: True
-- Reason: idle_outside_off_peak_window
+- In off-peak window: True
+- Background work suppressed: False
+- Reason: idle_off_peak_maintenance_allowed
 
 ## Plex Background Jobs
 
-- pid=8912 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
-- pid=41724 Plex Media Scanner stopped=True verified_gone=True reason=plex_background_scanner_or_analyzer error=
+- pid=40340 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
+- pid=51996 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 
 ## Recent rclone/WebDAV Error Pressure
 
