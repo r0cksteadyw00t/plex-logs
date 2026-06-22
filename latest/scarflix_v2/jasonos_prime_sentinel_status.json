@@ -2,58 +2,46 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "REVIEW",
   "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-22T17:55:40Z",
-  "duration_seconds": 12,
+  "updated_utc": "2026-06-22T18:24:40Z",
+  "duration_seconds": 3,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 1,
+  "repeat_count": 2,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 13,
+    "controller_age_minutes": 0,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 7,
+    "watchdog_age_minutes": 4,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 3,
+    "dashboard_age_minutes": 2,
     "mirror_status": "RUNNING",
-    "mirror_age_minutes": 1,
+    "mirror_age_minutes": 0,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 7,
-    "durable_platform_gate_age_minutes": 7,
+    "checkpoint_age_minutes": 11,
+    "durable_platform_gate_age_minutes": 11,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
     {
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "watchdog_stale_or_failed",
-      "result": "PASS",
-      "note": "enable pid=46568; run pid=13444"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "controller_stale_or_blocked",
-      "result": "PASS",
-      "note": "enable pid=37564; run pid=47040"
-    },
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=32588; run pid=6204"
+      "note": "enable pid=12200; run pid=50816"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=11428; run pid=26912"
+      "note": "enable pid=2800; run pid=43920"
     },
     {
       "task": "ScarFLIX_v2_DurablePlatformGateRunner",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=24572; run pid=20620"
+      "note": "enable pid=50316; run pid=48960"
     }
   ],
   "notes": [],
