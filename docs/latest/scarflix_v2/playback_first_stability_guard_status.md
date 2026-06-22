@@ -1,6 +1,6 @@
 ﻿# Playback First Stability Guard
 
-**Updated UTC:** 2026-06-22T18:38:51Z  
+**Updated UTC:** 2026-06-22T18:42:41Z  
 **Status:** PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED
 
 ## Scope
@@ -52,8 +52,8 @@ Playback quality and stability only. No publication, no expansion, no source mut
 - pid=49112 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=49156 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=49584 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
+- pid=51624 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 - pid=51648 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
-- pid=53404 Plex Media Scanner stopped=False verified_gone= reason=off_peak_maintenance_allowed error=maintenance_allowed
 
 ## Recent rclone/WebDAV Error Pressure
 
