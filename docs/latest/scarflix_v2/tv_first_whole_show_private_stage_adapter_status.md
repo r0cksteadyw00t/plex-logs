@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-22T10:35:11Z
-Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
+Updated UTC: 2026-06-22T10:54:40Z
+Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 7
-Episodes already staged: 0
+Episodes enumerated: 17
+Episodes already staged: 14
 Episodes newly staged: 0
-Review: 7
+Review: 3
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- BanG Dream! It's MyGO!!!!!: enumerated=7; staged=0; already=0; review=7; source=request_episode_targets
+- Young Rock: enumerated=17; staged=0; already=14; review=3; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
