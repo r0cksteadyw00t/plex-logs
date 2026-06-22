@@ -1,8 +1,8 @@
 ﻿{
     "component":  "jasonos_prime_playback_first_stability_guard",
     "status":  "PASS_IDLE_OFFPEAK_MAINTENANCE_ALLOWED",
-    "started_utc":  "2026-06-22T17:35:36Z",
-    "ended_utc":  "2026-06-22T17:35:39Z",
+    "started_utc":  "2026-06-22T17:42:57Z",
+    "ended_utc":  "2026-06-22T17:43:00Z",
     "duration_seconds":  3,
     "report_only":  false,
     "no_publication_started":  true,
@@ -62,7 +62,7 @@
                                "error":  ""
                            },
     "off_peak_policy":  {
-                            "local_time":  "2026-06-23T03:35:39+10:00",
+                            "local_time":  "2026-06-23T03:42:59+10:00",
                             "hour":  3,
                             "off_peak_start_hour":  2,
                             "off_peak_end_hour":  6,
@@ -99,6 +99,12 @@
                                  },
                                  {
                                      "pid":  22452,
+                                     "name":  "Plex Media Scanner",
+                                     "reason":  "plex_background_scanner_or_analyzer",
+                                     "command_line":  "not_collected_to_keep_guard_lightweight"
+                                 },
+                                 {
+                                     "pid":  30440,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
@@ -158,12 +164,6 @@
                                      "command_line":  "not_collected_to_keep_guard_lightweight"
                                  },
                                  {
-                                     "pid":  48416,
-                                     "name":  "Plex Media Scanner",
-                                     "reason":  "plex_background_scanner_or_analyzer",
-                                     "command_line":  "not_collected_to_keep_guard_lightweight"
-                                 },
-                                 {
                                      "pid":  49112,
                                      "name":  "Plex Media Scanner",
                                      "reason":  "plex_background_scanner_or_analyzer",
@@ -213,6 +213,13 @@
                          },
                          {
                              "pid":  22452,
+                             "name":  "Plex Media Scanner",
+                             "reason":  "off_peak_maintenance_allowed",
+                             "stopped":  false,
+                             "error":  "maintenance_allowed"
+                         },
+                         {
+                             "pid":  30440,
                              "name":  "Plex Media Scanner",
                              "reason":  "off_peak_maintenance_allowed",
                              "stopped":  false,
@@ -276,13 +283,6 @@
                          },
                          {
                              "pid":  46988,
-                             "name":  "Plex Media Scanner",
-                             "reason":  "off_peak_maintenance_allowed",
-                             "stopped":  false,
-                             "error":  "maintenance_allowed"
-                         },
-                         {
-                             "pid":  48416,
                              "name":  "Plex Media Scanner",
                              "reason":  "off_peak_maintenance_allowed",
                              "stopped":  false,
