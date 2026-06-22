@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-22T11:15:04Z
-Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
+Updated UTC: 2026-06-22T11:36:34Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 6
-Episodes already staged: 3
+Episodes enumerated: 1
+Episodes already staged: 0
 Episodes newly staged: 1
-Review: 2
+Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Young Rock: enumerated=6; staged=1; already=3; review=2; source=request_episode_targets
+- City on Fire: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
