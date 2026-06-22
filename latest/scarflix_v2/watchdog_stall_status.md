@@ -1,6 +1,6 @@
 ﻿# ScarFLIX v2 Watchdog + Stall Detector
 
-Updated UTC: 2026-06-22T15:35:10Z
+Updated UTC: 2026-06-22T15:40:17Z
 Status: REVIEW
 Stall risk: Medium
 Will progress without Codex: True
@@ -10,10 +10,10 @@ Current milestone: PLATFORM_GATE_RUNNING
 - Controller age minutes: 5
 - Platform checkpoint age minutes: 0
 - Dashboard age minutes: 0
-- Mirror age minutes: 1
-- Movie STRM count: 6
+- Mirror age minutes: 0
+- Movie STRM count: 5
 - TV STRM count: 1
-- Total STRM count: 7
+- Total STRM count: 6
 
 ## Actions
 - JasonOS_Prime_PublicMirrorPublisher: skipped_orchestrator_owned
