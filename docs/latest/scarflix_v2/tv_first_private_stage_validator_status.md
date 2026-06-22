@@ -1,23 +1,19 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-22T13:57:02Z
+Updated UTC: 2026-06-22T14:16:57Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 11
-Passed: 10
-Review: 1
+Checked: 7
+Passed: 5
+Review: 2
 
 ## Results
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=404; range=404; type=text/html; reason=SOURCE_EXPIRED_OR_GONE
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- The Orville: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Great: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Great: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Great: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Great: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Great: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
+- The Great: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
+- The Great: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 
 ## Safety
 - no_broad_expansion_started: true
