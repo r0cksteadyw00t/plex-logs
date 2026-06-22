@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-22T02:27:07.103Z",
+  "updated_utc": "2026-06-22T02:27:45.337Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -123,8 +123,8 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 5,
-    "mirror_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 1,
+    "mirror_updated_age_minutes": null,
     "next_check_utc": "2026-06-22T02:30:32Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": true,
@@ -133,9 +133,9 @@
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260622.log",
-    "last_progress_utc": "2026-06-22T02:21:50.861Z",
-    "age_minutes": 4,
-    "last_line": "[2026-06-22T02:21:50Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
+    "last_progress_utc": "2026-06-22T02:26:23.706Z",
+    "age_minutes": 1,
+    "last_line": "[2026-06-22T02:26:23Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
     "info_lines": 40
@@ -143,7 +143,7 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-22T02:21:38Z",
+    "updated_utc": "2026-06-22T02:26:34Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
@@ -159,7 +159,7 @@
     "owner_pid": 15124,
     "child_pid": 48384,
     "last_progress_utc": "2026-06-22T02:25:28Z",
-    "heartbeat_updated_utc": "2026-06-22T02:26:01Z",
+    "heartbeat_updated_utc": "2026-06-22T02:27:04Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
@@ -192,7 +192,7 @@
   },
   "fast_track_accelerator": {
     "status": "PASS",
-    "updated_utc": "2026-06-22T02:25:07Z",
+    "updated_utc": "2026-06-22T02:27:12Z",
     "current_milestone": "PLATFORM_GATE_RUNNING",
     "expansion_eligible": false,
     "expansion_started_this_cycle": false,
@@ -285,6 +285,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-22T02:26:23.706Z",
+      "title": "PlatformGate child QA active: WebDAV active gate",
+      "detail": "Latest child QA line: [2026-06-22T02:26:23Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0"
+    },
+    {
       "utc": "2026-06-22T02:25:28Z",
       "title": "Durable PlatformGate runner RUNNING",
       "detail": "Step running_platform_gate_attempt_1; owner_pid=15124; child_pid=48384"
@@ -308,11 +313,6 @@
       "utc": "2026-06-22T02:24:50Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=unknown; blockers=0"
-    },
-    {
-      "utc": "2026-06-22T02:21:50.861Z",
-      "title": "PlatformGate child QA active: WebDAV active gate",
-      "detail": "Latest child QA line: [2026-06-22T02:21:50Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0"
     },
     {
       "utc": "2026-06-22T02:10:48Z",
@@ -386,7 +386,7 @@
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
-      "last_change": "2026-06-22T02:25:07Z - PLATFORM_GATE_RUNNING",
+      "last_change": "2026-06-22T02:27:12Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=17.",
       "progress": 25,
       "eta": "runs every 5 minutes",
@@ -432,7 +432,7 @@
       "outcome": "Phone/Multi-Device Federation",
       "target": "Stable remote status/control through public mirror plus tunnel/federation layer.",
       "last_change": "2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated",
-      "current": "Public mirror RUNNING; raw status base available.",
+      "current": "Public mirror UNKNOWN; raw status base available.",
       "progress": 35,
       "eta": "1-3 days",
       "stall_risk": "Medium"
