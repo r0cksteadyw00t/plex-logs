@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-21T23:22:40Z
-Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
+Updated UTC: 2026-06-22T00:18:02Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 13
-Episodes already staged: 0
-Episodes newly staged: 7
-Review: 6
+Episodes enumerated: 6
+Episodes already staged: 2
+Episodes newly staged: 4
+Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Never Have I Ever: enumerated=13; staged=7; already=0; review=6; source=request_episode_targets
+- Titans: enumerated=6; staged=4; already=2; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
