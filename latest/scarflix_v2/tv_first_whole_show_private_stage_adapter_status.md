@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-22T10:54:40Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Updated UTC: 2026-06-22T11:00:12Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 17
-Episodes already staged: 14
-Episodes newly staged: 0
-Review: 3
+Episodes enumerated: 6
+Episodes already staged: 0
+Episodes newly staged: 6
+Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Young Rock: enumerated=17; staged=0; already=14; review=3; source=request_episode_targets
+- Parallel World Pharmacy: enumerated=6; staged=6; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
