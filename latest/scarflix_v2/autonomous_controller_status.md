@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: RUNNING
-Milestone state: PLATFORM_GATE_RUNNING
+Status: FAIL_ENGINEERING
+Milestone state: BLOCKED_DECISION
 Milestone: Complete same-snapshot PlatformGate checkpoint
 Updated UTC: 2026-06-22T18:37:21Z
-Current step: controller_already_running
+Current step: controller_exception
 Jason action required: False
 
 ## PlatformGate
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: existing controller lock is active
-- next_check_utc: 2026-06-22T18:42:21Z
+- next_check_utc: 2026-06-22T18:42:22Z
 
 ## Blockers
-- none
+- Controller exception: Exception calling "WriteAllText" with "3" argument(s): "The process cannot access the file 'D:\PlexTools\public\latest\scarflix_v2\autonomous_controller_status.json' because it is being used by another process."
