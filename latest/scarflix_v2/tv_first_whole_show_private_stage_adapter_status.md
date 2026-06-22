@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-22T10:14:19Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Updated UTC: 2026-06-22T10:35:11Z
+Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 4
-Episodes already staged: 2
+Episodes enumerated: 7
+Episodes already staged: 0
 Episodes newly staged: 0
-Review: 2
+Review: 7
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Never Have I Ever: enumerated=4; staged=0; already=2; review=2; source=request_episode_targets
+- BanG Dream! It's MyGO!!!!!: enumerated=7; staged=0; already=0; review=7; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
