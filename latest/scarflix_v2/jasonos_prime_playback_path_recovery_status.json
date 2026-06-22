@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-22T17:42:33Z",
-    "ended_utc":  "2026-06-22T17:54:39Z",
-    "duration_seconds":  726,
+    "started_utc":  "2026-06-22T18:20:03Z",
+    "ended_utc":  "2026-06-22T18:24:33Z",
+    "duration_seconds":  270,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,34 +11,34 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  112,
+                           "ms":  233,
                            "error":  "",
                            "no_window":  true
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  21,
+                           "ms":  169,
                            "error":  "",
                            "no_window":  true
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  20,
+                           "ms":  56,
                            "error":  "",
                            "no_window":  true
                        }
                    ],
     "webdav_before":  {
-                          "ok":  true,
-                          "status_code":  200,
-                          "error":  ""
+                          "ok":  false,
+                          "status_code":  0,
+                          "error":  "The operation has timed out."
                       },
     "webdav_after":  {
-                         "ok":  true,
-                         "status_code":  200,
-                         "error":  ""
+                         "ok":  false,
+                         "status_code":  0,
+                         "error":  "The operation has timed out."
                      },
     "plex_identity":  {
                           "ok":  true,
@@ -77,33 +77,30 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  15011,
+                          "ms":  12,
                           "content_length":  "",
-                          "error":  "The operation has timed out."
+                          "error":  "The remote server returned an error: (404) Not Found."
                       },
                       {
                           "title":  "Anna",
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  15014,
+                          "ms":  4,
                           "content_length":  "",
-                          "error":  "The operation has timed out."
+                          "error":  "The remote server returned an error: (404) Not Found."
                       }
                   ],
     "watch_now_probe_run":  true,
     "watch_now_source":  "fresh",
     "actions":  [
                     {
-                        "action":  "run_rclone_mount_keepalive",
-                        "result":  {
-                                       "ran":  true,
-                                       "exit_code":  1,
-                                       "error":  ""
-                                   }
+                        "action":  "node_webdav_bridge_process_present",
+                        "count":  1
                     }
                 ],
     "failures":  [
+                     "WebDAV bridge health is not PASS",
                      "S: media/catalog path is not reliably ready",
                      "Watch Now probe failed: Gremlins",
                      "Watch Now probe failed: Anna"
