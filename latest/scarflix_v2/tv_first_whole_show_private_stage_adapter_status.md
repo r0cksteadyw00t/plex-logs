@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-22T16:28:50Z
-Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
+Updated UTC: 2026-06-22T16:55:54Z
+Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
 Shows requested: 1
-Episodes enumerated: 3
+Episodes enumerated: 7
 Episodes already staged: 0
-Episodes newly staged: 0
-Review: 3
+Episodes newly staged: 1
+Review: 6
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- The Tale of Outcasts: enumerated=3; staged=0; already=0; review=3; source=request_episode_targets
+- Surviving Summer: enumerated=7; staged=1; already=0; review=6; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
