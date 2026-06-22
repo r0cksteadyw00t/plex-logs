@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260622_tv_section6_forensic_cooldown_safe_v35",
-      "created_at": "2026-06-22T18:20:13Z",
-      "expires_at": "2026-06-23T18:20:13Z",
+      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_forensic_cooldown_safe_v36",
+      "created_at": "2026-06-22T18:52:13Z",
+      "expires_at": "2026-06-23T18:52:13Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,19 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 60
-      },
-      "action_type": "write_strategy_note",
-      "parameters": {
-        "summary": "TV Section 6 forensic cooldown remains active. Monitor holds publication pending scanner timing review. No visible aliases or mutations. Continue read-only status tracking."
+        "max_retries": 3,
+        "backoff": "exponential"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
             "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260622_tv_section6_forensic_cooldown_safe_v35",
+            "source_instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_forensic_cooldown_safe_v36",
             "auto_added_by_bridge": true
           }
         }
@@ -34,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-22T18:20:13Z",
+  "updated_utc": "2026-06-22T18:52:13Z",
   "source": "grok_api"
 }
