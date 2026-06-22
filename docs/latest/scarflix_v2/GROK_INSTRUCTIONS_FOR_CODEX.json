@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_hold_safe_v144",
-      "created_at": "2026-06-22T06:52:50Z",
-      "expires_at": "2026-06-23T06:52:50Z",
+      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_hold_safe_v145",
+      "created_at": "2026-06-22T07:08:35Z",
+      "expires_at": "2026-06-23T07:08:35Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,16 +13,14 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 60
+        "max_retries": 2,
+        "backoff": "fixed"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_write_status_summary_20260622_tv_section6_hold_safe_v144",
-            "auto_added_by_bridge": true
+            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Phase 0 stabilization continues with materialized/WebDAV focus. No legacy resolver expansion. Current materialized QA status REVIEW. Monitor active with 0 pending events. Safety state preserved."
           }
         }
       ],
@@ -30,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-22T06:52:50Z",
+  "updated_utc": "2026-06-22T07:08:35Z",
   "source": "grok_api"
 }
