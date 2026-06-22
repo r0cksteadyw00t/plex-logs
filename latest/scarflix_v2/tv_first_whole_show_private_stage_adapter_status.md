@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-22T12:56:02Z
+Updated UTC: 2026-06-22T12:59:54Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 14
+Episodes enumerated: 4
 Episodes already staged: 0
-Episodes newly staged: 14
+Episodes newly staged: 4
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Westworld: enumerated=14; staged=14; already=0; review=0; source=request_episode_targets
+- Better Call Saul: enumerated=4; staged=4; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
