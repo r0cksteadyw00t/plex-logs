@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-23T14:35:31Z
+Updated UTC: 2026-06-23T14:55:32Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
 Episodes enumerated: 1
@@ -11,7 +11,7 @@ TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Horimiya: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
+- Kemono Jihen: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
