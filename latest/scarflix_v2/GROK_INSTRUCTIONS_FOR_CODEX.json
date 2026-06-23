@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260623_tv_section6_hold_maintain_safe_v114",
-      "created_at": "2026-06-23T16:35:36Z",
-      "expires_at": "2026-06-24T16:35:36Z",
+      "instruction_id": "phase0_stabilization_foundation_maintain_tv_hold_safe_v115",
+      "created_at": "2026-06-23T16:51:37Z",
+      "expires_at": "2026-06-24T16:51:37Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,14 +13,14 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
+        "max_retries": 0,
         "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No expansion, publishing, or Section 6 mutation permitted until forensic review complete. Monitor remains read-only."
+            "note": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN and full TV Section 6 forensic review posture. No visible publication or resolver changes. Record only."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-23T16:35:36Z",
+  "updated_utc": "2026-06-23T16:51:37Z",
   "source": "grok_api"
 }
