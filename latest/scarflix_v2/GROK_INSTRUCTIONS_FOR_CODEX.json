@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260623_tv_section6_forensic_cooldown_safe_v87",
-      "created_at": "2026-06-23T09:21:44Z",
-      "expires_at": "2026-06-24T09:21:44Z",
+      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260623_tv_section6_forensic_cooldown_safe_v88",
+      "created_at": "2026-06-23T09:37:45Z",
+      "expires_at": "2026-06-24T09:37:45Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,15 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
-          "action_type": "write_strategy_note",
+          "action_type": "write_status_summary",
           "parameters": {
-            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Monitor active every 15min with 0 pending events. Full-season pilot at 28/28 privately validated. Continue natural retry monitoring."
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260623_tv_section6_forensic_cooldown_safe_v88",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -28,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-23T09:21:44Z",
+  "updated_utc": "2026-06-23T09:37:45Z",
   "source": "grok_api"
 }
