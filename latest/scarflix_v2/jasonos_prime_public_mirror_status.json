@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-23T14:03:36.219Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-23T14:08:44.228Z",
   "last_success_utc": "2026-06-23T14:03:36.219Z",
   "pat_present": true,
   "pushed": [
@@ -203,7 +203,7 @@
     },
     {
       "file": "latest/scarflix_v2/autonomous_controller_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/autonomous_controller_status.md",
@@ -299,10 +299,6 @@
     },
     {
       "file": "latest/scarflix_v2/mission002_iptv_cutover_apply_status.json",
-      "status": 304
-    },
-    {
-      "file": "latest/scarflix_v2/mission002_iptv_cutover_apply_status.md",
       "status": 304
     },
     {
@@ -423,19 +419,19 @@
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_monitor_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_monitor_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_events_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_events_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_section6_publication_forensic_handoff.json",
@@ -971,19 +967,19 @@
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_monitor_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_monitor_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_events_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_events_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_section6_publication_forensic_handoff.json",
@@ -1279,13 +1275,20 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "latest/scarflix_v2/mission002_iptv_cutover_apply_status.md",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
