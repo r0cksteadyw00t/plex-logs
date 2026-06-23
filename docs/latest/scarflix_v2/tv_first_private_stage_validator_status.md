@@ -1,14 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-23T07:56:45Z
+Updated UTC: 2026-06-23T08:35:15Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 2
-Passed: 2
+Checked: 1
+Passed: 1
 Review: 0
 
 ## Results
-- Uzaki-chan Wants to Hang Out!: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Uzaki-chan Wants to Hang Out!: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Private Eyes: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
