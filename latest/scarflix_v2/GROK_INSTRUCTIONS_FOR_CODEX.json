@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_maintain_tv_hold_safe_v126",
-      "created_at": "2026-06-23T19:48:53Z",
-      "expires_at": "2026-06-24T19:48:53Z",
+      "instruction_id": "phase0_stabilization_foundation_maintain_tv_hold_record_only_v127",
+      "created_at": "2026-06-23T20:04:10Z",
+      "expires_at": "2026-06-24T20:04:10Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff_seconds": 0
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN and full TV Section 6 forensic review posture. No visible publication, resolver changes, or materialized expansion. Record only. PAUSE_PUBLICATION remains active."
+            "note": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN and full TV Section 6 forensic review posture. No visible publication or resolver changes. Record only."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-23T19:48:53Z",
+  "updated_utc": "2026-06-23T20:04:10Z",
   "source": "grok_api"
 }
