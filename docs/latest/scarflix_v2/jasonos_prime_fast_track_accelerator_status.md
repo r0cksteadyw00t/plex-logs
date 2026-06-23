@@ -1,6 +1,6 @@
 # JasonOS Prime Fast-Track Accelerator
 
-Updated UTC: 2026-06-23T19:46:03Z
+Updated UTC: 2026-06-23T19:51:02Z
 Status: PASS
 Mode: fast_track_safe_acceleration
 Current milestone: PLATFORM_GATE_RUNNING
@@ -18,12 +18,12 @@ TV-first generic/movie expansion allowed: false
 
 ## Inputs
 - platform_gate: REVIEW
-- checkpoint: RUNNING
-- checkpoint_step: running_platform_gate_attempt_1
-- durable_runner: RUNNING
-- durable_step: running_platform_gate_attempt_1
-- durable_owner_pid: 42924
-- durable_child_pid: 49308
+- checkpoint: REVIEW
+- checkpoint_step: platform_gate_review
+- durable_runner: REVIEW
+- durable_step: platform_gate_review
+- durable_owner_pid: 24124
+- durable_child_pid: 
 - active_gate_transient_failures: 0
 - active_gate_prunable_failures: 0
 - controller_transient_retry_count: 0
@@ -50,3 +50,4 @@ TV-first generic/movie expansion allowed: false
 - JasonOS_Prime_WorkerMesh: PASS fast_track_worker_mesh
 - JasonOS_Prime_Real_AI_8805_Keepalive: PASS fast_track_daily_ai_keepalive
 - lightweight_status_probe: PASS 
+- ScarFLIX_v2_DurablePlatformGateRunner: PASS platform_gate_not_pass
