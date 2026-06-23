@@ -2,8 +2,8 @@
     "component":  "jasonos_prime_go_live_readiness_audit",
     "schema_version":  "jasonos.go_live_readiness.v1",
     "status":  "REVIEW_NOT_GO_LIVE_READY",
-    "started_utc":  "2026-06-23T20:04:05Z",
-    "updated_utc":  "2026-06-23T20:04:16Z",
+    "started_utc":  "2026-06-23T20:09:03Z",
+    "updated_utc":  "2026-06-23T20:09:17Z",
     "report_only":  false,
     "go_live_ready":  false,
     "active_plex_sessions":  0,
@@ -29,10 +29,9 @@
                          "progress_percent":  65,
                          "summary":  "Plex remains the playback front end; current priority is no scanner/indexer contention during viewing.",
                          "evidence":  [
-                                          "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=REVIEW_PLEX_PROCESS_RUNNING_HTTP_UNREACHABLE PlaybackPath=REVIEW"
+                                          "Guard=PASS_IDLE_NON_OFFPEAK_BACKGROUND_SUPPRESSED ActiveSessions=0 PlexWatchdog=PASS PlaybackPath=REVIEW"
                                       ],
                          "blockers":  [
-                                          "Plex watchdog is not PASS: REVIEW_PLEX_PROCESS_RUNNING_HTTP_UNREACHABLE.",
                                           "Playback path recovery is not PASS: REVIEW."
                                       ],
                          "next_safe_action":  "Keep playback-first guard active; do not restart Plex or run expansion while users are watching; retest real playback after scanner pressure is quiet.",
@@ -154,10 +153,6 @@
                      }
                  ],
     "blockers":  [
-                     {
-                         "outcome_id":  "O-PLAYBACK",
-                         "blocker":  "Plex watchdog is not PASS: REVIEW_PLEX_PROCESS_RUNNING_HTTP_UNREACHABLE."
-                     },
                      {
                          "outcome_id":  "O-PLAYBACK",
                          "blocker":  "Playback path recovery is not PASS: REVIEW."
