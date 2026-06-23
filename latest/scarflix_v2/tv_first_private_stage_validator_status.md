@@ -1,13 +1,19 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-23T06:54:59Z
-Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 1
+Updated UTC: 2026-06-23T06:56:56Z
+Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Checked: 7
 Passed: 1
-Review: 0
+Review: 6
 
 ## Results
-- Digimon Adventure:: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- The Great: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=502; range=502; type=text/html; reason=PROVIDER_5XX_RETRYABLE
+- The Great: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=502; range=502; type=text/html; reason=PROVIDER_5XX_RETRYABLE
+- The Great: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=502; range=502; type=text/html; reason=PROVIDER_5XX_RETRYABLE
+- The Great: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=502; range=502; type=text/html; reason=PROVIDER_5XX_RETRYABLE
+- The Great: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=502; range=502; type=text/html; reason=PROVIDER_5XX_RETRYABLE
+- The Great: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=502; range=502; type=text/html; reason=PROVIDER_5XX_RETRYABLE
+- The Great: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 
 ## Safety
 - no_broad_expansion_started: true
@@ -20,4 +26,4 @@ Review: 0
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
+Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
