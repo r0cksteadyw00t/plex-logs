@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-23T11:16:38Z",
+  "updated_utc": "2026-06-23T11:35:02Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
-    "tmdb_id": "96451",
+    "tmdb_id": "106782",
     "title_regex": ""
   },
   "scoped": true,
@@ -22,41 +22,58 @@
     "source_urls_not_written_to_public_status": true
   },
   "checked": 2,
-  "passed": 2,
-  "review": 0,
-  "relay_fallback_attempted": 0,
+  "passed": 1,
+  "review": 1,
+  "relay_fallback_attempted": 1,
   "relay_fallback_passed": 0,
   "hls_validation_attempted": 0,
   "hls_validation_passed": 0,
   "results": [
     {
-      "stage_id": "tv_ssss.dynazenon_96451_s01e11_5e4a5e114943",
-      "title": "SSSS.DYNAZENON",
-      "tmdb_id": 96451,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_ssss.dynazenon_96451_s01e11_5e4a5e114943\\SSSS.DYNAZENON (2021) - S01E11.strm",
-      "status": "PASS_PRIVATE_STAGE_VALIDATED",
+      "stage_id": "tv_those_snow_white_notes_106782_s01e02_6be75d2fc5c7",
+      "title": "Those Snow White Notes",
+      "tmdb_id": 106782,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_those_snow_white_notes_106782_s01e02_6be75d2fc5c7\\Those Snow White Notes (2021) - S01E02.strm",
+      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
       "probe": {
-        "ok": true,
-        "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "Range probe passed; HEAD did not provide a usable media response.",
+        "ok": false,
+        "retryable": true,
+        "reason_code": "PROVIDER_503_RETRYABLE",
+        "reason": "Range probe returned HTTP 503",
         "url_host": "comet.elfhosted.com",
         "head_status": 405,
-        "range_status": 206,
-        "content_type": "application/force-download",
+        "range_status": 503,
+        "content_type": "text/html",
         "content_length": 31,
-        "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/913970338",
+        "accept_ranges": "none",
+        "content_range": "",
         "source_url_redacted": true,
-        "relay_fallback": null,
-        "hls_validation": null
+        "relay_fallback": {
+          "attempted": true,
+          "ok": false,
+          "loopback_only": true,
+          "ephemeral_relay_only": true,
+          "no_media_artifacts_created": true,
+          "relay_shutdown_before_return": true,
+          "head_status": 503,
+          "range_status": 206,
+          "range_bytes": 65536,
+          "content_type": "application/force-download",
+          "content_length": 5571874793,
+          "content_range": "bytes 0-65535/5571874793",
+          "reason_code": "RELAY_FALLBACK_HEAD_NOT_SANE",
+          "reason": "Relay fallback HEAD did not return 200/206."
+        },
+        "hls_validation": null,
+        "direct_range_status": 503,
+        "direct_range_reason_code": "PROVIDER_503_RETRYABLE"
       }
     },
     {
-      "stage_id": "tv_ssss.dynazenon_96451_s01e12_5e4a5e114943",
-      "title": "SSSS.DYNAZENON",
-      "tmdb_id": 96451,
-      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_ssss.dynazenon_96451_s01e12_5e4a5e114943\\SSSS.DYNAZENON (2021) - S01E12.strm",
+      "stage_id": "tv_those_snow_white_notes_106782_s01e03_6be75d2fc5c7",
+      "title": "Those Snow White Notes",
+      "tmdb_id": 106782,
+      "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_those_snow_white_notes_106782_s01e03_6be75d2fc5c7\\Those Snow White Notes (2021) - S01E03.strm",
       "status": "PASS_PRIVATE_STAGE_VALIDATED",
       "probe": {
         "ok": true,
@@ -69,13 +86,13 @@
         "content_type": "application/force-download",
         "content_length": 31,
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/1263432646",
+        "content_range": "bytes 0-1/4961479346",
         "source_url_redacted": true,
         "relay_fallback": null,
         "hls_validation": null
       }
     }
   ],
-  "status": "PASS_PRIVATE_STAGE_VALIDATED",
-  "next_safe_action": "Proceed to a TV-specific publication gate design for these validated private-stage candidates only."
+  "status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
+  "next_safe_action": "Keep failed private-stage candidates held and refresh source selection only for failed rows."
 }
