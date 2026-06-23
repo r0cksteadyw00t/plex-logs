@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-23T21:16:43Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\corner_gas_animated_78570_private_stage_manifest_20260623T211403Z.prepared.json",
+  "updated_utc": "2026-06-23T21:55:02Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\marvel_s_spider_man_72705_private_stage_manifest_20260623T215402Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
@@ -10,7 +10,7 @@
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "max_shows": 1,
-  "max_episodes": 1,
+  "max_episodes": 2,
   "provider_candidate_count": 4,
   "provider_refs": [
     "mediafusion.elfhosted.com",
@@ -34,60 +34,76 @@
     "current_retry_held_hashes_block_restage": true
   },
   "show_count": 1,
-  "episodes_enumerated": 1,
+  "episodes_enumerated": 2,
   "already_staged_count": 0,
-  "staged_count": 0,
-  "review_count": 1,
+  "staged_count": 2,
+  "review_count": 0,
   "shows": [
     {
-      "title": "Corner Gas Animated",
-      "tmdb_id": 78570,
-      "seasons_expected": 4,
-      "episodes_expected": 1,
-      "episodes_enumerated": 1,
+      "title": "Marvel's Spider-Man",
+      "tmdb_id": 72705,
+      "seasons_expected": 3,
+      "episodes_expected": 2,
+      "episodes_enumerated": 2,
       "already_staged_count": 0,
-      "staged_count": 0,
-      "review_count": 1,
+      "staged_count": 2,
+      "review_count": 0,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
     }
   ],
   "results_redacted": [
     {
-      "title": "Corner Gas Animated",
-      "tmdb_id": 78570,
+      "title": "Marvel's Spider-Man",
+      "tmdb_id": 72705,
+      "season": 1,
+      "episode": 15,
+      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
+      "stage_id": "tv_marvel_s_spider-man_72705_s01e15_6bb2e4b498e3",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Marvel&#039;s Spider-Man (2017) Season 1-3 S01-03 (1080p HULU.WEBDL x265 10bit EAC3 5.1 EDGE2020) Season 1/Marvel's Spider-Man - S01E15 - The Rise of Doc Ock (1) (1080p x265 EDGE2020).mkv 👤 4 💾 239.43 MB ⚙️ TorrentGalaxy",
+        "info_hash": "6bb2e4b498e38f25366c11f8e149374973e4fcbc",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": false,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_verification_gated_fallback",
+        "fallback_requires_private_validation": true,
+        "fallback_requires_plex_decision": true,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Marvel's Spider-Man",
+      "tmdb_id": 72705,
       "season": 3,
-      "episode": 7,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 0,
-      "rejected_hash_count": 0,
-      "provider_attempts_redacted": [
-        {
-          "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
-          "stream_count": 0,
-          "reason": "HTTP_502"
-        },
-        {
-          "provider_ref": "comet.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "torrentio.strem.fun",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 18
-        },
-        {
-          "provider_ref": "aiostreams.elfhosted.com",
-          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
-          "stream_count": 0,
-          "reason": "Unexpected token '<', \"<!doctype \"... is not valid JSON"
-        }
-      ],
-      "provider_pool_exhausted": true
+      "episode": 5,
+      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
+      "stage_id": "tv_marvel_s_spider-man_72705_s03e05_6bb2e4b498e3",
+      "provider_ref": "torrentio.strem.fun",
+      "provider_attempt_count": 3,
+      "stream_evidence_redacted": {
+        "name": "[RD+] Torrentio\n1080p",
+        "title_excerpt": "Marvel&#039;s Spider-Man (2017) Season 1-3 S01-03 (1080p HULU.WEBDL x265 10bit EAC3 5.1 EDGE2020) Season 3/Marvel's Spider-Man - S03E05 - Generations (1080p x265 EDGE2020).mkv 👤 4 💾 620.76 MB ⚙️ TorrentGalaxy",
+        "info_hash": "6bb2e4b498e38f25366c11f8e149374973e4fcbc",
+        "url_host": "torrentio.strem.fun",
+        "cached_debrid": true,
+        "plex_compatible": false,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_verification_gated_fallback",
+        "fallback_requires_private_validation": true,
+        "fallback_requires_plex_decision": true,
+        "source_url_stored_private_only": true
+      }
     }
   ],
-  "status": "REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED",
+  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
