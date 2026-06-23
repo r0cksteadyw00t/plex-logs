@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260623_tv_section6_hold_maintain_safe_v112",
-      "created_at": "2026-06-23T16:03:50Z",
-      "expires_at": "2026-06-24T16:03:50Z",
+      "instruction_id": "phase0_stabilization_foundation_write_strategy_note_20260623_tv_section6_hold_maintain_safe_v113",
+      "created_at": "2026-06-23T16:19:50Z",
+      "expires_at": "2026-06-24T16:19:50Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 0
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "note": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN for TV Section 6. No visible publication, no WebDAV mutation, no Plex refresh. Monitor continues 15-minute cycle read-only. Materialized QA remains REVIEW. All legacy resolver paths paused."
+            "summary": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN for TV Section 6. No visible publication, no WebDAV mutation, no Plex refresh. Monitor continues 15-minute cycle read-only. Materialized QA remains REVIEW. All legacy resolver paths paused."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-23T16:03:50Z",
+  "updated_utc": "2026-06-23T16:19:50Z",
   "source": "grok_api"
 }
