@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "REVIEW",
-  "updated_utc": "2026-06-23T16:13:39.807Z",
-  "last_success_utc": "2026-06-23T16:08:55.145Z",
+  "status": "PASS",
+  "updated_utc": "2026-06-23T16:18:36.751Z",
+  "last_success_utc": "2026-06-23T16:18:36.751Z",
   "pat_present": true,
   "pushed": [
     {
@@ -175,11 +175,11 @@
     },
     {
       "file": "latest/scarflix_v2/watchdog_stall_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/watchdog_stall_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/watchdog_swarm_escalation.json",
@@ -1030,6 +1030,10 @@
       "status": 200
     },
     {
+      "file": "docs/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.md",
+      "status": 200
+    },
+    {
       "file": "docs/latest/scarflix_v2/jasonos_prime_go_live_16h_campaign_status.json",
       "status": 304
     },
@@ -1174,6 +1178,10 @@
       "status": 304
     },
     {
+      "file": "latest/scarflix/platform_gate_checkpoint.json",
+      "status": 200
+    },
+    {
       "file": "latest/scarflix/autonomous_controller_status.json",
       "status": 200
     },
@@ -1271,25 +1279,13 @@
     }
   ],
   "skipped": [],
-  "failed": [
-    {
-      "file": "docs/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.md",
-      "status": 401
-    },
-    {
-      "file": "latest/scarflix/platform_gate_checkpoint.json",
-      "status": 422
-    }
-  ],
+  "failed": [],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 2,
-    "by_status": {
-      "401": 1,
-      "422": 1
-    }
+    "hard": 0,
+    "by_status": {}
   },
-  "local_status_authoritative": true,
+  "local_status_authoritative": false,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
