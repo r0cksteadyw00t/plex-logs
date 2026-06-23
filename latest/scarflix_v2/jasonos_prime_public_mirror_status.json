@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-23T20:28:23.963Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-23T20:33:37.506Z",
   "last_success_utc": "2026-06-23T20:28:23.963Z",
   "pat_present": true,
   "pushed": [
@@ -99,10 +99,6 @@
     },
     {
       "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.json",
-      "status": 304
-    },
-    {
-      "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md",
       "status": 304
     },
     {
@@ -1019,11 +1015,11 @@
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_project_safe_progress_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_project_safe_progress_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.json",
@@ -1279,13 +1275,20 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
