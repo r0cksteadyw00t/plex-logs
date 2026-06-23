@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-23T08:29:05.800Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-23T08:33:20.920Z",
   "last_success_utc": "2026-06-23T08:29:05.800Z",
   "pat_present": true,
   "pushed": [
@@ -99,35 +99,35 @@
     },
     {
       "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/grok_instruction_bridge_raw_response.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/CODEX_INSTRUCTION_CONSUMER_LAST_SUMMARY.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_lightweight_status_probe_status.json",
@@ -215,7 +215,7 @@
     },
     {
       "file": "latest/scarflix_v2/platform_gate_checkpoint.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/direct_strm_mirror_status.json",
@@ -471,19 +471,19 @@
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_project_safe_progress_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_project_safe_progress_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_go_live_readiness_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_go_live_readiness_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_go_live_16h_campaign_status.json",
@@ -723,11 +723,11 @@
     },
     {
       "file": "docs/latest/scarflix_v2/watchdog_stall_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/watchdog_stall_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/watchdog_swarm_escalation.json",
@@ -747,15 +747,15 @@
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_real_ai_8805_keepalive_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/autonomous_controller_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/autonomous_controller_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/platform_gate_checkpoint.json",
@@ -1019,19 +1019,19 @@
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_project_safe_progress_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_project_safe_progress_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_go_live_readiness_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_go_live_16h_campaign_status.json",
@@ -1182,10 +1182,6 @@
       "status": 200
     },
     {
-      "file": "latest/scarflix/autonomous_controller_status.json",
-      "status": 304
-    },
-    {
       "file": "docs/latest/scarflix/index.html",
       "status": 200
     },
@@ -1271,21 +1267,28 @@
     },
     {
       "file": "docs/latest/scarflix/autonomous_controller_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix/autonomous_controller_status.json",
-      "status": 304
+      "status": 200
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "latest/scarflix/autonomous_controller_status.json",
+      "status": 401
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "401": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
