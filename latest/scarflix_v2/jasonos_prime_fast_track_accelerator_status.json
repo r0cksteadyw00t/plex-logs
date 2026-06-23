@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-23T20:34:02Z",
+  "updated_utc": "2026-06-23T20:35:03Z",
   "duration_seconds": 2,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "PLATFORM_GATE_RUNNING",
@@ -18,7 +18,7 @@
   "tv_first_priority_gate": {
     "component": "jasonos_prime_tv_first_expansion_priority_gate",
     "status": "HELD_MATERIALIZED_QA_REQUIRED",
-    "updated_utc": "2026-06-23T20:34:02Z",
+    "updated_utc": "2026-06-23T20:35:02Z",
     "user_priority": "TV first if movies and TV cannot progress concurrently",
     "enforce_tv_first_when_concurrency_limited": true,
     "generic_movie_or_unscoped_expansion_allowed": false,
@@ -83,12 +83,12 @@
   },
   "status_inputs": {
     "platform_gate": "REVIEW",
-    "checkpoint": "RUNNING",
-    "checkpoint_step": "running_platform_gate_attempt_1",
-    "durable_runner": "RUNNING",
-    "durable_step": "running_platform_gate_attempt_1",
+    "checkpoint": "REVIEW",
+    "checkpoint_step": "platform_gate_review",
+    "durable_runner": "REVIEW",
+    "durable_step": "platform_gate_review",
     "durable_owner_pid": 11884,
-    "durable_child_pid": 37284,
+    "durable_child_pid": "",
     "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
     "controller_transient_retry_count": 0,
@@ -98,7 +98,7 @@
     "predictive_simulator": "REVIEW",
     "self_evolution": "REVIEW",
     "dashboard": "PASS",
-    "public_mirror": "REVIEW"
+    "public_mirror": "RUNNING"
   },
   "next_4_hour_actions": [
     "Keep Durable PlatformGate single-owner heartbeat fresh every 30 seconds while the active child completes.",
@@ -157,8 +157,15 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 38784,
+      "pid": 9468,
       "error": ""
+    },
+    {
+      "action": "task_run",
+      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
+      "reason": "platform_gate_not_pass",
+      "status": "PASS",
+      "error": " "
     }
   ],
   "files": {
