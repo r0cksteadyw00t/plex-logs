@@ -1,7 +1,7 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-23T16:51:37Z
+Updated UTC: 2026-06-23T17:07:40Z
 Source: grok_api
 
 ## Summary
@@ -14,10 +14,10 @@ PASS
 
 ## Instructions
 
-### phase0_stabilization_foundation_maintain_tv_hold_safe_v115
+### phase0_stabilization_foundation_maintain_tv_hold_safe_v116
 
 - Target: `orchestrator`
 - Risk: `low`
 - Requires user decision: `false`
 - Approved for Codex execution: `true`
-- Expires: `2026-06-24T16:51:37Z`
+- Expires: `2026-06-24T17:07:40Z`
