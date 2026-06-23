@@ -1,13 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-23T14:35:37Z
+Updated UTC: 2026-06-23T14:55:36Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
 Checked: 1
 Passed: 1
 Review: 0
 
 ## Results
-- Horimiya: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Kemono Jihen: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
