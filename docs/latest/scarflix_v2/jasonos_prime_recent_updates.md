@@ -1,11 +1,12 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-23T14:56:09.378Z
+Updated UTC: 2026-06-23T15:01:06.529Z
 Source: live status merge
 
-- 2026-06-23T14:55:58Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=52660; child_pid=
-- 2026-06-23T14:55:58Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-23T14:55:52.297Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-23T14:55:52Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-23T15:00:59Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=21204; child_pid=
+- 2026-06-23T15:00:59Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-23T15:00:51.791Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-23T15:00:51Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-23T14:56:04Z - Durable PlatformGate runner FAIL: Step runner_exception; owner_pid=53476; child_pid=
 - 2026-06-23T14:55:09Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-23T14:40:13Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-23T13:50:27Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=23264; child_pid=47164
@@ -16,4 +17,3 @@ Source: live status merge
 - 2026-06-20T09:50:16Z - Autonomous controller: candidate_source_model_pass: PlatformGate PASS; candidate-source retry/quarantine model verified
 - 2026-06-20T09:48:26Z - Durable PlatformGate runner PASS: Step platform_gate_pass; owner_pid=43560; child_pid=
 - 2026-06-20T09:48:26Z - PlatformGate checkpoint PASS: Step platform_gate_pass; visible=1; blockers=0
-- 2026-06-20T07:39:25.321Z - PlatformGate child QA active: Health: Latest child QA line: [2026-06-20T07:39:25Z] [INFO] Health status publishing
