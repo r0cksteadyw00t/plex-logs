@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-23T18:46:44.773Z
+Updated UTC: 2026-06-23T18:51:35.123Z
 Source: live status merge
 
-- 2026-06-23T18:45:45Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=44668; child_pid=46224
-- 2026-06-23T18:45:45Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
+- 2026-06-23T18:50:38Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=10768; child_pid=
+- 2026-06-23T18:50:38Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-23T18:49:56.609Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-23T18:49:56Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-23T18:49:26Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=10768; child_pid=54140
+- 2026-06-23T18:49:26Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
 - 2026-06-23T18:45:39Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-23T18:40:24Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-23T18:38:58Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=10048; child_pid=
-- 2026-06-23T18:38:58Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-23T18:38:45.543Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-23T18:38:45Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-23T18:20:24Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-23T17:55:20Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-23T14:56:04Z - Durable PlatformGate runner FAIL: Step runner_exception; owner_pid=53476; child_pid=
