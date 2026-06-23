@@ -1,14 +1,14 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-23T11:16:38Z
-Status: PASS_PRIVATE_STAGE_VALIDATED
+Updated UTC: 2026-06-23T11:35:02Z
+Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 Checked: 2
-Passed: 2
-Review: 0
+Passed: 1
+Review: 1
 
 ## Results
-- SSSS.DYNAZENON: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- SSSS.DYNAZENON: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Those Snow White Notes: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=503; type=text/html; reason=PROVIDER_503_RETRYABLE
+- Those Snow White Notes: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
@@ -21,4 +21,4 @@ Review: 0
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
+Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
