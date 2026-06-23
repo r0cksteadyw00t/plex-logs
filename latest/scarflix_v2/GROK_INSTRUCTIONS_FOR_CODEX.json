@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260623_tv_section6_forensic_cooldown_safe_v84",
-      "created_at": "2026-06-23T08:33:57Z",
-      "expires_at": "2026-06-24T08:33:57Z",
+      "instruction_id": "phase0_stabilization_foundation_write_status_summary_20260623_tv_section6_forensic_cooldown_safe_v85",
+      "created_at": "2026-06-23T08:49:58Z",
+      "expires_at": "2026-06-24T08:49:58Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,18 +14,20 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "summary": "TV Section 6 publication remains HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN pending scanner latency forensic review. Materialized QA is REVIEW. No visible Plex TV aliases, no webdav_map mutation, no partial-season publication. Monitor active every 15 minutes with 0 pending deltas. Full-season pilot 28/28 privately validated but held. Recommend continued cooldown and local review of tv_first_section6_publication_forensic_handoff before any retry."
+          "parameters": {
+            "summary_note": "TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No visible Plex publication, no WebDAV mutations, full-season gate enforced. Monitor continues 15-minute cycle. Materialized QA in REVIEW. No legacy resolver activity."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-23T08:33:57Z",
+  "updated_utc": "2026-06-23T08:49:58Z",
   "source": "grok_api"
 }
