@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-23T07:56:02Z
+Updated UTC: 2026-06-23T07:56:37Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 3
+Episodes enumerated: 2
 Episodes already staged: 0
-Episodes newly staged: 3
+Episodes newly staged: 2
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Adventure Time: Distant Lands: enumerated=3; staged=3; already=0; review=0; source=request_episode_targets
+- Uzaki-chan Wants to Hang Out!: enumerated=2; staged=2; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
