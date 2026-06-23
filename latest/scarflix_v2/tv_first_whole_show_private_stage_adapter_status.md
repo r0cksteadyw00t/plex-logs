@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-23T19:15:04Z
+Updated UTC: 2026-06-23T19:55:08Z
 Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
 Episodes enumerated: 1
@@ -11,7 +11,7 @@ TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- The Tale of Outcasts: enumerated=1; staged=0; already=0; review=1; source=request_episode_targets
+- Black Monday: enumerated=1; staged=0; already=0; review=1; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
