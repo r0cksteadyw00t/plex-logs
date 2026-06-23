@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_maintain_tv_hold_record_only_v133",
-      "created_at": "2026-06-23T21:41:56Z",
-      "expires_at": "2026-06-24T21:41:56Z",
+      "instruction_id": "phase0_stabilization_foundation_maintain_tv_hold_record_only_v134",
+      "created_at": "2026-06-23T21:58:13Z",
+      "expires_at": "2026-06-24T21:58:13Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,16 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
+        "max_retries": 0,
         "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_maintain_tv_hold_record_only_v133",
-            "auto_added_by_bridge": true
+            "summary": "Maintain HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN and full TV Section 6 forensic review posture. No visible publication, resolver changes, or mutations. Record only.",
+            "source_instruction_id": "phase0_stabilization_foundation_maintain_tv_hold_record_only_v134"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-23T21:41:56Z",
+  "updated_utc": "2026-06-23T21:58:13Z",
   "source": "grok_api"
 }
