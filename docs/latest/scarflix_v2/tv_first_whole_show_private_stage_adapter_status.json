@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-23T19:15:04Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\the_tale_of_outcasts_205111_private_stage_manifest_20260623T191403Z.prepared.json",
+  "updated_utc": "2026-06-23T19:56:46Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\never_have_i_ever_100883_private_stage_manifest_20260623T195402Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
@@ -10,7 +10,7 @@
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "max_shows": 1,
-  "max_episodes": 1,
+  "max_episodes": 2,
   "provider_candidate_count": 4,
   "provider_refs": [
     "mediafusion.elfhosted.com",
@@ -34,18 +34,18 @@
     "current_retry_held_hashes_block_restage": true
   },
   "show_count": 1,
-  "episodes_enumerated": 1,
-  "already_staged_count": 0,
+  "episodes_enumerated": 2,
+  "already_staged_count": 1,
   "staged_count": 0,
   "review_count": 1,
   "shows": [
     {
-      "title": "The Tale of Outcasts",
-      "tmdb_id": 205111,
-      "seasons_expected": 1,
-      "episodes_expected": 1,
-      "episodes_enumerated": 1,
-      "already_staged_count": 0,
+      "title": "Never Have I Ever",
+      "tmdb_id": 100883,
+      "seasons_expected": 4,
+      "episodes_expected": 2,
+      "episodes_enumerated": 2,
+      "already_staged_count": 1,
       "staged_count": 0,
       "review_count": 1,
       "episode_manifest_source": "request_episode_targets",
@@ -54,10 +54,17 @@
   ],
   "results_redacted": [
     {
-      "title": "The Tale of Outcasts",
-      "tmdb_id": 205111,
-      "season": 1,
-      "episode": 5,
+      "title": "Never Have I Ever",
+      "tmdb_id": 100883,
+      "season": 2,
+      "episode": 4,
+      "status": "PASS_ALREADY_PRIVATE_STAGED"
+    },
+    {
+      "title": "Never Have I Ever",
+      "tmdb_id": 100883,
+      "season": 3,
+      "episode": 3,
       "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
       "stream_count": 0,
       "rejected_hash_count": 0,
@@ -65,7 +72,7 @@
         {
           "provider_ref": "mediafusion.elfhosted.com",
           "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 0
+          "stream_count": 1
         },
         {
           "provider_ref": "comet.elfhosted.com",
@@ -75,7 +82,7 @@
         {
           "provider_ref": "torrentio.strem.fun",
           "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 17
+          "stream_count": 8
         },
         {
           "provider_ref": "aiostreams.elfhosted.com",
@@ -87,6 +94,6 @@
       "provider_pool_exhausted": true
     }
   ],
-  "status": "REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED",
+  "status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
