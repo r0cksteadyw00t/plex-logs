@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-24T02:09:09.581Z
+Updated UTC: 2026-06-24T02:15:22.269Z
 Source: live status merge
 
-- 2026-06-24T02:08:45Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=53336; child_pid=
-- 2026-06-24T02:08:45Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-24T02:08:35.439Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-24T02:08:35Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-24T02:11:05Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=29444; child_pid=
+- 2026-06-24T02:11:03Z - PlatformGate checkpoint RUNNING: Step existing_durable_owner_active; visible=unknown; blockers=0
+- 2026-06-24T02:10:55Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-24T02:10:50.271Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-24T02:10:50Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-24T02:10:11Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-24T02:05:08Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-24T01:40:28Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=54844; child_pid=54496
-- 2026-06-24T01:40:28Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
-- 2026-06-24T01:00:14Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-24T00:15:22Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-23T18:45:39Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-23T14:56:04Z - Durable PlatformGate runner FAIL: Step runner_exception; owner_pid=53476; child_pid=
