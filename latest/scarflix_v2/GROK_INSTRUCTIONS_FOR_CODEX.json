@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_hold_forensic_status_v183",
-      "created_at": "2026-06-24T11:08:17Z",
-      "expires_at": "2026-06-25T11:08:17Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_hold_forensic_status_v184",
+      "created_at": "2026-06-24T11:24:19Z",
+      "expires_at": "2026-06-25T11:24:19Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -18,13 +18,16 @@
       },
       "actions": [
         {
-          "action_type": "write_status_summary"
+          "action_type": "write_status_summary",
+          "parameters": {
+            "note": "TV Section 6 publication hold remains active pending forensic review of scanner/indexing latency. No visible Plex publication, no WebDAV mutation, no expansion. Materialized QA REVIEW. Phase 0 stabilization focus maintained."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-24T11:08:17Z",
+  "updated_utc": "2026-06-24T11:24:19Z",
   "source": "grok_api"
 }
