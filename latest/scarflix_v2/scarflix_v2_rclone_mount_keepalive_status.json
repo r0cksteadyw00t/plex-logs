@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-24T16:54:16Z",
-    "ended_utc":  "2026-06-24T16:54:55Z",
+    "started_utc":  "2026-06-24T21:43:24Z",
+    "ended_utc":  "2026-06-24T21:44:06Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -12,21 +12,21 @@
                       },
     "rclone_exe_present":  true,
     "rclone_config_present":  true,
-    "drive_s_present":  true,
+    "drive_s_present":  false,
     "initial_mount_probe":  {
                                 "ready":  false,
                                 "media":  {
                                               "path":  "S:\\media",
-                                              "ok":  true,
+                                              "ok":  false,
                                               "timed_out":  false,
-                                              "ms":  794,
+                                              "ms":  372,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
                                                 "timed_out":  false,
-                                                "ms":  414,
+                                                "ms":  218,
                                                 "error":  ""
                                             }
                             },
@@ -34,27 +34,27 @@
                               "ready":  false,
                               "media":  {
                                             "path":  "S:\\media",
-                                            "ok":  true,
+                                            "ok":  false,
                                             "timed_out":  false,
-                                            "ms":  471,
+                                            "ms":  9008,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
                                               "timed_out":  false,
-                                              "ms":  439,
+                                              "ms":  5292,
                                               "error":  ""
                                           }
                           },
-    "media_path_ready":  true,
+    "media_path_ready":  false,
     "catalog_path_ready":  false,
     "media_path_timed_out":  false,
     "catalog_path_timed_out":  false,
     "mount_ready":  false,
     "start":  {
-                  "started":  false,
-                  "pid":  0,
+                  "started":  true,
+                  "pid":  21104,
                   "error":  ""
               },
     "restart":  {
@@ -68,19 +68,20 @@
                                ]
                 },
     "processes_before":  [
-                             {
-                                 "process_id":  16528,
-                                 "command_line_present":  true
-                             }
+
                          ],
     "processes_after":  [
                             {
-                                "process_id":  16528,
+                                "process_id":  20904,
+                                "command_line_present":  true
+                            },
+                            {
+                                "process_id":  21104,
                                 "command_line_present":  true
                             }
                         ],
     "actions":  [
-                    "rclone process already present; waiting for mount readiness"
+                    "started rclone pid 21104"
                 ],
     "failures":  [
                      "rclone mount did not expose S:\\media\\catalog within timeout"
