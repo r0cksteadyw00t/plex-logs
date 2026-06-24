@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-24T07:55:15.599Z
+Updated UTC: 2026-06-24T08:00:12.826Z
 Source: live status merge
 
-- 2026-06-24T07:54:49Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=7988; child_pid=
-- 2026-06-24T07:54:49Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-24T07:54:42.156Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-24T07:54:42Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-24T07:59:46Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=18516; child_pid=
+- 2026-06-24T07:59:46Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-24T07:59:40.292Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-24T07:59:40Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-24T07:55:44Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=22084; child_pid=53356
+- 2026-06-24T07:55:44Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
+- 2026-06-24T07:55:22Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-24T07:50:09Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
-- 2026-06-24T07:45:09Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-24T06:50:29Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=51420; child_pid=17532
-- 2026-06-24T06:50:29Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
 - 2026-06-24T05:15:22Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-23T18:45:39Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-23T14:56:04Z - Durable PlatformGate runner FAIL: Step runner_exception; owner_pid=53476; child_pid=
