@@ -1,6 +1,6 @@
 # TV-First New Episode Events
 
-Updated UTC: 2026-06-24T07:51:04Z
+Updated UTC: 2026-06-24T08:06:03Z
 Status: PASS_NO_NEW_EPISODE_DELTAS
 Watched shows: 90
 Detected events: 0
