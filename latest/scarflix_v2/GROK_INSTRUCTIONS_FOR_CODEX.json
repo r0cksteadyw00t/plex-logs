@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v210",
-      "created_at": "2026-06-24T23:05:54Z",
-      "expires_at": "2026-06-25T23:05:54Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v211",
+      "created_at": "2026-06-24T23:21:25Z",
+      "expires_at": "2026-06-25T23:21:25Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 0
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "note": "TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No visible Plex mutation. Monitor continues 15-minute cycle. Phase 0 stabilization focus preserved."
+            "note": "TV Section 6 publication held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate 28/28 required. Monitor active every 15min with 0 pending deltas. No mutations, no Plex refresh, no WebDAV changes."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-24T23:05:54Z",
+  "updated_utc": "2026-06-24T23:21:25Z",
   "source": "grok_api"
 }
