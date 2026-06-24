@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-24T15:33:33.896Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-24T15:38:41.266Z",
   "last_success_utc": "2026-06-24T15:33:33.896Z",
   "pat_present": true,
   "pushed": [
@@ -86,10 +86,6 @@
       "status": 304
     },
     {
-      "file": "latest/scarflix_v2/GROK_CODEX_INSTRUCTION_CONTRACT.md",
-      "status": 304
-    },
-    {
       "file": "latest/scarflix_v2/grok_codex_instruction.schema.v1.json",
       "status": 304
     },
@@ -99,35 +95,35 @@
     },
     {
       "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/grok_instruction_bridge_raw_response.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.json",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/CODEX_INSTRUCTION_CONSUMER_LAST_SUMMARY.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_lightweight_status_probe_status.json",
@@ -423,19 +419,19 @@
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_monitor_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_monitor_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_events_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_events_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_section6_publication_forensic_handoff.json",
@@ -971,19 +967,19 @@
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_monitor_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_monitor_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_events_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_events_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_section6_publication_forensic_handoff.json",
@@ -1279,13 +1275,20 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "latest/scarflix_v2/GROK_CODEX_INSTRUCTION_CONTRACT.md",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
