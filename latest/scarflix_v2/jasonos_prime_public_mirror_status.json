@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-24T11:48:15.363Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-24T11:53:28.593Z",
   "last_success_utc": "2026-06-24T11:48:15.363Z",
   "pat_present": true,
   "pushed": [
@@ -207,7 +207,7 @@
     },
     {
       "file": "latest/scarflix_v2/autonomous_controller_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/platform_gate_checkpoint.json",
@@ -423,19 +423,19 @@
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_monitor_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_monitor_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_events_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_events_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_section6_publication_forensic_handoff.json",
@@ -971,19 +971,19 @@
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_monitor_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_monitor_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_events_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_events_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_section6_publication_forensic_handoff.json",
@@ -1270,22 +1270,25 @@
       "status": 200
     },
     {
-      "file": "docs/latest/scarflix/autonomous_controller_status.md",
-      "status": 200
-    },
-    {
       "file": "docs/latest/scarflix/autonomous_controller_status.json",
       "status": 200
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "docs/latest/scarflix/autonomous_controller_status.md",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
