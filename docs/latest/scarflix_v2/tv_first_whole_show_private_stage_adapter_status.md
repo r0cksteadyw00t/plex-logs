@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-24T15:55:31Z
-Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
+Updated UTC: 2026-06-24T16:17:43Z
+Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 2
+Episodes enumerated: 1
 Episodes already staged: 0
-Episodes newly staged: 1
+Episodes newly staged: 0
 Review: 1
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Granblue Fantasy: The Animation: enumerated=2; staged=1; already=0; review=1; source=request_episode_targets
+- BanG Dream! It's MyGO!!!!!: enumerated=1; staged=0; already=0; review=1; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
