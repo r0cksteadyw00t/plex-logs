@@ -1,14 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-24T12:16:10Z
+Updated UTC: 2026-06-24T12:36:47Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 2
-Passed: 2
+Checked: 1
+Passed: 1
 Review: 0
 
 ## Results
-- Altered Carbon: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Altered Carbon: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
+- Black Monday: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 
 ## Safety
 - no_broad_expansion_started: true
