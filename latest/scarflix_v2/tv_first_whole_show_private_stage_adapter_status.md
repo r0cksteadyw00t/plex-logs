@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-24T03:58:46Z
-Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
+Updated UTC: 2026-06-24T04:55:55Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
 Episodes enumerated: 1
 Episodes already staged: 0
-Episodes newly staged: 0
-Review: 1
+Episodes newly staged: 1
+Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Corner Gas Animated: enumerated=1; staged=0; already=0; review=1; source=request_episode_targets
+- Cardinal: enumerated=1; staged=1; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
