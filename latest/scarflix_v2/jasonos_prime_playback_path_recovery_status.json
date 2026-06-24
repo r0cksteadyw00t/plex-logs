@@ -1,9 +1,9 @@
 ﻿{
     "component":  "jasonos_prime_playback_path_recovery",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-24T16:53:05Z",
-    "ended_utc":  "2026-06-24T16:53:57Z",
-    "duration_seconds":  52,
+    "started_utc":  "2026-06-24T21:43:03Z",
+    "ended_utc":  "2026-06-24T21:45:16Z",
+    "duration_seconds":  132,
     "no_publication_started":  true,
     "no_expansion_started":  true,
     "no_plex_db_mutation":  true,
@@ -11,29 +11,29 @@
                        {
                            "check":  1,
                            "ok":  true,
-                           "ms":  1395,
+                           "ms":  73,
                            "error":  "",
                            "no_window":  true
                        },
                        {
                            "check":  2,
                            "ok":  true,
-                           "ms":  1197,
+                           "ms":  49,
                            "error":  "",
                            "no_window":  true
                        },
                        {
                            "check":  3,
                            "ok":  true,
-                           "ms":  197,
+                           "ms":  22,
                            "error":  "",
                            "no_window":  true
                        }
                    ],
     "webdav_before":  {
-                          "ok":  true,
-                          "status_code":  200,
-                          "error":  ""
+                          "ok":  false,
+                          "status_code":  0,
+                          "error":  "Unable to connect to the remote server"
                       },
     "webdav_after":  {
                          "ok":  true,
@@ -45,11 +45,11 @@
                           "status_code":  200,
                           "error":  ""
                       },
-    "rclone_processes_before":  1,
-    "rclone_processes_after":  1,
+    "rclone_processes_before":  0,
+    "rclone_processes_after":  2,
     "s_media_before":  {
                            "path":  "S:\\media",
-                           "ok":  true,
+                           "ok":  false,
                            "timed_out":  false,
                            "error":  ""
                        },
@@ -61,8 +61,8 @@
                          },
     "s_media_after":  {
                           "path":  "S:\\media",
-                          "ok":  true,
-                          "timed_out":  false,
+                          "ok":  false,
+                          "timed_out":  true,
                           "error":  ""
                       },
     "s_catalog_after":  {
@@ -77,7 +77,7 @@
                           "hash":  "scarflix_part-942255f029875306",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  12,
+                          "ms":  50,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (404) Not Found."
                       },
@@ -86,7 +86,7 @@
                           "hash":  "scarflix_part-81107989d2e30cfb",
                           "ok":  false,
                           "status_code":  0,
-                          "ms":  4,
+                          "ms":  102,
                           "content_length":  "",
                           "error":  "The remote server returned an error: (404) Not Found."
                       }
@@ -94,6 +94,14 @@
     "watch_now_probe_run":  true,
     "watch_now_source":  "fresh",
     "actions":  [
+                    {
+                        "action":  "start_node_webdav_bridge",
+                        "result":  {
+                                       "started":  true,
+                                       "pid":  22180,
+                                       "error":  ""
+                                   }
+                    },
                     {
                         "action":  "run_rclone_mount_keepalive",
                         "result":  {
