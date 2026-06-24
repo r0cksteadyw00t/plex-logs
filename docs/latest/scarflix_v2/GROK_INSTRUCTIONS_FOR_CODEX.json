@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v208",
-      "created_at": "2026-06-24T22:33:08Z",
-      "expires_at": "2026-06-25T22:33:08Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v209",
+      "created_at": "2026-06-24T22:49:52Z",
+      "expires_at": "2026-06-25T22:49:52Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,23 +13,20 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 60
+        "max_retries": 2,
+        "backoff": "fixed"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v208",
-            "auto_added_by_bridge": true
-          }
+          "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Phase 0 stabilization active. No materialized publishing, no legacy resolver expansion, no Plex mutation. Materialized QA in REVIEW state. Monitor continues 15-minute cycle with 0 pending events.",
+          "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v209"
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-24T22:33:08Z",
+  "updated_utc": "2026-06-24T22:49:52Z",
   "source": "grok_api"
 }
