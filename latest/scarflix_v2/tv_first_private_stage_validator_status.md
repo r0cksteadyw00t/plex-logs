@@ -1,13 +1,14 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-24T13:36:04Z
+Updated UTC: 2026-06-24T14:35:48Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 1
-Passed: 0
+Checked: 2
+Passed: 1
 Review: 1
 
 ## Results
-- Q-Force: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/vnd.apple.mpegurl; reason=HLS_PLAYLIST_TIMEOUT_OR_ERROR; hls_segment=; hls_bytes=0
+- The Owl House: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
+- The Owl House: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=502; range=502; type=text/html; reason=PROVIDER_5XX_RETRYABLE
 
 ## Safety
 - no_broad_expansion_started: true
