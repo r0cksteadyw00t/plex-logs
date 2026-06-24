@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v193",
-      "created_at": "2026-06-24T13:48:07Z",
-      "expires_at": "2026-06-25T13:48:07Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v194",
+      "created_at": "2026-06-24T14:04:36Z",
+      "expires_at": "2026-06-25T14:04:36Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,15 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 0
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN pending scanner/indexing forensic review. No visible Plex publication, no webdav_map mutation, no partial seasons. Monitor active every 15 minutes with 0 pending events. Full-season pilot (28/28) privately validated but publication blocked. Continued natural retry monitoring only.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v193"
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v194",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -29,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-24T13:48:07Z",
+  "updated_utc": "2026-06-24T14:04:36Z",
   "source": "grok_api"
 }
