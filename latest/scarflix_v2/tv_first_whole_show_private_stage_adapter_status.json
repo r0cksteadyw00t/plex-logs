@@ -1,11 +1,11 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-24T11:21:00Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\better_call_saul_60059_private_stage_manifest_20260624T111403Z.prepared.json",
+  "updated_utc": "2026-06-24T11:23:39Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\chihayafuru_45247_private_stage_manifest_20260624T111403Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
-  "prior_private_stage_validator_status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
   "sentinel_status": "PASS",
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
@@ -35,18 +35,18 @@
   },
   "show_count": 1,
   "episodes_enumerated": 2,
-  "already_staged_count": 2,
-  "staged_count": 0,
+  "already_staged_count": 0,
+  "staged_count": 2,
   "review_count": 0,
   "shows": [
     {
-      "title": "Better Call Saul",
-      "tmdb_id": 60059,
-      "seasons_expected": 6,
+      "title": "Chihayafuru",
+      "tmdb_id": 45247,
+      "seasons_expected": 3,
       "episodes_expected": 2,
       "episodes_enumerated": 2,
-      "already_staged_count": 2,
-      "staged_count": 0,
+      "already_staged_count": 0,
+      "staged_count": 2,
       "review_count": 0,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
@@ -54,20 +54,56 @@
   ],
   "results_redacted": [
     {
-      "title": "Better Call Saul",
-      "tmdb_id": 60059,
+      "title": "Chihayafuru",
+      "tmdb_id": 45247,
       "season": 1,
-      "episode": 3,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "episode": 22,
+      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
+      "stage_id": "tv_chihayafuru_45247_s01e22_4e6a187fe79e",
+      "provider_ref": "mediafusion.elfhosted.com",
+      "provider_attempt_count": 1,
+      "stream_evidence_redacted": {
+        "name": "MediaFusion | ElfHosted 🧲 RD ⚡️ 1080P",
+        "title_excerpt": "",
+        "info_hash": "",
+        "url_host": "mediafusion.elfhosted.com",
+        "cached_debrid": true,
+        "plex_compatible": false,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_verification_gated_fallback",
+        "fallback_requires_private_validation": true,
+        "fallback_requires_plex_decision": true,
+        "source_url_stored_private_only": true
+      }
     },
     {
-      "title": "Better Call Saul",
-      "tmdb_id": 60059,
-      "season": 6,
-      "episode": 5,
-      "status": "PASS_ALREADY_PRIVATE_STAGED"
+      "title": "Chihayafuru",
+      "tmdb_id": 45247,
+      "season": 1,
+      "episode": 23,
+      "status": "PASS_PRIVATE_STAGED_VERIFICATION_GATED_FALLBACK",
+      "stage_id": "tv_chihayafuru_45247_s01e23_e4330b1ca7a5",
+      "provider_ref": "mediafusion.elfhosted.com",
+      "provider_attempt_count": 1,
+      "stream_evidence_redacted": {
+        "name": "MediaFusion | ElfHosted 🧲 RD ⚡️ 1080P",
+        "title_excerpt": "",
+        "info_hash": "",
+        "url_host": "mediafusion.elfhosted.com",
+        "cached_debrid": true,
+        "plex_compatible": false,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_verification_gated_fallback",
+        "fallback_requires_private_validation": true,
+        "fallback_requires_plex_decision": true,
+        "source_url_stored_private_only": true
+      }
     }
   ],
-  "status": "PASS_WHOLE_SHOW_ALREADY_STAGED",
+  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
