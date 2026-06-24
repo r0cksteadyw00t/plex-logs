@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-24T10:48:26.644Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-24T10:53:26.469Z",
   "last_success_utc": "2026-06-24T10:48:26.644Z",
   "pat_present": true,
   "pushed": [
@@ -274,10 +274,6 @@
       "status": 304
     },
     {
-      "file": "latest/scarflix_v2/mission002_iptv_source_preflight_status.json",
-      "status": 304
-    },
-    {
       "file": "latest/scarflix_v2/mission002_iptv_source_preflight_status.md",
       "status": 304
     },
@@ -423,19 +419,19 @@
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_monitor_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_monitor_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_events_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_new_episode_events_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/tv_first_section6_publication_forensic_handoff.json",
@@ -607,10 +603,6 @@
     },
     {
       "file": "docs/latest/scarflix_v2/index.html",
-      "status": 200
-    },
-    {
-      "file": "docs/latest/scarflix_v2/jasonos_prime_recent_updates.json",
       "status": 200
     },
     {
@@ -971,19 +963,19 @@
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_monitor_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_monitor_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_events_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_new_episode_events_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/tv_first_section6_publication_forensic_handoff.json",
@@ -1279,13 +1271,25 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "latest/scarflix_v2/mission002_iptv_source_preflight_status.json",
+      "status": 422
+    },
+    {
+      "file": "docs/latest/scarflix_v2/jasonos_prime_recent_updates.json",
+      "status": 401
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 2,
+    "by_status": {
+      "401": 1,
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
