@@ -1,8 +1,8 @@
 # JasonOS Prime Lightweight Status Probe
 
 Status: REVIEW
-Updated UTC: 2026-06-24T01:01:01Z
-Duration ms: 36
+Updated UTC: 2026-06-24T01:06:07Z
+Duration ms: 115
 Public mirror: RUNNING
 Materialized QA: REVIEW 103/124
 Materialized artifacts: 0
