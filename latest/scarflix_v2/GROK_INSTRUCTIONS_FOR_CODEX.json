@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_hold_forensic_status_v185",
-      "created_at": "2026-06-24T11:39:48Z",
-      "expires_at": "2026-06-25T11:39:48Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_hold_forensic_status_v186",
+      "created_at": "2026-06-24T11:56:33Z",
+      "expires_at": "2026-06-25T11:56:33Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,14 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
             "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_hold_forensic_status_v185",
+            "source_instruction_id": "phase0_stabilization_foundation_record_tv_hold_forensic_status_v186",
             "auto_added_by_bridge": true
           }
         }
@@ -30,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-24T11:39:48Z",
+  "updated_utc": "2026-06-24T11:56:33Z",
   "source": "grok_api"
 }
