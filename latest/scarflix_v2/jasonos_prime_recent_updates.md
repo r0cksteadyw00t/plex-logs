@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-24T01:09:11.228Z
+Updated UTC: 2026-06-24T01:15:12.492Z
 Source: live status merge
 
-- 2026-06-24T01:08:47Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=53408; child_pid=
-- 2026-06-24T01:08:47Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-24T01:08:39.596Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-24T01:08:39Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
-- 2026-06-24T01:05:12Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-24T01:03:36Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=9768; child_pid=18792
-- 2026-06-24T01:03:36Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
+- 2026-06-24T01:11:02Z - Durable PlatformGate runner RUNNING: Step existing_durable_owner_active; owner_pid=25792; child_pid=
+- 2026-06-24T01:11:02Z - PlatformGate checkpoint RUNNING: Step existing_durable_owner_active; visible=unknown; blockers=0
+- 2026-06-24T01:10:57Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=36100; child_pid=
+- 2026-06-24T01:10:57Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-24T01:10:53.347Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-24T01:10:53Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-24T01:10:08Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-24T01:00:14Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-24T00:15:22Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-23T18:45:39Z - Autonomous controller: controller_already_running: existing controller lock is active
