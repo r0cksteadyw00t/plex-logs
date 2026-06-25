@@ -2,17 +2,17 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-25T23:41:14Z",
-    "started_utc":  "2026-06-25T23:41:01Z",
-    "duration_seconds":  13,
+    "updated_utc":  "2026-06-25T23:41:54Z",
+    "started_utc":  "2026-06-25T23:41:31Z",
+    "duration_seconds":  23,
     "will_progress_without_codex":  true,
     "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
-                    "controller_age_minutes":  47,
-                    "platform_checkpoint_age_minutes":  1,
-                    "durable_platform_gate_age_minutes":  1,
+                    "controller_age_minutes":  0,
+                    "platform_checkpoint_age_minutes":  0,
+                    "durable_platform_gate_age_minutes":  0,
                     "platform_progress_fresh":  true,
-                    "dashboard_age_minutes":  1,
+                    "dashboard_age_minutes":  2,
                     "mirror_age_minutes":  0,
                     "movie_strm_count":  7498,
                     "tv_strm_count":  1,
@@ -33,10 +33,10 @@
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
                                           "exists":  true,
-                                          "status":  "Running",
+                                          "status":  "Ready",
                                           "last_run_time":  "26/06/2026 9:35:02 AM",
                                           "next_run_time":  "N/A",
-                                          "last_result":  "-2147020576"
+                                          "last_result":  "2"
                                       },
                   "dashboard":  {
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
@@ -64,7 +64,6 @@
                     }
                 ],
     "notes":  [
-                  "Controller status is stale, but PlatformGate durable progress is fresh; no recovery action required.",
                   "Public mirror status was disabled or stale; watchdog triggered mirror task."
               ],
     "files":  {
