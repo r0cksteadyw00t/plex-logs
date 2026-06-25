@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v276",
-      "created_at": "2026-06-25T17:22:51Z",
-      "expires_at": "2026-06-26T17:22:51Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v277",
+      "created_at": "2026-06-25T17:39:06Z",
+      "expires_at": "2026-06-26T17:39:06Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,15 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "TV Section 6 publication remains held pending scanner forensic review. Materialized QA in REVIEW state. No expansion, publishing, or mutation actions executed. Monitor active with 0 pending events. Phase 0 stabilization focus maintained.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v276"
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v277",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -29,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-25T17:22:51Z",
+  "updated_utc": "2026-06-25T17:39:06Z",
   "source": "grok_api"
 }
