@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-25T01:37:01Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\corner_gas_animated_78570_private_stage_manifest_20260625T013402Z.prepared.json",
+  "updated_utc": "2026-06-25T02:18:27Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\game_of_thrones_1399_private_stage_manifest_20260625T021403Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
@@ -10,7 +10,7 @@
   "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "max_shows": 1,
-  "max_episodes": 1,
+  "max_episodes": 2,
   "provider_candidate_count": 4,
   "provider_refs": [
     "mediafusion.elfhosted.com",
@@ -34,58 +34,76 @@
     "current_retry_held_hashes_block_restage": true
   },
   "show_count": 1,
-  "episodes_enumerated": 1,
+  "episodes_enumerated": 2,
   "already_staged_count": 0,
-  "staged_count": 0,
-  "review_count": 1,
+  "staged_count": 2,
+  "review_count": 0,
   "shows": [
     {
-      "title": "Corner Gas Animated",
-      "tmdb_id": 78570,
-      "seasons_expected": 4,
-      "episodes_expected": 1,
-      "episodes_enumerated": 1,
+      "title": "Game of Thrones",
+      "tmdb_id": 1399,
+      "seasons_expected": 8,
+      "episodes_expected": 2,
+      "episodes_enumerated": 2,
       "already_staged_count": 0,
-      "staged_count": 0,
-      "review_count": 1,
+      "staged_count": 2,
+      "review_count": 0,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
     }
   ],
   "results_redacted": [
     {
-      "title": "Corner Gas Animated",
-      "tmdb_id": 78570,
-      "season": 3,
-      "episode": 7,
-      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-      "stream_count": 0,
-      "rejected_hash_count": 0,
-      "provider_attempts_redacted": [
-        {
-          "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "comet.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        },
-        {
-          "provider_ref": "torrentio.strem.fun",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 18
-        },
-        {
-          "provider_ref": "aiostreams.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
-        }
-      ],
-      "provider_pool_exhausted": true
+      "title": "Game of Thrones",
+      "tmdb_id": 1399,
+      "season": 2,
+      "episode": 3,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_game_of_thrones_1399_s02e03_196e5751b112",
+      "provider_ref": "mediafusion.elfhosted.com",
+      "provider_attempt_count": 1,
+      "stream_evidence_redacted": {
+        "name": "MediaFusion DEV | ElfHosted 🧲 RD ⚡️ 1080p",
+        "title_excerpt": "",
+        "info_hash": "196e5751b11243351435ab91b962f4f7ce22dd5c",
+        "url_host": "mediafusion-dev.elfhosted.com",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
+    },
+    {
+      "title": "Game of Thrones",
+      "tmdb_id": 1399,
+      "season": 2,
+      "episode": 4,
+      "status": "PASS_PRIVATE_STAGED_HELD",
+      "stage_id": "tv_game_of_thrones_1399_s02e04_73a0b2f33f31",
+      "provider_ref": "mediafusion.elfhosted.com",
+      "provider_attempt_count": 1,
+      "stream_evidence_redacted": {
+        "name": "MediaFusion | ElfHosted 🧲 RD ⚡️ 1080P",
+        "title_excerpt": "",
+        "info_hash": "",
+        "url_host": "mediafusion.elfhosted.com",
+        "cached_debrid": true,
+        "plex_compatible": true,
+        "canonical_title_signal": true,
+        "season_episode_signal": true,
+        "non_english_source_signal": false,
+        "selection_mode": "cached_plex_compatible_primary",
+        "fallback_requires_private_validation": false,
+        "fallback_requires_plex_decision": false,
+        "source_url_stored_private_only": true
+      }
     }
   ],
-  "status": "REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED",
+  "status": "PASS_WHOLE_SHOW_PRIVATE_STAGED",
   "next_safe_action": "Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes."
 }
