@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-25T18:30:01Z",
+  "updated_utc": "2026-06-25T18:35:01Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,9 +11,9 @@
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 0,
+    "movie_strm_count": 120,
     "tv_strm_count": 0,
-    "total_strm_count": 0,
+    "total_strm_count": 120,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
@@ -104,7 +104,7 @@
     "platform_gate_blocked_by": "snapshot_scoped_qa",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON",
+    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
     "staged_candidate_count": 43,
     "plex_safe_webdav_visible_rows": null
   },
@@ -24504,13 +24504,13 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-25T18:30:01Z",
+    "updated_utc": "2026-06-25T18:35:01Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
-      "legacy_movie_strm": 0,
+      "legacy_movie_strm": 120,
       "legacy_tv_strm": 0,
-      "legacy_total_strm": 0,
+      "legacy_total_strm": 120,
       "plex_safe_webdav_visible_rows": null
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
@@ -48672,23 +48672,23 @@
     },
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
-      "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-25T18:25:14Z",
-      "current_step": "materialized_decision_failed",
+      "status": "WAITING_OVERLAP",
+      "updated_utc": "2026-06-25T18:35:20Z",
+      "current_step": "validation_overlap_running",
       "jason_action_required": false,
       "counts": {
-        "movies": 480,
+        "movies": 120,
         "tv": 0,
-        "total": 480
+        "total": 120
       },
       "canary_status": "PAUSED_PLAYBACK_FIX",
       "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
       "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-      "direct_strm_admission_status": "RUNNING_ALREADY",
-      "direct_strm_admission_checked_visible": 0,
+      "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+      "direct_strm_admission_checked_visible": 480,
       "direct_strm_admission_passed_visible": 0,
-      "direct_strm_admission_quarantined_this_run": 0,
-      "direct_strm_retry_held_count": 0,
+      "direct_strm_admission_quarantined_this_run": 480,
+      "direct_strm_retry_held_count": 3385,
       "materialized_primary": true,
       "materialized_visible_verified": 18,
       "materialized_decision_qa_status": "REVIEW",
@@ -48698,7 +48698,17 @@
       "decision_qa_status": "UNKNOWN",
       "concurrent_stream_qa_status": "UNKNOWN",
       "ignored_overlap": [],
-      "overlap_running": [],
+      "overlap_running": [
+        {
+          "name": "ScarFLIX_v2_DurablePlatformGateRunner",
+          "ok": true,
+          "status": "Running",
+          "scheduled_state": "Enabled",
+          "last_run": "26/06/2026 4:34:08 AM",
+          "last_result": "-2147020576",
+          "next_run": "N/A"
+        }
+      ],
       "actions": [
         {
           "action": "trigger_plex_scans_materialized",
@@ -48706,21 +48716,21 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 20328
+              "pid": 44312
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 43888
+              "pid": 31304
             }
           ]
         }
       ],
-      "next_action": "Quarantine failed materialized source/release and keep title retryable."
+      "next_action": "Wait for current ScarFLIX validation task to finish."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1518720,
-    "safe_pipeline_log_age_seconds": 1575604,
+    "canary_status_age_seconds": 1519017,
+    "safe_pipeline_log_age_seconds": 1575902,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -48731,13 +48741,23 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": false,
-        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
+        "ok": true,
+        "detail": "ok"
+      },
+      {
+        "action": "run_direct_strm_admission_gate",
+        "ok": true,
+        "detail": "pid=26676"
+      },
+      {
+        "action": "run_playback_qa_controller",
+        "ok": true,
+        "detail": "ok"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=39744"
+        "detail": "pid=12160"
       }
     ],
     "blockers": []
@@ -48792,23 +48812,23 @@
   },
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
-    "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-25T18:25:14Z",
-    "current_step": "materialized_decision_failed",
+    "status": "WAITING_OVERLAP",
+    "updated_utc": "2026-06-25T18:35:20Z",
+    "current_step": "validation_overlap_running",
     "jason_action_required": false,
     "counts": {
-      "movies": 480,
+      "movies": 120,
       "tv": 0,
-      "total": 480
+      "total": 120
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
     "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
     "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-    "direct_strm_admission_status": "RUNNING_ALREADY",
-    "direct_strm_admission_checked_visible": 0,
+    "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+    "direct_strm_admission_checked_visible": 480,
     "direct_strm_admission_passed_visible": 0,
-    "direct_strm_admission_quarantined_this_run": 0,
-    "direct_strm_retry_held_count": 0,
+    "direct_strm_admission_quarantined_this_run": 480,
+    "direct_strm_retry_held_count": 3385,
     "materialized_primary": true,
     "materialized_visible_verified": 18,
     "materialized_decision_qa_status": "REVIEW",
@@ -48818,7 +48838,17 @@
     "decision_qa_status": "UNKNOWN",
     "concurrent_stream_qa_status": "UNKNOWN",
     "ignored_overlap": [],
-    "overlap_running": [],
+    "overlap_running": [
+      {
+        "name": "ScarFLIX_v2_DurablePlatformGateRunner",
+        "ok": true,
+        "status": "Running",
+        "scheduled_state": "Enabled",
+        "last_run": "26/06/2026 4:34:08 AM",
+        "last_result": "-2147020576",
+        "next_run": "N/A"
+      }
+    ],
     "actions": [
       {
         "action": "trigger_plex_scans_materialized",
@@ -48826,16 +48856,24 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 20328
+            "pid": 44312
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 43888
+            "pid": 31304
           }
         ]
       }
     ],
-    "next_action": "Quarantine failed materialized source/release and keep title retryable."
+    "next_action": "Wait for current ScarFLIX validation task to finish."
+  },
+  "grokbuild_forensic_agent": {
+    "status": "REVIEW_STALE_PROGRESS",
+    "updated_utc": "2026-06-25T18:35:01Z",
+    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
+    "implementation": "node_native",
+    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
+    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
   }
 }
