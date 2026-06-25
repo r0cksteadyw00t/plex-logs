@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v279",
-      "created_at": "2026-06-25T18:12:07Z",
-      "expires_at": "2026-06-26T18:12:07Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v280",
+      "created_at": "2026-06-25T18:27:38Z",
+      "expires_at": "2026-06-26T18:27:38Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,15 @@
       ],
       "retry_policy": {
         "max_retries": 0,
-        "backoff": "none"
+        "backoff_seconds": 0
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season pilot (28/28) privately validated. No visible Plex mutation. Monitor active every 15min. No legacy resolver or direct expansion. Materialized QA REVIEW. PAUSE_PUBLICATION active."
+            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
+            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v280",
+            "auto_added_by_bridge": true
           }
         }
       ],
@@ -28,6 +30,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-25T18:12:07Z",
+  "updated_utc": "2026-06-25T18:27:38Z",
   "source": "grok_api"
 }
