@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_strategy_v282",
-      "created_at": "2026-06-25T19:14:24Z",
-      "expires_at": "2026-06-26T19:14:24Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_strategy_v283",
+      "created_at": "2026-06-25T20:33:26Z",
+      "expires_at": "2026-06-26T20:33:26Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 0
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "note": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate at 28/28 required. Monitor active every 15 minutes with 0 pending deltas. No visible Plex mutation, no WebDAV changes, no legacy resolver activity. Continue private validation and natural retry only.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_strategy_v282"
+            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate at 28/28 required. Monitor active every 15 minutes with 0 pending deltas. No visible Plex mutation, no WebDAV changes, no legacy resolver activity. Continue private validation and natural retry only. No expansion or publishing actions permitted."
           }
         }
       ],
@@ -29,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-25T19:14:24Z",
+  "updated_utc": "2026-06-25T20:33:26Z",
   "source": "grok_api"
 }
