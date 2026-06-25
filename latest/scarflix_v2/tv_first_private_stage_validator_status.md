@@ -1,13 +1,14 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-25T14:57:21Z
+Updated UTC: 2026-06-25T21:36:36Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 3
-Passed: 2
+Checked: 4
+Passed: 3
 Review: 1
 
 ## Results
 - Q-Force: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/vnd.apple.mpegurl; reason=HLS_PLAYLIST_TIMEOUT_OR_ERROR; hls_segment=; hls_bytes=0
+- Q-Force: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 - Q-Force: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 - Q-Force: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 
