@@ -1,34 +1,30 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-25T13:25:02Z
-Status: ALERT
-Alert level: HIGH
+Updated UTC: 2026-06-25T13:30:03Z
+Status: PASS
+Alert level: LOW
 Jason action required: false
-Codex action required: true
+Codex action required: false
 
 ## Signals
 - controller_status: WAITING_RETRY
 - controller_milestone: PLATFORM_GATE_RUNNING
-- controller_age_minutes: 15
+- controller_age_minutes: 20
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 15
+- watchdog_age_minutes: 2
 - dashboard_status: PASS
 - dashboard_age_minutes: 5
 - mirror_status: PASS
 - mirror_age_minutes: 2
 - checkpoint_status: REVIEW
 - checkpoint_step: platform_gate_review
-- checkpoint_age_minutes: 18
-- durable_platform_gate_age_minutes: 18
-- platform_progress_fresh: false
+- checkpoint_age_minutes: 1
+- durable_platform_gate_age_minutes: 1
+- platform_progress_fresh: true
 
 ## Recovery Actions
-- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=31864; run pid=35964
-- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=36276; run pid=19312
-- ScarFLIX_v2_Watchdog_StallDetector: platform_checkpoint_stale (PASS) enable pid=39820; run pid=34684
-- ScarFLIX_v2_AutonomousController: platform_checkpoint_stale (PASS) enable pid=15444; run pid=38456
-- ScarFLIX_v2_DurablePlatformGateRunner: platform_checkpoint_stale (PASS) enable pid=28192; run pid=30464
+- None.
 
 ## Notes
-- Same unresolved sentinel signature repeated for three cycles.
+- Controller status is stale, but durable PlatformGate progress is fresh.
