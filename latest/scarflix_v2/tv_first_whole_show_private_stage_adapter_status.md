@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-25T21:40:25Z
+Updated UTC: 2026-06-25T21:41:15Z
 Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
 Episodes enumerated: 3
@@ -11,7 +11,7 @@ TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Corner Gas Animated: enumerated=3; staged=0; already=0; review=3; source=request_episode_targets
+- Major 2nd: enumerated=3; staged=0; already=0; review=3; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
