@@ -1,13 +1,13 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-  "updated_utc": "2026-06-25T14:15:16Z",
-  "current_step": "materialized_decision_failed",
+  "status": "WAITING_OVERLAP",
+  "updated_utc": "2026-06-25T14:20:22Z",
+  "current_step": "validation_overlap_running",
   "jason_action_required": false,
   "counts": {
-    "movies": 121,
+    "movies": 123,
     "tv": 0,
-    "total": 121
+    "total": 123
   },
   "canary_status": "PAUSED_PLAYBACK_FIX",
   "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
@@ -26,7 +26,17 @@
   "decision_qa_status": "UNKNOWN",
   "concurrent_stream_qa_status": "UNKNOWN",
   "ignored_overlap": [],
-  "overlap_running": [],
+  "overlap_running": [
+    {
+      "name": "ScarFLIX_v2_DurablePlatformGateRunner",
+      "ok": true,
+      "status": "Running",
+      "scheduled_state": "Enabled",
+      "last_run": "26/06/2026 12:20:00 AM",
+      "last_result": "-2147020576",
+      "next_run": "N/A"
+    }
+  ],
   "actions": [
     {
       "action": "trigger_plex_scans_materialized",
@@ -34,15 +44,15 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 18168
+          "pid": 20360
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 30756
+          "pid": 39384
         }
       ]
     }
   ],
-  "next_action": "Quarantine failed materialized source/release and keep title retryable."
+  "next_action": "Wait for current ScarFLIX validation task to finish."
 }
