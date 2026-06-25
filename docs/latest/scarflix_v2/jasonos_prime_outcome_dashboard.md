@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-25T23:45:21.564Z
+Updated UTC: 2026-06-25T23:50:09.125Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: STALE_STATUS
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -29,9 +29,9 @@ Recent Achievements:
 - 2026-06-25T23:08:12Z - Autonomous controller: stale_platform_gate_backoff_retry: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 4 min ago
-- Platform child progress: 770 min ago
+- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
+- Controller updated: 9 min ago
+- Platform child progress: 774 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
