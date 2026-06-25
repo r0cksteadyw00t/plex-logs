@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-25T17:10:01Z",
+  "updated_utc": "2026-06-25T17:15:01Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,15 +11,15 @@
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 240,
+    "movie_strm_count": 145,
     "tv_strm_count": 0,
-    "total_strm_count": 240,
+    "total_strm_count": 145,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
     "legacy_resolver_default_allowed": false,
     "legacy_resolver_strm_count": 0,
-    "materialized_or_webdav_strm_count": 240,
+    "materialized_or_webdav_strm_count": 151,
     "materialized_webdav_file_count": 0,
     "materialized_webdav_artifact_count": 0,
     "materialized_current_publisher_visible_links": 0,
@@ -62,7 +62,7 @@
     "direct_strm_mirror_created": 0,
     "direct_strm_mirror_updated": 0,
     "direct_strm_mirror_written_count": 0,
-    "direct_strm_admission_status": "RUNNING_ALREADY",
+    "direct_strm_admission_status": "FAIL_ENGINEERING",
     "direct_strm_admission_checked_visible": 0,
     "direct_strm_admission_passed_visible": 0,
     "direct_strm_admission_failed_visible": null,
@@ -121,14 +121,14 @@
     "blocked_by": "snapshot_scoped_qa"
   },
   "automation_health": {
-    "state": "STALE_STATUS",
-    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 6,
-    "platform_child_progress_age_minutes": 374,
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 380,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-25T17:09:27Z",
-    "next_check_age_minutes": 1,
+    "next_check_utc": "2026-06-25T17:19:29Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -136,7 +136,7 @@
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260625.log",
     "last_progress_utc": "2026-06-25T10:55:47.558Z",
-    "age_minutes": 374,
+    "age_minutes": 379,
     "last_line": "[2026-06-25T10:55:47Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -144,36 +144,41 @@
   },
   "watchdog_status": {
     "status": "REVIEW",
-    "stall_risk": "High",
-    "updated_utc": "2026-06-25T17:09:24Z",
+    "stall_risk": "Medium",
+    "updated_utc": "2026-06-25T17:14:30Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "ALERT",
-    "alert_level": "HIGH",
-    "updated_utc": "2026-06-25T17:05:04Z",
-    "codex_action_required": true,
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-25T17:15:02Z",
+    "codex_action_required": false,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
     "status": "REVIEW",
     "current_step": "platform_gate_review",
-    "owner_pid": 43832,
+    "owner_pid": 41632,
     "child_pid": "",
-    "last_progress_utc": "2026-06-25T16:46:27Z",
-    "heartbeat_updated_utc": "2026-06-25T16:46:27Z",
+    "last_progress_utc": "2026-06-25T17:15:00Z",
+    "heartbeat_updated_utc": "2026-06-25T17:15:01Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
+    "component": "scarflix_v2_direct_strm_admission_gate",
+    "status": "FAIL_ENGINEERING",
+    "updated_utc": "2026-06-25T17:14:07Z",
+    "reason": "ENOENT: no such file or directory, rename 'D:\\StremioCatalog\\_Hybrid\\Movies\\Agathas Almanac (2026)\\Agathas Almanac (2026) - ScarFLIX_part-7d7eb10af2512165.strm' -> 'D:\\PlexTools\\state\\scarflix_v2\\direct_strm_quarantine\\retry_visible_removed\\movies\\Agathas Almanac (2026)\\Agathas Almanac (2026) - ScarFLIX_part-7d7eb10af2512165.strm.retry_20260625171407'",
+    "jason_action_required": false,
     "counts_before": {
-      "movies": 120,
+      "movies": 342,
       "tv": 0,
-      "total": 120
+      "total": 342
     },
     "counts_after": {
-      "movies": 120,
+      "movies": 342,
       "tv": 0,
-      "total": 120
+      "total": 342
     },
     "checked_visible": 0,
     "passed_visible": 0,
@@ -185,16 +190,7 @@
     "top_reason_codes": [],
     "retry_queue_items": [],
     "recent_quarantined": [],
-    "component": "scarflix_v2_direct_strm_admission_gate",
-    "status": "RUNNING_ALREADY",
-    "updated_utc": "2026-06-25T17:00:18Z",
-    "existing_lock": {
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "pid": 44392,
-      "started_utc": "2026-06-25T16:55:17Z",
-      "updated_utc": "2026-06-25T16:55:17Z"
-    },
-    "jason_action_required": false
+    "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260625.log"
   },
   "staged_candidate_publisher": {
     "component": "scarflix_v2_staged_candidate_publisher",
@@ -347,19 +343,19 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-25T17:04:27Z",
-      "title": "Autonomous controller: controller_already_running",
-      "detail": "existing controller lock is active"
-    },
-    {
-      "utc": "2026-06-25T16:46:27Z",
+      "utc": "2026-06-25T17:15:00Z",
       "title": "Durable PlatformGate runner REVIEW",
-      "detail": "Step platform_gate_review; owner_pid=43832; child_pid="
+      "detail": "Step platform_gate_review; owner_pid=41632; child_pid="
     },
     {
-      "utc": "2026-06-25T16:46:27Z",
+      "utc": "2026-06-25T17:15:00Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=unknown; blockers=0"
+    },
+    {
+      "utc": "2026-06-25T17:14:29Z",
+      "title": "Autonomous controller: controller_already_running",
+      "detail": "existing controller lock is active"
     },
     {
       "utc": "2026-06-25T16:04:52Z",
@@ -440,16 +436,16 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-19T04:57:13Z - materialized canary Plex decision QA",
-      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=249, rows_found=143, checked=124, decision=103/124, failed=21, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=240; materialized visible links=0 (publisher=0, scan=0). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=240, tv=0, total=240. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=4/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=RUNNING_ALREADY, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=REVIEW/REVIEW; durable=REVIEW; owner_pid=43832; child_pid=.",
+      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=249, rows_found=143, checked=124, decision=103/124, failed=21, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=151; materialized visible links=0 (publisher=0, scan=0). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=151, tv=0, total=151. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=4/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=FAIL_ENGINEERING, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=REVIEW/REVIEW; durable=REVIEW; owner_pid=41632; child_pid=.",
       "progress": 23,
       "eta": "after all-visible materialized QA passes",
-      "stall_risk": "High"
+      "stall_risk": "Medium"
     },
     {
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
       "last_change": "2026-06-25T05:32:02Z - PLATFORM_GATE_RUNNING",
-      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=240.",
+      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=151.",
       "progress": 25,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
@@ -502,11 +498,11 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-25T16:46:27Z - Durable PlatformGate ownership active",
-      "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=240; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
+      "last_change": "2026-06-25T17:15:00Z - Durable PlatformGate ownership active",
+      "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=151; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 15,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
-      "stall_risk": "High"
+      "stall_risk": "Medium"
     }
   ],
   "files": {
@@ -519,13 +515,13 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-25T17:10:01Z",
+    "updated_utc": "2026-06-25T17:15:01Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
-      "legacy_movie_strm": 240,
+      "legacy_movie_strm": 145,
       "legacy_tv_strm": 0,
-      "legacy_total_strm": 240,
+      "legacy_total_strm": 145,
       "plex_safe_webdav_visible_rows": null
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
@@ -580,15 +576,20 @@
       "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260608.log"
     },
     "direct_strm_admission_gate_status": {
+      "component": "scarflix_v2_direct_strm_admission_gate",
+      "status": "FAIL_ENGINEERING",
+      "updated_utc": "2026-06-25T17:14:07Z",
+      "reason": "ENOENT: no such file or directory, rename 'D:\\StremioCatalog\\_Hybrid\\Movies\\Agathas Almanac (2026)\\Agathas Almanac (2026) - ScarFLIX_part-7d7eb10af2512165.strm' -> 'D:\\PlexTools\\state\\scarflix_v2\\direct_strm_quarantine\\retry_visible_removed\\movies\\Agathas Almanac (2026)\\Agathas Almanac (2026) - ScarFLIX_part-7d7eb10af2512165.strm.retry_20260625171407'",
+      "jason_action_required": false,
       "counts_before": {
-        "movies": 120,
+        "movies": 342,
         "tv": 0,
-        "total": 120
+        "total": 342
       },
       "counts_after": {
-        "movies": 120,
+        "movies": 342,
         "tv": 0,
-        "total": 120
+        "total": 342
       },
       "checked_visible": 0,
       "passed_visible": 0,
@@ -600,16 +601,7 @@
       "top_reason_codes": [],
       "retry_queue_items": [],
       "recent_quarantined": [],
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "status": "RUNNING_ALREADY",
-      "updated_utc": "2026-06-25T17:00:18Z",
-      "existing_lock": {
-        "component": "scarflix_v2_direct_strm_admission_gate",
-        "pid": 44392,
-        "started_utc": "2026-06-25T16:55:17Z",
-        "updated_utc": "2026-06-25T16:55:17Z"
-      },
-      "jason_action_required": false
+      "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260625.log"
     },
     "staged_candidate_count": 43,
     "staged_candidate_publisher_status": {
@@ -703,18 +695,18 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "WAITING_OVERLAP",
-      "updated_utc": "2026-06-25T17:10:13Z",
+      "updated_utc": "2026-06-25T17:15:25Z",
       "current_step": "validation_overlap_running",
       "jason_action_required": false,
       "counts": {
-        "movies": 240,
+        "movies": 143,
         "tv": 0,
-        "total": 240
+        "total": 143
       },
       "canary_status": "PAUSED_PLAYBACK_FIX",
       "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
       "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-      "direct_strm_admission_status": "RUNNING_ALREADY",
+      "direct_strm_admission_status": "FAIL_ENGINEERING",
       "direct_strm_admission_checked_visible": 0,
       "direct_strm_admission_passed_visible": 0,
       "direct_strm_admission_quarantined_this_run": 0,
@@ -746,12 +738,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 34412
+              "pid": 37236
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 8792
+              "pid": 37324
             }
           ]
         }
@@ -759,8 +751,8 @@
       "next_action": "Wait for current ScarFLIX validation task to finish."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1513915,
-    "safe_pipeline_log_age_seconds": 1570799,
+    "canary_status_age_seconds": 1514227,
+    "safe_pipeline_log_age_seconds": 1571111,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -777,7 +769,7 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=32532"
+        "detail": "pid=41936"
       },
       {
         "action": "run_playback_qa_controller",
@@ -787,7 +779,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=11880"
+        "detail": "pid=39008"
       }
     ],
     "blockers": []
@@ -843,18 +835,18 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "WAITING_OVERLAP",
-    "updated_utc": "2026-06-25T17:10:13Z",
+    "updated_utc": "2026-06-25T17:15:25Z",
     "current_step": "validation_overlap_running",
     "jason_action_required": false,
     "counts": {
-      "movies": 240,
+      "movies": 143,
       "tv": 0,
-      "total": 240
+      "total": 143
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
     "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
     "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-    "direct_strm_admission_status": "RUNNING_ALREADY",
+    "direct_strm_admission_status": "FAIL_ENGINEERING",
     "direct_strm_admission_checked_visible": 0,
     "direct_strm_admission_passed_visible": 0,
     "direct_strm_admission_quarantined_this_run": 0,
@@ -886,12 +878,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 34412
+            "pid": 37236
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 8792
+            "pid": 37324
           }
         ]
       }
