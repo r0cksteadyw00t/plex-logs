@@ -1,34 +1,34 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-25T14:00:04Z
-Status: REVIEW
-Alert level: MEDIUM
+Updated UTC: 2026-06-25T14:03:45Z
+Status: ALERT
+Alert level: HIGH
 Jason action required: false
-Codex action required: false
+Codex action required: true
 
 ## Signals
 - controller_status: RUNNING
 - controller_milestone: PLATFORM_GATE_RUNNING
-- controller_age_minutes: 14
+- controller_age_minutes: 18
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 14
+- watchdog_age_minutes: 18
 - dashboard_status: PASS
-- dashboard_age_minutes: 5
-- mirror_status: PASS
-- mirror_age_minutes: 2
+- dashboard_age_minutes: 3
+- mirror_status: RUNNING
+- mirror_age_minutes: 0
 - checkpoint_status: REVIEW
 - checkpoint_step: platform_gate_review
-- checkpoint_age_minutes: 15
-- durable_platform_gate_age_minutes: 15
+- checkpoint_age_minutes: 18
+- durable_platform_gate_age_minutes: 18
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=10940; run pid=35312
-- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=2156; run pid=36328
-- ScarFLIX_v2_Watchdog_StallDetector: platform_checkpoint_stale (PASS) enable pid=22712; run pid=6960
-- ScarFLIX_v2_AutonomousController: platform_checkpoint_stale (PASS) enable pid=34576; run pid=31160
-- ScarFLIX_v2_DurablePlatformGateRunner: platform_checkpoint_stale (PASS) enable pid=39796; run pid=30516
+- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=39032; run pid=15220
+- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=39076; run pid=9028
+- ScarFLIX_v2_Watchdog_StallDetector: platform_checkpoint_stale (PASS) enable pid=3948; run pid=23320
+- ScarFLIX_v2_AutonomousController: platform_checkpoint_stale (PASS) enable pid=13248; run pid=11420
+- ScarFLIX_v2_DurablePlatformGateRunner: platform_checkpoint_stale (PASS) enable pid=38032; run pid=39836
 
 ## Notes
-- None.
+- Same unresolved sentinel signature repeated for three cycles.
