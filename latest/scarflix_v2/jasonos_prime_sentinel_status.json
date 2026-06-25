@@ -2,52 +2,34 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "REVIEW",
   "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-25T19:05:05Z",
-  "duration_seconds": 1,
+  "updated_utc": "2026-06-25T19:10:03Z",
+  "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 1,
+  "repeat_count": 2,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 4,
+    "controller_age_minutes": 5,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 5,
+    "watchdog_age_minutes": 4,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 5,
     "mirror_status": "PASS",
     "mirror_age_minutes": 2,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 45,
-    "durable_platform_gate_age_minutes": 45,
-    "platform_progress_fresh": false
+    "checkpoint_age_minutes": 3,
+    "durable_platform_gate_age_minutes": 3,
+    "platform_progress_fresh": true
   },
   "recovery_actions": [
     {
       "task": "autonomous_controller.lock",
       "reason": "stale_lock",
       "result": "PASS",
-      "note": "removed age_min=6 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260625190504.bak"
-    },
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=44492; run pid=24064"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=41780; run pid=30324"
-    },
-    {
-      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=5804; run pid=39008"
+      "note": "removed age_min=5 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260625191003.bak"
     }
   ],
   "notes": [],
