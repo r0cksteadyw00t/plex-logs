@@ -1,56 +1,52 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "REVIEW",
-  "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-25T16:40:04Z",
+  "status": "ALERT",
+  "alert_level": "HIGH",
+  "updated_utc": "2026-06-25T16:43:05Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": false,
-  "repeat_count": 2,
+  "codex_action_required": true,
+  "repeat_count": 3,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 0,
+    "controller_age_minutes": 3,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 10,
+    "watchdog_age_minutes": 3,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 5,
-    "mirror_status": "PASS",
-    "mirror_age_minutes": 2,
+    "dashboard_age_minutes": 2,
+    "mirror_status": "RUNNING",
+    "mirror_age_minutes": 0,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 14,
-    "durable_platform_gate_age_minutes": 14,
+    "checkpoint_age_minutes": 17,
+    "durable_platform_gate_age_minutes": 17,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
     {
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "watchdog_stale_or_failed",
-      "result": "PASS",
-      "note": "enable pid=34156; run pid=43920"
-    },
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=35328; run pid=40624"
+      "note": "enable pid=42140; run pid=42204"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=35332; run pid=22224"
+      "note": "enable pid=40168; run pid=23488"
     },
     {
       "task": "ScarFLIX_v2_DurablePlatformGateRunner",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=21156; run pid=42680"
+      "note": "enable pid=40068; run pid=19620"
     }
   ],
-  "notes": [],
+  "notes": [
+    "Same unresolved sentinel signature repeated for three cycles."
+  ],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
