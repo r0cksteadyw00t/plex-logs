@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v280",
-      "created_at": "2026-06-25T18:27:38Z",
-      "expires_at": "2026-06-26T18:27:38Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v281",
+      "created_at": "2026-06-25T18:43:38Z",
+      "expires_at": "2026-06-26T18:43:38Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,16 +13,15 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 0,
+        "max_retries": 1,
         "backoff_seconds": 0
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v280",
-            "auto_added_by_bridge": true
+            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate at 28/28 required. Monitor active every 15 minutes with 0 pending deltas. No WebDAV mutation, no Plex refresh, no legacy resolver activity. Materialized QA REVIEW. PAUSE_PUBLICATION active.",
+            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v281"
           }
         }
       ],
@@ -30,6 +29,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-25T18:27:38Z",
+  "updated_utc": "2026-06-25T18:43:38Z",
   "source": "grok_api"
 }
