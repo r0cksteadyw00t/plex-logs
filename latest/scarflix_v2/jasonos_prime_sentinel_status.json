@@ -2,11 +2,11 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "REVIEW",
   "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-25T09:00:02Z",
+  "updated_utc": "2026-06-25T09:15:02Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 2,
+  "repeat_count": 1,
   "signals": {
     "controller_status": "WAITING_RETRY",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
@@ -20,9 +20,9 @@
     "mirror_age_minutes": 12,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 5,
-    "durable_platform_gate_age_minutes": 5,
-    "platform_progress_fresh": true
+    "checkpoint_age_minutes": 9,
+    "durable_platform_gate_age_minutes": 9,
+    "platform_progress_fresh": false
   },
   "recovery_actions": [
     {
@@ -30,6 +30,24 @@
       "reason": "mirror_stale",
       "result": "PASS",
       "note": "skipped_orchestrator_owned job=run_public_mirror_publisher"
+    },
+    {
+      "task": "ScarFLIX_v2_Watchdog_StallDetector",
+      "reason": "platform_checkpoint_stale",
+      "result": "PASS",
+      "note": "enable pid=11496; run pid=25172"
+    },
+    {
+      "task": "ScarFLIX_v2_AutonomousController",
+      "reason": "platform_checkpoint_stale",
+      "result": "PASS",
+      "note": "enable pid=11020; run pid=26136"
+    },
+    {
+      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
+      "reason": "platform_checkpoint_stale",
+      "result": "PASS",
+      "note": "enable pid=34244; run pid=27572"
     }
   ],
   "notes": [],
