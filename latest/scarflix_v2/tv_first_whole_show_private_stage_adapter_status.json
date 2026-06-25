@@ -1,16 +1,16 @@
 {
   "component": "jasonos_prime_tv_first_whole_show_private_stage_adapter",
   "schema_version": "jasonos.tv_first.whole_show_private_stage_adapter.v1",
-  "updated_utc": "2026-06-25T14:58:51Z",
-  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\major_2nd_78476_private_stage_manifest_20260625T145402Z.prepared.json",
+  "updated_utc": "2026-06-25T16:16:11Z",
+  "manifest_path": "D:\\PlexTools\\state\\jasonos_prime\\catalogue_expansion\\tv_scope_private_stage_manifests\\this_is_pop_125972_private_stage_manifest_20260625T161402Z.prepared.json",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "tv_scoped_gate_status": "PASS_TV_SCOPE_MATERIALIZED_QA",
   "prior_private_stage_validator_status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "sentinel_status": "REVIEW",
-  "sentinel_alert_level": "MEDIUM",
+  "sentinel_status": "PASS",
+  "sentinel_alert_level": "LOW",
   "pause_publication_present": true,
   "max_shows": 1,
-  "max_episodes": 3,
+  "max_episodes": 4,
   "provider_candidate_count": 4,
   "provider_refs": [
     "mediafusion.elfhosted.com",
@@ -34,30 +34,65 @@
     "current_retry_held_hashes_block_restage": true
   },
   "show_count": 1,
-  "episodes_enumerated": 3,
+  "episodes_enumerated": 4,
   "already_staged_count": 0,
   "staged_count": 0,
-  "review_count": 3,
+  "review_count": 4,
   "shows": [
     {
-      "title": "Major 2nd",
-      "tmdb_id": 78476,
-      "seasons_expected": 2,
-      "episodes_expected": 3,
-      "episodes_enumerated": 3,
+      "title": "This Is Pop",
+      "tmdb_id": 125972,
+      "seasons_expected": 1,
+      "episodes_expected": 4,
+      "episodes_enumerated": 4,
       "already_staged_count": 0,
       "staged_count": 0,
-      "review_count": 3,
+      "review_count": 4,
       "episode_manifest_source": "request_episode_targets",
       "error": ""
     }
   ],
   "results_redacted": [
     {
-      "title": "Major 2nd",
-      "tmdb_id": 78476,
+      "title": "This Is Pop",
+      "tmdb_id": 125972,
       "season": 1,
-      "episode": 13,
+      "episode": 4,
+      "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
+      "stream_count": 0,
+      "rejected_hash_count": 0,
+      "provider_attempts_redacted": [
+        {
+          "provider_ref": "mediafusion.elfhosted.com",
+          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
+          "stream_count": 0,
+          "reason": "REQUEST_TIMEOUT"
+        },
+        {
+          "provider_ref": "comet.elfhosted.com",
+          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
+          "stream_count": 1
+        },
+        {
+          "provider_ref": "torrentio.strem.fun",
+          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
+          "stream_count": 0,
+          "reason": "HTTP_429"
+        },
+        {
+          "provider_ref": "aiostreams.elfhosted.com",
+          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
+          "stream_count": 0,
+          "reason": "Unexpected token '<', \"<!doctype \"... is not valid JSON"
+        }
+      ],
+      "provider_pool_exhausted": true
+    },
+    {
+      "title": "This Is Pop",
+      "tmdb_id": 125972,
+      "season": 1,
+      "episode": 5,
       "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
       "stream_count": 0,
       "rejected_hash_count": 0,
@@ -88,10 +123,10 @@
       "provider_pool_exhausted": true
     },
     {
-      "title": "Major 2nd",
-      "tmdb_id": 78476,
+      "title": "This Is Pop",
+      "tmdb_id": 125972,
       "season": 1,
-      "episode": 14,
+      "episode": 6,
       "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
       "stream_count": 0,
       "rejected_hash_count": 0,
@@ -99,7 +134,7 @@
         {
           "provider_ref": "mediafusion.elfhosted.com",
           "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
+          "stream_count": 0
         },
         {
           "provider_ref": "comet.elfhosted.com",
@@ -122,18 +157,19 @@
       "provider_pool_exhausted": true
     },
     {
-      "title": "Major 2nd",
-      "tmdb_id": 78476,
+      "title": "This Is Pop",
+      "tmdb_id": 125972,
       "season": 1,
-      "episode": 15,
+      "episode": 7,
       "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
       "stream_count": 0,
       "rejected_hash_count": 0,
       "provider_attempts_redacted": [
         {
           "provider_ref": "mediafusion.elfhosted.com",
-          "status": "REVIEW_NO_CACHED_PLEX_COMPATIBLE_URL",
-          "stream_count": 1
+          "status": "REVIEW_STREMIO_LOOKUP_FAILED",
+          "stream_count": 0,
+          "reason": "REQUEST_TIMEOUT"
         },
         {
           "provider_ref": "comet.elfhosted.com",
