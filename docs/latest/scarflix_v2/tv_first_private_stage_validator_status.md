@@ -1,16 +1,15 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-25T01:22:24Z
-Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 4
-Passed: 4
-Review: 0
+Updated UTC: 2026-06-25T01:36:57Z
+Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Checked: 3
+Passed: 2
+Review: 1
 
 ## Results
-- Better Call Saul: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Better Call Saul: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Better Call Saul: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Better Call Saul: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
+- Q-Force: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/vnd.apple.mpegurl; reason=HLS_PLAYLIST_TIMEOUT_OR_ERROR; hls_segment=; hls_bytes=0
+- Q-Force: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
+- Q-Force: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 
 ## Safety
 - no_broad_expansion_started: true
@@ -23,4 +22,4 @@ Review: 0
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
+Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
