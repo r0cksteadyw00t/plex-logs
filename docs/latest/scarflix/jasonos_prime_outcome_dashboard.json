@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-25T21:25:02Z",
+  "updated_utc": "2026-06-25T21:30:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -121,22 +121,22 @@
     "blocked_by": "snapshot_scoped_qa"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "STALE_STATUS",
+    "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 629,
+    "controller_updated_age_minutes": 52,
+    "platform_child_progress_age_minutes": 634,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-25T21:26:20Z",
+    "next_check_utc": "2026-06-25T21:31:17Z",
     "next_check_age_minutes": 0,
-    "platform_runner_running": false,
+    "platform_runner_running": true,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260625.log",
     "last_progress_utc": "2026-06-25T10:55:47.558Z",
-    "age_minutes": 629,
+    "age_minutes": 634,
     "last_line": "[2026-06-25T10:55:47Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-25T21:24:04Z",
+    "updated_utc": "2026-06-25T21:25:08Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-25T21:20:02Z",
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-25T21:25:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -160,8 +160,8 @@
     "current_step": "platform_gate_review",
     "owner_pid": 13216,
     "child_pid": "",
-    "last_progress_utc": "2026-06-25T21:24:33Z",
-    "heartbeat_updated_utc": "2026-06-25T21:24:33Z",
+    "last_progress_utc": "2026-06-25T21:25:18Z",
+    "heartbeat_updated_utc": "2026-06-25T21:25:18Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
@@ -24332,12 +24332,12 @@
   },
   "recent_updates": [
     {
-      "utc": "2026-06-25T21:24:33Z",
+      "utc": "2026-06-25T21:25:18Z",
       "title": "Durable PlatformGate runner REVIEW",
       "detail": "Step platform_gate_review; owner_pid=13216; child_pid="
     },
     {
-      "utc": "2026-06-25T21:24:33Z",
+      "utc": "2026-06-25T21:25:18Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=unknown; blockers=0"
     },
@@ -24347,14 +24347,14 @@
       "detail": "existing controller lock is active"
     },
     {
+      "utc": "2026-06-25T20:37:50Z",
+      "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
+      "detail": "attempted rclone mount self-heal; mount not ready yet"
+    },
+    {
       "utc": "2026-06-25T20:15:32Z",
       "title": "Autonomous controller: stale_platform_gate_backoff_retry",
       "detail": "PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry"
-    },
-    {
-      "utc": "2026-06-25T19:45:17Z",
-      "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
-      "detail": "attempted rclone mount self-heal; mount not ready yet"
     },
     {
       "utc": "2026-06-25T16:04:52Z",
@@ -24487,7 +24487,7 @@
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-25T21:24:33Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-25T21:25:18Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=7499; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 15,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
@@ -24504,7 +24504,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-25T21:25:02Z",
+    "updated_utc": "2026-06-25T21:30:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -48672,9 +48672,9 @@
     },
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
-      "status": "WAITING_OVERLAP",
-      "updated_utc": "2026-06-25T21:25:15Z",
-      "current_step": "validation_overlap_running",
+      "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
+      "updated_utc": "2026-06-25T21:30:13Z",
+      "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
         "movies": 7498,
@@ -48698,17 +48698,7 @@
       "decision_qa_status": "UNKNOWN",
       "concurrent_stream_qa_status": "UNKNOWN",
       "ignored_overlap": [],
-      "overlap_running": [
-        {
-          "name": "ScarFLIX_v2_DurablePlatformGateRunner",
-          "ok": true,
-          "status": "Running",
-          "scheduled_state": "Enabled",
-          "last_run": "26/06/2026 7:20:02 AM",
-          "last_result": "-2147020576",
-          "next_run": "N/A"
-        }
-      ],
+      "overlap_running": [],
       "actions": [
         {
           "action": "trigger_plex_scans_materialized",
@@ -48716,21 +48706,21 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 29976
+              "pid": 41300
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 27916
+              "pid": 38764
             }
           ]
         }
       ],
-      "next_action": "Wait for current ScarFLIX validation task to finish."
+      "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1529217,
-    "safe_pipeline_log_age_seconds": 1586101,
+    "canary_status_age_seconds": 1529514,
+    "safe_pipeline_log_age_seconds": 1586399,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -48747,7 +48737,7 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=20500"
+        "detail": "pid=17908"
       },
       {
         "action": "run_playback_qa_controller",
@@ -48757,7 +48747,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=13800"
+        "detail": "pid=36252"
       }
     ],
     "blockers": []
@@ -48812,9 +48802,9 @@
   },
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
-    "status": "WAITING_OVERLAP",
-    "updated_utc": "2026-06-25T21:25:15Z",
-    "current_step": "validation_overlap_running",
+    "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
+    "updated_utc": "2026-06-25T21:30:13Z",
+    "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
       "movies": 7498,
@@ -48838,17 +48828,7 @@
     "decision_qa_status": "UNKNOWN",
     "concurrent_stream_qa_status": "UNKNOWN",
     "ignored_overlap": [],
-    "overlap_running": [
-      {
-        "name": "ScarFLIX_v2_DurablePlatformGateRunner",
-        "ok": true,
-        "status": "Running",
-        "scheduled_state": "Enabled",
-        "last_run": "26/06/2026 7:20:02 AM",
-        "last_result": "-2147020576",
-        "next_run": "N/A"
-      }
-    ],
+    "overlap_running": [],
     "actions": [
       {
         "action": "trigger_plex_scans_materialized",
@@ -48856,16 +48836,16 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 29976
+            "pid": 41300
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 27916
+            "pid": 38764
           }
         ]
       }
     ],
-    "next_action": "Wait for current ScarFLIX validation task to finish."
+    "next_action": "Quarantine failed materialized source/release and keep title retryable."
   }
 }
