@@ -1,17 +1,16 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-25T11:36:49Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
-Shows requested: 1
-Episodes enumerated: 7
-Episodes already staged: 1
+Updated UTC: 2026-06-25T11:37:49Z
+Status: HELD_SENTINEL_ALERT_HIGH
+Shows requested: 0
+Episodes enumerated: 0
+Episodes already staged: 0
 Episodes newly staged: 0
-Review: 6
+Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Q-Force: enumerated=7; staged=0; already=1; review=6; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
@@ -28,4 +27,4 @@ Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 - source_urls_not_written_to_public_status: true
 - whole_show_intent: true
 
-Next safe action: Run TV-first private stage validator across the expanded whole-show private stage set, then keep candidates held until a TV-specific publication gate exists and passes.
+Next safe action: Keep TV whole-show staging held until Sentinel clears.
