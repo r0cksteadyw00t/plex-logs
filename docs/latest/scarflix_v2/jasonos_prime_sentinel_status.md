@@ -1,33 +1,32 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-25T16:40:04Z
-Status: REVIEW
-Alert level: MEDIUM
+Updated UTC: 2026-06-25T16:43:05Z
+Status: ALERT
+Alert level: HIGH
 Jason action required: false
-Codex action required: false
+Codex action required: true
 
 ## Signals
 - controller_status: RUNNING
 - controller_milestone: PLATFORM_GATE_RUNNING
-- controller_age_minutes: 0
+- controller_age_minutes: 3
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 10
+- watchdog_age_minutes: 3
 - dashboard_status: PASS
-- dashboard_age_minutes: 5
-- mirror_status: PASS
-- mirror_age_minutes: 2
+- dashboard_age_minutes: 2
+- mirror_status: RUNNING
+- mirror_age_minutes: 0
 - checkpoint_status: REVIEW
 - checkpoint_step: platform_gate_review
-- checkpoint_age_minutes: 14
-- durable_platform_gate_age_minutes: 14
+- checkpoint_age_minutes: 17
+- durable_platform_gate_age_minutes: 17
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=34156; run pid=43920
-- ScarFLIX_v2_Watchdog_StallDetector: platform_checkpoint_stale (PASS) enable pid=35328; run pid=40624
-- ScarFLIX_v2_AutonomousController: platform_checkpoint_stale (PASS) enable pid=35332; run pid=22224
-- ScarFLIX_v2_DurablePlatformGateRunner: platform_checkpoint_stale (PASS) enable pid=21156; run pid=42680
+- ScarFLIX_v2_Watchdog_StallDetector: platform_checkpoint_stale (PASS) enable pid=42140; run pid=42204
+- ScarFLIX_v2_AutonomousController: platform_checkpoint_stale (PASS) enable pid=40168; run pid=23488
+- ScarFLIX_v2_DurablePlatformGateRunner: platform_checkpoint_stale (PASS) enable pid=40068; run pid=19620
 
 ## Notes
-- None.
+- Same unresolved sentinel signature repeated for three cycles.
