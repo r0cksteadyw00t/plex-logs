@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-25T08:45:25.865Z
+Updated UTC: 2026-06-25T09:00:07.274Z
 Source: live status merge
 
-- 2026-06-25T08:44:53Z - Autonomous controller: controller_already_running: existing controller lock is active
+- 2026-06-25T08:55:31Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=31288; child_pid=
+- 2026-06-25T08:55:31Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-25T08:55:25.403Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-25T08:55:25Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-25T08:55:02Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
+- 2026-06-25T08:45:04Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-25T08:44:52Z - Durable PlatformGate runner RUNNING: Step existing_durable_owner_active; owner_pid=16036; child_pid=
 - 2026-06-25T08:44:52Z - PlatformGate checkpoint RUNNING: Step existing_durable_owner_active; visible=unknown; blockers=0
-- 2026-06-25T08:35:32Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=31052; child_pid=
-- 2026-06-25T08:35:32Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-25T08:35:25.650Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-25T08:35:25Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
-- 2026-06-25T08:35:02Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-25T06:19:13Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-25T06:10:04Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-23T14:56:04Z - Durable PlatformGate runner FAIL: Step runner_exception; owner_pid=53476; child_pid=
