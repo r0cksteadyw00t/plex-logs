@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-25T01:22:02Z
+Updated UTC: 2026-06-25T01:36:06Z
 Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
-Episodes enumerated: 2
-Episodes already staged: 2
+Episodes enumerated: 5
+Episodes already staged: 1
 Episodes newly staged: 0
-Review: 0
+Review: 4
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Better Call Saul: enumerated=2; staged=0; already=2; review=0; source=request_episode_targets
+- Q-Force: enumerated=5; staged=0; already=1; review=4; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
