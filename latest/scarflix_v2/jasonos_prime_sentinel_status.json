@@ -1,50 +1,33 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "REVIEW",
-  "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-25T17:55:01Z",
+  "status": "PASS",
+  "alert_level": "LOW",
+  "updated_utc": "2026-06-25T18:00:02Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
   "repeat_count": 1,
   "signals": {
-    "controller_status": "RUNNING",
+    "controller_status": "WAITING_RETRY",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 1,
+    "controller_age_minutes": 61,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 2,
+    "watchdog_age_minutes": 0,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 5,
     "mirror_status": "PASS",
     "mirror_age_minutes": 2,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 19,
-    "durable_platform_gate_age_minutes": 19,
-    "platform_progress_fresh": false
+    "checkpoint_age_minutes": 0,
+    "durable_platform_gate_age_minutes": 0,
+    "platform_progress_fresh": true
   },
-  "recovery_actions": [
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=27224; run pid=41204"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=32576; run pid=40020"
-    },
-    {
-      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=41412; run pid=10492"
-    }
+  "recovery_actions": [],
+  "notes": [
+    "Controller status is stale, but durable PlatformGate progress is fresh."
   ],
-  "notes": [],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
