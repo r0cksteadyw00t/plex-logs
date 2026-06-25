@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v241",
-      "created_at": "2026-06-25T07:26:16Z",
-      "expires_at": "2026-06-26T07:26:16Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v242",
+      "created_at": "2026-06-25T07:43:01Z",
+      "expires_at": "2026-06-26T07:43:01Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -13,15 +13,14 @@
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
+        "max_retries": 0,
         "backoff_seconds": 0
       },
       "actions": [
         {
-          "action_type": "write_status_summary",
+          "action_type": "write_strategy_note",
           "parameters": {
-            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN pending forensic review of scanner latency. Monitor active every 15 minutes with 0 pending deltas. Full-season gate at 28/28 private validation target. No visible aliases, no webdav_map mutation, no publication. Recommend continued natural retry monitoring only.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v241"
+            "summary": "TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Continue 15-minute natural retry monitoring only. No alternate-source lane, no publication, no webdav_map mutation until explicit local clearance. Full-season gate target remains 28/28 private validation."
           }
         }
       ],
@@ -29,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-25T07:26:16Z",
+  "updated_utc": "2026-06-25T07:43:01Z",
   "source": "grok_api"
 }
