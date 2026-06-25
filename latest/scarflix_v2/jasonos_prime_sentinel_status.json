@@ -2,52 +2,52 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "REVIEW",
   "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-25T17:25:02Z",
+  "updated_utc": "2026-06-25T17:29:51Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 1,
+  "repeat_count": 2,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 5,
+    "controller_age_minutes": 0,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 5,
+    "watchdog_age_minutes": 10,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 5,
-    "mirror_status": "PASS",
-    "mirror_age_minutes": 2,
+    "mirror_status": "RUNNING",
+    "mirror_age_minutes": 0,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 9,
-    "durable_platform_gate_age_minutes": 9,
+    "checkpoint_age_minutes": 14,
+    "durable_platform_gate_age_minutes": 14,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
     {
-      "task": "autonomous_controller.lock",
-      "reason": "stale_lock",
+      "task": "ScarFLIX_v2_Watchdog_StallDetector",
+      "reason": "watchdog_stale_or_failed",
       "result": "PASS",
-      "note": "removed age_min=6 backup=D:/PlexTools/state/scarflix_v2/autonomous_controller.lock.stale_20260625172502.bak"
+      "note": "enable pid=40928; run pid=40704"
     },
     {
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=42000; run pid=14216"
+      "note": "enable pid=34324; run pid=4060"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=20500; run pid=42380"
+      "note": "enable pid=37820; run pid=35664"
     },
     {
       "task": "ScarFLIX_v2_DurablePlatformGateRunner",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=34668; run pid=9332"
+      "note": "enable pid=2200; run pid=7076"
     }
   ],
   "notes": [],
