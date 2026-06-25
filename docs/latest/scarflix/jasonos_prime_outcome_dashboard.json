@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-25T23:00:03Z",
+  "updated_utc": "2026-06-25T23:05:03Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -124,19 +124,19 @@
     "state": "STALE_STATUS",
     "summary": "Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 53,
-    "platform_child_progress_age_minutes": 724,
+    "controller_updated_age_minutes": 48,
+    "platform_child_progress_age_minutes": 729,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-25T23:04:00Z",
+    "next_check_utc": "2026-06-25T23:08:07Z",
     "next_check_age_minutes": 0,
-    "platform_runner_running": false,
+    "platform_runner_running": true,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260625.log",
     "last_progress_utc": "2026-06-25T10:55:47.558Z",
-    "age_minutes": 724,
+    "age_minutes": 729,
     "last_line": "[2026-06-25T10:55:47Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -151,7 +151,7 @@
   "sentinel_status": {
     "status": "REVIEW",
     "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-25T22:55:01Z",
+    "updated_utc": "2026-06-25T23:00:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -24347,7 +24347,7 @@
       "detail": "Step platform_gate_review; visible=unknown; blockers=0"
     },
     {
-      "utc": "2026-06-25T22:07:07Z",
+      "utc": "2026-06-25T22:17:23Z",
       "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
       "detail": "attempted rclone mount self-heal; mount not ready yet"
     },
@@ -24504,7 +24504,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-25T23:00:03Z",
+    "updated_utc": "2026-06-25T23:05:03Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -48673,7 +48673,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "WAITING_OVERLAP",
-      "updated_utc": "2026-06-25T23:00:18Z",
+      "updated_utc": "2026-06-25T23:05:14Z",
       "current_step": "validation_overlap_running",
       "jason_action_required": false,
       "counts": {
@@ -48704,7 +48704,7 @@
           "ok": true,
           "status": "Running",
           "scheduled_state": "Enabled",
-          "last_run": "26/06/2026 9:00:03 AM",
+          "last_run": "26/06/2026 9:05:02 AM",
           "last_result": "-2147020576",
           "next_run": "N/A"
         }
@@ -48716,12 +48716,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 36104
+              "pid": 41108
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 39612
+              "pid": 6004
             }
           ]
         }
@@ -48729,8 +48729,8 @@
       "next_action": "Wait for current ScarFLIX validation task to finish."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1534920,
-    "safe_pipeline_log_age_seconds": 1591804,
+    "canary_status_age_seconds": 1535216,
+    "safe_pipeline_log_age_seconds": 1592100,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -48747,7 +48747,7 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=6824"
+        "detail": "pid=8076"
       },
       {
         "action": "run_playback_qa_controller",
@@ -48757,7 +48757,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=12888"
+        "detail": "pid=11848"
       }
     ],
     "blockers": []
@@ -48813,7 +48813,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "WAITING_OVERLAP",
-    "updated_utc": "2026-06-25T23:00:18Z",
+    "updated_utc": "2026-06-25T23:05:14Z",
     "current_step": "validation_overlap_running",
     "jason_action_required": false,
     "counts": {
@@ -48844,7 +48844,7 @@
         "ok": true,
         "status": "Running",
         "scheduled_state": "Enabled",
-        "last_run": "26/06/2026 9:00:03 AM",
+        "last_run": "26/06/2026 9:05:02 AM",
         "last_result": "-2147020576",
         "next_run": "N/A"
       }
@@ -48856,12 +48856,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 36104
+            "pid": 41108
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 39612
+            "pid": 6004
           }
         ]
       }
