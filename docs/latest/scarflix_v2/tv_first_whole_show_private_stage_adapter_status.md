@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-25T16:55:04Z
-Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
+Updated UTC: 2026-06-25T18:17:46Z
+Status: REVIEW_PARTIAL_WHOLE_SHOW_PRIVATE_STAGE
 Shows requested: 1
-Episodes enumerated: 1
-Episodes already staged: 0
-Episodes newly staged: 0
-Review: 1
+Episodes enumerated: 7
+Episodes already staged: 1
+Episodes newly staged: 1
+Review: 5
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Australian Ninja Warrior: enumerated=1; staged=0; already=0; review=1; source=request_episode_targets
+- Q-Force: enumerated=7; staged=1; already=1; review=5; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
