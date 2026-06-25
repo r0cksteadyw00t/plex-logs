@@ -1,20 +1,20 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-25T23:35:02Z",
+  "updated_utc": "2026-06-25T23:35:28.980Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
     "Keep long ScarFLIX validation detached under local controller ownership."
   ],
   "overall_timeline_estimate": "First major milestone: 1-3 days depending on PlatformGate/provider result.",
-  "current_milestone": "PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED",
+  "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "truth_metrics": {
     "movie_strm_count": 7498,
     "tv_strm_count": 1,
     "total_strm_count": 7499,
-    "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
+    "primary_delivery_metric": "materialized_or_webdav_backed_plex_playback_success",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
     "legacy_resolver_default_allowed": false,
@@ -104,8 +104,7 @@
     "platform_gate_blocked_by": "snapshot_scoped_qa",
     "visible_qa_is_not_delivery": true,
     "ai_8791_8805_reachability_is_not_usability": true,
-    "dashboard_basis": "actual direct STRM filesystem counts, PlatformGate snapshot status, GrokBuild forensic snapshot",
-    "plex_safe_webdav_visible_rows": null
+    "dashboard_basis": "actual direct STRM filesystem counts plus latest local status JSON"
   },
   "platform_health_contract": {
     "platform_gate_requires": "core_snapshot_qa",
@@ -120,22 +119,22 @@
     "blocked_by": "snapshot_scoped_qa"
   },
   "automation_health": {
-    "state": "WATCHING_FOR_STALL",
-    "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 23,
-    "platform_child_progress_age_minutes": 755,
-    "mirror_updated_age_minutes": 5,
-    "next_check_utc": "2026-06-25T23:34:34Z",
+    "controller_updated_age_minutes": 1,
+    "platform_child_progress_age_minutes": 760,
+    "mirror_updated_age_minutes": 2,
+    "next_check_utc": "2026-06-25T23:39:39Z",
     "next_check_age_minutes": 0,
-    "platform_runner_running": true,
+    "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260625.log",
     "last_progress_utc": "2026-06-25T10:55:47.558Z",
-    "age_minutes": 754,
+    "age_minutes": 759,
     "last_line": "[2026-06-25T10:55:47Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -144,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-25T23:24:49Z",
+    "updated_utc": "2026-06-25T23:34:42Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-25T23:25:02Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-25T23:30:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -311,6 +310,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-25T23:34:39Z",
+      "title": "Autonomous controller: controller_already_running",
+      "detail": "existing controller lock is active"
+    },
+    {
       "utc": "2026-06-25T23:25:57Z",
       "title": "Durable PlatformGate runner REVIEW",
       "detail": "Step platform_gate_review; owner_pid=32904; child_pid="
@@ -329,11 +333,6 @@
       "utc": "2026-06-25T23:24:41Z",
       "title": "PlatformGate checkpoint RUNNING",
       "detail": "Step running_platform_gate_attempt_1; visible=unknown; blockers=0"
-    },
-    {
-      "utc": "2026-06-25T23:24:36Z",
-      "title": "Autonomous controller: controller_already_running",
-      "detail": "existing controller lock is active"
     },
     {
       "utc": "2026-06-25T23:08:12Z",
@@ -479,13 +478,5 @@
     "status_html": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_outcome_dashboard.html",
     "index_html": "D:/PlexTools/public/latest/scarflix_v2/index.html",
     "log": "D:/PlexTools/logs/jasonos_prime_outcome_dashboard.log"
-  },
-  "grokbuild_forensic_agent": {
-    "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-25T23:35:02Z",
-    "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
-    "implementation": "node_native",
-    "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
-    "peer_review_prompt": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_peer_review_prompt.md"
   }
 }
