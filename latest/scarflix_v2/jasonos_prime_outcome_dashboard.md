@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-25T21:40:11.075Z
+Updated UTC: 2026-06-25T21:45:19.541Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: STALE_STATUS
+Automation state: PROGRESSING
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -21,7 +21,7 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-25T21:25:18Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=7499; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-25T21:32:21Z - Autonomous controller: controller_already_running: existing controller lock is active
+- 2026-06-25T21:42:24Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-25T21:25:18Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=13216; child_pid=
 - 2026-06-25T21:25:18Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-25T20:37:50Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
@@ -29,9 +29,9 @@ Recent Achievements:
 - 2026-06-25T16:04:52Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39620; child_pid=3816
 
 Heartbeat / Stall Check:
-- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 8 min ago
-- Platform child progress: 644 min ago
+- Background controller and worker tasks are expected to continue without Codex.
+- Controller updated: 3 min ago
+- Platform child progress: 649 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
