@@ -1,22 +1,22 @@
 {
   "component": "jasonos_prime_playback_qa_controller",
-  "status": "WAITING_OVERLAP",
-  "updated_utc": "2026-06-25T18:55:39Z",
-  "current_step": "validation_overlap_running",
+  "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
+  "updated_utc": "2026-06-25T19:10:13Z",
+  "current_step": "materialized_decision_failed",
   "jason_action_required": false,
   "counts": {
-    "movies": 360,
+    "movies": 120,
     "tv": 0,
-    "total": 360
+    "total": 120
   },
   "canary_status": "PAUSED_PLAYBACK_FIX",
   "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
   "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-  "direct_strm_admission_status": "RUNNING_ALREADY",
-  "direct_strm_admission_checked_visible": 0,
+  "direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
+  "direct_strm_admission_checked_visible": 360,
   "direct_strm_admission_passed_visible": 0,
-  "direct_strm_admission_quarantined_this_run": 0,
-  "direct_strm_retry_held_count": 0,
+  "direct_strm_admission_quarantined_this_run": 360,
+  "direct_strm_retry_held_count": 3385,
   "materialized_primary": true,
   "materialized_visible_verified": 18,
   "materialized_decision_qa_status": "REVIEW",
@@ -26,17 +26,7 @@
   "decision_qa_status": "UNKNOWN",
   "concurrent_stream_qa_status": "UNKNOWN",
   "ignored_overlap": [],
-  "overlap_running": [
-    {
-      "name": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "ok": true,
-      "status": "Running",
-      "scheduled_state": "Enabled",
-      "last_run": "26/06/2026 4:55:23 AM",
-      "last_result": "-2147020576",
-      "next_run": "N/A"
-    }
-  ],
+  "overlap_running": [],
   "actions": [
     {
       "action": "trigger_plex_scans_materialized",
@@ -44,15 +34,15 @@
         {
           "ok": true,
           "section": "5",
-          "pid": 42228
+          "pid": 15468
         },
         {
           "ok": true,
           "section": "6",
-          "pid": 40488
+          "pid": 43248
         }
       ]
     }
   ],
-  "next_action": "Wait for current ScarFLIX validation task to finish."
+  "next_action": "Quarantine failed materialized source/release and keep title retryable."
 }
