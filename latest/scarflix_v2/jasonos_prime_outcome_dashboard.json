@@ -1,25 +1,25 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-25T20:40:02Z",
+  "updated_utc": "2026-06-25T20:45:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
     "Keep long ScarFLIX validation detached under local controller ownership."
   ],
   "overall_timeline_estimate": "First major milestone: 1-3 days depending on PlatformGate/provider result.",
-  "current_milestone": "PLATFORM_GATE_RUNNING",
+  "current_milestone": "PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 75,
+    "movie_strm_count": 120,
     "tv_strm_count": 0,
-    "total_strm_count": 75,
+    "total_strm_count": 120,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
     "legacy_resolver_default_allowed": false,
     "legacy_resolver_strm_count": 0,
-    "materialized_or_webdav_strm_count": 360,
+    "materialized_or_webdav_strm_count": 53,
     "materialized_webdav_file_count": 0,
     "materialized_webdav_artifact_count": 0,
     "materialized_current_publisher_visible_links": 0,
@@ -62,7 +62,7 @@
     "direct_strm_mirror_created": 0,
     "direct_strm_mirror_updated": 0,
     "direct_strm_mirror_written_count": 0,
-    "direct_strm_admission_status": "RUNNING_ALREADY",
+    "direct_strm_admission_status": "FAIL_ENGINEERING",
     "direct_strm_admission_checked_visible": 0,
     "direct_strm_admission_passed_visible": 0,
     "direct_strm_admission_failed_visible": null,
@@ -121,22 +121,22 @@
     "blocked_by": "snapshot_scoped_qa"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "WATCHING_FOR_STALL",
+    "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 2,
-    "platform_child_progress_age_minutes": 579,
+    "controller_updated_age_minutes": 25,
+    "platform_child_progress_age_minutes": 584,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-25T20:37:50Z",
+    "next_check_utc": "2026-06-25T20:43:01Z",
     "next_check_age_minutes": 0,
-    "platform_runner_running": false,
+    "platform_runner_running": true,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260625.log",
     "last_progress_utc": "2026-06-25T10:55:47.558Z",
-    "age_minutes": 579,
+    "age_minutes": 584,
     "last_line": "[2026-06-25T10:55:47Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-25T20:33:03Z",
+    "updated_utc": "2026-06-25T20:38:05Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "REVIEW",
     "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-25T20:30:04Z",
+    "updated_utc": "2026-06-25T20:35:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -165,15 +165,20 @@
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
+    "component": "scarflix_v2_direct_strm_admission_gate",
+    "status": "FAIL_ENGINEERING",
+    "updated_utc": "2026-06-25T20:39:35Z",
+    "reason": "ENOENT: no such file or directory, rename 'D:\\StremioCatalog\\_Hybrid\\Movies\\Making of Lord of the Flies (2026)\\Making of Lord of the Flies (2026) - ScarFLIX_part-b09a1cf2a2d604d0.strm' -> 'D:\\PlexTools\\state\\scarflix_v2\\direct_strm_quarantine\\retry_visible_removed\\movies\\Making of Lord of the Flies (2026)\\Making of Lord of the Flies (2026) - ScarFLIX_part-b09a1cf2a2d604d0.strm.retry_20260625203935'",
+    "jason_action_required": false,
     "counts_before": {
-      "movies": 240,
+      "movies": 185,
       "tv": 0,
-      "total": 240
+      "total": 185
     },
     "counts_after": {
-      "movies": 240,
+      "movies": 185,
       "tv": 0,
-      "total": 240
+      "total": 185
     },
     "checked_visible": 0,
     "passed_visible": 0,
@@ -185,16 +190,7 @@
     "top_reason_codes": [],
     "retry_queue_items": [],
     "recent_quarantined": [],
-    "component": "scarflix_v2_direct_strm_admission_gate",
-    "status": "RUNNING_ALREADY",
-    "updated_utc": "2026-06-25T20:30:19Z",
-    "existing_lock": {
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "pid": 41020,
-      "started_utc": "2026-06-25T20:25:26Z",
-      "updated_utc": "2026-06-25T20:25:26Z"
-    },
-    "jason_action_required": false
+    "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260625.log"
   },
   "staged_candidate_publisher": {
     "component": "scarflix_v2_staged_candidate_publisher",
@@ -362,6 +358,11 @@
       "detail": "Step platform_gate_review; visible=unknown; blockers=0"
     },
     {
+      "utc": "2026-06-25T20:15:32Z",
+      "title": "Autonomous controller: stale_platform_gate_backoff_retry",
+      "detail": "PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry"
+    },
+    {
       "utc": "2026-06-25T19:21:43Z",
       "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
       "detail": "attempted rclone mount self-heal; mount not ready yet"
@@ -410,11 +411,6 @@
       "utc": "2026-06-20T09:48:26Z",
       "title": "Durable PlatformGate runner PASS",
       "detail": "Step platform_gate_pass; owner_pid=43560; child_pid="
-    },
-    {
-      "utc": "2026-06-20T09:48:26Z",
-      "title": "PlatformGate checkpoint PASS",
-      "detail": "Step platform_gate_pass; visible=1; blockers=0"
     }
   ],
   "outcomes": [
@@ -440,7 +436,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-19T04:57:13Z - materialized canary Plex decision QA",
-      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=249, rows_found=143, checked=124, decision=103/124, failed=21, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=360; materialized visible links=0 (publisher=0, scan=0). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=360, tv=0, total=360. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=4/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=RUNNING_ALREADY, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=REVIEW/REVIEW; durable=REVIEW; owner_pid=44668; child_pid=.",
+      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=249, rows_found=143, checked=124, decision=103/124, failed=21, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=0; materialized/WebDAV .strm=53; materialized visible links=0 (publisher=0, scan=0). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=54, tv=0, total=54. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=4/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=FAIL_ENGINEERING, checked=0, passed_visible=0, quarantined_this_run=0, retry_held=0. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=REVIEW/REVIEW; durable=REVIEW; owner_pid=44668; child_pid=.",
       "progress": 23,
       "eta": "after all-visible materialized QA passes",
       "stall_risk": "Medium"
@@ -449,7 +445,7 @@
       "outcome": "Fast-Track Accelerator",
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
       "last_change": "2026-06-25T05:32:02Z - PLATFORM_GATE_RUNNING",
-      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=360.",
+      "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=54.",
       "progress": 25,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
@@ -503,7 +499,7 @@
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
       "last_change": "2026-06-25T20:16:28Z - Durable PlatformGate ownership active",
-      "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=360; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
+      "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=54; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
       "progress": 15,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
       "stall_risk": "Medium"
@@ -519,13 +515,13 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-25T20:35:01Z",
+    "updated_utc": "2026-06-25T20:40:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
-      "legacy_movie_strm": 360,
+      "legacy_movie_strm": 39,
       "legacy_tv_strm": 0,
-      "legacy_total_strm": 360,
+      "legacy_total_strm": 39,
       "plex_safe_webdav_visible_rows": null
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
@@ -580,15 +576,20 @@
       "log": "D:\\PlexTools\\logs\\scarflix_v2_direct_strm_mirror_20260608.log"
     },
     "direct_strm_admission_gate_status": {
+      "component": "scarflix_v2_direct_strm_admission_gate",
+      "status": "FAIL_ENGINEERING",
+      "updated_utc": "2026-06-25T20:39:35Z",
+      "reason": "ENOENT: no such file or directory, rename 'D:\\StremioCatalog\\_Hybrid\\Movies\\Making of Lord of the Flies (2026)\\Making of Lord of the Flies (2026) - ScarFLIX_part-b09a1cf2a2d604d0.strm' -> 'D:\\PlexTools\\state\\scarflix_v2\\direct_strm_quarantine\\retry_visible_removed\\movies\\Making of Lord of the Flies (2026)\\Making of Lord of the Flies (2026) - ScarFLIX_part-b09a1cf2a2d604d0.strm.retry_20260625203935'",
+      "jason_action_required": false,
       "counts_before": {
-        "movies": 240,
+        "movies": 185,
         "tv": 0,
-        "total": 240
+        "total": 185
       },
       "counts_after": {
-        "movies": 240,
+        "movies": 185,
         "tv": 0,
-        "total": 240
+        "total": 185
       },
       "checked_visible": 0,
       "passed_visible": 0,
@@ -600,16 +601,7 @@
       "top_reason_codes": [],
       "retry_queue_items": [],
       "recent_quarantined": [],
-      "component": "scarflix_v2_direct_strm_admission_gate",
-      "status": "RUNNING_ALREADY",
-      "updated_utc": "2026-06-25T20:30:19Z",
-      "existing_lock": {
-        "component": "scarflix_v2_direct_strm_admission_gate",
-        "pid": 41020,
-        "started_utc": "2026-06-25T20:25:26Z",
-        "updated_utc": "2026-06-25T20:25:26Z"
-      },
-      "jason_action_required": false
+      "log": "D:/PlexTools/logs/scarflix_v2_direct_strm_admission_gate_20260625.log"
     },
     "staged_candidate_count": 43,
     "staged_candidate_publisher_status": {
@@ -703,18 +695,18 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "WAITING_OVERLAP",
-      "updated_utc": "2026-06-25T20:35:16Z",
+      "updated_utc": "2026-06-25T20:40:13Z",
       "current_step": "validation_overlap_running",
       "jason_action_required": false,
       "counts": {
-        "movies": 360,
+        "movies": 35,
         "tv": 0,
-        "total": 360
+        "total": 35
       },
       "canary_status": "PAUSED_PLAYBACK_FIX",
       "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
       "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-      "direct_strm_admission_status": "RUNNING_ALREADY",
+      "direct_strm_admission_status": "FAIL_ENGINEERING",
       "direct_strm_admission_checked_visible": 0,
       "direct_strm_admission_passed_visible": 0,
       "direct_strm_admission_quarantined_this_run": 0,
@@ -734,7 +726,7 @@
           "ok": true,
           "status": "Running",
           "scheduled_state": "Enabled",
-          "last_run": "26/06/2026 6:35:02 AM",
+          "last_run": "26/06/2026 6:40:03 AM",
           "last_result": "-2147020576",
           "next_run": "N/A"
         }
@@ -746,12 +738,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 44500
+              "pid": 11652
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 34528
+              "pid": 23104
             }
           ]
         }
@@ -759,8 +751,8 @@
       "next_action": "Wait for current ScarFLIX validation task to finish."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1526218,
-    "safe_pipeline_log_age_seconds": 1583102,
+    "canary_status_age_seconds": 1526515,
+    "safe_pipeline_log_age_seconds": 1583400,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -777,7 +769,7 @@
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=41604"
+        "detail": "pid=8916"
       },
       {
         "action": "run_playback_qa_controller",
@@ -787,7 +779,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=5304"
+        "detail": "pid=40028"
       }
     ],
     "blockers": []
@@ -843,18 +835,18 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "WAITING_OVERLAP",
-    "updated_utc": "2026-06-25T20:35:16Z",
+    "updated_utc": "2026-06-25T20:40:13Z",
     "current_step": "validation_overlap_running",
     "jason_action_required": false,
     "counts": {
-      "movies": 360,
+      "movies": 35,
       "tv": 0,
-      "total": 360
+      "total": 35
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
     "canary_milestone": "CANARY_PAUSED_PLAYBACK_FIX",
     "direct_strm_mirror_status": "PAUSED_PLAYBACK_FIX",
-    "direct_strm_admission_status": "RUNNING_ALREADY",
+    "direct_strm_admission_status": "FAIL_ENGINEERING",
     "direct_strm_admission_checked_visible": 0,
     "direct_strm_admission_passed_visible": 0,
     "direct_strm_admission_quarantined_this_run": 0,
@@ -874,7 +866,7 @@
         "ok": true,
         "status": "Running",
         "scheduled_state": "Enabled",
-        "last_run": "26/06/2026 6:35:02 AM",
+        "last_run": "26/06/2026 6:40:03 AM",
         "last_result": "-2147020576",
         "next_run": "N/A"
       }
@@ -886,12 +878,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 44500
+            "pid": 11652
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 34528
+            "pid": 23104
           }
         ]
       }
@@ -900,7 +892,7 @@
   },
   "grokbuild_forensic_agent": {
     "status": "REVIEW_STALE_PROGRESS",
-    "updated_utc": "2026-06-25T20:40:02Z",
+    "updated_utc": "2026-06-25T20:45:02Z",
     "task_name": "JasonOS_Prime_GrokBuild_ForensicAgent",
     "implementation": "node_native",
     "status_file": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grokbuild_agent_status.json",
