@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-25T15:05:20.287Z
+Updated UTC: 2026-06-25T15:10:22.005Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -21,9 +21,9 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-25T15:04:10Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=120; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-25T15:07:48Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-25T15:04:10Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39980; child_pid=
 - 2026-06-25T15:04:10Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-25T15:02:48Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-25T14:19:57Z - Durable PlatformGate runner RUNNING: Step existing_durable_owner_active; owner_pid=19740; child_pid=
 - 2026-06-25T14:19:57Z - PlatformGate checkpoint RUNNING: Step existing_durable_owner_active; visible=unknown; blockers=0
 - 2026-06-25T14:12:17Z - Autonomous controller: PLATFORM_GATE_RUNNING: relaunched stale PlatformGate detached runner once
@@ -31,7 +31,7 @@ Recent Achievements:
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 3 min ago
-- Platform child progress: 250 min ago
+- Platform child progress: 255 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
