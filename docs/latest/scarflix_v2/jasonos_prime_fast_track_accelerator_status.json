@@ -1,8 +1,8 @@
 {
   "component": "jasonos_prime_fast_track_accelerator",
   "status": "PASS",
-  "updated_utc": "2026-06-25T01:11:02Z",
-  "duration_seconds": 1,
+  "updated_utc": "2026-06-25T01:16:03Z",
+  "duration_seconds": 2,
   "mode": "fast_track_safe_acceleration",
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "next_autonomous_action": "Keep Durable PlatformGate alive, publish status, and prepare candidate-source model.",
@@ -18,7 +18,7 @@
   "tv_first_priority_gate": {
     "component": "jasonos_prime_tv_first_expansion_priority_gate",
     "status": "HELD_MATERIALIZED_QA_REQUIRED",
-    "updated_utc": "2026-06-25T01:11:01Z",
+    "updated_utc": "2026-06-25T01:16:02Z",
     "user_priority": "TV first if movies and TV cannot progress concurrently",
     "enforce_tv_first_when_concurrency_limited": true,
     "generic_movie_or_unscoped_expansion_allowed": false,
@@ -83,12 +83,12 @@
   },
   "status_inputs": {
     "platform_gate": "REVIEW",
-    "checkpoint": "REVIEW",
-    "checkpoint_step": "platform_gate_review",
-    "durable_runner": "REVIEW",
-    "durable_step": "platform_gate_review",
-    "durable_owner_pid": 36424,
-    "durable_child_pid": "",
+    "checkpoint": "RUNNING",
+    "checkpoint_step": "running_platform_gate_attempt_1",
+    "durable_runner": "RUNNING",
+    "durable_step": "running_platform_gate_attempt_1",
+    "durable_owner_pid": 4928,
+    "durable_child_pid": 16428,
     "active_gate_transient_failures": 0,
     "active_gate_prunable_failures": 0,
     "controller_transient_retry_count": 0,
@@ -157,15 +157,8 @@
     {
       "action": "lightweight_status_probe",
       "status": "PASS",
-      "pid": 13228,
+      "pid": 18868,
       "error": ""
-    },
-    {
-      "action": "task_run",
-      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "reason": "platform_gate_not_pass",
-      "status": "PASS",
-      "error": " "
     }
   ],
   "files": {
