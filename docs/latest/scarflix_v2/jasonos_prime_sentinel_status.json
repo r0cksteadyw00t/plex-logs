@@ -2,26 +2,26 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "REVIEW",
   "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-25T23:00:03Z",
+  "updated_utc": "2026-06-25T23:05:02Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 1,
+  "repeat_count": 2,
   "signals": {
     "controller_status": "WAITING_RETRY",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 53,
+    "controller_age_minutes": 48,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 1,
+    "watchdog_age_minutes": 5,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 5,
     "mirror_status": "PASS",
     "mirror_age_minutes": 2,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 19,
-    "durable_platform_gate_age_minutes": 19,
+    "checkpoint_age_minutes": 24,
+    "durable_platform_gate_age_minutes": 24,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
@@ -29,25 +29,25 @@
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "controller_stale_or_blocked",
       "result": "PASS",
-      "note": "enable pid=7772; run pid=38188"
+      "note": "enable pid=7464; run pid=44072"
     },
     {
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=3908; run pid=11956"
+      "note": "enable pid=33320; run pid=10884"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=36836; run pid=43972"
+      "note": "enable pid=11680; run pid=42328"
     },
     {
       "task": "ScarFLIX_v2_DurablePlatformGateRunner",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=11776; run pid=16584"
+      "note": "enable pid=14036; run pid=42396"
     }
   ],
   "notes": [],
