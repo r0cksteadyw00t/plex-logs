@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-25T23:10:09.910Z
+Updated UTC: 2026-06-25T23:15:37.963Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -10,7 +10,7 @@ Will progress without Codex: true
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
 |---|---|---|---|---:|---|---|
 | Real God-mode Conversational Brain (8791 + 8805) | Full streaming, rich tool calling, traces, autonomous worker triggering, voice and persistent memory. | 2026-06-10T02:27:50Z - daily AI usability smoke test | Daily AI status=PASS. 8791 reachable=true; 8805 health_json=true; streaming_sse=true; tool_traces=true; integrated_8791_tool_bridge=true. | 45% | next: integrate 8805 tool traces into 8791 daily UI | Low |
-| Grok-Codex Autonomous Instruction Loop | 15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions. | 2026-06-25T22:56:08Z - structured instruction loop | Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1. | 75% | active every 15 minutes with Grok API | Low |
+| Grok-Codex Autonomous Instruction Loop | 15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions. | 2026-06-25T23:11:54Z - structured instruction loop | Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1. | 75% | active every 15 minutes with Grok API | Low |
 | ScarFLIX Catalogue Expansion (Mission 001) | Growth beyond 78 items with alternate-source retry and verified Plex playback. | 2026-06-19T04:57:13Z - materialized canary Plex decision QA | Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=249, rows_found=143, checked=124, decision=103/124, failed=21, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=7498; materialized visible links=0 (publisher=0, scan=0). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=7498, tv=1, total=7499. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=4/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_QUARANTINED_VISIBLE_FAILURES, checked=120, passed_visible=0, quarantined_this_run=120, retry_held=3385. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=REVIEW/REVIEW; durable=REVIEW; owner_pid=42940; child_pid=. | 23% | after all-visible materialized QA passes | Medium |
 | Fast-Track Accelerator | Push short autonomous status, prediction, candidate and expansion actions every 5 minutes. | 2026-06-25T05:32:02Z - PLATFORM_GATE_RUNNING | Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=7499. | 25% | runs every 5 minutes | Low |
 | Quiet Background Execution | Routine workers and keepalives run hidden with no desktop console popups. | 2026-06-25T03:56:51Z - scheduled task wrappers refreshed | Status RETIRED_ORCHESTRATOR_OWNED; tasks_updated=0; blockers=0. | 80% | active now | Medium |
@@ -21,9 +21,9 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-25T23:09:35Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=7499; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-25T23:13:12Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-25T23:09:35Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=42940; child_pid=
 - 2026-06-25T23:09:35Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-25T23:08:12Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-25T22:17:23Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-25T20:15:32Z - Autonomous controller: stale_platform_gate_backoff_retry: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
 - 2026-06-25T16:04:52Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39620; child_pid=3816
@@ -31,8 +31,8 @@ Recent Achievements:
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 2 min ago
-- Platform child progress: 734 min ago
-- Mirror updated: 2 min ago
+- Platform child progress: 740 min ago
+- Mirror updated: 3 min ago
 - Platform runner running: false
 - Platform child active: true
 
