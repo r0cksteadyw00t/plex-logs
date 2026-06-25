@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-25T22:25:24.457Z
+Updated UTC: 2026-06-25T22:30:12.058Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: STALE_STATUS
+Automation state: PROGRESSING
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -21,17 +21,17 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-25T22:20:18Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=7499; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-25T22:29:02Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-25T22:20:18Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=41548; child_pid=
 - 2026-06-25T22:20:18Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-25T22:18:53Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-25T20:37:50Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-25T20:15:32Z - Autonomous controller: stale_platform_gate_backoff_retry: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
 - 2026-06-25T16:04:52Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39620; child_pid=3816
 
 Heartbeat / Stall Check:
-- Controller status has not refreshed recently. The scheduled controller should recover on its next cycle.
-- Controller updated: 6 min ago
-- Platform child progress: 690 min ago
+- Background controller and worker tasks are expected to continue without Codex.
+- Controller updated: 1 min ago
+- Platform child progress: 694 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
