@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-25T02:03:52Z
-Instruction: phase0_stabilization_foundation_record_tv_section6_hold_status_v221
+Updated UTC: 2026-06-25T02:20:40Z
+Instruction: phase0_stabilization_foundation_record_tv_section6_hold_status_v222
 
-TV Section 6 publication remains held pending scanner/indexing forensic review. Monitor active with 0 pending events. Full-season pilot (28/28) privately validated but no visible Plex publication. Cooldown active to prevent loops. No mutations performed.
+TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate active (28/28 required). Materialized QA in REVIEW. No legacy resolver activity. Phase 0 stabilization focus maintained.
