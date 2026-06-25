@@ -2,52 +2,46 @@
   "component": "jasonos_prime_sentinel_node",
   "status": "REVIEW",
   "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-25T16:55:03Z",
+  "updated_utc": "2026-06-25T16:58:35Z",
   "duration_seconds": 0,
   "jason_action_required": false,
   "codex_action_required": false,
-  "repeat_count": 2,
+  "repeat_count": 1,
   "signals": {
-    "controller_status": "WAITING_RETRY",
+    "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 92,
+    "controller_age_minutes": 3,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 2,
+    "watchdog_age_minutes": 3,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 0,
+    "dashboard_age_minutes": 3,
     "mirror_status": "RUNNING",
     "mirror_age_minutes": 0,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 9,
-    "durable_platform_gate_age_minutes": 9,
+    "checkpoint_age_minutes": 12,
+    "durable_platform_gate_age_minutes": 12,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
     {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "controller_stale_or_blocked",
-      "result": "PASS",
-      "note": "enable pid=5960; run pid=38008"
-    },
-    {
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=17560; run pid=44428"
+      "note": "enable pid=13724; run pid=26416"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=36848; run pid=42592"
+      "note": "enable pid=40440; run pid=33132"
     },
     {
       "task": "ScarFLIX_v2_DurablePlatformGateRunner",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=37024; run pid=14520"
+      "note": "enable pid=43948; run pid=42652"
     }
   ],
   "notes": [],
