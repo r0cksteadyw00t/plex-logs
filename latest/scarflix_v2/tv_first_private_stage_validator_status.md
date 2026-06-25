@@ -1,14 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-25T02:18:53Z
-Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 2
-Passed: 2
-Review: 0
+Updated UTC: 2026-06-25T04:16:35Z
+Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Checked: 1
+Passed: 0
+Review: 1
 
 ## Results
-- Game of Thrones: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Game of Thrones: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Run with the Wind: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=405; range=; type=application/json; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
 
 ## Safety
 - no_broad_expansion_started: true
@@ -21,4 +20,4 @@ Review: 0
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
+Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
