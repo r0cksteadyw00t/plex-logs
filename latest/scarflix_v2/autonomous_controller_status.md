@@ -1,10 +1,10 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: FAIL_ENGINEERING
-Milestone state: BLOCKED_DECISION
+Status: RUNNING
+Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-26T01:14:11Z
-Current step: controller_exception
+Updated UTC: 2026-06-26T01:19:26Z
+Current step: controller_already_running
 Jason action required: False
 
 ## PlatformGate
@@ -27,8 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: existing controller lock is active
-- next_check_utc: 2026-06-26T01:19:12Z
+- next_check_utc: 2026-06-26T01:24:27Z
 
 ## Blockers
-- Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
-Parameter name: chars"
+- none
