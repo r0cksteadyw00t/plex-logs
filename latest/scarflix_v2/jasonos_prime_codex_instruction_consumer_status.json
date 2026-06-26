@@ -1,38 +1,52 @@
 {
   "component": "jasonos_prime_codex_instruction_consumer",
-  "status": "PASS",
-  "updated_utc": "2026-06-26T01:06:13Z",
+  "status": "REVIEW_SCHEMA",
+  "updated_utc": "2026-06-26T01:21:56Z",
   "instructions_json_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.json",
   "instruction_count": 1,
-  "executable_instruction_count": 1,
-  "executed_action_count": 1,
+  "executable_instruction_count": 0,
+  "executed_action_count": 0,
   "classification_counts": {
-    "Safe": 1
+    "Review": 1
   },
   "source": "grok_api",
-  "validation_errors": [],
+  "validation_errors": [
+    "instructions[0].instruction_id is required",
+    "instructions[0].created_at is required",
+    "instructions[0].expires_at is required",
+    "instructions[0].target_component is required",
+    "instructions[0].risk_level is required",
+    "instructions[0].requires_user_decision is required",
+    "instructions[0].approved_for_codex_execution is required",
+    "instructions[0].target_component is not allowlisted"
+  ],
   "results": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v297",
-      "target_component": "orchestrator",
-      "risk_level": "low",
-      "safety_classification": "Safe",
+      "instruction_id": "",
+      "target_component": "",
+      "risk_level": "",
+      "safety_classification": "Review",
       "safety_reasons": [
-        "approved_safe_instruction"
+        "not_approved_for_codex_execution",
+        "expired_or_invalid_expires_at",
+        "target_not_allowlisted",
+        "no_allowlisted_actions"
       ],
-      "approved_for_codex_execution": true,
+      "approved_for_codex_execution": false,
       "requires_user_decision": false,
-      "validation_errors": [],
-      "executable": true,
-      "skip_reason": "approved_safe_instruction",
-      "action_results": [
-        {
-          "action_type": "write_status_summary",
-          "status": "PASS",
-          "reason": "summary_published",
-          "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\CODEX_INSTRUCTION_CONSUMER_LAST_SUMMARY.md"
-        }
-      ]
+      "validation_errors": [
+        "instructions[0].instruction_id is required",
+        "instructions[0].created_at is required",
+        "instructions[0].expires_at is required",
+        "instructions[0].target_component is required",
+        "instructions[0].risk_level is required",
+        "instructions[0].requires_user_decision is required",
+        "instructions[0].approved_for_codex_execution is required",
+        "instructions[0].target_component is not allowlisted"
+      ],
+      "executable": false,
+      "skip_reason": "validation_errors",
+      "action_results": []
     }
   ],
   "safety_policy": {
