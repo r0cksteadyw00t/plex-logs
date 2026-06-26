@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-26T14:00:51.208Z
+Updated UTC: 2026-06-26T14:05:57.994Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -21,7 +21,7 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-26T13:56:19Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=58252; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
-- 2026-06-26T13:56:22Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
+- 2026-06-26T14:00:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-26T13:56:19Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39212; child_pid=
 - 2026-06-26T13:56:19Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-26T13:50:02Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
@@ -30,8 +30,8 @@ Recent Achievements:
 
 Heartbeat / Stall Check:
 - PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.
-- Controller updated: 4 min ago
-- Platform child progress: 14 min ago
+- Controller updated: 5 min ago
+- Platform child progress: 19 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
