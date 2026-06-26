@@ -1,27 +1,27 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "REVIEW",
-  "alert_level": "MEDIUM",
-  "updated_utc": "2026-06-26T00:50:02Z",
+  "status": "ALERT",
+  "alert_level": "HIGH",
+  "updated_utc": "2026-06-26T00:55:03Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": false,
-  "repeat_count": 2,
+  "codex_action_required": true,
+  "repeat_count": 3,
   "signals": {
     "controller_status": "RUNNING",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 0,
+    "controller_age_minutes": 5,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 0,
+    "watchdog_age_minutes": 5,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 4,
+    "dashboard_age_minutes": 5,
     "mirror_status": "PASS",
     "mirror_age_minutes": 2,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 14,
-    "durable_platform_gate_age_minutes": 14,
+    "checkpoint_age_minutes": 19,
+    "durable_platform_gate_age_minutes": 19,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
@@ -29,22 +29,24 @@
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=41696; run pid=46188"
+      "note": "enable pid=33688; run pid=41484"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=4876; run pid=12032"
+      "note": "enable pid=39572; run pid=2664"
     },
     {
       "task": "ScarFLIX_v2_DurablePlatformGateRunner",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=44104; run pid=33304"
+      "note": "enable pid=43644; run pid=41952"
     }
   ],
-  "notes": [],
+  "notes": [
+    "Same unresolved sentinel signature repeated for three cycles."
+  ],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
