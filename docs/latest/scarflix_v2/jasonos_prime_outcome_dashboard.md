@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-26T16:11:05.029Z
+Updated UTC: 2026-06-26T16:16:40.237Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -21,19 +21,19 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-26T16:06:20Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=58252; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 12% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-26T16:10:06Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-26T16:06:20Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=27356; child_pid=
 - 2026-06-26T16:06:20Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-26T16:05:52.888Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-26T16:05:52Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-26T16:05:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-26T15:56:20Z - Autonomous controller: controller_already_running: existing controller lock is active
-- 2026-06-26T15:50:03Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 5 min ago
-- Platform child progress: 5 min ago
-- Mirror updated: 2 min ago
-- Platform runner running: true
+- Platform child progress: 10 min ago
+- Mirror updated: 1 min ago
+- Platform runner running: false
 - Platform child active: true
 
 PlatformGate Health Contract:
