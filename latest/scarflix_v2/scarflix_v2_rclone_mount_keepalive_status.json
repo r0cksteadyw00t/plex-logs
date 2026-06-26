@@ -1,14 +1,14 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-26T02:34:30Z",
-    "ended_utc":  "2026-06-26T02:37:55Z",
+    "started_utc":  "2026-06-26T02:45:02Z",
+    "ended_utc":  "2026-06-26T02:45:53Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
-                          "ok":  true,
-                          "status":  "200",
-                          "error":  ""
+                          "ok":  false,
+                          "status":  "",
+                          "error":  "Unable to connect to the remote server"
                       },
     "rclone_exe_present":  true,
     "rclone_config_present":  true,
@@ -18,15 +18,15 @@
                                 "media":  {
                                               "path":  "S:\\media",
                                               "ok":  false,
-                                              "timed_out":  true,
-                                              "ms":  51626,
+                                              "timed_out":  false,
+                                              "ms":  583,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
-                                                "timed_out":  true,
-                                                "ms":  30772,
+                                                "timed_out":  false,
+                                                "ms":  233,
                                                 "error":  ""
                                             }
                             },
@@ -36,14 +36,14 @@
                                             "path":  "S:\\media",
                                             "ok":  false,
                                             "timed_out":  false,
-                                            "ms":  3072,
+                                            "ms":  475,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
                                               "timed_out":  false,
-                                              "ms":  1634,
+                                              "ms":  379,
                                               "error":  ""
                                           }
                           },
@@ -53,8 +53,8 @@
     "catalog_path_timed_out":  false,
     "mount_ready":  false,
     "start":  {
-                  "started":  true,
-                  "pid":  23768,
+                  "started":  false,
+                  "pid":  0,
                   "error":  ""
               },
     "restart":  {
@@ -74,10 +74,10 @@
 
                         ],
     "actions":  [
-                    "started rclone pid 23768"
+
                 ],
     "failures":  [
-                     "rclone mount did not expose S:\\media\\catalog within timeout"
+                     "WebDAV node bridge health failed"
                  ],
     "status_file":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
     "log":  "D:\\PlexTools\\logs\\scarflix_v2_rclone_mount_keepalive_20260626.log",
