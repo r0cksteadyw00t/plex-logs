@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-26T22:01:04.951Z
+Updated UTC: 2026-06-26T22:06:08.665Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -21,17 +21,17 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-26T21:58:40Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=58252; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-26T22:00:07Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-26T21:58:40Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=38128; child_pid=
 - 2026-06-26T21:58:40Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-26T21:58:31.077Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-26T21:58:31Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-26T21:58:23Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-26T21:50:19Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=34032; child_pid=28308
-- 2026-06-26T21:50:19Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
-- Controller updated: 2 min ago
-- Platform child progress: 2 min ago
+- Controller updated: 5 min ago
+- Platform child progress: 7 min ago
 - Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
