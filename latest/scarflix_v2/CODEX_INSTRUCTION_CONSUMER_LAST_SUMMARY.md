@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-26T00:49:28Z
-Instruction: phase0_stabilization_foundation_record_tv_section6_hold_status_v296
+Updated UTC: 2026-06-26T01:06:13Z
+Instruction: phase0_stabilization_foundation_record_tv_section6_hold_status_v297
 
-TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No visible Plex publication, no WebDAV map mutation, no symlink creation. Monitor task continues 15-minute polling with 0 pending events. Full-season pilot (28/28) privately validated but held pending Section 6 scanner forensic review. Materialized QA in REVIEW state; PAUSE_PUBLICATION active. No expansion or publishing actions permitted.
+TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Monitor continues 15-minute polling with 0 pending events. Full-season pilot privately validated at 28/28 but held pending forensic review. No WebDAV mutations, no symlinks, no Plex refresh. Recommend continued cooldown and local review of forensic handoff before any retry.
