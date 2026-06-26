@@ -2,9 +2,9 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-26T09:25:19Z",
-    "started_utc":  "2026-06-26T09:25:03Z",
-    "duration_seconds":  16,
+    "updated_utc":  "2026-06-26T09:35:34Z",
+    "started_utc":  "2026-06-26T09:35:05Z",
+    "duration_seconds":  29,
     "will_progress_without_codex":  true,
     "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
@@ -12,8 +12,8 @@
                     "platform_checkpoint_age_minutes":  4,
                     "durable_platform_gate_age_minutes":  4,
                     "platform_progress_fresh":  true,
-                    "dashboard_age_minutes":  3,
-                    "mirror_age_minutes":  3,
+                    "dashboard_age_minutes":  6,
+                    "mirror_age_minutes":  2,
                     "movie_strm_count":  58251,
                     "tv_strm_count":  1,
                     "total_strm_count":  58252,
@@ -26,15 +26,15 @@
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "26/06/2026 7:25:01 PM",
-                                     "next_run_time":  "26/06/2026 7:30:00 PM",
+                                     "last_run_time":  "26/06/2026 7:35:01 PM",
+                                     "next_run_time":  "26/06/2026 7:40:00 PM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
                                           "exists":  true,
                                           "status":  "Ready",
-                                          "last_run_time":  "26/06/2026 7:19:49 PM",
+                                          "last_run_time":  "26/06/2026 7:30:03 PM",
                                           "next_run_time":  "N/A",
                                           "last_result":  "2"
                                       },
@@ -42,8 +42,8 @@
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "26/06/2026 7:25:01 PM",
-                                    "next_run_time":  "26/06/2026 7:30:00 PM",
+                                    "last_run_time":  "26/06/2026 7:35:01 PM",
+                                    "next_run_time":  "26/06/2026 7:40:00 PM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
@@ -57,6 +57,12 @@
               },
     "actions":  [
                     {
+                        "task":  "JasonOS_Prime_OutcomeDashboard",
+                        "changed":  false,
+                        "ran":  true,
+                        "note":  "run_triggered"
+                    },
+                    {
                         "task":  "JasonOS_Prime_PublicMirrorPublisher",
                         "changed":  false,
                         "ran":  false,
@@ -64,6 +70,7 @@
                     }
                 ],
     "notes":  [
+                  "Dashboard status was disabled or stale; watchdog triggered dashboard task.",
                   "Public mirror status was disabled or stale; watchdog triggered mirror task."
               ],
     "files":  {
