@@ -1,16 +1,16 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-26T21:51:06.085Z
+Updated UTC: 2026-06-26T21:55:20.471Z
 Source: live status merge
 
+- 2026-06-26T21:51:41Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=34032; child_pid=
+- 2026-06-26T21:51:41Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-26T21:51:16.106Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-26T21:51:16Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-26T21:50:45Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-26T21:50:19Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=34032; child_pid=28308
 - 2026-06-26T21:50:19Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
 - 2026-06-26T21:50:15Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-26T21:45:05Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
-- 2026-06-26T21:42:59Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=2808; child_pid=
-- 2026-06-26T21:42:59Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-26T21:42:53.239Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-26T21:42:53Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
-- 2026-06-26T21:42:42Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-26T18:05:09Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-26T02:55:05Z - Autonomous controller: stale_platform_gate_backoff_retry: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
 - 2026-06-26T02:08:04Z - Autonomous controller: controller_exception: existing controller lock is active
