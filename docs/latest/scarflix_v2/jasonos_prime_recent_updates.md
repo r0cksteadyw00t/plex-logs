@@ -1,14 +1,14 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-26T09:20:29.669Z
+Updated UTC: 2026-06-26T09:25:10.926Z
 Source: live status merge
 
+- 2026-06-26T09:21:47Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39276; child_pid=
+- 2026-06-26T09:21:47Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-26T09:21:33.062Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-26T09:21:33Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-26T09:20:31Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-26T09:19:53Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=39276; child_pid=28420
 - 2026-06-26T09:19:53Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
-- 2026-06-26T09:19:51Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
-- 2026-06-26T09:12:13Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=12420; child_pid=
-- 2026-06-26T09:12:13Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-26T09:12:00.793Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-26T09:12:00Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-26T09:05:03Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-26T09:04:10Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-26T08:40:07Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
