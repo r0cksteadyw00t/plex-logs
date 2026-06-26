@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-26T10:46:06.124Z",
+  "updated_utc": "2026-06-26T10:51:16.828Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -122,10 +122,10 @@
     "state": "PROGRESSING",
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
-    "platform_child_progress_age_minutes": 3,
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 8,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-26T10:47:41Z",
+    "next_check_utc": "2026-06-26T10:51:05Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -134,7 +134,7 @@
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260626.log",
     "last_progress_utc": "2026-06-26T10:42:52.317Z",
-    "age_minutes": 2,
+    "age_minutes": 7,
     "last_line": "[2026-06-26T10:42:52Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-26T10:42:40Z",
+    "updated_utc": "2026-06-26T10:45:39Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "PASS",
-    "alert_level": "LOW",
-    "updated_utc": "2026-06-26T10:45:02Z",
+    "status": "REVIEW",
+    "alert_level": "MEDIUM",
+    "updated_utc": "2026-06-26T10:50:03Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -310,6 +310,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-26T10:45:03Z",
+      "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
+      "detail": "attempted rclone mount self-heal; mount not ready yet"
+    },
+    {
       "utc": "2026-06-26T10:43:08Z",
       "title": "Durable PlatformGate runner REVIEW",
       "detail": "Step platform_gate_review; owner_pid=33488; child_pid="
@@ -333,11 +338,6 @@
       "utc": "2026-06-26T10:35:06Z",
       "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
       "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
-    },
-    {
-      "utc": "2026-06-26T10:15:08Z",
-      "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
-      "detail": "attempted rclone mount self-heal; mount not ready yet"
     },
     {
       "utc": "2026-06-26T09:40:11Z",
