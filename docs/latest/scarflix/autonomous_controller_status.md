@@ -3,12 +3,12 @@
 Status: WAITING_RETRY
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-26T15:25:04Z
+Updated UTC: 2026-06-26T15:30:03Z
 Current step: rclone_mount_selfheal_waiting_retry
 Jason action required: False
 
 ## PlatformGate
-- runner_running: True
+- runner_running: False
 - status: REVIEW
 - stage: platform_gate_review
 - visible: 0
@@ -27,7 +27,7 @@ Jason action required: False
 
 ## Action
 - action_taken: attempted rclone mount self-heal; mount not ready yet
-- next_check_utc: 2026-06-26T15:31:15Z
+- next_check_utc: 2026-06-26T15:36:14Z
 
 ## Blockers
 - rclone mount not ready: REVIEW
