@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_public_mirror_publisher",
-  "status": "PASS",
-  "updated_utc": "2026-06-26T06:43:35.417Z",
+  "status": "REVIEW",
+  "updated_utc": "2026-06-26T06:48:41.135Z",
   "last_success_utc": "2026-06-26T06:43:35.417Z",
   "pat_present": true,
   "pushed": [
@@ -99,35 +99,35 @@
     },
     {
       "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/grok_instruction_bridge_raw_response.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/CODEX_INSTRUCTION_CONSUMER_LAST_SUMMARY.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "latest/scarflix_v2/jasonos_prime_lightweight_status_probe_status.json",
@@ -207,7 +207,7 @@
     },
     {
       "file": "latest/scarflix_v2/autonomous_controller_status.md",
-      "status": 200
+      "status": 304
     },
     {
       "file": "latest/scarflix_v2/platform_gate_checkpoint.json",
@@ -647,35 +647,35 @@
     },
     {
       "file": "docs/latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/grok_instruction_bridge_raw_response.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_grok_instruction_bridge_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_codex_instruction_consumer_status.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/CODEX_INSTRUCTION_CONSUMER_LAST_SUMMARY.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/jasonos_prime_lightweight_status_probe_status.json",
@@ -759,11 +759,11 @@
     },
     {
       "file": "docs/latest/scarflix_v2/platform_gate_checkpoint.json",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/platform_gate_checkpoint.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix_v2/direct_strm_mirror_status.json",
@@ -1078,10 +1078,6 @@
       "status": 304
     },
     {
-      "file": "docs/latest/scarflix_v2/playback_only_hold_status.md",
-      "status": 304
-    },
-    {
       "file": "docs/latest/scarflix_v2/playback_quiet_resume_status.json",
       "status": 304
     },
@@ -1263,7 +1259,7 @@
     },
     {
       "file": "docs/latest/scarflix/platform_gate_checkpoint.md",
-      "status": 304
+      "status": 200
     },
     {
       "file": "docs/latest/scarflix/platform_gate_checkpoint.json",
@@ -1279,13 +1275,20 @@
     }
   ],
   "skipped": [],
-  "failed": [],
+  "failed": [
+    {
+      "file": "docs/latest/scarflix_v2/playback_only_hold_status.md",
+      "status": 422
+    }
+  ],
   "failure_summary": {
     "recoverable": 0,
-    "hard": 0,
-    "by_status": {}
+    "hard": 1,
+    "by_status": {
+      "422": 1
+    }
   },
-  "local_status_authoritative": false,
+  "local_status_authoritative": true,
   "retry_policy": {
     "attempts": 3,
     "retry_statuses": [
