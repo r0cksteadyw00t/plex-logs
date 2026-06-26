@@ -1,27 +1,27 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "ALERT",
-  "alert_level": "HIGH",
-  "updated_utc": "2026-06-26T12:33:43Z",
+  "status": "REVIEW",
+  "alert_level": "MEDIUM",
+  "updated_utc": "2026-06-26T12:40:03Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": true,
-  "repeat_count": 4,
+  "codex_action_required": false,
+  "repeat_count": 1,
   "signals": {
-    "controller_status": "RUNNING",
+    "controller_status": "WAITING_RETRY",
     "controller_milestone": "PLATFORM_GATE_RUNNING",
-    "controller_age_minutes": 4,
+    "controller_age_minutes": 5,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 3,
+    "watchdog_age_minutes": 4,
     "dashboard_status": "PASS",
     "dashboard_age_minutes": 4,
-    "mirror_status": "RUNNING",
-    "mirror_age_minutes": 0,
+    "mirror_status": "PASS",
+    "mirror_age_minutes": 4,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 8,
-    "durable_platform_gate_age_minutes": 8,
+    "checkpoint_age_minutes": 6,
+    "durable_platform_gate_age_minutes": 6,
     "platform_progress_fresh": false
   },
   "recovery_actions": [
@@ -29,24 +29,22 @@
       "task": "ScarFLIX_v2_Watchdog_StallDetector",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=24536; run pid=4896"
+      "note": "enable pid=37400; run pid=25104"
     },
     {
       "task": "ScarFLIX_v2_AutonomousController",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=28820; run pid=34844"
+      "note": "enable pid=30564; run pid=4496"
     },
     {
       "task": "ScarFLIX_v2_DurablePlatformGateRunner",
       "reason": "platform_checkpoint_stale",
       "result": "PASS",
-      "note": "enable pid=29348; run pid=38024"
+      "note": "enable pid=37864; run pid=36540"
     }
   ],
-  "notes": [
-    "Same unresolved sentinel signature repeated for three cycles."
-  ],
+  "notes": [],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
     "status_md": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.md",
