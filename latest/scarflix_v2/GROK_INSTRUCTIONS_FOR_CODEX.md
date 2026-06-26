@@ -1,23 +1,23 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-26T01:06:07Z
+Updated UTC: 2026-06-26T01:21:54Z
 Source: grok_api
 
 ## Summary
 
-
+Grok response normalized into instruction envelope.
 
 ## Validation
 
-PASS
+REVIEW: instructions[0].instruction_id is required.; instructions[0].created_at is required.; instructions[0].expires_at is required.; instructions[0].target_component is required.; instructions[0].risk_level is required.; instructions[0].requires_user_decision is required.; instructions[0].approved_for_codex_execution is required.
 
 ## Instructions
 
-### phase0_stabilization_foundation_record_tv_section6_hold_status_v297
+### unnamed
 
-- Target: `orchestrator`
-- Risk: `low`
+- Target: ``
+- Risk: ``
 - Requires user decision: `false`
-- Approved for Codex execution: `true`
-- Expires: `2026-06-27T01:06:07Z`
+- Approved for Codex execution: `false`
+- Expires: ``
