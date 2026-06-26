@@ -1,63 +1,32 @@
 {
   "component": "jasonos_prime_sentinel_node",
-  "status": "ALERT",
-  "alert_level": "HIGH",
-  "updated_utc": "2026-06-26T01:30:03Z",
+  "status": "PASS",
+  "alert_level": "LOW",
+  "updated_utc": "2026-06-26T01:35:02Z",
   "duration_seconds": 0,
   "jason_action_required": false,
-  "codex_action_required": true,
-  "repeat_count": 3,
+  "codex_action_required": false,
+  "repeat_count": 1,
   "signals": {
     "controller_status": "WAITING_RETRY",
     "controller_milestone": "PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED",
-    "controller_age_minutes": 30,
+    "controller_age_minutes": 35,
     "watchdog_status": "REVIEW",
     "watchdog_risk": "Medium",
-    "watchdog_age_minutes": 10,
+    "watchdog_age_minutes": 4,
     "dashboard_status": "PASS",
-    "dashboard_age_minutes": 5,
+    "dashboard_age_minutes": 3,
     "mirror_status": "PASS",
-    "mirror_age_minutes": 2,
+    "mirror_age_minutes": 1,
     "checkpoint_status": "REVIEW",
     "checkpoint_step": "platform_gate_review",
-    "checkpoint_age_minutes": 29,
-    "durable_platform_gate_age_minutes": 29,
-    "platform_progress_fresh": false
+    "checkpoint_age_minutes": 3,
+    "durable_platform_gate_age_minutes": 3,
+    "platform_progress_fresh": true
   },
-  "recovery_actions": [
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "watchdog_stale_or_failed",
-      "result": "PASS",
-      "note": "enable pid=31740; run pid=44656"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "controller_stale_or_blocked",
-      "result": "PASS",
-      "note": "enable pid=46448; run pid=41336"
-    },
-    {
-      "task": "ScarFLIX_v2_Watchdog_StallDetector",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=38384; run pid=43788"
-    },
-    {
-      "task": "ScarFLIX_v2_AutonomousController",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=15896; run pid=46900"
-    },
-    {
-      "task": "ScarFLIX_v2_DurablePlatformGateRunner",
-      "reason": "platform_checkpoint_stale",
-      "result": "PASS",
-      "note": "enable pid=18236; run pid=46692"
-    }
-  ],
+  "recovery_actions": [],
   "notes": [
-    "Same unresolved sentinel signature repeated for three cycles."
+    "Controller status is stale, but durable PlatformGate progress is fresh."
   ],
   "files": {
     "status_json": "D:/PlexTools/public/latest/scarflix_v2/jasonos_prime_sentinel_status.json",
