@@ -1,42 +1,47 @@
 {
     "component":  "scarflix_v2_durable_platform_gate_runner",
-    "status":  "RUNNING",
-    "current_step":  "running_platform_gate_attempt_1",
-    "started_utc":  "2026-06-26T20:54:36Z",
-    "last_progress_utc":  "2026-06-26T20:54:42Z",
-    "ended_utc":  "",
-    "duration_seconds":  72,
+    "status":  "REVIEW",
+    "current_step":  "platform_gate_review",
+    "started_utc":  "2026-06-26T21:05:08Z",
+    "last_progress_utc":  "2026-06-26T21:05:55Z",
+    "ended_utc":  "2026-06-26T21:05:48Z",
+    "duration_seconds":  47,
     "no_catalogue_expansion":  true,
     "single_owner":  true,
-    "owner_pid":  29668,
-    "child_pid":  24488,
-    "child_start_utc":  "2026-06-26T20:54:42Z",
-    "child_exit_code":  null,
-    "child_qa_last_progress_utc":  "2026-06-26T20:55:16Z",
+    "owner_pid":  23908,
+    "child_pid":  0,
+    "child_start_utc":  "2026-06-26T21:05:18Z",
+    "child_exit_code":  -1,
+    "child_qa_last_progress_utc":  "2026-06-26T20:56:29Z",
     "child_qa_last_progress_path":  "D:\\PlexTools\\logs\\scarflix_v2_webdav_active_gate_20260627.log",
-    "child_qa_stale_minutes":  0.5,
+    "child_qa_stale_minutes":  9.3,
     "child_qa_stale_threshold_minutes":  5,
     "bounded_orphan_kill_minutes":  5,
-    "child_qa_stall_count":  0,
+    "child_qa_stall_count":  1,
     "attempts":  [
-
+                     {
+                         "attempt":  1,
+                         "exit_code":  -1,
+                         "platform_status":  "REVIEW",
+                         "ended_utc":  "2026-06-26T21:05:48Z"
+                     }
                  ],
     "stale_minutes":  5,
     "heartbeat_seconds":  30,
-    "heartbeat_updated_utc":  "2026-06-26T20:55:48Z",
-    "heartbeat_sequence":  6,
+    "heartbeat_updated_utc":  "2026-06-26T21:05:55Z",
+    "heartbeat_sequence":  8,
     "lock_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable.lock",
     "heartbeat_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable_heartbeat.json",
     "checkpoint_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.json",
     "checkpoint_md":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.md",
     "status_latest":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_status.json",
-    "status_run":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_20260627_065436.json",
+    "status_run":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_20260627_070508.json",
     "log":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_20260627.log",
     "blockers":  [
 
                  ],
     "actions":  [
-
+                    "Stopped stale PlatformGate child pid=37852; context=attempt_1; child_qa_stale_minutes=9.3; threshold=5"
                 ],
     "overlap_tasks":  [
 
@@ -50,19 +55,19 @@
     "platform_gate":  {
                           "component":  "scarflix_v2_platform_gate",
                           "status":  "REVIEW",
-                          "started_utc":  "2026-06-26T20:45:17Z",
-                          "ended_utc":  "2026-06-26T20:46:02Z",
-                          "duration_seconds":  44,
+                          "started_utc":  "2026-06-26T20:54:44Z",
+                          "ended_utc":  "2026-06-26T20:56:35Z",
+                          "duration_seconds":  111,
                           "visible":  {
                                           "count":  0,
                                           "movies":  0,
                                           "tv":  0
                                       },
                           "snapshot":  {
-                                           "id":  "20260626T204536Z",
+                                           "id":  "20260626T205505Z",
                                            "hash":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260626T204536Z.txt",
-                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260626T204536Z.json"
+                                           "paths_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_paths_20260626T205505Z.txt",
+                                           "json_file":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_snapshots\\platform_gate_snapshot_20260626T205505Z.json"
                                        },
                           "qa":  {
                                      "active_gate":  {
