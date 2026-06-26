@@ -2,18 +2,18 @@
     "component":  "scarflix_v2_watchdog_stall_detector",
     "status":  "REVIEW",
     "stall_risk":  "Medium",
-    "updated_utc":  "2026-06-26T09:20:24Z",
-    "started_utc":  "2026-06-26T09:19:51Z",
-    "duration_seconds":  33,
+    "updated_utc":  "2026-06-26T09:25:19Z",
+    "started_utc":  "2026-06-26T09:25:03Z",
+    "duration_seconds":  16,
     "will_progress_without_codex":  true,
     "current_milestone":  "PLATFORM_GATE_RUNNING",
     "signals":  {
                     "controller_age_minutes":  5,
-                    "platform_checkpoint_age_minutes":  8,
-                    "durable_platform_gate_age_minutes":  8,
-                    "platform_progress_fresh":  false,
-                    "dashboard_age_minutes":  4,
-                    "mirror_age_minutes":  1,
+                    "platform_checkpoint_age_minutes":  4,
+                    "durable_platform_gate_age_minutes":  4,
+                    "platform_progress_fresh":  true,
+                    "dashboard_age_minutes":  3,
+                    "mirror_age_minutes":  3,
                     "movie_strm_count":  58251,
                     "tv_strm_count":  1,
                     "total_strm_count":  58252,
@@ -26,24 +26,24 @@
                                      "name":  "ScarFLIX_v2_AutonomousController",
                                      "exists":  true,
                                      "status":  "Ready",
-                                     "last_run_time":  "26/06/2026 7:20:01 PM",
-                                     "next_run_time":  "26/06/2026 7:25:00 PM",
+                                     "last_run_time":  "26/06/2026 7:25:01 PM",
+                                     "next_run_time":  "26/06/2026 7:30:00 PM",
                                      "last_result":  "0"
                                  },
                   "platform_runner":  {
                                           "name":  "ScarFLIX_v2_DurablePlatformGateRunner",
                                           "exists":  true,
-                                          "status":  "Running",
+                                          "status":  "Ready",
                                           "last_run_time":  "26/06/2026 7:19:49 PM",
                                           "next_run_time":  "N/A",
-                                          "last_result":  "267009"
+                                          "last_result":  "2"
                                       },
                   "dashboard":  {
                                     "name":  "JasonOS_Prime_OutcomeDashboard",
                                     "exists":  true,
                                     "status":  "Ready",
-                                    "last_run_time":  "26/06/2026 7:20:01 PM",
-                                    "next_run_time":  "26/06/2026 7:25:00 PM",
+                                    "last_run_time":  "26/06/2026 7:25:01 PM",
+                                    "next_run_time":  "26/06/2026 7:30:00 PM",
                                     "last_result":  "0"
                                 },
                   "mirror":  {
@@ -57,12 +57,6 @@
               },
     "actions":  [
                     {
-                        "task":  "ScarFLIX_v2_AutonomousController",
-                        "changed":  false,
-                        "ran":  true,
-                        "note":  "run_triggered"
-                    },
-                    {
                         "task":  "JasonOS_Prime_PublicMirrorPublisher",
                         "changed":  false,
                         "ran":  false,
@@ -70,7 +64,6 @@
                     }
                 ],
     "notes":  [
-                  "PlatformGate progress is stale during PlatformGate milestone; watchdog triggered controller/runner.",
                   "Public mirror status was disabled or stale; watchdog triggered mirror task."
               ],
     "files":  {
