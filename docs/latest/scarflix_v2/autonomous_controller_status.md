@@ -1,34 +1,33 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: FAIL_ENGINEERING
-Milestone state: BLOCKED_DECISION
+Status: WAITING_RETRY
+Milestone state: PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-26T01:14:11Z
-Current step: controller_exception
+Updated UTC: 2026-06-26T00:59:43Z
+Current step: stale_platform_gate_backoff_retry
 Jason action required: False
 
 ## PlatformGate
-- runner_running: False
-- status: UNKNOWN
-- stage: 
-- visible: unknown
+- runner_running: True
+- status: RUNNING
+- stage: starting
+- visible: 0
 - transient_failures: 0
 - prunable_failures: 0
 
 ## Candidate Source Model
-- status: PENDING_PLATFORM_GATE
+- status: PASS
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: UNKNOWN
-- s_media_ready: False
+- rclone_mount_status: REVIEW
+- s_media_ready: True
 - s_catalog_ready: False
 - mount_selfheal_attempted: False
 
 ## Action
-- action_taken: existing controller lock is active
-- next_check_utc: 2026-06-26T01:19:12Z
+- action_taken: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
+- next_check_utc: 2026-06-26T01:24:34Z
 
 ## Blockers
-- Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
-Parameter name: chars"
+- none
