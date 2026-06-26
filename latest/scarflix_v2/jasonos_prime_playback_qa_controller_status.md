@@ -1,7 +1,7 @@
 # JasonOS Prime Playback QA Controller
 
 Status: REVIEW_MATERIALIZED_DECISION_FAILURE
-Updated UTC: 2026-06-26T06:25:26Z
+Updated UTC: 2026-06-26T06:30:38Z
 Current step: materialized_decision_failed
 Direct STRM total: 58252
 Materialized/WebDAV primary: true
