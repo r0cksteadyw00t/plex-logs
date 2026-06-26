@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v356",
-      "created_at": "2026-06-26T22:37:41Z",
-      "expires_at": "2026-06-27T22:37:41Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v357",
+      "created_at": "2026-06-26T22:53:42Z",
+      "expires_at": "2026-06-27T22:53:42Z",
       "target_component": "status_dashboard",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,13 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 0
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
           "parameters": {
-            "summary": "TV Section 6 publication remains HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate (28/28) enforced. Monitor active every 15min. Materialized QA REVIEW. No visible Plex mutation, no WebDAV changes, no legacy resolver activity. Continue stabilization only."
+            "summary": "TV Section 6 publication remains HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate (28/28) enforced. Monitor active every 15min. No visible Plex mutation, no WebDAV changes, no legacy resolver activity. Materialized QA in REVIEW. Continue stabilization only. No expansion or publishing actions."
           }
         }
       ],
@@ -28,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-26T22:37:41Z",
+  "updated_utc": "2026-06-26T22:53:42Z",
   "source": "grok_api"
 }
