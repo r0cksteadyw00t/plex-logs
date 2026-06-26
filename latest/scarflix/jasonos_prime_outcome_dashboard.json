@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-26T22:50:33.489Z",
+  "updated_utc": "2026-06-26T22:55:59.700Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-26T22:37:41Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-26T22:53:42Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -119,13 +119,13 @@
     "blocked_by": "snapshot_scoped_qa"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "WATCHING_FOR_STALL",
+    "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 4,
+    "platform_child_progress_age_minutes": 9,
     "mirror_updated_age_minutes": 3,
-    "next_check_utc": "2026-06-26T22:50:06Z",
+    "next_check_utc": "2026-06-26T22:55:07Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -134,7 +134,7 @@
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260627.log",
     "last_progress_utc": "2026-06-26T22:46:11.005Z",
-    "age_minutes": 4,
+    "age_minutes": 9,
     "last_line": "[2026-06-26T22:46:11Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-26T22:45:50Z",
+    "updated_utc": "2026-06-26T22:50:26Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "REVIEW",
     "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-26T22:44:41Z",
+    "updated_utc": "2026-06-26T22:50:01Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -296,11 +296,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-26T22:37:41Z",
-    "last_successful_grok_instruction_utc": "2026-06-26T22:37:41Z",
+    "bridge_updated_utc": "2026-06-26T22:53:42Z",
+    "last_successful_grok_instruction_utc": "2026-06-26T22:53:42Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-26T22:37:47Z",
+    "consumer_updated_utc": "2026-06-26T22:53:52Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -309,6 +309,11 @@
     "instructions_md": "D:/PlexTools/public/latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md"
   },
   "recent_updates": [
+    {
+      "utc": "2026-06-26T22:50:03Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
+    },
     {
       "utc": "2026-06-26T22:46:11.005Z",
       "title": "PlatformGate child QA active: WebDAV active gate",
@@ -350,11 +355,6 @@
       "detail": "attempted rclone mount self-heal; mount not ready yet"
     },
     {
-      "utc": "2026-06-26T22:29:40Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
-    },
-    {
       "utc": "2026-06-26T02:55:05Z",
       "title": "Autonomous controller: stale_platform_gate_backoff_retry",
       "detail": "PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry"
@@ -393,7 +393,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-26T22:37:47Z - structured instruction loop",
+      "last_change": "2026-06-26T22:53:52Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
