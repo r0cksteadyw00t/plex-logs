@@ -62,4 +62,4 @@ Token Optimization Status:
 - Use local scheduled workers for routine status, prediction and publishing.
 - Keep long ScarFLIX validation detached under local controller ownership.
 
-Overall Timeline Estimate: First major milestone: 1-3 days depending on PlatformGate/provider result.
+Overall Timeline Estimate: First major milestone: 1-3 days depending on PlatformGate/provider result.ilestone: 1-3 days depending on PlatformGate/provider result.
