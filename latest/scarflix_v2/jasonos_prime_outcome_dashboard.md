@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-26T19:11:03.106Z
+Updated UTC: 2026-06-26T19:16:13.326Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: WATCHING_FOR_STALL
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -21,19 +21,19 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-26T19:05:50Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=58252; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-26T19:10:03Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-26T19:05:58.799Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-26T19:05:58Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-26T19:05:50Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=8516; child_pid=
 - 2026-06-26T19:05:50Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-26T19:05:06Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-26T18:56:06Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-26T18:50:05Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
+- PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.
 - Controller updated: 5 min ago
-- Platform child progress: 4 min ago
+- Platform child progress: 10 min ago
 - Mirror updated: 2 min ago
-- Platform runner running: true
+- Platform runner running: false
 - Platform child active: true
 
 PlatformGate Health Contract:
