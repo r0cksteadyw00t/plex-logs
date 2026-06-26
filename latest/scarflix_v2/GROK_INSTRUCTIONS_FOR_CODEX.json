@@ -1,34 +1,58 @@
 {
   "schema_version": "grok_codex_instruction.v1",
+  "component": "jasonos_prime_grok_instruction_bridge",
+  "updated_utc": "2026-06-26T01:21:54Z",
+  "source": "grok_api",
+  "human_summary": "Grok response normalized into instruction envelope.",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v297",
-      "created_at": "2026-06-26T01:06:07Z",
-      "expires_at": "2026-06-27T01:06:07Z",
-      "target_component": "orchestrator",
-      "risk_level": "low",
-      "requires_user_decision": false,
-      "approved_for_codex_execution": true,
+      "id": "3d7917ed-23d8-9b45-b936-501795e842dd",
+      "object": "chat.completion",
+      "created": 1782436915,
+      "model": "grok-4.3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "reasoning_content": "The task is to create a v1 structured instruction envelope for Codex. It must be one JSON object only, an envelope with schema_version \"grok_codex_instruction.v1\" and an instructions array",
+            "refusal": null
+          },
+          "finish_reason": ""
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8099,
+        "completion_tokens": 0,
+        "total_tokens": 8139,
+        "prompt_tokens_details": {
+          "text_tokens": 8099,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 40,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 100893500
+      },
+      "system_fingerprint": "fp_eb3c003fc66c14ed",
+      "service_tier": "default",
       "success_criteria": [
         "Codex instruction consumer validates and records this instruction without bypassing safety gates."
       ],
       "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 60
+        "max_attempts": 2,
+        "backoff_seconds": 300,
+        "escalate_after_attempts": 2,
+        "escalation_target": "grok_handoff"
       },
-      "actions": [
-        {
-          "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Monitor continues 15-minute polling with 0 pending events. Full-season pilot privately validated at 28/28 but held pending forensic review. No WebDAV mutations, no symlinks, no Plex refresh. Recommend continued cooldown and local review of forensic handoff before any retry.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_status_v297"
-          }
-        }
-      ],
-      "safety_classification": "Safe"
+      "safety_classification": "Review"
     }
-  ],
-  "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-26T01:06:07Z",
-  "source": "grok_api"
+  ]
 }
