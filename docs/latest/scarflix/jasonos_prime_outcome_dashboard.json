@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-26T07:10:03Z",
+  "updated_utc": "2026-06-26T07:15:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -24504,7 +24504,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-26T07:10:03Z",
+    "updated_utc": "2026-06-26T07:15:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -48673,7 +48673,7 @@
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
       "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-26T07:10:35Z",
+      "updated_utc": "2026-06-26T07:15:51Z",
       "current_step": "materialized_decision_failed",
       "jason_action_required": false,
       "counts": {
@@ -48706,12 +48706,12 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 39484
+              "pid": 21416
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 6772
+              "pid": 35624
             }
           ]
         }
@@ -48719,25 +48719,25 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1564324,
-    "safe_pipeline_log_age_seconds": 1621216,
+    "canary_status_age_seconds": 1564637,
+    "safe_pipeline_log_age_seconds": 1621537,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
       {
         "action": "refresh_grokbuild",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_GrokBuild_Agent.js\n"
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
       },
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=35552"
+        "detail": "pid=30556"
       },
       {
         "action": "run_playback_qa_controller",
@@ -48747,7 +48747,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=5536"
+        "detail": "pid=38584"
       }
     ],
     "blockers": []
@@ -48803,7 +48803,7 @@
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
     "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-26T07:10:35Z",
+    "updated_utc": "2026-06-26T07:15:51Z",
     "current_step": "materialized_decision_failed",
     "jason_action_required": false,
     "counts": {
@@ -48836,12 +48836,12 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 39484
+            "pid": 21416
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 6772
+            "pid": 35624
           }
         ]
       }
