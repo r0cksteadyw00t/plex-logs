@@ -1,16 +1,16 @@
 {
     "component":  "scarflix_v2_autonomous_controller",
     "status":  "WAITING_RETRY",
-    "milestone_state":  "PLATFORM_GATE_REVIEW_TRANSIENT_RETRY_SCHEDULED",
-    "updated_utc":  "2026-06-26T00:59:43Z",
-    "current_step":  "stale_platform_gate_backoff_retry",
+    "milestone_state":  "PLATFORM_GATE_RUNNING",
+    "updated_utc":  "2026-06-26T00:21:15Z",
+    "current_step":  "rclone_mount_selfheal_waiting_retry",
     "current_milestone":  "Complete same-snapshot PlatformGate checkpoint",
     "next_milestone":  "Blanket candidate-source retry/quarantine model",
-    "action_taken":  "PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry",
-    "next_check_utc":  "2026-06-26T01:24:34Z",
+    "action_taken":  "attempted rclone mount self-heal; mount not ready yet",
+    "next_check_utc":  "2026-06-26T01:43:30Z",
     "jason_action_required":  false,
     "blockers":  [
-
+                     "rclone mount not ready: REVIEW"
                  ],
     "docs":  {
                  "next_actions_path":  "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\docs\\NEXT_ACTIONS.md",
@@ -18,14 +18,14 @@
              },
     "platform_gate":  {
                           "runner_task":  "ScarFLIX_v2_DurablePlatformGateRunner",
-                          "runner_running":  true,
+                          "runner_running":  false,
                           "child_active":  false,
                           "child_activity_log_utc":  "2026-06-25T12:45:35Z",
-                          "status":  "RUNNING",
-                          "stage":  "starting",
+                          "status":  "REVIEW",
+                          "stage":  "platform_gate_review",
                           "visible_count":  0,
-                          "started_utc":  "2026-06-26T00:59:38Z",
-                          "last_progress_utc":  "2026-06-26T00:59:39Z",
+                          "started_utc":  "2026-06-26T00:17:04Z",
+                          "last_progress_utc":  "2026-06-26T00:18:22Z",
                           "transient_failures":  0,
                           "prunable_failures":  0,
                           "failure_signature":  "",
@@ -46,10 +46,10 @@
     "infrastructure":  {
                            "rclone_mount_status":  "REVIEW",
                            "rclone_mount_status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
-                           "s_media_ready":  true,
+                           "s_media_ready":  false,
                            "s_catalog_ready":  false,
-                           "mount_selfheal_attempted":  false,
-                           "mount_selfheal_exit_code":  ""
+                           "mount_selfheal_attempted":  true,
+                           "mount_selfheal_exit_code":  "2"
                        },
     "files":  {
                   "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\autonomous_controller_status.json",
