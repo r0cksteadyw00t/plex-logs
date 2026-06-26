@@ -1,13 +1,13 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-26T01:00:33.396Z
+Updated UTC: 2026-06-26T01:05:24.057Z
 Source: live status merge
 
+- 2026-06-26T01:01:03Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=30660; child_pid=
+- 2026-06-26T01:01:03Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-26T00:59:44Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=30660; child_pid=28788
 - 2026-06-26T00:59:44Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
 - 2026-06-26T00:59:41Z - Autonomous controller: controller_already_running: existing controller lock is active
-- 2026-06-26T00:36:29Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=40064; child_pid=
-- 2026-06-26T00:36:29Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-25T23:34:35Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-25T23:08:12Z - Autonomous controller: stale_platform_gate_backoff_retry: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
 - 2026-06-25T14:12:17Z - Autonomous controller: PLATFORM_GATE_RUNNING: relaunched stale PlatformGate detached runner once
