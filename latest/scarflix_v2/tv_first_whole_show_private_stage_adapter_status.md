@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-26T14:15:05Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Updated UTC: 2026-06-26T14:57:21Z
+Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
 Episodes enumerated: 4
-Episodes already staged: 1
+Episodes already staged: 0
 Episodes newly staged: 0
-Review: 3
+Review: 4
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Q-Force: enumerated=4; staged=0; already=1; review=3; source=request_episode_targets
+- This Is Pop: enumerated=4; staged=0; already=0; review=4; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
