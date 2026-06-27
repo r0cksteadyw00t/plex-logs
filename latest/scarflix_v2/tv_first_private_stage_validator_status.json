@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-27T09:01:21Z",
+  "updated_utc": "2026-06-27T09:15:33Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
@@ -26,7 +26,7 @@
   "review": 1,
   "relay_fallback_attempted": 0,
   "relay_fallback_passed": 0,
-  "hls_validation_attempted": 0,
+  "hls_validation_attempted": 1,
   "hls_validation_passed": 0,
   "results": [
     {
@@ -107,18 +107,35 @@
       "probe": {
         "ok": false,
         "retryable": true,
-        "reason_code": "PROVIDER_RANGE_TIMEOUT_OR_ERROR",
-        "reason": "Range probe timed out.",
+        "reason_code": "HLS_PLAYLIST_TIMEOUT_OR_ERROR",
+        "reason": "HLS playlist timed out.",
         "url_host": "mediafusion-dev.elfhosted.com",
-        "head_status": null,
+        "head_status": 200,
         "range_status": null,
-        "content_type": "",
+        "content_type": "application/vnd.apple.mpegurl",
         "content_length": null,
         "accept_ranges": "",
         "content_range": "",
         "source_url_redacted": true,
         "relay_fallback": null,
-        "hls_validation": null
+        "hls_validation": {
+          "attempted": true,
+          "ok": false,
+          "reason_code": "HLS_PLAYLIST_TIMEOUT_OR_ERROR",
+          "reason": "HLS playlist timed out.",
+          "playlist_status": null,
+          "playlist_content_type": "",
+          "playlist_bytes": 0,
+          "variant_followed": false,
+          "variant_status": null,
+          "segment_status": null,
+          "segment_bytes": 0,
+          "segment_content_type": "",
+          "segment_host_sha256": "",
+          "retryable": true,
+          "source_url_redacted": true,
+          "no_media_artifacts_created": true
+        }
       }
     }
   ],
