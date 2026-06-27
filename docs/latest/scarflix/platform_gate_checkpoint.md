@@ -1,12 +1,12 @@
 # ScarFLIX v2 Platform Gate Checkpoint
 
-Generated UTC: 2026-06-27T22:01:53Z
+Generated UTC: 2026-06-27T22:13:56Z
 
 Status: REVIEW
-Started UTC: 2026-06-27T10:11:16Z
-Ended UTC: 2026-06-27T10:11:16Z
-Snapshot ID: 
-Snapshot hash: 
+Started UTC: 2026-06-27T22:11:20Z
+Ended UTC: 2026-06-27T22:13:47Z
+Snapshot ID: 20260627T221144Z
+Snapshot hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 Same-snapshot confirmed: False
 Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint.json
 
@@ -16,22 +16,39 @@ Checkpoint JSON: D:\PlexTools\public\latest\scarflix_v2\platform_gate_checkpoint
 - tv: 0
 
 ## QA
-- WebDAV active gate: UNKNOWN, checked=-1
+- WebDAV active gate: REVIEW, checked=0
 - Plex visible/HLS QA: UNKNOWN, checked=-1
 - Plex client decision QA: UNKNOWN, checked=-1
 - 5-concurrent stream QA: UNKNOWN, target=, map_tested=, visible_tested=
 - Health: UNKNOWN
 
 ## Source Handling
-- quarantined/rejected sources: 0
-- transient/retry-held count: 0
-- prunable/permanent count: 0
+- quarantined/rejected sources: 1325
+- transient/retry-held count: 1064
+- prunable/permanent count: 261
 - seeder rejected-stage skipped: 41
 - publisher rejected-stage skipped: 0
 - top reason codes:
+  - PROVIDER_503: 738
+  - PROVIDER_TIMEOUT: 264
+  - PLEX_INVISIBLE_AFTER_SCAN: 245
+  - PROVIDER_503_RETRYABLE: 55
+  - PLEX_HLS_TIMEOUT: 7
+  - PLEX_PROFILE_FAILED: 7
+  - PLEX_CODEC_BLOCKED: 5
+  - POLICY_BLOCKED: 2
+  - RELEASE_WINDOW_BLOCKED: 1
+  - PLEX_HLS_PROBE_FAILED: 1
 
 ## Schedules
 - schedules safely re-enabled by PlatformGate: False
+- ScarFLIX_v2_SafeWebDavExpansionPipeline: Disabled
+- ScarFLIX_v2_LiveCatalogSeeder: Disabled
+- ScarFLIX_v2_WebDavVirtualCatalogPublisher: Disabled
+- ScarFLIX_v2_AutoGate: Disabled
+- ScarFLIX_v2_SafeCatalogOrchestrator: Disabled
+- ScarFLIX_v2_CatalogPromoter: Disabled
+- ScarFLIX_v2_CatalogVisibilityGate: Disabled
 
 ## Blockers
-- platform gate lock is active
+- active_gate status=REVIEW
