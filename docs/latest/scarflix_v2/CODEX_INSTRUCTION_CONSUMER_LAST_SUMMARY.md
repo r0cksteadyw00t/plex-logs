@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-27T01:51:00Z
-Instruction: phase0_stabilization_foundation_record_status_v366
+Updated UTC: 2026-06-27T02:07:32Z
+Instruction: phase0_stabilization_foundation_record_status_v367
 
-Phase 0 stabilization continues. TV Section 6 publication held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN with full-season gate enforced. Materialized QA remains REVIEW. No legacy resolver activity, no publishing, no WebDAV mutations. Monitor active every 15min. Continue recording only.
+Phase 0 stabilization continues under PAUSE_PUBLICATION and REVIEW materialized QA. TV Section 6 hold remains active with full-season gate enforced. No expansion, publishing, or legacy resolver actions permitted. Monitor and forensic review only.
