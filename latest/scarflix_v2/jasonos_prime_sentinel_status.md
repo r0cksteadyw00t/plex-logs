@@ -1,30 +1,33 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-27T23:35:03Z
-Status: PASS
-Alert level: LOW
+Updated UTC: 2026-06-27T23:40:06Z
+Status: REVIEW
+Alert level: MEDIUM
 Jason action required: false
 Codex action required: false
 
 ## Signals
 - controller_status: RUNNING
 - controller_milestone: PLATFORM_GATE_RUNNING
-- controller_age_minutes: 4
+- controller_age_minutes: 5
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 3
+- watchdog_age_minutes: 5
 - dashboard_status: PASS
-- dashboard_age_minutes: 3
+- dashboard_age_minutes: 5
 - mirror_status: PASS
 - mirror_age_minutes: 1
 - checkpoint_status: REVIEW
 - checkpoint_step: platform_gate_review
-- checkpoint_age_minutes: 3
-- durable_platform_gate_age_minutes: 3
-- platform_progress_fresh: true
+- checkpoint_age_minutes: 8
+- durable_platform_gate_age_minutes: 8
+- platform_progress_fresh: false
 
 ## Recovery Actions
-- None.
+- platform_gate.lock: stale_lock (PASS) removed age_min=9 backup=D:/PlexTools/state/scarflix_v2/platform_gate.lock.stale_20260627234006.bak
+- ScarFLIX_v2_Watchdog_StallDetector: platform_checkpoint_stale (PASS) enable pid=13468; run pid=16648
+- ScarFLIX_v2_AutonomousController: platform_checkpoint_stale (PASS) enable pid=38676; run pid=9620
+- ScarFLIX_v2_DurablePlatformGateRunner: platform_checkpoint_stale (PASS) enable pid=38756; run pid=26688
 
 ## Notes
 - None.
