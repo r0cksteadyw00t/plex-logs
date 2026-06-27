@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-27T00:16:00Z",
+  "updated_utc": "2026-06-27T03:38:25Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
@@ -24,9 +24,9 @@
   "checked": 6,
   "passed": 5,
   "review": 1,
-  "relay_fallback_attempted": 1,
+  "relay_fallback_attempted": 0,
   "relay_fallback_passed": 0,
-  "hls_validation_attempted": 5,
+  "hls_validation_attempted": 6,
   "hls_validation_passed": 5,
   "results": [
     {
@@ -38,35 +38,35 @@
       "probe": {
         "ok": false,
         "retryable": true,
-        "reason_code": "PROVIDER_5XX_RETRYABLE",
-        "reason": "Range probe returned HTTP 502",
+        "reason_code": "HLS_PLAYLIST_TIMEOUT_OR_ERROR",
+        "reason": "HLS playlist timed out.",
         "url_host": "mediafusion-dev.elfhosted.com",
-        "head_status": 502,
-        "range_status": 502,
-        "content_type": "text/html",
-        "content_length": 6479,
+        "head_status": 200,
+        "range_status": null,
+        "content_type": "application/vnd.apple.mpegurl",
+        "content_length": null,
         "accept_ranges": "",
         "content_range": "",
         "source_url_redacted": true,
-        "relay_fallback": {
+        "relay_fallback": null,
+        "hls_validation": {
           "attempted": true,
           "ok": false,
-          "loopback_only": true,
-          "ephemeral_relay_only": true,
-          "no_media_artifacts_created": true,
-          "relay_shutdown_before_return": true,
-          "head_status": 502,
-          "range_status": 502,
-          "range_bytes": 16,
-          "content_type": "text/plain",
-          "content_length": null,
-          "content_range": "",
-          "reason_code": "RELAY_FALLBACK_HEAD_NOT_SANE",
-          "reason": "Relay fallback HEAD did not return 200/206."
-        },
-        "hls_validation": null,
-        "direct_range_status": 502,
-        "direct_range_reason_code": "PROVIDER_5XX_RETRYABLE"
+          "reason_code": "HLS_PLAYLIST_TIMEOUT_OR_ERROR",
+          "reason": "HLS playlist timed out.",
+          "playlist_status": null,
+          "playlist_content_type": "",
+          "playlist_bytes": 0,
+          "variant_followed": false,
+          "variant_status": null,
+          "segment_status": null,
+          "segment_bytes": 0,
+          "segment_content_type": "",
+          "segment_host_sha256": "",
+          "retryable": true,
+          "source_url_redacted": true,
+          "no_media_artifacts_created": true
+        }
       }
     },
     {
