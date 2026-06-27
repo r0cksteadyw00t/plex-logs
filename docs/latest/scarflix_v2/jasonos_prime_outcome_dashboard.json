@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-27T01:30:04Z",
+  "updated_utc": "2026-06-27T01:35:04Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-27T01:18:36Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-27T01:34:06Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -89,8 +89,8 @@
     "materialized_publisher_selected": 20,
     "materialized_publisher_published": 1,
     "materialized_publisher_retry": null,
-    "playback_qa_controller_status": "WAITING_OVERLAP",
-    "playback_qa_controller_step": "validation_overlap_running",
+    "playback_qa_controller_status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
+    "playback_qa_controller_step": "materialized_decision_failed",
     "playback_qa_direct_strm_admission_status": "REVIEW_QUARANTINED_VISIBLE_FAILURES",
     "playback_qa_decision_status": "UNKNOWN",
     "playback_qa_concurrent_status": "UNKNOWN",
@@ -125,18 +125,18 @@
     "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
     "controller_updated_age_minutes": 5,
-    "platform_child_progress_age_minutes": 4,
+    "platform_child_progress_age_minutes": 9,
     "mirror_updated_age_minutes": 2,
-    "next_check_utc": "2026-06-27T01:31:19Z",
+    "next_check_utc": "2026-06-27T01:36:11Z",
     "next_check_age_minutes": 0,
-    "platform_runner_running": true,
+    "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260627.log",
     "last_progress_utc": "2026-06-27T01:25:59.092Z",
-    "age_minutes": 4,
+    "age_minutes": 9,
     "last_line": "[2026-06-27T01:25:59Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-27T01:25:52Z",
+    "updated_utc": "2026-06-27T01:30:38Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "PASS",
     "alert_level": "LOW",
-    "updated_utc": "2026-06-27T01:27:06Z",
+    "updated_utc": "2026-06-27T01:30:02Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -24318,11 +24318,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-27T01:18:36Z",
-    "last_successful_grok_instruction_utc": "2026-06-27T01:18:36Z",
+    "bridge_updated_utc": "2026-06-27T01:34:06Z",
+    "last_successful_grok_instruction_utc": "2026-06-27T01:34:06Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-27T01:18:43Z",
+    "consumer_updated_utc": "2026-06-27T01:34:14Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -24331,6 +24331,11 @@
     "instructions_md": "D:/PlexTools/public/latest/scarflix_v2/GROK_INSTRUCTIONS_FOR_CODEX.md"
   },
   "recent_updates": [
+    {
+      "utc": "2026-06-27T01:30:10Z",
+      "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
+      "detail": "attempted rclone mount self-heal; mount not ready yet"
+    },
     {
       "utc": "2026-06-27T01:26:16Z",
       "title": "Durable PlatformGate runner REVIEW",
@@ -24360,11 +24365,6 @@
       "utc": "2026-06-27T01:25:10Z",
       "title": "Autonomous controller: controller_already_running",
       "detail": "existing controller lock is active"
-    },
-    {
-      "utc": "2026-06-27T01:25:06Z",
-      "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
-      "detail": "attempted rclone mount self-heal; mount not ready yet"
     },
     {
       "utc": "2026-06-27T01:20:03Z",
@@ -24415,7 +24415,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-27T01:18:43Z - structured instruction loop",
+      "last_change": "2026-06-27T01:34:14Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
@@ -24504,7 +24504,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-27T01:30:04Z",
+    "updated_utc": "2026-06-27T01:35:04Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -24515,7 +24515,7 @@
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
     "grok_peer_bridge_status": "PASS_REVIEW_RECEIVED",
-    "platform_gate_status": "REVIEW",
+    "platform_gate_status": "RUNNING",
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
       "status": "PAUSED_PLAYBACK_FIX",
@@ -48672,9 +48672,9 @@
     },
     "playback_qa_controller_status": {
       "component": "jasonos_prime_playback_qa_controller",
-      "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-      "updated_utc": "2026-06-27T01:30:37Z",
-      "current_step": "materialized_decision_failed",
+      "status": "WAITING_OVERLAP",
+      "updated_utc": "2026-06-27T01:35:40Z",
+      "current_step": "validation_overlap_running",
       "jason_action_required": false,
       "counts": {
         "movies": 58251,
@@ -48698,7 +48698,17 @@
       "decision_qa_status": "UNKNOWN",
       "concurrent_stream_qa_status": "UNKNOWN",
       "ignored_overlap": [],
-      "overlap_running": [],
+      "overlap_running": [
+        {
+          "name": "ScarFLIX_v2_DurablePlatformGateRunner",
+          "ok": true,
+          "status": "Running",
+          "scheduled_state": "Enabled",
+          "last_run": "27/06/2026 11:35:02 AM",
+          "last_result": "267009",
+          "next_run": "N/A"
+        }
+      ],
       "actions": [
         {
           "action": "trigger_plex_scans_materialized",
@@ -48706,21 +48716,21 @@
             {
               "ok": true,
               "section": "5",
-              "pid": 33864
+              "pid": 31480
             },
             {
               "ok": true,
               "section": "6",
-              "pid": 12616
+              "pid": 17464
             }
           ]
         }
       ],
-      "next_action": "Quarantine failed materialized source/release and keep title retryable."
+      "next_action": "Wait for current ScarFLIX validation task to finish."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1630333,
-    "safe_pipeline_log_age_seconds": 1687223,
+    "canary_status_age_seconds": 1630636,
+    "safe_pipeline_log_age_seconds": 1687526,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -48731,13 +48741,13 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
       },
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=29448"
+        "detail": "pid=36964"
       },
       {
         "action": "run_playback_qa_controller",
@@ -48747,7 +48757,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=34932"
+        "detail": "pid=11712"
       }
     ],
     "blockers": []
@@ -48802,9 +48812,9 @@
   },
   "playback_qa_controller": {
     "component": "jasonos_prime_playback_qa_controller",
-    "status": "REVIEW_MATERIALIZED_DECISION_FAILURE",
-    "updated_utc": "2026-06-27T01:30:37Z",
-    "current_step": "materialized_decision_failed",
+    "status": "WAITING_OVERLAP",
+    "updated_utc": "2026-06-27T01:35:40Z",
+    "current_step": "validation_overlap_running",
     "jason_action_required": false,
     "counts": {
       "movies": 58251,
@@ -48828,7 +48838,17 @@
     "decision_qa_status": "UNKNOWN",
     "concurrent_stream_qa_status": "UNKNOWN",
     "ignored_overlap": [],
-    "overlap_running": [],
+    "overlap_running": [
+      {
+        "name": "ScarFLIX_v2_DurablePlatformGateRunner",
+        "ok": true,
+        "status": "Running",
+        "scheduled_state": "Enabled",
+        "last_run": "27/06/2026 11:35:02 AM",
+        "last_result": "267009",
+        "next_run": "N/A"
+      }
+    ],
     "actions": [
       {
         "action": "trigger_plex_scans_materialized",
@@ -48836,16 +48856,16 @@
           {
             "ok": true,
             "section": "5",
-            "pid": 33864
+            "pid": 31480
           },
           {
             "ok": true,
             "section": "6",
-            "pid": 12616
+            "pid": 17464
           }
         ]
       }
     ],
-    "next_action": "Quarantine failed materialized source/release and keep title retryable."
+    "next_action": "Wait for current ScarFLIX validation task to finish."
   }
 }
