@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
-    "status":  "FAIL",
-    "started_utc":  "2026-06-27T07:35:14Z",
-    "ended_utc":  "2026-06-27T07:37:56Z",
+    "status":  "REVIEW",
+    "started_utc":  "2026-06-27T07:37:49Z",
+    "ended_utc":  "2026-06-27T07:39:04Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -18,15 +18,15 @@
                                 "media":  {
                                               "path":  "S:\\media",
                                               "ok":  false,
-                                              "timed_out":  true,
-                                              "ms":  6427,
+                                              "timed_out":  false,
+                                              "ms":  8554,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
-                                                "timed_out":  true,
-                                                "ms":  6099,
+                                                "timed_out":  false,
+                                                "ms":  4244,
                                                 "error":  ""
                                             }
                             },
@@ -36,14 +36,14 @@
                                             "path":  "S:\\media",
                                             "ok":  false,
                                             "timed_out":  false,
-                                            "ms":  24911,
+                                            "ms":  4066,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
                                               "timed_out":  false,
-                                              "ms":  9002,
+                                              "ms":  1446,
                                               "error":  ""
                                           }
                           },
@@ -53,8 +53,8 @@
     "catalog_path_timed_out":  false,
     "mount_ready":  false,
     "start":  {
-                  "started":  false,
-                  "pid":  0,
+                  "started":  true,
+                  "pid":  38596,
                   "error":  ""
               },
     "restart":  {
@@ -68,19 +68,19 @@
                                ]
                 },
     "processes_before":  [
-                             {
-                                 "process_id":  5036,
-                                 "command_line_present":  true
-                             }
+
                          ],
     "processes_after":  [
-
+                            {
+                                "process_id":  38596,
+                                "command_line_present":  true
+                            }
                         ],
     "actions":  [
-
+                    "started rclone pid 38596"
                 ],
     "failures":  [
-                     "S: exists but does not expose ScarFLIX media path"
+                     "rclone mount did not expose S:\\media\\catalog within timeout"
                  ],
     "status_file":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
     "log":  "D:\\PlexTools\\logs\\scarflix_v2_rclone_mount_keepalive_20260627.log",
