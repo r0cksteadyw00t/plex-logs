@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_status_v388",
-      "created_at": "2026-06-27T07:45:24Z",
-      "expires_at": "2026-06-28T07:45:24Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_v389",
+      "created_at": "2026-06-27T08:00:57Z",
+      "expires_at": "2026-06-28T08:00:57Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,19 +14,20 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "summary": "Phase 0 stabilization: TV Section 6 publication remains HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Materialized QA REVIEW. No legacy resolver expansion. Controlled materialized path only. Monitor active, 0 pending events. Record current forensic handoff state for peer review.",
-          "source_instruction_id": "phase0_stabilization_foundation_record_status_v388"
+          "parameters": {
+            "note": "TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. No visible Plex publication, no webdav_map mutation, no symlink creation. Monitor continues 15-minute cycle with 0 pending events. Full-season gate enforced at 28/28."
+          }
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-27T07:45:24Z",
+  "updated_utc": "2026-06-27T08:00:57Z",
   "source": "grok_api"
 }
