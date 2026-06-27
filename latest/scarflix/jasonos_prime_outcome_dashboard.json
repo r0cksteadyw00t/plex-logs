@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-27T11:36:20.342Z",
+  "updated_utc": "2026-06-27T11:42:25.698Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -119,13 +119,13 @@
     "blocked_by": "unknown"
   },
   "automation_health": {
-    "state": "PROGRESSING",
-    "summary": "Background controller and worker tasks are expected to continue without Codex.",
+    "state": "WATCHING_FOR_STALL",
+    "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 1,
-    "platform_child_progress_age_minutes": 18,
-    "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-27T11:39:34Z",
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 23,
+    "mirror_updated_age_minutes": 2,
+    "next_check_utc": "2026-06-27T11:40:47Z",
     "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
@@ -134,7 +134,7 @@
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260627.log",
     "last_progress_utc": "2026-06-27T11:17:26.583Z",
-    "age_minutes": 18,
+    "age_minutes": 23,
     "last_line": "[2026-06-27T11:17:26Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -143,13 +143,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-27T11:34:30Z",
+    "updated_utc": "2026-06-27T11:36:04Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-27T11:33:45Z",
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-27T11:36:04Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -310,6 +310,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-27T11:35:18Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
+    },
+    {
       "utc": "2026-06-27T11:34:49Z",
       "title": "Durable PlatformGate runner REVIEW",
       "detail": "Step platform_gate_review; owner_pid=26892; child_pid="
@@ -328,11 +333,6 @@
       "utc": "2026-06-27T11:26:26Z",
       "title": "Autonomous controller: rclone_mount_selfheal_waiting_retry",
       "detail": "attempted rclone mount self-heal; mount not ready yet"
-    },
-    {
-      "utc": "2026-06-27T11:20:40Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-27T11:17:26.583Z",
