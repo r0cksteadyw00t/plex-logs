@@ -1,6 +1,6 @@
 ﻿# ScarFLIX v2 Watchdog + Stall Detector
 
-Updated UTC: 2026-06-27T12:37:40Z
+Updated UTC: 2026-06-27T12:41:55Z
 Status: REVIEW
 Stall risk: Medium
 Will progress without Codex: True
@@ -8,18 +8,18 @@ Current milestone: PLATFORM_GATE_RUNNING
 
 ## Signals
 - Controller age minutes: 6
-- Platform checkpoint age minutes: 1
-- Dashboard age minutes: 6
+- Platform checkpoint age minutes: 5
+- Dashboard age minutes: 3
 - Mirror age minutes: 2
 - Movie STRM count: 5
 - TV STRM count: 0
 - Total STRM count: 5
 
 ## Actions
-- JasonOS_Prime_OutcomeDashboard: run_triggered
+- platform_gate.lock: removed_stale_lock_age_6_min_backup_D:\PlexTools\state\scarflix_v2\platform_gate.lock.stale_20260627_224152.bak
 - JasonOS_Prime_PublicMirrorPublisher: skipped_orchestrator_owned
 
 ## Notes
+- Stale lock recovered: removed_stale_lock_age_6_min_backup_D:\PlexTools\state\scarflix_v2\platform_gate.lock.stale_20260627_224152.bak
 - Controller status is stale, but PlatformGate durable progress is fresh; no recovery action required.
-- Dashboard status was disabled or stale; watchdog triggered dashboard task.
 - Public mirror status was disabled or stale; watchdog triggered mirror task.
