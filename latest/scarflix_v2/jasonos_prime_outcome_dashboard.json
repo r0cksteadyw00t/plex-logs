@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-27T13:10:03Z",
+  "updated_utc": "2026-06-27T13:15:06Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -24504,7 +24504,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-27T13:10:03Z",
+    "updated_utc": "2026-06-27T13:15:06Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -24515,7 +24515,7 @@
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
     "grok_peer_bridge_status": "PASS_REVIEW_RECEIVED",
-    "platform_gate_status": "RUNNING",
+    "platform_gate_status": "REVIEW",
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
       "status": "PAUSED_PLAYBACK_FIX",
@@ -48719,8 +48719,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1672343,
-    "safe_pipeline_log_age_seconds": 1729294,
+    "canary_status_age_seconds": 1672647,
+    "safe_pipeline_log_age_seconds": 1729588,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -48741,13 +48741,13 @@
       },
       {
         "action": "run_playback_qa_controller",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_PlaybackQA_Controller.js\n"
       },
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=40356"
+        "detail": "pid=20812"
       }
     ],
     "blockers": []
