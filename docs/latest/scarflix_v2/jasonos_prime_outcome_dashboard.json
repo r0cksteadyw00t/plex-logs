@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-27T06:58:53.486Z",
+  "updated_utc": "2026-06-27T07:03:39.919Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-27T06:40:15Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-27T06:56:07Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -119,14 +119,14 @@
     "blocked_by": "snapshot_scoped_qa"
   },
   "automation_health": {
-    "state": "WATCHING_FOR_STALL",
-    "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
+    "state": "PROGRESSING",
+    "summary": "Background controller and worker tasks are expected to continue without Codex.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 7,
-    "platform_child_progress_age_minutes": 21,
-    "mirror_updated_age_minutes": 4,
-    "next_check_utc": "2026-06-27T06:55:19Z",
-    "next_check_age_minutes": 1,
+    "controller_updated_age_minutes": 4,
+    "platform_child_progress_age_minutes": 25,
+    "mirror_updated_age_minutes": 1,
+    "next_check_utc": "2026-06-27T07:01:26Z",
+    "next_check_age_minutes": 0,
     "platform_runner_running": false,
     "platform_child_active": true
   },
@@ -134,7 +134,7 @@
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260627.log",
     "last_progress_utc": "2026-06-27T06:35:59.828Z",
-    "age_minutes": 19,
+    "age_minutes": 24,
     "last_line": "[2026-06-27T06:35:59Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -143,23 +143,23 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-27T06:50:21Z",
+    "updated_utc": "2026-06-27T06:56:22Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-27T06:50:02Z",
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-27T06:58:36Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
   "durable_platform_gate_runner": {
     "status": "REVIEW",
     "current_step": "platform_gate_review",
-    "owner_pid": 24376,
+    "owner_pid": 14224,
     "child_pid": "",
-    "last_progress_utc": "2026-06-27T06:45:57Z",
-    "heartbeat_updated_utc": "2026-06-27T06:45:57Z",
+    "last_progress_utc": "2026-06-27T06:56:24Z",
+    "heartbeat_updated_utc": "2026-06-27T06:56:24Z",
     "status_file": "D:/PlexTools/logs/scarflix_v2_durable_platform_gate_runner_status.json"
   },
   "direct_strm_admission_gate": {
@@ -296,11 +296,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-27T06:40:15Z",
-    "last_successful_grok_instruction_utc": "2026-06-27T06:40:15Z",
+    "bridge_updated_utc": "2026-06-27T06:56:07Z",
+    "last_successful_grok_instruction_utc": "2026-06-27T06:56:07Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-27T06:40:21Z",
+    "consumer_updated_utc": "2026-06-27T06:56:12Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -310,19 +310,24 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-27T06:56:26Z",
+      "title": "Autonomous controller: controller_already_running",
+      "detail": "existing controller lock is active"
+    },
+    {
+      "utc": "2026-06-27T06:56:24Z",
+      "title": "Durable PlatformGate runner REVIEW",
+      "detail": "Step platform_gate_review; owner_pid=14224; child_pid="
+    },
+    {
+      "utc": "2026-06-27T06:56:24Z",
+      "title": "PlatformGate checkpoint REVIEW",
+      "detail": "Step platform_gate_review; visible=unknown; blockers=0"
+    },
+    {
       "utc": "2026-06-27T06:50:05Z",
       "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
       "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
-    },
-    {
-      "utc": "2026-06-27T06:45:57Z",
-      "title": "Durable PlatformGate runner REVIEW",
-      "detail": "Step platform_gate_review; owner_pid=24376; child_pid="
-    },
-    {
-      "utc": "2026-06-27T06:45:57Z",
-      "title": "PlatformGate checkpoint REVIEW",
-      "detail": "Step platform_gate_review; visible=unknown; blockers=0"
     },
     {
       "utc": "2026-06-27T06:40:06Z",
@@ -333,11 +338,6 @@
       "utc": "2026-06-27T06:35:59.828Z",
       "title": "PlatformGate child QA active: WebDAV active gate",
       "detail": "Latest child QA line: [2026-06-27T06:35:59Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0"
-    },
-    {
-      "utc": "2026-06-27T06:35:40Z",
-      "title": "Autonomous controller: controller_already_running",
-      "detail": "existing controller lock is active"
     },
     {
       "utc": "2026-06-27T06:35:11Z",
@@ -393,9 +393,9 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-27T06:40:21Z - structured instruction loop",
+      "last_change": "2026-06-27T06:56:12Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
-      "progress": 75,
+      "progress": 70,
       "eta": "active every 15 minutes with Grok API",
       "stall_risk": "Low"
     },
@@ -403,7 +403,7 @@
       "outcome": "ScarFLIX Catalogue Expansion (Mission 001)",
       "target": "Growth beyond 78 items with alternate-source retry and verified Plex playback.",
       "last_change": "2026-06-19T04:57:13Z - materialized canary Plex decision QA",
-      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=249, rows_found=143, checked=124, decision=103/124, failed=21, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=58251; materialized visible links=0 (publisher=0, scan=0). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=58251, tv=1, total=58252. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=4/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_QUARANTINED_VISIBLE_FAILURES, checked=120, passed_visible=0, quarantined_this_run=120, retry_held=3385. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=REVIEW/REVIEW; durable=REVIEW; owner_pid=24376; child_pid=.",
+      "current": "Expansion pause=LEGACY_RESOLVER_PAUSED_CONTROLLED_MATERIALIZED_ALLOWED reason=Legacy/direct resolver expansion remains paused; controlled materialized/WebDAV batches are allowed after targeted materialized Plex decision QA.. Controlled materialized expansion eligible=false. Primary playback architecture=materialized_webdav_symlink status=REVIEW_PLEX_SCAN_PENDING; all-visible materialized decision QA=REVIEW, targets=249, rows_found=143, checked=124, decision=103/124, failed=21, success_rate=83%. Materialized cleanup=PASS_NO_VISIBLE_FAILURES_MOVED, quarantined_this_run=0, skipped=0. Legacy resolver .strm=1; materialized/WebDAV .strm=58251; materialized visible links=0 (publisher=0, scan=0). Materialized publisher=RUNNING, selected=20, published=1, retry=0. Materialized canary published=2/2, HLS=2/2. Actual Streaming library .strm output is movies=58251, tv=1, total=58252. Legacy direct Plex sample=REVIEW mode=materialized_webdav_visible_rows, range=5/5, decision=4/5. Staged pending=43; staged publisher=PAUSED_PLAYBACK_FIX, processed=0, published=0. Direct admission=REVIEW_QUARANTINED_VISIBLE_FAILURES, checked=120, passed_visible=0, quarantined_this_run=120, retry_held=3385. Direct mirror=PAUSED_PLAYBACK_FIX. Snapshot health=REVIEW; global health=UNKNOWN (blocking=false); blocked_by=snapshot_scoped_qa. Canary=PAUSED_PLAYBACK_FIX/CANARY_PAUSED_PLAYBACK_FIX. PlatformGate=REVIEW/REVIEW; durable=REVIEW; owner_pid=14224; child_pid=.",
       "progress": 23,
       "eta": "after all-visible materialized QA passes",
       "stall_risk": "Medium"
@@ -413,7 +413,7 @@
       "target": "Push short autonomous status, prediction, candidate and expansion actions every 5 minutes.",
       "last_change": "2026-06-25T05:32:02Z - PLATFORM_GATE_RUNNING",
       "current": "Status PASS; expansion_eligible=false; expansion_started_this_cycle=false; total_strm=58252.",
-      "progress": 25,
+      "progress": 20,
       "eta": "runs every 5 minutes",
       "stall_risk": "Low"
     },
@@ -449,7 +449,7 @@
       "target": "Parallel local workers for simulations, status, planning and future missions.",
       "last_change": "2026-06-06T08:25:00Z - watchdog swarm escalation marker added",
       "current": "Short scheduled workers active; broader worker swarm pending.",
-      "progress": 32,
+      "progress": 28,
       "eta": "2-4 days",
       "stall_risk": "Medium"
     },
@@ -457,17 +457,17 @@
       "outcome": "Phone/Multi-Device Federation",
       "target": "Stable remote status/control through public mirror plus tunnel/federation layer.",
       "last_change": "2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated",
-      "current": "Public mirror PASS; raw status base available.",
-      "progress": 47,
+      "current": "Public mirror RUNNING; raw status base available.",
+      "progress": 35,
       "eta": "1-3 days",
-      "stall_risk": "Low"
+      "stall_risk": "Medium"
     },
     {
       "outcome": "Overall Project",
       "target": "JasonOS Prime local AI command layer with ScarFLIX as Mission 001.",
-      "last_change": "2026-06-27T06:45:57Z - Durable PlatformGate ownership active",
+      "last_change": "2026-06-27T06:56:24Z - Durable PlatformGate ownership active",
       "current": "Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=58252; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA.",
-      "progress": 15,
+      "progress": 12,
       "eta": "next: all-visible materialized decision QA retry after source quarantine",
       "stall_risk": "Medium"
     }
