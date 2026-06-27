@@ -1,16 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-27T11:45:49Z
+Updated UTC: 2026-06-27T12:08:18Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 4
-Passed: 4
+Checked: 1
+Passed: 1
 Review: 0
 
 ## Results
-- Lethal Weapon: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Lethal Weapon: PASS_PRIVATE_STAGE_VALIDATED; head=; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Lethal Weapon: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Lethal Weapon: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Run with the Wind: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 
 ## Safety
 - no_broad_expansion_started: true
