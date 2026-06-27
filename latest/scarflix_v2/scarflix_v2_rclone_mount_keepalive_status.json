@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
     "status":  "PASS",
-    "started_utc":  "2026-06-27T11:10:10Z",
-    "ended_utc":  "2026-06-27T11:14:36Z",
+    "started_utc":  "2026-06-27T11:15:12Z",
+    "ended_utc":  "2026-06-27T11:16:23Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -18,23 +18,23 @@
                                 "ready":  false,
                                 "media":  {
                                               "path":  "S:\\media",
-                                              "ok":  true,
-                                              "timed_out":  false,
-                                              "ms":  6385,
+                                              "ok":  false,
+                                              "timed_out":  true,
+                                              "ms":  19763,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
-                                                "timed_out":  true,
-                                                "ms":  10134,
+                                                "timed_out":  false,
+                                                "ms":  10393,
                                                 "error":  ""
                                             },
                                 "active_map_path":  {
                                                         "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
-                                                        "ok":  false,
-                                                        "timed_out":  true,
-                                                        "ms":  6878,
+                                                        "ok":  true,
+                                                        "timed_out":  false,
+                                                        "ms":  4720,
                                                         "error":  "",
                                                         "source":  "webdav_map_first_path"
                                                     }
@@ -45,21 +45,21 @@
                                             "path":  "S:\\media",
                                             "ok":  true,
                                             "timed_out":  false,
-                                            "ms":  2621,
+                                            "ms":  5918,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
                                               "timed_out":  false,
-                                              "ms":  613,
+                                              "ms":  4031,
                                               "error":  ""
                                           },
                               "active_map_path":  {
                                                       "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
                                                       "ok":  true,
                                                       "timed_out":  false,
-                                                      "ms":  1683,
+                                                      "ms":  5686,
                                                       "error":  "",
                                                       "source":  "webdav_map_first_path"
                                                   }
@@ -71,7 +71,7 @@
                             "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
                             "ok":  true,
                             "timed_out":  false,
-                            "ms":  1683,
+                            "ms":  5686,
                             "error":  "",
                             "source":  "webdav_map_first_path"
                         },
@@ -85,10 +85,10 @@
                   "error":  ""
               },
     "restart":  {
-                    "attempted":  true,
-                    "stopped":  1,
-                    "started":  true,
-                    "pid":  28940,
+                    "attempted":  false,
+                    "stopped":  0,
+                    "started":  false,
+                    "pid":  0,
                     "error":  "",
                     "errors":  [
 
@@ -104,7 +104,7 @@
                           },
     "processes_before":  [
                              {
-                                 "process_id":  24220,
+                                 "process_id":  28940,
                                  "command_line_present":  true
                              }
                          ],
@@ -115,8 +115,7 @@
                             }
                         ],
     "actions":  [
-                    "cleared stale S: drive mapping before rclone restart",
-                    "restarted stalled rclone pid 28940"
+                    "cleared stale S: drive mapping before rclone restart"
                 ],
     "failures":  [
 
