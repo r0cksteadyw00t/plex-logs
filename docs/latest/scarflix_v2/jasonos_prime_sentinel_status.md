@@ -1,6 +1,6 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-27T07:57:20Z
+Updated UTC: 2026-06-27T08:07:31Z
 Status: PASS
 Alert level: LOW
 Jason action required: false
@@ -12,7 +12,7 @@ Codex action required: false
 - controller_age_minutes: 1
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 6
+- watchdog_age_minutes: 4
 - dashboard_status: PASS
 - dashboard_age_minutes: 2
 - mirror_status: RUNNING
@@ -27,4 +27,4 @@ Codex action required: false
 - None.
 
 ## Notes
-- Watchdog status is stale, but durable PlatformGate progress is fresh.
+- None.
