@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-27T01:16:11.212Z
+Updated UTC: 2026-06-27T01:20:07.513Z
 Source: live status merge
 
+- 2026-06-27T01:16:49.778Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-27T01:16:49Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-27T01:16:42Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=39400; child_pid=
+- 2026-06-27T01:16:42Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-27T01:16:01Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-27T01:16:01Z - Durable PlatformGate runner RUNNING: Step starting; owner_pid=39400; child_pid=
 - 2026-06-27T01:16:01Z - PlatformGate checkpoint RUNNING: Step starting; visible=unknown; blockers=0
-- 2026-06-27T01:16:01Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-27T01:10:06Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
-- 2026-06-27T01:06:18Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=37172; child_pid=
-- 2026-06-27T01:06:18Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-27T01:05:59.101Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-27T01:05:59Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-27T00:00:37Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-26T22:44:44Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-26T02:55:05Z - Autonomous controller: stale_platform_gate_backoff_retry: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
