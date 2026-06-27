@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_v418",
-      "created_at": "2026-06-27T15:55:23Z",
-      "expires_at": "2026-06-28T15:55:23Z",
+      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_v419",
+      "created_at": "2026-06-27T16:12:09Z",
+      "expires_at": "2026-06-28T16:12:09Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,14 +14,13 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 0
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_strategy_note",
           "parameters": {
-            "note": "TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate (28/28) not yet met. No expansion, publishing, or QA instructed. Continue hidden monitor only.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_v418"
+            "summary": "TV Section 6 publication hold remains active under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Full-season gate (28/28) not yet met. No expansion, publishing, source movement, or QA instructed. Continue hidden monitor only. Materialized QA stays in REVIEW state."
           }
         }
       ],
@@ -29,6 +28,6 @@
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-27T15:55:23Z",
+  "updated_utc": "2026-06-27T16:12:09Z",
   "source": "grok_api"
 }
