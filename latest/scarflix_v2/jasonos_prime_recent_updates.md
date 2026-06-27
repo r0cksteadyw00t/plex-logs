@@ -1,16 +1,16 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-27T00:10:09.351Z
+Updated UTC: 2026-06-27T00:15:12.719Z
 Source: live status merge
 
+- 2026-06-27T00:11:02.322Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-27T00:11:02Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
+- 2026-06-27T00:10:56Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=26928; child_pid=
+- 2026-06-27T00:10:56Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
+- 2026-06-27T00:10:08Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-27T00:05:04Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
-- 2026-06-27T00:00:58Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=33248; child_pid=
-- 2026-06-27T00:00:58Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-27T00:00:50.758Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-27T00:00:50Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-27T00:00:37Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-26T23:49:47Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=32920; child_pid=20648
 - 2026-06-26T23:49:47Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
-- 2026-06-26T23:49:46Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-26T22:44:44Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 - 2026-06-26T02:55:05Z - Autonomous controller: stale_platform_gate_backoff_retry: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
 - 2026-06-26T02:08:04Z - Autonomous controller: controller_exception: existing controller lock is active
