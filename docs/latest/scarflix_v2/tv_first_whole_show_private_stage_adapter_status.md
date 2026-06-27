@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-27T08:55:50Z
+Updated UTC: 2026-06-27T08:57:56Z
 Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 4
+Episodes enumerated: 3
 Episodes already staged: 0
 Episodes newly staged: 0
-Review: 4
+Review: 3
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- BanG Dream!: enumerated=4; staged=0; already=0; review=4; source=request_episode_targets
+- The Piano Forest: enumerated=3; staged=0; already=0; review=3; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
