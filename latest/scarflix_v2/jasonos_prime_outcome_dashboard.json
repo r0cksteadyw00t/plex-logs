@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-27T08:35:04Z",
+  "updated_utc": "2026-06-27T08:40:03Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -42,7 +42,7 @@
     "grok_codex_instruction_schema": "grok_codex_instruction.v1",
     "grok_instruction_bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "grok_instruction_bridge_mode": "REAL_API",
-    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-27T08:16:57Z",
+    "grok_instruction_bridge_last_successful_grok_instruction_utc": "2026-06-27T08:33:29Z",
     "grok_instruction_bridge_source": "grok_api",
     "grok_instruction_count": 1,
     "grok_executable_instruction_count": 1,
@@ -124,19 +124,19 @@
     "state": "WATCHING_FOR_STALL",
     "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 3,
-    "platform_child_progress_age_minutes": 70,
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 75,
     "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-27T08:32:54Z",
+    "next_check_utc": "2026-06-27T08:36:08Z",
     "next_check_age_minutes": 0,
-    "platform_runner_running": true,
+    "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260627.log",
     "last_progress_utc": "2026-06-27T07:20:43.366Z",
-    "age_minutes": 69,
+    "age_minutes": 74,
     "last_line": "[2026-06-27T07:20:43Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-27T08:27:35Z",
+    "updated_utc": "2026-06-27T08:32:21Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
-    "status": "REVIEW",
-    "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-27T08:25:11Z",
+    "status": "PASS",
+    "alert_level": "LOW",
+    "updated_utc": "2026-06-27T08:30:05Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -24318,11 +24318,11 @@
     "status": "PASS",
     "bridge_status": "PASS_GROK_INSTRUCTIONS_READY",
     "bridge_mode": "REAL_API",
-    "bridge_updated_utc": "2026-06-27T08:16:57Z",
-    "last_successful_grok_instruction_utc": "2026-06-27T08:16:57Z",
+    "bridge_updated_utc": "2026-06-27T08:33:29Z",
+    "last_successful_grok_instruction_utc": "2026-06-27T08:33:29Z",
     "bridge_source": "grok_api",
     "consumer_status": "PASS",
-    "consumer_updated_utc": "2026-06-27T08:17:05Z",
+    "consumer_updated_utc": "2026-06-27T08:33:34Z",
     "schema_version": "grok_codex_instruction.v1",
     "instruction_count": 1,
     "executable_instruction_count": 1,
@@ -24332,6 +24332,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-27T08:30:24Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
+    },
+    {
       "utc": "2026-06-27T08:28:33Z",
       "title": "Durable PlatformGate runner REVIEW",
       "detail": "Step platform_gate_review; owner_pid=32696; child_pid="
@@ -24340,11 +24345,6 @@
       "utc": "2026-06-27T08:28:33Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=unknown; blockers=0"
-    },
-    {
-      "utc": "2026-06-27T08:27:44Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-27T08:15:25Z",
@@ -24415,7 +24415,7 @@
     {
       "outcome": "Grok-Codex Autonomous Instruction Loop",
       "target": "15-minute structured Grok instructions, safe Codex consumption, public mirror handoff, and no human paste loop for routine actions.",
-      "last_change": "2026-06-27T08:17:05Z - structured instruction loop",
+      "last_change": "2026-06-27T08:33:34Z - structured instruction loop",
       "current": "Schema=grok_codex_instruction.v1; bridge=PASS_GROK_INSTRUCTIONS_READY; mode=REAL_API; consumer=PASS; source=grok_api; instructions=1; executable_by_bridge=1; executable_by_consumer=1; executed_actions=1.",
       "progress": 75,
       "eta": "active every 15 minutes with Grok API",
@@ -24504,7 +24504,7 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-27T08:35:04Z",
+    "updated_utc": "2026-06-27T08:40:03Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
@@ -24515,7 +24515,7 @@
     },
     "grokbuild_status": "REVIEW_STALE_PROGRESS",
     "grok_peer_bridge_status": "PASS_REVIEW_RECEIVED",
-    "platform_gate_status": "RUNNING",
+    "platform_gate_status": "REVIEW",
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
       "status": "PAUSED_PLAYBACK_FIX",
@@ -48719,8 +48719,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1655839,
-    "safe_pipeline_log_age_seconds": 1712740,
+    "canary_status_age_seconds": 1656141,
+    "safe_pipeline_log_age_seconds": 1713062,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -48731,13 +48731,13 @@
       },
       {
         "action": "refresh_grok_peer_bridge",
-        "ok": true,
-        "detail": "ok"
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_Grok_PeerReviewBridge.js\n"
       },
       {
         "action": "run_direct_strm_admission_gate",
         "ok": true,
-        "detail": "pid=22848"
+        "detail": "pid=34488"
       },
       {
         "action": "run_playback_qa_controller",
@@ -48747,7 +48747,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=36504"
+        "detail": "pid=34712"
       }
     ],
     "blockers": []
