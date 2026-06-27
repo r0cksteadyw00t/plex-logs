@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_status_v371",
-      "created_at": "2026-06-27T03:12:04Z",
-      "expires_at": "2026-06-28T03:12:04Z",
+      "instruction_id": "phase0_stabilization_foundation_record_status_v372",
+      "created_at": "2026-06-27T03:28:19Z",
+      "expires_at": "2026-06-28T03:28:19Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,22 +14,18 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff": "none"
+        "backoff_seconds": 60
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_status_v371",
-            "auto_added_by_bridge": true
-          }
+          "summary": "Phase 0 stabilization active. TV Section 6 publication held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN with full-season gate. Materialized QA REVIEW. No expansion or publishing permitted. Monitor running every 15min. Focus on foundation recording only."
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-27T03:12:04Z",
+  "updated_utc": "2026-06-27T03:28:19Z",
   "source": "grok_api"
 }
