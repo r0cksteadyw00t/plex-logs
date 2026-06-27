@@ -1,16 +1,16 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: WAITING_RETRY
+Status: RUNNING
 Milestone state: PLATFORM_GATE_RUNNING
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-27T02:15:06Z
-Current step: rclone_mount_selfheal_waiting_retry
+Updated UTC: 2026-06-27T02:20:21Z
+Current step: PLATFORM_GATE_CHILD_ACTIVE
 Jason action required: False
 
 ## PlatformGate
-- runner_running: False
-- status: REVIEW
-- stage: platform_gate_review
+- runner_running: True
+- status: RUNNING
+- stage: PLATFORM_GATE_CHILD_ACTIVE
 - visible: 0
 - transient_failures: 0
 - prunable_failures: 0
@@ -23,11 +23,11 @@ Jason action required: False
 - rclone_mount_status: UNKNOWN
 - s_media_ready: True
 - s_catalog_ready: False
-- mount_selfheal_attempted: True
+- mount_selfheal_attempted: False
 
 ## Action
-- action_taken: attempted rclone mount self-heal; mount not ready yet
-- next_check_utc: 2026-06-27T02:21:22Z
+- action_taken: PlatformGate child QA activity is fresh; no duplicate runner launch
+- next_check_utc: 2026-06-27T02:25:35Z
 
 ## Blockers
-- rclone mount not ready: UNKNOWN
+- none
