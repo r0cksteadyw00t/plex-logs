@@ -2,9 +2,9 @@
   "schema_version": "grok_codex_instruction.v1",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_status_v387",
-      "created_at": "2026-06-27T07:29:24Z",
-      "expires_at": "2026-06-28T07:29:24Z",
+      "instruction_id": "phase0_stabilization_foundation_record_status_v388",
+      "created_at": "2026-06-27T07:45:24Z",
+      "expires_at": "2026-06-28T07:45:24Z",
       "target_component": "orchestrator",
       "risk_level": "low",
       "requires_user_decision": false,
@@ -14,21 +14,19 @@
       ],
       "retry_policy": {
         "max_retries": 1,
-        "backoff_seconds": 60
+        "backoff": "none"
       },
       "actions": [
         {
           "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Phase 0 stabilization ongoing. TV Section 6 publication hold active with HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Materialized QA remains REVIEW. No legacy resolver expansion. Controlled materialized path only. Latest orchestrator loop ingested 50 instructions with 21 executed safely.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_status_v387"
-          }
+          "summary": "Phase 0 stabilization: TV Section 6 publication remains HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Materialized QA REVIEW. No legacy resolver expansion. Controlled materialized path only. Monitor active, 0 pending events. Record current forensic handoff state for peer review.",
+          "source_instruction_id": "phase0_stabilization_foundation_record_status_v388"
         }
       ],
       "safety_classification": "Safe"
     }
   ],
   "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-27T07:29:24Z",
+  "updated_utc": "2026-06-27T07:45:24Z",
   "source": "grok_api"
 }
