@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-27T12:10:03Z",
+  "updated_utc": "2026-06-27T12:15:01Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,9 +11,9 @@
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 1,
+    "movie_strm_count": 5,
     "tv_strm_count": 0,
-    "total_strm_count": 1,
+    "total_strm_count": 5,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
@@ -124,19 +124,19 @@
     "state": "WATCHING_FOR_STALL",
     "summary": "PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.",
     "will_progress_without_codex": true,
-    "controller_updated_age_minutes": 4,
-    "platform_child_progress_age_minutes": 23,
-    "mirror_updated_age_minutes": 1,
-    "next_check_utc": "2026-06-27T12:07:05Z",
+    "controller_updated_age_minutes": 5,
+    "platform_child_progress_age_minutes": 28,
+    "mirror_updated_age_minutes": 2,
+    "next_check_utc": "2026-06-27T12:10:43Z",
     "next_check_age_minutes": 0,
-    "platform_runner_running": true,
+    "platform_runner_running": false,
     "platform_child_active": true
   },
   "child_qa_progress": {
     "stage": "WebDAV active gate",
     "file": "D:/PlexTools/logs/scarflix_v2_webdav_active_gate_20260627.log",
     "last_progress_utc": "2026-06-27T11:42:38.124Z",
-    "age_minutes": 22,
+    "age_minutes": 28,
     "last_line": "[2026-06-27T11:42:38Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0",
     "pass_lines": 0,
     "review_lines": 40,
@@ -145,13 +145,13 @@
   "watchdog_status": {
     "status": "REVIEW",
     "stall_risk": "Medium",
-    "updated_utc": "2026-06-27T12:01:31Z",
+    "updated_utc": "2026-06-27T12:06:32Z",
     "will_progress_without_codex": true
   },
   "sentinel_status": {
     "status": "REVIEW",
     "alert_level": "MEDIUM",
-    "updated_utc": "2026-06-27T12:00:05Z",
+    "updated_utc": "2026-06-27T12:10:05Z",
     "codex_action_required": false,
     "jason_action_required": false
   },
@@ -24332,6 +24332,11 @@
   },
   "recent_updates": [
     {
+      "utc": "2026-06-27T12:05:17Z",
+      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
+      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
+    },
+    {
       "utc": "2026-06-27T12:01:53Z",
       "title": "Durable PlatformGate runner REVIEW",
       "detail": "Step platform_gate_review; owner_pid=19408; child_pid="
@@ -24340,11 +24345,6 @@
       "utc": "2026-06-27T12:01:53Z",
       "title": "PlatformGate checkpoint REVIEW",
       "detail": "Step platform_gate_review; visible=unknown; blockers=0"
-    },
-    {
-      "utc": "2026-06-27T12:01:50Z",
-      "title": "Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE",
-      "detail": "PlatformGate child QA activity is fresh; no duplicate runner launch"
     },
     {
       "utc": "2026-06-27T11:55:35Z",
@@ -24504,18 +24504,18 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-27T12:10:03Z",
+    "updated_utc": "2026-06-27T12:15:01Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
-      "legacy_movie_strm": 1,
+      "legacy_movie_strm": 5,
       "legacy_tv_strm": 0,
-      "legacy_total_strm": 1,
+      "legacy_total_strm": 5,
       "plex_safe_webdav_visible_rows": null
     },
     "grokbuild_status": "UNKNOWN",
     "grok_peer_bridge_status": "PASS_REVIEW_RECEIVED",
-    "platform_gate_status": "RUNNING",
+    "platform_gate_status": "REVIEW",
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
       "status": "PAUSED_PLAYBACK_FIX",
@@ -48719,8 +48719,8 @@
       "next_action": "Quarantine failed materialized source/release and keep title retryable."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1668739,
-    "safe_pipeline_log_age_seconds": 1725677,
+    "canary_status_age_seconds": 1669045,
+    "safe_pipeline_log_age_seconds": 1725987,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -48740,9 +48740,14 @@
         "detail": "Disabled unless JASONOS_ENABLE_LEGACY_DIRECT_STRM_ADMISSION=1; Source Factory/additive WebDAV publication owns Plex visibility."
       },
       {
+        "action": "run_playback_qa_controller",
+        "ok": false,
+        "detail": "Command failed: C:/Program Files/nodejs/node.exe D:/PlexTools/Foundry/workers/JasonOS_Prime_PlaybackQA_Controller.js\n"
+      },
+      {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=39748"
+        "detail": "pid=31220"
       }
     ],
     "blockers": []
