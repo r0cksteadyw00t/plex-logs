@@ -2,30 +2,30 @@
     "component":  "scarflix_v2_autonomous_controller",
     "status":  "RUNNING",
     "milestone_state":  "PLATFORM_GATE_RUNNING",
-    "updated_utc":  "2026-06-27T09:15:36Z",
-    "current_step":  "controller_already_running",
+    "updated_utc":  "2026-06-27T09:15:11Z",
+    "current_step":  "PLATFORM_GATE_RUNNING",
     "current_milestone":  "Complete same-snapshot PlatformGate checkpoint",
     "next_milestone":  "Blanket candidate-source retry/quarantine model",
-    "action_taken":  "existing controller lock is active",
-    "next_check_utc":  "2026-06-27T09:20:37Z",
+    "action_taken":  "PlatformGate runner already running; no inline wait",
+    "next_check_utc":  "2026-06-27T09:21:26Z",
     "jason_action_required":  false,
     "blockers":  [
 
                  ],
     "docs":  {
                  "next_actions_path":  "C:\\Users\\jason\\OneDrive\\Documents\\Plex Project\\docs\\NEXT_ACTIONS.md",
-                 "next_actions_read":  false
+                 "next_actions_read":  true
              },
     "platform_gate":  {
                           "runner_task":  "ScarFLIX_v2_DurablePlatformGateRunner",
-                          "runner_running":  false,
+                          "runner_running":  true,
                           "child_active":  false,
-                          "child_activity_log_utc":  "",
-                          "status":  "UNKNOWN",
-                          "stage":  "",
-                          "visible_count":  "unknown",
-                          "started_utc":  "",
-                          "last_progress_utc":  "",
+                          "child_activity_log_utc":  "2026-06-27T08:56:26Z",
+                          "status":  "RUNNING",
+                          "stage":  "starting",
+                          "visible_count":  0,
+                          "started_utc":  "2026-06-27T09:15:07Z",
+                          "last_progress_utc":  "2026-06-27T09:15:07Z",
                           "transient_failures":  0,
                           "prunable_failures":  0,
                           "failure_signature":  "",
@@ -34,19 +34,19 @@
                       },
     "candidate_source_model":  {
                                    "script":  "D:\\PlexTools\\Scripts\\scarflix_v2\\ScarFLIX_v2_CandidateSourceModel.ps1",
-                                   "status":  "PENDING_PLATFORM_GATE",
+                                   "status":  "PASS",
                                    "status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\candidate_source_model_status.json",
                                    "status_md":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\candidate_source_model_status.md",
-                                   "updated_utc":  "",
+                                   "updated_utc":  "2026-06-20T09:55:32Z",
                                    "blockers":  [
 
                                                 ],
                                    "raw_stage_visibility_blocker_non_blocking":  false
                                },
     "infrastructure":  {
-                           "rclone_mount_status":  "UNKNOWN",
+                           "rclone_mount_status":  "REVIEW",
                            "rclone_mount_status_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
-                           "s_media_ready":  false,
+                           "s_media_ready":  true,
                            "s_catalog_ready":  false,
                            "mount_selfheal_attempted":  false,
                            "mount_selfheal_exit_code":  ""
