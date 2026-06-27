@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-27T21:00:22Z
-Instruction: phase0_stabilization_foundation_record_tv_section6_hold_v437
+Updated UTC: 2026-06-27T21:16:24Z
+Instruction: phase0_stabilization_foundation_record_tv_section6_hold_v438
 
-TV Section 6 publication remains held under HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN. Phase 0 stabilization active. No materialized publishing, no legacy resolver expansion, no Plex mutation. Monitor continues 15-minute cycle with 0 pending events. Full-season gate enforced at 28/28.
+TV Section 6 publication remains HELD_MONITOR_ACTIVE_PUBLICATION_COOLDOWN pending forensic review of scanner latency. No visible aliases, no webdav_map mutation, full-season gate enforced. Monitor active every 15min. Materialized QA REVIEW; no expansion or publishing instructed.
