@@ -1,6 +1,6 @@
 # Codex Instruction Consumer Last Summary
 
-Updated UTC: 2026-06-27T08:17:05Z
-Instruction: phase0_stabilization_foundation_record_tv_section6_hold_v390
+Updated UTC: 2026-06-27T08:33:34Z
+Instruction: phase0_stabilization_foundation_record_tv_section6_hold_v391
 
-Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.
+Current state: TV Section 6 publication held pending forensic review of scanner latency; materialized QA REVIEW; Phase 0 stabilization active; no legacy resolver expansion; controlled materialized path only.
