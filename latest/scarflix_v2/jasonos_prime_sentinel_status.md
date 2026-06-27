@@ -1,6 +1,6 @@
 # JasonOS Prime Sentinel
 
-Updated UTC: 2026-06-27T17:26:11Z
+Updated UTC: 2026-06-27T17:42:57Z
 Status: ALERT
 Alert level: HIGH
 Jason action required: false
@@ -9,27 +9,27 @@ Codex action required: true
 ## Signals
 - controller_status: RUNNING
 - controller_milestone: PLATFORM_GATE_RUNNING
-- controller_age_minutes: 211
+- controller_age_minutes: 227
 - watchdog_status: REVIEW
 - watchdog_risk: Medium
-- watchdog_age_minutes: 210
+- watchdog_age_minutes: 226
 - dashboard_status: PASS
-- dashboard_age_minutes: 209
+- dashboard_age_minutes: 226
 - mirror_status: RUNNING
 - mirror_age_minutes: 0
 - checkpoint_status: REVIEW
 - checkpoint_step: platform_gate_review
-- checkpoint_age_minutes: 214
-- durable_platform_gate_age_minutes: 214
+- checkpoint_age_minutes: 231
+- durable_platform_gate_age_minutes: 231
 - platform_progress_fresh: false
 
 ## Recovery Actions
-- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=8292; run pid=344
-- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=6984; run pid=12712
-- JasonOS_Prime_OutcomeDashboard: dashboard_stale (PASS) enable pid=11088; run pid=3952
-- ScarFLIX_v2_Watchdog_StallDetector: platform_checkpoint_stale (PASS) enable pid=804; run pid=13596
-- ScarFLIX_v2_AutonomousController: platform_checkpoint_stale (PASS) enable pid=12672; run pid=11256
-- ScarFLIX_v2_DurablePlatformGateRunner: platform_checkpoint_stale (PASS) enable pid=5332; run pid=12256
+- ScarFLIX_v2_Watchdog_StallDetector: watchdog_stale_or_failed (PASS) enable pid=9428; run pid=3080
+- ScarFLIX_v2_AutonomousController: controller_stale_or_blocked (PASS) enable pid=10548; run pid=8432
+- JasonOS_Prime_OutcomeDashboard: dashboard_stale (PASS) enable pid=4752; run pid=9436
+- ScarFLIX_v2_Watchdog_StallDetector: platform_checkpoint_stale (PASS) enable pid=2656; run pid=12848
+- ScarFLIX_v2_AutonomousController: platform_checkpoint_stale (PASS) enable pid=4532; run pid=9256
+- ScarFLIX_v2_DurablePlatformGateRunner: platform_checkpoint_stale (PASS) enable pid=11712; run pid=4780
 
 ## Notes
 - Same unresolved sentinel signature repeated for three cycles.
