@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
-    "status":  "REVIEW",
-    "started_utc":  "2026-06-27T10:30:11Z",
-    "ended_utc":  "2026-06-27T10:34:36Z",
+    "status":  "PASS",
+    "started_utc":  "2026-06-27T10:35:07Z",
+    "ended_utc":  "2026-06-27T10:37:57Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -20,75 +20,75 @@
                                               "path":  "S:\\media",
                                               "ok":  true,
                                               "timed_out":  false,
-                                              "ms":  16956,
+                                              "ms":  15605,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
                                                 "timed_out":  true,
-                                                "ms":  9525,
+                                                "ms":  14218,
                                                 "error":  ""
                                             },
                                 "active_map_path":  {
                                                         "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
                                                         "ok":  false,
                                                         "timed_out":  true,
-                                                        "ms":  24024,
+                                                        "ms":  6878,
                                                         "error":  "",
                                                         "source":  "webdav_map_first_path"
                                                     }
                             },
     "final_mount_probe":  {
-                              "ready":  false,
+                              "ready":  true,
                               "media":  {
                                             "path":  "S:\\media",
                                             "ok":  true,
                                             "timed_out":  false,
-                                            "ms":  1108,
+                                            "ms":  893,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
-                                              "timed_out":  true,
-                                              "ms":  9516,
+                                              "timed_out":  false,
+                                              "ms":  1318,
                                               "error":  ""
                                           },
                               "active_map_path":  {
                                                       "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
-                                                      "ok":  false,
-                                                      "timed_out":  true,
-                                                      "ms":  6244,
+                                                      "ok":  true,
+                                                      "timed_out":  false,
+                                                      "ms":  880,
                                                       "error":  "",
                                                       "source":  "webdav_map_first_path"
                                                   }
                           },
     "media_path_ready":  true,
     "catalog_path_ready":  false,
-    "active_map_path_ready":  false,
+    "active_map_path_ready":  true,
     "active_map_path":  {
                             "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
-                            "ok":  false,
-                            "timed_out":  true,
-                            "ms":  6244,
+                            "ok":  true,
+                            "timed_out":  false,
+                            "ms":  880,
                             "error":  "",
                             "source":  "webdav_map_first_path"
                         },
     "media_path_timed_out":  false,
-    "catalog_path_timed_out":  true,
-    "active_map_path_timed_out":  true,
-    "mount_ready":  false,
+    "catalog_path_timed_out":  false,
+    "active_map_path_timed_out":  false,
+    "mount_ready":  true,
     "start":  {
                   "started":  false,
                   "pid":  0,
                   "error":  ""
               },
     "restart":  {
-                    "attempted":  true,
-                    "stopped":  1,
-                    "started":  true,
-                    "pid":  23088,
+                    "attempted":  false,
+                    "stopped":  0,
+                    "started":  false,
+                    "pid":  0,
                     "error":  "",
                     "errors":  [
 
@@ -104,7 +104,7 @@
                           },
     "processes_before":  [
                              {
-                                 "process_id":  32204,
+                                 "process_id":  23088,
                                  "command_line_present":  true
                              }
                          ],
@@ -115,11 +115,10 @@
                             }
                         ],
     "actions":  [
-                    "cleared stale S: drive mapping before rclone restart",
-                    "restarted stalled rclone pid 23088"
+                    "cleared stale S: drive mapping before rclone restart"
                 ],
     "failures":  [
-                     "rclone mount did not expose the active WebDAV media path within timeout"
+
                  ],
     "status_file":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\scarflix_v2_rclone_mount_keepalive_status.json",
     "log":  "D:\\PlexTools\\logs\\scarflix_v2_rclone_mount_keepalive_20260627.log",
