@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-27T07:37:49Z",
-    "ended_utc":  "2026-06-27T07:39:04Z",
+    "started_utc":  "2026-06-27T07:40:09Z",
+    "ended_utc":  "2026-06-27T07:42:26Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -12,21 +12,21 @@
                       },
     "rclone_exe_present":  true,
     "rclone_config_present":  true,
-    "drive_s_present":  false,
+    "drive_s_present":  true,
     "initial_mount_probe":  {
                                 "ready":  false,
                                 "media":  {
                                               "path":  "S:\\media",
-                                              "ok":  false,
+                                              "ok":  true,
                                               "timed_out":  false,
-                                              "ms":  8554,
+                                              "ms":  14929,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
-                                                "timed_out":  false,
-                                                "ms":  4244,
+                                                "timed_out":  true,
+                                                "ms":  11580,
                                                 "error":  ""
                                             }
                             },
@@ -34,27 +34,27 @@
                               "ready":  false,
                               "media":  {
                                             "path":  "S:\\media",
-                                            "ok":  false,
+                                            "ok":  true,
                                             "timed_out":  false,
-                                            "ms":  4066,
+                                            "ms":  7244,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
-                                              "timed_out":  false,
-                                              "ms":  1446,
+                                              "timed_out":  true,
+                                              "ms":  7340,
                                               "error":  ""
                                           }
                           },
-    "media_path_ready":  false,
+    "media_path_ready":  true,
     "catalog_path_ready":  false,
     "media_path_timed_out":  false,
-    "catalog_path_timed_out":  false,
+    "catalog_path_timed_out":  true,
     "mount_ready":  false,
     "start":  {
-                  "started":  true,
-                  "pid":  38596,
+                  "started":  false,
+                  "pid":  0,
                   "error":  ""
               },
     "restart":  {
@@ -68,7 +68,10 @@
                                ]
                 },
     "processes_before":  [
-
+                             {
+                                 "process_id":  38596,
+                                 "command_line_present":  true
+                             }
                          ],
     "processes_after":  [
                             {
@@ -77,7 +80,7 @@
                             }
                         ],
     "actions":  [
-                    "started rclone pid 38596"
+                    "rclone process already present; waiting for mount readiness"
                 ],
     "failures":  [
                      "rclone mount did not expose S:\\media\\catalog within timeout"
