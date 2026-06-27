@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-27T22:44:05Z
-Status: PASS_WHOLE_SHOW_ALREADY_STAGED
+Updated UTC: 2026-06-27T23:14:14Z
+Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
-Episodes enumerated: 1
-Episodes already staged: 1
-Episodes newly staged: 0
+Episodes enumerated: 6
+Episodes already staged: 2
+Episodes newly staged: 4
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: PASS_PRIVATE_STAGE_VALIDATED
+Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 
 ## Shows
-- Better Call Saul: enumerated=1; staged=0; already=1; review=0; source=request_episode_targets
+- The Gifted: enumerated=6; staged=4; already=2; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
