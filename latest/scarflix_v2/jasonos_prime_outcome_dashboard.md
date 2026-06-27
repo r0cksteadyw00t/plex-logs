@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-27T12:07:23.763Z
+Updated UTC: 2026-06-27T12:12:11.388Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -21,19 +21,19 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-27T12:01:53Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-27T12:05:17Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-27T12:01:53Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=19408; child_pid=
 - 2026-06-27T12:01:53Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
-- 2026-06-27T12:01:50Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-27T11:55:35Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-27T11:50:34Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-27T11:49:50Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=28448; child_pid=22948
 
 Heartbeat / Stall Check:
 - PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.
-- Controller updated: 4 min ago
-- Platform child progress: 23 min ago
-- Mirror updated: 1 min ago
-- Platform runner running: true
+- Controller updated: 5 min ago
+- Platform child progress: 28 min ago
+- Mirror updated: 2 min ago
+- Platform runner running: false
 - Platform child active: true
 
 PlatformGate Health Contract:
