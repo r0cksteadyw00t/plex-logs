@@ -1,6 +1,6 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-27T11:56:44.750Z
+Updated UTC: 2026-06-27T12:02:28.236Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
@@ -21,18 +21,18 @@ Will progress without Codex: true
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-27T11:51:05Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=1; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-27T11:55:35Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-27T11:51:05Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=28448; child_pid=
 - 2026-06-27T11:51:05Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-27T11:50:34Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-27T11:49:50Z - Durable PlatformGate runner RUNNING: Step running_platform_gate_attempt_1; owner_pid=28448; child_pid=22948
 - 2026-06-27T11:49:50Z - PlatformGate checkpoint RUNNING: Step running_platform_gate_attempt_1; visible=unknown; blockers=0
-- 2026-06-27T11:49:47Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
 
 Heartbeat / Stall Check:
 - Background controller and worker tasks are expected to continue without Codex.
 - Controller updated: 5 min ago
-- Platform child progress: 13 min ago
-- Mirror updated: 1 min ago
+- Platform child progress: 18 min ago
+- Mirror updated: 2 min ago
 - Platform runner running: false
 - Platform child active: true
 
