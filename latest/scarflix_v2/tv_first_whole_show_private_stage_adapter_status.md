@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-27T09:54:14Z
+Updated UTC: 2026-06-27T10:18:35Z
 Status: PASS_WHOLE_SHOW_ALREADY_STAGED
 Shows requested: 1
 Episodes enumerated: 4
@@ -8,7 +8,7 @@ Episodes already staged: 4
 Episodes newly staged: 0
 Review: 0
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
-Prior validator: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
+Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
 - Lethal Weapon: enumerated=4; staged=0; already=4; review=0; source=request_episode_targets
