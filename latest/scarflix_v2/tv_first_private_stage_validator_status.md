@@ -1,6 +1,6 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-27T09:01:21Z
+Updated UTC: 2026-06-27T09:15:33Z
 Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
 Checked: 4
 Passed: 3
@@ -10,7 +10,7 @@ Review: 1
 - Lethal Weapon: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Lethal Weapon: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 - Lethal Weapon: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Lethal Weapon: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=; range=; type=; reason=PROVIDER_RANGE_TIMEOUT_OR_ERROR
+- Lethal Weapon: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=; type=application/vnd.apple.mpegurl; reason=HLS_PLAYLIST_TIMEOUT_OR_ERROR; hls_segment=; hls_bytes=0
 
 ## Safety
 - no_broad_expansion_started: true
