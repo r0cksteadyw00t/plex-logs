@@ -1,22 +1,13 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-28T05:41:25Z
-Status: REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL
-Checked: 10
-Passed: 9
-Review: 1
+Updated UTC: 2026-06-28T06:34:56Z
+Status: PASS_PRIVATE_STAGE_VALIDATED
+Checked: 1
+Passed: 1
+Review: 0
 
 ## Results
-- Tumble Leaf: REVIEW_PRIVATE_STAGE_VALIDATION_FAILED; head=200; range=503; type=text/html; reason=PROVIDER_503_RETRYABLE
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
-- Tumble Leaf: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Cavendish: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
 
 ## Safety
 - no_broad_expansion_started: true
@@ -29,4 +20,4 @@ Review: 1
 - read_only_url_validation: true
 - source_urls_not_written_to_public_status: true
 
-Next safe action: Keep failed private-stage candidates held and refresh source selection only for failed rows.
+Next safe action: Proceed to a TV-specific publication gate design for these validated private-stage candidates only.
