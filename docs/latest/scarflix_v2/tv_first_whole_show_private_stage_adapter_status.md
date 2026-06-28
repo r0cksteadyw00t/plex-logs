@@ -1,6 +1,6 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-28T06:57:34Z
+Updated UTC: 2026-06-28T07:00:20Z
 Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
 Shows requested: 1
 Episodes enumerated: 5
@@ -11,7 +11,7 @@ TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- Marvel's Agents of S.H.I.E.L.D.: enumerated=5; staged=5; already=0; review=0; source=request_episode_targets
+- Homeland: enumerated=5; staged=5; already=0; review=0; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
