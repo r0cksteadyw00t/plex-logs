@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
     "status":  "REVIEW",
-    "started_utc":  "2026-06-28T07:30:26Z",
-    "ended_utc":  "2026-06-28T07:32:23Z",
+    "started_utc":  "2026-06-28T07:35:24Z",
+    "ended_utc":  "2026-06-28T07:37:45Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -20,23 +20,23 @@
                                               "path":  "S:\\media",
                                               "ok":  false,
                                               "timed_out":  false,
-                                              "ms":  3088,
+                                              "ms":  4376,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
                                                 "timed_out":  false,
-                                                "ms":  684,
+                                                "ms":  526,
                                                 "error":  ""
                                             },
                                 "active_map_path":  {
-                                                        "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
+                                                        "path":  "",
                                                         "ok":  false,
                                                         "timed_out":  false,
-                                                        "ms":  2228,
-                                                        "error":  "",
-                                                        "source":  "webdav_map_first_path"
+                                                        "ms":  0,
+                                                        "error":  "Exception calling \"OpenText\" with \"1\" argument(s): \"The process cannot access the file \u0027D:\\PlexTools\\state\\scarflix_v2\\webdav_map.json\u0027 because it is being used by another process.\"",
+                                                        "source":  "none"
                                                     }
                             },
     "final_mount_probe":  {
@@ -45,21 +45,21 @@
                                             "path":  "S:\\media",
                                             "ok":  false,
                                             "timed_out":  false,
-                                            "ms":  4007,
+                                            "ms":  474,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
                                               "timed_out":  false,
-                                              "ms":  2555,
+                                              "ms":  652,
                                               "error":  ""
                                           },
                               "active_map_path":  {
                                                       "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
                                                       "ok":  false,
                                                       "timed_out":  false,
-                                                      "ms":  1333,
+                                                      "ms":  341,
                                                       "error":  "",
                                                       "source":  "webdav_map_first_path"
                                                   }
@@ -71,7 +71,7 @@
                             "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
                             "ok":  false,
                             "timed_out":  false,
-                            "ms":  1333,
+                            "ms":  341,
                             "error":  "",
                             "source":  "webdav_map_first_path"
                         },
@@ -88,7 +88,7 @@
                     "attempted":  true,
                     "stopped":  1,
                     "started":  true,
-                    "pid":  31768,
+                    "pid":  20944,
                     "error":  "",
                     "errors":  [
 
@@ -104,19 +104,19 @@
                           },
     "processes_before":  [
                              {
-                                 "process_id":  37388,
+                                 "process_id":  31768,
                                  "command_line_present":  true
                              }
                          ],
     "processes_after":  [
                             {
-                                "process_id":  31768,
+                                "process_id":  20944,
                                 "command_line_present":  true
                             }
                         ],
     "actions":  [
                     "rclone process already present; waiting for mount readiness",
-                    "restarted stalled rclone pid 31768"
+                    "restarted stalled rclone pid 20944"
                 ],
     "failures":  [
                      "rclone mount did not expose the active WebDAV media path within timeout"
