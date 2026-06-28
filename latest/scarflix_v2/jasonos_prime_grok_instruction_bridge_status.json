@@ -1,19 +1,20 @@
 {
   "component": "jasonos_prime_grok_instruction_bridge",
-  "status": "PASS_GROK_INSTRUCTIONS_READY",
-  "updated_utc": "2026-06-28T04:18:14Z",
-  "bridge_mode": "REAL_API",
-  "api_mode": "REAL_API",
-  "source": "grok_api",
-  "local_only_mode": false,
+  "status": "LOCAL_FALLBACK",
+  "updated_utc": "2026-06-28T04:33:57Z",
+  "bridge_mode": "LOCAL_FALLBACK",
+  "api_mode": "LOCAL_FALLBACK",
+  "source": "local_status_fallback",
+  "local_only_mode": true,
   "token_file_present": true,
   "token_file_used": "GROK_API_KEY.txt",
-  "fallback_reason": "",
+  "fallback_reason": "GROK_API_KEY.txt did not produce a valid Grok response; bridge wrote a non-executable local fallback.",
   "provider_attempts": [
     {
       "token_file": "GROK_API_KEY.txt",
-      "ok": true,
-      "status": 200
+      "ok": false,
+      "status": 0,
+      "reason": "unusable_token_shape"
     }
   ],
   "prompt_context": {
@@ -34,23 +35,16 @@
     "dashboard": {
       "exists": true,
       "path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\jasonos_prime_outcome_dashboard.json",
-      "mtime_utc": "2026-06-28T04:15:55.498Z",
-      "bytes": 2232848
+      "mtime_utc": "2026-06-28T04:30:57.833Z",
+      "bytes": 2232956
     }
   },
-  "provider": {
-    "ok": true,
-    "status": 200,
-    "endpoint": "https://api.x.ai/v1/chat/completions",
-    "model": "grok-4",
-    "parse_status": "PASS",
-    "raw_response_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\grok_instruction_bridge_raw_response.md"
-  },
+  "provider": null,
   "instructions_json_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.json",
   "instructions_md_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_INSTRUCTIONS_FOR_CODEX.md",
   "instruction_count": 1,
-  "executable_instruction_count": 1,
-  "last_successful_grok_instruction_utc": "2026-06-28T04:18:14Z",
+  "executable_instruction_count": 0,
+  "last_successful_grok_instruction_utc": "",
   "validation_errors": [],
   "jason_action_required": false
 }
