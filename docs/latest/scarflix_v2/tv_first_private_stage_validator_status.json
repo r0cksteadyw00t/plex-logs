@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_tv_first_private_stage_validator",
   "schema_version": "jasonos.tv_first.private_stage_validator.v1",
-  "updated_utc": "2026-06-28T05:22:55Z",
+  "updated_utc": "2026-06-28T05:38:28Z",
   "private_stage_root": "D:/PlexTools/state/scarflix_v2/tv_first_private_stage",
   "filters": {
     "stage_prefix": "",
@@ -22,10 +22,10 @@
     "source_urls_not_written_to_public_status": true
   },
   "checked": 24,
-  "passed": 23,
-  "review": 1,
-  "relay_fallback_attempted": 1,
-  "relay_fallback_passed": 0,
+  "passed": 24,
+  "review": 0,
+  "relay_fallback_attempted": 2,
+  "relay_fallback_passed": 2,
   "hls_validation_attempted": 0,
   "hls_validation_passed": 0,
   "results": [
@@ -310,35 +310,35 @@
       "title": "The Gifted",
       "tmdb_id": 69629,
       "strm_file": "D:\\PlexTools\\state\\scarflix_v2\\tv_first_private_stage\\prepared\\tv_the_gifted_69629_s02e02_b01c4a167512\\The Gifted (2017) - S02E02.strm",
-      "status": "REVIEW_PRIVATE_STAGE_VALIDATION_FAILED",
+      "status": "PASS_PRIVATE_STAGE_VALIDATED",
       "probe": {
-        "ok": false,
-        "retryable": true,
-        "reason_code": "PROVIDER_503_RETRYABLE",
-        "reason": "Range probe returned HTTP 503",
+        "ok": true,
+        "retryable": false,
+        "reason_code": "PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED",
+        "reason": "Direct range probe returned HTTP 503; ephemeral loopback relay fallback validated streaming pass-through.",
         "url_host": "torrentio.strem.fun",
         "head_status": 200,
-        "range_status": 503,
-        "content_type": "text/html",
+        "range_status": 206,
+        "content_type": "application/force-download",
         "content_length": 617136256,
-        "accept_ranges": "none",
-        "content_range": "",
+        "accept_ranges": "bytes",
+        "content_range": "bytes 0-65535/617136256",
         "source_url_redacted": true,
         "relay_fallback": {
           "attempted": true,
-          "ok": false,
+          "ok": true,
           "loopback_only": true,
           "ephemeral_relay_only": true,
           "no_media_artifacts_created": true,
           "relay_shutdown_before_return": true,
-          "head_status": 503,
+          "head_status": 200,
           "range_status": 206,
           "range_bytes": 65536,
           "content_type": "application/force-download",
           "content_length": 617136256,
           "content_range": "bytes 0-65535/617136256",
-          "reason_code": "RELAY_FALLBACK_HEAD_NOT_SANE",
-          "reason": "Relay fallback HEAD did not return 200/206."
+          "reason_code": "PASS_RELAY_FALLBACK_VALIDATED",
+          "reason": "Ephemeral loopback relay validated HEAD and bounded ranged GET without disk media."
         },
         "hls_validation": null,
         "direct_range_status": 503,
@@ -538,18 +538,35 @@
       "probe": {
         "ok": true,
         "retryable": false,
-        "reason_code": "PASS_PRIVATE_STAGE_URL_VALIDATED",
-        "reason": "Range probe passed; HEAD did not provide a usable media response.",
+        "reason_code": "PASS_PRIVATE_STAGE_RELAY_FALLBACK_VALIDATED",
+        "reason": "Direct range probe returned HTTP 503; ephemeral loopback relay fallback validated streaming pass-through.",
         "url_host": "torrentio.strem.fun",
-        "head_status": 503,
+        "head_status": 200,
         "range_status": 206,
         "content_type": "application/force-download",
-        "content_length": 2251,
+        "content_length": 483072129,
         "accept_ranges": "bytes",
-        "content_range": "bytes 0-1/483072129",
+        "content_range": "bytes 0-65535/483072129",
         "source_url_redacted": true,
-        "relay_fallback": null,
-        "hls_validation": null
+        "relay_fallback": {
+          "attempted": true,
+          "ok": true,
+          "loopback_only": true,
+          "ephemeral_relay_only": true,
+          "no_media_artifacts_created": true,
+          "relay_shutdown_before_return": true,
+          "head_status": 200,
+          "range_status": 206,
+          "range_bytes": 65536,
+          "content_type": "application/force-download",
+          "content_length": 483072129,
+          "content_range": "bytes 0-65535/483072129",
+          "reason_code": "PASS_RELAY_FALLBACK_VALIDATED",
+          "reason": "Ephemeral loopback relay validated HEAD and bounded ranged GET without disk media."
+        },
+        "hls_validation": null,
+        "direct_range_status": 503,
+        "direct_range_reason_code": "PROVIDER_503_RETRYABLE"
       }
     },
     {
@@ -599,6 +616,6 @@
       }
     }
   ],
-  "status": "REVIEW_PRIVATE_STAGE_VALIDATION_PARTIAL",
-  "next_safe_action": "Keep failed private-stage candidates held and refresh source selection only for failed rows."
+  "status": "PASS_PRIVATE_STAGE_VALIDATED",
+  "next_safe_action": "Proceed to a TV-specific publication gate design for these validated private-stage candidates only."
 }
