@@ -1,30 +1,35 @@
 {
     "component":  "scarflix_v2_durable_platform_gate_runner",
-    "status":  "RUNNING",
-    "current_step":  "running_platform_gate_attempt_1",
+    "status":  "REVIEW",
+    "current_step":  "platform_gate_review",
     "started_utc":  "2026-06-28T03:50:24Z",
-    "last_progress_utc":  "2026-06-28T03:50:30Z",
-    "ended_utc":  "",
-    "duration_seconds":  8,
+    "last_progress_utc":  "2026-06-28T03:51:06Z",
+    "ended_utc":  "2026-06-28T03:51:06Z",
+    "duration_seconds":  42,
     "no_catalogue_expansion":  true,
     "single_owner":  true,
     "owner_pid":  14220,
-    "child_pid":  33380,
+    "child_pid":  0,
     "child_start_utc":  "2026-06-28T03:50:32Z",
-    "child_exit_code":  null,
-    "child_qa_last_progress_utc":  "",
-    "child_qa_last_progress_path":  "",
-    "child_qa_stale_minutes":  null,
+    "child_exit_code":  -1,
+    "child_qa_last_progress_utc":  "2026-06-28T03:32:27Z",
+    "child_qa_last_progress_path":  "D:\\PlexTools\\logs\\scarflix_v2_webdav_active_gate_20260628.log",
+    "child_qa_stale_minutes":  18.7,
     "child_qa_stale_threshold_minutes":  5,
     "bounded_orphan_kill_minutes":  5,
-    "child_qa_stall_count":  0,
+    "child_qa_stall_count":  1,
     "attempts":  [
-
+                     {
+                         "attempt":  1,
+                         "exit_code":  -1,
+                         "platform_status":  "REVIEW",
+                         "ended_utc":  "2026-06-28T03:51:06Z"
+                     }
                  ],
     "stale_minutes":  5,
     "heartbeat_seconds":  30,
-    "heartbeat_updated_utc":  "2026-06-28T03:50:32Z",
-    "heartbeat_sequence":  4,
+    "heartbeat_updated_utc":  "2026-06-28T03:51:06Z",
+    "heartbeat_sequence":  7,
     "lock_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable.lock",
     "heartbeat_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable_heartbeat.json",
     "checkpoint_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.json",
@@ -36,7 +41,7 @@
 
                  ],
     "actions":  [
-
+                    "Stopped stale PlatformGate child pid=33380; context=attempt_1; child_qa_stale_minutes=18.7; threshold=5"
                 ],
     "overlap_tasks":  [
 
