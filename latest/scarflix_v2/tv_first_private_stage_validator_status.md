@@ -1,13 +1,15 @@
 # TV-First Private Stage Validator
 
-Updated UTC: 2026-06-28T06:34:56Z
+Updated UTC: 2026-06-28T06:59:16Z
 Status: PASS_PRIVATE_STAGE_VALIDATED
-Checked: 1
-Passed: 1
+Checked: 3
+Passed: 3
 Review: 0
 
 ## Results
-- Cavendish: PASS_PRIVATE_STAGE_VALIDATED; head=200; range=200; type=application/vnd.apple.mpegurl; reason=PASS_PRIVATE_STAGE_HLS_PLAYLIST_VALIDATED; hls_segment=200; hls_bytes=65536
+- Ben 10: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Ben 10: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
+- Ben 10: PASS_PRIVATE_STAGE_VALIDATED; head=405; range=206; type=application/force-download; reason=PASS_PRIVATE_STAGE_URL_VALIDATED
 
 ## Safety
 - no_broad_expansion_started: true
