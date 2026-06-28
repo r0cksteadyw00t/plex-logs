@@ -1,12 +1,12 @@
 # Grok Instructions For Codex
 
 Schema: `grok_codex_instruction.v1`
-Updated UTC: 2026-06-28T04:18:14Z
-Source: grok_api
+Updated UTC: 2026-06-28T04:33:57Z
+Source: local_status_fallback
 
 ## Summary
 
-
+GROK_API_KEY.txt did not produce a valid Grok response; bridge wrote a non-executable local fallback.
 
 ## Validation
 
@@ -14,10 +14,11 @@ PASS
 
 ## Instructions
 
-### phase0_stabilization_foundation_record_tv_section6_hold_v462
+### local-only-no-token-20260628043357
 
-- Target: `status_dashboard`
+- Target: `grok_codex_bridge`
 - Risk: `low`
 - Requires user decision: `false`
-- Approved for Codex execution: `true`
-- Expires: `2026-06-29T04:18:14Z`
+- Approved for Codex execution: `false`
+- Expires: `2026-06-28T05:33:58Z`
+- Summary: No Grok/xAI token is available. Codex must not execute this as a Grok-approved instruction.
