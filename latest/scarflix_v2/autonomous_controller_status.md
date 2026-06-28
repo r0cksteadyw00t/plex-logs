@@ -1,16 +1,16 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: RUNNING
-Milestone state: PLATFORM_GATE_RUNNING
+Status: FAIL_ENGINEERING
+Milestone state: BLOCKED_DECISION
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-28T12:15:31Z
-Current step: PLATFORM_GATE_RUNNING
+Updated UTC: 2026-06-28T11:52:20Z
+Current step: controller_exception
 Jason action required: False
 
 ## PlatformGate
 - runner_running: True
-- status: RUNNING
-- stage: running_platform_gate_attempt_1
+- status: REVIEW
+- stage: platform_gate_review
 - visible: 0
 - transient_failures: 0
 - prunable_failures: 0
@@ -23,11 +23,12 @@ Jason action required: False
 - rclone_mount_status: REVIEW
 - s_media_ready: False
 - s_catalog_ready: False
-- mount_selfheal_attempted: False
+- mount_selfheal_attempted: True
 
 ## Action
-- action_taken: PlatformGate runner already running; no inline wait
-- next_check_utc: 2026-06-28T12:21:51Z
+- action_taken: attempted rclone mount self-heal; mount not ready yet
+- next_check_utc: 2026-06-28T12:18:29Z
 
 ## Blockers
-- none
+- Controller exception: Exception calling "GetBytes" with "1" argument(s): "Array cannot be null.
+Parameter name: chars"
