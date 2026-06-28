@@ -1,10 +1,10 @@
 # JasonOS Prime Outcome Dashboard
 
-Updated UTC: 2026-06-28T03:15:48.908Z
+Updated UTC: 2026-06-28T03:20:39.914Z
 Status: PASS
 Current milestone: PLATFORM_GATE_RUNNING
 Jason action required: false
-Automation state: PROGRESSING
+Automation state: WATCHING_FOR_STALL
 Will progress without Codex: true
 
 | Outcome | Target God-Mode State | Last Change | Current State | Progress | ETA | Stall Risk |
@@ -17,21 +17,21 @@ Will progress without Codex: true
 | Morphogenetic Plugin + Worker Mesh | Dynamic local plugin registry and natural-language action routing. | 2026-06-06T08:25:00Z - watchdog swarm escalation status path added | Worker mesh RETIRED_ORCHESTRATOR_OWNED; plugins=0. | 45% | 1 day | Medium |
 | Recursive Self-Evolution Cycle | Daily autonomous proposals and controlled implementation backlog. | 2026-06-06T08:25:00Z - status tracking retained in dashboard | Self-evolution planner REVIEW. | 40% | 1-2 days | Medium |
 | Swarm Intelligence | Parallel local workers for simulations, status, planning and future missions. | 2026-06-06T08:25:00Z - watchdog swarm escalation marker added | Short scheduled workers active; broader worker swarm pending. | 32% | 2-4 days | Medium |
-| Phone/Multi-Device Federation | Stable remote status/control through public mirror plus tunnel/federation layer. | 2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated | Public mirror PASS; raw status base available. | 47% | 1-3 days | Low |
+| Phone/Multi-Device Federation | Stable remote status/control through public mirror plus tunnel/federation layer. | 2026-06-06T08:19:40Z - rendered dashboard and mirror outputs updated | Public mirror PASS; raw status base available. | 50% | 1-3 days | Low |
 | Overall Project | JasonOS Prime local AI command layer with ScarFLIX as Mission 001. | 2026-06-28T03:11:31Z - Durable PlatformGate ownership active | Infrastructure exists, but ScarFLIX user outcome is not fully delivered yet: legacy resolver .strm entries are hidden; actual direct .strm total=19; all-visible materialized decision=103/124; legacy resolver remains paused while controlled materialized/WebDAV publishing is allowed after per-batch QA. | 15% | next: all-visible materialized decision QA retry after source quarantine | Medium |
 
 Recent Achievements:
+- 2026-06-28T03:15:11Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-28T03:11:31Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=18440; child_pid=
 - 2026-06-28T03:11:31Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-28T03:10:12Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-28T03:01:05.483Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-28T03:01:05Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-28T03:00:51Z - Autonomous controller: controller_already_running: existing controller lock is active
-- 2026-06-28T02:50:38Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 
 Heartbeat / Stall Check:
-- Background controller and worker tasks are expected to continue without Codex.
+- PlatformGate is marked running, but child progress is older than 5 minutes. Controller/watchdog stale recovery should handle this.
 - Controller updated: 5 min ago
-- Platform child progress: 14 min ago
+- Platform child progress: 19 min ago
 - Mirror updated: 1 min ago
 - Platform runner running: false
 - Platform child active: true
