@@ -1,17 +1,17 @@
 # TV-First Whole-Show Private Stage Adapter
 
-Updated UTC: 2026-06-27T23:44:41Z
-Status: PASS_WHOLE_SHOW_PRIVATE_STAGED
+Updated UTC: 2026-06-27T23:58:33Z
+Status: REVIEW_NO_WHOLE_SHOW_EPISODES_STAGED
 Shows requested: 1
-Episodes enumerated: 11
+Episodes enumerated: 3
 Episodes already staged: 0
-Episodes newly staged: 11
-Review: 0
+Episodes newly staged: 0
+Review: 3
 TV scoped gate: PASS_TV_SCOPE_MATERIALIZED_QA
 Prior validator: PASS_PRIVATE_STAGE_VALIDATED
 
 ## Shows
-- The Durrells: enumerated=11; staged=11; already=0; review=0; source=request_episode_targets
+- Insert Name Here: enumerated=3; staged=0; already=0; review=3; source=request_episode_targets
 
 ## Safety
 - current_retry_held_hashes_block_restage: true
