@@ -1,35 +1,46 @@
 {
   "schema_version": "grok_codex_instruction.v1",
+  "component": "jasonos_prime_grok_instruction_bridge",
+  "updated_utc": "2026-06-28T04:33:57Z",
+  "source": "local_status_fallback",
+  "human_summary": "GROK_API_KEY.txt did not produce a valid Grok response; bridge wrote a non-executable local fallback.",
   "instructions": [
     {
-      "instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_v462",
-      "created_at": "2026-06-28T04:18:14Z",
-      "expires_at": "2026-06-29T04:18:14Z",
-      "target_component": "status_dashboard",
+      "instruction_id": "local-only-no-token-20260628043357",
+      "created_at": "2026-06-28T04:33:57Z",
+      "expires_at": "2026-06-28T05:33:58Z",
+      "target_component": "grok_codex_bridge",
       "risk_level": "low",
       "requires_user_decision": false,
-      "approved_for_codex_execution": true,
-      "success_criteria": [
-        "Codex instruction consumer validates and records this instruction without bypassing safety gates."
-      ],
-      "retry_policy": {
-        "max_retries": 1,
-        "backoff_seconds": 0
-      },
+      "approved_for_codex_execution": false,
+      "title": "Local-only Grok bridge fallback",
+      "summary": "No Grok/xAI token is available. Codex must not execute this as a Grok-approved instruction.",
       "actions": [
         {
-          "action_type": "write_status_summary",
-          "parameters": {
-            "summary": "Grok issued a safe high-level instruction with no explicit action; recorded as status-only execution.",
-            "source_instruction_id": "phase0_stabilization_foundation_record_tv_section6_hold_v462",
-            "auto_added_by_bridge": true
-          }
+          "action_type": "status_only",
+          "reason": "Credential missing; keep local ScarFLIX workers authoritative."
         }
       ],
-      "safety_classification": "Safe"
+      "success_criteria": [
+        "Instruction file is schema-valid.",
+        "Codex consumer records that no autonomous Grok-approved action was executed."
+      ],
+      "retry_policy": {
+        "max_attempts": 2,
+        "backoff_seconds": 300,
+        "escalate_after_attempts": 2,
+        "escalation_target": "grok_handoff"
+      },
+      "evidence_required": [
+        "jasonos_prime_grok_instruction_bridge_status.json",
+        "jasonos_prime_codex_instruction_consumer_status.json"
+      ],
+      "blocked_actions": [
+        "Do not re-enable legacy/direct resolver expansion.",
+        "Do not run long ScarFLIX validation inline from Codex."
+      ],
+      "source_handoff_path": "D:\\PlexTools\\public\\latest\\scarflix_v2\\GROK_HANDOFF_FOR_GROK.md",
+      "notes": "Local fallback is intentional and non-destructive."
     }
-  ],
-  "component": "jasonos_prime_grok_instruction_bridge",
-  "updated_utc": "2026-06-28T04:18:14Z",
-  "source": "grok_api"
+  ]
 }
