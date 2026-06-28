@@ -1,15 +1,15 @@
 # JasonOS Prime Recent Updates
 
-Updated UTC: 2026-06-28T02:10:05.137Z
+Updated UTC: 2026-06-28T02:15:06.518Z
 Source: live status merge
 
+- 2026-06-28T02:11:08Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-28T02:05:59Z - Durable PlatformGate runner REVIEW: Step platform_gate_review; owner_pid=29032; child_pid=
 - 2026-06-28T02:05:59Z - PlatformGate checkpoint REVIEW: Step platform_gate_review; visible=unknown; blockers=0
 - 2026-06-28T02:05:43.504Z - PlatformGate child QA active: WebDAV active gate: Latest child QA line: [2026-06-28T02:05:43Z] [REVIEW] WebDAV active gate finished status=REVIEW checked=0 passed=0 failed_detected=0 pruned=0
 - 2026-06-28T02:05:28Z - Autonomous controller: controller_already_running: existing controller lock is active
 - 2026-06-28T02:00:10Z - Autonomous controller: PLATFORM_GATE_CHILD_ACTIVE: PlatformGate child QA activity is fresh; no duplicate runner launch
 - 2026-06-28T01:55:14Z - Autonomous controller: PLATFORM_GATE_RUNNING: PlatformGate runner already running; no inline wait
-- 2026-06-28T01:50:14Z - Autonomous controller: rclone_mount_selfheal_waiting_retry: attempted rclone mount self-heal; mount not ready yet
 - 2026-06-28T00:15:06Z - Durable PlatformGate runner RUNNING: Step starting; owner_pid=15620; child_pid=
 - 2026-06-27T22:31:25Z - PlatformGate checkpoint RUNNING: Step existing_durable_owner_active; visible=unknown; blockers=0
 - 2026-06-26T02:55:05Z - Autonomous controller: stale_platform_gate_backoff_retry: PlatformGate became stale repeatedly; watchdog/controller retriggered runner and scheduled backoff retry
