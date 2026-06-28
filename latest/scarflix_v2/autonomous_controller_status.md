@@ -1,33 +1,33 @@
 # ScarFLIX v2 Autonomous Controller
 
-Status: WAITING_RETRY
-Milestone state: PLATFORM_GATE_RUNNING
+Status: FAIL_ENGINEERING
+Milestone state: BLOCKED_DECISION
 Milestone: Complete same-snapshot PlatformGate checkpoint
-Updated UTC: 2026-06-28T08:46:33Z
-Current step: rclone_mount_selfheal_waiting_retry
+Updated UTC: 2026-06-28T09:01:44Z
+Current step: controller_exception
 Jason action required: False
 
 ## PlatformGate
-- runner_running: True
-- status: REVIEW
-- stage: platform_gate_review
-- visible: 0
+- runner_running: False
+- status: UNKNOWN
+- stage: 
+- visible: unknown
 - transient_failures: 0
 - prunable_failures: 0
 
 ## Candidate Source Model
-- status: PASS
+- status: PENDING_PLATFORM_GATE
 - status_file: D:\PlexTools\public\latest\scarflix_v2\candidate_source_model_status.json
 
 ## Infrastructure
-- rclone_mount_status: REVIEW
+- rclone_mount_status: UNKNOWN
 - s_media_ready: False
 - s_catalog_ready: False
-- mount_selfheal_attempted: True
+- mount_selfheal_attempted: False
 
 ## Action
-- action_taken: attempted rclone mount self-heal; mount not ready yet
-- next_check_utc: 2026-06-28T09:08:19Z
+- action_taken: existing controller lock is active
+- next_check_utc: 2026-06-28T09:07:01Z
 
 ## Blockers
-- rclone mount not ready: REVIEW
+- Controller exception: Exception calling "WriteAllText" with "3" argument(s): "The process cannot access the file 'D:\PlexTools\public\latest\scarflix_v2\autonomous_controller_publish_status.json' because it is being used by another process."
