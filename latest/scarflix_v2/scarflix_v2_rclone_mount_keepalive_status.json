@@ -1,8 +1,8 @@
 {
     "component":  "scarflix_v2_rclone_mount_keepalive",
     "status":  "PASS",
-    "started_utc":  "2026-06-28T00:20:05Z",
-    "ended_utc":  "2026-06-28T00:23:10Z",
+    "started_utc":  "2026-06-28T00:25:11Z",
+    "ended_utc":  "2026-06-28T00:26:10Z",
     "no_catalogue_expansion":  true,
     "no_plex_db_mutation":  true,
     "webdav_bridge":  {
@@ -15,26 +15,26 @@
     "rclone_cache_dir":  "D:\\PlexTools\\cache\\rclone",
     "drive_s_present":  true,
     "initial_mount_probe":  {
-                                "ready":  false,
+                                "ready":  true,
                                 "media":  {
                                               "path":  "S:\\media",
-                                              "ok":  false,
-                                              "timed_out":  true,
-                                              "ms":  9527,
+                                              "ok":  true,
+                                              "timed_out":  false,
+                                              "ms":  13316,
                                               "error":  ""
                                           },
                                 "catalog":  {
                                                 "path":  "S:\\media\\catalog",
                                                 "ok":  false,
-                                                "timed_out":  false,
-                                                "ms":  4984,
+                                                "timed_out":  true,
+                                                "ms":  11821,
                                                 "error":  ""
                                             },
                                 "active_map_path":  {
                                                         "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
-                                                        "ok":  false,
-                                                        "timed_out":  true,
-                                                        "ms":  6538,
+                                                        "ok":  true,
+                                                        "timed_out":  false,
+                                                        "ms":  1867,
                                                         "error":  "",
                                                         "source":  "webdav_map_first_path"
                                                     }
@@ -45,21 +45,21 @@
                                             "path":  "S:\\media",
                                             "ok":  true,
                                             "timed_out":  false,
-                                            "ms":  5328,
+                                            "ms":  5091,
                                             "error":  ""
                                         },
                               "catalog":  {
                                               "path":  "S:\\media\\catalog",
                                               "ok":  false,
                                               "timed_out":  false,
-                                              "ms":  4062,
+                                              "ms":  2123,
                                               "error":  ""
                                           },
                               "active_map_path":  {
                                                       "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
                                                       "ok":  true,
                                                       "timed_out":  false,
-                                                      "ms":  1725,
+                                                      "ms":  1653,
                                                       "error":  "",
                                                       "source":  "webdav_map_first_path"
                                                   }
@@ -71,7 +71,7 @@
                             "path":  "S:\\media\\ScarFLIX_part-006376cfc11e4c98\\stream.mkv",
                             "ok":  true,
                             "timed_out":  false,
-                            "ms":  1725,
+                            "ms":  1653,
                             "error":  "",
                             "source":  "webdav_map_first_path"
                         },
@@ -85,26 +85,26 @@
                   "error":  ""
               },
     "restart":  {
-                    "attempted":  true,
-                    "stopped":  1,
-                    "started":  true,
-                    "pid":  10908,
+                    "attempted":  false,
+                    "stopped":  0,
+                    "started":  false,
+                    "pid":  0,
                     "error":  "",
                     "errors":  [
 
                                ]
                 },
     "stale_drive_clear":  {
-                              "attempted":  true,
-                              "net_use_exit":  2,
-                              "mountvol_exit":  1,
+                              "attempted":  false,
+                              "net_use_exit":  null,
+                              "mountvol_exit":  null,
                               "errors":  [
 
                                          ]
                           },
     "processes_before":  [
                              {
-                                 "process_id":  35380,
+                                 "process_id":  10908,
                                  "command_line_present":  true
                              }
                          ],
@@ -115,8 +115,7 @@
                             }
                         ],
     "actions":  [
-                    "cleared stale S: drive mapping before rclone restart",
-                    "restarted stalled rclone pid 10908"
+
                 ],
     "failures":  [
 
