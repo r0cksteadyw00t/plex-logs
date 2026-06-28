@@ -1,7 +1,7 @@
 {
   "component": "jasonos_prime_outcome_dashboard",
   "status": "PASS",
-  "updated_utc": "2026-06-28T07:00:01Z",
+  "updated_utc": "2026-06-28T07:10:02Z",
   "token_optimization_status": [
     "Use local status JSON and 8805 API instead of rereading historic handover.",
     "Use local scheduled workers for routine status, prediction and publishing.",
@@ -11,9 +11,9 @@
   "current_milestone": "PLATFORM_GATE_RUNNING",
   "jason_action_required": false,
   "truth_metrics": {
-    "movie_strm_count": 51845,
+    "movie_strm_count": 113509,
     "tv_strm_count": 0,
-    "total_strm_count": 51845,
+    "total_strm_count": 113509,
     "primary_delivery_metric": "direct_strm_files_in_plex_streaming_libraries",
     "primary_playback_architecture": "materialized_webdav_symlink",
     "playback_architecture_status": "REVIEW_PLEX_SCAN_PENDING",
@@ -24504,18 +24504,18 @@
   "node_watchdog_5min": {
     "component": "jasonos_prime_node_watchdog_5min",
     "status": "ACTIVE",
-    "updated_utc": "2026-06-28T07:00:01Z",
+    "updated_utc": "2026-06-28T07:10:02Z",
     "jason_action_required": false,
     "cadence": "every 5 minutes",
     "counts": {
-      "legacy_movie_strm": 51845,
+      "legacy_movie_strm": 113509,
       "legacy_tv_strm": 0,
-      "legacy_total_strm": 51845,
+      "legacy_total_strm": 113509,
       "plex_safe_webdav_visible_rows": null
     },
     "grokbuild_status": "UNKNOWN",
     "grok_peer_bridge_status": "PASS_REVIEW_RECEIVED",
-    "platform_gate_status": "REVIEW",
+    "platform_gate_status": "RUNNING",
     "direct_strm_mirror_status": {
       "component": "scarflix_v2_direct_strm_mirror",
       "status": "PAUSED_PLAYBACK_FIX",
@@ -48729,8 +48729,8 @@
       "next_action": "Wait for current ScarFLIX validation task to finish."
     },
     "canary_status": "PAUSED_PLAYBACK_FIX",
-    "canary_status_age_seconds": 1736548,
-    "safe_pipeline_log_age_seconds": 1793460,
+    "canary_status_age_seconds": 1737142,
+    "safe_pipeline_log_age_seconds": 1794314,
     "safe_pipeline_lock_age_seconds": null,
     "stale_running_canary": false,
     "actions": [
@@ -48757,7 +48757,7 @@
       {
         "action": "trigger_public_mirror",
         "ok": true,
-        "detail": "pid=38012"
+        "detail": "pid=28416"
       }
     ],
     "blockers": []
