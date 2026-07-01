@@ -2,19 +2,19 @@
     "component":  "scarflix_v2_durable_platform_gate_runner",
     "status":  "REVIEW",
     "current_step":  "platform_gate_review",
-    "started_utc":  "2026-07-01T13:24:20Z",
-    "last_progress_utc":  "2026-07-01T13:30:02Z",
-    "ended_utc":  "2026-07-01T13:30:03Z",
-    "duration_seconds":  342,
+    "started_utc":  "2026-07-01T13:31:11Z",
+    "last_progress_utc":  "2026-07-01T13:31:48Z",
+    "ended_utc":  "2026-07-01T13:31:49Z",
+    "duration_seconds":  38,
     "no_catalogue_expansion":  true,
     "single_owner":  true,
-    "owner_pid":  37448,
+    "owner_pid":  8868,
     "child_pid":  0,
-    "child_start_utc":  "2026-07-01T13:24:24Z",
+    "child_start_utc":  "2026-07-01T13:31:18Z",
     "child_exit_code":  -1,
     "child_qa_last_progress_utc":  "2026-07-01T13:25:04Z",
     "child_qa_last_progress_path":  "D:\\PlexTools\\logs\\scarflix_v2_webdav_active_gate_20260701.log",
-    "child_qa_stale_minutes":  5,
+    "child_qa_stale_minutes":  6.7,
     "child_qa_stale_threshold_minutes":  5,
     "bounded_orphan_kill_minutes":  5,
     "child_qa_stall_count":  1,
@@ -23,25 +23,26 @@
                          "attempt":  1,
                          "exit_code":  -1,
                          "platform_status":  "REVIEW",
-                         "ended_utc":  "2026-07-01T13:30:02Z"
+                         "ended_utc":  "2026-07-01T13:31:48Z"
                      }
                  ],
     "stale_minutes":  5,
     "heartbeat_seconds":  30,
-    "heartbeat_updated_utc":  "2026-07-01T13:30:03Z",
-    "heartbeat_sequence":  17,
+    "heartbeat_updated_utc":  "2026-07-01T13:31:49Z",
+    "heartbeat_sequence":  7,
     "lock_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable.lock",
     "heartbeat_path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate_durable_heartbeat.json",
     "checkpoint_json":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.json",
     "checkpoint_md":  "D:\\PlexTools\\public\\latest\\scarflix_v2\\platform_gate_checkpoint.md",
     "status_latest":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_status.json",
-    "status_run":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_20260701_232421.json",
+    "status_run":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_20260701_233111.json",
     "log":  "D:\\PlexTools\\logs\\scarflix_v2_durable_platform_gate_runner_20260701.log",
     "blockers":  [
 
                  ],
     "actions":  [
-                    "Stopped stale PlatformGate child pid=22132; context=attempt_1; child_qa_stale_minutes=5; threshold=5"
+                    "Removed stale legacy lock D:\\PlexTools\\state\\scarflix_v2\\platform_gate.lock",
+                    "Stopped stale PlatformGate child pid=18540; context=attempt_1; child_qa_stale_minutes=6.7; threshold=5"
                 ],
     "overlap_tasks":  [
 
@@ -50,7 +51,11 @@
 
                                 ],
     "stale_locks_removed":  [
-
+                                {
+                                    "path":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate.lock",
+                                    "age_minutes":  7,
+                                    "backup":  "D:\\PlexTools\\state\\scarflix_v2\\platform_gate.lock.durable_stale_20260701_233113.bak"
+                                }
                             ],
     "platform_gate":  {
                           "component":  "scarflix_v2_platform_gate",
